@@ -1,28 +1,439 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MiraDesconto | Ofertas que valem a pena</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MiraDesconto | Ofertas que valem a pena</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f6f8;
+    color: #1f2937;
+}
+
+/* CABEÇALHO */
+
+header {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 900;
+    color: #111827;
+}
+
+.logo span {
+    color: #16a34a;
+}
+
+.search {
+    width: 100%;
+    max-width: 500px;
+}
+
+.search input {
+    width: 100%;
+    padding: 13px 18px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+/* HERO */
+
+.hero {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #d1d5db;
+}
+
+/* CATEGORIAS */
+
+.categories {
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.categories-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 16px 20px;
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+}
+
+.category {
+    background: #f3f4f6;
+    padding: 10px 17px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* CONTEÚDO */
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.section-title {
+    margin-bottom: 25px;
+}
+
+.section-title h2 {
+    font-size: 27px;
+    margin-bottom: 6px;
+}
+
+.section-title p {
+    color: #6b7280;
+}
+
+/* GRID */
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 22px;
+}
+
+/* CARD */
+
+.card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.product-image {
+    height: 210px;
+    background: #f9fafb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 70px;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.badge {
+    display: inline-block;
+    background: #dcfce7;
+    color: #15803d;
+    padding: 6px 9px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.card h3 {
+    font-size: 17px;
+    margin-bottom: 18px;
+    line-height: 1.4;
+}
+
+.old-price {
+    color: #9ca3af;
+    font-size: 14px;
+    text-decoration: line-through;
+}
+
+.price {
+    font-size: 29px;
+    font-weight: 900;
+    margin: 4px 0;
+    color: #111827;
+}
+
+.store {
+    font-size: 13px;
+    color: #6b7280;
+    margin-bottom: 18px;
+}
+
+.button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: #16a34a;
+    color: white;
+    text-decoration: none;
+    padding: 13px;
+    border-radius: 9px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background: #15803d;
+}
+
+/* AVISO */
+
+.disclaimer {
+    margin-top: 40px;
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    color: #6b7280;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* RODAPÉ */
+
+footer {
+    margin-top: 50px;
+    background: #111827;
+    color: #9ca3af;
+    text-align: center;
+    padding: 35px 20px;
+    font-size: 13px;
+}
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    .header-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    .hero {
+        padding: 45px 20px;
+    }
+
+    .hero h1 {
+        font-size: 31px;
+    }
+
+}
+</style>
 </head>
 
 <body>
 
-    <h1>MiraDesconto</h1>
+<header>
+    <div class="header-container">
 
-    <p>Ofertas que realmente valem a pena.</p>
+        <div class="logo">
+            Mira<span>Desconto</span>
+        </div>
 
-    <hr>
+        <div class="search">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Buscar ofertas..."
+                onkeyup="searchProducts()"
+            >
+        </div>
 
-    <h2>Ofertas de hoje</h2>
+    </div>
+</header>
 
-    <h3>SSD Kingston NV3 1TB</h3>
 
-    <p>Confira a oferta disponível:</p>
+<section class="hero">
 
-    <a href="https://meli.la/1TJh5DW" target="_blank">
-        Ver oferta no Mercado Livre
-    </a>
+    <h1>Ofertas que valem a pena.</h1>
+
+    <p>
+        Encontramos promoções para você economizar sem perder tempo procurando.
+    </p>
+
+</section>
+
+
+<section class="categories">
+
+    <div class="categories-container">
+
+        <div class="category">🔥 Destaques</div>
+        <div class="category">💻 Informática</div>
+        <div class="category">🎮 Games</div>
+        <div class="category">📱 Celulares</div>
+        <div class="category">🏠 Casa</div>
+        <div class="category">📺 Eletrônicos</div>
+
+    </div>
+
+</section>
+
+
+<main>
+
+    <div class="section-title">
+
+        <h2>🔥 Ofertas em destaque</h2>
+
+        <p>
+            Produtos selecionados pelo MiraDesconto.
+        </p>
+
+    </div>
+
+
+    <div class="products" id="productList">
+
+
+        <!-- PRODUTO 1 -->
+
+        <article class="card">
+
+            <div class="product-image">
+                💾
+            </div>
+
+            <div class="card-content">
+
+                <span class="badge">
+                    OFERTA
+                </span>
+
+                <h3>
+                    SSD Kingston NV3
+                </h3>
+
+                <div class="old-price">
+                    Confira o preço anterior
+                </div>
+
+                <div class="price">
+                    Ver preço
+                </div>
+
+                <div class="store">
+                    Mercado Livre
+                </div>
+
+                <a
+                    class="button"
+                    href="https://meli.la/1TJh5DW"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    VER OFERTA
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- FUTURAS OFERTAS ENTRAM AQUI -->
+
+
+    </div>
+
+
+    <div class="disclaimer">
+
+        <strong>Transparência:</strong>
+        O MiraDesconto pode receber comissão quando uma compra é realizada
+        através de determinados links, sem custo adicional para você.
+        Preços e disponibilidade podem mudar a qualquer momento.
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    © 2026 MiraDesconto — Ofertas que valem a pena.
+
+</footer>
+
+
+<script>
+
+function searchProducts() {
+
+    const search =
+        document
+        .getElementById("searchInput")
+        .value
+        .toLowerCase();
+
+    const products =
+        document
+        .querySelectorAll(".card");
+
+    products.forEach(product => {
+
+        const text =
+            product
+            .innerText
+            .toLowerCase();
+
+        if (text.includes(search)) {
+
+            product.style.display = "";
+
+        } else {
+
+            product.style.display = "none";
+
+        }
+
+    });
+
+}
+
+</script>
 
 </body>
 </html>
