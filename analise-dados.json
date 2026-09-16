@@ -1,0 +1,27 @@
+{
+  "valid": 1022,
+  "rejected": [],
+  "missingOldPrice": 180,
+  "displayedDiscount": 845,
+  "affiliateLinks": 1009,
+  "images": 1021,
+  "categories": {
+    "Beleza e cuidados": 50,
+    "Casa": 226,
+    "Celulares": 25,
+    "Eletrônicos": 13,
+    "Esportes e suplementos": 38,
+    "Games": 6,
+    "Informática": 13,
+    "Moda": 126,
+    "Outros": 525
+  },
+  "missingImages": [
+    {
+      "id": "MLB5192192663",
+      "reason": "Página do anúncio não existe em 16/09/2026"
+    }
+  ],
+  "affiliateRejected": 13,
+  "visibleProducts": 1009
+}

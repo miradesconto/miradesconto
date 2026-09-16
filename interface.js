@@ -1,6 +1,6 @@
 'use strict';
 const source = window.MIRA_DATA;
-const products = (source?.products || []).filter(p => p.name && safeUrl(p.affiliateUrl || p.productUrl));
+const products = (source?.products || []).filter(p => p.name && safeUrl(p.affiliateUrl));
 let selectedCategory = 'Todos';
 let visibleCount = 24;
 const $ = id => document.getElementById(id);
@@ -59,7 +59,7 @@ function makeCard(p) {
     content.append(element('div','price',money(p.price)),element('div','store',p.store || 'Ver loja'));
     const buttons = element('div','buttons');
     const a = element('a','offer-button','VER OFERTA');
-    a.href = safeUrl(p.affiliateUrl) || safeUrl(p.productUrl);
+    a.href = safeUrl(p.affiliateUrl);
     a.target = '_blank';
     a.rel = p.affiliateUrl ? 'noopener noreferrer sponsored' : 'noopener noreferrer';
     const share = element('button','share-button','Compartilhar');
