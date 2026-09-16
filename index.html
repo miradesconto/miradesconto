@@ -4,260 +4,367 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<meta name="description" content="MiraDesconto - ofertas e promoções selecionadas para você economizar.">
+
 <title>MiraDesconto | Ofertas que valem a pena</title>
 
 <style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+:root{
+    --green:#16a34a;
+    --green-dark:#15803d;
+    --dark:#111827;
+    --text:#1f2937;
+    --gray:#6b7280;
+    --light:#f5f6f8;
+    --border:#e5e7eb;
+    --white:#ffffff;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f5f6f8;
-    color: #1f2937;
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
-/* CABEÇALHO */
-
-header {
-    background: #ffffff;
-    border-bottom: 1px solid #e5e7eb;
-    position: sticky;
-    top: 0;
-    z-index: 10;
+html{
+    scroll-behavior:smooth;
 }
 
-.header-container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 18px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 25px;
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:var(--light);
+    color:var(--text);
 }
 
-.logo {
-    font-size: 26px;
-    font-weight: 900;
-    color: #111827;
+/* HEADER */
+
+header{
+    background:white;
+    border-bottom:1px solid var(--border);
+    position:sticky;
+    top:0;
+    z-index:100;
 }
 
-.logo span {
-    color: #16a34a;
+.header-container{
+    max-width:1200px;
+    margin:auto;
+    padding:17px 20px;
+    display:flex;
+    align-items:center;
+    gap:30px;
 }
 
-.search {
-    width: 100%;
-    max-width: 500px;
+.logo{
+    font-size:27px;
+    font-weight:900;
+    color:var(--dark);
+    white-space:nowrap;
+    cursor:pointer;
 }
 
-.search input {
-    width: 100%;
-    padding: 13px 18px;
-    border: 1px solid #d1d5db;
-    border-radius: 10px;
-    font-size: 15px;
+.logo span{
+    color:var(--green);
+}
+
+.search{
+    flex:1;
+}
+
+.search input{
+    width:100%;
+    padding:13px 17px;
+    border:1px solid #d1d5db;
+    border-radius:10px;
+    font-size:15px;
+    outline:none;
+}
+
+.search input:focus{
+    border-color:var(--green);
 }
 
 /* HERO */
 
-.hero {
-    background: #111827;
-    color: white;
-    text-align: center;
-    padding: 65px 20px;
+.hero{
+    background:var(--dark);
+    color:white;
+    text-align:center;
+    padding:58px 20px;
 }
 
-.hero h1 {
-    font-size: 42px;
-    margin-bottom: 12px;
+.hero h1{
+    font-size:42px;
+    margin-bottom:12px;
 }
 
-.hero p {
-    font-size: 18px;
-    color: #d1d5db;
+.hero p{
+    color:#d1d5db;
+    font-size:18px;
+    line-height:1.5;
 }
 
 /* CATEGORIAS */
 
-.categories {
-    background: white;
-    border-bottom: 1px solid #e5e7eb;
+.categories{
+    background:white;
+    border-bottom:1px solid var(--border);
 }
 
-.categories-container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 16px 20px;
-    display: flex;
-    gap: 12px;
-    overflow-x: auto;
+.categories-container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px 20px;
+    display:flex;
+    gap:10px;
+    overflow-x:auto;
 }
 
-.category {
-    background: #f3f4f6;
-    padding: 10px 17px;
-    border-radius: 30px;
-    font-size: 14px;
-    font-weight: bold;
-    white-space: nowrap;
+.category{
+    border:0;
+    background:#f3f4f6;
+    padding:11px 17px;
+    border-radius:30px;
+    font-weight:bold;
+    cursor:pointer;
+    white-space:nowrap;
+    transition:.2s;
 }
 
-/* CONTEÚDO */
-
-main {
-    max-width: 1200px;
-    margin: auto;
-    padding: 40px 20px;
+.category:hover{
+    background:#e5e7eb;
 }
 
-.section-title {
-    margin-bottom: 25px;
+.category.active{
+    background:var(--dark);
+    color:white;
 }
 
-.section-title h2 {
-    font-size: 27px;
-    margin-bottom: 6px;
+/* MAIN */
+
+main{
+    max-width:1200px;
+    margin:auto;
+    padding:35px 20px 50px;
 }
 
-.section-title p {
-    color: #6b7280;
+.top-line{
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    gap:20px;
+    margin-bottom:25px;
 }
 
-/* GRID */
-
-.products {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 22px;
+.section-title h2{
+    font-size:27px;
+    margin-bottom:6px;
 }
 
-/* CARD */
-
-.card {
-    background: white;
-    border-radius: 14px;
-    overflow: hidden;
-    border: 1px solid #e5e7eb;
-    transition: 0.2s;
+.section-title p{
+    color:var(--gray);
 }
 
-.card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+.sort select{
+    padding:10px 12px;
+    border:1px solid #d1d5db;
+    border-radius:8px;
+    background:white;
 }
 
-.product-image {
-    height: 210px;
-    background: #f9fafb;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 70px;
+/* PRODUTOS */
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(245px,1fr));
+    gap:22px;
 }
 
-.card-content {
-    padding: 20px;
+.card{
+    background:white;
+    border:1px solid var(--border);
+    border-radius:14px;
+    overflow:hidden;
+    transition:.2s;
+    display:flex;
+    flex-direction:column;
 }
 
-.badge {
-    display: inline-block;
-    background: #dcfce7;
-    color: #15803d;
-    padding: 6px 9px;
-    border-radius: 6px;
-    font-size: 12px;
-    font-weight: bold;
-    margin-bottom: 12px;
+.card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 25px rgba(0,0,0,.08);
 }
 
-.card h3 {
-    font-size: 17px;
-    margin-bottom: 18px;
-    line-height: 1.4;
+.product-image{
+    height:205px;
+    background:#fafafa;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:72px;
+    position:relative;
 }
 
-.old-price {
-    color: #9ca3af;
-    font-size: 14px;
-    text-decoration: line-through;
+.discount{
+    position:absolute;
+    top:13px;
+    right:13px;
+    background:#dc2626;
+    color:white;
+    padding:7px 9px;
+    border-radius:7px;
+    font-size:12px;
+    font-weight:bold;
 }
 
-.price {
-    font-size: 29px;
-    font-weight: 900;
-    margin: 4px 0;
-    color: #111827;
+.card-content{
+    padding:19px;
+    display:flex;
+    flex-direction:column;
+    flex:1;
 }
 
-.store {
-    font-size: 13px;
-    color: #6b7280;
-    margin-bottom: 18px;
+.category-label{
+    color:var(--green-dark);
+    font-size:12px;
+    font-weight:bold;
+    margin-bottom:9px;
+    text-transform:uppercase;
 }
 
-.button {
-    display: block;
-    width: 100%;
-    text-align: center;
-    background: #16a34a;
-    color: white;
-    text-decoration: none;
-    padding: 13px;
-    border-radius: 9px;
-    font-weight: bold;
+.card h3{
+    font-size:17px;
+    line-height:1.4;
+    min-height:48px;
+    margin-bottom:14px;
 }
 
-.button:hover {
-    background: #15803d;
+.old-price{
+    color:#9ca3af;
+    text-decoration:line-through;
+    font-size:14px;
+    min-height:18px;
 }
 
-/* AVISO */
-
-.disclaimer {
-    margin-top: 40px;
-    padding: 20px;
-    background: #ffffff;
-    border: 1px solid #e5e7eb;
-    border-radius: 10px;
-    color: #6b7280;
-    font-size: 13px;
-    line-height: 1.6;
+.price{
+    font-size:28px;
+    font-weight:900;
+    color:var(--dark);
+    margin:4px 0;
 }
 
-/* RODAPÉ */
-
-footer {
-    margin-top: 50px;
-    background: #111827;
-    color: #9ca3af;
-    text-align: center;
-    padding: 35px 20px;
-    font-size: 13px;
+.store{
+    color:var(--gray);
+    font-size:13px;
+    margin-bottom:17px;
 }
 
-/* CELULAR */
+.buttons{
+    margin-top:auto;
+}
 
-@media (max-width: 600px) {
+.offer-button{
+    display:block;
+    background:var(--green);
+    color:white;
+    text-decoration:none;
+    text-align:center;
+    padding:13px;
+    border-radius:9px;
+    font-weight:bold;
+    transition:.2s;
+}
 
-    .header-container {
-        flex-direction: column;
-        align-items: stretch;
+.offer-button:hover{
+    background:var(--green-dark);
+}
+
+.share-button{
+    width:100%;
+    border:0;
+    background:transparent;
+    color:var(--gray);
+    padding:11px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.share-button:hover{
+    color:var(--dark);
+}
+
+/* SEM RESULTADOS */
+
+.empty{
+    display:none;
+    text-align:center;
+    background:white;
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:50px 20px;
+    color:var(--gray);
+}
+
+/* TRANSPARÊNCIA */
+
+.disclaimer{
+    margin-top:40px;
+    background:white;
+    border:1px solid var(--border);
+    border-radius:10px;
+    padding:20px;
+    color:var(--gray);
+    font-size:13px;
+    line-height:1.6;
+}
+
+/* FOOTER */
+
+footer{
+    background:var(--dark);
+    color:#9ca3af;
+    text-align:center;
+    padding:35px 20px;
+    font-size:13px;
+}
+
+/* MOBILE */
+
+@media(max-width:650px){
+
+    .header-container{
+        flex-direction:column;
+        gap:13px;
+        align-items:stretch;
     }
 
-    .logo {
-        text-align: center;
+    .logo{
+        text-align:center;
     }
 
-    .hero {
-        padding: 45px 20px;
+    .hero{
+        padding:42px 20px;
     }
 
-    .hero h1 {
-        font-size: 31px;
+    .hero h1{
+        font-size:31px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .top-line{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .sort select{
+        width:100%;
+    }
+
+    .products{
+        grid-template-columns:1fr;
     }
 
 }
@@ -267,171 +374,588 @@ footer {
 <body>
 
 <header>
-    <div class="header-container">
 
-        <div class="logo">
-            Mira<span>Desconto</span>
-        </div>
+<div class="header-container">
 
-        <div class="search">
-            <input
-                type="text"
-                id="searchInput"
-                placeholder="Buscar ofertas..."
-                onkeyup="searchProducts()"
-            >
-        </div>
-
+    <div class="logo" onclick="resetFilters()">
+        Mira<span>Desconto</span>
     </div>
+
+    <div class="search">
+        <input
+        id="searchInput"
+        type="search"
+        placeholder="🔎 Buscar produto..."
+        oninput="renderProducts()">
+    </div>
+
+</div>
+
 </header>
 
 
 <section class="hero">
 
-    <h1>Ofertas que valem a pena.</h1>
+<h1>Ofertas que valem a pena.</h1>
 
-    <p>
-        Encontramos promoções para você economizar sem perder tempo procurando.
-    </p>
-
-</section>
-
-
-<section class="categories">
-
-    <div class="categories-container">
-
-        <div class="category">🔥 Destaques</div>
-        <div class="category">💻 Informática</div>
-        <div class="category">🎮 Games</div>
-        <div class="category">📱 Celulares</div>
-        <div class="category">🏠 Casa</div>
-        <div class="category">📺 Eletrônicos</div>
-
-    </div>
+<p>
+Encontramos promoções para você economizar
+sem perder tempo procurando.
+</p>
 
 </section>
+
+
+<nav class="categories">
+
+<div class="categories-container">
+
+<button class="category active"
+data-category="Todos"
+onclick="selectCategory(this)">
+🔥 Destaques
+</button>
+
+<button class="category"
+data-category="Informática"
+onclick="selectCategory(this)">
+💻 Informática
+</button>
+
+<button class="category"
+data-category="Games"
+onclick="selectCategory(this)">
+🎮 Games
+</button>
+
+<button class="category"
+data-category="Celulares"
+onclick="selectCategory(this)">
+📱 Celulares
+</button>
+
+<button class="category"
+data-category="Casa"
+onclick="selectCategory(this)">
+🏠 Casa
+</button>
+
+<button class="category"
+data-category="Eletrônicos"
+onclick="selectCategory(this)">
+📺 Eletrônicos
+</button>
+
+</div>
+
+</nav>
 
 
 <main>
 
-    <div class="section-title">
+<div class="top-line">
 
-        <h2>🔥 Ofertas em destaque</h2>
+<div class="section-title">
 
-        <p>
-            Produtos selecionados pelo MiraDesconto.
-        </p>
+<h2 id="sectionTitle">
+🔥 Ofertas em destaque
+</h2>
 
-    </div>
+<p id="resultCount"></p>
 
-
-    <div class="products" id="productList">
-
-
-        <!-- PRODUTO 1 -->
-
-        <article class="card">
-
-            <div class="product-image">
-                💾
-            </div>
-
-            <div class="card-content">
-
-                <span class="badge">
-                    OFERTA
-                </span>
-
-                <h3>
-                    SSD Kingston NV3
-                </h3>
-
-                <div class="old-price">
-                    Confira o preço anterior
-                </div>
-
-                <div class="price">
-                    Ver preço
-                </div>
-
-                <div class="store">
-                    Mercado Livre
-                </div>
-
-                <a
-                    class="button"
-                    href="https://meli.la/1TJh5DW"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    VER OFERTA
-                </a>
-
-            </div>
-
-        </article>
+</div>
 
 
-        <!-- FUTURAS OFERTAS ENTRAM AQUI -->
+<div class="sort">
+
+<select id="sortSelect" onchange="renderProducts()">
+
+<option value="default">
+Ordenar ofertas
+</option>
+
+<option value="discount">
+Maior desconto
+</option>
+
+<option value="lowPrice">
+Menor preço
+</option>
+
+<option value="highPrice">
+Maior preço
+</option>
+
+</select>
+
+</div>
+
+</div>
 
 
-    </div>
+<div id="productList" class="products"></div>
 
 
-    <div class="disclaimer">
+<div id="emptyState" class="empty">
 
-        <strong>Transparência:</strong>
-        O MiraDesconto pode receber comissão quando uma compra é realizada
-        através de determinados links, sem custo adicional para você.
-        Preços e disponibilidade podem mudar a qualquer momento.
+<h3>Nenhuma oferta encontrada.</h3>
 
-    </div>
+<p>
+Tente pesquisar outro produto ou categoria.
+</p>
+
+</div>
+
+
+<div class="disclaimer">
+
+<strong>Transparência:</strong>
+
+O MiraDesconto pode receber comissão quando uma compra
+é realizada através de determinados links, sem custo
+adicional para você.
+
+Preços, cupons, frete e disponibilidade podem mudar
+a qualquer momento. Confirme as informações na loja
+antes de concluir a compra.
+
+</div>
 
 </main>
 
 
 <footer>
 
-    © 2026 MiraDesconto — Ofertas que valem a pena.
+© 2026 MiraDesconto — Ofertas que valem a pena.
 
 </footer>
 
 
 <script>
 
-function searchProducts() {
+/* ======================================================
+   BANCO DE PRODUTOS
+
+   É AQUI QUE VAMOS CADASTRAR AS OFERTAS.
+
+   NÃO PRECISA CRIAR HTML NOVO PARA CADA PRODUTO.
+====================================================== */
+
+const products = [
+
+{
+    name:"SSD Kingston NV3",
+    category:"Informática",
+    store:"Mercado Livre",
+
+    oldPrice:null,
+    price:null,
+
+    link:"https://meli.la/1TJh5DW",
+
+    emoji:"💾"
+}
+
+
+/*
+
+EXEMPLO DE COMO SERÁ UM NOVO PRODUTO:
+
+,{
+    name:"Mouse Gamer Exemplo",
+    category:"Games",
+    store:"Mercado Livre",
+
+    oldPrice:199.90,
+    price:149.90,
+
+    link:"COLE-O-LINK-AQUI",
+
+    emoji:"🖱️"
+}
+
+*/
+
+];
+
+
+/* ======================================================
+   SISTEMA
+====================================================== */
+
+let selectedCategory = "Todos";
+
+
+function money(value){
+
+    if(value === null){
+        return "Ver preço";
+    }
+
+    return value.toLocaleString(
+        "pt-BR",
+        {
+            style:"currency",
+            currency:"BRL"
+        }
+    );
+
+}
+
+
+function calculateDiscount(oldPrice,price){
+
+    if(!oldPrice || !price){
+        return null;
+    }
+
+    if(oldPrice <= price){
+        return null;
+    }
+
+    return Math.round(
+        ((oldPrice-price)/oldPrice)*100
+    );
+
+}
+
+
+function selectCategory(button){
+
+    document
+    .querySelectorAll(".category")
+    .forEach(item =>
+        item.classList.remove("active")
+    );
+
+    button.classList.add("active");
+
+    selectedCategory =
+        button.dataset.category;
+
+    document.getElementById(
+        "sectionTitle"
+    ).innerText =
+        selectedCategory === "Todos"
+        ? "🔥 Ofertas em destaque"
+        : button.innerText;
+
+    renderProducts();
+
+}
+
+
+function resetFilters(){
+
+    selectedCategory="Todos";
+
+    document.getElementById(
+        "searchInput"
+    ).value="";
+
+    document.getElementById(
+        "sortSelect"
+    ).value="default";
+
+    const buttons =
+        document.querySelectorAll(
+            ".category"
+        );
+
+    buttons.forEach(
+        button =>
+        button.classList.remove("active")
+    );
+
+    buttons[0].classList.add("active");
+
+    document.getElementById(
+        "sectionTitle"
+    ).innerText =
+        "🔥 Ofertas em destaque";
+
+    renderProducts();
+
+}
+
+
+function renderProducts(){
 
     const search =
         document
         .getElementById("searchInput")
         .value
-        .toLowerCase();
+        .toLowerCase()
+        .trim();
 
-    const products =
+    const sort =
         document
-        .querySelectorAll(".card");
+        .getElementById("sortSelect")
+        .value;
 
-    products.forEach(product => {
 
-        const text =
-            product
-            .innerText
-            .toLowerCase();
+    let filtered =
+        products.filter(product => {
 
-        if (text.includes(search)) {
+            const categoryMatch =
+                selectedCategory === "Todos"
+                ||
+                product.category ===
+                selectedCategory;
 
-            product.style.display = "";
+            const searchMatch =
+                product.name
+                .toLowerCase()
+                .includes(search)
 
-        } else {
+                ||
 
-            product.style.display = "none";
+                product.store
+                .toLowerCase()
+                .includes(search)
 
-        }
+                ||
+
+                product.category
+                .toLowerCase()
+                .includes(search);
+
+            return categoryMatch
+                && searchMatch;
+
+        });
+
+
+    if(sort === "discount"){
+
+        filtered.sort((a,b)=>{
+
+            const discountA =
+                calculateDiscount(
+                    a.oldPrice,
+                    a.price
+                ) || 0;
+
+            const discountB =
+                calculateDiscount(
+                    b.oldPrice,
+                    b.price
+                ) || 0;
+
+            return discountB-discountA;
+
+        });
+
+    }
+
+
+    if(sort === "lowPrice"){
+
+        filtered.sort((a,b)=>
+            (a.price ?? Infinity)
+            -
+            (b.price ?? Infinity)
+        );
+
+    }
+
+
+    if(sort === "highPrice"){
+
+        filtered.sort((a,b)=>
+            (b.price ?? 0)
+            -
+            (a.price ?? 0)
+        );
+
+    }
+
+
+    const container =
+        document.getElementById(
+            "productList"
+        );
+
+
+    container.innerHTML="";
+
+
+    filtered.forEach(product => {
+
+        const discount =
+            calculateDiscount(
+                product.oldPrice,
+                product.price
+            );
+
+
+        const card =
+            document.createElement(
+                "article"
+            );
+
+
+        card.className="card";
+
+
+        card.innerHTML=`
+
+        <div class="product-image">
+
+            ${product.emoji}
+
+            ${
+                discount
+                ?
+                `<span class="discount">
+                -${discount}%
+                </span>`
+                :
+                ""
+            }
+
+        </div>
+
+
+        <div class="card-content">
+
+            <div class="category-label">
+                ${product.category}
+            </div>
+
+            <h3>
+                ${product.name}
+            </h3>
+
+
+            <div class="old-price">
+
+                ${
+                    product.oldPrice
+                    ?
+                    money(product.oldPrice)
+                    :
+                    ""
+                }
+
+            </div>
+
+
+            <div class="price">
+
+                ${money(product.price)}
+
+            </div>
+
+
+            <div class="store">
+
+                ${product.store}
+
+            </div>
+
+
+            <div class="buttons">
+
+                <a
+                class="offer-button"
+                href="${product.link}"
+                target="_blank"
+                rel="noopener noreferrer sponsored">
+
+                VER OFERTA
+
+                </a>
+
+
+                <button
+                class="share-button"
+                onclick='shareProduct(
+                    ${JSON.stringify(product.name)},
+                    ${JSON.stringify(product.link)}
+                )'>
+
+                Compartilhar
+
+                </button>
+
+            </div>
+
+        </div>
+
+        `;
+
+
+        container.appendChild(card);
 
     });
 
+
+    document.getElementById(
+        "resultCount"
+    ).innerText =
+        filtered.length === 1
+        ? "1 oferta encontrada"
+        : `${filtered.length} ofertas encontradas`;
+
+
+    document.getElementById(
+        "emptyState"
+    ).style.display =
+        filtered.length === 0
+        ? "block"
+        : "none";
+
 }
+
+
+async function shareProduct(name,link){
+
+    const text =
+        `${name} — encontrei no MiraDesconto`;
+
+
+    if(navigator.share){
+
+        try{
+
+            await navigator.share({
+                title:name,
+                text:text,
+                url:link
+            });
+
+            return;
+
+        }catch(error){}
+
+    }
+
+
+    try{
+
+        await navigator.clipboard.writeText(
+            `${text}\n${link}`
+        );
+
+        alert(
+            "Link copiado!"
+        );
+
+    }catch(error){
+
+        alert(
+            "Não foi possível copiar o link."
+        );
+
+    }
+
+}
+
+
+/* INICIA O SITE */
+
+renderProducts();
 
 </script>
 
