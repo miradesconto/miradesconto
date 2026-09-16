@@ -368,6 +368,14 @@ footer{
     }
 
 }
+.logo{border:0;background:transparent;text-align:left;font-family:inherit;}
+.image-placeholder{font-size:14px;color:#6b7280;}
+.product-image img{max-width:100%;width:100%;height:100%;object-fit:contain;padding:15px;}
+.data-notice{font-size:13px;line-height:1.6;color:#6b7280;margin-bottom:22px;}
+.load-more{display:block;margin:25px auto 0;padding:14px 24px;background:#fff;border:1px solid #d1d5db;border-radius:9px;cursor:pointer;}
+[hidden]{display:none!important;}
+#shareStatus{margin-top:15px;text-align:center;}
+button:focus-visible,a:focus-visible{outline:3px solid #15803d;outline-offset:3px;}
 </style>
 </head>
 
@@ -377,16 +385,15 @@ footer{
 
 <div class="header-container">
 
-    <div class="logo" onclick="resetFilters()">
+    <button type="button" class="logo" aria-label="MiraDesconto: limpar filtros">
         Mira<span>Desconto</span>
-    </div>
+    </button>
 
     <div class="search">
         <input
-        id="searchInput"
+        id="searchInput" aria-label="Buscar produto, loja ou categoria"
         type="search"
-        placeholder="🔎 Buscar produto..."
-        oninput="renderProducts()">
+        placeholder="🔎 Buscar produto...">
     </div>
 
 </div>
@@ -411,38 +418,32 @@ sem perder tempo procurando.
 <div class="categories-container">
 
 <button class="category active"
-data-category="Todos"
-onclick="selectCategory(this)">
+data-category="Todos">
 🔥 Destaques
 </button>
 
 <button class="category"
-data-category="Informática"
-onclick="selectCategory(this)">
+data-category="Informática">
 💻 Informática
 </button>
 
 <button class="category"
-data-category="Games"
-onclick="selectCategory(this)">
+data-category="Games">
 🎮 Games
 </button>
 
 <button class="category"
-data-category="Celulares"
-onclick="selectCategory(this)">
+data-category="Celulares">
 📱 Celulares
 </button>
 
 <button class="category"
-data-category="Casa"
-onclick="selectCategory(this)">
+data-category="Casa">
 🏠 Casa
 </button>
 
 <button class="category"
-data-category="Eletrônicos"
-onclick="selectCategory(this)">
+data-category="Eletrônicos">
 📺 Eletrônicos
 </button>
 
@@ -468,7 +469,7 @@ onclick="selectCategory(this)">
 
 <div class="sort">
 
-<select id="sortSelect" onchange="renderProducts()">
+<select id="sortSelect" aria-label="Ordenar ofertas">
 
 <option value="default">
 Ordenar ofertas
@@ -493,6 +494,8 @@ Maior preço
 </div>
 
 
+<p id="dataNotice" class="data-notice"></p>
+<noscript>Ative o JavaScript para consultar as ofertas.</noscript>
 <div id="productList" class="products"></div>
 
 
@@ -507,6 +510,8 @@ Tente pesquisar outro produto ou categoria.
 </div>
 
 
+<button id="loadMore" type="button" class="load-more" hidden>Mostrar mais ofertas</button>
+<p id="shareStatus" role="status" aria-live="polite"></p>
 <div class="disclaimer">
 
 <strong>Transparência:</strong>
@@ -531,433 +536,8 @@ antes de concluir a compra.
 </footer>
 
 
-<script>
-
-/* ======================================================
-   BANCO DE PRODUTOS
-
-   É AQUI QUE VAMOS CADASTRAR AS OFERTAS.
-
-   NÃO PRECISA CRIAR HTML NOVO PARA CADA PRODUTO.
-====================================================== */
-
-const products = [
-
-{
-    name:"SSD Kingston NV3",
-    category:"Informática",
-    store:"Mercado Livre",
-
-    oldPrice:null,
-    price:null,
-
-    link:"https://meli.la/1TJh5DW",
-
-    emoji:"💾"
-}
-
-
-/*
-
-EXEMPLO DE COMO SERÁ UM NOVO PRODUTO:
-
-,{
-    name:"Mouse Gamer Exemplo",
-    category:"Games",
-    store:"Mercado Livre",
-
-    oldPrice:199.90,
-    price:149.90,
-
-    link:"COLE-O-LINK-AQUI",
-
-    emoji:"🖱️"
-}
-
-*/
-
-];
-
-
-/* ======================================================
-   SISTEMA
-====================================================== */
-
-let selectedCategory = "Todos";
-
-
-function money(value){
-
-    if(value === null){
-        return "Ver preço";
-    }
-
-    return value.toLocaleString(
-        "pt-BR",
-        {
-            style:"currency",
-            currency:"BRL"
-        }
-    );
-
-}
-
-
-function calculateDiscount(oldPrice,price){
-
-    if(!oldPrice || !price){
-        return null;
-    }
-
-    if(oldPrice <= price){
-        return null;
-    }
-
-    return Math.round(
-        ((oldPrice-price)/oldPrice)*100
-    );
-
-}
-
-
-function selectCategory(button){
-
-    document
-    .querySelectorAll(".category")
-    .forEach(item =>
-        item.classList.remove("active")
-    );
-
-    button.classList.add("active");
-
-    selectedCategory =
-        button.dataset.category;
-
-    document.getElementById(
-        "sectionTitle"
-    ).innerText =
-        selectedCategory === "Todos"
-        ? "🔥 Ofertas em destaque"
-        : button.innerText;
-
-    renderProducts();
-
-}
-
-
-function resetFilters(){
-
-    selectedCategory="Todos";
-
-    document.getElementById(
-        "searchInput"
-    ).value="";
-
-    document.getElementById(
-        "sortSelect"
-    ).value="default";
-
-    const buttons =
-        document.querySelectorAll(
-            ".category"
-        );
-
-    buttons.forEach(
-        button =>
-        button.classList.remove("active")
-    );
-
-    buttons[0].classList.add("active");
-
-    document.getElementById(
-        "sectionTitle"
-    ).innerText =
-        "🔥 Ofertas em destaque";
-
-    renderProducts();
-
-}
-
-
-function renderProducts(){
-
-    const search =
-        document
-        .getElementById("searchInput")
-        .value
-        .toLowerCase()
-        .trim();
-
-    const sort =
-        document
-        .getElementById("sortSelect")
-        .value;
-
-
-    let filtered =
-        products.filter(product => {
-
-            const categoryMatch =
-                selectedCategory === "Todos"
-                ||
-                product.category ===
-                selectedCategory;
-
-            const searchMatch =
-                product.name
-                .toLowerCase()
-                .includes(search)
-
-                ||
-
-                product.store
-                .toLowerCase()
-                .includes(search)
-
-                ||
-
-                product.category
-                .toLowerCase()
-                .includes(search);
-
-            return categoryMatch
-                && searchMatch;
-
-        });
-
-
-    if(sort === "discount"){
-
-        filtered.sort((a,b)=>{
-
-            const discountA =
-                calculateDiscount(
-                    a.oldPrice,
-                    a.price
-                ) || 0;
-
-            const discountB =
-                calculateDiscount(
-                    b.oldPrice,
-                    b.price
-                ) || 0;
-
-            return discountB-discountA;
-
-        });
-
-    }
-
-
-    if(sort === "lowPrice"){
-
-        filtered.sort((a,b)=>
-            (a.price ?? Infinity)
-            -
-            (b.price ?? Infinity)
-        );
-
-    }
-
-
-    if(sort === "highPrice"){
-
-        filtered.sort((a,b)=>
-            (b.price ?? 0)
-            -
-            (a.price ?? 0)
-        );
-
-    }
-
-
-    const container =
-        document.getElementById(
-            "productList"
-        );
-
-
-    container.innerHTML="";
-
-
-    filtered.forEach(product => {
-
-        const discount =
-            calculateDiscount(
-                product.oldPrice,
-                product.price
-            );
-
-
-        const card =
-            document.createElement(
-                "article"
-            );
-
-
-        card.className="card";
-
-
-        card.innerHTML=`
-
-        <div class="product-image">
-
-            ${product.emoji}
-
-            ${
-                discount
-                ?
-                `<span class="discount">
-                -${discount}%
-                </span>`
-                :
-                ""
-            }
-
-        </div>
-
-
-        <div class="card-content">
-
-            <div class="category-label">
-                ${product.category}
-            </div>
-
-            <h3>
-                ${product.name}
-            </h3>
-
-
-            <div class="old-price">
-
-                ${
-                    product.oldPrice
-                    ?
-                    money(product.oldPrice)
-                    :
-                    ""
-                }
-
-            </div>
-
-
-            <div class="price">
-
-                ${money(product.price)}
-
-            </div>
-
-
-            <div class="store">
-
-                ${product.store}
-
-            </div>
-
-
-            <div class="buttons">
-
-                <a
-                class="offer-button"
-                href="${product.link}"
-                target="_blank"
-                rel="noopener noreferrer sponsored">
-
-                VER OFERTA
-
-                </a>
-
-
-                <button
-                class="share-button"
-                onclick='shareProduct(
-                    ${JSON.stringify(product.name)},
-                    ${JSON.stringify(product.link)}
-                )'>
-
-                Compartilhar
-
-                </button>
-
-            </div>
-
-        </div>
-
-        `;
-
-
-        container.appendChild(card);
-
-    });
-
-
-    document.getElementById(
-        "resultCount"
-    ).innerText =
-        filtered.length === 1
-        ? "1 oferta encontrada"
-        : `${filtered.length} ofertas encontradas`;
-
-
-    document.getElementById(
-        "emptyState"
-    ).style.display =
-        filtered.length === 0
-        ? "block"
-        : "none";
-
-}
-
-
-async function shareProduct(name,link){
-
-    const text =
-        `${name} — encontrei no MiraDesconto`;
-
-
-    if(navigator.share){
-
-        try{
-
-            await navigator.share({
-                title:name,
-                text:text,
-                url:link
-            });
-
-            return;
-
-        }catch(error){}
-
-    }
-
-
-    try{
-
-        await navigator.clipboard.writeText(
-            `${text}\n${link}`
-        );
-
-        alert(
-            "Link copiado!"
-        );
-
-    }catch(error){
-
-        alert(
-            "Não foi possível copiar o link."
-        );
-
-    }
-
-}
-
-
-/* INICIA O SITE */
-
-renderProducts();
-
-</script>
+<script src="produtos.js"></script>
+<script src="interface.js"></script>
 
 </body>
 </html>
