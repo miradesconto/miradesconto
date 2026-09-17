@@ -1,0 +1,29 @@
+title: MiraDesconto
+url: https://miradesconto.github.io
+baseurl: /miradesconto
+lang: pt-BR
+markdown: kramdown
+collections:
+  artigos:
+    output: true
+    permalink: /blog/:name/
+defaults:
+  - scope:
+      path: ""
+      type: artigos
+    values:
+      layout: artigo
+      autor: MiraDesconto
+      status: rascunho
+exclude:
+  - blog/build.cjs
+  - blog/verify.cjs
+  - blog/pautas.json
+  - blog/README.md
+  - blog/COMO-ESCREVER.md
+  - blog/MODELO.md
+  - organizar_catalogo.cjs
+  - test-catalogo.cjs
+  - atualizar_produtos.py
+  - ORGANIZACAO.md
+  - LEIA-ME.md

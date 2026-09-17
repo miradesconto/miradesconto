@@ -152,6 +152,9 @@ def convert(path, out):
     (out/'produtos.js').write_text('// Gerado da planilha. Ausências permanecem null.\nwindow.MIRA_DATA = '+json.dumps(data,ensure_ascii=False,allow_nan=False,separators=(',',':'))+';\n',encoding='utf-8')
     write_marketing_catalog(products, out, date)
     write_catalog_chunks(products, out)
+    (out/'_data').mkdir(exist_ok=True)
+    editorial = {p['id']: dict(name=p['name'], imageUrl=p['imageUrl'], available=bool(p['affiliateUrl'])) for p in products}
+    (out/'_data'/'produtos.json').write_text(json.dumps(editorial,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     stats = {'valid':len(products),'rejected':rejected,'missingOldPrice':sum(p['oldPrice'] is None for p in products),'displayedDiscount':sum(bool(p['displayedDiscount']) for p in products),'affiliateLinks':len(affiliate),'images':0,'categories':{c:sum(p['category']==c for p in products) for c in sorted(set(p['category'] for p in products))}}
     stats['images'] = sum(bool(p['imageUrl']) for p in products)
     stats['affiliateLinks'] = sum(bool(p['affiliateUrl']) for p in products)

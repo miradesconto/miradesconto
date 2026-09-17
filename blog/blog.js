@@ -8,7 +8,9 @@ document.querySelectorAll('.image-frame img').forEach(img => {
   img.addEventListener('load', loaded);
   if (img.complete) {if (img.naturalWidth) loaded(); else fail();}
 });
+(() => {
 const input = document.getElementById('articleSearch');
+if (!input) return;
 const form = document.querySelector('.search-form');
 const sections = [...document.querySelectorAll('.topic')];
 const cards = [...document.querySelectorAll('.topic .card')];
@@ -35,3 +37,5 @@ input.addEventListener('input', search);
 clear.addEventListener('click', () => {reset();input.focus();});
 document.getElementById('resetSearch').addEventListener('click', () => {reset();input.focus();});
 document.querySelectorAll('.toolbar nav a').forEach(link => link.addEventListener('click', reset));
+
+})();

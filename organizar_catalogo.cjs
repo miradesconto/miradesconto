@@ -39,6 +39,7 @@ function organize() {
   fs.writeFileSync(analysis,JSON.stringify(stats,null,2)+'\n');
  }
  console.log(JSON.stringify({changed:changes.length,featured:featured.size,categories:counts}));
+ require('./blog/build.cjs').sync(data.products);
  return {changes,products:data.products};
 }
 module.exports={category,organize};

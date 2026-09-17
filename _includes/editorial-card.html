@@ -1,0 +1,14 @@
+{% assign entry = include.entry %}
+{% assign ready = false %}
+{% assign words = entry.content | markdownify | strip_html | strip %}
+{% if entry.status == 'publicado' and words != '' %}{% assign ready = true %}{% endif %}
+{% case entry.categoria %}{% when 'reviews' %}{% assign label = 'Reviews' %}{% when 'comparativos' %}{% assign label = 'Comparativos' %}{% else %}{% assign label = 'Guias de compra' %}{% endcase %}
+<article class="{% if include.feature %}featured{% else %}card{% endif %}" data-search="{{ entry.title | escape }} {{ entry.resumo | escape }} {{ label }} {% for id in entry.produtos %}{{ site.data.produtos[id].name | escape }} {% endfor %}">
+<a class="visual{% if entry.produtos.size > 1 %} pair{% endif %} article-cover" href="{{ entry.url | relative_url }}" aria-label="Abrir: {{ entry.title | escape }}">
+{% for id in entry.produtos %}{% assign product = site.data.produtos[id] %}
+<div class="image-frame"><span class="image-fallback">{{ product.name | default: entry.title | escape }}<small>Imagem indisponível</small></span>{% if product.imageUrl %}<img src="{{ product.imageUrl | escape }}" alt="{{ product.name | escape }}" width="480" height="360" decoding="async" {% if include.feature %}fetchpriority="high"{% else %}loading="lazy"{% endif %}>{% endif %}</div>
+{% endfor %}</a>
+<div class="card-copy"><div class="eyebrow">{{ label }} · {% if ready %}Artigo publicado{% else %}Pauta editorial{% endif %}</div>
+{% if include.feature %}<h3>{% else %}<h4>{% endif %}<a class="article-title" href="{{ entry.url | relative_url }}">{{ entry.title | escape }}</a>{% if include.feature %}</h3>{% else %}</h4>{% endif %}
+<p>{{ entry.resumo | escape }}</p><a class="text-link article-open" href="{{ entry.url | relative_url }}">{% if ready %}Ler artigo{% else %}Conhecer a pauta{% endif %} <span aria-hidden="true">→</span><span class="sr-only">: {{ entry.title | escape }}</span></a>
+<div class="product-links">{% for id in entry.produtos %}{% assign product = site.data.produtos[id] %}<div><p class="product-name">{{ product.name | default: id | escape }}</p>{% if product.available %}<a class="product-link" href="{{ '/' | relative_url }}?produto={{ id | url_encode }}#ofertas">Ver no catálogo <span class="sr-only">{{ product.name | escape }}</span><span aria-hidden="true">↗</span></a>{% else %}<span class="product-name">Produto fora da vitrine atual.</span>{% endif %}</div>{% endfor %}</div></div></article>
