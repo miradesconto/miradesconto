@@ -1,5 +1,6 @@
 """Uso: python atualizar_produtos.py MiraDesconto_ofertas_revisadas.xlsx
 Lê XLSX com a biblioteca padrão do Python, sem instalar pacotes.
+Também gera catalogo-seo.json: índice leve para marketing, SEO e automações.
 """
 import sys, json, re, math, zipfile, unicodedata
 from pathlib import Path
@@ -58,6 +59,34 @@ def url_ok(s):
     except ValueError: return False
 def number(v): return isinstance(v,(float,int)) and not isinstance(v,bool) and math.isfinite(v) and v > 0
 
+def write_marketing_catalog(products, out, collected_at):
+    """Gera índice compacto sem alterar os dados usados pela vitrine."""
+    items = []
+    for p in products:
+        if not p.get('affiliateUrl'):
+            continue
+        items.append({
+            'id': p['id'],
+            'name': p['name'],
+            'category': p['category'],
+            'price': p['price'],
+            'oldPrice': p['oldPrice'],
+            'discount': p['discount'],
+            'affiliateUrl': p['affiliateUrl'],
+            'imageUrl': p.get('imageUrl'),
+            'rank': p['rank']
+        })
+    payload = {
+        'generatedFrom': 'produtos.js',
+        'collectedAt': collected_at,
+        'count': len(items),
+        'products': items
+    }
+    (out/'catalogo-seo.json').write_text(
+        json.dumps(payload, ensure_ascii=False, allow_nan=False, separators=(',', ':')),
+        encoding='utf-8'
+    )
+
 def convert(path, out):
     sheets = read_xlsx(path)
     affiliate = {c.get('K'): c['L'] for _,c in sheets.get('Escolher ofertas',[]) if url_ok(c.get('L'))}
@@ -104,6 +133,7 @@ def convert(path, out):
     data = {'sourceFile':Path(path).name,'collectedAt':date,'products':products}
     out.mkdir(parents=True,exist_ok=True)
     (out/'produtos.js').write_text('// Gerado da planilha. Ausências permanecem null.\nwindow.MIRA_DATA = '+json.dumps(data,ensure_ascii=False,allow_nan=False,separators=(',',':'))+';\n',encoding='utf-8')
+    write_marketing_catalog(products, out, date)
     stats = {'valid':len(products),'rejected':rejected,'missingOldPrice':sum(p['oldPrice'] is None for p in products),'displayedDiscount':sum(bool(p['displayedDiscount']) for p in products),'affiliateLinks':len(affiliate),'images':0,'categories':{c:sum(p['category']==c for p in products) for c in sorted(set(p['category'] for p in products))}}
     stats['images'] = sum(bool(p['imageUrl']) for p in products)
     stats['affiliateLinks'] = sum(bool(p['affiliateUrl']) for p in products)
