@@ -87,6 +87,25 @@ def write_marketing_catalog(products, out, collected_at):
         encoding='utf-8'
     )
 
+def write_catalog_chunks(products, out):
+    """Exporta o catálogo em lotes de até 100 produtos, na ordem da vitrine."""
+    catalog_dir = out/'catalogo'
+    catalog_dir.mkdir(parents=True, exist_ok=True)
+    fields = ('id', 'name', 'category', 'price', 'oldPrice', 'discount',
+              'affiliateUrl', 'imageUrl', 'rank')
+    generated = set()
+    for start in range(0, len(products), 100):
+        filename = f'produtos-{start // 100 + 1:03d}.json'
+        batch = [{key: product[key] for key in fields}
+                 for product in products[start:start + 100]]
+        (catalog_dir/filename).write_text(
+            json.dumps(batch, ensure_ascii=False, allow_nan=False, separators=(',', ':')) + '\n',
+            encoding='utf-8')
+        generated.add(filename)
+    for old_file in catalog_dir.glob('produtos-*.json'):
+        if old_file.name not in generated:
+            old_file.unlink()
+
 def convert(path, out):
     sheets = read_xlsx(path)
     affiliate = {c.get('K'): c['L'] for _,c in sheets.get('Escolher ofertas',[]) if url_ok(c.get('L'))}
@@ -134,6 +153,7 @@ def convert(path, out):
     out.mkdir(parents=True,exist_ok=True)
     (out/'produtos.js').write_text('// Gerado da planilha. Ausências permanecem null.\nwindow.MIRA_DATA = '+json.dumps(data,ensure_ascii=False,allow_nan=False,separators=(',',':'))+';\n',encoding='utf-8')
     write_marketing_catalog(products, out, date)
+    write_catalog_chunks(products, out)
     stats = {'valid':len(products),'rejected':rejected,'missingOldPrice':sum(p['oldPrice'] is None for p in products),'displayedDiscount':sum(bool(p['displayedDiscount']) for p in products),'affiliateLinks':len(affiliate),'images':0,'categories':{c:sum(p['category']==c for p in products) for c in sorted(set(p['category'] for p in products))}}
     stats['images'] = sum(bool(p['imageUrl']) for p in products)
     stats['affiliateLinks'] = sum(bool(p['affiliateUrl']) for p in products)
