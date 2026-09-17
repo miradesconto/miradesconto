@@ -71,7 +71,7 @@ function makeCard(p) {
 function filteredProducts() {
     const query = normalize($('searchInput').value.trim());
     const filtered = products.filter(p => (selectedCategory === 'Todos' || p.category === selectedCategory)
-        && [p.name,p.store,p.category].some(v=>normalize(v).includes(query)));
+        && [p.id,p.name,p.store,p.category].some(v=>normalize(v).includes(query)));
     switch($('sortSelect').value) {
         case 'discount': filtered.sort((a,b)=>(calculateDiscount(b.oldPrice,b.price)||0)-(calculateDiscount(a.oldPrice,a.price)||0));break;
         case 'lowPrice': filtered.sort((a,b)=>(a.price ?? Infinity)-(b.price ?? Infinity));break;
@@ -113,4 +113,9 @@ $('loadMore').addEventListener('click',()=>{visibleCount+=24;renderProducts(true
 $('dataNotice').textContent = source
     ? `Preços registrados em ${source.collectedAt || 'data não informada'}. Confirme preço e disponibilidade na loja. Categorias sugeridas pelo nome do produto.`
     : 'Não foi possível carregar as ofertas. Verifique se produtos.js está na mesma pasta do site.';
+// Editorial links open the matching catalog record, including items beyond page one.
+const requestedProduct = new URLSearchParams(window.location.search).get('produto');
+if (requestedProduct) {
+    $('searchInput').value = products.find(p => p.id === requestedProduct)?.name || requestedProduct;
+}
 renderProducts();
