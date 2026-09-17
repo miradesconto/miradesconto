@@ -6,15 +6,22 @@
   "affiliateLinks": 1009,
   "images": 1021,
   "categories": {
-    "Beleza e cuidados": 50,
-    "Casa": 226,
-    "Celulares": 25,
-    "Eletrônicos": 13,
-    "Esportes e suplementos": 38,
-    "Games": 6,
-    "Informática": 13,
-    "Moda": 126,
-    "Outros": 525
+    "Moda": 158,
+    "Esportes e suplementos": 64,
+    "Automotivo": 74,
+    "Casa": 334,
+    "Papelaria e artesanato": 32,
+    "Beleza e cuidados": 74,
+    "Celulares": 16,
+    "Brinquedos e bebê": 49,
+    "Ferramentas e construção": 87,
+    "Saúde": 33,
+    "Pet shop": 30,
+    "Eletrônicos": 32,
+    "Games": 8,
+    "Informática": 19,
+    "Instrumentos musicais": 11,
+    "Alimentos e bebidas": 1
   },
   "missingImages": [
     {

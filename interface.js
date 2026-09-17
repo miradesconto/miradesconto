@@ -1,7 +1,7 @@
 'use strict';
 const source = window.MIRA_DATA;
 const products = (source?.products || []).filter(p => p.name && safeUrl(p.affiliateUrl));
-let selectedCategory = 'Todos';
+let selectedCategory = 'Destaques';
 let visibleCount = 24;
 const $ = id => document.getElementById(id);
 function safeUrl(value) {
@@ -22,7 +22,9 @@ function selectCategory(button) {
         b.classList.toggle('active', b === button);
         b.setAttribute('aria-pressed', String(b === button));
     });
-    $('sectionTitle').textContent = selectedCategory === 'Todos' ? '🔥 Ofertas em destaque' : selectedCategory;
+    $('categorySelect').value = selectedCategory;
+    $('sectionTitle').textContent = selectedCategory === 'Destaques' ? 'Produtos em destaque' : selectedCategory === 'Todos' ? 'Todos os produtos' : selectedCategory;
+    $('selectionNotice').hidden = selectedCategory !== 'Destaques';
     renderProducts();
 }
 function resetFilters() {
@@ -70,7 +72,7 @@ function makeCard(p) {
 }
 function filteredProducts() {
     const query = normalize($('searchInput').value.trim());
-    const filtered = products.filter(p => (selectedCategory === 'Todos' || p.category === selectedCategory)
+    const filtered = products.filter(p => (selectedCategory === 'Todos' || (selectedCategory === 'Destaques' ? p.featured === true : p.category === selectedCategory))
         && [p.id,p.name,p.store,p.category].some(v=>normalize(v).includes(query)));
     switch($('sortSelect').value) {
         case 'discount': filtered.sort((a,b)=>(calculateDiscount(b.oldPrice,b.price)||0)-(calculateDiscount(a.oldPrice,a.price)||0));break;
@@ -98,24 +100,37 @@ async function shareProduct(name,link) {
     catch { window.prompt('Copie o link da oferta:',link); }
 }
 const categoryContainer = document.querySelector('.categories-container');
-const categories = ['Todos','Informática','Games','Celulares','Casa','Eletrônicos',...new Set(products.map(p=>p.category || 'Outros'))];
+const availableCategories = [...new Set(products.map(p=>p.category || 'Outros'))].sort((a,b)=>a.localeCompare(b,'pt-BR'));
+const categories = ['Destaques','Todos',...availableCategories];
 categoryContainer.replaceChildren();
+const mobileCategory = element('div','category-mobile');
+const categoryLabel = element('label','','Categoria');
+categoryLabel.htmlFor = 'categorySelect';
+const categorySelect = element('select');categorySelect.id = 'categorySelect';
+mobileCategory.append(categoryLabel,categorySelect);
 [...new Set(categories)].forEach(cat=>{
-    const b = element('button','category',cat === 'Todos'?'🔥 Destaques':cat);
+    const count = products.filter(p=>cat==='Todos'||(cat==='Destaques'?p.featured===true:p.category===cat)).length;
+    const label = `${cat} (${count})`;
+    const b = element('button','category',label);
     b.type = 'button';b.dataset.category = cat;
-    b.classList.toggle('active',cat==='Todos');b.setAttribute('aria-pressed',String(cat==='Todos'));
+    b.classList.toggle('active',cat===selectedCategory);b.setAttribute('aria-pressed',String(cat===selectedCategory));
     b.addEventListener('click',()=>selectCategory(b));categoryContainer.append(b);
+    const option=element('option','',label);option.value=cat;categorySelect.append(option);
 });
-$('searchInput').addEventListener('input',renderProducts);
+categoryContainer.append(mobileCategory);
+categorySelect.addEventListener('change',()=>selectCategory([...categoryContainer.querySelectorAll('.category')].find(b=>b.dataset.category===categorySelect.value)));
+// Header search is global, so non-featured products remain discoverable.
+$('searchInput').addEventListener('input',()=>selectCategory([...categoryContainer.querySelectorAll('.category')].find(b=>b.dataset.category==='Todos')));
 $('sortSelect').addEventListener('change',renderProducts);
 document.querySelector('.logo').addEventListener('click',resetFilters);
 $('loadMore').addEventListener('click',()=>{visibleCount+=24;renderProducts(true);});
 $('dataNotice').textContent = source
-    ? `Preços registrados em ${source.collectedAt || 'data não informada'}. Confirme preço e disponibilidade na loja. Categorias sugeridas pelo nome do produto.`
+    ? `Preços registrados em ${source.collectedAt || 'data não informada'}. Confirme preço e disponibilidade na loja.`
     : 'Não foi possível carregar as ofertas. Verifique se produtos.js está na mesma pasta do site.';
 // Editorial links open the matching catalog record, including items beyond page one.
 const requestedProduct = new URLSearchParams(window.location.search).get('produto');
 if (requestedProduct) {
     $('searchInput').value = products.find(p => p.id === requestedProduct)?.name || requestedProduct;
+    selectedCategory = 'Todos';
 }
-renderProducts();
+selectCategory([...categoryContainer.querySelectorAll('.category')].find(b=>b.dataset.category===selectedCategory));

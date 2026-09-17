@@ -41,19 +41,15 @@ def read_xlsx(path):
 def normalized(s):
     return ''.join(c for c in unicodedata.normalize('NFD', s.lower()) if unicodedata.category(c) != 'Mn')
 
-RULES = [
- ('Games', r'playstation|xbox|nintendo|joystick|gamepad|controle gamer'),
- ('Celulares', r'iphone|smartphone|celular|galaxy|redmi|poco |carregador.*apple'),
- ('Informática', r'\bssd\b|notebook|\bram\b|mouse|teclado|monitor|impressora|roteador|computador|pendrive|pen drive|webcam'),
- ('Beleza e cuidados', r'serum|shampoo|condicionador|capilar|hidratante|perfume|desodorante|protetor solar|maquiagem|sabonete|creme|escova dental|fralda|barbeador|depilador'),
- ('Moda', r'camiseta|camisa|calca|cueca|calcinha|meia|tenis|vestido|bermuda|short|sandalia|chinelo|blusa|jaqueta|mochila|bolsa|relogio|pijama|sutia'),
- ('Esportes e suplementos', r'creatina|whey|suplemento|vitamina|bicicleta|academia|halter|barraca|camping|futebol|colageno|omega'),
- ('Eletrônicos', r'camera|fone|headphone|televis|smart tv|caixa de som|projetor|microfone|soundbar'),
- ('Casa', r'panela|cozinha|cafe|geladeira|lavadora|lava e seca|aspirador|fritadeira|batedeira|liquidificador|colchao|cama|travesseiro|toalha|tapete|louca|lixeira|armario|guarda roupa|mesa|cadeira|porta|ducha|chuveiro|ventilador|ar condicionado|cortina|lencol|natal|ferro|fogao|forno|ferramenta|furadeira|parafusadeira'),
-]
-def category(name):
+ORGANIZATION = json.loads((Path(__file__).resolve().parent/'organizacao-catalogo.json').read_text(encoding='utf-8'))
+
+def category(name, pid=None):
+    override = ORGANIZATION['overrides'].get(pid)
+    if override:
+        return override
     n = normalized(name)
-    return next((cat for cat, pattern in RULES if re.search(pattern,n)), 'Outros')
+    return next((rule['category'] for rule in ORGANIZATION['rules'] if re.search(rule['pattern'], n)), 'Outros')
+
 def url_ok(s):
     try: return isinstance(s,str) and urlparse(s).scheme in ('http','https') and bool(urlparse(s).hostname) and not re.search(r'[\s<>"\x00-\x1f]',s)
     except ValueError: return False
@@ -69,6 +65,7 @@ def write_marketing_catalog(products, out, collected_at):
             'id': p['id'],
             'name': p['name'],
             'category': p['category'],
+            'featured': p.get('featured', False),
             'price': p['price'],
             'oldPrice': p['oldPrice'],
             'discount': p['discount'],
@@ -92,7 +89,7 @@ def write_catalog_chunks(products, out):
     catalog_dir = out/'catalogo'
     catalog_dir.mkdir(parents=True, exist_ok=True)
     fields = ('id', 'name', 'category', 'price', 'oldPrice', 'discount',
-              'affiliateUrl', 'imageUrl', 'rank')
+              'affiliateUrl', 'imageUrl', 'rank', 'featured')
     generated = set()
     for start in range(0, len(products), 100):
         filename = f'produtos-{start // 100 + 1:03d}.json'
@@ -128,7 +125,8 @@ def convert(path, out):
         old = c.get('D') if number(c.get('D')) else None
         discount = round((1-price/old)*100,4) if old and old > price else None
         products.append(dict(id=pid,name=name,price=price,oldPrice=old,discount=discount,
-            displayedDiscount=c.get('E'),category=category(name),categorySource='Classificação automática pelo nome',
+            displayedDiscount=c.get('E'),category=category(name,pid),categorySource='Organização por tipo de produto; regras e revisões em organizacao-catalogo.json',
+            featured=pid in ORGANIZATION['featuredIds'],
             store='Mercado Livre',storeSource='Domínio da URL',productUrl=url,affiliateUrl=affiliate.get(url),
             imageUrl=None,commission=c.get('F'),extraEarnings=c.get('G'),rating=c.get('H'),salesText=c.get('I'),
             highlight=c.get('J'),priceEvidence=c.get('L'),installment=c.get('M'),collectedAt=date,

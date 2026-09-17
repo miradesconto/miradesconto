@@ -8,7 +8,7 @@
     ];
     const slides = groups.map(g=>({...g,items:products.filter(p=>p.category===g.category && safeUrl(p.imageUrl) && (g.category!=='Informática' || /teclado|impressora|mouse/i.test(p.name))).slice(0,3)})).filter(g=>g.items.length);
     if (!hero || !slides.length) return;
-    hero.setAttribute('aria-label','Destaques por categoria');
+    hero.setAttribute('aria-label','Conheça as categorias');
     hero.setAttribute('aria-roledescription','carrossel');
     const shell=element('div','hero-shell');
     const panels=slides.map((g,i)=>{

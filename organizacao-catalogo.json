@@ -1,0 +1,314 @@
+{
+  "version": 1,
+  "featuredIds": [
+    "MLB3941733035",
+    "MLB4592320910",
+    "MLB4208012055",
+    "MLB4329495631",
+    "MLB4583723537",
+    "MLB6212972552",
+    "MLB6200820014",
+    "MLB5197670602",
+    "MLB5298166742",
+    "MLB4309377485",
+    "MLB4634504445",
+    "MLB4268042659"
+  ],
+  "overrides": {
+    "MLB4631433866": "Moda",
+    "MLB5586830858": "Moda",
+    "MLB6297031844": "Moda",
+    "MLB5772116092": "Moda",
+    "MLB6501050772": "Moda",
+    "MLB5911250838": "Moda",
+    "MLB6919512244": "Moda",
+    "MLB2728565741": "Moda",
+    "MLB5342827164": "Moda",
+    "MLB3918497427": "Casa",
+    "MLB4422500297": "Casa",
+    "MLB3611214641": "Casa",
+    "MLB3815565525": "Casa",
+    "MLB4865614177": "Casa",
+    "MLB4966501477": "Casa",
+    "MLB4799266106": "Casa",
+    "MLB4543207585": "Casa",
+    "MLB4087854311": "Casa",
+    "MLB3907010406": "Casa",
+    "MLB4245438233": "Casa",
+    "MLB7097409214": "Casa",
+    "MLB3341818435": "Casa",
+    "MLB4537388011": "Casa",
+    "MLB4359020290": "Casa",
+    "MLB5872121480": "Casa",
+    "MLB6196240894": "Casa",
+    "MLB6497871524": "Casa",
+    "MLB4482948859": "Casa",
+    "MLB4320595023": "Casa",
+    "MLB6155298514": "Casa",
+    "MLB4642612133": "Casa",
+    "MLB5237344660": "Casa",
+    "MLB5778744278": "Casa",
+    "MLB4449367315": "Ferramentas e construção",
+    "MLB4325676359": "Automotivo",
+    "MLB4071348470": "Automotivo",
+    "MLB3776741391": "Automotivo",
+    "MLB4031322263": "Automotivo",
+    "MLB1927740375": "Automotivo",
+    "MLB5539628220": "Automotivo",
+    "MLB6194860656": "Automotivo",
+    "MLB1876768129": "Automotivo",
+    "MLB4923313511": "Automotivo",
+    "MLB7192063762": "Automotivo",
+    "MLB6470299726": "Automotivo",
+    "MLB6527428882": "Automotivo",
+    "MLB3841605091": "Automotivo",
+    "MLB3628252234": "Automotivo",
+    "MLB5290476380": "Saúde",
+    "MLB5534971876": "Saúde",
+    "MLB6666591830": "Beleza e cuidados",
+    "MLB5321412138": "Beleza e cuidados",
+    "MLB3264898075": "Beleza e cuidados",
+    "MLB7331324634": "Beleza e cuidados",
+    "MLB4999125481": "Beleza e cuidados",
+    "MLB4224850923": "Papelaria e artesanato",
+    "MLB5151951307": "Papelaria e artesanato",
+    "MLB2008763820": "Papelaria e artesanato",
+    "MLB2678086770": "Papelaria e artesanato",
+    "MLB4994106151": "Papelaria e artesanato",
+    "MLB4580649957": "Papelaria e artesanato",
+    "MLB3826150237": "Papelaria e artesanato",
+    "MLB4534507420": "Brinquedos e bebê",
+    "MLB6603031774": "Brinquedos e bebê",
+    "MLB4022034363": "Brinquedos e bebê",
+    "MLB6733266876": "Brinquedos e bebê",
+    "MLB5936905456": "Brinquedos e bebê",
+    "MLB5739420414": "Brinquedos e bebê",
+    "MLB4987993279": "Pet shop",
+    "MLB4993215209": "Pet shop",
+    "MLB3459329943": "Pet shop",
+    "MLB5179976679": "Informática",
+    "MLB5420785010": "Informática",
+    "MLB5147042183": "Ferramentas e construção",
+    "MLB4145597151": "Ferramentas e construção",
+    "MLB4448125793": "Ferramentas e construção",
+    "MLB5391620664": "Ferramentas e construção",
+    "MLB4579716965": "Ferramentas e construção",
+    "MLB6582957406": "Instrumentos musicais",
+    "MLB3929456969": "Instrumentos musicais",
+    "MLB4326245098": "Esportes e suplementos",
+    "MLB4158714865": "Esportes e suplementos",
+    "MLB4239826875": "Eletrônicos",
+    "MLB7326834994": "Eletrônicos",
+    "MLB4406527895": "Eletrônicos",
+    "MLB4428027945": "Papelaria e artesanato",
+    "MLB7246537986": "Casa",
+    "MLB4472177707": "Casa",
+    "MLB4607660647": "Casa",
+    "MLB6747369740": "Casa",
+    "MLB6835937756": "Casa",
+    "MLB6519291232": "Casa",
+    "MLB4694655393": "Casa",
+    "MLB4433041399": "Casa",
+    "MLB5346248060": "Ferramentas e construção",
+    "MLB4971088155": "Ferramentas e construção",
+    "MLB3621404839": "Ferramentas e construção",
+    "MLB6537947298": "Ferramentas e construção",
+    "MLB5441125406": "Ferramentas e construção",
+    "MLB5390372582": "Ferramentas e construção",
+    "MLB2179127977": "Automotivo",
+    "MLB3948782455": "Automotivo",
+    "MLB4273146969": "Automotivo",
+    "MLB4960561285": "Automotivo",
+    "MLB6963484978": "Automotivo",
+    "MLB4400862407": "Automotivo",
+    "MLB6194700900": "Saúde",
+    "MLB5958982700": "Saúde",
+    "MLB5776072122": "Saúde",
+    "MLB4050115421": "Saúde",
+    "MLB7331735750": "Moda",
+    "MLB7238834326": "Moda",
+    "MLB6737840616": "Moda",
+    "MLB4533190419": "Moda",
+    "MLB5463094406": "Moda",
+    "MLB6310581262": "Moda",
+    "MLB4056431029": "Moda",
+    "MLB5321944348": "Moda",
+    "MLB4055834773": "Moda",
+    "MLB6699389750": "Beleza e cuidados",
+    "MLB6231780876": "Beleza e cuidados",
+    "MLB4810143177": "Pet shop",
+    "MLB5266714014": "Pet shop",
+    "MLB6111275190": "Pet shop",
+    "MLB6554816424": "Pet shop",
+    "MLB4265385921": "Pet shop",
+    "MLB6670843040": "Pet shop",
+    "MLB4287637614": "Brinquedos e bebê",
+    "MLB4127677517": "Brinquedos e bebê",
+    "MLB5312533800": "Brinquedos e bebê",
+    "MLB4216898827": "Brinquedos e bebê",
+    "MLB7167150084": "Brinquedos e bebê",
+    "MLB6943819700": "Brinquedos e bebê",
+    "MLB4648803608": "Brinquedos e bebê",
+    "MLB4070563111": "Brinquedos e bebê",
+    "MLB3972215179": "Brinquedos e bebê",
+    "MLB3976480855": "Brinquedos e bebê",
+    "MLB5203434425": "Esportes e suplementos",
+    "MLB6613134336": "Esportes e suplementos",
+    "MLB5087896108": "Esportes e suplementos",
+    "MLB2046447410": "Esportes e suplementos",
+    "MLB6076997350": "Casa",
+    "MLB6921225976": "Casa",
+    "MLB5322342984": "Casa",
+    "MLB6634866698": "Casa",
+    "MLB6149653504": "Esportes e suplementos",
+    "MLB4626993717": "Esportes e suplementos",
+    "MLB5837383814": "Papelaria e artesanato",
+    "MLB5572441840": "Casa",
+    "MLB6048696918": "Casa",
+    "MLB6539711768": "Beleza e cuidados",
+    "MLB5113622235": "Ferramentas e construção",
+    "MLB4446030255": "Automotivo"
+  },
+  "rules": [
+    {
+      "category": "Ferramentas e construção",
+      "pattern": "pistola finca pino"
+    },
+    {
+      "category": "Beleza e cuidados",
+      "pattern": "maleta maquiagem"
+    },
+    {
+      "category": "Casa",
+      "pattern": "seladora a vacuo|bomba galao"
+    },
+    {
+      "category": "Casa",
+      "pattern": "^saia para cama|^cama box|^kit.*tampa descartavel para alimentos"
+    },
+    {
+      "category": "Pet shop",
+      "pattern": "pet.*(gato|cachorro)|arranhador.*gato"
+    },
+    {
+      "category": "Brinquedos e bebê",
+      "pattern": "cozinha.*brinquedo|cama elastica|barraca infantil"
+    },
+    {
+      "category": "Casa",
+      "pattern": "^rack\\b|^criado.*mudo|^prateleira.*banheiro|^relogio.*(parede|mesa)"
+    },
+    {
+      "category": "Beleza e cuidados",
+      "pattern": "modelador.*cachos|escova secadora|^kit facial"
+    },
+    {
+      "category": "Casa",
+      "pattern": "^capa.*colchao|^cabide\\b"
+    },
+    {
+      "category": "Automotivo",
+      "pattern": "^(kit )?.*shampoo.*automotivo"
+    },
+    {
+      "category": "Celulares",
+      "pattern": "^(celular|smartphone)\\b"
+    },
+    {
+      "category": "Automotivo",
+      "pattern": "vonix|motul|protetor solar.*carro|carro.*protetor solar"
+    },
+    {
+      "category": "Moda",
+      "pattern": "\\b(saia|pijamas|casaco|camisola)\\b"
+    },
+    {
+      "category": "Casa",
+      "pattern": "saia para cama"
+    },
+    {
+      "category": "Informática",
+      "pattern": "cooler para processador"
+    },
+    {
+      "category": "Eletrônicos",
+      "pattern": "controle de acesso facial|smartwatch"
+    },
+    {
+      "category": "Beleza e cuidados",
+      "pattern": "protetor solar|depilador|depilatorio|sabonete\\b|creme (corporal|hidratante)|extrator de cravos"
+    },
+    {
+      "category": "Casa",
+      "pattern": "sab[oã]neteira|suporte sabonete|porta sabonete|acessorios banheiro"
+    },
+    {
+      "category": "Casa",
+      "pattern": "\\brack\\b|criado.*mudo|\\b(cabeceira|guarda[- ]roupa|armario|escrivaninha|estante|gaveteiro|sapateira|cabide|poltrona|espelheira|espelho|fruteira)\\b|mesa (de |gamer)|cadeira (de |para |gamer)|relogio (de parede|digital led.*mesa)|saia para cama|estrutura de cama"
+    },
+    {
+      "category": "Saúde",
+      "pattern": "pressao arterial|medidor de pressao|medidor.*pressao.*digital|aparelho pressao|oximetro|termometro|auditivo|otoscopio|ortopedic|ortopedica|tendinite|epicondilite|corretor postura|primeiros socorros|sutura|cirurgic|hospitalar|secrecao|sangue|luer lock|microtubo|pipeta|espirometro|preservativ|camisinha|micose|enxaqueca|estrabismo|adipometro|bioimpedancia|balanca.*(corporal|180kg)|bengala|joanete|tubo ressonancia|luvas vinil|prope descartavel"
+    },
+    {
+      "category": "Beleza e cuidados",
+      "pattern": "body splash|perfume|parfum|colonia|serum|shampoo|condicionador|hidratante|desodorante|capilar|maquiagem|skin care|skincare|facial|sobrancelha|cilios|cutilagem|cuticula|manicure|nail|unhas gel|lixa.*unha|esmalte em gel|batom|blush|henna|barbeador|aparador.*(pelos|barba)|cortar cabelo|modelador de cachos|escova (secadora|alisadora|flex)|chapinha|pos[- ]barba|dental|cetaphil|bioderma|episol|dermosec|retocador de raizes|oleo.*(s[iì]age|s[ií]age)|oleo vegetal.*(ojon|ricino)|criolipolise"
+    },
+    {
+      "category": "Moda",
+      "pattern": "\\b(camiseta|camisetas|camisa|camisas|blusa|blusas|blusinhas|calca|calcas|calcinha|calcinhas|cueca|cuecas|meia|meias|tenis|vestido|bermuda|bermudas|short|shorts|sandalia|chinelo|jaqueta|moletom|pijama|sutia|sutian|lingerie|legging|macacao|macaquinho|scarpin|sunga|maio|roupao|bone|bota|botina|echarpe|cachecol|pashmina|jaleco|pantufa|colete social|terno|oculos|mochila|necessaire|doleira)\\b|body tule|cinta modeladora|conjunto.*fitness|conjunto.*top|mala.*viagem|mala de bordo|tag de mala|relogio (casio|technos)|pulseira.*kabbalah|cordao prata|anel solitario|cinto tatico"
+    },
+    {
+      "category": "Pet shop",
+      "pattern": "cachorro|cachorros|\\b(gato|gatos|cao|caes|coleira|hamster|racao|catnip|petisco|nexgard|herbalvet)\\b|jornal pet|vivemos pet|cata caca|\\bpet\\b.*(cao|coleta|banco)|beija flor|sela americana"
+    },
+    {
+      "category": "Brinquedos e bebê",
+      "pattern": "brinquedo|brinquedos|boneca|bonecas|pelucia|quebra[- ]cabeca|blocos de montar|massinha|chocalho|mamadeira|berco|bercinho|\\bbebe\\b|baba eletronica|fralda|playground|\\bpula pula\\b|boia.*infantil|caranguejo fujao|patinho danc|carrinho.*controle remoto|penteadeira.*infantil|laptop infantil|hot wheels|pebolim infantil|cestinha.*infantil"
+    },
+    {
+      "category": "Automotivo",
+      "pattern": "automotiv|veicular|parabrisa|para[- ]brisa|parachoque|para[- ]choque|capota|cacamba|car play|carplay|wastegate|\\btbi\\b|pitman|carretinha|cubo roda|pastilhas freio|retentor volante|tampa valvulas|radiador|coxim|escapamento|\\bobd2\\b|honda|\\bcg\\b|\\btitan\\b|motoboy|motoqueiro|motociclista|cam[iã]nhao|caminhao|carro eletrico|motor.*cilindro|carro.*(pneu|volante)|pneu.*scooter|punho.*(luz|partida)|terminal bateria|insulfilm|vonix|motul|c2 lubrificante|\\bbyd\\b|farol.*(led|milha)|moldura.*saveiro|bateria heliar"
+    },
+    {
+      "category": "Ferramentas e construção",
+      "pattern": "ferramenta|furadeira|parafusadeira|martelete|martelo|serra|serrote|alicate|rebit|esmerilhadeira|lixadeira|trena|esquadro|plaina|talha manual|guincho|soquete|chave.*(catraca|fenda|philips|precisao|roda)|bucha.*parede|parafusos|solda|soldador|soldar|tupia|estilete|impermeabilizante|vedatudo|vedacao|espuma expansiva|rejunte|primer.*aderencia|drywall|desengripa|cintar poste|betoneira|sulcador|rocadeira|cortador de grama|soprador de folhas|telha|corrimao|tela soldada|lanca cortante|fita de arquear|rolamentos 608|pistola pintura|detector vazamento|ventosa succao|tinta eucatex|esmalte para madeira|manta bidim|manta.*telhado|total black hidro|bobina filme stretch|quadro distribuicao|chave liga e desliga|fotoeletrico|medidor fusivel|luva.*protecao|extensao.*tomadas|filtro linha|incendio|decibelimetro|bateria.*estacionaria"
+    },
+    {
+      "category": "Games",
+      "pattern": "\\b(playstation|xbox|nintendo|joystick|gamepad|ps3|ps4|ps5|videogame)\\b|controle gamer"
+    },
+    {
+      "category": "Informática",
+      "pattern": "\\b(ssd|ram|mouse|teclado|notebook|monitor|impressora|roteador|computador|pendrive|webcam|modem|cpu|macbook)\\b|pen drive|placa[- ]mae|gabinete gamer|\\bpc gamer|fibra optica|\\brj45\\b|leitor de cartao|starlink|epson|fita compativel brother"
+    },
+    {
+      "category": "Eletrônicos",
+      "pattern": "fone|headphone|headset|smartwatch|redmi watch|pulseira.*watch|\\bbuds|caixa (de som|bluetooth)|boombox|vitrola|smart tv|televis|camera|projetor|ring light|soft box|chroma key|microfone|soundbar|rastreador|smart tag|fechadura digital|campainha intelbras|controle de acesso|arduino|placa amplificadora|tvbox|maquina de fumaca|bomb bts|monoculo"
+    },
+    {
+      "category": "Celulares",
+      "pattern": "\\b(iphone|smartphone|celular|celulares|galaxy|redmi|poco)\\b|power ?bank|magsafe"
+    },
+    {
+      "category": "Instrumentos musicais",
+      "pattern": "violao|guitarra|capotraste|tarraxas|palhetas|mixagem|\\bmidi\\b|direct box|bateria eletronica"
+    },
+    {
+      "category": "Esportes e suplementos",
+      "pattern": "creatina|whey|suplement|supplement|multivitamin|\\bvitamina|colageno|omega|melatonina|bicicleta|\\bbike\\b|e-bike|ciclismo|pedivela|selim|academia|halter|kettlebell|musculacao|barraca|camping|acampamento|campgas|nautika|airsoft|paintball|pescaria|\\bpesca\\b|carretilha|molinete|canivete|basquete|futebol|muay|boxe|saco de pancada|trampolim jump|step eva|salva vidas|patins|skate|roda abdominal|plataforma vibratoria|remo magnetico|escalada simulador|placar.*pontos|espaldar"
+    },
+    {
+      "category": "Papelaria e artesanato",
+      "pattern": "\\blivro|bobbie goods|canetinhas|lapis|canetas|papelaria|pasta organizadora|croche|agulhas|costura|guache|carimbo|encadernadora|alfinete|argila|tinta.*almofada|banner personalizado|personalizadas identificacao|album.*panini|corda nautica|cola quente|saquinho organza|corda.*redonda|linha costura|tecido.*papelao|elastico de borracha|urna.*sorteio"
+    },
+    {
+      "category": "Alimentos e bebidas",
+      "pattern": "chips de frutas|snacks|\\bcafe (em|torrado)|\\bcha (verde|preto)|\\bcastanhas\\b"
+    },
+    {
+      "category": "Casa",
+      "pattern": "panela|cozinha|cafe|geladeira|lavadora|lava e seca|aspirador|fritadeira|air ?fryer|batedeira|liquidificador|colchao|\\bcama\\b|travesseiro|toalha|tapete|louca|lixeira|armario|mesa|cadeira|\\bporta\\b|ducha|chuveiro|ventilador|ar condicionado|cortina|lencol|natal|ferro|fogao|forno|micro[- ]ondas|cooktop|climatizador|centrifuga|secadora|maquina de lavar|aquecedor|cozedor|waffle|sanduicheira|crepeira|pipoqueira|espremedor|\\b(copo|copos|taca|tacas|tigela|tigelas|pote|potes|garrafa|garrafas|jarra|balde|panos|pano|saco|sacos)\\b|assadeira|molde|\\bformas?\\b|frigideira|prato|pratos|talheres|colheres|faca|garfo|churrasco|churrasqueira|grelha|espet|rechaud|ralador|fatiador|esp[áa]tula|amassador|confeiteir|bolo|bolos|tabua|escorredor|abridor|saca rolha|coqueteleira|marmita|moedor|vaso|vasos|planta|plantas|jardim|horta|irrig|substrato|orquidea|muda|terra vegetal|calc?da bordalesa|sulfato de cobre|muro ingles|decorativ|decoracao|quadro|painel|adesiv|manta|coberta|cobertor|fronha|almofada|puff|rede de descanso|sofa|varal|prendedor de roupa|organizad|cesto|caixa|caixas|ganch|cabide|torneira|cuba|banheira|ralo|valvula|toldo|\\bduto\\b|luminaria|lampada|led|arandela|abajur|iluminacao|sensor.*presenca|espuma.*enchimento|cofre|\\bvela\\b|velas|limpeza|sanitaria|sab[oã]net|sabao|detergente|esponja|perc(arbonato|arbonato)|desinfetante|mop|rodo|vassoura|inset|barata|mosquito|piscina|ionizador|clarificante|tesoura|container de lixo|carrinho para condominio"
+    }
+  ]
+}
