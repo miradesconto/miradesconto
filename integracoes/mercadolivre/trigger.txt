@@ -1,4 +1,4 @@
 A sincronização do Mercado Livre é disparada quando este arquivo é alterado.
 Não coloque credenciais aqui.
 
-Último disparo: 2026-09-19 13:21 BRT — reconstrução usando destino real dos links sociais.
+Último disparo: 2026-09-19 14:16 BRT — preços atuais pelas páginas públicas oficiais de afiliados.
