@@ -67,7 +67,9 @@ if __name__ == "__main__":
         # O rebuild usa a reserva fixa, não apenas os produtos publicados na
         # execução anterior. Assim consegue substituir links que falharam.
         rebuild_catalog.base.load_mira_data = load_seed_data
-        sys.argv = [sys.argv[0], "--max-products", "500", "--min-products", "40"]
+        # Se a atualização não conseguir manter pelo menos 450 ofertas válidas,
+        # preservamos o catálogo anterior em vez de publicar uma vitrine degradada.
+        sys.argv = [sys.argv[0], "--max-products", "500", "--min-products", "450"]
         raise SystemExit(rebuild_catalog.main())
     except Exception as exc:
         print(f"ERRO: {exc}", file=sys.stderr)
