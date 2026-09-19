@@ -1,71 +1,105 @@
 #!/usr/bin/env python3
-"""Diagnostica campos de preço expostos por /products/search no Mercado Livre."""
+"""Diagnostica preço atual em página pública do Mercado Livre a partir de link afiliado existente."""
 from __future__ import annotations
 
+import html
 import json
-from urllib.error import HTTPError
-from urllib.parse import quote
+import re
 from urllib.request import Request, urlopen
 
-import sync_catalog as base
-
-QUERIES = [
-    "Samsung",
-    "Lixeira Inteligente Automatica Cinza Universal Sensor Recarregavel 16l",
-    "Kit 4 camiseta dry fit masculina academia caminhada",
-]
+KNOWN_AFFILIATE_URL = "https://meli.la/1TJh5DW"
+UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/153 Safari/537.36"
 
 
-def request_json(url: str, token: str):
+def fetch_text(url: str):
     req = Request(url, headers={
-        "Accept": "application/json",
-        "Authorization": f"Bearer {token}",
-        "User-Agent": "MiraDesconto/1.0 (+https://miradesconto.github.io/miradesconto/)",
+        "Accept": "text/html,application/xhtml+xml",
+        "User-Agent": UA,
+        "Accept-Language": "pt-BR,pt;q=0.9,en;q=0.7",
     }, method="GET")
-    try:
-        with urlopen(req, timeout=45) as response:
-            return response.status, json.loads(response.read().decode("utf-8"))
-    except HTTPError as exc:
-        raw = exc.read().decode("utf-8", errors="replace")
+    with urlopen(req, timeout=45) as response:
+        return response.status, response.geturl(), response.read(3_000_000).decode("utf-8", errors="replace")
+
+
+def extract_product_url(body: str):
+    decoded = html.unescape(body).replace("\\u002F", "/").replace("\\/", "/")
+    candidates = re.findall(r"https?://[^\"'<>\\\s]+", decoded)
+    for url in candidates:
+        if "mercadolivre.com.br" not in url:
+            continue
+        if "produto.mercadolivre.com.br/MLB-" in url or re.search(r"mercadolivre\.com\.br/.+/p/MLB\d+", url, re.I):
+            return url
+    return None
+
+
+def walk_json(value):
+    if isinstance(value, dict):
+        yield value
+        for child in value.values():
+            yield from walk_json(child)
+    elif isinstance(value, list):
+        for child in value:
+            yield from walk_json(child)
+
+
+def parse_price(body: str):
+    evidence = []
+    for match in re.finditer(r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>', body, flags=re.I | re.S):
+        raw = html.unescape(match.group(1)).strip()
         try:
-            return exc.code, json.loads(raw)
+            data = json.loads(raw)
         except Exception:
-            return exc.code, {"raw": raw[:200]}
-
-
-def compact(row):
-    if not isinstance(row, dict):
-        return {"type": type(row).__name__}
-    price_keys = [k for k in row if any(word in k.lower() for word in ("price", "offer", "buy", "seller"))]
-    winner = row.get("buy_box_winner")
-    return {
-        "id": row.get("id"),
-        "name": row.get("name") or row.get("family_name"),
-        "keys": sorted(row.keys()),
-        "price_like_keys": price_keys,
-        "price": row.get("price"),
-        "original_price": row.get("original_price"),
-        "winner_type": type(winner).__name__,
-        "winner": {k: winner.get(k) for k in ("item_id", "price", "original_price", "currency_id", "available_quantity") if k in winner} if isinstance(winner, dict) else None,
-    }
+            continue
+        for obj in walk_json(data):
+            offers = obj.get("offers") if isinstance(obj, dict) else None
+            if isinstance(offers, dict):
+                for key in ("price", "lowPrice"):
+                    val = offers.get(key)
+                    if val not in (None, ""):
+                        evidence.append(("jsonld.offers." + key, val))
+            if isinstance(obj, dict) and obj.get("@type") == "Offer" and obj.get("price") not in (None, ""):
+                evidence.append(("jsonld.offer.price", obj.get("price")))
+    patterns = [
+        ("meta.product.price", r'<meta[^>]+(?:property|itemprop)=["\'](?:product:price:amount|price)["\'][^>]+content=["\']([^"\']+)["\']'),
+        ("meta.price.reverse", r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+(?:property|itemprop)=["\'](?:product:price:amount|price)["\']'),
+    ]
+    for label, pattern in patterns:
+        m = re.search(pattern, body, flags=re.I)
+        if m:
+            evidence.append((label, m.group(1)))
+    for label, value in evidence:
+        try:
+            price = float(str(value).replace("R$", "").replace(" ", "").replace(",", "."))
+            if 0 < price < 10_000_000:
+                return round(price, 2), label
+        except Exception:
+            continue
+    return None, None
 
 
 def main() -> int:
-    token, mode = base.get_access_token()
-    print("AUTH_MODE=" + mode)
-    for query in QUERIES:
-        status, payload = request_json(
-            f"{base.API_BASE}/products/search?status=active&site_id=MLB&q={quote(query)}",
-            token,
-        )
-        results = payload.get("results", []) if status == 200 and isinstance(payload, dict) else []
-        print("SEARCH=" + json.dumps({
-            "query": query,
-            "http": status,
-            "total": payload.get("paging", {}).get("total") if isinstance(payload, dict) else None,
-            "result_count": len(results) if isinstance(results, list) else 0,
-            "samples": [compact(r) for r in results[:5]] if isinstance(results, list) else [],
-        }, ensure_ascii=False))
+    s1, social_url, social_body = fetch_text(KNOWN_AFFILIATE_URL)
+    product_url = extract_product_url(social_body)
+    result = {
+        "affiliate_http": s1,
+        "social_path": social_url.split("mercadolivre.com.br", 1)[-1].split("?", 1)[0],
+        "product_url_found": bool(product_url),
+    }
+    if not product_url:
+        print("PUBLIC_PRICE_DIAGNOSTIC=" + json.dumps(result, ensure_ascii=False))
+        return 0
+    s2, final_product_url, product_body = fetch_text(product_url)
+    price, source = parse_price(product_body)
+    item_match = re.search(r"MLB-?(\d{7,})", final_product_url, re.I)
+    result.update({
+        "product_http": s2,
+        "item_id": f"MLB{item_match.group(1)}" if item_match else None,
+        "body_bytes": len(product_body.encode("utf-8")),
+        "price_found": price is not None,
+        "price": price,
+        "price_source": source,
+    })
+    print("PUBLIC_PRICE_DIAGNOSTIC=" + json.dumps(result, ensure_ascii=False))
     return 0
 
 
