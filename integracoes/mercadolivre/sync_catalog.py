@@ -1,13 +1,17 @@
 #!/usr/bin/env python3
 """Sincroniza o catálogo público do MiraDesconto com a API oficial do Mercado Livre.
 
-Credenciais entram somente por variáveis de ambiente. O refresh token rotativo pode ser
-entregue ao workflow em um arquivo temporário por ML_REFRESH_TOKEN_OUT; ele nunca é
-incluído nos JSONs/JS públicos.
+Segurança:
+- Client Secret e o refresh token inicial entram somente por GitHub Actions Secrets.
+- O Mercado Livre rotaciona o refresh token a cada renovação.
+- Após a primeira execução, o token novo é guardado somente de forma criptografada
+  em integracoes/mercadolivre/refresh-token.enc.
+- A chave para descriptografar é derivada do ML_CLIENT_SECRET, que não é versionado.
 """
 from __future__ import annotations
 
 import argparse
+import base64
 import json
 import os
 import re
@@ -21,6 +25,10 @@ from urllib.parse import quote, urlencode
 from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
 
+from cryptography.fernet import Fernet, InvalidToken
+from cryptography.hazmat.primitives import hashes
+from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
+
 API_BASE = "https://api.mercadolibre.com"
 TOKEN_URL = f"{API_BASE}/oauth/token"
 BATCH_SIZE = 20
@@ -29,6 +37,7 @@ PRODUTOS_JS = ROOT / "produtos.js"
 CATALOGO_DIR = ROOT / "catalogo"
 DATA_PRODUTOS = ROOT / "_data" / "produtos.json"
 REPORT_PATH = ROOT / "integracoes" / "mercadolivre" / "ultimo-sync.json"
+TOKEN_STATE_PATH = ROOT / "integracoes" / "mercadolivre" / "refresh-token.enc"
 
 
 def now_sp() -> datetime:
@@ -71,17 +80,59 @@ def http_json(url: str, *, method: str = "GET", headers: dict[str, str] | None =
     raise RuntimeError("Falha inesperada de rede")
 
 
-def save_new_refresh_token(value: str) -> None:
-    out = os.getenv("ML_REFRESH_TOKEN_OUT", "").strip()
-    if not out or not value:
-        return
-    path = Path(out)
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(value, encoding="utf-8")
-    try:
-        os.chmod(path, 0o600)
-    except OSError:
-        pass
+def token_cipher(client_secret: str, salt: bytes) -> Fernet:
+    kdf = PBKDF2HMAC(
+        algorithm=hashes.SHA256(),
+        length=32,
+        salt=salt,
+        iterations=600_000,
+    )
+    key = base64.urlsafe_b64encode(kdf.derive(client_secret.encode("utf-8")))
+    return Fernet(key)
+
+
+def load_refresh_token(client_secret: str) -> tuple[str, str]:
+    if TOKEN_STATE_PATH.exists():
+        try:
+            state = json.loads(TOKEN_STATE_PATH.read_text(encoding="utf-8"))
+            salt = base64.b64decode(state["salt"])
+            ciphertext = str(state["ciphertext"]).encode("ascii")
+            value = token_cipher(client_secret, salt).decrypt(ciphertext).decode("utf-8").strip()
+            if not value:
+                raise RuntimeError("Estado OAuth descriptografado sem refresh token.")
+            mask(value)
+            return value, "encrypted_state"
+        except (KeyError, ValueError, InvalidToken, json.JSONDecodeError) as exc:
+            raise RuntimeError(
+                "Não foi possível abrir o estado OAuth criptografado. "
+                "Se o Client Secret foi renovado, gere um novo fluxo OAuth."
+            ) from exc
+
+    bootstrap = os.getenv("ML_REFRESH_TOKEN", "").strip()
+    if not bootstrap:
+        raise RuntimeError(
+            "ML_REFRESH_TOKEN não foi configurado e ainda não existe estado OAuth criptografado."
+        )
+    mask(bootstrap)
+    return bootstrap, "github_secret_bootstrap"
+
+
+def save_refresh_token(value: str, client_secret: str) -> None:
+    if not value:
+        raise RuntimeError("Tentativa de salvar refresh token vazio.")
+    mask(value)
+    salt = os.urandom(16)
+    ciphertext = token_cipher(client_secret, salt).encrypt(value.encode("utf-8")).decode("ascii")
+    state = {
+        "version": 1,
+        "algorithm": "fernet-pbkdf2-sha256",
+        "salt": base64.b64encode(salt).decode("ascii"),
+        "ciphertext": ciphertext,
+    }
+    TOKEN_STATE_PATH.parent.mkdir(parents=True, exist_ok=True)
+    tmp = TOKEN_STATE_PATH.with_suffix(".tmp")
+    tmp.write_text(json.dumps(state, separators=(",", ":")) + "\n", encoding="utf-8")
+    os.replace(tmp, TOKEN_STATE_PATH)
 
 
 def get_access_token() -> tuple[str, str]:
@@ -92,12 +143,11 @@ def get_access_token() -> tuple[str, str]:
 
     client_id = os.getenv("ML_CLIENT_ID", "").strip()
     client_secret = os.getenv("ML_CLIENT_SECRET", "").strip()
-    refresh_token = os.getenv("ML_REFRESH_TOKEN", "").strip()
-    if not client_id or not client_secret or not refresh_token:
-        raise RuntimeError("ML_CLIENT_ID, ML_CLIENT_SECRET e ML_REFRESH_TOKEN são obrigatórios.")
+    if not client_id or not client_secret:
+        raise RuntimeError("ML_CLIENT_ID e ML_CLIENT_SECRET são obrigatórios.")
 
     mask(client_secret)
-    mask(refresh_token)
+    refresh_token, refresh_source = load_refresh_token(client_secret)
     response = http_json(
         TOKEN_URL,
         method="POST",
@@ -112,11 +162,12 @@ def get_access_token() -> tuple[str, str]:
     new_refresh = str(response.get("refresh_token") or "").strip()
     if not token or not new_refresh:
         raise RuntimeError("Resposta OAuth sem access_token ou refresh_token.")
+
     mask(token)
     mask(new_refresh)
-    # Salva imediatamente: o refresh token anterior é de uso único.
-    save_new_refresh_token(new_refresh)
-    return token, "refresh_token"
+    # O refresh token anterior já não deve ser reutilizado após esta troca.
+    save_refresh_token(new_refresh, client_secret)
+    return token, f"refresh_token:{refresh_source}"
 
 
 def load_mira_data() -> dict[str, Any]:
