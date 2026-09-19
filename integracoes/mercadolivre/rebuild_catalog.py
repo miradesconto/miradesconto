@@ -3,9 +3,9 @@
 
 Regras de segurança:
 - mantém somente links de afiliado já gerados oficialmente para a conta MiraDesconto;
-- confirma que o link curto ainda resolve para um anúncio/produto do Mercado Livre;
-- tenta obter o Product ID diretamente do destino; quando o destino é um anúncio,
-  associa-o ao catálogo atual por título com similaridade alta;
+- confirma que cada link curto ainda contém como destino o anúncio original;
+- associa o anúncio ao catálogo atual por Product ID direto ou por título com
+  similaridade alta;
 - valida produto, disponibilidade e preço atual em /products/{product_id};
 - não inventa parâmetros de afiliado nem cria tracking manualmente.
 """
@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import argparse
 import difflib
+import html
 import json
 import re
 import time
@@ -26,9 +27,9 @@ from urllib.request import Request, urlopen
 import sync_catalog as base
 
 PRODUCT_ID_RE = re.compile(r"/p/(MLB\d+)(?:[/?#]|$)", re.I)
-ITEM_ID_RE = re.compile(r"/(MLB)-?(\d{7,})(?:[-_/?#]|$)", re.I)
 MAX_WORKERS = 10
 SEARCH_LIMIT = 700
+BROWSER_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/153 Safari/537.36"
 
 
 def get_json(url: str, token: str, attempts: int = 4) -> Any:
@@ -74,27 +75,42 @@ def title_similarity(a: str, b: str) -> float:
     return max(seq, 0.55 * jaccard + 0.45 * containment)
 
 
-def resolve_affiliate_target(affiliate_url: str) -> dict[str, Any] | None:
+def resolve_affiliate_target(affiliate_url: str, expected_item_id: str) -> dict[str, Any] | None:
+    """Resolve meli.la e confirma o anúncio original dentro da página /social/.
+
+    Os links atuais do programa podem terminar numa página /social/... que contém
+    o URL real do anúncio no HTML. Por isso não basta observar response.geturl().
+    """
     if not affiliate_url.startswith("https://"):
         return None
+    expected_item_id = expected_item_id.upper().replace("-", "").strip()
     req = Request(
         affiliate_url,
-        headers={
-            "Accept": "text/html,application/xhtml+xml",
-            "User-Agent": "Mozilla/5.0 (compatible; MiraDesconto/1.0)",
-        },
+        headers={"Accept": "text/html,application/xhtml+xml", "User-Agent": BROWSER_UA},
         method="GET",
     )
     try:
         with urlopen(req, timeout=30) as response:
             final_url = response.geturl()
-        product_match = PRODUCT_ID_RE.search(final_url)
-        item_match = ITEM_ID_RE.search(final_url)
-        product_id = product_match.group(1).upper() if product_match else None
-        item_id = f"{item_match.group(1).upper()}{item_match.group(2)}" if item_match else None
-        if not product_id and not item_id:
-            return None
-        return {"product_id": product_id, "item_id": item_id}
+            body = response.read(900_000).decode("utf-8", errors="replace")
+        decoded = html.unescape(body).replace("\\u002F", "/").replace("\\/", "/")
+
+        direct_product = PRODUCT_ID_RE.search(final_url)
+        if direct_product:
+            return {"product_id": direct_product.group(1).upper(), "item_id": None}
+
+        # A página social contém recomendações adicionais. Só aceitamos como
+        # destino o mesmo item que já estava registrado no nosso catálogo.
+        if expected_item_id.startswith("MLB"):
+            digits = re.escape(expected_item_id[3:])
+            if re.search(rf"MLB-?{digits}(?:[-_/?#&\"']|$)", decoded, flags=re.I):
+                return {"product_id": None, "item_id": expected_item_id}
+
+        # Fallback apenas para um Product ID explícito no destino principal.
+        product_urls = re.findall(r"https?://[^\"'<>\\\s]+/p/(MLB\d+)(?:[/?#]|$)", decoded, flags=re.I)
+        if len(set(p.upper() for p in product_urls)) == 1:
+            return {"product_id": product_urls[0].upper(), "item_id": None}
+        return None
     except Exception:
         return None
 
@@ -103,14 +119,18 @@ def resolve_targets(products: list[dict[str, Any]]) -> tuple[list[dict[str, Any]
     pairs = []
     for product in products:
         url = str(product.get("affiliateUrl") or "").strip()
-        if url:
-            pairs.append((url, product))
+        item_id = str(product.get("id") or "").strip()
+        if url and item_id:
+            pairs.append((url, item_id, product))
 
     viable: list[dict[str, Any]] = []
     direct: dict[str, dict[str, Any]] = {}
     resolved = direct_count = 0
     with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
-        futures = {executor.submit(resolve_affiliate_target, url): product for url, product in pairs}
+        futures = {
+            executor.submit(resolve_affiliate_target, url, item_id): product
+            for url, item_id, product in pairs
+        }
         for future in as_completed(futures):
             product = futures[future]
             try:
@@ -126,13 +146,9 @@ def resolve_targets(products: list[dict[str, Any]]) -> tuple[list[dict[str, Any]
                 current = direct.get(product_id)
                 if current is None or int(product.get("rank") or 999999) < int(current.get("rank") or 999999):
                     direct[product_id] = product
-                continue
-
-            target_item = str(target.get("item_id") or "")
-            old_item = str(product.get("id") or "")
-            # Um redirect para anúncio confirma que o link oficial continua utilizável.
-            if target_item and (not old_item or target_item == old_item):
+            else:
                 viable.append(product)
+
     viable.sort(key=lambda p: int(p.get("rank") or 999999))
     return viable, direct, resolved, direct_count
 
