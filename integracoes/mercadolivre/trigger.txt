@@ -1,0 +1,2 @@
+A sincronização do Mercado Livre é disparada quando este arquivo é alterado.
+Não coloque credenciais aqui.
