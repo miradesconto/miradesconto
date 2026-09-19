@@ -1,1 +1,1 @@
-Diagnóstico da API Mercado Livre: 2026-09-19 11:23 BRT
+Teste da credencial ML_REFRESH_TOKEN recém-atualizada: 2026-09-19.
