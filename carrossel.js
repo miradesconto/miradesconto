@@ -72,12 +72,12 @@
     const side = element('div', 'hero-side');
 
     const guide = element('a', 'hero-info-card hero-guide-card');
-    guide.href = 'blog/creatina-soldiers-1kg-vale-a-pena/';
+    guide.href = 'blog/';
     guide.append(
-        element('span', 'hero-card-kicker', 'GUIA NOVO'),
-        element('h3', '', 'Creatina Soldiers 1 kg vale a pena?'),
-        element('p', '', 'O que observar antes de comprar, sem inventar teste ou promessa.'),
-        element('span', 'hero-card-link', 'Ler análise →')
+        element('span', 'hero-card-kicker', 'GUIAS E REVIEWS'),
+        element('h3', '', 'Pesquise antes de clicar em comprar'),
+        element('p', '', 'Análises de produtos do catálogo, com informação útil e sem teste inventado.'),
+        element('span', 'hero-card-link', 'Ver conteúdos →')
     );
     side.append(guide);
 
