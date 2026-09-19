@@ -45,6 +45,15 @@ def print_status(label: str, status: int, payload) -> None:
             out["error"] = payload.get("error")
         if payload.get("message"):
             out["message"] = payload.get("message")
+        paging = payload.get("paging")
+        if isinstance(paging, dict) and "total" in paging:
+            out["total"] = paging.get("total")
+        content = payload.get("content")
+        if isinstance(content, list):
+            out["count"] = len(content)
+        results = payload.get("results")
+        if isinstance(results, list):
+            out["count"] = len(results)
     elif isinstance(payload, list) and payload:
         row = payload[0] if isinstance(payload[0], dict) else {}
         if row:
@@ -87,9 +96,12 @@ def main() -> int:
     print("OWN_ITEMS_SEARCH=" + json.dumps({"http": status, "total": total}))
 
     checks = [
-        ("PUBLIC_SEARCH", f"{base.API_BASE}/sites/MLB/search?q=camiseta&limit=1"),
+        ("PUBLIC_SEARCH_LEGACY", f"{base.API_BASE}/sites/MLB/search?q=camiseta&limit=1"),
+        ("CATALOG_PRODUCTS_SEARCH", f"{base.API_BASE}/products/search?status=active&site_id=MLB&q=Samsung"),
+        ("HIGHLIGHTS_CATEGORY", f"{base.API_BASE}/highlights/MLB/category/MLB432825"),
         ("ITEM_SINGLE", f"{base.API_BASE}/items/{ITEM_ID}"),
         ("ITEM_BULK", f"{base.API_BASE}/items/bulk?ids={ITEM_ID}"),
+        ("ITEM_SALE_PRICE", f"{base.API_BASE}/items/{ITEM_ID}/sale_price"),
         ("ITEM_PRICES", f"{base.API_BASE}/items/{ITEM_ID}/prices"),
     ]
     for label, url in checks:
