@@ -1,14 +1,19 @@
 #!/usr/bin/env python3
-"""Diagnostica quais campos de preço o catálogo do Mercado Livre expõe ao MiraDesconto."""
+"""Diagnostica campos de preço expostos por /products/search no Mercado Livre."""
 from __future__ import annotations
 
 import json
 from urllib.error import HTTPError
+from urllib.parse import quote
 from urllib.request import Request, urlopen
 
 import sync_catalog as base
 
-CATEGORY_ID = "MLB432825"
+QUERIES = [
+    "Samsung",
+    "Lixeira Inteligente Automatica Cinza Universal Sensor Recarregavel 16l",
+    "Kit 4 camiseta dry fit masculina academia caminhada",
+]
 
 
 def request_json(url: str, token: str):
@@ -28,39 +33,39 @@ def request_json(url: str, token: str):
             return exc.code, {"raw": raw[:200]}
 
 
+def compact(row):
+    if not isinstance(row, dict):
+        return {"type": type(row).__name__}
+    price_keys = [k for k in row if any(word in k.lower() for word in ("price", "offer", "buy", "seller"))]
+    winner = row.get("buy_box_winner")
+    return {
+        "id": row.get("id"),
+        "name": row.get("name") or row.get("family_name"),
+        "keys": sorted(row.keys()),
+        "price_like_keys": price_keys,
+        "price": row.get("price"),
+        "original_price": row.get("original_price"),
+        "winner_type": type(winner).__name__,
+        "winner": {k: winner.get(k) for k in ("item_id", "price", "original_price", "currency_id", "available_quantity") if k in winner} if isinstance(winner, dict) else None,
+    }
+
+
 def main() -> int:
     token, mode = base.get_access_token()
     print("AUTH_MODE=" + mode)
-    status, highlights = request_json(f"{base.API_BASE}/highlights/MLB/category/{CATEGORY_ID}", token)
-    rows = highlights.get("content", []) if status == 200 and isinstance(highlights, dict) else []
-    product_ids = [str(r.get("id")) for r in rows if isinstance(r, dict) and r.get("type") == "PRODUCT" and r.get("id")][:20]
-    stats = {"requested": len(product_ids), "http_200": 0, "active": 0, "winner": 0, "winner_price": 0, "price_like_top_level": 0}
-    samples = []
-    for pid in product_ids:
-        s, product = request_json(f"{base.API_BASE}/products/{pid}", token)
-        sample = {"product_id": pid, "http": s}
-        if s == 200 and isinstance(product, dict):
-            stats["http_200"] += 1
-            if product.get("status") == "active": stats["active"] += 1
-            winner = product.get("buy_box_winner")
-            if isinstance(winner, dict):
-                stats["winner"] += 1
-                if isinstance(winner.get("price"), (int, float)): stats["winner_price"] += 1
-            top_price_keys = [k for k in product.keys() if "price" in k.lower() or "offer" in k.lower() or "buy" in k.lower()]
-            if top_price_keys: stats["price_like_top_level"] += 1
-            sample.update({
-                "status": product.get("status"),
-                "keys": sorted(product.keys()),
-                "price_like_keys": top_price_keys,
-                "winner_type": type(winner).__name__,
-                "winner_keys": sorted(winner.keys()) if isinstance(winner, dict) else [],
-                "winner_has_price": isinstance(winner, dict) and isinstance(winner.get("price"), (int, float)),
-                "catalog_listing": product.get("catalog_listing"),
-                "type": product.get("type"),
-            })
-        samples.append(sample)
-    print("PRODUCT_PRICE_STATS=" + json.dumps(stats, ensure_ascii=False))
-    print("PRODUCT_SAMPLES=" + json.dumps(samples[:5], ensure_ascii=False))
+    for query in QUERIES:
+        status, payload = request_json(
+            f"{base.API_BASE}/products/search?status=active&site_id=MLB&q={quote(query)}",
+            token,
+        )
+        results = payload.get("results", []) if status == 200 and isinstance(payload, dict) else []
+        print("SEARCH=" + json.dumps({
+            "query": query,
+            "http": status,
+            "total": payload.get("paging", {}).get("total") if isinstance(payload, dict) else None,
+            "result_count": len(results) if isinstance(results, list) else 0,
+            "samples": [compact(r) for r in results[:5]] if isinstance(results, list) else [],
+        }, ensure_ascii=False))
     return 0
 
 
