@@ -61,6 +61,9 @@ jobs:
       - name: Gerar pauta automática para redes sociais
         run: python integracoes/social/gerar_pauta.py
 
+      - name: Atualizar artigos publicados na home
+        run: python integracoes/automacao/atualizar_home.py
+
       - name: Atualizar versão dos assets para evitar cache antigo
         run: python integracoes/automacao/cache_bust.py
 
