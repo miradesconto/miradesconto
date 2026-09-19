@@ -1,19 +1,10 @@
 #!/usr/bin/env python3
-"""Atualiza o catálogo público do MiraDesconto usando a API oficial do Mercado Livre.
+"""Sincroniza o catálogo público do MiraDesconto com a API oficial do Mercado Livre.
 
-Segurança:
-- Nunca grava Client Secret, access token ou refresh token no repositório.
-- Prefere OAuth client_credentials para automação server-to-server.
-- Pode usar ML_ACCESS_TOKEN diretamente para testes locais.
-- Pode usar ML_REFRESH_TOKEN como fallback quando disponível.
-
-Arquivos atualizados em uma execução completa:
-- produtos.js
-- catalogo/produtos-*.json
-- _data/produtos.json
-- integracoes/mercadolivre/ultimo-sync.json
+Credenciais entram somente por variáveis de ambiente. O refresh token rotativo pode ser
+entregue ao workflow em um arquivo temporário por ML_REFRESH_TOKEN_OUT; ele nunca é
+incluído nos JSONs/JS públicos.
 """
-
 from __future__ import annotations
 
 import argparse
@@ -44,19 +35,13 @@ def now_sp() -> datetime:
     return datetime.now(ZoneInfo("America/Sao_Paulo"))
 
 
-def mask_in_actions(value: str | None) -> None:
+def mask(value: str | None) -> None:
     if value and os.getenv("GITHUB_ACTIONS") == "true":
         print(f"::add-mask::{value}")
 
 
-def http_json(
-    url: str,
-    *,
-    method: str = "GET",
-    headers: dict[str, str] | None = None,
-    form: dict[str, str] | None = None,
-    attempts: int = 4,
-) -> Any:
+def http_json(url: str, *, method: str = "GET", headers: dict[str, str] | None = None,
+              form: dict[str, str] | None = None, attempts: int = 4) -> Any:
     body = None
     req_headers = {
         "Accept": "application/json",
@@ -68,67 +53,51 @@ def http_json(
         body = urlencode(form).encode("utf-8")
         req_headers["Content-Type"] = "application/x-www-form-urlencoded"
 
-    last_error: Exception | None = None
     for attempt in range(1, attempts + 1):
         req = Request(url, data=body, headers=req_headers, method=method)
         try:
             with urlopen(req, timeout=45) as response:
-                raw = response.read().decode("utf-8")
-                return json.loads(raw)
+                return json.loads(response.read().decode("utf-8"))
         except HTTPError as exc:
             detail = exc.read().decode("utf-8", errors="replace")
-            last_error = RuntimeError(f"HTTP {exc.code} em {url}: {detail[:500]}")
+            err = RuntimeError(f"HTTP {exc.code} em {url}: {detail[:500]}")
             if exc.code not in {429, 500, 502, 503, 504} or attempt == attempts:
-                raise last_error
+                raise err
             time.sleep(min(2 ** attempt, 12))
         except (URLError, TimeoutError) as exc:
-            last_error = exc
             if attempt == attempts:
                 raise RuntimeError(f"Falha de rede em {url}: {exc}") from exc
             time.sleep(min(2 ** attempt, 12))
-    raise RuntimeError(str(last_error))
+    raise RuntimeError("Falha inesperada de rede")
+
+
+def save_new_refresh_token(value: str) -> None:
+    out = os.getenv("ML_REFRESH_TOKEN_OUT", "").strip()
+    if not out or not value:
+        return
+    path = Path(out)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(value, encoding="utf-8")
+    try:
+        os.chmod(path, 0o600)
+    except OSError:
+        pass
 
 
 def get_access_token() -> tuple[str, str]:
     direct = os.getenv("ML_ACCESS_TOKEN", "").strip()
     if direct:
-        mask_in_actions(direct)
+        mask(direct)
         return direct, "access_token"
 
     client_id = os.getenv("ML_CLIENT_ID", "").strip()
     client_secret = os.getenv("ML_CLIENT_SECRET", "").strip()
     refresh_token = os.getenv("ML_REFRESH_TOKEN", "").strip()
+    if not client_id or not client_secret or not refresh_token:
+        raise RuntimeError("ML_CLIENT_ID, ML_CLIENT_SECRET e ML_REFRESH_TOKEN são obrigatórios.")
 
-    if not client_id or not client_secret:
-        raise RuntimeError(
-            "Defina ML_CLIENT_ID e ML_CLIENT_SECRET. "
-            "O Client Secret deve existir apenas em GitHub Actions Secrets/variável local."
-        )
-
-    # Fluxo preferido para rotina automática: não exige persistir refresh token rotativo.
-    try:
-        response = http_json(
-            TOKEN_URL,
-            method="POST",
-            form={
-                "grant_type": "client_credentials",
-                "client_id": client_id,
-                "client_secret": client_secret,
-            },
-        )
-        token = str(response.get("access_token") or "").strip()
-        if token:
-            mask_in_actions(token)
-            return token, "client_credentials"
-    except Exception as client_exc:
-        if not refresh_token:
-            raise RuntimeError(
-                "Não foi possível obter token por client_credentials. "
-                "Verifique se esse fluxo está habilitado na aplicação do Mercado Livre. "
-                f"Detalhe: {client_exc}"
-            ) from client_exc
-
-    # Fallback: útil para teste/recuperação. O Mercado Livre pode rotacionar o refresh token.
+    mask(client_secret)
+    mask(refresh_token)
     response = http_json(
         TOKEN_URL,
         method="POST",
@@ -141,15 +110,12 @@ def get_access_token() -> tuple[str, str]:
     )
     token = str(response.get("access_token") or "").strip()
     new_refresh = str(response.get("refresh_token") or "").strip()
-    if not token:
-        raise RuntimeError("Resposta OAuth sem access_token.")
-    mask_in_actions(token)
-    mask_in_actions(new_refresh)
-    if new_refresh and new_refresh != refresh_token:
-        print(
-            "AVISO: o refresh token foi rotacionado. Prefira habilitar client_credentials "
-            "para a automação do MiraDesconto."
-        )
+    if not token or not new_refresh:
+        raise RuntimeError("Resposta OAuth sem access_token ou refresh_token.")
+    mask(token)
+    mask(new_refresh)
+    # Salva imediatamente: o refresh token anterior é de uso único.
+    save_new_refresh_token(new_refresh)
     return token, "refresh_token"
 
 
@@ -166,52 +132,41 @@ def load_mira_data() -> dict[str, Any]:
 
 def chunks(values: list[str], size: int):
     for index in range(0, len(values), size):
-        yield values[index : index + size]
+        yield values[index:index + size]
 
 
 def fetch_items(ids: list[str], access_token: str) -> tuple[dict[str, dict[str, Any]], list[dict[str, Any]]]:
     results: dict[str, dict[str, Any]] = {}
     errors: list[dict[str, Any]] = []
-    attributes = ",".join(
-        [
-            "body.id",
-            "body.title",
-            "body.price",
-            "body.original_price",
-            "body.permalink",
-            "body.status",
-        ]
-    )
+    attributes = ",".join([
+        "body.id", "body.title", "body.price", "body.original_price",
+        "body.permalink", "body.status",
+    ])
     headers = {"Authorization": f"Bearer {access_token}"}
-
     total_batches = (len(ids) + BATCH_SIZE - 1) // BATCH_SIZE
+
     for number, batch in enumerate(chunks(ids, BATCH_SIZE), start=1):
         id_param = quote(",".join(batch), safe=",")
         attr_param = quote(attributes, safe=",")
-        url = f"{API_BASE}/items/bulk?ids={id_param}&attributes={attr_param}"
-        payload = http_json(url, headers=headers)
+        payload = http_json(f"{API_BASE}/items/bulk?ids={id_param}&attributes={attr_param}", headers=headers)
         if not isinstance(payload, list):
-            raise RuntimeError(f"Resposta inesperada do endpoint bulk no lote {number}.")
-
+            raise RuntimeError(f"Resposta inesperada de /items/bulk no lote {number}.")
         for row in payload:
             if not isinstance(row, dict):
                 continue
-            item_id = str(row.get("id") or row.get("body", {}).get("id") or "").strip()
-            status_code = int(row.get("status_code") or row.get("code") or 0)
             body = row.get("body") if isinstance(row.get("body"), dict) else {}
+            item_id = str(row.get("id") or body.get("id") or "").strip()
+            status_code = int(row.get("status_code") or row.get("code") or 0)
             if item_id and status_code == 200:
                 results[item_id] = body
             else:
-                errors.append(
-                    {
-                        "id": item_id or None,
-                        "status_code": status_code or None,
-                        "message": row.get("message") or body.get("message") or "consulta não concluída",
-                    }
-                )
+                errors.append({
+                    "id": item_id or None,
+                    "status_code": status_code or None,
+                    "message": row.get("message") or body.get("message") or "consulta não concluída",
+                })
         print(f"Lote {number}/{total_batches}: {len(batch)} itens consultados")
         time.sleep(0.08)
-
     return results, errors
 
 
@@ -225,7 +180,6 @@ def valid_number(value: Any) -> float | None:
 
 def update_product(product: dict[str, Any], api_item: dict[str, Any], date_text: str) -> bool:
     before = json.dumps(product, ensure_ascii=False, sort_keys=True)
-
     title = api_item.get("title")
     if isinstance(title, str) and title.strip():
         product["name"] = title.strip()
@@ -233,7 +187,6 @@ def update_product(product: dict[str, Any], api_item: dict[str, Any], date_text:
     current_price = valid_number(api_item.get("price"))
     if current_price is not None:
         product["price"] = current_price
-
         original_price = valid_number(api_item.get("original_price"))
         if original_price is not None and original_price > current_price:
             product["oldPrice"] = original_price
@@ -248,62 +201,37 @@ def update_product(product: dict[str, Any], api_item: dict[str, Any], date_text:
     permalink = api_item.get("permalink")
     if isinstance(permalink, str) and permalink.startswith("http"):
         product["productUrl"] = permalink
-
     status = str(api_item.get("status") or "").lower()
     if status:
         product["available"] = status == "active"
-
     product["collectedAt"] = date_text
-
-    after = json.dumps(product, ensure_ascii=False, sort_keys=True)
-    return before != after
+    return before != json.dumps(product, ensure_ascii=False, sort_keys=True)
 
 
 def write_produtos_js(data: dict[str, Any]) -> None:
     payload = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
     PRODUTOS_JS.write_text(
         "// Dados do catálogo; preços e status podem ser atualizados pela API oficial do Mercado Livre.\n"
-        f"window.MIRA_DATA = {payload};\n",
-        encoding="utf-8",
-    )
+        f"window.MIRA_DATA = {payload};\n", encoding="utf-8")
 
 
 def write_catalog_chunks(products: list[dict[str, Any]]) -> int:
     CATALOGO_DIR.mkdir(parents=True, exist_ok=True)
-    compact_keys = [
-        "id",
-        "name",
-        "category",
-        "price",
-        "oldPrice",
-        "discount",
-        "affiliateUrl",
-        "imageUrl",
-        "rank",
-        "featured",
-        "available",
-    ]
-    chunks_written = 0
+    compact_keys = ["id", "name", "category", "price", "oldPrice", "discount",
+                    "affiliateUrl", "imageUrl", "rank", "featured", "available"]
     expected: set[Path] = set()
-
+    count = 0
     for index in range(0, len(products), 100):
         number = index // 100 + 1
         path = CATALOGO_DIR / f"produtos-{number:03d}.json"
         expected.add(path)
-        batch = []
-        for product in products[index : index + 100]:
-            batch.append({key: product.get(key) for key in compact_keys if key in product})
-        path.write_text(
-            json.dumps(batch, ensure_ascii=False, separators=(",", ":")) + "\n",
-            encoding="utf-8",
-        )
-        chunks_written += 1
-
+        batch = [{k: p.get(k) for k in compact_keys if k in p} for p in products[index:index + 100]]
+        path.write_text(json.dumps(batch, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
+        count += 1
     for path in CATALOGO_DIR.glob("produtos-*.json"):
         if path not in expected:
             path.unlink()
-
-    return chunks_written
+    return count
 
 
 def write_data_products(products: list[dict[str, Any]]) -> None:
@@ -314,37 +242,31 @@ def write_data_products(products: list[dict[str, Any]]) -> None:
             if isinstance(loaded, dict):
                 current = loaded
         except Exception:
-            current = {}
-
+            pass
     for product in products:
         item_id = str(product.get("id") or "").strip()
         if not item_id:
             continue
         entry = current.get(item_id) if isinstance(current.get(item_id), dict) else {}
-        entry["name"] = product.get("name")
-        entry["imageUrl"] = product.get("imageUrl")
-        entry["available"] = product.get("available", True) is not False
+        entry.update({
+            "name": product.get("name"),
+            "imageUrl": product.get("imageUrl"),
+            "available": product.get("available", True) is not False,
+        })
         current[item_id] = entry
-
     DATA_PRODUTOS.parent.mkdir(parents=True, exist_ok=True)
-    DATA_PRODUTOS.write_text(
-        json.dumps(current, ensure_ascii=False, indent=2) + "\n",
-        encoding="utf-8",
-    )
+    DATA_PRODUTOS.write_text(json.dumps(current, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
 def write_report(report: dict[str, Any]) -> None:
     REPORT_PATH.parent.mkdir(parents=True, exist_ok=True)
-    REPORT_PATH.write_text(
-        json.dumps(report, ensure_ascii=False, indent=2) + "\n",
-        encoding="utf-8",
-    )
+    REPORT_PATH.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--limit", type=int, default=0, help="Consulta somente os primeiros N itens.")
-    parser.add_argument("--dry-run", action="store_true", help="Consulta e valida, mas não grava arquivos.")
+    parser.add_argument("--limit", type=int, default=0)
+    parser.add_argument("--dry-run", action="store_true")
     return parser.parse_args()
 
 
@@ -354,8 +276,7 @@ def main() -> int:
     products: list[dict[str, Any]] = data["products"]
     candidates = [p for p in products if isinstance(p, dict) and str(p.get("id") or "").startswith("MLB")]
     if args.limit > 0:
-        candidates = candidates[: args.limit]
-
+        candidates = candidates[:args.limit]
     ids = [str(p["id"]) for p in candidates]
     if not ids:
         raise RuntimeError("Nenhum ID MLB encontrado no catálogo.")
@@ -367,12 +288,9 @@ def main() -> int:
 
     timestamp = now_sp()
     date_text = timestamp.strftime("%d/%m/%Y")
-    changed = 0
-    inactive = 0
-
+    changed = inactive = 0
     for product in candidates:
-        item_id = str(product.get("id"))
-        api_item = api_items.get(item_id)
+        api_item = api_items.get(str(product.get("id")))
         if not api_item:
             continue
         if str(api_item.get("status") or "").lower() != "active":
@@ -393,13 +311,10 @@ def main() -> int:
         "dryRun": bool(args.dry_run),
         "limit": args.limit or None,
     }
-
-    print(json.dumps({key: report[key] for key in ["requested", "successful", "changed", "inactive", "dryRun"]}, ensure_ascii=False))
-
+    print(json.dumps({k: report[k] for k in ["requested", "successful", "changed", "inactive", "dryRun"]}, ensure_ascii=False))
     if args.dry_run:
         return 0
 
-    # Só marca a coleta global como atualizada quando a execução cobre o catálogo completo.
     if args.limit <= 0:
         data["collectedAt"] = date_text
         data["apiSync"] = {
@@ -407,11 +322,9 @@ def main() -> int:
             "updatedAt": timestamp.isoformat(timespec="seconds"),
             "endpoint": "/items/bulk",
         }
-
     write_produtos_js(data)
-    chunks_written = write_catalog_chunks(products)
+    report["catalogFiles"] = write_catalog_chunks(products)
     write_data_products(products)
-    report["catalogFiles"] = chunks_written
     write_report(report)
     return 0
 
