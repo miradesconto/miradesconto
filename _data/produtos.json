@@ -1419,6 +1419,11 @@
     "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_955425-MLA105469152039_012026-AB.webp",
     "available": true
   },
+  "MLB3941733035": {
+    "name": "Fritadeira Elétrica AFON-12L-BG Forno Oven 12 Litros Preto Mondial",
+    "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_900387-MLA109507200694_042026-AB.webp",
+    "available": true
+  },
   "MLB5986187038": {
     "name": "Saco Aspirador De Pó Electrolux 10l A10s /a10t/ A10 /aqp20",
     "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_632413-MLA109554367780_042026-AB.webp",
@@ -1687,6 +1692,11 @@
   "MLB5408822070": {
     "name": "Espremedor Premium Mondial 30W E-02",
     "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_852738-MLA99700511468_122025-AB.webp",
+    "available": true
+  },
+  "MLB4715919159": {
+    "name": "Fechadura Digital De Sobrepor Intelbras Fr 101",
+    "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_985748-MLA113670424044_072026-AB.webp",
     "available": true
   },
   "MLB4090824591": {
@@ -2259,11 +2269,6 @@
     "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_772899-MLB116122583283_082026-AB-corretor-postura-feminino-masculino-colete-alinhador-coluna.webp",
     "available": true
   },
-  "MLB6295764416": {
-    "name": "Encadernadora Perfuradora Manual A4 34 Furos 3 em 1 Com 50 Wire-o + 50 Espiral Plástico + 20 Capas Protetoras",
-    "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_844830-MLA107571258645_022026-AB.webp",
-    "available": true
-  },
   "MLB6968732156": {
     "name": "Kit De Blocos De Montar Magnéticos Infantil 100 Ou 200 Peças 100",
     "imageUrl": "https://http2.mlstatic.com/D_NQ_NP_605881-MLB115291855452_082026-O-kit-de-blocos-de-montar-magneticos-infantil-100-ou-200-pecas.webp",
@@ -2492,11 +2497,6 @@
   "MLB7070191382": {
     "name": "Ruido Bebe Aparelho Com Barulho De Dormir Ambiente Do Útero Branco Marca SpitFire",
     "imageUrl": "https://http2.mlstatic.com/D_NQ_NP_677647-MLA113977053011_062026-O.webp",
-    "available": true
-  },
-  "MLB6201938390": {
-    "name": "Carrinho Bebê Conforto Reversível Passeio Modo Berço Travel Preto",
-    "imageUrl": "https://http2.mlstatic.com/D_NQ_NP_848398-MLB116343811753_082026-O-carrinho-bebe-conforto-reversivel-passeio-modo-berco-travel.webp",
     "available": true
   }
 }
