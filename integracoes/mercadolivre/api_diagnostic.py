@@ -95,9 +95,43 @@ def main() -> int:
         total = payload["paging"].get("total")
     print("OWN_ITEMS_SEARCH=" + json.dumps({"http": status, "total": total}))
 
+    status, catalog = request_json(
+        f"{base.API_BASE}/products/search?status=active&site_id=MLB&q=Samsung",
+        token,
+    )
+    print_status("CATALOG_PRODUCTS_SEARCH", status, catalog)
+
+    product_id = None
+    if status == 200 and isinstance(catalog, dict):
+        results = catalog.get("results")
+        if isinstance(results, list) and results and isinstance(results[0], dict):
+            product_id = results[0].get("id")
+
+    if product_id:
+        status, product = request_json(f"{base.API_BASE}/products/{product_id}", token)
+        summary = {"http": status, "product_id": product_id}
+        if status == 200 and isinstance(product, dict):
+            summary.update({
+                "status": product.get("status"),
+                "name": product.get("name"),
+                "permalink": product.get("permalink"),
+            })
+            winner = product.get("buy_box_winner")
+            if isinstance(winner, dict):
+                summary["buy_box_winner"] = {
+                    "item_id": winner.get("item_id"),
+                    "price": winner.get("price"),
+                    "currency_id": winner.get("currency_id"),
+                    "available_quantity": winner.get("available_quantity"),
+                }
+        else:
+            if isinstance(product, dict):
+                summary["error"] = product.get("error")
+                summary["message"] = product.get("message")
+        print("CATALOG_PRODUCT_DETAIL=" + json.dumps(summary, ensure_ascii=False))
+
     checks = [
         ("PUBLIC_SEARCH_LEGACY", f"{base.API_BASE}/sites/MLB/search?q=camiseta&limit=1"),
-        ("CATALOG_PRODUCTS_SEARCH", f"{base.API_BASE}/products/search?status=active&site_id=MLB&q=Samsung"),
         ("HIGHLIGHTS_CATEGORY", f"{base.API_BASE}/highlights/MLB/category/MLB432825"),
         ("ITEM_SINGLE", f"{base.API_BASE}/items/{ITEM_ID}"),
         ("ITEM_BULK", f"{base.API_BASE}/items/bulk?ids={ITEM_ID}"),
