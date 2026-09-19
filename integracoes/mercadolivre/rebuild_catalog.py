@@ -1,29 +1,34 @@
 #!/usr/bin/env python3
 """Reconstrói o catálogo MiraDesconto com dados atuais da API do Mercado Livre.
 
-Estratégia segura de monetização:
-- usa somente links de afiliado já gerados oficialmente para a conta MiraDesconto;
-- resolve esses links para descobrir o product_id de catálogo correspondente;
-- valida o produto e o preço atual via /products/{product_id};
-- prioriza produtos que aparecem atualmente em /highlights;
-- não inventa nem monta links de afiliado manualmente.
+Regras de segurança:
+- mantém somente links de afiliado já gerados oficialmente para a conta MiraDesconto;
+- confirma que o link curto ainda resolve para um anúncio/produto do Mercado Livre;
+- tenta obter o Product ID diretamente do destino; quando o destino é um anúncio,
+  associa-o ao catálogo atual por título com similaridade alta;
+- valida produto, disponibilidade e preço atual em /products/{product_id};
+- não inventa parâmetros de afiliado nem cria tracking manualmente.
 """
 from __future__ import annotations
 
 import argparse
+import difflib
 import json
 import re
 import time
+import unicodedata
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from pathlib import Path
 from typing import Any
 from urllib.error import HTTPError, URLError
+from urllib.parse import quote
 from urllib.request import Request, urlopen
 
 import sync_catalog as base
 
 PRODUCT_ID_RE = re.compile(r"/p/(MLB\d+)(?:[/?#]|$)", re.I)
+ITEM_ID_RE = re.compile(r"/(MLB)-?(\d{7,})(?:[-_/?#]|$)", re.I)
 MAX_WORKERS = 10
+SEARCH_LIMIT = 700
 
 
 def get_json(url: str, token: str, attempts: int = 4) -> Any:
@@ -50,7 +55,26 @@ def get_json(url: str, token: str, attempts: int = 4) -> Any:
     return None
 
 
-def resolve_product_id(affiliate_url: str) -> str | None:
+def normalize_text(value: str) -> str:
+    value = unicodedata.normalize("NFKD", value.lower())
+    value = "".join(ch for ch in value if not unicodedata.combining(ch))
+    value = re.sub(r"[^a-z0-9]+", " ", value)
+    return " ".join(value.split())
+
+
+def title_similarity(a: str, b: str) -> float:
+    na, nb = normalize_text(a), normalize_text(b)
+    if not na or not nb:
+        return 0.0
+    seq = difflib.SequenceMatcher(None, na, nb).ratio()
+    ta, tb = set(na.split()), set(nb.split())
+    union = ta | tb
+    jaccard = len(ta & tb) / len(union) if union else 0.0
+    containment = len(ta & tb) / max(1, min(len(ta), len(tb)))
+    return max(seq, 0.55 * jaccard + 0.45 * containment)
+
+
+def resolve_affiliate_target(affiliate_url: str) -> dict[str, Any] | None:
     if not affiliate_url.startswith("https://"):
         return None
     req = Request(
@@ -64,38 +88,111 @@ def resolve_product_id(affiliate_url: str) -> str | None:
     try:
         with urlopen(req, timeout=30) as response:
             final_url = response.geturl()
-        match = PRODUCT_ID_RE.search(final_url)
-        return match.group(1).upper() if match else None
+        product_match = PRODUCT_ID_RE.search(final_url)
+        item_match = ITEM_ID_RE.search(final_url)
+        product_id = product_match.group(1).upper() if product_match else None
+        item_id = f"{item_match.group(1).upper()}{item_match.group(2)}" if item_match else None
+        if not product_id and not item_id:
+            return None
+        return {"product_id": product_id, "item_id": item_id}
     except Exception:
         return None
 
 
-def resolve_affiliate_map(products: list[dict[str, Any]]) -> tuple[dict[str, dict[str, Any]], int]:
-    pairs: list[tuple[str, dict[str, Any]]] = []
+def resolve_targets(products: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], dict[str, dict[str, Any]], int, int]:
+    pairs = []
     for product in products:
         url = str(product.get("affiliateUrl") or "").strip()
         if url:
             pairs.append((url, product))
 
-    mapping: dict[str, dict[str, Any]] = {}
-    resolved = 0
+    viable: list[dict[str, Any]] = []
+    direct: dict[str, dict[str, Any]] = {}
+    resolved = direct_count = 0
     with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
-        futures = {executor.submit(resolve_product_id, url): (url, product) for url, product in pairs}
+        futures = {executor.submit(resolve_affiliate_target, url): product for url, product in pairs}
         for future in as_completed(futures):
-            _, product = futures[future]
+            product = futures[future]
             try:
-                product_id = future.result()
+                target = future.result()
             except Exception:
-                product_id = None
-            if not product_id:
+                target = None
+            if not target:
                 continue
             resolved += 1
+            product_id = target.get("product_id")
+            if product_id:
+                direct_count += 1
+                current = direct.get(product_id)
+                if current is None or int(product.get("rank") or 999999) < int(current.get("rank") or 999999):
+                    direct[product_id] = product
+                continue
+
+            target_item = str(target.get("item_id") or "")
+            old_item = str(product.get("id") or "")
+            # Um redirect para anúncio confirma que o link oficial continua utilizável.
+            if target_item and (not old_item or target_item == old_item):
+                viable.append(product)
+    viable.sort(key=lambda p: int(p.get("rank") or 999999))
+    return viable, direct, resolved, direct_count
+
+
+def search_catalog_product(old: dict[str, Any], token: str) -> tuple[str, float] | None:
+    title = str(old.get("name") or "").strip()
+    if not title:
+        return None
+    query = quote(title[:180])
+    payload = get_json(f"{base.API_BASE}/products/search?status=active&site_id=MLB&q={query}", token)
+    if not isinstance(payload, dict) or not isinstance(payload.get("results"), list):
+        return None
+
+    best_id = None
+    best_score = 0.0
+    for row in payload["results"][:10]:
+        if not isinstance(row, dict) or not row.get("id"):
+            continue
+        candidate_name = str(row.get("name") or row.get("family_name") or "")
+        score = title_similarity(title, candidate_name)
+        if score > best_score:
+            best_score = score
+            best_id = str(row["id"]).upper()
+    if best_id and best_score >= 0.72:
+        return best_id, round(best_score, 4)
+    return None
+
+
+def build_affiliate_map(products: list[dict[str, Any]], token: str) -> tuple[dict[str, dict[str, Any]], dict[str, int]]:
+    viable, direct, resolved, direct_count = resolve_targets(products)
+    mapping = dict(direct)
+    title_matches = 0
+    candidates = viable[:SEARCH_LIMIT]
+
+    with ThreadPoolExecutor(max_workers=8) as executor:
+        futures = {executor.submit(search_catalog_product, product, token): product for product in candidates}
+        for future in as_completed(futures):
+            old = futures[future]
+            try:
+                match = future.result()
+            except Exception:
+                match = None
+            if not match:
+                continue
+            product_id, score = match
+            title_matches += 1
+            old = dict(old)
+            old["catalogMatchScore"] = score
             current = mapping.get(product_id)
-            old_rank = int(product.get("rank") or 999999)
-            current_rank = int(current.get("rank") or 999999) if current else 999999
-            if current is None or old_rank < current_rank:
-                mapping[product_id] = product
-    return mapping, resolved
+            if current is None or int(old.get("rank") or 999999) < int(current.get("rank") or 999999):
+                mapping[product_id] = old
+
+    stats = {
+        "affiliate_targets_resolved": resolved,
+        "direct_catalog_ids": direct_count,
+        "title_search_candidates": len(candidates),
+        "title_matches": title_matches,
+        "catalog_product_ids_mapped": len(mapping),
+    }
+    return mapping, stats
 
 
 def fetch_highlight_ranks(token: str) -> tuple[dict[str, tuple[int, int, str]], int]:
@@ -182,7 +279,7 @@ def build_product(product_id: str, old: dict[str, Any], detail: dict[str, Any],
     if not name or not affiliate_url:
         return None
 
-    return {
+    result = {
         "id": product_id,
         "catalogProductId": product_id,
         "itemId": winner.get("item_id"),
@@ -202,6 +299,9 @@ def build_product(product_id: str, old: dict[str, Any], detail: dict[str, Any],
         "affiliateLinkSource": "official_existing",
         "previousRank": old.get("rank"),
     }
+    if old.get("catalogMatchScore") is not None:
+        result["catalogMatchScore"] = old.get("catalogMatchScore")
+    return result
 
 
 def fresh_data_json(products: list[dict[str, Any]]) -> None:
@@ -233,14 +333,10 @@ def main() -> int:
 
     token, auth_mode = base.get_access_token()
 
-    affiliate_map, resolved_links = resolve_affiliate_map(old_products)
-    print(json.dumps({
-        "old_products": len(old_products),
-        "affiliate_links_resolved": resolved_links,
-        "catalog_product_ids_mapped": len(affiliate_map),
-    }))
+    affiliate_map, map_stats = build_affiliate_map(old_products, token)
+    print(json.dumps({"old_products": len(old_products), **map_stats}, ensure_ascii=False))
     if not affiliate_map:
-        raise RuntimeError("Nenhum link de afiliado pôde ser associado a product_id de catálogo.")
+        raise RuntimeError("Nenhum link oficial pôde ser associado com segurança ao catálogo atual.")
 
     highlight_ranks, category_count = fetch_highlight_ranks(token)
     print(json.dumps({"highlight_categories": category_count, "highlight_products": len(highlight_ranks)}))
@@ -288,8 +384,7 @@ def main() -> int:
     highlighted_matches = sum(1 for p in rebuilt if str(p["id"]) in highlight_ranks)
     summary = {
         "old_products": len(old_products),
-        "affiliate_links_resolved": resolved_links,
-        "catalog_product_ids_mapped": len(affiliate_map),
+        **map_stats,
         "api_details_ok": len(details),
         "new_products": len(rebuilt),
         "highlighted_matches": highlighted_matches,
@@ -313,7 +408,7 @@ def main() -> int:
             "source": "Mercado Livre API",
             "updatedAt": timestamp.isoformat(timespec="seconds"),
             "strategy": "catalog-products-with-existing-official-affiliate-links",
-            "endpoints": ["/products/{product_id}", "/highlights/MLB/category/{category_id}"],
+            "endpoints": ["/products/search", "/products/{product_id}", "/highlights/MLB/category/{category_id}"],
         },
     }
     base.write_produtos_js(new_data)
