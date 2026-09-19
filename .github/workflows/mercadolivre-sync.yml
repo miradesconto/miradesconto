@@ -1,0 +1,59 @@
+name: Mercado Livre — sincronizar catálogo
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "integracoes/mercadolivre/trigger.txt"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mercadolivre-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      ML_CLIENT_ID: "5739104192519635"
+      ML_CLIENT_SECRET: ${{ secrets.ML_CLIENT_SECRET }}
+
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validar segredo obrigatório
+        shell: bash
+        run: |
+          if [ -z "$ML_CLIENT_SECRET" ]; then
+            echo "ML_CLIENT_SECRET não foi configurado em Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+
+      - name: Testar API com 20 itens sem alterar arquivos
+        run: python integracoes/mercadolivre/sync_catalog.py --limit 20 --dry-run
+
+      - name: Sincronizar catálogo completo
+        run: python integracoes/mercadolivre/sync_catalog.py
+
+      - name: Registrar alterações
+        shell: bash
+        run: |
+          if git diff --quiet; then
+            echo "Nenhuma alteração de catálogo encontrada."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add produtos.js catalogo _data/produtos.json integracoes/mercadolivre/ultimo-sync.json
+          git commit -m "Atualiza catálogo via API Mercado Livre"
+          git push
