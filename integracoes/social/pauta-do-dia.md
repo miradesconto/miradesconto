@@ -4,7 +4,61 @@ Catálogo-base: 19/09/2026
 
 Seleção automática com variedade de categorias. Confirme a oferta antes de publicar, pois preço e estoque podem mudar.
 
-## 1. Cabo 2m Conversor Starlink Mini De 12/24v Para 30v Veicular
+## 1. Bolsa Shoulder Bag Tiracolo Antifurto Casual Usb Impermeável
+
+**Categoria:** Moda  
+**Preço:** R$ 22,90  
+**Desconto:** 82%  
+**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_982218-MLB115144161914_082026-AB-bolsa-shoulder-bag-tiracolo-antifurto-casual-usb-impermeavel.webp  
+**Link afiliado:** https://meli.la/1sVY8iH
+
+**Legenda pronta:**
+
+Achado #1: Bolsa Shoulder Bag Tiracolo Antifurto Casual Usb Impermeável
+💰 R$ 22,90
+🔥 82% OFF
+👉 https://meli.la/1sVY8iH
+
+Preço e disponibilidade podem mudar. Confira no Mercado Livre.
+
+**Texto curto para Story:**
+
+ACHADO DO DIA
+Bolsa Shoulder Bag Tiracolo Antifurto Casual Usb Impermeável
+R$ 22,90
+82% OFF
+Link na oferta
+
+---
+
+## 2. Soldador Plástico Solda Para-choque Farol Carenagem Grampos
+
+**Categoria:** Automotivo  
+**Preço:** R$ 50,65  
+**Desconto:** 78%  
+**Imagem:** https://http2.mlstatic.com/D_NQ_NP_623837-MLB93071851190_092025-O-soldador-plastico-solda-para-choque-farol-carenagem-grampos.webp  
+**Link afiliado:** https://meli.la/17v6UWg
+
+**Legenda pronta:**
+
+Achado #2: Soldador Plástico Solda Para-choque Farol Carenagem Grampos
+💰 R$ 50,65
+🔥 78% OFF
+👉 https://meli.la/17v6UWg
+
+Preço e disponibilidade podem mudar. Confira no Mercado Livre.
+
+**Texto curto para Story:**
+
+ACHADO DO DIA
+Soldador Plástico Solda Para-choque Farol Carenagem Grampos
+R$ 50,65
+78% OFF
+Link na oferta
+
+---
+
+## 3. Cabo 2m Conversor Starlink Mini De 12/24v Para 30v Veicular
 
 **Categoria:** Automotivo  
 **Preço:** R$ 112,90  
@@ -14,7 +68,7 @@ Seleção automática com variedade de categorias. Confirme a oferta antes de pu
 
 **Legenda pronta:**
 
-Achado #1: Cabo 2m Conversor Starlink Mini De 12/24v Para 30v Veicular
+Achado #3: Cabo 2m Conversor Starlink Mini De 12/24v Para 30v Veicular
 💰 R$ 112,90
 🔥 76% OFF
 👉 https://meli.la/2f7fz4e
@@ -31,7 +85,7 @@ Link na oferta
 
 ---
 
-## 2. Kit 4 Camiseta Oversized Streetwear Básica Gola Alta Algodão
+## 4. Kit 4 Camiseta Oversized Streetwear Básica Gola Alta Algodão
 
 **Categoria:** Moda  
 **Preço:** R$ 49,90  
@@ -41,7 +95,7 @@ Link na oferta
 
 **Legenda pronta:**
 
-Achado #2: Kit 4 Camiseta Oversized Streetwear Básica Gola Alta Algodão
+Achado #4: Kit 4 Camiseta Oversized Streetwear Básica Gola Alta Algodão
 💰 R$ 49,90
 🔥 74% OFF
 👉 https://meli.la/2u9pPyU
@@ -58,7 +112,7 @@ Link na oferta
 
 ---
 
-## 3. Lisinha Sérum Popozuda Pós Depilação Pele Macia Pelos Finos 1 Frasco
+## 5. Lisinha Sérum Popozuda Pós Depilação Pele Macia Pelos Finos 1 Frasco
 
 **Categoria:** Beleza e cuidados  
 **Preço:** R$ 54,38  
@@ -68,7 +122,7 @@ Link na oferta
 
 **Legenda pronta:**
 
-Achado #3: Lisinha Sérum Popozuda Pós Depilação Pele Macia Pelos Finos 1 Frasco
+Achado #5: Lisinha Sérum Popozuda Pós Depilação Pele Macia Pelos Finos 1 Frasco
 💰 R$ 54,38
 🔥 72% OFF
 👉 https://meli.la/17ywuDU
@@ -80,60 +134,6 @@ Preço e disponibilidade podem mudar. Confira no Mercado Livre.
 ACHADO DO DIA
 Lisinha Sérum Popozuda Pós Depilação Pele Macia Pelos Finos 1 Frasco
 R$ 54,38
-72% OFF
-Link na oferta
-
----
-
-## 4. Kit 10 Pares Meias Zhamaro Algodão Sapatilha Invisível
-
-**Categoria:** Moda  
-**Preço:** R$ 54,99  
-**Desconto:** 72%  
-**Imagem:** https://http2.mlstatic.com/D_NQ_NP_638847-MLB115059720532_082026-O-kit-10-pares-meias-zhamaro-algodo-sapatilha-invisivel.webp  
-**Link afiliado:** https://meli.la/1GgrVb5
-
-**Legenda pronta:**
-
-Achado #4: Kit 10 Pares Meias Zhamaro Algodão Sapatilha Invisível
-💰 R$ 54,99
-🔥 72% OFF
-👉 https://meli.la/1GgrVb5
-
-Preço e disponibilidade podem mudar. Confira no Mercado Livre.
-
-**Texto curto para Story:**
-
-ACHADO DO DIA
-Kit 10 Pares Meias Zhamaro Algodão Sapatilha Invisível
-R$ 54,99
-72% OFF
-Link na oferta
-
----
-
-## 5. Clip Wastegate Turbina Vw / Audi Motores 1.0 1.4 Tsi / Tfsi
-
-**Categoria:** Automotivo  
-**Preço:** R$ 53,90  
-**Desconto:** 72%  
-**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_902917-MLB104009924035_012026-AB.webp  
-**Link afiliado:** https://meli.la/1wn4Gwd
-
-**Legenda pronta:**
-
-Achado #5: Clip Wastegate Turbina Vw / Audi Motores 1.0 1.4 Tsi / Tfsi
-💰 R$ 53,90
-🔥 72% OFF
-👉 https://meli.la/1wn4Gwd
-
-Preço e disponibilidade podem mudar. Confira no Mercado Livre.
-
-**Texto curto para Story:**
-
-ACHADO DO DIA
-Clip Wastegate Turbina Vw / Audi Motores 1.0 1.4 Tsi / Tfsi
-R$ 53,90
 72% OFF
 Link na oferta
 
