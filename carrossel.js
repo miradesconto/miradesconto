@@ -1,52 +1,107 @@
 'use strict';
 (() => {
     const hero = document.querySelector('.hero');
-    const groups = [
-        {category:'Informática',label:'Tecnologia',title:'Ofertas que valem a pena.',text:'Encontre acessórios e novidades para o seu dia a dia conectado.'},
-        {category:'Casa',label:'Sua casa',title:'Mais conforto. Boas escolhas.',text:'Descubra produtos para cuidar da casa e facilitar sua rotina.'},
-        {category:'Moda',label:'Seu estilo',title:'Seu próximo achado está aqui.',text:'Explore roupas, calçados e acessórios em um só lugar.'}
-    ];
-    const slides = groups.map(g=>({...g,items:products.filter(p=>p.category===g.category && safeUrl(p.imageUrl) && (g.category!=='Informática' || /teclado|impressora|mouse/i.test(p.name))).slice(0,3)})).filter(g=>g.items.length);
-    if (!hero || !slides.length) return;
-    hero.setAttribute('aria-label','Conheça as categorias');
-    hero.setAttribute('aria-roledescription','carrossel');
-    const shell=element('div','hero-shell');
-    const panels=slides.map((g,i)=>{
-        const panel=element('div','hero-slide');
-        panel.setAttribute('role','group');panel.setAttribute('aria-roledescription','slide');
-        panel.setAttribute('aria-label',`${i+1} de ${slides.length}: ${g.label}`);
-        const copy=element('div','hero-copy');
-        copy.append(element('div','hero-eyebrow',`MiraDesconto / ${g.label}`),element(i===0?'h1':'h2','',g.title),element('p','',g.text));
-        const cta=element('button','hero-cta',`Explorar ${g.label.toLowerCase()} →`);cta.type='button';
-        cta.addEventListener('click',()=>{
-            $('searchInput').value='';$('sortSelect').value='default';
-            const category=[...categoryContainer.children].find(b=>b.dataset.category===g.category);
-            if(category)selectCategory(category);
-            $('sectionTitle').setAttribute('tabindex','-1');$('sectionTitle').focus({preventScroll:true});
-            $('sectionTitle').scrollIntoView({behavior:'auto',block:'start'});
-        });copy.append(cta);
-        const art=element('div','hero-art');
-        g.items.forEach(p=>{const tile=element('div','hero-product');const img=element('img');img.src=p.imageUrl;img.alt=p.name;img.width=240;img.height=240;img.decoding='async';img.addEventListener('error',()=>{tile.replaceChildren(element('span','','Imagem indisponível'));},{once:true});tile.append(img);art.append(tile);});
-        panel.append(copy,art);shell.append(panel);return panel;
+    if (!hero || !Array.isArray(products)) return;
+
+    const activeProducts = products.filter(p =>
+        p && p.available !== false && p.name && Number(p.price) > 0 && safeUrl(p.imageUrl) && safeUrl(p.affiliateUrl)
+    );
+
+    const featured = activeProducts[0] || null;
+    const categoryCounts = activeProducts.reduce((acc, product) => {
+        const name = String(product.category || '').trim();
+        if (name) acc[name] = (acc[name] || 0) + 1;
+        return acc;
+    }, {});
+    const topCategories = Object.entries(categoryCounts)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 3);
+
+    const money = value => new Intl.NumberFormat('pt-BR', {
+        style: 'currency',
+        currency: 'BRL'
+    }).format(Number(value) || 0);
+
+    hero.setAttribute('aria-label', 'Destaques do MiraDesconto');
+
+    const shell = element('div', 'hero-static');
+    const copy = element('div', 'hero-static-copy');
+    copy.append(
+        element('div', 'hero-static-eyebrow', 'OFERTAS + CONTEÚDO PARA DECIDIR MELHOR'),
+        element('h1', '', 'Seu atalho para comprar melhor.'),
+        element('p', '', 'Ofertas atuais do catálogo, guias diretos e comparações sem enrolação. Você encontra o que interessa e decide com mais clareza.')
+    );
+
+    const actions = element('div', 'hero-static-actions');
+    const offers = element('a', 'hero-primary', 'Explorar ofertas →');
+    offers.href = '#ofertas';
+    const guides = element('a', 'hero-secondary', 'Ver guias e reviews');
+    guides.href = 'blog/';
+    actions.append(offers, guides);
+
+    const note = element('p', 'hero-static-note', `${activeProducts.length} ofertas ativas no catálogo neste momento.`);
+    copy.append(actions, note);
+
+    const dashboard = element('div', 'hero-dashboard');
+
+    if (featured) {
+        const deal = element('article', 'hero-deal');
+        const visual = element('div', 'hero-deal-visual');
+        const img = element('img');
+        img.src = featured.imageUrl;
+        img.alt = featured.name;
+        img.width = 360;
+        img.height = 270;
+        img.decoding = 'async';
+        img.addEventListener('error', () => visual.classList.add('image-error'), {once: true});
+        visual.append(img);
+
+        const info = element('div', 'hero-deal-info');
+        info.append(element('span', 'hero-card-kicker', 'EM ALTA AGORA'));
+        const title = element('h2', '', featured.name);
+        const price = element('strong', 'hero-deal-price', money(featured.price));
+        const link = element('a', 'hero-deal-link', 'Ver oferta →');
+        link.href = featured.affiliateUrl;
+        link.target = '_blank';
+        link.rel = 'sponsored nofollow noopener';
+        info.append(title, price, link);
+        deal.append(visual, info);
+        dashboard.append(deal);
+    }
+
+    const side = element('div', 'hero-side');
+
+    const guide = element('a', 'hero-info-card hero-guide-card');
+    guide.href = 'blog/creatina-soldiers-1kg-vale-a-pena/';
+    guide.append(
+        element('span', 'hero-card-kicker', 'GUIA NOVO'),
+        element('h3', '', 'Creatina Soldiers 1 kg vale a pena?'),
+        element('p', '', 'O que observar antes de comprar, sem inventar teste ou promessa.'),
+        element('span', 'hero-card-link', 'Ler análise →')
+    );
+    side.append(guide);
+
+    const categories = element('div', 'hero-info-card hero-category-card');
+    categories.append(
+        element('span', 'hero-card-kicker', 'EXPLORE RÁPIDO'),
+        element('h3', '', 'Vá direto ao que interessa')
+    );
+    const chips = element('div', 'hero-category-chips');
+    topCategories.forEach(([name, count]) => {
+        const button = element('button', 'hero-category-chip', `${name} · ${count}`);
+        button.type = 'button';
+        button.addEventListener('click', () => {
+            const categoryButton = [...document.querySelectorAll('.category')]
+                .find(item => item.dataset.category === name);
+            if (categoryButton) categoryButton.click();
+            document.querySelector('#ofertas')?.scrollIntoView({behavior: 'smooth', block: 'start'});
+        });
+        chips.append(button);
     });
-    const controls=element('div','hero-controls');
-    function button(label,text,cls='hero-control'){const b=element('button',cls,text);b.type='button';b.setAttribute('aria-label',label);return b;}
-    const prev=button('Banner anterior','‹'), next=button('Próximo banner','›');
-    const dots=element('div','hero-dots');
-    const dotButtons=slides.map((g,i)=>{const b=button(`Mostrar banner ${g.label}`,'','hero-dot');b.addEventListener('click',()=>show(i));dots.append(b);return b;});
-    const pause=button('Pausar troca automática','Pausar','hero-control hero-pause');
-    controls.append(prev,dots,next,pause);shell.append(controls,element('p','hero-caption','Imagens de produtos do catálogo. Confira preços e disponibilidade nas ofertas.'));
+    categories.append(chips);
+    side.append(categories);
+
+    dashboard.append(side);
+    shell.append(copy, dashboard);
     hero.replaceChildren(shell);
-    let current=0,timer=null,hover=false,focused=false;
-    const motion=matchMedia('(prefers-reduced-motion: reduce)');let paused=motion.matches;
-    function schedule(){clearTimeout(timer);if(!paused&&!hover&&!focused&&!document.hidden)timer=setTimeout(()=>show((current+1)%slides.length),5000);}
-    function show(i){current=(i+slides.length)%slides.length;panels.forEach((p,j)=>p.hidden=j!==current);dotButtons.forEach((b,j)=>b.setAttribute('aria-pressed',String(j===current)));schedule();}
-    function pauseLabel(){pause.textContent=paused?'Reproduzir':'Pausar';pause.setAttribute('aria-label',paused?'Iniciar troca automática':'Pausar troca automática');}
-    prev.addEventListener('click',()=>show(current-1));next.addEventListener('click',()=>show(current+1));
-    pause.addEventListener('click',()=>{paused=!paused;pauseLabel();schedule();});
-    hero.addEventListener('mouseenter',()=>{hover=true;schedule();});hero.addEventListener('mouseleave',()=>{hover=false;schedule();});
-    hero.addEventListener('focusin',()=>{focused=true;schedule();});hero.addEventListener('focusout',e=>{if(!hero.contains(e.relatedTarget)){focused=false;schedule();}});
-    document.addEventListener('visibilitychange',schedule);
-    motion.addEventListener('change',e=>{paused=e.matches;pauseLabel();schedule();});
-    pauseLabel();show(0);
 })();
