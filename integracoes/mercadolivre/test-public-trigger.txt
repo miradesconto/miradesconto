@@ -1,0 +1,1 @@
+Teste público da API Mercado Livre sem credenciais.
