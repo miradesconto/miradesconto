@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-09-19T15:40:54-03:00",
+  "updatedAt": "2026-09-19T15:43:01-03:00",
   "source": "Mercado Livre — páginas públicas oficiais de afiliados",
   "strategy": "existing-official-affiliate-links-live-price",
   "old_products": 675,
   "links_checked": 675,
   "current_prices_found": 500,
-  "errors_sampled": 57,
+  "errors_sampled": 56,
   "dry_run": false,
   "catalogFiles": 5,
   "errors": [
@@ -82,10 +82,6 @@
       "reason": "original_item_not_found_in_affiliate_page"
     },
     {
-      "id": "MLB6792622180",
-      "reason": "original_item_not_found_in_affiliate_page"
-    },
-    {
       "id": "MLB5474872718",
       "reason": "missing_id_or_affiliate_url"
     },
@@ -102,11 +98,11 @@
       "reason": "original_item_not_found_in_affiliate_page"
     },
     {
-      "id": "MLB5158979945",
+      "id": "MLB5611078652",
       "reason": "original_item_not_found_in_affiliate_page"
     },
     {
-      "id": "MLB5611078652",
+      "id": "MLB5158979945",
       "reason": "original_item_not_found_in_affiliate_page"
     },
     {
@@ -124,10 +120,6 @@
     {
       "id": "MLB4168469409",
       "reason": "missing_id_or_affiliate_url"
-    },
-    {
-      "id": "MLB6804166138",
-      "reason": "original_item_not_found_in_affiliate_page"
     },
     {
       "id": "MLB3303298011",
@@ -170,19 +162,19 @@
       "reason": "original_item_not_found_in_affiliate_page"
     },
     {
-      "id": "MLB4846134939",
-      "reason": "original_item_not_found_in_affiliate_page"
-    },
-    {
-      "id": "MLB4993091237",
-      "reason": "original_item_not_found_in_affiliate_page"
-    },
-    {
       "id": "MLB5131490179",
       "reason": "original_item_not_found_in_affiliate_page"
     },
     {
+      "id": "MLB4846134939",
+      "reason": "original_item_not_found_in_affiliate_page"
+    },
+    {
       "id": "MLB6295764416",
+      "reason": "original_item_not_found_in_affiliate_page"
+    },
+    {
+      "id": "MLB4993091237",
       "reason": "original_item_not_found_in_affiliate_page"
     },
     {
@@ -206,11 +198,11 @@
       "reason": "original_item_not_found_in_affiliate_page"
     },
     {
-      "id": "MLB4473801529",
+      "id": "MLB7573239014",
       "reason": "original_item_not_found_in_affiliate_page"
     },
     {
-      "id": "MLB7573239014",
+      "id": "MLB4473801529",
       "reason": "original_item_not_found_in_affiliate_page"
     },
     {
@@ -227,6 +219,10 @@
     },
     {
       "id": "MLB7607018866",
+      "reason": "original_item_not_found_in_affiliate_page"
+    },
+    {
+      "id": "MLB6804166138",
       "reason": "original_item_not_found_in_affiliate_page"
     },
     {
