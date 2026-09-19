@@ -55,6 +55,12 @@ jobs:
         id: sync
         run: python integracoes/mercadolivre/run_sync.py
 
+      - name: Validar integridade antes de publicar
+        run: python integracoes/automacao/site_health.py
+
+      - name: Gerar pauta automática para redes sociais
+        run: python integracoes/social/gerar_pauta.py
+
       - name: Persistir estado OAuth rotativo
         if: always()
         shell: bash
@@ -84,6 +90,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add produtos.js catalogo _data/produtos.json integracoes/mercadolivre/ultimo-sync.json
+          git add integracoes/social/pauta-do-dia.json integracoes/social/pauta-do-dia.md
           if [ -f "integracoes/mercadolivre/catalogo-semente.json" ]; then
             git add integracoes/mercadolivre/catalogo-semente.json
           fi
@@ -91,5 +98,5 @@ jobs:
             echo "Nenhuma alteração pública do catálogo para registrar."
             exit 0
           fi
-          git commit -m "Atualiza catálogo Mercado Livre"
+          git commit -m "Atualiza catálogo Mercado Livre e pauta social"
           git push
