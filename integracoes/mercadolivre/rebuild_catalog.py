@@ -148,6 +148,10 @@ def refresh_one(old: dict[str, Any], collected_at: str) -> tuple[dict[str, Any] 
 
     product_url = extract_product_url(body, item_id) or old.get("productUrl")
     result = dict(old)
+    # Estes campos pertenciam à coleta antiga e poderiam contradizer o preço
+    # recém-confirmado. Só publicamos os valores que conseguimos atualizar.
+    result.pop("priceEvidence", None)
+    result.pop("installment", None)
     result.update({
         "id": item_id,
         "price": price,
@@ -163,6 +167,8 @@ def refresh_one(old: dict[str, Any], collected_at: str) -> tuple[dict[str, Any] 
     })
     if previous_source:
         result["previousPriceSource"] = previous_source
+    else:
+        result.pop("previousPriceSource", None)
     return result, None
 
 
