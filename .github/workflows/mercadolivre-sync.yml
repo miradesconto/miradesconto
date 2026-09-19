@@ -48,7 +48,7 @@ jobs:
 
       - name: Sincronizar catálogo pela API
         id: sync
-        run: python integracoes/mercadolivre/sync_catalog.py
+        run: python integracoes/mercadolivre/run_sync.py
 
       - name: Persistir estado OAuth rotativo
         if: always()
