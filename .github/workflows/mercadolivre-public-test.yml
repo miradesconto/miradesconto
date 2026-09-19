@@ -1,0 +1,31 @@
+name: Mercado Livre — teste público
+
+on:
+  push:
+    paths:
+      - "integracoes/mercadolivre/test-public-trigger.txt"
+
+permissions:
+  contents: read
+
+jobs:
+  test-public:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Testar item sem token
+        shell: bash
+        run: |
+          set +e
+          echo "SINGLE"
+          code=$(curl -sS -o /tmp/single.json -w "%{http_code}" \
+            "https://api.mercadolibre.com/items/MLB4592320910")
+          echo "HTTP_SINGLE=$code"
+          head -c 300 /tmp/single.json || true
+          echo
+
+          echo "BULK"
+          code2=$(curl -sS -o /tmp/bulk.json -w "%{http_code}" \
+            "https://api.mercadolibre.com/items/bulk?ids=MLB4592320910&attributes=body.id,body.title,body.price,body.original_price,body.permalink,body.status")
+          echo "HTTP_BULK=$code2"
+          head -c 500 /tmp/bulk.json || true
+          echo
