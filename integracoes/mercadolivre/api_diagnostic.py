@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Diagnóstico mínimo da API do Mercado Livre sem expor credenciais."""
+"""Diagnóstico mínimo da API do Mercado Livre sem expor dados pessoais."""
 from __future__ import annotations
 
 import json
@@ -13,7 +13,7 @@ APP_ID = "5739104192519635"
 USER_ID = "3690746229"
 
 
-def call(label: str, url: str, token: str) -> None:
+def request_json(url: str, token: str):
     req = Request(
         url,
         headers={
@@ -26,38 +26,75 @@ def call(label: str, url: str, token: str) -> None:
     try:
         with urlopen(req, timeout=45) as response:
             raw = response.read().decode("utf-8", errors="replace")
-            print(f"\n=== {label} ===")
-            print(f"HTTP={response.status}")
             try:
-                payload = json.loads(raw)
-                print(json.dumps(payload, ensure_ascii=False)[:4000])
+                return response.status, json.loads(raw)
             except Exception:
-                print(raw[:4000])
+                return response.status, {"raw": raw[:300]}
     except HTTPError as exc:
         raw = exc.read().decode("utf-8", errors="replace")
-        print(f"\n=== {label} ===")
-        print(f"HTTP={exc.code}")
-        print(raw[:4000])
+        try:
+            return exc.code, json.loads(raw)
+        except Exception:
+            return exc.code, {"raw": raw[:300]}
+
+
+def print_status(label: str, status: int, payload) -> None:
+    out = {"http": status}
+    if isinstance(payload, dict):
+        if payload.get("error"):
+            out["error"] = payload.get("error")
+        if payload.get("message"):
+            out["message"] = payload.get("message")
+    elif isinstance(payload, list) and payload:
+        row = payload[0] if isinstance(payload[0], dict) else {}
+        if row:
+            out["item_status"] = row.get("status_code") or row.get("code")
+            err = row.get("error") if isinstance(row.get("error"), dict) else {}
+            if err.get("message"):
+                out["message"] = err.get("message")
+    print(f"{label}=" + json.dumps(out, ensure_ascii=False))
 
 
 def main() -> int:
     token, auth_mode = base.get_access_token()
     print(f"AUTH_MODE={auth_mode}")
 
-    calls = [
-        ("USERS_ME", f"{base.API_BASE}/users/me"),
-        ("APPLICATION", f"{base.API_BASE}/applications/{APP_ID}"),
-        ("APPLICATION_GRANTS", f"{base.API_BASE}/applications/{APP_ID}/grants"),
-        ("USER_APPLICATIONS", f"{base.API_BASE}/users/{USER_ID}/applications"),
-        ("OWN_ITEMS_SEARCH", f"{base.API_BASE}/users/{USER_ID}/items/search?limit=5"),
+    status, payload = request_json(f"{base.API_BASE}/users/me", token)
+    print("USERS_ME=" + json.dumps({"http": status, "authenticated": status == 200}))
+
+    status, payload = request_json(f"{base.API_BASE}/applications/{APP_ID}", token)
+    app = payload if isinstance(payload, dict) else {}
+    print("APPLICATION=" + json.dumps({
+        "http": status,
+        "active": app.get("active"),
+        "blocked": app.get("blocked"),
+        "certification_status": app.get("certification_status"),
+        "scopes": app.get("scopes", []),
+    }, ensure_ascii=False))
+
+    status, payload = request_json(f"{base.API_BASE}/applications/{APP_ID}/grants", token)
+    grant_scopes = []
+    if isinstance(payload, dict) and isinstance(payload.get("grants"), list) and payload["grants"]:
+        first = payload["grants"][0]
+        if isinstance(first, dict):
+            grant_scopes = first.get("scopes", [])
+    print("GRANT=" + json.dumps({"http": status, "scopes": grant_scopes}, ensure_ascii=False))
+
+    status, payload = request_json(f"{base.API_BASE}/users/{USER_ID}/items/search?limit=1", token)
+    total = None
+    if isinstance(payload, dict) and isinstance(payload.get("paging"), dict):
+        total = payload["paging"].get("total")
+    print("OWN_ITEMS_SEARCH=" + json.dumps({"http": status, "total": total}))
+
+    checks = [
         ("PUBLIC_SEARCH", f"{base.API_BASE}/sites/MLB/search?q=camiseta&limit=1"),
-        ("ITEM_SINGLE_NO_ATTRIBUTES", f"{base.API_BASE}/items/{ITEM_ID}"),
-        ("ITEM_BULK_NO_ATTRIBUTES", f"{base.API_BASE}/items/bulk?ids={ITEM_ID}"),
+        ("ITEM_SINGLE", f"{base.API_BASE}/items/{ITEM_ID}"),
+        ("ITEM_BULK", f"{base.API_BASE}/items/bulk?ids={ITEM_ID}"),
         ("ITEM_PRICES", f"{base.API_BASE}/items/{ITEM_ID}/prices"),
     ]
-
-    for label, url in calls:
-        call(label, url, token)
+    for label, url in checks:
+        status, payload = request_json(url, token)
+        print_status(label, status, payload)
     return 0
 
 
