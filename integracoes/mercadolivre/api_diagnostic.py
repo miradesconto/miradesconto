@@ -12,6 +12,7 @@ ITEM_ID = "MLB4592320910"
 APP_ID = "5739104192519635"
 USER_ID = "3690746229"
 HIGHLIGHT_CATEGORY = "MLB432825"
+AFFILIATE_BASE = "https://www.mercadolivre.com.br"
 
 
 def request_json(url: str, token: str):
@@ -55,6 +56,10 @@ def print_status(label: str, status: int, payload) -> None:
         results = payload.get("results")
         if isinstance(results, list):
             out["count"] = len(results)
+        tags = payload.get("tags")
+        if isinstance(tags, list):
+            out["count"] = len(tags)
+            out["has_active_tag"] = any(isinstance(t, dict) and t.get("in_use") for t in tags)
     elif isinstance(payload, list) and payload:
         row = payload[0] if isinstance(payload[0], dict) else {}
         if row:
@@ -148,6 +153,13 @@ def main() -> int:
                     break
             if highlighted_product_id:
                 print("HIGHLIGHT_PRODUCT_DETAIL=" + json.dumps(product_summary(highlighted_product_id, token), ensure_ascii=False))
+
+    # Testa se o mesmo OAuth do DevCenter também autentica a Central de Afiliados.
+    status, affiliate_tags = request_json(
+        f"{AFFILIATE_BASE}/affiliate-program/api/v2/stripe/user/tags",
+        token,
+    )
+    print_status("AFFILIATE_TAGS_WITH_OAUTH", status, affiliate_tags)
 
     checks = [
         ("PUBLIC_SEARCH_LEGACY", f"{base.API_BASE}/sites/MLB/search?q=camiseta&limit=1"),
