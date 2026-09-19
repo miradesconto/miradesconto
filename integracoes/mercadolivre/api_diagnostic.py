@@ -9,6 +9,8 @@ from urllib.request import Request, urlopen
 import sync_catalog as base
 
 ITEM_ID = "MLB4592320910"
+APP_ID = "5739104192519635"
+USER_ID = "3690746229"
 
 
 def call(label: str, url: str, token: str) -> None:
@@ -44,11 +46,13 @@ def main() -> int:
 
     calls = [
         ("USERS_ME", f"{base.API_BASE}/users/me"),
+        ("APPLICATION", f"{base.API_BASE}/applications/{APP_ID}"),
+        ("APPLICATION_GRANTS", f"{base.API_BASE}/applications/{APP_ID}/grants"),
+        ("USER_APPLICATIONS", f"{base.API_BASE}/users/{USER_ID}/applications"),
+        ("OWN_ITEMS_SEARCH", f"{base.API_BASE}/users/{USER_ID}/items/search?limit=5"),
+        ("PUBLIC_SEARCH", f"{base.API_BASE}/sites/MLB/search?q=camiseta&limit=1"),
         ("ITEM_SINGLE_NO_ATTRIBUTES", f"{base.API_BASE}/items/{ITEM_ID}"),
-        ("ITEM_SINGLE_WITH_ATTRIBUTES", f"{base.API_BASE}/items/{ITEM_ID}?attributes=id,title,status,permalink,price,original_price"),
         ("ITEM_BULK_NO_ATTRIBUTES", f"{base.API_BASE}/items/bulk?ids={ITEM_ID}"),
-        ("ITEM_BULK_WITH_ATTRIBUTES", f"{base.API_BASE}/items/bulk?ids={ITEM_ID}&attributes=body.id,body.title,body.status,body.permalink,body.price,body.original_price"),
-        ("ITEM_LEGACY_MULTI", f"{base.API_BASE}/items?ids={ITEM_ID}&attributes=id,title,status,permalink,price,original_price"),
         ("ITEM_PRICES", f"{base.API_BASE}/items/{ITEM_ID}/prices"),
     ]
 
