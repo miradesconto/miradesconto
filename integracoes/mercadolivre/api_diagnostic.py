@@ -11,6 +11,7 @@ import sync_catalog as base
 ITEM_ID = "MLB4592320910"
 APP_ID = "5739104192519635"
 USER_ID = "3690746229"
+HIGHLIGHT_CATEGORY = "MLB432825"
 
 
 def request_json(url: str, token: str):
@@ -64,6 +65,29 @@ def print_status(label: str, status: int, payload) -> None:
     print(f"{label}=" + json.dumps(out, ensure_ascii=False))
 
 
+def product_summary(product_id: str, token: str) -> dict:
+    status, product = request_json(f"{base.API_BASE}/products/{product_id}", token)
+    summary = {"http": status, "product_id": product_id}
+    if status == 200 and isinstance(product, dict):
+        summary.update({
+            "status": product.get("status"),
+            "name": product.get("name"),
+            "permalink": product.get("permalink"),
+        })
+        winner = product.get("buy_box_winner")
+        if isinstance(winner, dict):
+            summary["buy_box_winner"] = {
+                "item_id": winner.get("item_id"),
+                "price": winner.get("price"),
+                "currency_id": winner.get("currency_id"),
+                "available_quantity": winner.get("available_quantity"),
+            }
+    elif isinstance(product, dict):
+        summary["error"] = product.get("error")
+        summary["message"] = product.get("message")
+    return summary
+
+
 def main() -> int:
     token, auth_mode = base.get_access_token()
     print(f"AUTH_MODE={auth_mode}")
@@ -101,38 +125,32 @@ def main() -> int:
     )
     print_status("CATALOG_PRODUCTS_SEARCH", status, catalog)
 
-    product_id = None
     if status == 200 and isinstance(catalog, dict):
         results = catalog.get("results")
         if isinstance(results, list) and results and isinstance(results[0], dict):
             product_id = results[0].get("id")
+            if product_id:
+                print("CATALOG_PRODUCT_DETAIL=" + json.dumps(product_summary(product_id, token), ensure_ascii=False))
 
-    if product_id:
-        status, product = request_json(f"{base.API_BASE}/products/{product_id}", token)
-        summary = {"http": status, "product_id": product_id}
-        if status == 200 and isinstance(product, dict):
-            summary.update({
-                "status": product.get("status"),
-                "name": product.get("name"),
-                "permalink": product.get("permalink"),
-            })
-            winner = product.get("buy_box_winner")
-            if isinstance(winner, dict):
-                summary["buy_box_winner"] = {
-                    "item_id": winner.get("item_id"),
-                    "price": winner.get("price"),
-                    "currency_id": winner.get("currency_id"),
-                    "available_quantity": winner.get("available_quantity"),
-                }
-        else:
-            if isinstance(product, dict):
-                summary["error"] = product.get("error")
-                summary["message"] = product.get("message")
-        print("CATALOG_PRODUCT_DETAIL=" + json.dumps(summary, ensure_ascii=False))
+    status, highlights = request_json(
+        f"{base.API_BASE}/highlights/MLB/category/{HIGHLIGHT_CATEGORY}",
+        token,
+    )
+    print_status("HIGHLIGHTS_CATEGORY", status, highlights)
+
+    if status == 200 and isinstance(highlights, dict):
+        content = highlights.get("content")
+        if isinstance(content, list):
+            highlighted_product_id = None
+            for row in content:
+                if isinstance(row, dict) and row.get("type") == "PRODUCT" and row.get("id"):
+                    highlighted_product_id = row.get("id")
+                    break
+            if highlighted_product_id:
+                print("HIGHLIGHT_PRODUCT_DETAIL=" + json.dumps(product_summary(highlighted_product_id, token), ensure_ascii=False))
 
     checks = [
         ("PUBLIC_SEARCH_LEGACY", f"{base.API_BASE}/sites/MLB/search?q=camiseta&limit=1"),
-        ("HIGHLIGHTS_CATEGORY", f"{base.API_BASE}/highlights/MLB/category/MLB432825"),
         ("ITEM_SINGLE", f"{base.API_BASE}/items/{ITEM_ID}"),
         ("ITEM_BULK", f"{base.API_BASE}/items/bulk?ids={ITEM_ID}"),
         ("ITEM_SALE_PRICE", f"{base.API_BASE}/items/{ITEM_ID}/sale_price"),
