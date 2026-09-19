@@ -1,1 +1,1 @@
-Teste OAuth nos endpoints da Central de Afiliados: 2026-09-19 12:33 BRT.
+Teste completo de afiliados e geração de link: 2026-09-19 12:37 BRT.
