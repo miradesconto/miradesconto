@@ -31,6 +31,9 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Instalar criptografia
+        run: python -m pip install --disable-pip-version-check "cryptography>=42,<48"
+
       - name: Validar credenciais obrigatórias
         shell: bash
         run: |
@@ -38,15 +41,35 @@ jobs:
             echo "ML_CLIENT_SECRET não foi configurado."
             exit 1
           fi
-          if [ -z "$ML_REFRESH_TOKEN" ]; then
-            echo "ML_REFRESH_TOKEN não foi configurado."
+          if [ ! -f "integracoes/mercadolivre/refresh-token.enc" ] && [ -z "$ML_REFRESH_TOKEN" ]; then
+            echo "ML_REFRESH_TOKEN não foi configurado e ainda não existe estado OAuth criptografado."
             exit 1
           fi
 
       - name: Sincronizar catálogo pela API
+        id: sync
         run: python integracoes/mercadolivre/sync_catalog.py
 
-      - name: Registrar alterações
+      - name: Persistir estado OAuth rotativo
+        if: always()
+        shell: bash
+        run: |
+          if [ ! -f "integracoes/mercadolivre/refresh-token.enc" ]; then
+            echo "Nenhum estado OAuth novo para persistir."
+            exit 0
+          fi
+          if git diff --quiet -- integracoes/mercadolivre/refresh-token.enc && git ls-files --error-unmatch integracoes/mercadolivre/refresh-token.enc >/dev/null 2>&1; then
+            echo "Estado OAuth já está atualizado."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add integracoes/mercadolivre/refresh-token.enc
+          git commit -m "Atualiza estado OAuth Mercado Livre"
+          git push
+
+      - name: Registrar alterações do catálogo
+        if: success()
         shell: bash
         run: |
           if git diff --quiet; then
@@ -56,5 +79,9 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add produtos.js catalogo _data/produtos.json integracoes/mercadolivre/ultimo-sync.json
+          if git diff --cached --quiet; then
+            echo "Nenhuma alteração pública do catálogo para registrar."
+            exit 0
+          fi
           git commit -m "Atualiza catálogo via API Mercado Livre"
           git push
