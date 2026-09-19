@@ -56,8 +56,6 @@ def print_status(label: str, status: int, payload) -> None:
 
 
 def main() -> int:
-    # Reinicialização pontual solicitada para testar o GitHub Secret atualizado.
-    base.TOKEN_STATE_PATH.unlink(missing_ok=True)
     token, auth_mode = base.get_access_token()
     print(f"AUTH_MODE={auth_mode}")
 
@@ -80,9 +78,7 @@ def main() -> int:
         first = payload["grants"][0]
         if isinstance(first, dict):
             grant_scopes = first.get("scopes", [])
-    rows = payload if isinstance(payload, list) else payload.get("grants", []) if isinstance(payload, dict) else []
-    grants = [{"scopes": row.get("scopes", [])} for row in rows if isinstance(row, dict)]
-    print("APPLICATION_GRANTS=" + json.dumps({"http": status, "grants": grants}, ensure_ascii=False))
+    print("GRANT=" + json.dumps({"http": status, "scopes": grant_scopes}, ensure_ascii=False))
 
     status, payload = request_json(f"{base.API_BASE}/users/{USER_ID}/items/search?limit=1", token)
     total = None
@@ -92,8 +88,8 @@ def main() -> int:
 
     checks = [
         ("PUBLIC_SEARCH", f"{base.API_BASE}/sites/MLB/search?q=camiseta&limit=1"),
-        ("ITEM_SINGLE_NO_ATTRIBUTES", f"{base.API_BASE}/items/{ITEM_ID}"),
-        ("ITEM_BULK_NO_ATTRIBUTES", f"{base.API_BASE}/items/bulk?ids={ITEM_ID}"),
+        ("ITEM_SINGLE", f"{base.API_BASE}/items/{ITEM_ID}"),
+        ("ITEM_BULK", f"{base.API_BASE}/items/bulk?ids={ITEM_ID}"),
         ("ITEM_PRICES", f"{base.API_BASE}/items/{ITEM_ID}/prices"),
     ]
     for label, url in checks:
