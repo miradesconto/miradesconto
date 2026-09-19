@@ -28,6 +28,8 @@ jobs:
     steps:
       - name: Baixar repositório
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Configurar Python
         uses: actions/setup-python@v5
@@ -82,6 +84,9 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add produtos.js catalogo _data/produtos.json integracoes/mercadolivre/ultimo-sync.json
+          if [ -f "integracoes/mercadolivre/catalogo-semente.json" ]; then
+            git add integracoes/mercadolivre/catalogo-semente.json
+          fi
           if git diff --cached --quiet; then
             echo "Nenhuma alteração pública do catálogo para registrar."
             exit 0
