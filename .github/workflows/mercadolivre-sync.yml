@@ -2,6 +2,9 @@ name: Mercado Livre — sincronizar catálogo
 
 on:
   workflow_dispatch:
+  schedule:
+    # 09:00 e 21:00 no horário de Brasília (UTC-3).
+    - cron: "0 0,12 * * *"
   push:
     paths:
       - "integracoes/mercadolivre/trigger.txt"
@@ -46,7 +49,7 @@ jobs:
             exit 1
           fi
 
-      - name: Sincronizar catálogo pela API
+      - name: Sincronizar preços pelas páginas oficiais de afiliados
         id: sync
         run: python integracoes/mercadolivre/run_sync.py
 
@@ -83,5 +86,5 @@ jobs:
             echo "Nenhuma alteração pública do catálogo para registrar."
             exit 0
           fi
-          git commit -m "Atualiza catálogo via API Mercado Livre"
+          git commit -m "Atualiza catálogo Mercado Livre"
           git push
