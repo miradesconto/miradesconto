@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-09-19T15:43:01-03:00",
+  "updatedAt": "2026-09-19T21:16:08-03:00",
   "source": "Mercado Livre — páginas públicas oficiais de afiliados",
   "strategy": "existing-official-affiliate-links-live-price",
   "old_products": 675,
   "links_checked": 675,
   "current_prices_found": 500,
-  "errors_sampled": 56,
+  "errors_sampled": 61,
   "dry_run": false,
   "catalogFiles": 5,
   "errors": [
@@ -82,6 +82,10 @@
       "reason": "original_item_not_found_in_affiliate_page"
     },
     {
+      "id": "MLB6792622180",
+      "reason": "original_item_not_found_in_affiliate_page"
+    },
+    {
       "id": "MLB5474872718",
       "reason": "missing_id_or_affiliate_url"
     },
@@ -98,7 +102,7 @@
       "reason": "original_item_not_found_in_affiliate_page"
     },
     {
-      "id": "MLB5611078652",
+      "id": "MLB4209587237",
       "reason": "original_item_not_found_in_affiliate_page"
     },
     {
@@ -110,7 +114,15 @@
       "reason": "missing_id_or_affiliate_url"
     },
     {
+      "id": "MLB5611078652",
+      "reason": "original_item_not_found_in_affiliate_page"
+    },
+    {
       "id": "MLB3843025927",
+      "reason": "original_item_not_found_in_affiliate_page"
+    },
+    {
+      "id": "MLB4715919159",
       "reason": "original_item_not_found_in_affiliate_page"
     },
     {
@@ -120,6 +132,10 @@
     {
       "id": "MLB4168469409",
       "reason": "missing_id_or_affiliate_url"
+    },
+    {
+      "id": "MLB6804166138",
+      "reason": "original_item_not_found_in_affiliate_page"
     },
     {
       "id": "MLB3303298011",
@@ -222,7 +238,7 @@
       "reason": "original_item_not_found_in_affiliate_page"
     },
     {
-      "id": "MLB6804166138",
+      "id": "MLB4035727801",
       "reason": "original_item_not_found_in_affiliate_page"
     },
     {
@@ -231,6 +247,10 @@
     },
     {
       "id": "MLB6575259278",
+      "reason": "original_item_not_found_in_affiliate_page"
+    },
+    {
+      "id": "MLB7402085558",
       "reason": "original_item_not_found_in_affiliate_page"
     }
   ]
