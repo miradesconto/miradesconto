@@ -2,9 +2,10 @@
 
 O workflow atual executa `run_sync.py`, que lê `dados/catalogo.json` e chama
 `rebuild_catalog.py` para consultar páginas públicas dos links de afiliado.
-Ele não usa a API oficial nem precisa de OAuth. A coleta ainda tem limitações
-de associação de preços e disponibilidade; não comprova estoque.
-Veja [a documentação da etapa](../../docs/ESTABILIZACAO.md).
+Ele não usa a API oficial nem precisa de OAuth. A coleta associa o preço ao
+cartão do item e à variação registrada; não comprova estoque.
+Veja [o cadastro](../../docs/ESTABILIZACAO.md) e
+[a política de preços e seus limites](../../docs/COLETA-CONFIAVEL.md).
 
 O cadastro preserva registros fora da vitrine. O gerador comum atualiza
 `produtos.js`, os lotes e os dados do blog. `catalogo-semente.json` é histórico.

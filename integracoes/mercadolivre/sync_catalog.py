@@ -251,6 +251,9 @@ def update_product(product: dict[str, Any], api_item: dict[str, Any], date_text:
     status = str(api_item.get("status") or "").lower()
     if status:
         product["available"] = status == "active"
+    product.pop("priceCheck", None)
+    product["availabilityStatus"] = "unknown"
+    product["available"] = None
     product["collectedAt"] = date_text
     return before != json.dumps(product, ensure_ascii=False, sort_keys=True)
 

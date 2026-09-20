@@ -1,21 +1,18 @@
 #!/usr/bin/env python3
-"""Atualiza o catálogo MiraDesconto usando os links oficiais de afiliado já existentes.
+"""Atualiza somente preços associados a um cartão exato do produto.
 
-A API pública de catálogo do Mercado Livre não expõe preço/buy-box para estes
-produtos. Os links meli.la, porém, abrem páginas públicas oficiais do programa
-de afiliados que contêm o anúncio original e o preço atual exibido. Este script:
-- nunca cria nem altera parâmetros de afiliado;
-- só aceita o item já registrado no catálogo;
-- lê o preço atual da página pública oficial;
-- descarta entradas sem confirmação suficiente;
-- mantém uma trava para nunca substituir o catálogo por resultado anormalmente pequeno.
+Página sem estrutura reconhecida, variação divergente ou resultado ambíguo
+é uma falha de confirmação, nunca motivo para escolher um preço próximo.
+Encontrar um preço não comprova estoque.
 """
 from __future__ import annotations
 
 import argparse
-import html
 import json
 import re
+from collections import Counter
+from datetime import datetime
+from urllib.parse import urlsplit
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from typing import Any
@@ -23,10 +20,11 @@ from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
 import sync_catalog as base
+from product_card import extract, Unconfirmed
 
 BROWSER_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/153 Safari/537.36"
 MAX_WORKERS = 10
-MAX_BODY = 1_200_000
+MAX_BODY = 3_000_000
 
 
 def normalize_item_id(value: Any) -> str:
@@ -34,18 +32,8 @@ def normalize_item_id(value: Any) -> str:
     return text if re.fullmatch(r"MLB\d{7,}", text) else ""
 
 
-def valid_price(value: Any) -> float | None:
-    try:
-        number = float(value)
-    except (TypeError, ValueError):
-        return None
-    if 0 < number < 10_000_000:
-        return round(number, 2)
-    return None
-
-
 def fetch_affiliate_page(url: str, attempts: int = 3) -> tuple[str, str] | None:
-    if not url.startswith("https://"):
+    if not url.startswith("https://meli.la/"):
         return None
     headers = {
         "Accept": "text/html,application/xhtml+xml",
@@ -56,8 +44,13 @@ def fetch_affiliate_page(url: str, attempts: int = 3) -> tuple[str, str] | None:
         req = Request(url, headers=headers, method="GET")
         try:
             with urlopen(req, timeout=35) as response:
-                body = response.read(MAX_BODY).decode("utf-8", errors="replace")
-                return response.geturl(), html.unescape(body).replace("\\u002F", "/").replace("\\/", "/")
+                host = urlsplit(response.geturl()).hostname or ""
+                if not (host == "mercadolivre.com.br" or host.endswith(".mercadolivre.com.br")):
+                    return None
+                raw = response.read(MAX_BODY + 1)
+                if len(raw) > MAX_BODY:
+                    return None
+                return response.geturl(), raw.decode("utf-8", errors="replace")
         except HTTPError as exc:
             if exc.code not in {429, 500, 502, 503, 504} or attempt == attempts:
                 return None
@@ -65,60 +58,6 @@ def fetch_affiliate_page(url: str, attempts: int = 3) -> tuple[str, str] | None:
             if attempt == attempts:
                 return None
         time.sleep(min(2 ** attempt, 6))
-    return None
-
-
-def item_occurrences(body: str, item_id: str) -> list[int]:
-    digits = re.escape(item_id[3:])
-    positions = [m.start() for m in re.finditer(rf"MLB-?{digits}", body, flags=re.I)]
-    return positions[:20]
-
-
-def numeric_candidates(chunk: str, labels: list[str], absolute_start: int) -> list[tuple[int, float, str]]:
-    out: list[tuple[int, float, str]] = []
-    for priority, label in enumerate(labels):
-        patterns = [
-            rf'"{label}"\s*:\s*([0-9]+(?:\.[0-9]+)?)',
-            rf'"{label}"\s*:\s*\{{[^{{}}]{{0,900}}?"(?:value|amount|price)"\s*:\s*([0-9]+(?:\.[0-9]+)?)',
-        ]
-        for pattern in patterns:
-            for m in re.finditer(pattern, chunk, flags=re.I | re.S):
-                value = valid_price(m.group(1))
-                if value is not None:
-                    out.append((absolute_start + m.start() + priority * 25, value, label))
-    return out
-
-
-def nearest_price(body: str, item_id: str, labels: list[str]) -> tuple[float | None, str | None]:
-    occurrences = item_occurrences(body, item_id)
-    if not occurrences:
-        return None, None
-    candidates: list[tuple[int, int, float, str]] = []
-    for pos in occurrences:
-        start = max(0, pos - 3500)
-        end = min(len(body), pos + 3500)
-        chunk = body[start:end]
-        for abs_pos, value, label in numeric_candidates(chunk, labels, start):
-            candidates.append((labels.index(label), abs(abs_pos - pos), value, label))
-    if not candidates:
-        return None, None
-    candidates.sort(key=lambda x: (x[0], x[1]))
-    _, _, value, label = candidates[0]
-    return value, label
-
-
-def extract_product_url(body: str, item_id: str) -> str | None:
-    digits = re.escape(item_id[3:])
-    patterns = [
-        rf'https?://[^\"\'<>\s]+/MLB-{digits}[^\"\'<>\s]*',
-        rf'https?://[^\"\'<>\s]+MLB-?{digits}[^\"\'<>\s]*',
-    ]
-    for pattern in patterns:
-        m = re.search(pattern, body, flags=re.I)
-        if m:
-            url = m.group(0)
-            if "mercadolivre.com.br" in url:
-                return url
     return None
 
 
@@ -132,43 +71,40 @@ def refresh_one(old: dict[str, Any], collected_at: str) -> tuple[dict[str, Any] 
     if not fetched:
         return None, {"id": item_id, "reason": "affiliate_page_unreachable"}
     _, body = fetched
-    occurrences = item_occurrences(body, item_id)
-    if not occurrences:
-        return None, {"id": item_id, "reason": "original_item_not_found_in_affiliate_page"}
-
-    price, price_source = nearest_price(body, item_id, ["current_price", "price"])
-    if price is None:
-        return None, {"id": item_id, "reason": "current_price_not_found"}
-
-    previous, previous_source = nearest_price(
-        body, item_id, ["previous_price", "original_price", "old_price"]
-    )
-    old_price = previous if previous is not None and previous > price else None
+    reference_url = old.get("imageSource") or old.get("productUrl") or ""
+    try:
+        observation = extract(body, item_id, reference_url)
+    except (Unconfirmed, ValueError) as exc:
+        return None, {"id": item_id, "reason": str(exc)}
+    price = observation["price"]
+    previous = old.get("price")
+    if isinstance(previous, (int, float)) and not isinstance(previous, bool) and previous > 0:
+        if abs(price / previous - 1) > 0.5:
+            return None, {"id": item_id, "reason": "price_jump_requires_review"}
+    old_price = observation["oldPrice"]
     discount = round((1 - price / old_price) * 100, 4) if old_price else None
-
-    product_url = extract_product_url(body, item_id) or old.get("productUrl")
+    checked = datetime.fromisoformat(collected_at)
+    if checked.tzinfo is None:
+        raise ValueError("checkedAt exige fuso horário")
     result = dict(old)
-    # Estes campos pertenciam à coleta antiga e poderiam contradizer o preço
-    # recém-confirmado. Só publicamos os valores que conseguimos atualizar.
-    result.pop("priceEvidence", None)
-    result.pop("installment", None)
+    for key in ("priceEvidence", "installment", "previousPriceSource"):
+        result.pop(key, None)
     result.update({
-        "id": item_id,
-        "price": price,
-        "oldPrice": old_price,
-        "discount": discount,
+        "price": price, "oldPrice": old_price, "discount": discount,
         "displayedDiscount": f"{round(discount)}% OFF" if discount else None,
-        "productUrl": product_url,
-        "available": True,
-        "collectedAt": collected_at,
-        "source": "Mercado Livre — página pública de afiliados",
+        "available": None,
+        "availabilityStatus": "unknown",
+        "collectedAt": checked.strftime("%d/%m/%Y"),
+        "source": "Mercado Livre — cartão público do produto",
         "affiliateLinkSource": "official_existing",
-        "priceSource": price_source,
+        "priceSource": "poly-card-v1",
+        "priceCheck": {
+            "status": "verified", "method": "poly-card-v1",
+            "itemId": item_id, "variationId": observation["variationId"],
+            "currency": "BRL", "checkedAt": checked.isoformat(timespec="seconds"),
+            "price": price, "oldPrice": old_price,
+        },
     })
-    if previous_source:
-        result["previousPriceSource"] = previous_source
-    else:
-        result.pop("previousPriceSource", None)
     return result, None
 
 
@@ -197,9 +133,10 @@ def main(argv=None, source=None) -> int:
     collected_at = timestamp.strftime("%d/%m/%Y")
     refreshed: list[dict[str, Any]] = []
     errors: list[dict[str, Any]] = []
+    reasons = Counter()
 
     with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
-        futures = {executor.submit(refresh_one, product, collected_at): product for product in candidates}
+        futures = {executor.submit(refresh_one, product, timestamp.isoformat(timespec="seconds")): product for product in candidates}
         done = 0
         for future in as_completed(futures):
             done += 1
@@ -209,8 +146,10 @@ def main(argv=None, source=None) -> int:
                 product, error = None, {"id": futures[future].get("id"), "reason": type(exc).__name__}
             if product:
                 refreshed.append(product)
-            elif error and len(errors) < 120:
-                errors.append(error)
+            elif error:
+                reasons[error["reason"]] += 1
+                if len(errors) < 120:
+                    errors.append(error)
             if done % 50 == 0 or done == len(candidates):
                 print(f"Progresso: {done}/{len(candidates)} links verificados; {len(refreshed)} preços atuais encontrados")
 
@@ -226,6 +165,8 @@ def main(argv=None, source=None) -> int:
         "links_checked": len(candidates),
         "current_prices_found": len(refreshed),
         "errors_sampled": len(errors),
+        "failures": sum(reasons.values()),
+        "failureReasons": dict(sorted(reasons.items())),
         "dry_run": bool(args.dry_run),
     }
     print(json.dumps(summary, ensure_ascii=False))
@@ -245,7 +186,7 @@ def main(argv=None, source=None) -> int:
         "apiSync": {
             "source": "Mercado Livre — páginas públicas oficiais de afiliados",
             "updatedAt": timestamp.isoformat(timespec="seconds"),
-            "strategy": "existing-official-affiliate-links-live-price",
+            "strategy": "exact-product-card-v1",
             "linksChecked": len(candidates),
             "pricesConfirmed": len(refreshed),
         },
@@ -255,7 +196,7 @@ def main(argv=None, source=None) -> int:
     base.write_report({
         "updatedAt": timestamp.isoformat(timespec="seconds"),
         "source": "Mercado Livre — páginas públicas oficiais de afiliados",
-        "strategy": "existing-official-affiliate-links-live-price",
+        "strategy": "exact-product-card-v1",
         **summary,
         "catalogFiles": catalog_files,
         "errors": errors,

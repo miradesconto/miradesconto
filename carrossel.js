@@ -29,7 +29,7 @@
     copy.append(
         element('div', 'hero-static-eyebrow', 'OFERTAS + CONTEÚDO PARA DECIDIR MELHOR'),
         element('h1', '', 'Seu atalho para comprar melhor.'),
-        element('p', '', 'Ofertas atuais do catálogo, guias diretos e comparações sem enrolação. Você encontra o que interessa e decide com mais clareza.')
+        element('p', '', 'Produtos do catálogo, guias diretos e comparações sem enrolação. Você encontra o que interessa e decide com mais clareza.')
     );
 
     const actions = element('div', 'hero-static-actions');
@@ -39,7 +39,7 @@
     guides.href = 'blog/';
     actions.append(offers, guides);
 
-    const note = element('p', 'hero-static-note', `${activeProducts.length} ofertas ativas no catálogo neste momento.`);
+    const note = element('p', 'hero-static-note', `${activeProducts.length} produtos no catálogo. Confira disponibilidade na loja.`);
     copy.append(actions, note);
 
     const dashboard = element('div', 'hero-dashboard');
@@ -57,9 +57,12 @@
         visual.append(img);
 
         const info = element('div', 'hero-deal-info');
-        info.append(element('span', 'hero-card-kicker', 'EM ALTA AGORA'));
+        info.append(element('span', 'hero-card-kicker', 'NO CATÁLOGO'));
         const title = element('h2', '', featured.name);
-        const price = element('strong', 'hero-deal-price', money(featured.price));
+        const price = element('strong', 'hero-deal-price');
+        const refreshPrice = () => { price.textContent = MiraQuality.usablePrice(featured) ? money(featured.price) : 'Ver preço na loja'; };
+        refreshPrice();
+        setInterval(refreshPrice, 60000);
         const link = element('a', 'hero-deal-link', 'Ver oferta →');
         link.href = featured.affiliateUrl;
         link.target = '_blank';

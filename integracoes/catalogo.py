@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCE = Path('dados/catalogo.json')
 MIN_PRODUCTS = 450
 COMPACT_KEYS = ('id', 'name', 'category', 'price', 'oldPrice', 'discount',
-                'affiliateUrl', 'imageUrl', 'rank', 'featured', 'available')
+                'affiliateUrl', 'imageUrl', 'rank', 'featured', 'available', 'priceCheck', 'availabilityStatus')
 HEADER = '// Dados do catálogo; preços e status podem ser atualizados pela API oficial do Mercado Livre.\n'
 
 
@@ -70,6 +70,18 @@ def validate(catalog, root=ROOT):
             raise ValueError(f'Link ausente/inválido: {item_id}')
         if not str(p.get('imageUrl', '')).startswith(('http://', 'https://')):
             raise ValueError(f'Imagem ausente/inválida: {item_id}')
+        evidence = p.get('priceCheck')
+        if evidence is not None:
+            from datetime import datetime
+            from qualidade import usable_price
+            try:
+                checked = datetime.fromisoformat(evidence['checkedAt'].replace('Z', '+00:00'))
+            except (KeyError, TypeError, ValueError, AttributeError):
+                raise ValueError(f'Evidência de preço inválida: {item_id}')
+            if not usable_price(p, checked):
+                raise ValueError(f'Evidência de preço divergente: {item_id}')
+            if p.get('availabilityStatus') != 'unknown' or p.get('available') is not None:
+                raise ValueError(f'Cartão de preço não confirma estoque: {item_id}')
         if p.get('rank') != position or p.get('featured') is not (position <= 12):
             raise ValueError(f'Ranking/destaque divergente: {item_id}')
     # Also reject NaN in fields outside the price validation.

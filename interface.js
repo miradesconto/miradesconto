@@ -12,6 +12,8 @@ function money(value) {
     return typeof value === 'number' && Number.isFinite(value) && value > 0
         ? value.toLocaleString('pt-BR', {style:'currency',currency:'BRL'}) : 'Ver preço na loja';
 }
+function currentPrice(p) { return MiraQuality.usablePrice(p) ? p.price : null; }
+function productDiscount(p) { return MiraQuality.usablePrice(p) ? calculateDiscount(p.oldPrice,p.price) : null; }
 function calculateDiscount(oldPrice, price) {
     return oldPrice > price && price > 0 ? Math.round((1-price/oldPrice)*100) : null;
 }
@@ -53,14 +55,14 @@ function makeCard(p) {
         img.src = p.imageUrl;
         visual.append(img);
     }
-    const discount = calculateDiscount(p.oldPrice,p.price);
+    const discount = productDiscount(p);
     if(discount) visual.append(element('span','discount',`-${discount}%`));
     const content = element('div','card-content');
     content.append(element('div','category-label',p.category || 'Outros'),element('h3','',p.name));
-    content.append(element('div','old-price',p.oldPrice > p.price ? money(p.oldPrice) : ''));
-    content.append(element('div','price',money(p.price)),element('div','store',p.store || 'Ver loja'));
+    content.append(element('div','old-price',discount ? money(p.oldPrice) : ''));
+    content.append(element('div','price',money(currentPrice(p))),element('div','store',p.store || 'Ver loja'));
     const buttons = element('div','buttons');
-    const a = element('a','offer-button','VER OFERTA');
+    const a = element('a','offer-button','VER NA LOJA');
     a.href = safeUrl(p.affiliateUrl);
     a.target = '_blank';
     a.rel = p.affiliateUrl ? 'noopener noreferrer sponsored' : 'noopener noreferrer';
@@ -75,9 +77,9 @@ function filteredProducts() {
     const filtered = products.filter(p => (selectedCategory === 'Todos' || (selectedCategory === 'Destaques' ? p.featured === true : p.category === selectedCategory))
         && [p.id,p.name,p.store,p.category].some(v=>normalize(v).includes(query)));
     switch($('sortSelect').value) {
-        case 'discount': filtered.sort((a,b)=>(calculateDiscount(b.oldPrice,b.price)||0)-(calculateDiscount(a.oldPrice,a.price)||0));break;
-        case 'lowPrice': filtered.sort((a,b)=>(a.price ?? Infinity)-(b.price ?? Infinity));break;
-        case 'highPrice': filtered.sort((a,b)=>(b.price ?? -Infinity)-(a.price ?? -Infinity));break;
+        case 'discount': filtered.sort((a,b)=>(productDiscount(b)||0)-(productDiscount(a)||0));break;
+        case 'lowPrice': filtered.sort((a,b)=>(currentPrice(a) ?? Infinity)-(currentPrice(b) ?? Infinity));break;
+        case 'highPrice': filtered.sort((a,b)=>(currentPrice(b) ?? -Infinity)-(currentPrice(a) ?? -Infinity));break;
     }
     return filtered;
 }
@@ -125,7 +127,7 @@ $('sortSelect').addEventListener('change',renderProducts);
 document.querySelector('.logo').addEventListener('click',resetFilters);
 $('loadMore').addEventListener('click',()=>{visibleCount+=24;renderProducts(true);});
 $('dataNotice').textContent = source
-    ? `Preços registrados em ${source.collectedAt || 'data não informada'}. Confirme preço e disponibilidade na loja.`
+    ? 'Preços só aparecem após verificação recente. Confirme as condições e a disponibilidade na loja.'
     : 'Não foi possível carregar as ofertas. Verifique se produtos.js está na mesma pasta do site.';
 // Editorial links open the matching catalog record, including items beyond page one.
 const requestedProduct = new URLSearchParams(window.location.search).get('produto');
@@ -134,3 +136,6 @@ if (requestedProduct) {
     selectedCategory = 'Todos';
 }
 selectCategory([...categoryContainer.querySelectorAll('.category')].find(b=>b.dataset.category===selectedCategory));
+
+// Recheck expiry while the visitor keeps the page open.
+setInterval(() => renderProducts(true), 60000);
