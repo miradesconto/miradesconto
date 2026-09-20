@@ -18,12 +18,9 @@ concurrency:
 
 jobs:
   sync:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 20
-    env:
-      ML_CLIENT_ID: "5739104192519635"
-      ML_CLIENT_SECRET: ${{ secrets.ML_CLIENT_SECRET }}
-      ML_REFRESH_TOKEN: ${{ secrets.ML_REFRESH_TOKEN }}
 
     steps:
       - name: Baixar repositório
@@ -36,27 +33,25 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Instalar criptografia
-        run: python -m pip install --disable-pip-version-check "cryptography>=42,<48"
+      - name: Configurar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
 
-      - name: Validar credenciais obrigatórias
-        shell: bash
+      - name: Validar cadastro antes da coleta
         run: |
-          if [ -z "$ML_CLIENT_SECRET" ]; then
-            echo "ML_CLIENT_SECRET não foi configurado."
-            exit 1
-          fi
-          if [ ! -f "integracoes/mercadolivre/refresh-token.enc" ] && [ -z "$ML_REFRESH_TOKEN" ]; then
-            echo "ML_REFRESH_TOKEN não foi configurado e ainda não existe estado OAuth criptografado."
-            exit 1
-          fi
+          python integracoes/catalogo.py check
+          python -m unittest discover -s tests -v
 
       - name: Sincronizar preços pelas páginas oficiais de afiliados
         id: sync
         run: python integracoes/mercadolivre/run_sync.py
 
       - name: Validar integridade antes de publicar
-        run: python integracoes/automacao/site_health.py
+        run: |
+          python integracoes/automacao/site_health.py
+          node test-catalogo.cjs
+          node blog/verify.cjs
 
       - name: Gerar pauta automática para redes sociais
         run: python integracoes/social/gerar_pauta.py
@@ -66,24 +61,6 @@ jobs:
 
       - name: Atualizar versão dos assets para evitar cache antigo
         run: python integracoes/automacao/cache_bust.py
-
-      - name: Persistir estado OAuth rotativo
-        if: always()
-        shell: bash
-        run: |
-          if [ ! -f "integracoes/mercadolivre/refresh-token.enc" ]; then
-            echo "Nenhum estado OAuth novo para persistir."
-            exit 0
-          fi
-          if git diff --quiet -- integracoes/mercadolivre/refresh-token.enc && git ls-files --error-unmatch integracoes/mercadolivre/refresh-token.enc >/dev/null 2>&1; then
-            echo "Estado OAuth já está atualizado."
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add integracoes/mercadolivre/refresh-token.enc
-          git commit -m "Atualiza estado OAuth Mercado Livre"
-          git push
 
       - name: Registrar alterações do catálogo
         if: success()
@@ -95,11 +72,8 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add produtos.js catalogo _data/produtos.json integracoes/mercadolivre/ultimo-sync.json index.html
+          git add dados/catalogo.json produtos.js catalogo _data/produtos.json integracoes/mercadolivre/ultimo-sync.json index.html
           git add integracoes/social/pauta-do-dia.json integracoes/social/pauta-do-dia.md
-          if [ -f "integracoes/mercadolivre/catalogo-semente.json" ]; then
-            git add integracoes/mercadolivre/catalogo-semente.json
-          fi
           if git diff --cached --quiet; then
             echo "Nenhuma alteração pública do catálogo para registrar."
             exit 0

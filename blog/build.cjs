@@ -1,11 +1,10 @@
-// Sync product names and images for Jekyll; articles remain editable Markdown.
-const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
-const root=path.resolve(__dirname,'..');
-function sync(products){
- const data=Object.fromEntries(products.map(p=>[p.id,{name:p.name,imageUrl:p.imageUrl,available:!!p.affiliateUrl}]));
- fs.mkdirSync(path.join(root,'_data'),{recursive:true});
- fs.writeFileSync(path.join(root,'_data/produtos.json'),JSON.stringify(data,null,2)+'\n');
- return data;
+// All public files share one generator; this command never reads produtos.js.
+const path=require('node:path');
+function sync() {
+ const result=require('node:child_process').spawnSync(process.env.PYTHON || 'python',
+  [path.resolve(__dirname,'../integracoes/catalogo.py'),'generate'], {stdio:'inherit'});
+ if(result.error) throw result.error;
+ if(result.status!==0) throw Error('Falha ao gerar catálogo e dados editoriais');
 }
 module.exports={sync};
-if(require.main===module){const ctx={window:{}};vm.runInNewContext(fs.readFileSync(path.join(root,'produtos.js'),'utf8'),ctx);sync(ctx.window.MIRA_DATA.products);console.log('Dados editoriais sincronizados.');}
+if(require.main===module) sync();

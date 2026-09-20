@@ -29,6 +29,9 @@ def valid_http(value: object) -> bool:
 
 
 def main() -> int:
+    sys.path.insert(0, str(ROOT / "integracoes"))
+    import catalogo
+    catalogo.check(ROOT)
     data = load_catalog()
     products = data["products"]
     errors: list[str] = []

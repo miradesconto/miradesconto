@@ -25,14 +25,13 @@ from urllib.parse import quote, urlencode
 from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
 
-from cryptography.fernet import Fernet, InvalidToken
-from cryptography.hazmat.primitives import hashes
-from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 
 API_BASE = "https://api.mercadolibre.com"
 TOKEN_URL = f"{API_BASE}/oauth/token"
 BATCH_SIZE = 20
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "integracoes"))
+import catalogo
 PRODUTOS_JS = ROOT / "produtos.js"
 CATALOGO_DIR = ROOT / "catalogo"
 DATA_PRODUTOS = ROOT / "_data" / "produtos.json"
@@ -80,7 +79,10 @@ def http_json(url: str, *, method: str = "GET", headers: dict[str, str] | None =
     raise RuntimeError("Falha inesperada de rede")
 
 
-def token_cipher(client_secret: str, salt: bytes) -> Fernet:
+def token_cipher(client_secret: str, salt: bytes):
+    from cryptography.fernet import Fernet
+    from cryptography.hazmat.primitives import hashes
+    from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
     kdf = PBKDF2HMAC(
         algorithm=hashes.SHA256(),
         length=32,
@@ -92,6 +94,7 @@ def token_cipher(client_secret: str, salt: bytes) -> Fernet:
 
 
 def load_refresh_token(client_secret: str) -> tuple[str, str]:
+    from cryptography.fernet import InvalidToken
     if TOKEN_STATE_PATH.exists():
         try:
             state = json.loads(TOKEN_STATE_PATH.read_text(encoding="utf-8"))
@@ -171,14 +174,7 @@ def get_access_token() -> tuple[str, str]:
 
 
 def load_mira_data() -> dict[str, Any]:
-    text = PRODUTOS_JS.read_text(encoding="utf-8")
-    match = re.search(r"window\.MIRA_DATA\s*=\s*(\{.*\})\s*;?\s*$", text, flags=re.S)
-    if not match:
-        raise RuntimeError("Não encontrei window.MIRA_DATA em produtos.js.")
-    data = json.loads(match.group(1))
-    if not isinstance(data.get("products"), list):
-        raise RuntimeError("produtos.js não contém products como lista.")
-    return data
+    return catalogo.public_data(catalogo.load(ROOT))
 
 
 def chunks(values: list[str], size: int):
@@ -259,56 +255,6 @@ def update_product(product: dict[str, Any], api_item: dict[str, Any], date_text:
     return before != json.dumps(product, ensure_ascii=False, sort_keys=True)
 
 
-def write_produtos_js(data: dict[str, Any]) -> None:
-    payload = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
-    PRODUTOS_JS.write_text(
-        "// Dados do catálogo; preços e status podem ser atualizados pela API oficial do Mercado Livre.\n"
-        f"window.MIRA_DATA = {payload};\n", encoding="utf-8")
-
-
-def write_catalog_chunks(products: list[dict[str, Any]]) -> int:
-    CATALOGO_DIR.mkdir(parents=True, exist_ok=True)
-    compact_keys = ["id", "name", "category", "price", "oldPrice", "discount",
-                    "affiliateUrl", "imageUrl", "rank", "featured", "available"]
-    expected: set[Path] = set()
-    count = 0
-    for index in range(0, len(products), 100):
-        number = index // 100 + 1
-        path = CATALOGO_DIR / f"produtos-{number:03d}.json"
-        expected.add(path)
-        batch = [{k: p.get(k) for k in compact_keys if k in p} for p in products[index:index + 100]]
-        path.write_text(json.dumps(batch, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
-        count += 1
-    for path in CATALOGO_DIR.glob("produtos-*.json"):
-        if path not in expected:
-            path.unlink()
-    return count
-
-
-def write_data_products(products: list[dict[str, Any]]) -> None:
-    current: dict[str, Any] = {}
-    if DATA_PRODUTOS.exists():
-        try:
-            loaded = json.loads(DATA_PRODUTOS.read_text(encoding="utf-8"))
-            if isinstance(loaded, dict):
-                current = loaded
-        except Exception:
-            pass
-    for product in products:
-        item_id = str(product.get("id") or "").strip()
-        if not item_id:
-            continue
-        entry = current.get(item_id) if isinstance(current.get(item_id), dict) else {}
-        entry.update({
-            "name": product.get("name"),
-            "imageUrl": product.get("imageUrl"),
-            "available": product.get("available", True) is not False,
-        })
-        current[item_id] = entry
-    DATA_PRODUTOS.parent.mkdir(parents=True, exist_ok=True)
-    DATA_PRODUTOS.write_text(json.dumps(current, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-
-
 def write_report(report: dict[str, Any]) -> None:
     REPORT_PATH.parent.mkdir(parents=True, exist_ok=True)
     REPORT_PATH.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -373,9 +319,8 @@ def main() -> int:
             "updatedAt": timestamp.isoformat(timespec="seconds"),
             "endpoint": "/items/bulk",
         }
-    write_produtos_js(data)
-    report["catalogFiles"] = write_catalog_chunks(products)
-    write_data_products(products)
+    catalogo.apply_snapshot(data, ROOT)
+    report["catalogFiles"] = (len(products) + 99) // 100
     write_report(report)
     return 0
 

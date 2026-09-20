@@ -16,6 +16,11 @@ defaults:
       autor: MiraDesconto
       status: rascunho
 exclude:
+  - dados
+  - integracoes
+  - tests
+  - docs
+  - preview
   - blog/build.cjs
   - blog/verify.cjs
   - blog/pautas.json
