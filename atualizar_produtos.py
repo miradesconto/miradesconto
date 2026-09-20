@@ -104,6 +104,9 @@ def write_catalog_chunks(products, out):
             old_file.unlink()
 
 def convert(path, out):
+    out = Path(out).resolve()
+    if out == Path(__file__).resolve().parent:
+        raise ValueError("Importação direta desativada: use --output em pasta de prévia e revise antes de cadastrar.")
     sheets = read_xlsx(path)
     affiliate = {c.get('K'): c['L'] for _,c in sheets.get('Escolher ofertas',[]) if url_ok(c.get('L'))}
     ranks = {c.get('B'): i for i,(_,c) in enumerate(sheets.get('Ranking',[])) if c.get('B')}
@@ -126,7 +129,7 @@ def convert(path, out):
         discount = round((1-price/old)*100,4) if old and old > price else None
         products.append(dict(id=pid,name=name,price=price,oldPrice=old,discount=discount,
             displayedDiscount=c.get('E'),category=category(name,pid),categorySource='Organização por tipo de produto; regras e revisões em organizacao-catalogo.json',
-            featured=pid in ORGANIZATION['featuredIds'],
+            featured=False,
             store='Mercado Livre',storeSource='Domínio da URL',productUrl=url,affiliateUrl=affiliate.get(url),
             imageUrl=None,commission=c.get('F'),extraEarnings=c.get('G'),rating=c.get('H'),salesText=c.get('I'),
             highlight=c.get('J'),priceEvidence=c.get('L'),installment=c.get('M'),collectedAt=date,
@@ -162,5 +165,9 @@ def convert(path, out):
     print(json.dumps(stats,ensure_ascii=False))
     return products
 if __name__ == '__main__':
-    if len(sys.argv)!=2: raise SystemExit('Uso: python atualizar_produtos.py arquivo.xlsx')
-    convert(sys.argv[1],Path(__file__).resolve().parent)
+    import argparse
+    parser = argparse.ArgumentParser(description='Converte planilha somente para uma prévia isolada.')
+    parser.add_argument('arquivo')
+    parser.add_argument('--output', type=Path, required=True)
+    args = parser.parse_args()
+    convert(args.arquivo, args.output)

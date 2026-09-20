@@ -1,4 +1,11 @@
-# Links de afiliado — 16/09/2026
+# Manutenção atual dos links
+
+`links-afiliados.json` preserva a procedência dos links oficiais. O cadastro
+principal é `dados/catalogo.json`; a coleta não pode alterar os links salvos.
+Consulte [o procedimento atual](docs/ESTABILIZACAO.md). Os números e o fluxo
+descritos abaixo são históricos.
+
+# Histórico — links de afiliado de 16/09/2026
 
 1.009 links gerados pelo gerador oficial na conta MiraDesconto. Etiqueta: instagram. Os 13 produtos recusados pelo programa estão em afiliados-pendentes.json e não aparecem na vitrine.
 

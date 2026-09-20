@@ -11,36 +11,14 @@ function category(p) {
  return config.rules.find(rule=>new RegExp(rule.pattern).test(name))?.category || 'Outros';
 }
 function organize() {
- const ctx={window:{}};
- vm.runInNewContext(fs.readFileSync(path.join(root,'produtos.js'),'utf8'),ctx);
- const data=ctx.window.MIRA_DATA;
- const featured=new Set(config.featuredIds);
- if(featured.size!==config.featuredIds.length || featured.size>12) throw Error('Destaques duplicados ou acima do limite de 12.');
- for(const id of featured) if(!data.products.some(p=>p.id===id&&p.affiliateUrl&&p.imageUrl)) throw Error(`Destaque sem cadastro, link ou imagem: ${id}`);
- const changes=[];
- for(const p of data.products) {
-  const next=category(p);
-  if(p.category!==next) changes.push({id:p.id,name:p.name,before:p.category,after:next});
-  p.category=next;p.categorySource='Organização por tipo de produto; regras e revisões em organizacao-catalogo.json';
-  p.featured=featured.has(p.id);
- }
- fs.writeFileSync(path.join(root,'produtos.js'),'// Dados da planilha; organização revisada por tipo de produto.\nwindow.MIRA_DATA = '+JSON.stringify(data)+';\n');
- const byId=new Map(data.products.map(p=>[p.id,p]));
- for(const name of fs.readdirSync(path.join(root,'catalogo')).filter(n=>/^produtos-\d+\.json$/.test(n))) {
-  const file=path.join(root,'catalogo',name);
-  const batch=JSON.parse(fs.readFileSync(file,'utf8'));
-  for(const p of batch){const original=byId.get(p.id);if(!original)throw Error(`Registro divergente: ${p.id}`);p.category=original.category;p.featured=original.featured;}
-  fs.writeFileSync(file,JSON.stringify(batch)+'\n');
- }
- const counts=data.products.reduce((a,p)=>(a[p.category]=(a[p.category]||0)+1,a),{});
- const analysis=path.join(root,'analise-dados.json');
- if(fs.existsSync(analysis)) {
-  const stats=JSON.parse(fs.readFileSync(analysis,'utf8'));stats.categories=counts;
-  fs.writeFileSync(analysis,JSON.stringify(stats,null,2)+'\n');
- }
- console.log(JSON.stringify({changed:changes.length,featured:featured.size,categories:counts}));
- require('./blog/build.cjs').sync(data.products);
- return {changes,products:data.products};
+ const catalog = JSON.parse(fs.readFileSync(path.join(root,'dados/catalogo.json'),'utf8'));
+ const categories = Object.fromEntries(catalog.products.map(p=>[p.id,category(p)]));
+ const result = require('node:child_process').spawnSync(process.env.PYTHON || 'python',
+  [path.join(root,'integracoes/catalogo.py'),'organize'],
+  {input:JSON.stringify(categories),encoding:'utf8'});
+ if(result.error) throw result.error;
+ if(result.status!==0) throw Error(result.stderr || result.stdout);
+ console.log('Categorias atualizadas no cadastro principal; derivados regenerados.');
 }
 module.exports={category,organize};
 if(require.main===module) organize();

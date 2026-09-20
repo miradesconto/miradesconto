@@ -1,4 +1,11 @@
-# Atualização de 16/09/2026
+# Manutenção atual
+
+O cadastro principal agora está em `dados/catalogo.json`. Siga
+[o procedimento de estabilização](docs/ESTABILIZACAO.md) para gerar e verificar
+os arquivos. O importador de planilhas só produz prévias com `--output`;
+as instruções abaixo são um registro histórico, não o fluxo de publicação atual.
+
+# Histórico — atualização de 16/09/2026
 
 A versão atual tem 1.009 links de afiliado e 1.021 imagens reais. Os 13 produtos recusados pelo programa ficam fora da vitrine. Consulte AFILIADOS.md e IMAGENS.md. A análise abaixo descreve a planilha original, antes dessas complementações.
 

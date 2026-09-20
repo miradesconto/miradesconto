@@ -1,0 +1,48 @@
+name: Validar catálogo e gerar prévia
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: catalogo-check-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validar dados e testar falhas sem rede
+        run: |
+          python integracoes/catalogo.py check
+          python -m unittest discover -s tests -v
+          python integracoes/automacao/site_health.py
+          node test-catalogo.cjs
+          node blog/verify.cjs
+      - name: Confirmar geração reproduzível
+        run: |
+          python integracoes/catalogo.py generate
+          git diff --exit-code -- produtos.js catalogo _data/produtos.json
+      - name: Construir prévia estática
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+      - name: Guardar prévia para revisão, sem publicar
+        uses: actions/upload-artifact@v4
+        with:
+          name: previa-site-${{ github.sha }}
+          path: _site/
+          retention-days: 7

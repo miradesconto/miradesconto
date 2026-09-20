@@ -172,34 +172,22 @@ def refresh_one(old: dict[str, Any], collected_at: str) -> tuple[dict[str, Any] 
     return result, None
 
 
-def write_data_products(products: list[dict[str, Any]]) -> None:
-    payload: dict[str, Any] = {}
-    for product in products:
-        payload[str(product["id"])] = {
-            "name": product.get("name"),
-            "imageUrl": product.get("imageUrl"),
-            "available": True,
-        }
-    base.DATA_PRODUTOS.parent.mkdir(parents=True, exist_ok=True)
-    base.DATA_PRODUTOS.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-
-
-def parse_args() -> argparse.Namespace:
+def parse_args(argv=None) -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument("--max-products", type=int, default=500)
-    parser.add_argument("--min-products", type=int, default=40)
+    parser.add_argument("--min-products", type=int, default=450)
     parser.add_argument("--dry-run", action="store_true")
-    return parser.parse_args()
+    return parser.parse_args(argv)
 
 
-def main() -> int:
-    args = parse_args()
-    data = base.load_mira_data()
+def main(argv=None, source=None) -> int:
+    args = parse_args(argv)
+    data = source if source is not None else {"products": base.catalogo.load(base.ROOT)["products"]}
     old_products = [p for p in data.get("products", []) if isinstance(p, dict)]
     if not old_products:
         raise RuntimeError("Catálogo anterior vazio; nada foi alterado.")
 
-    old_products.sort(key=lambda p: int(p.get("rank") or 999999))
+    order = {p["id"]: i for i, p in enumerate(old_products)}
     scan_limit = len(old_products)
     if args.max_products > 0:
         scan_limit = min(len(old_products), max(args.max_products + 120, int(args.max_products * 1.35)))
@@ -226,7 +214,7 @@ def main() -> int:
             if done % 50 == 0 or done == len(candidates):
                 print(f"Progresso: {done}/{len(candidates)} links verificados; {len(refreshed)} preços atuais encontrados")
 
-    refreshed.sort(key=lambda p: int(p.get("rank") or 999999))
+    refreshed.sort(key=lambda p: order[p["id"]])
     if args.max_products > 0:
         refreshed = refreshed[:args.max_products]
     for rank, product in enumerate(refreshed, start=1):
@@ -262,9 +250,8 @@ def main() -> int:
             "pricesConfirmed": len(refreshed),
         },
     }
-    base.write_produtos_js(new_data)
-    catalog_files = base.write_catalog_chunks(refreshed)
-    write_data_products(refreshed)
+    base.catalogo.apply_snapshot(new_data, base.ROOT)
+    catalog_files = (len(refreshed) + 99) // 100
     base.write_report({
         "updatedAt": timestamp.isoformat(timespec="seconds"),
         "source": "Mercado Livre — páginas públicas oficiais de afiliados",
