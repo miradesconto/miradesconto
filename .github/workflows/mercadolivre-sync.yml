@@ -52,6 +52,7 @@ jobs:
           python integracoes/automacao/site_health.py
           node test-catalogo.cjs
           node blog/verify.cjs
+          node tests/test-qualidade.cjs
 
       - name: Gerar pauta automática para redes sociais
         run: python integracoes/social/gerar_pauta.py

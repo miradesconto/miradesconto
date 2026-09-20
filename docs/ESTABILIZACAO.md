@@ -89,10 +89,10 @@ imagens ou ignorar a fonte principal. Importação revisada fica para outra entr
 
 ## Limites conhecidos
 
-A extração por proximidade no HTML e a inferência de disponibilidade continuam
-como limitações. Esta etapa NÃO certifica preços/estoque e NÃO habilita Pinterest.
-A próxima etapa deve associar preço ao objeto e variação corretos, tratar
-disponibilidade desconhecida, dados antigos e mudanças anormais antes de divulgar.
+Na primeira etapa, a extração por proximidade e a inferência de disponibilidade
+permaneceram como limitações. A segunda etapa está descrita em
+[COLETA-CONFIAVEL.md](COLETA-CONFIAVEL.md), incluindo mudanças de exibição,
+validação e limitações restantes. Nenhuma das etapas habilita Pinterest.
 
 `sync_catalog.py` é a implementação separada da API oficial, agora usando o mesmo
 cadastro/gerador. Ela exige `cryptography` e credenciais quando executada. Seu

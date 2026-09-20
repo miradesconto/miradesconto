@@ -3,10 +3,13 @@ from __future__ import annotations
 
 import json
 import re
+import sys
 from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "integracoes"))
+from qualidade import usable_price
 PRODUTOS_JS = ROOT / "produtos.js"
 OUT_JSON = Path(__file__).with_name("pauta-do-dia.json")
 OUT_MD = Path(__file__).with_name("pauta-do-dia.md")
@@ -50,7 +53,9 @@ def eligible(product: dict) -> bool:
         and price > 0
         and str(product.get("affiliateUrl") or "").startswith("https://meli.la/")
         and str(product.get("imageUrl") or "").startswith("http")
-        and product.get("available") is not False
+        and product.get("available") is True
+        and product.get("availabilityStatus") == "available"
+        and usable_price(product)
     )
 
 
@@ -120,6 +125,7 @@ def main() -> int:
         "sourceCollectedAt": data.get("collectedAt"),
         "generatedFrom": "catálogo atual MiraDesconto",
         "count": len(entries),
+        "selectionPolicy": "verified-price-within-24h-and-confirmed-availability",
         "posts": entries,
     }
     OUT_JSON.parent.mkdir(parents=True, exist_ok=True)
@@ -130,7 +136,7 @@ def main() -> int:
         "",
         f"Catálogo-base: {data.get('collectedAt') or 'data não informada'}",
         "",
-        "Seleção automática com variedade de categorias. Confirme a oferta antes de publicar, pois preço e estoque podem mudar.",
+        "Somente preços verificados nas últimas 24 horas e disponibilidade confirmada são elegíveis. Seleção automática com variedade de categorias. Confirme a oferta antes de publicar, pois preço e estoque podem mudar.",
         "",
     ]
     for entry in entries:

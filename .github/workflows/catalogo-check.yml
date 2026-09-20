@@ -31,6 +31,7 @@ jobs:
           python integracoes/automacao/site_health.py
           node test-catalogo.cjs
           node blog/verify.cjs
+          node tests/test-qualidade.cjs
       - name: Confirmar geração reproduzível
         run: |
           python integracoes/catalogo.py generate
