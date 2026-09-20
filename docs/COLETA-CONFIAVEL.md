@@ -36,9 +36,13 @@ nova comprovação de preço. Não foi executada nem teve credenciais alteradas.
 
 Foram consultados três links existentes (camisetas, meias e creatina), somente
 para leitura. Os trechos de cartões sanitizados estão em `tests/fixtures`.
-Não foi realizada uma coleta real dos 675 registros: a cobertura de formatos e
-a quantidade que passará pelo mínimo de 450 ainda precisam ser medidas antes
-de ativar esta coleta em produção. HTML pode mudar, bloquear acessos ou omitir
+Antes da publicação, em 20/09/2026, foi executada a coleta completa em modo
+`--dry-run`: 675 registros examinados, 525 preços confirmados e 500 selecionados,
+acima do mínimo de 450. Nenhum dado foi gravado por esse teste. Houve 150 recusas:
+74 variações divergentes, 51 cartões ausentes, 11 mudanças superiores a 50%,
+8 registros sem ID/link e 6 preços condicionados. Essas recusas preservam a
+necessidade de revisão e não comprovam indisponibilidade.
+HTML pode mudar, bloquear acessos ou omitir
 condições fora do bloco reconhecido. O preço final deve ser confirmado na loja.
 
 Os testes sem rede cobrem identidade, variação, vizinhos, conflitos, valores,
@@ -50,7 +54,7 @@ pelo workflow da prévia, que não publica o site.
 
 Execute os comandos de ESTABILIZACAO.md e `node tests/test-qualidade.cjs`.
 O workflow gera um ZIP do site para revisão. Antes de publicar, revisar primeiro
-a etapa do cadastro, depois esta mudança; conferir atualizações em main e medir
-a cobertura da coleta em uma cópia descartável. Não reduzir o mínimo de 450
+a etapa do cadastro, depois esta mudança; conferir atualizações em main e repetir
+a medição da coleta quando necessário. Não reduzir o mínimo de 450
 apenas para fazer uma coleta incompleta passar. Uma próxima entrega pode tratar
 outros formatos e uma fonte explícita de estoque, com testes próprios.
