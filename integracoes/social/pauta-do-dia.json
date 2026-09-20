@@ -1,10 +1,23 @@
 {
-  "sourceCollectedAt": "19/09/2026",
+  "sourceCollectedAt": "20/09/2026",
   "generatedFrom": "catálogo atual MiraDesconto",
   "count": 12,
   "posts": [
     {
       "position": 1,
+      "id": "MLB5940432208",
+      "name": "Espatula Akora C/ Refil Limpador De Transpasse Vão Box Vitrô",
+      "category": "Casa",
+      "price": 23.88,
+      "oldPrice": 198.9,
+      "discount": 88,
+      "affiliateUrl": "https://meli.la/2SmwzUC",
+      "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_682977-MLA112581658967_062026-AB.webp",
+      "caption": "Achado #1: Espatula Akora C/ Refil Limpador De Transpasse Vão Box Vitrô\n💰 R$ 23,88\n🔥 88% OFF\n👉 https://meli.la/2SmwzUC\n\nPreço e disponibilidade podem mudar. Confira no Mercado Livre.",
+      "storyText": "ACHADO DO DIA\nEspatula Akora C/ Refil Limpador De Transpasse Vão Box Vitrô\nR$ 23,88\n88% OFF\nLink na oferta"
+    },
+    {
+      "position": 2,
       "id": "MLB6851434528",
       "name": "Trena Nivel A Laser Alta Precisão Com Regua Profissional",
       "category": "Ferramentas e construção",
@@ -13,11 +26,11 @@
       "discount": 77,
       "affiliateUrl": "https://meli.la/1ph5GK6",
       "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_690345-MLB111306827498_052026-AB.webp",
-      "caption": "Achado #1: Trena Nivel A Laser Alta Precisão Com Regua Profissional\n💰 R$ 51,99\n🔥 77% OFF\n👉 https://meli.la/1ph5GK6\n\nPreço e disponibilidade podem mudar. Confira no Mercado Livre.",
+      "caption": "Achado #2: Trena Nivel A Laser Alta Precisão Com Regua Profissional\n💰 R$ 51,99\n🔥 77% OFF\n👉 https://meli.la/1ph5GK6\n\nPreço e disponibilidade podem mudar. Confira no Mercado Livre.",
       "storyText": "ACHADO DO DIA\nTrena Nivel A Laser Alta Precisão Com Regua Profissional\nR$ 51,99\n77% OFF\nLink na oferta"
     },
     {
-      "position": 2,
+      "position": 3,
       "id": "MLB6895802444",
       "name": "Cabo 2m Conversor Starlink Mini De 12/24v Para 30v Veicular",
       "category": "Automotivo",
@@ -26,24 +39,24 @@
       "discount": 76,
       "affiliateUrl": "https://meli.la/2f7fz4e",
       "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_734579-MLB116505361913_082026-AB.webp",
-      "caption": "Achado #2: Cabo 2m Conversor Starlink Mini De 12/24v Para 30v Veicular\n💰 R$ 112,90\n🔥 76% OFF\n👉 https://meli.la/2f7fz4e\n\nPreço e disponibilidade podem mudar. Confira no Mercado Livre.",
+      "caption": "Achado #3: Cabo 2m Conversor Starlink Mini De 12/24v Para 30v Veicular\n💰 R$ 112,90\n🔥 76% OFF\n👉 https://meli.la/2f7fz4e\n\nPreço e disponibilidade podem mudar. Confira no Mercado Livre.",
       "storyText": "ACHADO DO DIA\nCabo 2m Conversor Starlink Mini De 12/24v Para 30v Veicular\nR$ 112,90\n76% OFF\nLink na oferta"
     },
     {
-      "position": 3,
-      "id": "MLB5522563658",
-      "name": "Kit 4 Camiseta Oversized Streetwear Básica Gola Alta Algodão",
-      "category": "Moda",
-      "price": 49.9,
-      "oldPrice": 189.9,
-      "discount": 74,
-      "affiliateUrl": "https://meli.la/2u9pPyU",
-      "imageUrl": "https://http2.mlstatic.com/D_NQ_NP_891083-MLB111529017397_052026-O-kit-4-camiseta-oversized-streetwear-basica-gola-alta-algodo.webp",
-      "caption": "Achado #3: Kit 4 Camiseta Oversized Streetwear Básica Gola Alta Algodão\n💰 R$ 49,90\n🔥 74% OFF\n👉 https://meli.la/2u9pPyU\n\nPreço e disponibilidade podem mudar. Confira no Mercado Livre.",
-      "storyText": "ACHADO DO DIA\nKit 4 Camiseta Oversized Streetwear Básica Gola Alta Algodão\nR$ 49,90\n74% OFF\nLink na oferta"
+      "position": 4,
+      "id": "MLB6187433074",
+      "name": "Kit Muay Thai Aparador Chute E Manopla De Soco",
+      "category": "Esportes e suplementos",
+      "price": 89.0,
+      "oldPrice": 349.9,
+      "discount": 75,
+      "affiliateUrl": "https://meli.la/1n8P5F1",
+      "imageUrl": "https://http2.mlstatic.com/D_NQ_NP_726636-MLB115297589319_072026-O-kit-muay-thai-aparador-chute-e-manopla-de-soco.webp",
+      "caption": "Achado #4: Kit Muay Thai Aparador Chute E Manopla De Soco\n💰 R$ 89,00\n🔥 75% OFF\n👉 https://meli.la/1n8P5F1\n\nPreço e disponibilidade podem mudar. Confira no Mercado Livre.",
+      "storyText": "ACHADO DO DIA\nKit Muay Thai Aparador Chute E Manopla De Soco\nR$ 89,00\n75% OFF\nLink na oferta"
     },
     {
-      "position": 4,
+      "position": 5,
       "id": "MLB6682301404",
       "name": "Lisinha Sérum Popozuda Pós Depilação Pele Macia Pelos Finos 1 Frasco",
       "category": "Beleza e cuidados",
@@ -52,11 +65,24 @@
       "discount": 72,
       "affiliateUrl": "https://meli.la/17ywuDU",
       "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_843024-MLB111840551888_062026-AB.webp",
-      "caption": "Achado #4: Lisinha Sérum Popozuda Pós Depilação Pele Macia Pelos Finos 1 Frasco\n💰 R$ 54,38\n🔥 72% OFF\n👉 https://meli.la/17ywuDU\n\nPreço e disponibilidade podem mudar. Confira no Mercado Livre.",
+      "caption": "Achado #5: Lisinha Sérum Popozuda Pós Depilação Pele Macia Pelos Finos 1 Frasco\n💰 R$ 54,38\n🔥 72% OFF\n👉 https://meli.la/17ywuDU\n\nPreço e disponibilidade podem mudar. Confira no Mercado Livre.",
       "storyText": "ACHADO DO DIA\nLisinha Sérum Popozuda Pós Depilação Pele Macia Pelos Finos 1 Frasco\nR$ 54,38\n72% OFF\nLink na oferta"
     },
     {
-      "position": 5,
+      "position": 6,
+      "id": "MLB4104507061",
+      "name": "Kit 10 Pares Meias Zhamaro Algodão Sapatilha Invisível",
+      "category": "Moda",
+      "price": 54.99,
+      "oldPrice": 199.0,
+      "discount": 72,
+      "affiliateUrl": "https://meli.la/1GgrVb5",
+      "imageUrl": "https://http2.mlstatic.com/D_NQ_NP_638847-MLB115059720532_082026-O-kit-10-pares-meias-zhamaro-algodo-sapatilha-invisivel.webp",
+      "caption": "Achado #6: Kit 10 Pares Meias Zhamaro Algodão Sapatilha Invisível\n💰 R$ 54,99\n🔥 72% OFF\n👉 https://meli.la/1GgrVb5\n\nPreço e disponibilidade podem mudar. Confira no Mercado Livre.",
+      "storyText": "ACHADO DO DIA\nKit 10 Pares Meias Zhamaro Algodão Sapatilha Invisível\nR$ 54,99\n72% OFF\nLink na oferta"
+    },
+    {
+      "position": 7,
       "id": "MLB4407211439",
       "name": "Clip Wastegate Turbina Vw / Audi Motores 1.0 1.4 Tsi / Tfsi",
       "category": "Automotivo",
@@ -65,11 +91,11 @@
       "discount": 72,
       "affiliateUrl": "https://meli.la/1wn4Gwd",
       "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_902917-MLB104009924035_012026-AB.webp",
-      "caption": "Achado #5: Clip Wastegate Turbina Vw / Audi Motores 1.0 1.4 Tsi / Tfsi\n💰 R$ 53,90\n🔥 72% OFF\n👉 https://meli.la/1wn4Gwd\n\nPreço e disponibilidade podem mudar. Confira no Mercado Livre.",
+      "caption": "Achado #7: Clip Wastegate Turbina Vw / Audi Motores 1.0 1.4 Tsi / Tfsi\n💰 R$ 53,90\n🔥 72% OFF\n👉 https://meli.la/1wn4Gwd\n\nPreço e disponibilidade podem mudar. Confira no Mercado Livre.",
       "storyText": "ACHADO DO DIA\nClip Wastegate Turbina Vw / Audi Motores 1.0 1.4 Tsi / Tfsi\nR$ 53,90\n72% OFF\nLink na oferta"
     },
     {
-      "position": 6,
+      "position": 8,
       "id": "MLB7524748622",
       "name": "Quadros Decorativos Abstratos Geométricos Boho Neutro 122x60 Cor Carvalho Armação Infinita",
       "category": "Casa",
@@ -78,11 +104,11 @@
       "discount": 71,
       "affiliateUrl": "https://meli.la/13fpvc7",
       "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_736803-MLA102882214201_122025-AB.webp",
-      "caption": "Achado #6: Quadros Decorativos Abstratos Geométricos Boho Neutro 122x60 Cor Carvalho Armação Infinita\n💰 R$ 29,90\n🔥 71% OFF\n👉 https://meli.la/13fpvc7\n\nPreço e disponibilidade podem mudar. Confira no Mercado Livre.",
+      "caption": "Achado #8: Quadros Decorativos Abstratos Geométricos Boho Neutro 122x60 Cor Carvalho Armação Infinita\n💰 R$ 29,90\n🔥 71% OFF\n👉 https://meli.la/13fpvc7\n\nPreço e disponibilidade podem mudar. Confira no Mercado Livre.",
       "storyText": "ACHADO DO DIA\nQuadros Decorativos Abstratos Geométricos Boho Neutro 122x60 Cor Carvalho Armação Infinita\nR$ 29,90\n71% OFF\nLink na oferta"
     },
     {
-      "position": 7,
+      "position": 9,
       "id": "MLB2766771378",
       "name": "Creatina 1kg Suplemento Monohidratada em pó 100% Pura - Soldiers Nutrition",
       "category": "Esportes e suplementos",
@@ -91,11 +117,11 @@
       "discount": 71,
       "affiliateUrl": "https://meli.la/1QnxUCq",
       "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_998463-MLA116907384785_082026-AB.webp",
-      "caption": "Achado #7: Creatina 1kg Suplemento Monohidratada em pó 100% Pura - Soldiers Nutrition\n💰 R$ 68,90\n🔥 71% OFF\n👉 https://meli.la/1QnxUCq\n\nPreço e disponibilidade podem mudar. Confira no Mercado Livre.",
+      "caption": "Achado #9: Creatina 1kg Suplemento Monohidratada em pó 100% Pura - Soldiers Nutrition\n💰 R$ 68,90\n🔥 71% OFF\n👉 https://meli.la/1QnxUCq\n\nPreço e disponibilidade podem mudar. Confira no Mercado Livre.",
       "storyText": "ACHADO DO DIA\nCreatina 1kg Suplemento Monohidratada em pó 100% Pura - Soldiers Nutrition\nR$ 68,90\n71% OFF\nLink na oferta"
     },
     {
-      "position": 8,
+      "position": 10,
       "id": "MLB4100934467",
       "name": "Kit 6 Cuecas Lupo Boxer Poliamida Sem Costura Box Masculina",
       "category": "Moda",
@@ -104,24 +130,11 @@
       "discount": 71,
       "affiliateUrl": "https://meli.la/2mqnEFP",
       "imageUrl": "https://http2.mlstatic.com/D_NQ_NP_691576-MLB112113678795_052026-O-kit-6-cuecas-lupo-boxer-poliamida-sem-costura-box-masculina.webp",
-      "caption": "Achado #8: Kit 6 Cuecas Lupo Boxer Poliamida Sem Costura Box Masculina\n💰 R$ 129,75\n🔥 71% OFF\n👉 https://meli.la/2mqnEFP\n\nPreço e disponibilidade podem mudar. Confira no Mercado Livre.",
+      "caption": "Achado #10: Kit 6 Cuecas Lupo Boxer Poliamida Sem Costura Box Masculina\n💰 R$ 129,75\n🔥 71% OFF\n👉 https://meli.la/2mqnEFP\n\nPreço e disponibilidade podem mudar. Confira no Mercado Livre.",
       "storyText": "ACHADO DO DIA\nKit 6 Cuecas Lupo Boxer Poliamida Sem Costura Box Masculina\nR$ 129,75\n71% OFF\nLink na oferta"
     },
     {
-      "position": 9,
-      "id": "MLB5139957956",
-      "name": "Kit 3 Caixa Organizadora 8l Branca Com Tampa Ref 0512 Branco Liso",
-      "category": "Casa",
-      "price": 58.1,
-      "oldPrice": 199.9,
-      "discount": 71,
-      "affiliateUrl": "https://meli.la/2gP1jaA",
-      "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_732632-MLB79969283618_102024-AB.webp",
-      "caption": "Achado #9: Kit 3 Caixa Organizadora 8l Branca Com Tampa Ref 0512 Branco Liso\n💰 R$ 58,10\n🔥 71% OFF\n👉 https://meli.la/2gP1jaA\n\nPreço e disponibilidade podem mudar. Confira no Mercado Livre.",
-      "storyText": "ACHADO DO DIA\nKit 3 Caixa Organizadora 8l Branca Com Tampa Ref 0512 Branco Liso\nR$ 58,10\n71% OFF\nLink na oferta"
-    },
-    {
-      "position": 10,
+      "position": 11,
       "id": "MLB4220730487",
       "name": "Borderlands 4 - Ps5",
       "category": "Games",
@@ -130,11 +143,11 @@
       "discount": 69,
       "affiliateUrl": "https://meli.la/1PHxpCu",
       "imageUrl": "https://http2.mlstatic.com/D_NQ_NP_959887-MLA99878708437_112025-O.webp",
-      "caption": "Achado #10: Borderlands 4 - Ps5\n💰 R$ 136,56\n🔥 69% OFF\n👉 https://meli.la/1PHxpCu\n\nPreço e disponibilidade podem mudar. Confira no Mercado Livre.",
+      "caption": "Achado #11: Borderlands 4 - Ps5\n💰 R$ 136,56\n🔥 69% OFF\n👉 https://meli.la/1PHxpCu\n\nPreço e disponibilidade podem mudar. Confira no Mercado Livre.",
       "storyText": "ACHADO DO DIA\nBorderlands 4 - Ps5\nR$ 136,56\n69% OFF\nLink na oferta"
     },
     {
-      "position": 11,
+      "position": 12,
       "id": "MLB4085082839",
       "name": "1 Aparelho Auditivo Para Surdez E Ouvir Melhor Env Imediato Bege",
       "category": "Saúde",
@@ -143,21 +156,8 @@
       "discount": 69,
       "affiliateUrl": "https://meli.la/17g4ScF",
       "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_638463-MLB115067907634_082026-AB.webp",
-      "caption": "Achado #11: 1 Aparelho Auditivo Para Surdez E Ouvir Melhor Env Imediato Bege\n💰 R$ 61,09\n🔥 69% OFF\n👉 https://meli.la/17g4ScF\n\nPreço e disponibilidade podem mudar. Confira no Mercado Livre.",
+      "caption": "Achado #12: 1 Aparelho Auditivo Para Surdez E Ouvir Melhor Env Imediato Bege\n💰 R$ 61,09\n🔥 69% OFF\n👉 https://meli.la/17g4ScF\n\nPreço e disponibilidade podem mudar. Confira no Mercado Livre.",
       "storyText": "ACHADO DO DIA\n1 Aparelho Auditivo Para Surdez E Ouvir Melhor Env Imediato Bege\nR$ 61,09\n69% OFF\nLink na oferta"
-    },
-    {
-      "position": 12,
-      "id": "MLB6472092088",
-      "name": "Carregador Magnético Fam Magsafe Usb-c 15w P/ iPhone 12 A 16 127/220v",
-      "category": "Celulares",
-      "price": 31.2,
-      "oldPrice": 99.9,
-      "discount": 69,
-      "affiliateUrl": "https://meli.la/1jBu9Qo",
-      "imageUrl": "https://http2.mlstatic.com/D_NQ_NP_853083-MLB108107437166_032026-O-carregador-magnetico-fam-magsafe-usbc-15w-p-iphone-12-a-16.webp",
-      "caption": "Achado #12: Carregador Magnético Fam Magsafe Usb-c 15w P/ iPhone 12 A 16 127/220v\n💰 R$ 31,20\n🔥 69% OFF\n👉 https://meli.la/1jBu9Qo\n\nPreço e disponibilidade podem mudar. Confira no Mercado Livre.",
-      "storyText": "ACHADO DO DIA\nCarregador Magnético Fam Magsafe Usb-c 15w P/ iPhone 12 A 16 127/220v\nR$ 31,20\n69% OFF\nLink na oferta"
     }
   ]
 }

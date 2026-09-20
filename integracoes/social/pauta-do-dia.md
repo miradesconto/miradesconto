@@ -1,10 +1,37 @@
 # Pauta automática — MiraDesconto
 
-Catálogo-base: 19/09/2026
+Catálogo-base: 20/09/2026
 
 Seleção automática com variedade de categorias. Confirme a oferta antes de publicar, pois preço e estoque podem mudar.
 
-## 1. Trena Nivel A Laser Alta Precisão Com Regua Profissional
+## 1. Espatula Akora C/ Refil Limpador De Transpasse Vão Box Vitrô
+
+**Categoria:** Casa  
+**Preço:** R$ 23,88  
+**Desconto:** 88%  
+**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_682977-MLA112581658967_062026-AB.webp  
+**Link afiliado:** https://meli.la/2SmwzUC
+
+**Legenda pronta:**
+
+Achado #1: Espatula Akora C/ Refil Limpador De Transpasse Vão Box Vitrô
+💰 R$ 23,88
+🔥 88% OFF
+👉 https://meli.la/2SmwzUC
+
+Preço e disponibilidade podem mudar. Confira no Mercado Livre.
+
+**Texto curto para Story:**
+
+ACHADO DO DIA
+Espatula Akora C/ Refil Limpador De Transpasse Vão Box Vitrô
+R$ 23,88
+88% OFF
+Link na oferta
+
+---
+
+## 2. Trena Nivel A Laser Alta Precisão Com Regua Profissional
 
 **Categoria:** Ferramentas e construção  
 **Preço:** R$ 51,99  
@@ -14,7 +41,7 @@ Seleção automática com variedade de categorias. Confirme a oferta antes de pu
 
 **Legenda pronta:**
 
-Achado #1: Trena Nivel A Laser Alta Precisão Com Regua Profissional
+Achado #2: Trena Nivel A Laser Alta Precisão Com Regua Profissional
 💰 R$ 51,99
 🔥 77% OFF
 👉 https://meli.la/1ph5GK6
@@ -31,7 +58,7 @@ Link na oferta
 
 ---
 
-## 2. Cabo 2m Conversor Starlink Mini De 12/24v Para 30v Veicular
+## 3. Cabo 2m Conversor Starlink Mini De 12/24v Para 30v Veicular
 
 **Categoria:** Automotivo  
 **Preço:** R$ 112,90  
@@ -41,7 +68,7 @@ Link na oferta
 
 **Legenda pronta:**
 
-Achado #2: Cabo 2m Conversor Starlink Mini De 12/24v Para 30v Veicular
+Achado #3: Cabo 2m Conversor Starlink Mini De 12/24v Para 30v Veicular
 💰 R$ 112,90
 🔥 76% OFF
 👉 https://meli.la/2f7fz4e
@@ -58,34 +85,34 @@ Link na oferta
 
 ---
 
-## 3. Kit 4 Camiseta Oversized Streetwear Básica Gola Alta Algodão
+## 4. Kit Muay Thai Aparador Chute E Manopla De Soco
 
-**Categoria:** Moda  
-**Preço:** R$ 49,90  
-**Desconto:** 74%  
-**Imagem:** https://http2.mlstatic.com/D_NQ_NP_891083-MLB111529017397_052026-O-kit-4-camiseta-oversized-streetwear-basica-gola-alta-algodo.webp  
-**Link afiliado:** https://meli.la/2u9pPyU
+**Categoria:** Esportes e suplementos  
+**Preço:** R$ 89,00  
+**Desconto:** 75%  
+**Imagem:** https://http2.mlstatic.com/D_NQ_NP_726636-MLB115297589319_072026-O-kit-muay-thai-aparador-chute-e-manopla-de-soco.webp  
+**Link afiliado:** https://meli.la/1n8P5F1
 
 **Legenda pronta:**
 
-Achado #3: Kit 4 Camiseta Oversized Streetwear Básica Gola Alta Algodão
-💰 R$ 49,90
-🔥 74% OFF
-👉 https://meli.la/2u9pPyU
+Achado #4: Kit Muay Thai Aparador Chute E Manopla De Soco
+💰 R$ 89,00
+🔥 75% OFF
+👉 https://meli.la/1n8P5F1
 
 Preço e disponibilidade podem mudar. Confira no Mercado Livre.
 
 **Texto curto para Story:**
 
 ACHADO DO DIA
-Kit 4 Camiseta Oversized Streetwear Básica Gola Alta Algodão
-R$ 49,90
-74% OFF
+Kit Muay Thai Aparador Chute E Manopla De Soco
+R$ 89,00
+75% OFF
 Link na oferta
 
 ---
 
-## 4. Lisinha Sérum Popozuda Pós Depilação Pele Macia Pelos Finos 1 Frasco
+## 5. Lisinha Sérum Popozuda Pós Depilação Pele Macia Pelos Finos 1 Frasco
 
 **Categoria:** Beleza e cuidados  
 **Preço:** R$ 54,38  
@@ -95,7 +122,7 @@ Link na oferta
 
 **Legenda pronta:**
 
-Achado #4: Lisinha Sérum Popozuda Pós Depilação Pele Macia Pelos Finos 1 Frasco
+Achado #5: Lisinha Sérum Popozuda Pós Depilação Pele Macia Pelos Finos 1 Frasco
 💰 R$ 54,38
 🔥 72% OFF
 👉 https://meli.la/17ywuDU
@@ -112,7 +139,34 @@ Link na oferta
 
 ---
 
-## 5. Clip Wastegate Turbina Vw / Audi Motores 1.0 1.4 Tsi / Tfsi
+## 6. Kit 10 Pares Meias Zhamaro Algodão Sapatilha Invisível
+
+**Categoria:** Moda  
+**Preço:** R$ 54,99  
+**Desconto:** 72%  
+**Imagem:** https://http2.mlstatic.com/D_NQ_NP_638847-MLB115059720532_082026-O-kit-10-pares-meias-zhamaro-algodo-sapatilha-invisivel.webp  
+**Link afiliado:** https://meli.la/1GgrVb5
+
+**Legenda pronta:**
+
+Achado #6: Kit 10 Pares Meias Zhamaro Algodão Sapatilha Invisível
+💰 R$ 54,99
+🔥 72% OFF
+👉 https://meli.la/1GgrVb5
+
+Preço e disponibilidade podem mudar. Confira no Mercado Livre.
+
+**Texto curto para Story:**
+
+ACHADO DO DIA
+Kit 10 Pares Meias Zhamaro Algodão Sapatilha Invisível
+R$ 54,99
+72% OFF
+Link na oferta
+
+---
+
+## 7. Clip Wastegate Turbina Vw / Audi Motores 1.0 1.4 Tsi / Tfsi
 
 **Categoria:** Automotivo  
 **Preço:** R$ 53,90  
@@ -122,7 +176,7 @@ Link na oferta
 
 **Legenda pronta:**
 
-Achado #5: Clip Wastegate Turbina Vw / Audi Motores 1.0 1.4 Tsi / Tfsi
+Achado #7: Clip Wastegate Turbina Vw / Audi Motores 1.0 1.4 Tsi / Tfsi
 💰 R$ 53,90
 🔥 72% OFF
 👉 https://meli.la/1wn4Gwd
@@ -139,7 +193,7 @@ Link na oferta
 
 ---
 
-## 6. Quadros Decorativos Abstratos Geométricos Boho Neutro 122x60 Cor Carvalho Armação Infinita
+## 8. Quadros Decorativos Abstratos Geométricos Boho Neutro 122x60 Cor Carvalho Armação Infinita
 
 **Categoria:** Casa  
 **Preço:** R$ 29,90  
@@ -149,7 +203,7 @@ Link na oferta
 
 **Legenda pronta:**
 
-Achado #6: Quadros Decorativos Abstratos Geométricos Boho Neutro 122x60 Cor Carvalho Armação Infinita
+Achado #8: Quadros Decorativos Abstratos Geométricos Boho Neutro 122x60 Cor Carvalho Armação Infinita
 💰 R$ 29,90
 🔥 71% OFF
 👉 https://meli.la/13fpvc7
@@ -166,7 +220,7 @@ Link na oferta
 
 ---
 
-## 7. Creatina 1kg Suplemento Monohidratada em pó 100% Pura - Soldiers Nutrition
+## 9. Creatina 1kg Suplemento Monohidratada em pó 100% Pura - Soldiers Nutrition
 
 **Categoria:** Esportes e suplementos  
 **Preço:** R$ 68,90  
@@ -176,7 +230,7 @@ Link na oferta
 
 **Legenda pronta:**
 
-Achado #7: Creatina 1kg Suplemento Monohidratada em pó 100% Pura - Soldiers Nutrition
+Achado #9: Creatina 1kg Suplemento Monohidratada em pó 100% Pura - Soldiers Nutrition
 💰 R$ 68,90
 🔥 71% OFF
 👉 https://meli.la/1QnxUCq
@@ -193,7 +247,7 @@ Link na oferta
 
 ---
 
-## 8. Kit 6 Cuecas Lupo Boxer Poliamida Sem Costura Box Masculina
+## 10. Kit 6 Cuecas Lupo Boxer Poliamida Sem Costura Box Masculina
 
 **Categoria:** Moda  
 **Preço:** R$ 129,75  
@@ -203,7 +257,7 @@ Link na oferta
 
 **Legenda pronta:**
 
-Achado #8: Kit 6 Cuecas Lupo Boxer Poliamida Sem Costura Box Masculina
+Achado #10: Kit 6 Cuecas Lupo Boxer Poliamida Sem Costura Box Masculina
 💰 R$ 129,75
 🔥 71% OFF
 👉 https://meli.la/2mqnEFP
@@ -220,34 +274,7 @@ Link na oferta
 
 ---
 
-## 9. Kit 3 Caixa Organizadora 8l Branca Com Tampa Ref 0512 Branco Liso
-
-**Categoria:** Casa  
-**Preço:** R$ 58,10  
-**Desconto:** 71%  
-**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_732632-MLB79969283618_102024-AB.webp  
-**Link afiliado:** https://meli.la/2gP1jaA
-
-**Legenda pronta:**
-
-Achado #9: Kit 3 Caixa Organizadora 8l Branca Com Tampa Ref 0512 Branco Liso
-💰 R$ 58,10
-🔥 71% OFF
-👉 https://meli.la/2gP1jaA
-
-Preço e disponibilidade podem mudar. Confira no Mercado Livre.
-
-**Texto curto para Story:**
-
-ACHADO DO DIA
-Kit 3 Caixa Organizadora 8l Branca Com Tampa Ref 0512 Branco Liso
-R$ 58,10
-71% OFF
-Link na oferta
-
----
-
-## 10. Borderlands 4 - Ps5
+## 11. Borderlands 4 - Ps5
 
 **Categoria:** Games  
 **Preço:** R$ 136,56  
@@ -257,7 +284,7 @@ Link na oferta
 
 **Legenda pronta:**
 
-Achado #10: Borderlands 4 - Ps5
+Achado #11: Borderlands 4 - Ps5
 💰 R$ 136,56
 🔥 69% OFF
 👉 https://meli.la/1PHxpCu
@@ -274,7 +301,7 @@ Link na oferta
 
 ---
 
-## 11. 1 Aparelho Auditivo Para Surdez E Ouvir Melhor Env Imediato Bege
+## 12. 1 Aparelho Auditivo Para Surdez E Ouvir Melhor Env Imediato Bege
 
 **Categoria:** Saúde  
 **Preço:** R$ 61,09  
@@ -284,7 +311,7 @@ Link na oferta
 
 **Legenda pronta:**
 
-Achado #11: 1 Aparelho Auditivo Para Surdez E Ouvir Melhor Env Imediato Bege
+Achado #12: 1 Aparelho Auditivo Para Surdez E Ouvir Melhor Env Imediato Bege
 💰 R$ 61,09
 🔥 69% OFF
 👉 https://meli.la/17g4ScF
@@ -296,33 +323,6 @@ Preço e disponibilidade podem mudar. Confira no Mercado Livre.
 ACHADO DO DIA
 1 Aparelho Auditivo Para Surdez E Ouvir Melhor Env Imediato Bege
 R$ 61,09
-69% OFF
-Link na oferta
-
----
-
-## 12. Carregador Magnético Fam Magsafe Usb-c 15w P/ iPhone 12 A 16 127/220v
-
-**Categoria:** Celulares  
-**Preço:** R$ 31,20  
-**Desconto:** 69%  
-**Imagem:** https://http2.mlstatic.com/D_NQ_NP_853083-MLB108107437166_032026-O-carregador-magnetico-fam-magsafe-usbc-15w-p-iphone-12-a-16.webp  
-**Link afiliado:** https://meli.la/1jBu9Qo
-
-**Legenda pronta:**
-
-Achado #12: Carregador Magnético Fam Magsafe Usb-c 15w P/ iPhone 12 A 16 127/220v
-💰 R$ 31,20
-🔥 69% OFF
-👉 https://meli.la/1jBu9Qo
-
-Preço e disponibilidade podem mudar. Confira no Mercado Livre.
-
-**Texto curto para Story:**
-
-ACHADO DO DIA
-Carregador Magnético Fam Magsafe Usb-c 15w P/ iPhone 12 A 16 127/220v
-R$ 31,20
 69% OFF
 Link na oferta
 

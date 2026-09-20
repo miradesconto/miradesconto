@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-09-19T21:16:08-03:00",
+  "updatedAt": "2026-09-20T09:13:41-03:00",
   "source": "Mercado Livre — páginas públicas oficiais de afiliados",
   "strategy": "existing-official-affiliate-links-live-price",
   "old_products": 675,
   "links_checked": 675,
   "current_prices_found": 500,
-  "errors_sampled": 61,
+  "errors_sampled": 59,
   "dry_run": false,
   "catalogFiles": 5,
   "errors": [
@@ -34,7 +34,7 @@
       "reason": "missing_id_or_affiliate_url"
     },
     {
-      "id": "MLB7057013836",
+      "id": "MLB4149385404",
       "reason": "original_item_not_found_in_affiliate_page"
     },
     {
@@ -47,6 +47,10 @@
     },
     {
       "id": "MLB4887827497",
+      "reason": "original_item_not_found_in_affiliate_page"
+    },
+    {
+      "id": "MLB4020673619",
       "reason": "original_item_not_found_in_affiliate_page"
     },
     {
@@ -70,10 +74,6 @@
       "reason": "original_item_not_found_in_affiliate_page"
     },
     {
-      "id": "MLB1808255200",
-      "reason": "original_item_not_found_in_affiliate_page"
-    },
-    {
       "id": "MLB4574866311",
       "reason": "original_item_not_found_in_affiliate_page"
     },
@@ -88,10 +88,6 @@
     {
       "id": "MLB5474872718",
       "reason": "missing_id_or_affiliate_url"
-    },
-    {
-      "id": "MLB6203565194",
-      "reason": "original_item_not_found_in_affiliate_page"
     },
     {
       "id": "MLB5984883034",
@@ -146,10 +142,6 @@
       "reason": "original_item_not_found_in_affiliate_page"
     },
     {
-      "id": "MLB4748219295",
-      "reason": "original_item_not_found_in_affiliate_page"
-    },
-    {
       "id": "MLB3705389546",
       "reason": "original_item_not_found_in_affiliate_page"
     },
@@ -186,11 +178,11 @@
       "reason": "original_item_not_found_in_affiliate_page"
     },
     {
-      "id": "MLB6295764416",
+      "id": "MLB4993091237",
       "reason": "original_item_not_found_in_affiliate_page"
     },
     {
-      "id": "MLB4993091237",
+      "id": "MLB6295764416",
       "reason": "original_item_not_found_in_affiliate_page"
     },
     {
