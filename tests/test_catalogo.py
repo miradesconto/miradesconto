@@ -78,6 +78,8 @@ class CatalogTests(unittest.TestCase):
         data = catalogo.public_data(self.original)
         removed = data['products'].pop()
         data['products'][0]['price'] += 1
+        # This simulated edit has no matching observation from the provider.
+        data['products'][0].pop('priceCheck', None)
         with patch.object(catalogo, 'MIN_PRODUCTS', len(data['products'])):
             catalogo.apply_snapshot(data, self.root)
             result = catalogo.load(self.root)
@@ -98,6 +100,8 @@ class CatalogTests(unittest.TestCase):
     def test_inactive_editorial_record_is_not_available(self):
         data = catalogo.public_data(self.original)
         data['products'][0]['available'] = False
+        # The separate inactive-status scenario has no public-card evidence.
+        data['products'][0].pop('priceCheck', None)
         catalogo.apply_snapshot(data, self.root)
         editorial = catalogo.read_json(self.root / '_data/produtos.json')
         self.assertFalse(editorial[data['products'][0]['id']]['available'])
