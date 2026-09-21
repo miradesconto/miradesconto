@@ -2,109 +2,77 @@
 (() => {
     const hero = document.querySelector('.hero');
     if (!hero || !Array.isArray(products)) return;
-
-    const activeProducts = products.filter(p =>
-        p && p.available !== false && p.name && Number(p.price) > 0 && safeUrl(p.imageUrl) && safeUrl(p.affiliateUrl)
-    );
-
-    const featured = activeProducts[0] || null;
-    const categoryCounts = activeProducts.reduce((acc, product) => {
-        const name = String(product.category || '').trim();
-        if (name) acc[name] = (acc[name] || 0) + 1;
-        return acc;
-    }, {});
-    const topCategories = Object.entries(categoryCounts)
-        .sort((a, b) => b[1] - a[1])
-        .slice(0, 3);
-
-    const money = value => new Intl.NumberFormat('pt-BR', {
-        style: 'currency',
-        currency: 'BRL'
-    }).format(Number(value) || 0);
-
-    hero.setAttribute('aria-label', 'Destaques do MiraDesconto');
-
-    const shell = element('div', 'hero-static');
-    const copy = element('div', 'hero-static-copy');
-    copy.append(
-        element('div', 'hero-static-eyebrow', 'OFERTAS + CONTEÚDO PARA DECIDIR MELHOR'),
-        element('h1', '', 'Seu atalho para comprar melhor.'),
-        element('p', '', 'Produtos do catálogo, guias diretos e comparações sem enrolação. Você encontra o que interessa e decide com mais clareza.')
-    );
-
-    const actions = element('div', 'hero-static-actions');
-    const offers = element('a', 'hero-primary', 'Explorar ofertas →');
-    offers.href = '#ofertas';
-    const guides = element('a', 'hero-secondary', 'Ver guias e reviews');
-    guides.href = 'blog/';
-    actions.append(offers, guides);
-
-    const note = element('p', 'hero-static-note', `${activeProducts.length} produtos no catálogo. Confira disponibilidade na loja.`);
-    copy.append(actions, note);
-
-    const dashboard = element('div', 'hero-dashboard');
-
-    if (featured) {
-        const deal = element('article', 'hero-deal');
-        const visual = element('div', 'hero-deal-visual');
-        const img = element('img');
-        img.src = featured.imageUrl;
-        img.alt = featured.name;
-        img.width = 360;
-        img.height = 270;
-        img.decoding = 'async';
-        img.addEventListener('error', () => visual.classList.add('image-error'), {once: true});
-        visual.append(img);
-
-        const info = element('div', 'hero-deal-info');
-        info.append(element('span', 'hero-card-kicker', 'NO CATÁLOGO'));
-        const title = element('h2', '', featured.name);
-        const price = element('strong', 'hero-deal-price');
-        const refreshPrice = () => { price.textContent = MiraQuality.usablePrice(featured) ? money(featured.price) : 'Ver preço na loja'; };
-        refreshPrice();
-        setInterval(refreshPrice, 60000);
-        const link = element('a', 'hero-deal-link', 'Ver oferta →');
-        link.href = featured.affiliateUrl;
-        link.target = '_blank';
-        link.rel = 'sponsored nofollow noopener';
-        info.append(title, price, link);
-        deal.append(visual, info);
-        dashboard.append(deal);
+    const eligible = products.filter(p => p && p.available !== false && p.name && safeUrl(p.imageUrl) && safeUrl(p.affiliateUrl));
+    const counts = new Map();
+    eligible.forEach(p => { if (p.category) counts.set(p.category, (counts.get(p.category) || 0) + 1); });
+    const categories = [...counts].sort((a,b) => b[1]-a[1]).slice(0,4);
+    const chosen = [];
+    for (const p of eligible) {
+        if (!chosen.some(item => item.category === p.category)) chosen.push(p);
+        if (chosen.length === 2) break;
     }
-
-    const side = element('div', 'hero-side');
-
-    const guide = element('a', 'hero-info-card hero-guide-card');
-    guide.href = 'blog/';
-    guide.append(
-        element('span', 'hero-card-kicker', 'GUIAS E REVIEWS'),
-        element('h3', '', 'Pesquise antes de clicar em comprar'),
-        element('p', '', 'Análises de produtos do catálogo, com informação útil e sem teste inventado.'),
-        element('span', 'hero-card-link', 'Ver conteúdos →')
-    );
-    side.append(guide);
-
-    const categories = element('div', 'hero-info-card hero-category-card');
-    categories.append(
-        element('span', 'hero-card-kicker', 'EXPLORE RÁPIDO'),
-        element('h3', '', 'Vá direto ao que interessa')
-    );
-    const chips = element('div', 'hero-category-chips');
-    topCategories.forEach(([name, count]) => {
-        const button = element('button', 'hero-category-chip', `${name} · ${count}`);
-        button.type = 'button';
-        button.addEventListener('click', () => {
-            const categoryButton = [...document.querySelectorAll('.category')]
-                .find(item => item.dataset.category === name);
-            if (categoryButton) categoryButton.click();
-            document.querySelector('#ofertas')?.scrollIntoView({behavior: 'smooth', block: 'start'});
-        });
-        chips.append(button);
+    for (const p of eligible) {
+        if (chosen.length === 2) break;
+        if (!chosen.includes(p)) chosen.push(p);
+    }
+    const select = name => {
+        const button = [...document.querySelectorAll('.category')].find(b => b.dataset.category === name);
+        if (button) { document.getElementById('searchInput').value = ''; button.click(); }
+    };
+    const shell = element('div','hero-static');
+    const main = element('div','hero-main');
+    const copy = element('div','hero-static-copy');
+    const heading = element('h1');
+    heading.append(document.createTextNode('Comprar melhor começa com '), element('span','','uma boa escolha.'));
+    copy.append(element('p','hero-static-eyebrow','MIRADESCONTO · ESCOLHAS DO DIA A DIA'), heading,
+        element('p','hero-intro','Explore produtos, compare opções e tire suas dúvidas antes de comprar. Tudo em um só lugar.'));
+    const actions = element('div','hero-static-actions');
+    const offers = element('a','hero-primary','Explorar produtos'); offers.href = '#ofertas';
+    offers.addEventListener('click', () => select('Todos'));
+    const guides = element('a','hero-secondary','Ler guias de compra ↗'); guides.href = 'blog/';
+    actions.append(offers,guides); copy.append(actions);
+    copy.append(element('p','hero-static-note', eligible.length + ' produtos para explorar · Confira preço e disponibilidade na loja.'));
+    const showcase = element('div','hero-showcase');
+    const showcaseHead = element('div','hero-showcase-head');
+    showcaseHead.append(element('span','hero-card-kicker','ENCONTRE NO CATÁLOGO'),element('span','hero-selection-note','Para começar sua busca'));
+    const grid = element('div','hero-picks');
+    const refreshers = [];
+    chosen.forEach(p => {
+        const card = element('a','hero-deal');
+        card.href = safeUrl(p.affiliateUrl); card.target = '_blank'; card.rel = 'sponsored nofollow noopener noreferrer';
+        card.setAttribute('aria-label', p.name + ': conferir na loja, abre em nova aba');
+        const visual = element('div','hero-deal-visual');
+        const img = element('img'); img.src = safeUrl(p.imageUrl); img.alt = ''; img.width = 220; img.height = 190; img.decoding = 'async';
+        img.addEventListener('error', () => { img.remove(); visual.append(element('span','hero-image-fallback','Imagem indisponível')); },{once:true});
+        visual.append(img);
+        const info = element('div','hero-deal-info');
+        const title = element('h2','',p.name); title.title = p.name;
+        const price = element('strong','hero-deal-price');
+        const status = element('span','hero-price-note');
+        const refresh = () => {
+            const verified = MiraQuality.usablePrice(p);
+            price.textContent = verified ? money(p.price) : 'Ver preço na loja';
+            status.textContent = verified ? 'Preço verificado nas últimas 24 h' : 'Consulte as condições atuais';
+        };
+        refresh(); refreshers.push(refresh);
+        info.append(element('span','hero-product-category',p.category || 'No catálogo'),title,price,status,element('span','hero-deal-link','Conferir na loja ↗'));
+        card.append(visual,info); grid.append(card);
     });
-    categories.append(chips);
-    side.append(categories);
-
-    dashboard.append(side);
-    shell.append(copy, dashboard);
-    hero.replaceChildren(shell);
+    if (!chosen.length) grid.append(element('p','hero-no-products','Explore nossos guias enquanto o catálogo é atualizado.'));
+    showcase.append(showcaseHead,grid); main.append(copy,showcase);
+    const bottom = element('div','hero-bottom');
+    const quick = element('nav','hero-quick'); quick.setAttribute('aria-label','Explorar categorias do catálogo');
+    quick.append(element('span','hero-quick-label','O que você procura?'));
+    const chips = element('div','hero-category-chips');
+    categories.forEach(([name,count]) => {
+        const link = element('a','hero-category-chip'); link.href = '#ofertas';
+        link.append(element('span','',name),element('span','hero-category-count',String(count)));
+        link.addEventListener('click', () => select(name)); chips.append(link);
+    });
+    quick.append(chips);
+    const guide = element('a','hero-guide-card'); guide.href = 'blog/';
+    guide.append(element('span','hero-guide-icon','↗'),element('span','','Na dúvida? Comece pelos guias.'));
+    bottom.append(quick,guide); shell.append(main,bottom);
+    hero.setAttribute('aria-label','Explore produtos e guias do MiraDesconto'); hero.replaceChildren(shell);
+    if (refreshers.length) setInterval(() => refreshers.forEach(refresh => refresh()),60000);
 })();
