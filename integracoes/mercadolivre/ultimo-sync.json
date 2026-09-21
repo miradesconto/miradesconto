@@ -1,25 +1,25 @@
 {
-  "updatedAt": "2026-09-20T22:36:00-03:00",
+  "updatedAt": "2026-09-21T09:13:50-03:00",
   "source": "Mercado Livre — páginas públicas oficiais de afiliados",
   "strategy": "exact-product-card-v1",
   "old_products": 675,
   "links_checked": 675,
   "current_prices_found": 500,
   "errors_sampled": 120,
-  "failures": 140,
+  "failures": 154,
   "failureReasons": {
     "conditional_price_requires_review": 6,
     "exact_product_card_not_found": 54,
     "missing_id_or_affiliate_url": 8,
-    "price_jump_requires_review": 12,
-    "variation_mismatch": 60
+    "price_jump_requires_review": 11,
+    "variation_mismatch": 75
   },
   "dry_run": false,
   "catalogFiles": 5,
   "errors": [
     {
-      "id": "MLB1914338981",
-      "reason": "price_jump_requires_review"
+      "id": "MLB4592320910",
+      "reason": "variation_mismatch"
     },
     {
       "id": "MLB5532075156",
@@ -30,15 +30,31 @@
       "reason": "variation_mismatch"
     },
     {
+      "id": "MLB1914338981",
+      "reason": "price_jump_requires_review"
+    },
+    {
       "id": "MLB4104507061",
       "reason": "variation_mismatch"
     },
     {
-      "id": "MLB4664318136",
-      "reason": "conditional_price_requires_review"
+      "id": "MLB1840521760",
+      "reason": "variation_mismatch"
+    },
+    {
+      "id": "MLB4307047663",
+      "reason": "variation_mismatch"
     },
     {
       "id": "MLB4810647054",
+      "reason": "variation_mismatch"
+    },
+    {
+      "id": "MLB6003039860",
+      "reason": "variation_mismatch"
+    },
+    {
+      "id": "MLB4664318136",
       "reason": "variation_mismatch"
     },
     {
@@ -46,11 +62,15 @@
       "reason": "price_jump_requires_review"
     },
     {
-      "id": "MLB4049279695",
+      "id": "MLB3392296475",
       "reason": "variation_mismatch"
     },
     {
-      "id": "MLB6628276288",
+      "id": "MLB3978883539",
+      "reason": "variation_mismatch"
+    },
+    {
+      "id": "MLB4049279695",
       "reason": "variation_mismatch"
     },
     {
@@ -58,7 +78,7 @@
       "reason": "variation_mismatch"
     },
     {
-      "id": "MLB5405524376",
+      "id": "MLB6628276288",
       "reason": "variation_mismatch"
     },
     {
@@ -66,7 +86,7 @@
       "reason": "variation_mismatch"
     },
     {
-      "id": "MLB1230533155",
+      "id": "MLB5405524376",
       "reason": "variation_mismatch"
     },
     {
@@ -82,16 +102,20 @@
       "reason": "exact_product_card_not_found"
     },
     {
+      "id": "MLB5395837382",
+      "reason": "variation_mismatch"
+    },
+    {
+      "id": "MLB1230533155",
+      "reason": "variation_mismatch"
+    },
+    {
       "id": "MLB5044170500",
       "reason": "variation_mismatch"
     },
     {
-      "id": "MLB2747522301",
-      "reason": "variation_mismatch"
-    },
-    {
-      "id": "MLB4092967763",
-      "reason": "exact_product_card_not_found"
+      "id": "MLB4455512083",
+      "reason": "price_jump_requires_review"
     },
     {
       "id": "MLB6519291232",
@@ -99,18 +123,10 @@
     },
     {
       "id": "MLB5710631162",
-      "reason": "price_jump_requires_review"
+      "reason": "variation_mismatch"
     },
     {
       "id": "MLB4281293069",
-      "reason": "variation_mismatch"
-    },
-    {
-      "id": "MLB3848454097",
-      "reason": "variation_mismatch"
-    },
-    {
-      "id": "MLB2711731124",
       "reason": "variation_mismatch"
     },
     {
@@ -120,6 +136,14 @@
     {
       "id": "MLB3960103476",
       "reason": "exact_product_card_not_found"
+    },
+    {
+      "id": "MLB7524748622",
+      "reason": "exact_product_card_not_found"
+    },
+    {
+      "id": "MLB4349746603",
+      "reason": "variation_mismatch"
     },
     {
       "id": "MLB7580416394",
@@ -146,6 +170,18 @@
       "reason": "exact_product_card_not_found"
     },
     {
+      "id": "MLB3563425187",
+      "reason": "variation_mismatch"
+    },
+    {
+      "id": "MLB3429877491",
+      "reason": "exact_product_card_not_found"
+    },
+    {
+      "id": "MLB5324166276",
+      "reason": "conditional_price_requires_review"
+    },
+    {
       "id": "MLB3716268314",
       "reason": "price_jump_requires_review"
     },
@@ -158,6 +194,10 @@
       "reason": "variation_mismatch"
     },
     {
+      "id": "MLB7238544674",
+      "reason": "exact_product_card_not_found"
+    },
+    {
       "id": "MLB7065298206",
       "reason": "missing_id_or_affiliate_url"
     },
@@ -167,7 +207,7 @@
     },
     {
       "id": "MLB3994231661",
-      "reason": "price_jump_requires_review"
+      "reason": "variation_mismatch"
     },
     {
       "id": "MLB1073907865",
@@ -179,10 +219,6 @@
     },
     {
       "id": "MLB5577504118",
-      "reason": "variation_mismatch"
-    },
-    {
-      "id": "MLB5284583254",
       "reason": "variation_mismatch"
     },
     {
@@ -222,12 +258,12 @@
       "reason": "exact_product_card_not_found"
     },
     {
-      "id": "MLB5826664606",
-      "reason": "variation_mismatch"
-    },
-    {
       "id": "MLB5292071236",
       "reason": "conditional_price_requires_review"
+    },
+    {
+      "id": "MLB5826664606",
+      "reason": "variation_mismatch"
     },
     {
       "id": "MLB5588101558",
@@ -238,7 +274,15 @@
       "reason": "exact_product_card_not_found"
     },
     {
-      "id": "MLB1808255200",
+      "id": "MLB4150270587",
+      "reason": "exact_product_card_not_found"
+    },
+    {
+      "id": "MLB4574866311",
+      "reason": "exact_product_card_not_found"
+    },
+    {
+      "id": "MLB4763229573",
       "reason": "exact_product_card_not_found"
     },
     {
@@ -246,7 +290,11 @@
       "reason": "variation_mismatch"
     },
     {
-      "id": "MLB4763229573",
+      "id": "MLB4099352173",
+      "reason": "variation_mismatch"
+    },
+    {
+      "id": "MLB4029307547",
       "reason": "exact_product_card_not_found"
     },
     {
@@ -254,16 +302,8 @@
       "reason": "variation_mismatch"
     },
     {
-      "id": "MLB6792622180",
-      "reason": "exact_product_card_not_found"
-    },
-    {
       "id": "MLB5474872718",
       "reason": "missing_id_or_affiliate_url"
-    },
-    {
-      "id": "MLB3403422547",
-      "reason": "variation_mismatch"
     },
     {
       "id": "MLB6187433074",
@@ -274,19 +314,7 @@
       "reason": "variation_mismatch"
     },
     {
-      "id": "MLB6203565194",
-      "reason": "exact_product_card_not_found"
-    },
-    {
       "id": "MLB4454348399",
-      "reason": "variation_mismatch"
-    },
-    {
-      "id": "MLB5984883034",
-      "reason": "exact_product_card_not_found"
-    },
-    {
-      "id": "MLB4433041399",
       "reason": "variation_mismatch"
     },
     {
@@ -294,7 +322,23 @@
       "reason": "exact_product_card_not_found"
     },
     {
+      "id": "MLB4433041399",
+      "reason": "variation_mismatch"
+    },
+    {
+      "id": "MLB5984883034",
+      "reason": "exact_product_card_not_found"
+    },
+    {
+      "id": "MLB4579719083",
+      "reason": "price_jump_requires_review"
+    },
+    {
       "id": "MLB4209587237",
+      "reason": "exact_product_card_not_found"
+    },
+    {
+      "id": "MLB5611078652",
       "reason": "exact_product_card_not_found"
     },
     {
@@ -306,7 +350,7 @@
       "reason": "missing_id_or_affiliate_url"
     },
     {
-      "id": "MLB5611078652",
+      "id": "MLB3843025927",
       "reason": "exact_product_card_not_found"
     },
     {
@@ -314,12 +358,12 @@
       "reason": "exact_product_card_not_found"
     },
     {
-      "id": "MLB3843025927",
+      "id": "MLB6203565194",
       "reason": "exact_product_card_not_found"
     },
     {
-      "id": "MLB2163088526",
-      "reason": "exact_product_card_not_found"
+      "id": "MLB6963484978",
+      "reason": "price_jump_requires_review"
     },
     {
       "id": "MLB4168469409",
@@ -328,14 +372,6 @@
     {
       "id": "MLB6804166138",
       "reason": "exact_product_card_not_found"
-    },
-    {
-      "id": "MLB3142908462",
-      "reason": "variation_mismatch"
-    },
-    {
-      "id": "MLB2731026459",
-      "reason": "variation_mismatch"
     },
     {
       "id": "MLB4136093921",
@@ -366,20 +402,12 @@
       "reason": "variation_mismatch"
     },
     {
-      "id": "MLB4037938618",
-      "reason": "variation_mismatch"
-    },
-    {
-      "id": "MLB3705389546",
-      "reason": "exact_product_card_not_found"
-    },
-    {
-      "id": "MLB6727746594",
+      "id": "MLB5661109276",
       "reason": "price_jump_requires_review"
     },
     {
-      "id": "MLB6582525274",
-      "reason": "exact_product_card_not_found"
+      "id": "MLB4037938618",
+      "reason": "variation_mismatch"
     },
     {
       "id": "MLB3324201635",
@@ -395,14 +423,18 @@
     },
     {
       "id": "MLB4077912189",
-      "reason": "price_jump_requires_review"
-    },
-    {
-      "id": "MLB4818399708",
       "reason": "variation_mismatch"
     },
     {
-      "id": "MLB4282750307",
+      "id": "MLB5528554814",
+      "reason": "variation_mismatch"
+    },
+    {
+      "id": "MLB5281572966",
+      "reason": "variation_mismatch"
+    },
+    {
+      "id": "MLB5342547346",
       "reason": "variation_mismatch"
     },
     {
@@ -418,8 +450,20 @@
       "reason": "exact_product_card_not_found"
     },
     {
+      "id": "MLB6582525274",
+      "reason": "exact_product_card_not_found"
+    },
+    {
+      "id": "MLB4201658523",
+      "reason": "variation_mismatch"
+    },
+    {
       "id": "MLB4849013383",
       "reason": "exact_product_card_not_found"
+    },
+    {
+      "id": "MLB5974274792",
+      "reason": "variation_mismatch"
     },
     {
       "id": "MLB4634508239",
@@ -430,19 +474,15 @@
       "reason": "exact_product_card_not_found"
     },
     {
-      "id": "MLB4846134939",
-      "reason": "exact_product_card_not_found"
-    },
-    {
       "id": "MLB2219995018",
       "reason": "variation_mismatch"
     },
     {
-      "id": "MLB4993091237",
+      "id": "MLB4846134939",
       "reason": "exact_product_card_not_found"
     },
     {
-      "id": "MLB6295764416",
+      "id": "MLB4993091237",
       "reason": "exact_product_card_not_found"
     },
     {
@@ -450,51 +490,11 @@
       "reason": "variation_mismatch"
     },
     {
-      "id": "MLB5522563658",
-      "reason": "variation_mismatch"
+      "id": "MLB6295764416",
+      "reason": "exact_product_card_not_found"
     },
     {
       "id": "MLB7619571400",
-      "reason": "exact_product_card_not_found"
-    },
-    {
-      "id": "MLB7136960188",
-      "reason": "variation_mismatch"
-    },
-    {
-      "id": "MLB1962565547",
-      "reason": "variation_mismatch"
-    },
-    {
-      "id": "MLB6480915432",
-      "reason": "exact_product_card_not_found"
-    },
-    {
-      "id": "MLB4131328491",
-      "reason": "price_jump_requires_review"
-    },
-    {
-      "id": "MLB5298350806",
-      "reason": "variation_mismatch"
-    },
-    {
-      "id": "MLB6587413536",
-      "reason": "exact_product_card_not_found"
-    },
-    {
-      "id": "MLB5128569811",
-      "reason": "price_jump_requires_review"
-    },
-    {
-      "id": "MLB6181916626",
-      "reason": "conditional_price_requires_review"
-    },
-    {
-      "id": "MLB4329495631",
-      "reason": "exact_product_card_not_found"
-    },
-    {
-      "id": "MLB7345053872",
       "reason": "exact_product_card_not_found"
     }
   ]
