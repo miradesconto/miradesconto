@@ -4,7 +4,8 @@ const path=require('node:path');
 const vm=require('node:vm');
 const {category}=require('./organizar_catalogo.cjs');
 const ctx={window:{}};vm.runInNewContext(fs.readFileSync(path.join(__dirname,'produtos.js'),'utf8'),ctx);
-const products=ctx.window.MIRA_DATA.products;
+// Normalize JSON from the VM into this realm before comparing nested evidence.
+const products=JSON.parse(JSON.stringify(ctx.window.MIRA_DATA.products));
 const config=JSON.parse(fs.readFileSync(path.join(__dirname,'organizacao-catalogo.json')));
 const cases=[
  ['Rack para TV 50 polegadas','Casa'],['Criado mudo porta celular','Casa'],
