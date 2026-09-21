@@ -3,7 +3,9 @@
 const MiraQuality = (() => {
     function usablePrice(product, now = Date.now()) {
         const e = product.priceCheck;
-        if (!e || e.status !== 'verified' || e.method !== 'poly-card-v1' || e.itemId !== product.id || e.currency !== 'BRL') return false;
+        if (!e || e.status !== 'verified' || !['poly-card-v1', 'ml-sale-price-v1'].includes(e.method) || e.currency !== 'BRL') return false;
+        const expected = e.method === 'ml-sale-price-v1' ? product.itemId : product.id;
+        if (!expected || e.itemId !== expected) return false;
         if (typeof product.price !== 'number' || !Number.isFinite(product.price) || product.price <= 0 || product.available === false) return false;
         if (e.price !== product.price || e.oldPrice !== product.oldPrice) return false;
         if (typeof e.checkedAt !== 'string' || !/(Z|[+-]\d{2}:\d{2})$/.test(e.checkedAt)) return false;

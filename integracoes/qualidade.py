@@ -8,8 +8,9 @@ MAX_PRICE_AGE_HOURS = 24
 def usable_price(product, now=None):
     evidence = product.get('priceCheck') or {}
     if not isinstance(evidence, dict): return False
-    if evidence.get('status') != 'verified' or evidence.get('method') != 'poly-card-v1': return False
-    if evidence.get('itemId') != product.get('id') or evidence.get('currency') != 'BRL': return False
+    if evidence.get('status') != 'verified' or evidence.get('method') not in ('poly-card-v1', 'ml-sale-price-v1'): return False
+    expected = product.get('itemId') if evidence.get('method') == 'ml-sale-price-v1' else product.get('id')
+    if not expected or evidence.get('itemId') != expected or evidence.get('currency') != 'BRL': return False
     price = product.get('price')
     if isinstance(price, bool) or not isinstance(price, (int,float)) or not math.isfinite(price) or price <= 0: return False
     if evidence.get('price') != price or evidence.get('oldPrice') != product.get('oldPrice'): return False

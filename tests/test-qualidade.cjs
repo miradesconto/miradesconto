@@ -13,3 +13,8 @@ for(const change of [{priceCheck:undefined},{price:1},{oldPrice:999},{available:
 for(const checkedAt of ['2026-09-20T20:00:00','invalid',null])
     assert.equal(usablePrice({...p,priceCheck:{...p.priceCheck,checkedAt}},now),false);
 console.log('OK: regras de preço verificado e expiração no navegador');
+const api = {...p,itemId:'MLB9876543210',priceCheck:{...p.priceCheck,method:'ml-sale-price-v1',itemId:'MLB9876543210'}};
+assert.equal(usablePrice(api,now),true);
+assert.equal(usablePrice({...api,itemId:p.id},now),false);
+assert.equal(usablePrice({...api,itemId:undefined},now),false);
+assert.equal(usablePrice(api,now+86400001),false);

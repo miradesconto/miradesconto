@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCE = Path('dados/catalogo.json')
 MIN_PRODUCTS = 450
 COMPACT_KEYS = ('id', 'name', 'category', 'price', 'oldPrice', 'discount',
-                'affiliateUrl', 'imageUrl', 'rank', 'featured', 'available', 'priceCheck', 'availabilityStatus')
+                'affiliateUrl', 'imageUrl', 'itemId', 'catalogProductId', 'lastUpdated', 'rank', 'featured', 'available', 'priceCheck', 'availabilityStatus')
 HEADER = '// Dados do catálogo; preços e status podem ser atualizados pela API oficial do Mercado Livre.\n'
 
 
