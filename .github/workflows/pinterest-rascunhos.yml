@@ -1,0 +1,20 @@
+name: Pinterest — preparar rascunhos
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  drafts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - run: python integracoes/pinterest/preparar.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rascunhos-pinterest
+          path: preview/pinterest/
+          retention-days: 7
