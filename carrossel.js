@@ -98,6 +98,7 @@
         const button=element('button','hero-rail-item'); button.type='button';
         button.setAttribute('aria-label','Mostrar oferta: '+item.name);
         const thumb=element('img'); thumb.src=item.imageUrl; thumb.alt=''; thumb.loading='lazy';
+        thumb.addEventListener('error',()=>thumb.replaceWith(element('span','hero-rail-placeholder','↗')),{once:true});
         const label=element('span'); label.append(element('small','',item.category || 'Oferta'),element('strong','',money(item.price)));
         button.append(thumb,label); button.addEventListener('click',()=>{index=(index+offset)%slides.length;render();});
         previews.push(button);
