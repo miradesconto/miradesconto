@@ -17,7 +17,7 @@
   const eyebrow = element('div','hero-eyebrow');
   eyebrow.append(element('span','hero-live-dot'), element('span','','RADAR MIRADESCONTO'));
   const heading = element('h1');
-  heading.append('Boas compras começam com ', element('span','','preço na mira.'));
+  heading.append('Antes de comprar, ', element('span','','põe na Mira.'));
   copy.append(eyebrow, heading,
     element('p','hero-lede','Ofertas com foto, preço registrado e data de verificação. Encontre o que interessa e confira as condições antes de comprar.'));
   const actions = element('div','hero-actions');
