@@ -13,6 +13,13 @@ function money(value) {
         ? value.toLocaleString('pt-BR', {style:'currency',currency:'BRL'}) : 'Ver preço na loja';
 }
 function currentPrice(p) { return MiraQuality.usablePrice(p) ? p.price : null; }
+function recordedPrice(p) {
+    const e = p.priceCheck;
+    return e?.status === 'verified' && e.currency === 'BRL' && e.price === p.price
+        && e.oldPrice === p.oldPrice && Number.isFinite(Date.parse(e.checkedAt))
+        && typeof p.price === 'number' && Number.isFinite(p.price) && p.price > 0
+        ? p.price : null;
+}
 function productDiscount(p) { return MiraQuality.usablePrice(p) ? calculateDiscount(p.oldPrice,p.price) : null; }
 function calculateDiscount(oldPrice, price) {
     return oldPrice > price && price > 0 ? Math.round((1-price/oldPrice)*100) : null;
@@ -60,7 +67,12 @@ function makeCard(p) {
     const content = element('div','card-content');
     content.append(element('div','category-label',p.category || 'Outros'),element('h3','',p.name));
     content.append(element('div','old-price',discount ? money(p.oldPrice) : ''));
-    content.append(element('div','price',money(currentPrice(p))),element('div','store',p.store || 'Ver loja'));
+    const recent = currentPrice(p) !== null;
+    content.append(element('div','price',money(recent ? p.price : recordedPrice(p))));
+    if (!recent && recordedPrice(p) !== null) {
+        const date = new Date(p.priceCheck.checkedAt).toLocaleDateString('pt-BR',{timeZone:'America/Sao_Paulo'});
+        content.append(element('div','store','Último preço registrado em '+date+' · confirme na loja'));
+    } else content.append(element('div','store',p.store || 'Ver loja'));
     const buttons = element('div','buttons');
     const a = element('a','offer-button','VER NA LOJA');
     a.href = safeUrl(p.affiliateUrl);
@@ -127,7 +139,7 @@ $('sortSelect').addEventListener('change',renderProducts);
 document.querySelector('.logo').addEventListener('click',resetFilters);
 $('loadMore').addEventListener('click',()=>{visibleCount+=24;renderProducts(true);});
 $('dataNotice').textContent = source
-    ? 'Preços só aparecem após verificação recente. Confirme as condições e a disponibilidade na loja.'
+    ? 'Valores antigos são identificados pela data da última coleta. Confirme preço e disponibilidade na loja.'
     : 'Não foi possível carregar as ofertas. Verifique se produtos.js está na mesma pasta do site.';
 // Editorial links open the matching catalog record, including items beyond page one.
 const requestedProduct = new URLSearchParams(window.location.search).get('produto');
