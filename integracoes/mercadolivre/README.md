@@ -1,85 +1,59 @@
-# Atualização horária de preços
+# Catálogo de afiliados
 
-O workflow mercadolivre-sync.yml roda na main, no minuto 17 de cada hora
-(UTC e Brasília), e aceita **Run workflow** manual. O GitHub pode atrasar
-execuções agendadas; não há garantia de pontualidade.
+O workflow `mercadolivre-sync.yml` consulta os 500 produtos publicados a cada
+hora, no minuto 17 (UTC). Às segundas-feiras, às 10h41 UTC, consulta também
+os produtos cadastrados na reserva e troca até 20 itens da vitrine. O GitHub
+pode atrasar execuções agendadas. O banner usa apenas preços confirmados nas
+últimas 24 horas para anunciar descontos de 50% ou mais.
 
-hourly_prices.py percorre os 675 registros de dados/catalogo.json, preservando
-os 500 IDs publicados, ordem e artigos. Usa catalogProductId ou um identificador
-explícito /p/MLB… de productUrl para consultar /products/{id} e
-buy_box_winner.item_id. Sem produto de catálogo, usa itemId ou o id existente.
-Não confunde /up/MLBU… com catálogo. Sem vencedor confirmado, preserva o registro.
+O preço é extraído do cartão exato do anúncio aberto pelo link `meli.la`, com
+checagem de ID, variação e moeda. Se a página não confirmar o preço, o valor
+antigo mantém sua data de verificação e o produto não entra na rotação. A
+coleta não comprova estoque. A rota `/items/{id}/sale_price` da API retornou
+403 para os anúncios de outros vendedores; `hourly_prices.py` permanece no
+repositório, mas não é executado pelo workflow.
 
-Consulta /items/{itemId}/sale_price?context=channel_marketplace. Valida BRL e
-valores positivos finitos. amount vira price; regular_amount vira oldPrice
-somente se maior que price, senão null; discount é a porcentagem ou null.
-Atualiza itemId, lastUpdated e priceCheck. O id interno permanece estável.
-Nunca altera affiliateUrl, imagens, títulos ou seleção da vitrine.
-Um link afiliado pode apontar a vendedor específico: a API não garante que
-o destino acompanhe mudanças da Buy Box.
+Os links de saída vêm exclusivamente de `affiliateUrl` no catálogo. O registro
+`links-afiliados.json` fixa o link aprovado por ID; a validação falha se uma
+sincronização tentar substituí-lo. Isso não prova a atribuição de comissão:
+confira cliques e vendas no Portal de Afiliados.
 
-O gerador existente atualiza produtos.js, catalogo/produtos-*.json e
-_data/produtos.json. Python e navegador aceitam ml-sale-price-v1 vinculada
-a itemId, mantendo a validade de 24 horas. Preço inalterado não gera commit
-a cada hora: a evidência e lastUpdated só mudam junto dos dados ou após
-12 horas para renovar sua validade. lastUpdated significa última verificação
-persistida. Falhas não renovam evidências; consultas são contadas nos logs.
+## Cadastrar produtos inéditos
 
-## Secrets necessários
+Gere o link no **Portal de Afiliados → Gerador de Links** ou na **Barra de
+Afiliados** do Mercado Livre. A API de preços do vendedor não cria o link de
+afiliado. Para cada produto, prepare os dados abaixo em um arquivo JSON local
+(não use uma URL de produto comum no campo `affiliateUrl`):
 
-Em **Settings → Secrets and variables → Actions → New repository secret**:
+```json
+[
+  {
+    "id": "MLB1234567890",
+    "name": "Nome exato do produto",
+    "category": "Casa",
+    "productUrl": "https://produto.mercadolivre.com.br/MLB-1234567890-exemplo-_JM",
+    "imageUrl": "https://http2.mlstatic.com/exemplo.webp",
+    "affiliateUrl": "https://meli.la/SEU_LINK_GERADO"
+  }
+]
+```
 
-| Nome exato | Conteúdo |
-| --- | --- |
-| CLIENT_ID | ID da aplicação Mercado Livre autorizada |
-| CLIENT_SECRET | Segredo da mesma aplicação |
-| ACCESS_TOKEN | Token de acesso do usuário obtido pelo OAuth Authorization Code |
-| REFRESH_TOKEN | Último refresh token válido do mesmo fluxo, ainda não consumido |
-| GH_SECRETS_TOKEN | Fine-grained PAT GitHub restrito a este repositório, com Secrets: Read and write e Metadata: Read |
+Os valores acima são apenas um molde: precisam ser substituídos por dados
+reais do mesmo anúncio. O `productUrl` deve identificar o ID exato, inclusive
+a variação quando houver. Use uma categoria que já exista no catálogo.
 
-O GITHUB_TOKEN automático não pode escrever Actions Secrets. O quinto secret
-permite persistir OAuth sem tokens em disco, código, artefatos, argumentos de
-processo ou logs. Não precisa de Contents: write: o commit usa GITHUB_TOKEN.
-Renove o PAT antes do vencimento. Nunca coloque tokens em issues ou conversas.
+```bash
+python integracoes/mercadolivre/register_products.py novos-produtos.json
+python integracoes/mercadolivre/register_products.py novos-produtos.json --apply
+python integracoes/catalogo.py check
+```
 
-Verificado em 21/09/2026: existiam somente ML_CLIENT_SECRET, ML_REFRESH_TOKEN
-e ML_REFRESH_TOKEN2; os cinco nomes acima estavam ausentes. Os nomes antigos
-não são usados pela rotina nova. O refresh antigo pode já ter sido consumido.
-Obtenha um par atual pelo OAuth oficial, com leitura e offline_access e o
-redirect URI registrado. Não use client_credentials para substituir esse fluxo.
+A prévia consulta cada link e recusa IDs, links repetidos, páginas ambíguas,
+variações divergentes e preço sem confirmação. `--apply` acrescenta os
+produtos à reserva em `dados/catalogo.json` e seus links ao registro de
+afiliados. O commit deve incluir **os dois arquivos**. Os novos itens entram
+na vitrine em uma rotação semanal após nova confirmação de preço. Não coloque
+credenciais, tokens ou links inventados no JSON.
 
-Só renova após HTTP 401. Confere acesso a Secrets antes de consumir o refresh;
-salva o novo REFRESH_TOKEN primeiro e ACCESS_TOKEN depois, imediatamente, mesmo
-se a coleta posterior falhar. POST OAuth não é repetido em erro de rede por ser
-de uso único. Se a resposta se perder ou a persistência falhar, refaça OAuth;
-os logs orientam sem exibir tokens. Não execute diagnóstico legado com o mesmo
-par de tokens enquanto a rotina horária estiver em uso.
-
-## Erros e publicação
-
-- GETs: timeout de 20s, até quatro tentativas para rede/429/5xx, respeitando
-  Retry-After. Esperas acima de 60s encerram a consulta.
-- Falhas isoladas preservam integralmente o produto. Cinco consecutivas,
-  erro OAuth ou dez minutos de coleta abortam sem escrever o catálogo.
-- Renderiza e valida tudo antes da escrita; testes precedem o commit.
-  Sem force-push: edição concorrente que impeça push falha, e a próxima
-  execução parte da main atualizada.
-- Social, home e cache só são regenerados após mudança do catálogo.
-- Pages usa a branch main. Como commits de GITHUB_TOKEN não acionam seu build,
-  solicita /pages/builds com pages: write, inclusive para repetir publicação
-  anterior que tenha falhado.
-- run_sync.py, rebuild_catalog.py, sync_catalog.py e refresh-token.enc são
-  legados e não são executados ou modificados pela rotina horária.
-
-Depois de configurar Secrets: **Actions → Mercado Livre — sincronizar catálogo
-→ Run workflow → main**. Confira o resumo e o build do Pages. HTTP 403 exige
-verificar acesso da aplicação/usuário ou bloqueios do Mercado Livre; não é
-corrigido com preços inventados ou scraping.
-
-Testes sem credenciais: python -m unittest discover -s tests -v;
-python integracoes/catalogo.py check; node tests/test-qualidade.cjs.
-
-Documentação oficial: [preços](https://developers.mercadolivre.com.br/pt_br/api-de-precos),
-[Buy Box](https://developers.mercadolivre.com.br/concorrencia-em-catalogo),
-[OAuth](https://developers.mercadolivre.com.br/autenticacao-e-autorizacao),
-[permissões GitHub](https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens).
+Testes: `python -m unittest discover -s tests -q` e
+`python integracoes/catalogo.py check`.
