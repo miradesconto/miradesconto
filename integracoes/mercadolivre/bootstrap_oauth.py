@@ -12,6 +12,8 @@ def main():
     missing = [name for name in required if not os.getenv(name, '').strip()]
     if missing:
         raise AuthError('Secrets ausentes: ' + ', '.join(missing))
+    if os.environ['CLIENT_ID'].strip() != '5739104192519635':
+        raise AuthError('CLIENT_ID não corresponde ao app MiraDesconto exibido no DevCenter')
     repo = os.getenv('GITHUB_REPOSITORY')
     if repo != 'miradesconto/miradesconto':
         raise AuthError('Execute somente no repositório MiraDesconto')
@@ -27,7 +29,8 @@ def main():
         })
     except ApiError as exc:
         raise AuthError(
-            f'Troca OAuth recusada pelo Mercado Livre (HTTP {exc.status}). '
+            f'Troca OAuth recusada pelo Mercado Livre (HTTP {exc.status}'
+            + (f', categoria {exc.category}' if exc.category else '') + '). '
             'O código pode ter vencido ou ter sido usado; confira também ID, chave e URI'
         ) from None
     except (RuntimeError, ValueError):
