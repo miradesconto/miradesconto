@@ -1,4 +1,4 @@
 A sincronização do Mercado Livre é disparada quando este arquivo é alterado.
 Não coloque credenciais aqui.
 
-Último disparo: 24/09/2026, atualizar preços e selecionar ofertas verificadas para o carrossel.
+Último disparo: 24/09/2026, após autorização OAuth concluída.
