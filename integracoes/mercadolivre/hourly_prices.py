@@ -26,8 +26,9 @@ REQUIRED = ('CLIENT_ID', 'CLIENT_SECRET', 'ACCESS_TOKEN', 'REFRESH_TOKEN', 'GH_S
 
 
 class ApiError(RuntimeError):
-    def __init__(self, status):
+    def __init__(self, status, category=None):
         self.status = status
+        self.category = category
         super().__init__(f'API HTTP {status}; resposta omitida para proteger credenciais')
 
 
@@ -55,9 +56,21 @@ def request(path, token=None, form=None):
         except HTTPError as exc:
             status = exc.code
             retry = exc.headers.get('Retry-After')
+            category = None
+            if path == '/oauth/token':
+                try:
+                    error = json.loads(exc.read(8192))
+                    detail = ' '.join(str(error.get(k, '')) for k in ('error', 'message', 'error_description')).lower()
+                    category = next((key for key in (
+                        'invalid_grant', 'invalid_client', 'redirect_uri',
+                        'code_verifier', 'invalid_request', 'unauthorized_client',
+                        'expired_code', 'invalid_code'
+                    ) if key in detail), None)
+                except (ValueError, TypeError, OSError):
+                    pass
             exc.close()
             if status not in (429, 500, 502, 503, 504) or attempt == attempts - 1:
-                raise ApiError(status) from None
+                raise ApiError(status, category) from None
             delay = 2 ** (attempt + 1)
             if retry:
                 try:
@@ -68,7 +81,7 @@ def request(path, token=None, form=None):
                     except (ValueError, TypeError):
                         pass
             if delay > 60:
-                raise ApiError(status) from None
+                raise ApiError(status, category) from None
             print(f'HTTP {status}; nova tentativa em {delay:.0f}s')
             time.sleep(delay)
         except (URLError, TimeoutError, OSError):
