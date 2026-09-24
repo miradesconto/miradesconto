@@ -1,4 +1,4 @@
 A sincronização do Mercado Livre é disparada quando este arquivo é alterado.
 Não coloque credenciais aqui.
 
-Último disparo: 24/09/2026, após autorização OAuth concluída.
+Último disparo: 24/09/2026, após correção da coleta por cartão do produto.
