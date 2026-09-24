@@ -32,14 +32,8 @@ jobs:
         run: |
           python integracoes/catalogo.py check
           python -m unittest discover -s tests -v
-      - name: Consultar preços oficiais e renovar OAuth quando necessário
-        env:
-          CLIENT_ID: ${{ secrets.CLIENT_ID }}
-          CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
-          GH_SECRETS_TOKEN: ${{ secrets.GH_SECRETS_TOKEN }}
-        run: python integracoes/mercadolivre/hourly_prices.py
+      - name: Confirmar preços nos cartões dos links de afiliado
+        run: python integracoes/mercadolivre/public_prices.py
       - name: Validar integridade antes de publicar
         run: |
           python integracoes/automacao/site_health.py
@@ -62,7 +56,7 @@ jobs:
           git add dados/catalogo.json produtos.js catalogo _data/produtos.json index.html
           git add integracoes/social/pauta-do-dia.json integracoes/social/pauta-do-dia.md
           git diff --cached --quiet && exit 0
-          git commit -m 'Atualiza preços oficiais do Mercado Livre'
+          git commit -m 'Atualiza preços confirmados dos links de afiliado'
           # Never force-push or merge a stale catalog over concurrent edits.
           git push origin HEAD:main
       - name: Solicitar publicação no GitHub Pages
