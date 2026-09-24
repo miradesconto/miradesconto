@@ -1,0 +1,24 @@
+name: Mercado Livre — concluir autorização
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  authorize:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Instalar GitHub CLI
+        run: command -v gh
+      - name: Trocar código e guardar tokens
+        env:
+          CLIENT_ID: ${{ secrets.CLIENT_ID }}
+          CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
+          ML_AUTH_CODE: ${{ secrets.ML_AUTH_CODE }}
+          GH_SECRETS_TOKEN: ${{ secrets.GH_SECRETS_TOKEN }}
+        run: python integracoes/mercadolivre/bootstrap_oauth.py
