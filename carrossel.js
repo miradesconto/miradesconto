@@ -4,21 +4,24 @@
   if (!hero || !Array.isArray(products)) return;
   const money = n => new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL'}).format(n);
   const valid = p => p && p.available !== false && p.name && safeUrl(p.imageUrl) && safeUrl(p.affiliateUrl);
-  const fresh = products.filter(p => valid(p) && MiraQuality.usablePrice(p));
+  const recorded = p => valid(p) && Number.isFinite(p.price) && p.price > 0
+    && p.priceCheck?.status === 'verified' && p.priceCheck.price === p.price
+    && p.priceCheck.oldPrice === p.oldPrice && p.priceCheck.currency === 'BRL'
+    && Number.isFinite(Date.parse(p.priceCheck.checkedAt));
+  const fresh = products.filter(p => recorded(p) && MiraQuality.usablePrice(p));
   const bigDeals = fresh.filter(p => p.oldPrice > p.price && (1-p.price/p.oldPrice) >= .5)
     .sort((a,b)=>(1-b.price/b.oldPrice)-(1-a.price/a.oldPrice)).slice(0,8);
-  const slides = bigDeals.length ? bigDeals : fresh.slice(0,8);
+  const historical = products.filter(recorded);
+  const slides = bigDeals.length ? bigDeals : fresh.length ? fresh.slice(0,8) : historical.slice(0,8);
   const shell = element('div','hero-static'), copy = element('div','hero-static-copy');
-  copy.append(element('div','hero-static-eyebrow','OFERTAS ATUALIZADAS'),
+  copy.append(element('div','hero-static-eyebrow','PRODUTOS EM DESTAQUE'),
     element('h1','','Encontre uma boa oferta sem perder tempo.'),
     element('p','','Compare preços e explore produtos selecionados para comprar com mais clareza.'));
   const actions = element('div','hero-static-actions');
   const offers = element('a','hero-primary','Explorar ofertas →'); offers.href='#ofertas';
   const guides = element('a','hero-secondary','Ver guias e reviews'); guides.href='blog/';
   actions.append(offers,guides); copy.append(actions);
-  copy.append(element('p','hero-static-note',slides.length
-    ? 'Preços verificados recentemente. Confirme o valor e a disponibilidade na loja.'
-    : 'Aguardando atualização dos preços. Confira as ofertas diretamente na loja.'));
+  copy.append(element('p','hero-static-note','Preços podem mudar. Confirme o valor e a disponibilidade na loja.'));
   const dashboard = element('div','hero-dashboard'), deal = element('article','hero-deal');
   const visual = element('div','hero-deal-visual'), info = element('div','hero-deal-info');
   const kicker = element('span','hero-card-kicker'), title = element('h2');
@@ -35,7 +38,7 @@
   info.append(kicker,title,old,price,link,controls); deal.append(visual,info); dashboard.append(deal);
   let index=0;
   function render() {
-    const available = slides.filter(p => MiraQuality.usablePrice(p));
+    const available = slides.filter(recorded);
     if (!available.length) {
       visual.replaceChildren(element('span','hero-empty-icon','↗'));
       kicker.textContent='EXPLORE O CATÁLOGO';
@@ -50,8 +53,12 @@
     visual.classList.remove('image-error');
     img.addEventListener('error',()=>visual.classList.add('image-error'),{once:true});
     visual.replaceChildren(img);
-    const discount=p.oldPrice>p.price ? Math.floor((1-p.price/p.oldPrice)*100) : 0;
-    kicker.textContent=discount>=50 ? discount+'% OFF · OFERTA VERIFICADA' : 'PREÇO VERIFICADO';
+    const current = MiraQuality.usablePrice(p);
+    const discount=current && p.oldPrice>p.price ? Math.floor((1-p.price/p.oldPrice)*100) : 0;
+    const date = new Date(p.priceCheck.checkedAt).toLocaleDateString('pt-BR',{timeZone:'America/Sao_Paulo'});
+    kicker.textContent=current
+      ? discount>=50 ? discount+'% OFF · PREÇO VERIFICADO' : 'PREÇO VERIFICADO'
+      : 'ÚLTIMO PREÇO REGISTRADO EM '+date;
     title.textContent=p.name;
     old.textContent=discount>=50 ? 'De '+money(p.oldPrice) : '';
     price.textContent=money(p.price);
