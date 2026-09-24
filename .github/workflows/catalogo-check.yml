@@ -33,6 +33,7 @@ jobs:
           node blog/verify.cjs
           node tests/test-qualidade.cjs
           node tests/test-catalogo-evidence.cjs
+          node tests/test-analytics.cjs
       - name: Confirmar geração reproduzível
         run: |
           python integracoes/catalogo.py generate

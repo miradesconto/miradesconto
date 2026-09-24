@@ -68,8 +68,23 @@ function makeCard(p) {
     if(discount) visual.append(element('span','discount',`-${discount}%`));
     const content = element('div','card-content');
     content.append(element('div','category-label',p.category || 'Outros'),element('h3','',p.name));
+    const facts = element('div','product-facts');
+    if (typeof p.rating === 'number' && Number.isFinite(p.rating) && p.rating > 0 && p.rating <= 5) {
+        facts.append(element('span','product-rating','★ '+p.rating.toLocaleString('pt-BR')+' / 5 na loja'));
+    }
+    if (typeof p.salesText === 'string' && p.salesText.trim()) {
+        facts.append(element('span','product-sales',p.salesText.trim()));
+    }
+    if (facts.childElementCount) {
+        facts.title = 'Avaliação e vendas registradas na loja na coleta; podem mudar.';
+        content.append(facts);
+    }
     content.append(element('div','old-price',discount ? money(p.oldPrice) : ''));
     const recent = currentPrice(p) !== null;
+    const verification = recent
+        ? 'Preço verificado nas últimas 24h · confirme na loja'
+        : recordedPrice(p) !== null ? 'Preço histórico · confirme na loja' : 'Preço sem verificação recente';
+    content.append(element('p','price-verification'+(recent ? ' is-recent' : ''),verification));
     content.append(element('div','price',money(recent ? p.price : recordedPrice(p))));
     if (!recent && recordedPrice(p) !== null) {
         const date = new Date(p.priceCheck.checkedAt).toLocaleDateString('pt-BR',{timeZone:'America/Sao_Paulo'});

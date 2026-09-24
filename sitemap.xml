@@ -19,4 +19,5 @@ layout: null
   <url><loc>https://miradesconto.github.io/miradesconto/transparencia.html</loc></url>
   <url><loc>https://miradesconto.github.io/miradesconto/privacidade.html</loc></url>
 {% for entry in site.artigos %}{% assign words = entry.content | markdownify | strip_html | strip %}{% if entry.status == 'publicado' and words != '' %}<url><loc>{{ entry.url | absolute_url | xml_escape }}</loc>{% if entry.atualizado and entry.atualizado != '' %}<lastmod>{{ entry.atualizado | date: "%Y-%m-%d" }}</lastmod>{% elsif entry.data and entry.data != '' %}<lastmod>{{ entry.data | date: "%Y-%m-%d" }}</lastmod>{% endif %}</url>{% endif %}{% endfor %}
+  <url><loc>https://miradesconto.github.io/miradesconto/privacidade-pinterest.html</loc></url>
 </urlset>
