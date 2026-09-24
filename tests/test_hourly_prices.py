@@ -125,3 +125,12 @@ class Auth(unittest.TestCase):
         with self.assertRaises(RuntimeError): h.request('/oauth/token',form={'refresh_token':'secret'})
         self.assertEqual(urlopen.call_count,1)
         sleep.assert_not_called()
+
+    @patch.object(h,'urlopen')
+    def test_oauth_error_category_without_response_leak(self,urlopen):
+        urlopen.side_effect=HTTPError(h.API,400,'bad request',{},
+            io.BytesIO(b'{"error":"invalid_grant","message":"secret-code must never appear"}'))
+        with self.assertRaises(h.ApiError) as caught:
+            h.request('/oauth/token',form={'code':'secret-code'})
+        self.assertEqual(caught.exception.category,'invalid_grant')
+        self.assertNotIn('secret-code',str(caught.exception))
