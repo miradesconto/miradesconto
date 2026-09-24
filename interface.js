@@ -3,6 +3,7 @@ const source = window.MIRA_DATA;
 const products = (source?.products || []).filter(p => p.name && safeUrl(p.affiliateUrl));
 let selectedCategory = 'Destaques';
 let visibleCount = 24;
+let categoryBeforeSearch = null;
 const $ = id => document.getElementById(id);
 function safeUrl(value) {
     try { const u = new URL(value); return ['https:', 'http:'].includes(u.protocol) ? u.href : null; }
@@ -39,7 +40,8 @@ function selectCategory(button) {
 function resetFilters() {
     $('searchInput').value = '';
     $('sortSelect').value = 'default';
-    selectCategory(document.querySelector('.category'));
+    categoryBeforeSearch = 'Destaques';
+    updateSearch();
 }
 function element(tag, className, text) {
     const e = document.createElement(tag);
@@ -100,6 +102,9 @@ function renderProducts(keepCount = false) {
     const filtered = filteredProducts();
     $('productList').replaceChildren(...filtered.slice(0,visibleCount).map(makeCard));
     $('resultCount').textContent = `${filtered.length} ${filtered.length===1?'oferta encontrada':'ofertas encontradas'}`;
+    if (document.body.classList.contains('search-active')) {
+        $('searchMessage').textContent = `Busca em todo o catálogo por “${$('searchInput').value.trim()}”`;
+    }
     $('emptyState').style.display = filtered.length ? 'none':'block';
     $('loadMore').hidden = visibleCount >= filtered.length;
     $('loadMore').textContent = `Mostrar mais ofertas (${Math.min(visibleCount,filtered.length)} de ${filtered.length})`;
@@ -133,8 +138,27 @@ mobileCategory.append(categoryLabel,categorySelect);
 });
 categoryContainer.append(mobileCategory);
 categorySelect.addEventListener('change',()=>selectCategory([...categoryContainer.querySelectorAll('.category')].find(b=>b.dataset.category===categorySelect.value)));
-// Header search is global, so non-featured products remain discoverable.
-$('searchInput').addEventListener('input',()=>selectCategory([...categoryContainer.querySelectorAll('.category')].find(b=>b.dataset.category==='Todos')));
+function updateSearch() {
+    const query = $('searchInput').value.trim();
+    const wasSearching = document.body.classList.contains('search-active');
+    if (query) {
+        if (categoryBeforeSearch === null) categoryBeforeSearch = selectedCategory;
+        document.body.classList.add('search-active');
+        $('searchContext').hidden = false;
+        selectCategory([...categoryContainer.querySelectorAll('.category')].find(b=>b.dataset.category==='Todos'));
+        $('sectionTitle').textContent = `Resultados para “${query}”`;
+        if (!wasSearching) requestAnimationFrame(()=>$('ofertas').scrollIntoView({behavior:'smooth',block:'start'}));
+    } else {
+        document.body.classList.remove('search-active');
+        $('searchContext').hidden = true;
+        const restore = categoryBeforeSearch || selectedCategory;
+        categoryBeforeSearch = null;
+        selectCategory([...categoryContainer.querySelectorAll('.category')].find(b=>b.dataset.category===restore));
+        if (wasSearching) window.scrollTo({top:0,behavior:'smooth'});
+    }
+}
+$('searchInput').addEventListener('input',updateSearch);
+$('clearSearch').addEventListener('click',()=>{$('searchInput').value='';updateSearch();});
 $('sortSelect').addEventListener('change',renderProducts);
 document.querySelector('.logo').addEventListener('click',resetFilters);
 $('loadMore').addEventListener('click',()=>{visibleCount+=24;renderProducts(true);});
@@ -148,6 +172,7 @@ if (requestedProduct) {
     selectedCategory = 'Todos';
 }
 selectCategory([...categoryContainer.querySelectorAll('.category')].find(b=>b.dataset.category===selectedCategory));
+if ($('searchInput').value.trim()) updateSearch();
 
 // Recheck expiry while the visitor keeps the page open.
 setInterval(() => renderProducts(true), 60000);
