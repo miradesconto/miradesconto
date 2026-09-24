@@ -1,4 +1,4 @@
 A sincronização do Mercado Livre é disparada quando este arquivo é alterado.
 Não coloque credenciais aqui.
 
-Último disparo: correção da comparação de evidências de preço no teste de integridade.
+Último disparo: 24/09/2026, atualizar preços e selecionar ofertas verificadas para o carrossel.
