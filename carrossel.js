@@ -87,7 +87,7 @@
       badImages.add(p.id);
       if (!visual.contains(image)) return;
       visual.classList.add('image-error');
-      if (badImages.size<slides.length) {index++;render();}
+      if (badImages.size<slides.length) move(1);
     },{once:true});
     visual.classList.remove('image-error'); visual.replaceChildren(image,badge);
     badge.hidden=discount<50; badge.textContent=discount+'% OFF';
@@ -117,12 +117,18 @@
       rail.replaceChildren(...previews);
     }
   }
-  previous.addEventListener('click',()=>{index--;render();});
-  next.addEventListener('click',()=>{index++;render();});
+  function move(direction) {
+    let tries=0;
+    do {index=(index+direction+slides.length)%slides.length;tries++;}
+    while (badImages.has(slides[index].id) && tries<slides.length);
+    render();
+  }
+  previous.addEventListener('click',()=>move(-1));
+  next.addEventListener('click',()=>move(1));
   render();
   if (slides.length>1) setInterval(()=>{
     if (!document.hidden && !showcase.matches(':hover') && !showcase.contains(document.activeElement)
-      && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {index++;render();}
+      && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) move(1);
   },6500);
   setInterval(render,60000);
 })();
