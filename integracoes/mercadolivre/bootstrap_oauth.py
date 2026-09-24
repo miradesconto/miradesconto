@@ -2,7 +2,7 @@
 import os
 import sys
 
-from hourly_prices import AuthError, gh, request
+from hourly_prices import ApiError, AuthError, gh, request
 
 REDIRECT_URI = 'https://miradesconto.github.io/miradesconto/'
 
@@ -25,8 +25,13 @@ def main():
             'code': os.environ['ML_AUTH_CODE'].strip(),
             'redirect_uri': REDIRECT_URI,
         })
+    except ApiError as exc:
+        raise AuthError(
+            f'Troca OAuth recusada pelo Mercado Livre (HTTP {exc.status}). '
+            'O código pode ter vencido ou ter sido usado; confira também ID, chave e URI'
+        ) from None
     except (RuntimeError, ValueError):
-        raise AuthError('Troca OAuth falhou. Gere um novo código e confira a URI e os dados da aplicação') from None
+        raise AuthError('Troca OAuth falhou por rede ou resposta inválida; gere um novo código') from None
     access, refresh = result.get('access_token'), result.get('refresh_token')
     if not isinstance(access, str) or not access or not isinstance(refresh, str) or not refresh:
         raise AuthError('OAuth retornou tokens incompletos; gere um novo código')
