@@ -40,6 +40,29 @@ class PublicPricesTest(unittest.TestCase):
             with self.assertRaisesRegex(RuntimeError, 'Nenhum preço confirmado'):
                 public_prices.update(original, datetime.now(timezone.utc), workers=1)
 
+    def test_weekly_rotation_only_uses_verified_registered_products(self):
+        rows = [{'id': f'MLB{1000000000 + i}', 'price': 20, 'rank': i + 1,
+                 'featured': i < 12, 'affiliateUrl': f'https://meli.la/{i}',
+                 'imageUrl': f'https://example.com/{i}.jpg'} for i in range(16)]
+        original = {'products': rows, 'publishedIds': [p['id'] for p in rows[:14]],
+                    'metadata': {}}
+
+        def refresh(product, timestamp):
+            if product['id'] == rows[15]['id']:
+                return None, {'reason': 'unconfirmed'}
+            return dict(product, price=15, priceCheck={'checkedAt': timestamp}), None
+
+        with patch.object(public_prices, 'refresh_one', side_effect=refresh):
+            result, changed = public_prices.update(original, datetime.now(timezone.utc), workers=2, rotate=True)
+        self.assertTrue(changed)
+        self.assertEqual(len(result['publishedIds']), 14)
+        self.assertIn(rows[14]['id'], result['publishedIds'])
+        self.assertNotIn(rows[15]['id'], result['publishedIds'])
+        self.assertEqual(result['publishedIds'][9], rows[14]['id'])
+        self.assertEqual(result['products'][14]['affiliateUrl'], rows[14]['affiliateUrl'])
+        self.assertEqual(result['products'][14]['rank'], 10)
+        self.assertTrue(result['products'][14]['featured'])
+
 
 if __name__ == '__main__':
     unittest.main()

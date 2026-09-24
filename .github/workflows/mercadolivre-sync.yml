@@ -3,6 +3,7 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '17 * * * *'
+    - cron: '41 10 * * 1'
   push:
     paths:
       - 'integracoes/mercadolivre/trigger.txt'
@@ -33,7 +34,7 @@ jobs:
           python integracoes/catalogo.py check
           python -m unittest discover -s tests -v
       - name: Confirmar preços nos cartões dos links de afiliado
-        run: python integracoes/mercadolivre/public_prices.py
+        run: python integracoes/mercadolivre/public_prices.py ${{ (github.event.schedule == '41 10 * * 1' || contains(github.event.head_commit.message, '[rotate]')) && '--rotate' || '' }}
       - name: Validar integridade antes de publicar
         run: |
           python integracoes/automacao/site_health.py
