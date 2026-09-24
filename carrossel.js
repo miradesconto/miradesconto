@@ -64,6 +64,7 @@
   showcase.append(top,card,footer,rail); shell.append(copy,showcase); hero.replaceChildren(shell);
 
   let index=0;
+  const badImages=new Set();
   function render() {
     if (!slides.length) {
       visual.replaceChildren(element('span','hero-empty-icon','↗'));
@@ -74,12 +75,20 @@
       controls.hidden=true; rail.hidden=true; top.lastChild.textContent=''; return;
     }
     index=(index+slides.length)%slides.length;
+    if (badImages.size<slides.length) {
+      while (badImages.has(slides[index].id)) index=(index+1)%slides.length;
+    }
     const p=slides[index], current=MiraQuality.usablePrice(p);
     const discount=current && p.oldPrice>p.price ? Math.floor((1-p.price/p.oldPrice)*100) : 0;
     const date=new Date(p.priceCheck.checkedAt).toLocaleDateString('pt-BR',{timeZone:'America/Sao_Paulo'});
     const image=element('img'); image.src=p.imageUrl; image.alt=p.name;
     image.width=560; image.height=420; image.decoding='async';
-    image.addEventListener('error',()=>visual.classList.add('image-error'),{once:true});
+    image.addEventListener('error',()=>{
+      badImages.add(p.id);
+      if (!visual.contains(image)) return;
+      visual.classList.add('image-error');
+      if (badImages.size<slides.length) {index++;render();}
+    },{once:true});
     visual.classList.remove('image-error'); visual.replaceChildren(image,badge);
     badge.hidden=discount<50; badge.textContent=discount+'% OFF';
     category.textContent=p.category || 'Mercado Livre'; title.textContent=p.name;
@@ -89,18 +98,20 @@
     status.textContent=current ? 'Preço verificado em '+date : 'Último preço registrado em '+date;
     top.lastChild.textContent=current ? 'VERIFICADO RECENTEMENTE' : 'CONFIRME NA LOJA';
     position.textContent=(index+1)+' / '+slides.length;
-    controls.hidden=slides.length<2;
-    rail.hidden=slides.length<2;
-    if (slides.length>1) {
+    const previews=slides.map((item,i)=>({item,i})).filter(x=>x.i!==index && !badImages.has(x.item.id));
+    controls.hidden=previews.length===0;
+    rail.hidden=previews.length===0;
+    if (previews.length) {
       const previews=[];
-      for (let offset=1; offset<=Math.min(3,slides.length-1); offset++) {
-        const item=slides[(index+offset)%slides.length];
+      for (let offset=1; offset<slides.length && previews.length<3; offset++) {
+        const target=(index+offset)%slides.length, item=slides[target];
+        if (badImages.has(item.id)) continue;
         const button=element('button','hero-rail-item'); button.type='button';
         button.setAttribute('aria-label','Mostrar oferta: '+item.name);
         const thumb=element('img'); thumb.src=item.imageUrl; thumb.alt=''; thumb.loading='lazy';
-        thumb.addEventListener('error',()=>thumb.replaceWith(element('span','hero-rail-placeholder','↗')),{once:true});
+        thumb.addEventListener('error',()=>{badImages.add(item.id);thumb.replaceWith(element('span','hero-rail-placeholder','↗'));},{once:true});
         const label=element('span'); label.append(element('small','',item.category || 'Oferta'),element('strong','',money(item.price)));
-        button.append(thumb,label); button.addEventListener('click',()=>{index=(index+offset)%slides.length;render();});
+        button.append(thumb,label); button.addEventListener('click',()=>{index=target;render();});
         previews.push(button);
       }
       rail.replaceChildren(...previews);
