@@ -1,0 +1,8 @@
+.mira-analytics-choice{position:fixed;z-index:1000;left:50%;bottom:16px;transform:translateX(-50%);width:min(760px,calc(100% - 32px));display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 18px;background:#142523;color:#f8fafc;border:1px solid #86efac66;border-radius:14px;box-shadow:0 16px 45px #0005;font:13px/1.5 Inter,system-ui,sans-serif}
+.mira-analytics-choice p{margin:0;color:#e2eee7;font-size:13px;line-height:1.5}
+.mira-analytics-choice div{display:flex;align-items:center;gap:8px;flex:none}
+.mira-analytics-choice button{border:1px solid #91e9ad;background:#86efac;color:#123322;border-radius:8px;padding:8px 10px;font:700 12px Inter,system-ui,sans-serif;cursor:pointer}
+.mira-analytics-choice button+button{background:transparent;color:#f8fafc;border-color:#ffffff66}
+.mira-analytics-choice a{color:#b7f7cc;font-size:12px;text-decoration:underline}
+.mira-analytics-choice button:focus-visible,.mira-analytics-choice a:focus-visible{outline:3px solid #fbbf24;outline-offset:2px}
+@media(max-width:660px){.mira-analytics-choice{display:block;bottom:10px;padding:15px}.mira-analytics-choice div{margin-top:12px;flex-wrap:wrap}}
