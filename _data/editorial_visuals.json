@@ -1,0 +1,57 @@
+{
+  "creatina-soldiers-1kg-vale-a-pena": {
+    "kicker": "Antes de comprar",
+    "hook": "1 kg: vale a pena?",
+    "tone": "sage"
+  },
+  "creatina-soldiers-100-pura": {
+    "kicker": "Rótulo sob a lupa",
+    "hook": "O que é 100% pura?",
+    "tone": "mint"
+  },
+  "mondial-afon-12l-bg": {
+    "kicker": "Análise de produto",
+    "hook": "12 L no dia a dia",
+    "tone": "citrus"
+  },
+  "mondial-afn-50-ou-elgin-quad-fry": {
+    "kicker": "Frente a frente",
+    "hook": "5 L ou 4,2 L?",
+    "tone": "peach"
+  },
+  "cafeteira-electrolux-ecm10": {
+    "kicker": "Guia prático",
+    "hook": "15 cafezinhos ≠ 15 canecas",
+    "tone": "cream"
+  },
+  "ventilador-mondial-vsp-30-b": {
+    "kicker": "Guia de escolha",
+    "hook": "30 cm bastam?",
+    "tone": "sky"
+  },
+  "kit-15-meias-sandrini-vale-a-pena": {
+    "kicker": "Compra consciente",
+    "hook": "15 pares: o que conferir",
+    "tone": "lilac"
+  },
+  "kit-camisetas-dry-fit-sandrini-vale-a-pena": {
+    "kicker": "Treino e uso diário",
+    "hook": "Dry-fit: qual a diferença?",
+    "tone": "citrus"
+  },
+  "tenis-kappa-pulse-rx-caminhada-academia": {
+    "kicker": "Uso em foco",
+    "hook": "Caminhada ou academia?",
+    "tone": "sky"
+  },
+  "galaxy-a17-ou-s25-fe": {
+    "kicker": "Frente a frente",
+    "hook": "A17 ou S25 FE?",
+    "tone": "lilac"
+  },
+  "galaxy-buds3": {
+    "kicker": "Perguntas de compra",
+    "hook": "Buds3 para você?",
+    "tone": "mint"
+  }
+}
