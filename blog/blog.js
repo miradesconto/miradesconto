@@ -14,12 +14,16 @@ if (!input) return;
 const form = document.querySelector('.search-form');
 const sections = [...document.querySelectorAll('.topic')];
 const cards = [...document.querySelectorAll('.topic .card')];
+const feature = document.querySelector('.feature-section');
+const featuredCard = feature?.querySelector('.featured');
 const status = document.getElementById('searchStatus');
 const clear = document.getElementById('clearSearch');
 const normalize = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
 function search() {
   const words = normalize(input.value).split(/\s+/).filter(Boolean);
-  let count = 0;
+  const featureMatch = featuredCard && words.every(word => normalize(featuredCard.dataset.search).includes(word));
+  if (feature) feature.hidden = words.length > 0 && !featureMatch;
+  let count = featureMatch ? 1 : 0;
   cards.forEach(card => {
     card.hidden = !words.every(word => normalize(card.dataset.search).includes(word));
     if (!card.hidden) count++;
