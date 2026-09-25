@@ -7,7 +7,7 @@ status: "publicado"
 autor: "MiraDesconto"
 data: "2026-09-19"
 atualizado: "2026-09-19"
-ordem: 2
+ordem: 10
 destaque: false
 ---
 
