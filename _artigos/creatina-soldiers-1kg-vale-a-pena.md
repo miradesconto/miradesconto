@@ -8,7 +8,7 @@ autor: "MiraDesconto"
 data: "2026-09-19"
 atualizado: "2026-09-19"
 ordem: 1
-destaque: true
+destaque: false
 ---
 
 Se você começou a pesquisar creatina, é bem provável que já tenha esbarrado na **Creatina Monohidratada Soldiers Nutrition de 1 kg**. Ela aparece com frequência entre as mais vendidas do Mercado Livre e tem um apelo bem simples: embalagem grande, fórmula direta e preço que costuma ficar competitivo quando comparado a potes menores.
