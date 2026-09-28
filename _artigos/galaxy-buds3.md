@@ -4,6 +4,7 @@ resumo: "Conforto, compatibilidade e experiência de uso precisam de apuração.
 categoria: "reviews"
 produtos: ["MLB6200820014"]
 status: "rascunho"
+published: false
 autor: "MiraDesconto"
 data: ""
 atualizado: ""
