@@ -32,7 +32,7 @@ class PinterestTests(unittest.TestCase):
         self.assertNotIn(first, [p['link'] for p in queue['posts']])
 
     def test_unpublished_article_and_unsafe_paths_fail(self):
-        self.config['articles'] = ['cafeteira-electrolux-ecm10']
+        self.config['articles'] = ['galaxy-buds3']
         with self.assertRaisesRegex(ValueError, 'não publicado'):
             drafts.build(config=self.config)
         self.config['articles'] = ['../../privacidade']
