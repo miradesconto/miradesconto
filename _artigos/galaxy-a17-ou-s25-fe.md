@@ -4,6 +4,7 @@ resumo: "Uma pauta para investigar diferenças relevantes entre os aparelhos. Ve
 categoria: "comparativos"
 produtos: ["MLB4583723537", "MLB6064737210"]
 status: "rascunho"
+published: false
 autor: "MiraDesconto"
 data: ""
 atualizado: ""
