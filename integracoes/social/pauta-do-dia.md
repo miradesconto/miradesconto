@@ -112,7 +112,34 @@ Link na oferta
 
 ---
 
-## 5. Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo Preto
+## 5. Carregador 30w Turbo Para iPhone 8 X Xr 11 12 13 14 Pro Max Fonte Usb C Cor Branca Dtimp
+
+**Categoria:** Celulares
+**Preço:** R$ 44,00
+**Desconto:** 56%
+**Imagem:** https://http2.mlstatic.com/D_NQ_NP_989431-MLA113963894617_062026-O.webp
+**Link afiliado:** https://meli.la/2ieozdj
+
+**Legenda pronta:**
+
+Tech #5: Carregador 30w Turbo Para iPhone 8 X Xr 11 12 13 14 Pro Max Fonte Usb C Cor Branca Dtimp
+💰 R$ 44,00
+🔥 56% sobre a referência da loja
+👉 https://meli.la/2ieozdj
+
+Preço verificado; estoque não confirmado. Confira frete e condições no Mercado Livre. Link de afiliado.
+
+**Texto curto para Story:**
+
+TECH NA MIRA
+Carregador 30w Turbo Para iPhone 8 X Xr 11 12 13 14 Pro Max Fonte Usb C Cor Branca Dtimp
+R$ 44,00
+56% OFF
+Link na oferta
+
+---
+
+## 6. Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo Preto
 
 **Categoria:** Áudio
 **Preço:** R$ 63,99
@@ -122,7 +149,7 @@ Link na oferta
 
 **Legenda pronta:**
 
-Tech #5: Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo Preto
+Tech #6: Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo Preto
 💰 R$ 63,99
 🔥 56% sobre a referência da loja
 👉 https://meli.la/21uDpWj
@@ -139,7 +166,7 @@ Link na oferta
 
 ---
 
-## 6. Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung Pc P4 Ps 4 Dual Shock Manete Pc Gamer Tv Smart Controle Bluetooth Celular Headset Sem Fio Com P2 Marca Redfin
+## 7. Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung Pc P4 Ps 4 Dual Shock Manete Pc Gamer Tv Smart Controle Bluetooth Celular Headset Sem Fio Com P2 Marca Redfin
 
 **Categoria:** Gaming
 **Preço:** R$ 51,32
@@ -149,7 +176,7 @@ Link na oferta
 
 **Legenda pronta:**
 
-Tech #6: Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung Pc P4 Ps 4 Dual Shock Manete Pc Gamer Tv Smart Controle Bluetooth Celular Headset Sem Fio Com P2 Marca Redfin
+Tech #7: Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung Pc P4 Ps 4 Dual Shock Manete Pc Gamer Tv Smart Controle Bluetooth Celular Headset Sem Fio Com P2 Marca Redfin
 💰 R$ 51,32
 🔥 55% sobre a referência da loja
 👉 https://meli.la/1ZWvPsz
@@ -166,7 +193,7 @@ Link na oferta
 
 ---
 
-## 7. Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor Preto Compatível Com Android Samsung Motorola Xiaomi Chrome Technology
+## 8. Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor Preto Compatível Com Android Samsung Motorola Xiaomi Chrome Technology
 
 **Categoria:** Smart Home
 **Preço:** R$ 37,98
@@ -176,7 +203,7 @@ Link na oferta
 
 **Legenda pronta:**
 
-Tech #7: Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor Preto Compatível Com Android Samsung Motorola Xiaomi Chrome Technology
+Tech #8: Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor Preto Compatível Com Android Samsung Motorola Xiaomi Chrome Technology
 💰 R$ 37,98
 🔥 52% sobre a referência da loja
 👉 https://meli.la/1CAFDEb
@@ -193,7 +220,34 @@ Link na oferta
 
 ---
 
-## 8. Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco Frio Quente Neutro
+## 9. Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto 127/220v
+
+**Categoria:** Impressoras
+**Preço:** R$ 289,95
+**Desconto:** 52%
+**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_737140-MLB112939930644_072026-AB.webp
+**Link afiliado:** https://meli.la/33RTYB9
+
+**Legenda pronta:**
+
+Tech #9: Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto 127/220v
+💰 R$ 289,95
+🔥 52% sobre a referência da loja
+👉 https://meli.la/33RTYB9
+
+Preço verificado; estoque não confirmado. Confira frete e condições no Mercado Livre. Link de afiliado.
+
+**Texto curto para Story:**
+
+TECH NA MIRA
+Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto 127/220v
+R$ 289,95
+52% OFF
+Link na oferta
+
+---
+
+## 10. Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco Frio Quente Neutro
 
 **Categoria:** Setup
 **Preço:** R$ 48,49
@@ -203,7 +257,7 @@ Link na oferta
 
 **Legenda pronta:**
 
-Tech #8: Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco Frio Quente Neutro
+Tech #10: Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco Frio Quente Neutro
 💰 R$ 48,49
 🔥 52% sobre a referência da loja
 👉 https://meli.la/17RbS8M
@@ -220,34 +274,7 @@ Link na oferta
 
 ---
 
-## 9. Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play
-
-**Categoria:** Celulares
-**Preço:** R$ 121,25
-**Desconto:** 52%
-**Imagem:** https://http2.mlstatic.com/D_NQ_NP_622828-MLB96582387924_112025-O-apple-car-play-adaptador-usb-sem-fio-iphone-plug-play.webp
-**Link afiliado:** https://meli.la/24F3oBU
-
-**Legenda pronta:**
-
-Tech #9: Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play
-💰 R$ 121,25
-🔥 52% sobre a referência da loja
-👉 https://meli.la/24F3oBU
-
-Preço verificado; estoque não confirmado. Confira frete e condições no Mercado Livre. Link de afiliado.
-
-**Texto curto para Story:**
-
-TECH NA MIRA
-Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play
-R$ 121,25
-52% OFF
-Link na oferta
-
----
-
-## 10. Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto 127/220v
+## 11. Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto 127/220v
 
 **Categoria:** Áudio
 **Preço:** R$ 389,00
@@ -257,7 +284,7 @@ Link na oferta
 
 **Legenda pronta:**
 
-Tech #10: Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto 127/220v
+Tech #11: Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto 127/220v
 💰 R$ 389,00
 🔥 51% sobre a referência da loja
 👉 https://meli.la/1bWnNwc
@@ -274,7 +301,7 @@ Link na oferta
 
 ---
 
-## 11. Kit 4 Botão Capa Analógico Protetora Compatível Controle Ps5
+## 12. Kit 4 Botão Capa Analógico Protetora Compatível Controle Ps5
 
 **Categoria:** Gaming
 **Preço:** R$ 19,96
@@ -284,7 +311,7 @@ Link na oferta
 
 **Legenda pronta:**
 
-Tech #11: Kit 4 Botão Capa Analógico Protetora Compatível Controle Ps5
+Tech #12: Kit 4 Botão Capa Analógico Protetora Compatível Controle Ps5
 💰 R$ 19,96
 🔥 50% sobre a referência da loja
 👉 https://meli.la/2kReSt2
@@ -297,33 +324,6 @@ TECH NA MIRA
 Kit 4 Botão Capa Analógico Protetora Compatível Controle Ps5
 R$ 19,96
 50% OFF
-Link na oferta
-
----
-
-## 12. Mini Modem Lte 4g Notebook Usb Roteador Wifi Rápido C/ Nf
-
-**Categoria:** PC e hardware
-**Preço:** R$ 84,38
-**Desconto:** 33%
-**Imagem:** https://http2.mlstatic.com/D_NQ_NP_930419-MLB98484241823_112025-O-mini-modem-lte-4g-notebook-usb-roteador-wifi-rapido-c-nf.webp
-**Link afiliado:** https://meli.la/29vSdNh
-
-**Legenda pronta:**
-
-Tech #12: Mini Modem Lte 4g Notebook Usb Roteador Wifi Rápido C/ Nf
-💰 R$ 84,38
-🔥 33% sobre a referência da loja
-👉 https://meli.la/29vSdNh
-
-Preço verificado; estoque não confirmado. Confira frete e condições no Mercado Livre. Link de afiliado.
-
-**Texto curto para Story:**
-
-TECH NA MIRA
-Mini Modem Lte 4g Notebook Usb Roteador Wifi Rápido C/ Nf
-R$ 84,38
-33% OFF
 Link na oferta
 
 ---
