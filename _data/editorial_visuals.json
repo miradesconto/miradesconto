@@ -53,5 +53,30 @@
     "kicker": "Perguntas de compra",
     "hook": "Buds3 para você?",
     "tone": "mint"
+  },
+  "iphone-15-ou-16-em-promocao": {
+    "tone": "sage",
+    "kicker": "COMPARATIVO",
+    "hook": "Dois iPhones. Qual preço compensa?"
+  },
+  "notebook-em-promocao-como-escolher": {
+    "tone": "blue",
+    "kicker": "GUIA TECH",
+    "hook": "Notebook: confira antes de pagar."
+  },
+  "monitor-para-setup-como-comparar": {
+    "tone": "sand",
+    "kicker": "GUIA TECH",
+    "hook": "Monitor: mais que um número de Hz."
+  },
+  "carregador-usb-c-iphone-como-escolher": {
+    "tone": "sage",
+    "kicker": "GUIA TECH",
+    "hook": "Carregador certo, sem chute."
+  },
+  "iphone-15-vale-a-pena-em-oferta": {
+    "tone": "blue",
+    "kicker": "ANÁLISE DE FICHA",
+    "hook": "iPhone 15: a oferta precisa fechar."
   }
 }

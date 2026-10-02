@@ -3,12 +3,12 @@ title: "Mondial AFON-12L-BG: para quem vale uma air fryer oven de 12 litros?"
 resumo: "Análise da ficha da Mondial: espaço, acessórios e limpeza da AFON-12L-BG. Entenda quando o formato oven faz sentido antes de comprar."
 categoria: "reviews"
 produtos: ["MLB3941733035"]
-status: "publicado"
+status: "arquivado"
 autor: "MiraDesconto"
 data: "2026-09-25"
 atualizado: "2026-09-25"
 ordem: 1
-destaque: true
+destaque: false
 ---
 
 A **Mondial AFON-12L-BG** junta uma fritadeira a ar e um forno de bancada. A promessa de 12 litros chama atenção, mas o número sozinho não diz quanto alimento cabe em cada acessório nem se ela será prática na sua cozinha.

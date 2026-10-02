@@ -33,7 +33,7 @@ function selectCategory(button) {
         b.setAttribute('aria-pressed', String(b === button));
     });
     $('categorySelect').value = selectedCategory;
-    $('sectionTitle').textContent = selectedCategory === 'Destaques' ? 'Produtos em destaque' : selectedCategory === 'Todos' ? 'Todos os produtos' : selectedCategory;
+    $('sectionTitle').textContent = selectedCategory === 'Destaques' ? 'Tecnologia em destaque' : selectedCategory === 'Todos' ? 'Todas as ofertas tech' : selectedCategory;
     $('selectionNotice').hidden = selectedCategory !== 'Destaques';
     renderProducts();
 }
@@ -65,7 +65,11 @@ function makeCard(p) {
         visual.append(img);
     }
     const discount = productDiscount(p);
-    if(discount) visual.append(element('span','discount',`-${discount}%`));
+    if(discount) {
+        const badge = element('span','discount',`-${discount}%`);
+        badge.title = 'Desconto sobre o preço de referência informado pela loja; não comprova menor preço histórico.';
+        visual.append(badge);
+    }
     const content = element('div','card-content');
     content.append(element('div','category-label',p.category || 'Outros'),element('h3','',p.name));
     content.append(element('div','old-price',discount ? money(p.oldPrice) : ''));
@@ -126,7 +130,8 @@ async function shareProduct(name,link) {
     catch { window.prompt('Copie o link da oferta:',link); }
 }
 const categoryContainer = document.querySelector('.categories-container');
-const availableCategories = [...new Set(products.map(p=>p.category || 'Outros'))].sort((a,b)=>a.localeCompare(b,'pt-BR'));
+const techCategories = ['PC e hardware','Notebooks','Celulares','Setup','Gaming','Áudio','Smart Home','TVs e projetores','Impressoras'];
+const availableCategories = techCategories;
 const categories = ['Destaques','Todos',...availableCategories];
 categoryContainer.replaceChildren();
 const mobileCategory = element('div','category-mobile');

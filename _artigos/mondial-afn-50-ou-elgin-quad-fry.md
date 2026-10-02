@@ -3,7 +3,7 @@ title: "Mondial AFN-50 ou Elgin Quad Fry: qual air fryer combina com sua cozinha
 resumo: "Compare capacidade, potência nominal e formato do cesto da Mondial AFN-50 e da Elgin Quad Fry. Veja o que conferir além do preço."
 categoria: "comparativos"
 produtos: ["MLB1808255200", "MLB4150270587"]
-status: "publicado"
+status: "arquivado"
 autor: "MiraDesconto"
 data: "2026-09-25"
 atualizado: "2026-09-25"

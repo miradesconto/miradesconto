@@ -17,6 +17,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / 'integracoes'))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import catalogo
+from tech_policy import category, reconcile
 from rebuild_catalog import refresh_one
 
 
@@ -25,7 +26,8 @@ def update(current, timestamp, workers=10, rotate=False):
     published = set(current['publishedIds'])
     # Keep unpublished products, all affiliate URLs, and the editorial ordering.
     candidates = [(index, product) for index, product in enumerate(products)
-                  if rotate or product['id'] in published]
+                  if (rotate or product['id'] in published)
+                  and (current.get('metadata', {}).get('niche') != 'tech' or category(product))]
     result = dict(current)
     result['products'] = list(products)
     confirmed = changed = 0
@@ -87,6 +89,7 @@ def update(current, timestamp, workers=10, rotate=False):
         'pricesConfirmed': confirmed,
     }
     result['metadata'] = metadata
+    reconcile(result)
     return result, changed + (result['publishedIds'] != current['publishedIds'])
 
 

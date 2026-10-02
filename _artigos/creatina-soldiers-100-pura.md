@@ -3,7 +3,7 @@ title: "Creatina Soldiers é 100% pura? O que essa frase realmente significa"
 resumo: "A Soldiers anuncia creatina monohidratada com ingrediente único. Entenda o que isso confirma, o que não confirma e como avaliar o produto sem cair em promessa de marketing."
 categoria: "guias"
 produtos: ["MLB2766771378"]
-status: "publicado"
+status: "arquivado"
 autor: "MiraDesconto"
 data: "2026-09-19"
 atualizado: "2026-09-19"

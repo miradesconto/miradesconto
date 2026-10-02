@@ -3,7 +3,7 @@ title: "Creatina Soldiers 1 kg vale a pena? O que observar antes de comprar"
 resumo: "A Creatina Soldiers de 1 kg chama atenção pelo tamanho e pelo volume de vendas. Veja o que a ficha oficial confirma, os pontos fortes e os cuidados antes de comprar."
 categoria: "guias"
 produtos: ["MLB2766771378"]
-status: "publicado"
+status: "arquivado"
 autor: "MiraDesconto"
 data: "2026-09-19"
 atualizado: "2026-09-19"

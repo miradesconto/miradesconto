@@ -3,7 +3,7 @@ title: "Tênis Kappa Pulse RX é bom para caminhada e academia?"
 resumo: "O Kappa Pulse RX mistura proposta de corrida, treino e uso diário. Veja o que o anúncio oficial informa sobre cabedal, solado, conforto e onde ele faz mais sentido."
 categoria: "guias"
 produtos: ["MLB5532075156"]
-status: "publicado"
+status: "arquivado"
 autor: "MiraDesconto"
 data: "2026-09-19"
 atualizado: "2026-09-19"
