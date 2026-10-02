@@ -1,6 +1,8 @@
 'use strict';
 const source = window.MIRA_DATA;
-const products = (source?.products || []).filter(p => p.name && safeUrl(p.affiliateUrl));
+const requestedProduct = new URLSearchParams(window.location.search).get('produto');
+const products = (source?.products || []).filter(p => p.name && safeUrl(p.affiliateUrl)
+    && (MiraQuality.usablePrice(p) || p.id === requestedProduct));
 let selectedCategory = 'Destaques';
 let visibleCount = 24;
 let categoryBeforeSearch = null;
@@ -99,7 +101,7 @@ function makeCard(p) {
 }
 function filteredProducts() {
     const query = normalize($('searchInput').value.trim());
-    const filtered = products.filter(p => (selectedCategory === 'Todos' || (selectedCategory === 'Destaques' ? p.featured === true : p.category === selectedCategory))
+    const filtered = products.filter(p => (MiraQuality.usablePrice(p) || p.id === requestedProduct) && (selectedCategory === 'Todos' || (selectedCategory === 'Destaques' ? p.featured === true : p.category === selectedCategory))
         && [p.id,p.name,p.store,p.category].some(v=>normalize(v).includes(query)));
     switch($('sortSelect').value) {
         case 'discount': filtered.sort((a,b)=>(productDiscount(b)||0)-(productDiscount(a)||0));break;
@@ -175,10 +177,9 @@ $('sortSelect').addEventListener('change',renderProducts);
 document.querySelector('.logo').addEventListener('click',resetFilters);
 $('loadMore').addEventListener('click',()=>{visibleCount+=24;renderProducts(true);});
 $('dataNotice').textContent = source
-    ? 'Preços registrados continuam visíveis com a data da última conferência. Confirme preço, frete e disponibilidade na loja.'
+    ? 'A vitrine reúne descontos com preço verificado nas últimas 24 horas. Registros antigos aparecem apenas na consulta específica do produto, com aviso. Confirme frete e disponibilidade na loja.'
     : 'Não foi possível carregar as ofertas. Verifique se produtos.js está na mesma pasta do site.';
-// Editorial links open the matching catalog record, including items beyond page one.
-const requestedProduct = new URLSearchParams(window.location.search).get('produto');
+// Links editoriais podem consultar um registro antigo identificado, com aviso explícito.
 if (requestedProduct) {
     $('searchInput').value = products.find(p => p.id === requestedProduct)?.name || requestedProduct;
     selectedCategory = 'Todos';
