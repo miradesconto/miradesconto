@@ -33,7 +33,7 @@ def normalize_item_id(value: Any) -> str:
 
 
 def fetch_affiliate_page(url: str, attempts: int = 3) -> tuple[str, str] | None:
-    if not url.startswith("https://meli.la/"):
+    if not re.fullmatch(r"https://(?:meli\.la/[A-Za-z0-9]+|(?:www\.)?mercadolivre\.com(?:\.br)?/sec/[A-Za-z0-9]+)", url):
         return None
     headers = {
         "Accept": "text/html,application/xhtml+xml",

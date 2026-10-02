@@ -1,0 +1,58 @@
+name: Cadastrar links de afiliado
+run-name: Cadastro solicitado por @${{ github.actor }}
+on:
+  workflow_dispatch:
+    inputs:
+      links:
+        description: Links oficiais de afiliado, separados por espaço (até 20)
+        required: true
+        type: string
+permissions:
+  contents: write
+  pages: write
+concurrency:
+  group: mercadolivre-sync
+  cancel-in-progress: false
+jobs:
+  import:
+    if: github.ref == 'refs/heads/main' && github.actor == github.repository_owner
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Cadastrar e confirmar
+        env:
+          AFFILIATE_LINKS: ${{ inputs.links }}
+          CLIENT_ID: ${{ secrets.CLIENT_ID }}
+          CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
+          GH_SECRETS_TOKEN: ${{ secrets.GH_SECRETS_TOKEN }}
+        run: python integracoes/mercadolivre/import_links.py
+      - name: Gerar e verificar publicação
+        run: |
+          python integracoes/automacao/atualizar_home.py
+          python integracoes/automacao/cache_bust.py
+          python integracoes/catalogo.py check
+          python integracoes/automacao/site_health.py
+          node test-catalogo.cjs
+      - name: Salvar cadastro
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add dados/catalogo.json links-afiliados.json produtos.js catalogo _data/produtos.json index.html
+          git diff --cached --quiet && exit 0
+          git commit -m 'Cadastra novos links oficiais de afiliado'
+          git push origin HEAD:main
+      - name: Publicar
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds" --silent

@@ -26,7 +26,7 @@ def update(current, timestamp, workers=10, rotate=False):
     published = set(current['publishedIds'])
     # Keep unpublished products, all affiliate URLs, and the editorial ordering.
     candidates = [(index, product) for index, product in enumerate(products)
-                  if (rotate or product['id'] in published)
+                  if (rotate or product['id'] in published or product.get('registrationSource') == 'affiliate-panel')
                   and (current.get('metadata', {}).get('niche') != 'tech' or category(product))]
     result = dict(current)
     result['products'] = list(products)
@@ -89,6 +89,11 @@ def update(current, timestamp, workers=10, rotate=False):
         'pricesConfirmed': confirmed,
     }
     result['metadata'] = metadata
+    from tech_policy import eligible
+    result['publishedIds'] = list(result['publishedIds'])
+    for product in result['products']:
+        if product.get('registrationSource') == 'affiliate-panel' and product['id'] in fresh_ids and eligible(product) and product['id'] not in result['publishedIds']:
+            result['publishedIds'].append(product['id'])
     reconcile(result)
     return result, changed + (result['publishedIds'] != current['publishedIds'])
 

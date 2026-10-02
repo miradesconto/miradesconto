@@ -69,7 +69,7 @@ def validate(catalog, root=ROOT):
         old = p.get('oldPrice')
         if old is not None and (isinstance(old, bool) or not isinstance(old, (float, int)) or not math.isfinite(old) or old <= 0):
             raise ValueError(f'Preço anterior inválido: {item_id}')
-        if not str(p.get('affiliateUrl', '')).startswith('https://meli.la/'):
+        if not re.fullmatch(r'https://(?:meli\.la/[A-Za-z0-9]+|(?:www\.)?mercadolivre\.com(?:\.br)?/sec/[A-Za-z0-9]+)', str(p.get('affiliateUrl', ''))):
             raise ValueError(f'Link ausente/inválido: {item_id}')
         if not str(p.get('imageUrl', '')).startswith(('http://', 'https://')):
             raise ValueError(f'Imagem ausente/inválida: {item_id}')
