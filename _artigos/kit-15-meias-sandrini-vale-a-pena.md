@@ -3,7 +3,7 @@ title: "Kit 15 pares de meias Sandrini vale a pena?"
 resumo: "O kit de 15 pares da Sandrini chama atenção pela quantidade e pelo histórico de vendas. Veja para quem faz sentido, o que conferir no tamanho e onde estão os principais cuidados."
 categoria: "guias"
 produtos: ["MLB3616720913"]
-status: "publicado"
+status: "arquivado"
 autor: "MiraDesconto"
 data: "2026-09-19"
 atualizado: "2026-09-19"

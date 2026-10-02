@@ -3,7 +3,7 @@ title: "Kit 4 camisetas Dry-Fit Sandrini vale a pena para academia?"
 resumo: "O kit reúne quatro camisetas de poliéster voltadas para treino e caminhada. Veja onde ele faz sentido, os cuidados com tamanho e o que a ficha do anúncio realmente confirma."
 categoria: "guias"
 produtos: ["MLB4592320910"]
-status: "publicado"
+status: "arquivado"
 autor: "MiraDesconto"
 data: "2026-09-19"
 atualizado: "2026-09-19"

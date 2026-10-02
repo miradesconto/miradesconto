@@ -10,6 +10,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "integracoes"))
 from qualidade import usable_price
+from tech_policy import eligible as tech_eligible
 PRODUTOS_JS = ROOT / "produtos.js"
 OUT_JSON = Path(__file__).with_name("pauta-do-dia.json")
 OUT_MD = Path(__file__).with_name("pauta-do-dia.md")
@@ -53,8 +54,7 @@ def eligible(product: dict) -> bool:
         and price > 0
         and str(product.get("affiliateUrl") or "").startswith("https://meli.la/")
         and str(product.get("imageUrl") or "").startswith("http")
-        and product.get("available") is True
-        and product.get("availabilityStatus") == "available"
+        and tech_eligible(product)
         and usable_price(product)
     )
 
@@ -91,14 +91,14 @@ def choose(products: list[dict]) -> list[dict]:
 def build_entry(product: dict, position: int) -> dict:
     price = money(product.get("price"))
     discount = round(discount_value(product))
-    discount_line = f"\n🔥 {discount}% OFF" if discount > 0 else ""
+    discount_line = f"\n🔥 {discount}% sobre a referência da loja" if discount > 0 else ""
     caption = (
-        f"Achado #{position}: {product['name']}\n"
+        f"Tech #{position}: {product['name']}\n"
         f"💰 {price}{discount_line}\n"
         f"👉 {product['affiliateUrl']}\n\n"
-        "Preço e disponibilidade podem mudar. Confira no Mercado Livre."
+        "Preço verificado; estoque não confirmado. Confira frete e condições no Mercado Livre. Link de afiliado."
     )
-    story = f"ACHADO DO DIA\n{product['name']}\n{price}"
+    story = f"TECH NA MIRA\n{product['name']}\n{price}"
     if discount > 0:
         story += f"\n{discount}% OFF"
     story += "\nLink na oferta"
@@ -125,7 +125,7 @@ def main() -> int:
         "sourceCollectedAt": data.get("collectedAt"),
         "generatedFrom": "catálogo atual MiraDesconto",
         "count": len(entries),
-        "selectionPolicy": "verified-price-within-24h-and-confirmed-availability",
+        "selectionPolicy": "tech-discount-verified-within-24h-stock-unconfirmed",
         "posts": entries,
     }
     OUT_JSON.parent.mkdir(parents=True, exist_ok=True)
@@ -136,17 +136,17 @@ def main() -> int:
         "",
         f"Catálogo-base: {data.get('collectedAt') or 'data não informada'}",
         "",
-        "Somente preços verificados nas últimas 24 horas e disponibilidade confirmada são elegíveis. Seleção automática com variedade de categorias. Confirme a oferta antes de publicar, pois preço e estoque podem mudar.",
+        "Somente tecnologia com desconto e preço verificado nas últimas 24 horas é elegível. Estoque não confirmado. Seleção automática com variedade de categorias. Confirme a oferta antes de publicar, pois preço e estoque podem mudar.",
         "",
     ]
     for entry in entries:
         lines.extend([
             f"## {entry['position']}. {entry['name']}",
             "",
-            f"**Categoria:** {entry['category'] or 'Outros'}  ",
-            f"**Preço:** {money(entry['price'])}  ",
-            f"**Desconto:** {str(entry['discount']) + '%' if entry['discount'] else 'não confirmado'}  ",
-            f"**Imagem:** {entry['imageUrl']}  ",
+            f"**Categoria:** {entry['category'] or 'Outros'}",
+            f"**Preço:** {money(entry['price'])}",
+            f"**Desconto:** {str(entry['discount']) + '%' if entry['discount'] else 'não confirmado'}",
+            f"**Imagem:** {entry['imageUrl']}",
             f"**Link afiliado:** {entry['affiliateUrl']}",
             "",
             "**Legenda pronta:**",

@@ -58,7 +58,7 @@ def build(root=ROOT, config=None, published_links=()):
             'status': 'draft', 'approved': False, 'title': title,
             'description': description, 'link': link,
             'referenceImageUrl': image, 'boardId': None,
-            'suggestedBoard': 'Moda e compras conscientes',
+            'suggestedBoard': 'Tecnologia, eletrônicos e setup',
             'pending': ['Revisar texto', 'Criar e revisar arte final', 'Escolher pasta', 'Autorizar conta após aprovação da API']
         })
     return {'schemaVersion': 1, 'mode': 'draft_only', 'publishingEnabled': False, 'posts': posts}

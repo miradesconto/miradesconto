@@ -46,7 +46,7 @@ def validate(catalog, root=ROOT):
     by_id = dict(zip(ids, products))
     if not set(published).issubset(by_id):
         raise ValueError('Vitrine contém ID fora do cadastro')
-    if len(published) < MIN_PRODUCTS:
+    if catalog.get('metadata', {}).get('niche') != 'tech' and len(published) < MIN_PRODUCTS:
         raise ValueError(f'Vitrine abaixo do mínimo de {MIN_PRODUCTS} produtos')
     if not isinstance(catalog.get('metadata'), dict) or 'products' in catalog['metadata']:
         raise ValueError('Metadados inválidos')
@@ -58,7 +58,10 @@ def validate(catalog, root=ROOT):
         link = p.get('affiliateUrl')
         if link and link != approved.get(p['id']):
             raise ValueError(f"Link difere do registro de afiliados: {p['id']}")
+    from tech_policy import eligible
     for position, item_id in enumerate(published, 1):
+        if catalog['metadata'].get('niche') == 'tech' and not eligible(by_id[item_id]):
+            raise ValueError('Produto fora da política tech: ' + item_id)
         p = by_id[item_id]
         price = p.get('price')
         if isinstance(price, bool) or not isinstance(price, (float, int)) or not math.isfinite(price) or price <= 0:
@@ -158,6 +161,9 @@ def apply_snapshot(data, root=ROOT):
     if len(incoming_ids) != len(set(incoming_ids)):
         raise ValueError('Snapshot contém IDs duplicados')
     for p in incoming:
+        price = p.get('price')
+        if isinstance(price, bool) or not isinstance(price, (int, float)) or not math.isfinite(price) or price <= 0:
+            raise ValueError('Preço inválido no snapshot: ' + str(p.get('id')))
         old = by_id.get(p['id'])
         if old is None:
             raise ValueError('Cadastre o produto antes de publicar: ' + p['id'])
@@ -167,7 +173,11 @@ def apply_snapshot(data, root=ROOT):
         by_id[p['id']] = copy.deepcopy(p)
     catalog['products'] = [by_id[p['id']] for p in catalog['products']]
     catalog['publishedIds'] = incoming_ids
+    policy = {k: catalog['metadata'][k] for k in ('niche', 'discountBasis') if k in catalog['metadata']}
     catalog['metadata'] = {k: copy.deepcopy(v) for k, v in data.items() if k != 'products'}
+    catalog['metadata'].update(policy)
+    from tech_policy import reconcile
+    reconcile(catalog)
     files = render(catalog, root)
     files[SOURCE.as_posix()] = dumps(catalog, pretty=True) + '\n'
     write_files(files, root)

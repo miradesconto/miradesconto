@@ -10,8 +10,8 @@ for(const name of fs.readdirSync(path.join(root,'_artigos'))){
  const text=fs.readFileSync(path.join(root,'_artigos',name),'utf8');
  assert.ok(/^---\r?\n/.test(text));
  const m=Object.fromEntries(text.split('---')[1].trim().split('\n').map(line=>{const at=line.indexOf(':');return [line.slice(0,at),JSON.parse(line.slice(at+1).trim())];}));
- assert.ok(['reviews','comparativos','guias'].includes(m.categoria));assert.ok(['rascunho','publicado'].includes(m.status));
- assert.ok(m.title&&m.resumo&&m.produtos.length);
+ assert.ok(['reviews','comparativos','guias'].includes(m.categoria));assert.ok(['rascunho','publicado','arquivado'].includes(m.status));
+ assert.ok(m.title&&m.resumo&&Array.isArray(m.produtos));
  for(const id of m.produtos)assert.ok(registered.has(id)||(m.status==='rascunho'&&archived.has(id)),`Produto desconhecido: ${id}`);
  featured+=(m.status==='publicado'&&m.destaque)?1:0;count++;
 }

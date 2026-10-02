@@ -19,6 +19,7 @@ from urllib.request import Request, urlopen
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / 'integracoes'))
 import catalogo
+from tech_policy import category, reconcile
 
 API = 'https://api.mercadolibre.com'
 METHOD = 'ml-sale-price-v1'
@@ -228,6 +229,8 @@ def update(catalog, client, now):
     success = changed = failed = consecutive = 0
     started = time.monotonic()
     for i, product in enumerate(result['products']):
+        if result.get('metadata', {}).get('niche') == 'tech' and not category(product):
+            continue
         if time.monotonic() - started > 600:
             raise RuntimeError('Limite de 10 minutos atingido; catálogo preservado')
         try:
@@ -251,7 +254,8 @@ def update(catalog, client, now):
     print(f'Resumo: {success} confirmados; {changed} atualizados; {failed} preservados por falha')
     if not success:
         raise RuntimeError('Nenhum preço confirmado; catálogo preservado')
-    return result, changed
+    reconcile(result)
+    return result, changed + (result['publishedIds'] != catalog['publishedIds'])
 
 
 def main():

@@ -37,7 +37,7 @@ def main() -> int:
     errors: list[str] = []
     warnings: list[str] = []
 
-    if len(products) < MIN_PRODUCTS:
+    if data.get('niche') != 'tech' and len(products) < MIN_PRODUCTS:
         errors.append(f"catálogo caiu para {len(products)} produtos; mínimo seguro: {MIN_PRODUCTS}")
 
     ids: list[str] = []

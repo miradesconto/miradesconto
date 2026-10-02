@@ -17,9 +17,9 @@
   const eyebrow = element('div','hero-eyebrow');
   eyebrow.append(element('span','hero-live-dot'), element('span','','RADAR MIRADESCONTO'));
   const heading = element('h1');
-  heading.append('Desconto na mira. ', element('span','','Escolha certeira.'));
+  heading.append('Tecnologia boa. ', element('span','','Preço na mira.'));
   copy.append(eyebrow, heading,
-    element('p','hero-lede','Ofertas com foto, preço registrado e data de verificação. Encontre o que interessa e confira as condições antes de comprar.'));
+    element('p','hero-lede','Eletrônicos, celulares, gaming e setup com desconto registrado. Compare os modelos e confira as condições na loja.'));
   const actions = element('div','hero-actions');
   const explore = element('a','hero-primary','Explorar ofertas ↗'); explore.href='#ofertas';
   const guide = element('a','hero-secondary','Como escolhemos →'); guide.href='sobre.html';

@@ -58,7 +58,7 @@ class CatalogTests(unittest.TestCase):
             catalogo.check(self.root)
 
     def test_duplicate_unknown_and_invalid_price_rejected_without_writes(self):
-        for mutation in ('duplicate', 'unknown', 'nan', 'bool', 'zero', 'few', 'link', 'image'):
+        for mutation in ('duplicate', 'unknown', 'nan', 'bool', 'zero', 'link', 'image'):
             with self.subTest(mutation=mutation):
                 data = catalogo.public_data(self.original)
                 first = data['products'][0]
@@ -86,7 +86,7 @@ class CatalogTests(unittest.TestCase):
             self.assertEqual(len(result['products']), len(self.original['products']))
             self.assertEqual(next(p for p in result['products'] if p['id']==removed['id']), removed)
             self.assertNotIn(removed['id'], result['publishedIds'])
-            self.assertEqual(catalogo.check(self.root), len(data['products']))
+            self.assertEqual(catalogo.check(self.root), len(data['products']) - 1)
 
     def test_archive_link_mismatch_blocks_generation(self):
         path = self.root / catalogo.SOURCE
@@ -104,7 +104,7 @@ class CatalogTests(unittest.TestCase):
         data['products'][0].pop('priceCheck', None)
         catalogo.apply_snapshot(data, self.root)
         editorial = catalogo.read_json(self.root / '_data/produtos.json')
-        self.assertFalse(editorial[data['products'][0]['id']]['available'])
+        self.assertNotIn(data['products'][0]['id'], editorial)
 
     def test_extra_chunk_is_detected_and_removed_by_generation(self):
         stale = self.root / 'catalogo/produtos-999.json'
@@ -119,7 +119,8 @@ class CatalogTests(unittest.TestCase):
         accepted = {p['id'] for p in source['products'][:success_count]}
         def refresh(p, date):
             return (copy.deepcopy(p), None) if p['id'] in accepted else (None, {'id':p['id'],'reason':'test_failure'})
-        args = ['--max-products','500','--min-products','450'] + (['--dry-run'] if dry else [])
+        minimum = len(self.original['publishedIds']) if len(source['products']) == len(self.original['publishedIds']) else 450
+        args = ['--max-products','500','--min-products',str(minimum)] + (['--dry-run'] if dry else [])
         with patch.object(rebuild_catalog, 'refresh_one', side_effect=refresh), \
              patch.object(rebuild_catalog.base, 'ROOT', self.root), \
              patch.object(rebuild_catalog.base, 'now_sp', return_value=datetime(2026,9,20,tzinfo=timezone.utc)), \

@@ -3,7 +3,7 @@ title: "Ventilador Mondial VSP-30-B: 30 cm bastam para sua casa?"
 resumo: "Veja o que a ficha do VSP-30-B informa sobre tamanho, velocidades e limpeza, e como escolher um ventilador de mesa para o seu espaço."
 categoria: "guias"
 produtos: ["MLB3324201635"]
-status: "publicado"
+status: "arquivado"
 autor: "MiraDesconto"
 data: "2026-09-25"
 atualizado: "2026-09-25"

@@ -3,7 +3,7 @@ title: "Electrolux ECM10: como escolher uma cafeteira de 15 cafezinhos"
 resumo: "A ECM10 promete até 15 doses pequenas. Entenda o volume real da jarra, o filtro e os cuidados de rotina antes de escolher."
 categoria: "guias"
 produtos: ["MLB4020673619"]
-status: "publicado"
+status: "arquivado"
 autor: "MiraDesconto"
 data: "2026-09-25"
 atualizado: "2026-09-25"
