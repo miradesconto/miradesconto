@@ -158,6 +158,10 @@ def prepare(current, archive, links, now, resolver=resolve, verifier=None):
         candidate = resolver(link)
         rows = candidate if isinstance(candidate, list) else [candidate]
         resolved.extend((link, row, isinstance(candidate, list)) for row in rows)
+        if isinstance(candidate, list):
+            sources = updated['metadata'].setdefault('affiliateSources', [])
+            if link not in sources:
+                sources.append(link)
     for link, candidate, from_list in resolved:
         if candidate['id'] in ids:
             if from_list:
@@ -194,7 +198,12 @@ def prepare(current, archive, links, now, resolver=resolve, verifier=None):
 
 
 def main():
-    links = os.environ.get('AFFILIATE_LINKS', '').split()
+    syncing = '--sync' in sys.argv
+    current = catalogo.load(ROOT)
+    links = current['metadata'].get('affiliateSources', []) if syncing else os.environ.get('AFFILIATE_LINKS', '').split()
+    if syncing and not links:
+        print('Sem listas cadastradas para descobrir novos produtos')
+        return
     if not links:
         links = catalogo.read_json(ROOT / 'integracoes/mercadolivre/cadastro-pendente.json')['links']
     client = None
@@ -209,8 +218,19 @@ def main():
             except (RuntimeError, ValueError):
                 print('API sem confirmação; tentando cartão público exato')
         return None
-    updated, archive = prepare(catalogo.load(ROOT), catalogo.read_json(ROOT / 'links-afiliados.json'),
-                              links, datetime.now(timezone.utc), verifier=verify)
+    archive = catalogo.read_json(ROOT / 'links-afiliados.json')
+    if syncing:
+        updated = current
+        for link in links:
+            try:
+                updated, archive = prepare(updated, archive, [link], datetime.now(timezone.utc), verifier=verify)
+            except Exception as exc:
+                print('Lista preservada sem importar novos itens:', str(exc))
+    else:
+        updated, archive = prepare(current, archive, links, datetime.now(timezone.utc), verifier=verify)
+    if updated == current:
+        print('Nenhum novo produto; catálogo preservado')
+        return
     with tempfile.TemporaryDirectory() as tmp:
         check = Path(tmp)
         (check / 'links-afiliados.json').write_text(catalogo.dumps(archive), encoding='utf-8')

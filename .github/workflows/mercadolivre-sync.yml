@@ -32,6 +32,8 @@ jobs:
         run: |
           python integracoes/catalogo.py check
           python -m unittest discover -s tests -v
+      - name: Descobrir novos produtos nas listas cadastradas
+        run: python integracoes/mercadolivre/import_links.py --sync
       - name: Confirmar preços nos cartões dos links de afiliado
         run: python integracoes/mercadolivre/public_prices.py
       - name: Validar integridade antes de publicar
@@ -53,7 +55,7 @@ jobs:
           python integracoes/automacao/cache_bust.py
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add dados/catalogo.json produtos.js catalogo _data/produtos.json index.html
+          git add dados/catalogo.json links-afiliados.json produtos.js catalogo _data/produtos.json index.html
           git add integracoes/social/pauta-do-dia.json integracoes/social/pauta-do-dia.md
           git diff --cached --quiet && exit 0
           git commit -m 'Atualiza preços confirmados dos links de afiliado'

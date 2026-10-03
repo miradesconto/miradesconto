@@ -16,3 +16,7 @@ O cadastro resolve o destino do link, exige identidade inequívoca do anúncio e
 Produtos sem desconto ficam cadastrados fora da vitrine e são consultados novamente pela rotina horária. A rotação semanal do acervo antigo foi desativada. As ofertas já publicadas continuam sendo verificadas. GitHub Actions agenda uma tentativa por hora, sujeito a atrasos do serviço e bloqueios do Mercado Livre.
 
 Não foi realizada validação ponta a ponta com um novo link do proprietário. O painel confirma o envio da solicitação, não o sucesso do cadastro. Consulte o resultado da execução antes de divulgar o produto.
+
+## Listas públicas de afiliado
+
+Um link que abre uma lista pode cadastrar todos os cartões tech com anúncio, imagem e preço exatos confirmados. O sistema preserva o link oficial da lista para a compra. Itens não tech, ambíguos ou com variação são ignorados. A lista cadastrada com sucesso fica em metadata.affiliateSources e é consultada pela rotina horária para descobrir novos produtos. Falhas de leitura preservam o catálogo. Retirar um produto da lista ainda não remove seu cadastro automaticamente.
