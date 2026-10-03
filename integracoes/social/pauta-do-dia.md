@@ -61,16 +61,16 @@ Link na oferta
 ## 3. Conversor Mídia Fibra Óptica Gigabit Rj45 1000 Mb Par A+b
 
 **Categoria:** PC e hardware
-**Preço:** R$ 68,46
-**Desconto:** 59%
+**Preço:** R$ 67,11
+**Desconto:** 60%
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_668420-MLB116950397541_082026-AB.webp
 **Link afiliado:** https://meli.la/2cPnC8v
 
 **Legenda pronta:**
 
 Tech #3: Conversor Mídia Fibra Óptica Gigabit Rj45 1000 Mb Par A+b
-💰 R$ 68,46
-🔥 59% sobre a referência da loja
+💰 R$ 67,11
+🔥 60% sobre a referência da loja
 👉 https://meli.la/2cPnC8v
 
 Preço verificado; estoque não confirmado. Confira frete e condições no Mercado Livre. Link de afiliado.
@@ -79,8 +79,8 @@ Preço verificado; estoque não confirmado. Confira frete e condições no Merca
 
 TECH NA MIRA
 Conversor Mídia Fibra Óptica Gigabit Rj45 1000 Mb Par A+b
-R$ 68,46
-59% OFF
+R$ 67,11
+60% OFF
 Link na oferta
 
 ---
@@ -193,7 +193,34 @@ Link na oferta
 
 ---
 
-## 8. Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor Preto Compatível Com Android Samsung Motorola Xiaomi Chrome Technology
+## 8. Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto 127/220v
+
+**Categoria:** Impressoras
+**Preço:** R$ 283,97
+**Desconto:** 53%
+**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_737140-MLB112939930644_072026-AB.webp
+**Link afiliado:** https://meli.la/33RTYB9
+
+**Legenda pronta:**
+
+Tech #8: Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto 127/220v
+💰 R$ 283,97
+🔥 53% sobre a referência da loja
+👉 https://meli.la/33RTYB9
+
+Preço verificado; estoque não confirmado. Confira frete e condições no Mercado Livre. Link de afiliado.
+
+**Texto curto para Story:**
+
+TECH NA MIRA
+Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto 127/220v
+R$ 283,97
+53% OFF
+Link na oferta
+
+---
+
+## 9. Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor Preto Compatível Com Android Samsung Motorola Xiaomi Chrome Technology
 
 **Categoria:** Smart Home
 **Preço:** R$ 37,98
@@ -203,7 +230,7 @@ Link na oferta
 
 **Legenda pronta:**
 
-Tech #8: Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor Preto Compatível Com Android Samsung Motorola Xiaomi Chrome Technology
+Tech #9: Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor Preto Compatível Com Android Samsung Motorola Xiaomi Chrome Technology
 💰 R$ 37,98
 🔥 52% sobre a referência da loja
 👉 https://meli.la/1CAFDEb
@@ -215,33 +242,6 @@ Preço verificado; estoque não confirmado. Confira frete e condições no Merca
 TECH NA MIRA
 Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor Preto Compatível Com Android Samsung Motorola Xiaomi Chrome Technology
 R$ 37,98
-52% OFF
-Link na oferta
-
----
-
-## 9. Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto 127/220v
-
-**Categoria:** Impressoras
-**Preço:** R$ 289,95
-**Desconto:** 52%
-**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_737140-MLB112939930644_072026-AB.webp
-**Link afiliado:** https://meli.la/33RTYB9
-
-**Legenda pronta:**
-
-Tech #9: Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto 127/220v
-💰 R$ 289,95
-🔥 52% sobre a referência da loja
-👉 https://meli.la/33RTYB9
-
-Preço verificado; estoque não confirmado. Confira frete e condições no Mercado Livre. Link de afiliado.
-
-**Texto curto para Story:**
-
-TECH NA MIRA
-Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto 127/220v
-R$ 289,95
 52% OFF
 Link na oferta
 
