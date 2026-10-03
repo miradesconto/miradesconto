@@ -201,6 +201,9 @@ def main():
     syncing = '--sync' in sys.argv
     current = catalogo.load(ROOT)
     links = current['metadata'].get('affiliateSources', []) if syncing else os.environ.get('AFFILIATE_LINKS', '').split()
+    source_file = ROOT / 'integracoes/mercadolivre/listas-afiliadas.json'
+    if syncing and source_file.exists():
+        links = list(dict.fromkeys([*links, *catalogo.read_json(source_file)['links']]))
     if syncing and not links:
         print('Sem listas cadastradas para descobrir novos produtos')
         return

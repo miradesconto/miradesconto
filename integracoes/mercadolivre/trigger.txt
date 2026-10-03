@@ -1,4 +1,1 @@
-A sincronização do Mercado Livre é disparada quando este arquivo é alterado.
-Não coloque credenciais aqui.
-
-Último disparo: 28/09/2026, após corrigir teste de artigo não publicado.
+2026-10-03: verificar cadastro real e sincronizar lista pública de afiliado.
