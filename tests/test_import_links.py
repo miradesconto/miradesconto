@@ -14,9 +14,10 @@ class ImportTest(unittest.TestCase):
         self.assertEqual(row['id'], 'MLB2766771378')
         self.assertEqual(row['_observation']['price'], 68.90)
         self.assertEqual(row['affiliateUrl'], 'https://meli.la/example')
-        with self.assertRaises(ValueError):
-            parse_page(body + body.replace('MLB2766771378', 'MLB2766771379'),
-                       'https://www.mercadolivre.com.br/social/owner', 'https://meli.la/example')
+        rows = parse_page(body + body.replace('MLB2766771378', 'MLB2766771379'),
+                          'https://www.mercadolivre.com.br/social/owner', 'https://meli.la/example')
+        self.assertEqual(len(rows), 2)
+        self.assertEqual({r['id'] for r in rows}, {'MLB2766771378', 'MLB2766771379'})
 
     def test_hosts(self):
         for url in ['http://meli.la/abc','https://meli.la.evil.com/abc','https://user@meli.la/abc','https://127.0.0.1/sec/a']:

@@ -110,8 +110,26 @@ def parse_page(body, final, link):
             if key in candidates and candidates[key] != value:
                 raise ValueError('Cartões divergentes; revisão necessária')
             candidates[key] = value
+        if len(candidates) > 1:
+            rows = []
+            for (found_id, found_variation), (url, title, picture) in candidates.items():
+                row = dict(id=found_id, itemId=found_id, name=title, imageUrl=picture,
+                           affiliateUrl=link, productUrl=url, featured=False)
+                label = category(row)
+                if not label or found_variation:
+                    continue
+                try:
+                    row['_observation'] = extract(body, found_id, url)
+                except Unconfirmed:
+                    continue
+                row['category'] = label
+                rows.append(row)
+            if not rows:
+                raise ValueError('Lista sem produtos tech com cartão exato confirmado')
+            print('Produtos tech confirmados na lista:', len(rows))
+            return rows
         if len(candidates) != 1:
-            raise ValueError('Link aponta para lista ou página sem um único anúncio identificável')
+            raise ValueError('Página sem anúncio identificável e imagem confirmada')
         (item_id, variation), (product_url, name, image) = next(iter(candidates.items()))
         observation = extract(body, item_id, product_url)
     ip = urlsplit(image)
@@ -135,9 +153,15 @@ def prepare(current, archive, links, now, resolver=resolve, verifier=None):
         raise ValueError('Envie de 1 a 20 links')
     updated, approved = copy.deepcopy(current), copy.deepcopy(archive)
     ids = {p['id'] for p in updated['products']}
+    resolved = []
     for link in dict.fromkeys(links):
         candidate = resolver(link)
+        rows = candidate if isinstance(candidate, list) else [candidate]
+        resolved.extend((link, row, isinstance(candidate, list)) for row in rows)
+    for link, candidate, from_list in resolved:
         if candidate['id'] in ids:
+            if from_list:
+                continue
             raise ValueError('Produto já cadastrado: ' + candidate['id'])
         candidate['rank'] = len(updated['products']) + 1
         candidate['registrationSource'] = 'affiliate-panel'
