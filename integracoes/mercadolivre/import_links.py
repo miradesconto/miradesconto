@@ -57,6 +57,8 @@ def resolve(link):
     opener = build_opener(Redirects())
     with opener.open(Request(link, headers={'User-Agent': 'Mozilla/5.0', 'Accept': 'text/html'}), timeout=30) as response:
         final = response.geturl()
+        destination = urlsplit(final)
+        print('Destino do link:', destination.scheme + '://' + destination.netloc + destination.path)
         if not allowed(final):
             raise ValueError('Destino inesperado')
         body = response.read(3_000_001)
@@ -81,6 +83,7 @@ def parse_page(body, final, link):
         cards.feed(body)
         cards.close()
         candidates = {}
+        print('Cartões encontrados:', len(cards.root.find('poly-card')))
         for card in cards.root.find('poly-card'):
             titles = card.find('poly-component__title')
             if len(titles) != 1 or titles[0].tag != 'a':
