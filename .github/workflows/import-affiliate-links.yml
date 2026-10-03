@@ -1,6 +1,9 @@
 name: Cadastrar links de afiliado
 run-name: Cadastro solicitado por @${{ github.actor }}
 on:
+  push:
+    paths:
+      - 'integracoes/mercadolivre/cadastro-pendente.json'
   workflow_dispatch:
     inputs:
       links:
@@ -15,7 +18,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   import:
-    if: github.ref == 'refs/heads/main' && github.actor == github.repository_owner
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.actor == github.repository_owner)
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:

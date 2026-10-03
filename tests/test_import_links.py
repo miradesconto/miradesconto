@@ -3,9 +3,21 @@ import unittest
 from pathlib import Path
 from datetime import datetime, timezone
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'integracoes' / 'mercadolivre'))
-from import_links import affiliate, allowed, prepare
+from import_links import affiliate, allowed, prepare, parse_page
 
 class ImportTest(unittest.TestCase):
+    def test_affiliate_card_resolution(self):
+        body = (Path(__file__).parent / 'fixtures/MLB2766771378.html').read_text()
+        body = body.replace('Creatina 1kg Suplemento Monohidratada em pó 100% Pura - Soldiers Nutrition', 'Mouse Logitech G305')
+        body = body.replace('<div class="poly-card">', '<div class="poly-card"><img src="https://http2.mlstatic.com/test.jpg">')
+        row = parse_page(body, 'https://www.mercadolivre.com.br/social/owner', 'https://meli.la/example')
+        self.assertEqual(row['id'], 'MLB2766771378')
+        self.assertEqual(row['_observation']['price'], 68.90)
+        self.assertEqual(row['affiliateUrl'], 'https://meli.la/example')
+        with self.assertRaises(ValueError):
+            parse_page(body + body.replace('MLB2766771378', 'MLB2766771379'),
+                       'https://www.mercadolivre.com.br/social/owner', 'https://meli.la/example')
+
     def test_hosts(self):
         for url in ['http://meli.la/abc','https://meli.la.evil.com/abc','https://user@meli.la/abc','https://127.0.0.1/sec/a']:
             self.assertFalse(affiliate(url))

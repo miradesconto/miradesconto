@@ -13,7 +13,7 @@ from urllib.request import HTTPRedirectHandler, Request, build_opener
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / 'integracoes'))
-from product_card import identity
+from product_card import identity, Cards, Node, Unconfirmed, extract
 from rebuild_catalog import refresh_one
 from hourly_prices import Client, observe
 from tech_policy import category, reconcile
@@ -62,22 +62,68 @@ def resolve(link):
         body = response.read(3_000_001)
     if len(body) > 3_000_000:
         raise ValueError('Página grande demais; cadastro exige revisão')
-    item_id, variation = identity(final)
-    parser = Metadata()
-    parser.feed(body.decode('utf-8', errors='replace'))
-    name = parser.values.get('og:title', '').strip()
-    image = parser.values.get('og:image', '')
+    return parse_page(body.decode('utf-8', errors='replace'), final, link)
+
+
+def parse_page(body, final, link):
+    # Affiliate landing pages carry the actual listing in a product card.
+    # Never choose the first item from a list or infer an ID from tracking text.
+    observation = None
+    try:
+        item_id, variation = identity(final)
+        product_url = final
+        parser = Metadata()
+        parser.feed(body)
+        name = parser.values.get('og:title', '').strip()
+        image = parser.values.get('og:image', '')
+    except Unconfirmed:
+        cards = Cards()
+        cards.feed(body)
+        cards.close()
+        candidates = {}
+        for card in cards.root.find('poly-card'):
+            titles = card.find('poly-component__title')
+            if len(titles) != 1 or titles[0].tag != 'a':
+                continue
+            url = titles[0].attrs.get('href', '')
+            try:
+                found_id, found_variation = identity(url)
+            except Unconfirmed:
+                continue
+            def images(node):
+                found = []
+                if node.tag == 'img':
+                    found.append(node.attrs.get('data-src') or node.attrs.get('src') or '')
+                for child in node.children:
+                    if isinstance(child, Node):
+                        found.extend(images(child))
+                return found
+            image_urls = [u for u in images(card) if urlsplit(u).scheme == 'https'
+                          and (urlsplit(u).hostname or '').endswith('.mlstatic.com')]
+            if len(set(image_urls)) != 1:
+                continue
+            key = (found_id, found_variation)
+            value = (url, titles[0].text().strip(), image_urls[0])
+            if key in candidates and candidates[key] != value:
+                raise ValueError('Cartões divergentes; revisão necessária')
+            candidates[key] = value
+        if len(candidates) != 1:
+            raise ValueError('Link aponta para lista ou página sem um único anúncio identificável')
+        (item_id, variation), (product_url, name, image) = next(iter(candidates.items()))
+        observation = extract(body, item_id, product_url)
     ip = urlsplit(image)
     if not name or len(name) > 300 or ip.scheme != 'https' or not (ip.hostname or '').endswith('.mlstatic.com'):
         raise ValueError('Título/imagem não confirmados; página pode estar bloqueada')
     result = dict(id=item_id, itemId=item_id, name=name, imageUrl=image,
-                  affiliateUrl=link, productUrl=final, featured=False)
+                  affiliateUrl=link, productUrl=product_url, featured=False)
     if variation:
         raise ValueError('Produto com variação exige revisão manual antes do cadastro')
     label = category(result)
     if not label:
         raise ValueError('Produto não reconhecido como tech; revisar categoria')
     result['category'] = label
+    if observation:
+        result['_observation'] = observation
     return result
 
 
@@ -92,7 +138,20 @@ def prepare(current, archive, links, now, resolver=resolve, verifier=None):
             raise ValueError('Produto já cadastrado: ' + candidate['id'])
         candidate['rank'] = len(updated['products']) + 1
         candidate['registrationSource'] = 'affiliate-panel'
-        verified = verifier(candidate, now) if verifier else None
+        observation = candidate.pop('_observation', None)
+        verified = None
+        if observation:
+            price, old = observation['price'], observation['oldPrice']
+            discount = round((1 - price / old) * 100, 4) if old else None
+            verified = dict(candidate, price=price, oldPrice=old, discount=discount,
+                displayedDiscount=f'{round(discount)}% OFF' if discount else None,
+                available=None, availabilityStatus='unknown', priceSource='poly-card-v1',
+                collectedAt=now.strftime('%d/%m/%Y'),
+                priceCheck=dict(status='verified', method='poly-card-v1',
+                    itemId=candidate['id'], variationId=None, currency='BRL',
+                    checkedAt=now.isoformat(timespec='seconds'), price=price, oldPrice=old))
+        elif verifier:
+            verified = verifier(candidate, now)
         if verified is None:
             verified, error = refresh_one(candidate, now.isoformat(timespec='seconds'))
             if verified is None:
@@ -109,6 +168,8 @@ def prepare(current, archive, links, now, resolver=resolve, verifier=None):
 
 def main():
     links = os.environ.get('AFFILIATE_LINKS', '').split()
+    if not links:
+        links = catalogo.read_json(ROOT / 'integracoes/mercadolivre/cadastro-pendente.json')['links']
     client = None
     try:
         client = Client()
