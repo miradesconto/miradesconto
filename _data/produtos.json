@@ -283,5 +283,15 @@
     "name": "Notebook Acer Aspire 5 A515-45-R2A3 AMD Ryzen 5 5500U Windows 11 Home 8GB 512GB SSD 15,6' Full HD",
     "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_759351-MLU77118311686_062024-T.webp",
     "available": true
+  },
+  "MLB7657450942": {
+    "name": "Laptop Asus Vivobook 15 F1504va Intel Core",
+    "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_861106-CBT116316724930_092026-T.webp",
+    "available": true
+  },
+  "MLB5879140276": {
+    "name": "Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB DDR4 • 512 GB SSD • Tela 15,6\" FHD IPS • Windows 11 Home • Wi-Fi 6",
+    "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_872069-MLA96255973058_102025-T.webp",
+    "available": true
   }
 }
