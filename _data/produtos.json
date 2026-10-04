@@ -268,5 +268,20 @@
     "name": "Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB SSD, Windows 11 Home, Tela 14\" IPS, Matte Gray - S3407CA-LY115W",
     "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_727317-MLA101294168698_122025-T.webp",
     "available": true
+  },
+  "MLB6276754000": {
+    "name": "Notebook ASUS Vivobook Go 15, Intel Core i3 N305, 8GB RAM, 512GB SSD, Windows 11 Home, Tela NanoEdge 15,6\" FHD, Cool Silver - E1504GA-NJ435W",
+    "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_792275-MLA99470991702_112025-V.webp",
+    "available": true
+  },
+  "MLB7716999728": {
+    "name": "Notebook Nimo 43cm R7 8 Núcleos 32gb Ddr5 1tb Ssd Wifi6",
+    "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_952823-CBT118589152183_102026-T.webp",
+    "available": true
+  },
+  "MLB6225162726": {
+    "name": "Notebook Acer Aspire 5 A515-45-R2A3 AMD Ryzen 5 5500U Windows 11 Home 8GB 512GB SSD 15,6' Full HD",
+    "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_759351-MLU77118311686_062024-T.webp",
+    "available": true
   }
 }
