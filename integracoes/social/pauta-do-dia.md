@@ -1,6 +1,6 @@
 # Pauta automática — MiraDesconto
 
-Catálogo-base: 03/10/2026
+Catálogo-base: 04/10/2026
 
 Somente tecnologia com desconto e preço verificado nas últimas 24 horas é elegível. Estoque não confirmado. Seleção automática com variedade de categorias. Confirme a oferta antes de publicar, pois preço e estoque podem mudar.
 
@@ -85,7 +85,61 @@ Link na oferta
 
 ---
 
-## 4. Kit de Gravação Youtuber Tiktoker Video Maker Estabilizador Com Microfone Tripé Led Vlog Profissional Para Celular iPhone/android Luz Led Para Gravação E Fotos Cor Preto - Good Vision
+## 4. HP EliteBook x360 1030 G8 2-em-1 Ecrã Touchscreen Laptop Intel Core i5-1145G7 16GB RAM 256GB SSD Windows 11 Pro Convertible Notebook PC para jogos, Negócios & Estudos
+
+**Categoria:** PC e hardware
+**Preço:** R$ 2.542,00
+**Desconto:** 60%
+**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_798449-MLA117703048141_092026-T.webp
+**Link afiliado:** https://meli.la/1NguveN
+
+**Legenda pronta:**
+
+Tech #4: HP EliteBook x360 1030 G8 2-em-1 Ecrã Touchscreen Laptop Intel Core i5-1145G7 16GB RAM 256GB SSD Windows 11 Pro Convertible Notebook PC para jogos, Negócios & Estudos
+💰 R$ 2.542,00
+🔥 60% sobre a referência da loja
+👉 https://meli.la/1NguveN
+
+Preço verificado; estoque não confirmado. Confira frete e condições no Mercado Livre. Link de afiliado.
+
+**Texto curto para Story:**
+
+TECH NA MIRA
+HP EliteBook x360 1030 G8 2-em-1 Ecrã Touchscreen Laptop Intel Core i5-1145G7 16GB RAM 256GB SSD Windows 11 Pro Convertible Notebook PC para jogos, Negócios & Estudos
+R$ 2.542,00
+60% OFF
+Link na oferta
+
+---
+
+## 5. Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung Pc P4 Ps 4 Dual Shock Manete Pc Gamer Tv Smart Controle Bluetooth Celular Headset Sem Fio Com P2 Marca Redfin
+
+**Categoria:** Gaming
+**Preço:** R$ 48,75
+**Desconto:** 58%
+**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_762912-MLA105696431793_012026-AB.webp
+**Link afiliado:** https://meli.la/1ZWvPsz
+
+**Legenda pronta:**
+
+Tech #5: Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung Pc P4 Ps 4 Dual Shock Manete Pc Gamer Tv Smart Controle Bluetooth Celular Headset Sem Fio Com P2 Marca Redfin
+💰 R$ 48,75
+🔥 58% sobre a referência da loja
+👉 https://meli.la/1ZWvPsz
+
+Preço verificado; estoque não confirmado. Confira frete e condições no Mercado Livre. Link de afiliado.
+
+**Texto curto para Story:**
+
+TECH NA MIRA
+Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung Pc P4 Ps 4 Dual Shock Manete Pc Gamer Tv Smart Controle Bluetooth Celular Headset Sem Fio Com P2 Marca Redfin
+R$ 48,75
+58% OFF
+Link na oferta
+
+---
+
+## 6. Kit de Gravação Youtuber Tiktoker Video Maker Estabilizador Com Microfone Tripé Led Vlog Profissional Para Celular iPhone/android Luz Led Para Gravação E Fotos Cor Preto - Good Vision
 
 **Categoria:** Setup
 **Preço:** R$ 33,98
@@ -95,7 +149,7 @@ Link na oferta
 
 **Legenda pronta:**
 
-Tech #4: Kit de Gravação Youtuber Tiktoker Video Maker Estabilizador Com Microfone Tripé Led Vlog Profissional Para Celular iPhone/android Luz Led Para Gravação E Fotos Cor Preto - Good Vision
+Tech #6: Kit de Gravação Youtuber Tiktoker Video Maker Estabilizador Com Microfone Tripé Led Vlog Profissional Para Celular iPhone/android Luz Led Para Gravação E Fotos Cor Preto - Good Vision
 💰 R$ 33,98
 🔥 57% sobre a referência da loja
 👉 https://meli.la/1qxgRfd
@@ -112,7 +166,34 @@ Link na oferta
 
 ---
 
-## 5. Carregador 30w Turbo Para iPhone 8 X Xr 11 12 13 14 Pro Max Fonte Usb C Cor Branca Dtimp
+## 7. Câmera Inteligente Full HD Im3 C Mibo Cam WIFI Branca Intelbras
+
+**Categoria:** Smart Home
+**Preço:** R$ 175,50
+**Desconto:** 56%
+**Imagem:** https://http2.mlstatic.com/D_NQ_NP_600720-MLA99856285817_112025-O.webp
+**Link afiliado:** https://meli.la/2Rn4wgJ
+
+**Legenda pronta:**
+
+Tech #7: Câmera Inteligente Full HD Im3 C Mibo Cam WIFI Branca Intelbras
+💰 R$ 175,50
+🔥 56% sobre a referência da loja
+👉 https://meli.la/2Rn4wgJ
+
+Preço verificado; estoque não confirmado. Confira frete e condições no Mercado Livre. Link de afiliado.
+
+**Texto curto para Story:**
+
+TECH NA MIRA
+Câmera Inteligente Full HD Im3 C Mibo Cam WIFI Branca Intelbras
+R$ 175,50
+56% OFF
+Link na oferta
+
+---
+
+## 8. Carregador 30w Turbo Para iPhone 8 X Xr 11 12 13 14 Pro Max Fonte Usb C Cor Branca Dtimp
 
 **Categoria:** Celulares
 **Preço:** R$ 44,00
@@ -122,7 +203,7 @@ Link na oferta
 
 **Legenda pronta:**
 
-Tech #5: Carregador 30w Turbo Para iPhone 8 X Xr 11 12 13 14 Pro Max Fonte Usb C Cor Branca Dtimp
+Tech #8: Carregador 30w Turbo Para iPhone 8 X Xr 11 12 13 14 Pro Max Fonte Usb C Cor Branca Dtimp
 💰 R$ 44,00
 🔥 56% sobre a referência da loja
 👉 https://meli.la/2ieozdj
@@ -139,7 +220,7 @@ Link na oferta
 
 ---
 
-## 6. Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo Preto
+## 9. Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo Preto
 
 **Categoria:** Áudio
 **Preço:** R$ 63,99
@@ -149,7 +230,7 @@ Link na oferta
 
 **Legenda pronta:**
 
-Tech #6: Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo Preto
+Tech #9: Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo Preto
 💰 R$ 63,99
 🔥 56% sobre a referência da loja
 👉 https://meli.la/21uDpWj
@@ -166,34 +247,7 @@ Link na oferta
 
 ---
 
-## 7. Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung Pc P4 Ps 4 Dual Shock Manete Pc Gamer Tv Smart Controle Bluetooth Celular Headset Sem Fio Com P2 Marca Redfin
-
-**Categoria:** Gaming
-**Preço:** R$ 51,32
-**Desconto:** 55%
-**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_762912-MLA105696431793_012026-AB.webp
-**Link afiliado:** https://meli.la/1ZWvPsz
-
-**Legenda pronta:**
-
-Tech #7: Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung Pc P4 Ps 4 Dual Shock Manete Pc Gamer Tv Smart Controle Bluetooth Celular Headset Sem Fio Com P2 Marca Redfin
-💰 R$ 51,32
-🔥 55% sobre a referência da loja
-👉 https://meli.la/1ZWvPsz
-
-Preço verificado; estoque não confirmado. Confira frete e condições no Mercado Livre. Link de afiliado.
-
-**Texto curto para Story:**
-
-TECH NA MIRA
-Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung Pc P4 Ps 4 Dual Shock Manete Pc Gamer Tv Smart Controle Bluetooth Celular Headset Sem Fio Com P2 Marca Redfin
-R$ 51,32
-55% OFF
-Link na oferta
-
----
-
-## 8. Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto 127/220v
+## 10. Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto 127/220v
 
 **Categoria:** Impressoras
 **Preço:** R$ 283,97
@@ -203,7 +257,7 @@ Link na oferta
 
 **Legenda pronta:**
 
-Tech #8: Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto 127/220v
+Tech #10: Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto 127/220v
 💰 R$ 283,97
 🔥 53% sobre a referência da loja
 👉 https://meli.la/33RTYB9
@@ -220,34 +274,7 @@ Link na oferta
 
 ---
 
-## 9. Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor Preto Compatível Com Android Samsung Motorola Xiaomi Chrome Technology
-
-**Categoria:** Smart Home
-**Preço:** R$ 37,98
-**Desconto:** 52%
-**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_688002-MLA115581994404_092026-AB.webp
-**Link afiliado:** https://meli.la/1CAFDEb
-
-**Legenda pronta:**
-
-Tech #9: Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor Preto Compatível Com Android Samsung Motorola Xiaomi Chrome Technology
-💰 R$ 37,98
-🔥 52% sobre a referência da loja
-👉 https://meli.la/1CAFDEb
-
-Preço verificado; estoque não confirmado. Confira frete e condições no Mercado Livre. Link de afiliado.
-
-**Texto curto para Story:**
-
-TECH NA MIRA
-Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor Preto Compatível Com Android Samsung Motorola Xiaomi Chrome Technology
-R$ 37,98
-52% OFF
-Link na oferta
-
----
-
-## 10. Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco Frio Quente Neutro
+## 11. Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco Frio Quente Neutro
 
 **Categoria:** Setup
 **Preço:** R$ 48,49
@@ -257,7 +284,7 @@ Link na oferta
 
 **Legenda pronta:**
 
-Tech #10: Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco Frio Quente Neutro
+Tech #11: Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco Frio Quente Neutro
 💰 R$ 48,49
 🔥 52% sobre a referência da loja
 👉 https://meli.la/17RbS8M
@@ -274,7 +301,7 @@ Link na oferta
 
 ---
 
-## 11. Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto 127/220v
+## 12. Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto 127/220v
 
 **Categoria:** Áudio
 **Preço:** R$ 389,00
@@ -284,7 +311,7 @@ Link na oferta
 
 **Legenda pronta:**
 
-Tech #11: Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto 127/220v
+Tech #12: Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto 127/220v
 💰 R$ 389,00
 🔥 51% sobre a referência da loja
 👉 https://meli.la/1bWnNwc
@@ -297,33 +324,6 @@ TECH NA MIRA
 Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto 127/220v
 R$ 389,00
 51% OFF
-Link na oferta
-
----
-
-## 12. Kit 4 Botão Capa Analógico Protetora Compatível Controle Ps5
-
-**Categoria:** Gaming
-**Preço:** R$ 19,96
-**Desconto:** 50%
-**Imagem:** https://http2.mlstatic.com/D_NQ_NP_641341-MLB109378980820_042026-O-kit-4-botao-capa-analogico-protetora-compativel-controle-ps5.webp
-**Link afiliado:** https://meli.la/2kReSt2
-
-**Legenda pronta:**
-
-Tech #12: Kit 4 Botão Capa Analógico Protetora Compatível Controle Ps5
-💰 R$ 19,96
-🔥 50% sobre a referência da loja
-👉 https://meli.la/2kReSt2
-
-Preço verificado; estoque não confirmado. Confira frete e condições no Mercado Livre. Link de afiliado.
-
-**Texto curto para Story:**
-
-TECH NA MIRA
-Kit 4 Botão Capa Analógico Protetora Compatível Controle Ps5
-R$ 19,96
-50% OFF
 Link na oferta
 
 ---
