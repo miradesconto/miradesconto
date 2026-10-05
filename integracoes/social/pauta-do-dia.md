@@ -7,16 +7,16 @@ Somente tecnologia com desconto e preço verificado nas últimas 24 horas é ele
 ## 1. Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão Noturna Colorida Full Hd Externa Prova D'água Ip66 Sensor Movimento Woosh
 
 **Categoria:** Smart Home
-**Preço:** R$ 118,47
-**Desconto:** 70%
+**Preço:** R$ 113,05
+**Desconto:** 72%
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_798945-MLA112454329586_062026-AB.webp
 **Link afiliado:** https://meli.la/1DrhTfp
 
 **Legenda pronta:**
 
 Tech #1: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão Noturna Colorida Full Hd Externa Prova D'água Ip66 Sensor Movimento Woosh
-💰 R$ 118,47
-🔥 70% sobre a referência da loja
+💰 R$ 113,05
+🔥 72% sobre a referência da loja
 👉 https://meli.la/1DrhTfp
 
 Preço verificado; estoque não confirmado. Confira frete e condições no Mercado Livre. Link de afiliado.
@@ -25,8 +25,8 @@ Preço verificado; estoque não confirmado. Confira frete e condições no Merca
 
 TECH NA MIRA
 Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão Noturna Colorida Full Hd Externa Prova D'água Ip66 Sensor Movimento Woosh
-R$ 118,47
-70% OFF
+R$ 113,05
+72% OFF
 Link na oferta
 
 ---

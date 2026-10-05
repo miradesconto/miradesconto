@@ -333,5 +333,10 @@
     "name": "Computador Portátil Nimo 15.6 Ryzen 7 32 Gb Ram 1 Tb Ssd",
     "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_867166-CBT118590422363_102026-T.webp",
     "available": true
+  },
+  "MLB5772512192": {
+    "name": "Notebook 15.6\" Acer Aspire Go 15 Intel Core i7 13ª Geração 16GB RAM DDR5 512GB SSD Tela Full HD Teclado Numérico Autonomia de 8h Wi-Fi 6 Sistema Operacional Linux",
+    "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_888726-MLA116704317176_092026-T.webp",
+    "available": true
   }
 }
