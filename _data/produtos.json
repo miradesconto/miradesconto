@@ -298,5 +298,10 @@
     "name": "Notebook Asus Zenbook 13 I7 8gb 512gb Ssd 13,3",
     "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_850459-CBT116077905550_092026-T.webp",
     "available": true
+  },
+  "MLB4759109869": {
+    "name": "Notebook Acer Aspire 5 A515-45-R2A3 AMD Ryzen 5 5500U Windows 11 Home 8GB 512GB SSD 15,6' Full HD",
+    "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_759351-MLU77118311686_062024-T.webp",
+    "available": true
   }
 }

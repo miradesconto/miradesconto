@@ -3,12 +3,12 @@
   "featuredPolicy": "first-12-published",
   "metadata": {
     "sourceFile": "Mercado Livre — páginas públicas oficiais de afiliados",
-    "collectedAt": "04/10/2026",
+    "collectedAt": "05/10/2026",
     "apiSync": {
       "source": "Mercado Livre — páginas públicas de afiliados",
-      "updatedAt": "2026-10-04T23:27:24+00:00",
+      "updatedAt": "2026-10-05T00:40:31+00:00",
       "strategy": "exact-product-card-v1",
-      "linksChecked": 66,
+      "linksChecked": 68,
       "pricesConfirmed": 48
     },
     "rotationCursor": 445,
@@ -79,7 +79,8 @@
     "MLB6225162726",
     "MLB7657450942",
     "MLB5879140276",
-    "MLB7628110284"
+    "MLB7628110284",
+    "MLB4759109869"
   ],
   "products": [
     {
@@ -977,7 +978,7 @@
       "rating": 4.8,
       "salesText": "+50mil vendidos",
       "highlight": "MAIS VENDIDO",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "source": "Mercado Livre — cartão público do produto",
       "rank": 32,
       "imageSource": "https://www.mercadolivre.com.br/carregador-30w-turbo-para-iphone-8-x-xr-11-12-13-14-pro-max-fonte-usb-c-cor-branca-dtimp/p/MLB47814270?pdp_filters=item_id%3AMLB4171634813&extra_comm=true&brand_comm=false#wid=MLB4171634813",
@@ -992,7 +993,7 @@
         "itemId": "MLB4171634813",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-04T23:27:24+00:00",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
         "price": 44.0,
         "oldPrice": 99.9
       }
@@ -2380,7 +2381,7 @@
       "rating": 4.8,
       "salesText": "+10mil vendidos",
       "highlight": "MAIS VENDIDO",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "source": "Mercado Livre — cartão público do produto",
       "rank": 5,
       "imageSource": "https://www.mercadolivre.com.br/camera-de-seguranca-wi-fi-icseeyoosee-a28b-4k-dupla-lente-visao-noturna-colorida-full-hd-externa-prova-dagua-ip66-sensor-movimento-woosh/p/MLB60074213?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB6972453978&sid=affiliates",
@@ -2395,7 +2396,7 @@
         "itemId": "MLB6972453978",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-04T23:27:24+00:00",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
         "price": 118.47,
         "oldPrice": 399.0
       }
@@ -2458,7 +2459,7 @@
       "rating": 4.7,
       "salesText": "+1000 vendidos",
       "highlight": "MAIS VENDIDO",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "source": "Mercado Livre — cartão público do produto",
       "rank": 6,
       "imageSource": "https://www.mercadolivre.com.br/ring-light-iluminador-led-profissional-26cm-tripe-210m-luz-branco-frio-quente-neutro/p/MLB57684391?pdp_filters=item_id%3AMLB6824618506&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB6824618506&sid=affiliates",
@@ -2473,7 +2474,7 @@
         "itemId": "MLB6824618506",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-04T23:27:24+00:00",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
         "price": 48.49,
         "oldPrice": 99.98
       }
@@ -2916,7 +2917,7 @@
       "rating": 4.9,
       "salesText": "+50mil vendidos",
       "highlight": "MAIS VENDIDO",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "source": "Mercado Livre — cartão público do produto",
       "rank": 7,
       "imageSource": "https://www.mercadolivre.com.br/camera-inteligente-full-hd-im3-c-mibo-cam-wifi-branca-intelbras/p/MLB24214075?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#wid=MLB4092967763",
@@ -2931,7 +2932,7 @@
         "itemId": "MLB4092967763",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-04T23:27:24+00:00",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
         "price": 175.5,
         "oldPrice": 401.0
       }
@@ -3872,7 +3873,7 @@
       "rating": 4.7,
       "salesText": "+100mil vendidos",
       "highlight": "MAIS VENDIDO",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "source": "Mercado Livre — cartão público do produto",
       "rank": 8,
       "imageSource": "https://www.mercadolivre.com.br/controle-sem-fio-joystick-bluetooth-para-ps4-videogame-tv-samsung-pc-p4-ps-4-dual-shock-manete-pc-gamer-tv-smart-controle-bluetooth-celular-headset-sem-fio-com-p2-marca-redfin/p/MLB39960346?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB5811879470&sid=affiliates",
@@ -3887,7 +3888,7 @@
         "itemId": "MLB5811879470",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-04T23:27:24+00:00",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
         "price": 48.75,
         "oldPrice": 114.9
       }
@@ -4466,7 +4467,7 @@
       "rating": 4.7,
       "salesText": "+5mil vendidos",
       "highlight": "MAIS VENDIDO",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "source": "Mercado Livre — cartão público do produto",
       "rank": 9,
       "imageSource": "https://www.mercadolivre.com.br/apple-car-play-adaptador-usb-sem-fio-iphone-plug-play/up/MLBU3411651312?pdp_filters=item_id%3AMLB4195554165&extra_comm=true&brand_comm=false#wid=MLB4195554165",
@@ -4481,7 +4482,7 @@
         "itemId": "MLB4195554165",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-04T23:27:24+00:00",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
         "price": 121.25,
         "oldPrice": 250.0
       }
@@ -5236,7 +5237,7 @@
       "rating": 4.4,
       "salesText": "+10mil vendidos",
       "highlight": "MAIS VENDIDO",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "source": "Mercado Livre — cartão público do produto",
       "rank": 10,
       "imageSource": "https://www.mercadolivre.com.br/mini-localizador-rastreador-smart-tag-gps-com-cordao-chaveiro-cor-preto-compativel-com-android-samsung-motorola-xiaomi-chrome-technology/p/MLB64186498?pdp_filters=item_id%3AMLB4415801503&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB4415801503&sid=affiliates",
@@ -5251,7 +5252,7 @@
         "itemId": "MLB4415801503",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-04T23:27:24+00:00",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
         "price": 37.98,
         "oldPrice": 78.99
       }
@@ -6563,7 +6564,7 @@
       "rating": 4.8,
       "salesText": "+1000 vendidos",
       "highlight": "MAIS VENDIDO",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "source": "Mercado Livre — cartão público do produto",
       "rank": 11,
       "imageSource": "https://www.mercadolivre.com.br/kit-4-botao-capa-analogico-protetora-compativel-controle-ps5/up/MLBU3887199569?pdp_filters=item_id%3AMLB4595951147&extra_comm=true&brand_comm=false#wid=MLB4595951147",
@@ -6578,7 +6579,7 @@
         "itemId": "MLB4595951147",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-04T23:27:24+00:00",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
         "price": 19.96,
         "oldPrice": 39.99
       }
@@ -9009,7 +9010,7 @@
       "rating": 4.8,
       "salesText": "+10mil vendidos",
       "highlight": "MAIS VENDIDO",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "source": "Mercado Livre — cartão público do produto",
       "rank": 13,
       "imageSource": "https://www.mercadolivre.com.br/suporte-base-carregador-controles-compativel-com-playstation-ps4-base-de-carregamento-gamer-ps4-estacao-indicador-inteligente-compativel-v1-v2-pro-e-slim-base-antiderrapante-marca-voreon/p/MLB52368624?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#wid=MLB4019563829",
@@ -9024,7 +9025,7 @@
         "itemId": "MLB4019563829",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-04T23:27:24+00:00",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
         "price": 39.9,
         "oldPrice": 74.9
       }
@@ -9303,7 +9304,7 @@
       "rating": 4.9,
       "salesText": "+1000 vendidos",
       "highlight": "MAIS VENDIDO",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "source": "Mercado Livre — cartão público do produto",
       "rank": 15,
       "imageSource": "https://www.mercadolivre.com.br/conversor-midia-fibra-optica-gigabit-rj45-1000-mb-par-ab/up/MLBU3102659913?pdp_filters=item_id%3AMLB5339791448&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB5339791448&sid=affiliates",
@@ -9318,7 +9319,7 @@
         "itemId": "MLB5339791448",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-04T23:27:24+00:00",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
         "price": 68.46,
         "oldPrice": 168.07
       }
@@ -9909,7 +9910,7 @@
       "rating": 4.6,
       "salesText": "+1000 vendidos",
       "highlight": "MAIS VENDIDO",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "source": "Mercado Livre — cartão público do produto",
       "rank": 16,
       "imageSource": "https://www.mercadolivre.com.br/carregador-magnetico-fam-magsafe-usbc-15w-p-iphone-12-a-16/up/MLBU3853539220?pdp_filters=item_id%3AMLB6472092088&extra_comm=true&brand_comm=false#wid=MLB6472092088",
@@ -9924,7 +9925,7 @@
         "itemId": "MLB6472092088",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-04T23:27:24+00:00",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
         "price": 31.51,
         "oldPrice": 99.9
       }
@@ -14898,7 +14899,7 @@
       "rating": 4.7,
       "salesText": "+10mil vendidos",
       "highlight": "MAIS VENDIDO",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "source": "Mercado Livre — cartão público do produto",
       "rank": 17,
       "imageSource": "https://www.mercadolivre.com.br/kit-chave-precisao-profissional-115-pecas-magnetico-manutencao-celular-notebook-jogo-compacta-multiuso-iphone-computador-video-game-tablet-philips-fendatorx-y-nixzen/p/MLB62110990?pdp_filters=item_id%3AMLB5932934872&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB5932934872&sid=affiliates",
@@ -14913,7 +14914,7 @@
         "itemId": "MLB5932934872",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-04T23:27:24+00:00",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
         "price": 33.9,
         "oldPrice": 54.9
       }
@@ -15620,7 +15621,7 @@
       "rating": 4.7,
       "salesText": "+10mil vendidos",
       "highlight": "MAIS VENDIDO",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "source": "Mercado Livre — cartão público do produto",
       "rank": 18,
       "imageSource": "https://www.mercadolivre.com.br/kit-mouse-teclado-magnetico-bluetooth-para-lite-p610-tab-s6/up/MLBU2723847117?pdp_filters=item_id%3AMLB5601054808&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB5601054808&sid=affiliates",
@@ -15635,7 +15636,7 @@
         "itemId": "MLB5601054808",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-04T23:27:24+00:00",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
         "price": 52.9,
         "oldPrice": 78.9
       }
@@ -15698,7 +15699,7 @@
       "rating": 4.8,
       "salesText": "+1000 vendidos",
       "highlight": " OFERTA IMPERDÍVEL",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "source": "Mercado Livre — cartão público do produto",
       "rank": 19,
       "imageSource": "https://www.mercadolivre.com.br/fone-esportivo-bluetooth-corrida-sem-fio-prova-agua-ciclismo/up/MLBU3170769568?pdp_filters=item_id%3AMLB5381954840&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB5381954840&sid=affiliates",
@@ -15713,7 +15714,7 @@
         "itemId": "MLB5381954840",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-04T23:27:24+00:00",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
         "price": 63.99,
         "oldPrice": 145.14
       }
@@ -17045,7 +17046,7 @@
       "rating": 4.8,
       "salesText": "+5mil vendidos",
       "highlight": "MAIS VENDIDO",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "source": "Mercado Livre — cartão público do produto",
       "rank": 20,
       "imageSource": "https://www.mercadolivre.com.br/base-cooler-dobe-para-ps5-slim-e-fat-com-portos-de-carga-e-rgb-cor-banca/p/MLB39936000?pdp_filters=item_id%3AMLB5714906868&extra_comm=true&brand_comm=false#wid=MLB5714906868",
@@ -17060,7 +17061,7 @@
         "itemId": "MLB5714906868",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-04T23:27:24+00:00",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
         "price": 179.99,
         "oldPrice": 231.99
       }
@@ -17737,7 +17738,7 @@
       "rating": 4.7,
       "salesText": "+10mil vendidos",
       "highlight": "MAIS BUSCADO",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "source": "Mercado Livre — cartão público do produto",
       "rank": 21,
       "imageSource": "https://produto.mercadolivre.com.br/MLB-5649300420-caneta-3d-impressora-profissional-refil-filamento-usb-_JM?pdp_filters=item_id%3AMLB5649300420&extra_comm=true&brand_comm=false#polycard_client=affiliates&sid=affiliates",
@@ -17752,7 +17753,7 @@
         "itemId": "MLB5649300420",
         "variationId": "190223671251",
         "currency": "BRL",
-        "checkedAt": "2026-10-04T23:27:24+00:00",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
         "price": 62.9,
         "oldPrice": 78.99
       }
@@ -17913,7 +17914,7 @@
       "rating": 4.9,
       "salesText": "+1000 vendidos",
       "highlight": "MAIS VENDIDO",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "source": "Mercado Livre — cartão público do produto",
       "rank": 22,
       "imageSource": "https://www.mercadolivre.com.br/vitrola-anos-80-maleta-grava-reproduz-lp-cor-preto-110v220v/up/MLBU3468870302?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB4235386613&sid=affiliates",
@@ -17928,7 +17929,7 @@
         "itemId": "MLB4235386613",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-04T23:27:24+00:00",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
         "price": 389.0,
         "oldPrice": 799.9
       }
@@ -18099,7 +18100,7 @@
       "rating": 4.9,
       "salesText": "+5mil vendidos",
       "highlight": "MAIS VENDIDO",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "source": "Mercado Livre — cartão público do produto",
       "rank": 23,
       "imageSource": "https://www.mercadolivre.com.br/apresentador-controle-passador-slide-caneta-laser-profissional-sem-fio-preto-mouse-multimidia-wireless-usb-para-palestras-aulas-reunioes-apresentacoes-usb-diggicom/p/MLB67181800?pdp_filters=item_id%3AMLB6538401302&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB6538401302&sid=affiliates",
@@ -18114,7 +18115,7 @@
         "itemId": "MLB6538401302",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-04T23:27:24+00:00",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
         "price": 25.9,
         "oldPrice": 39.9
       }
@@ -18177,7 +18178,7 @@
       "rating": 4.8,
       "salesText": "+1000 vendidos",
       "highlight": "MAIS VENDIDO",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "source": "Mercado Livre — cartão público do produto",
       "rank": 24,
       "imageSource": "https://www.mercadolivre.com.br/soprador-de-ar-portatil-sem-fio-limpeza-teclado-pc-turbo/up/MLBU3974567495?pdp_filters=item_id%3AMLB4693835629&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB4693835629&sid=affiliates",
@@ -18192,7 +18193,7 @@
         "itemId": "MLB4693835629",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-04T23:27:24+00:00",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
         "price": 48.99,
         "oldPrice": 72.99
       }
@@ -18255,7 +18256,7 @@
       "rating": 4.3,
       "salesText": "+1000 vendidos",
       "highlight": "MAIS VENDIDO",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "source": "Mercado Livre — cartão público do produto",
       "rank": 25,
       "imageSource": "https://www.mercadolivre.com.br/power-bank-carregador-magsafe-5000mh-magnetico-iphone-induca/up/MLBU3895671967?pdp_filters=item_id%3AMLB6618891208&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB6618891208&sid=affiliates",
@@ -18270,7 +18271,7 @@
         "itemId": "MLB6618891208",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-04T23:27:24+00:00",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
         "price": 50.65,
         "oldPrice": 99.99
       }
@@ -18294,7 +18295,7 @@
       "rating": 4.7,
       "salesText": "+500 vendidos",
       "highlight": "MAIS VENDIDO",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "source": "Mercado Livre — cartão público do produto",
       "rank": 33,
       "imageSource": "https://www.mercadolivre.com.br/mini-impressora-etiquetas-termica-bluetooth-portatil-armazem/up/MLBU4209494895?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB4849013383&sid=affiliates",
@@ -18309,7 +18310,7 @@
         "itemId": "MLB4849013383",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-04T23:27:24+00:00",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
         "price": 289.95,
         "oldPrice": 599.0
       }
@@ -19438,7 +19439,7 @@
       "rating": 4.9,
       "salesText": "+10mil vendidos",
       "highlight": "MAIS VENDIDO",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "source": "Mercado Livre — cartão público do produto",
       "rank": 4,
       "imageSource": "https://www.mercadolivre.com.br/console-nintendo-switch-2-modelo-nacional-de-tomada/p/MLB49200061?pdp_filters=item_id%3AMLB6212972552&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB6212972552&sid=affiliates",
@@ -19453,7 +19454,7 @@
         "itemId": "MLB6212972552",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-04T23:27:24+00:00",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
         "price": 4499.0,
         "oldPrice": 5111.0
       }
@@ -22017,7 +22018,7 @@
       "rating": 4.6,
       "salesText": "+1000 vendidos",
       "highlight": "MAIS BUSCADO",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "source": "Mercado Livre — cartão público do produto",
       "rank": 28,
       "imageSource": "https://produto.mercadolivre.com.br/MLB-3964989671-mini-modem-lte-4g-notebook-usb-roteador-wifi-rapido-c-nf-_JM?searchVariation=186827495487&pdp_filters=item_id%3AMLB3964989671&extra_comm=true&brand_comm=false",
@@ -22032,7 +22033,7 @@
         "itemId": "MLB3964989671",
         "variationId": "186827495487",
         "currency": "BRL",
-        "checkedAt": "2026-10-04T23:27:24+00:00",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
         "price": 84.38,
         "oldPrice": 125.77
       }
@@ -22056,7 +22057,7 @@
       "rating": 4.9,
       "salesText": "+10mil vendidos",
       "highlight": "MAIS VENDIDO",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "source": "Mercado Livre — cartão público do produto",
       "rank": 29,
       "imageSource": "https://www.mercadolivre.com.br/kit-8-grip-protetor-analogico-compativel-ps3-ps4-ps5-xbox/up/MLBU3121436041?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#wid=MLB4032151473",
@@ -22071,7 +22072,7 @@
         "itemId": "MLB4032151473",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-04T23:27:24+00:00",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
         "price": 17.48,
         "oldPrice": 29.99
       }
@@ -22164,7 +22165,7 @@
       "rating": 4.7,
       "salesText": "+5mil vendidos",
       "highlight": "MAIS VENDIDO",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "source": "Mercado Livre — cartão público do produto",
       "rank": 30,
       "imageSource": "https://www.mercadolivre.com.br/power-bank-20000mah-carregador-portatil-turbo-rapido-225w-display-digital-branco/p/MLB66524990?pdp_filters=item_id%3AMLB4530324007&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB4530324007&sid=affiliates",
@@ -22179,7 +22180,7 @@
         "itemId": "MLB4530324007",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-04T23:27:24+00:00",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
         "price": 67.71,
         "oldPrice": 78.04
       }
@@ -23544,7 +23545,7 @@
       "rating": 4.9,
       "salesText": "+10mil vendidos",
       "highlight": "LOJA OFICIAL APPLE",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "source": "Mercado Livre — cartão público do produto",
       "rank": 1,
       "imageSource": "https://www.mercadolivre.com.br/apple-iphone-15-128-gb-azul-distribuidor-autorizado/p/MLB1027172667?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB4408547152&sid=affiliates",
@@ -23559,7 +23560,7 @@
         "itemId": "MLB4408547152",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-04T23:27:24+00:00",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
         "price": 3998.0,
         "oldPrice": 7209.0
       }
@@ -24405,7 +24406,7 @@
       "rating": 4.8,
       "salesText": "+10mil vendidos",
       "highlight": " OFERTA IMPERDÍVEL",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "source": "Mercado Livre — cartão público do produto",
       "rank": 31,
       "imageSource": "https://produto.mercadolivre.com.br/MLB-5559182464-fone-de-ouvido-bluetooth-53-par-sem-fio-duplo-todos-celular-_JM?searchVariation=190916531897&pdp_filters=item_id%3AMLB5559182464&extra_comm=true&brand_comm=false#polycard_client=affiliates&sid=affiliates",
@@ -24420,7 +24421,7 @@
         "itemId": "MLB5559182464",
         "variationId": "190916531897",
         "currency": "BRL",
-        "checkedAt": "2026-10-04T23:27:24+00:00",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
         "price": 56.29,
         "oldPrice": 79.0
       }
@@ -24864,7 +24865,7 @@
       "rating": 4.6,
       "salesText": "+10mil vendidos",
       "highlight": "MAIS VENDIDO",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "source": "Mercado Livre — cartão público do produto",
       "rank": 34,
       "imageSource": "https://www.mercadolivre.com.br/adaptador-bluetooth-carro-universal-transmissor-gotwire-carregador-automotivo/p/MLB53196666?pdp_filters=item_id%3AMLB5529725942&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB5529725942&sid=affiliates",
@@ -24879,7 +24880,7 @@
         "itemId": "MLB5529725942",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-04T23:27:24+00:00",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
         "price": 19.91,
         "oldPrice": 21.9
       }
@@ -25119,7 +25120,7 @@
       "rating": 4.5,
       "salesText": "+1000 vendidos",
       "highlight": "MAIS VENDIDO",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "source": "Mercado Livre — cartão público do produto",
       "rank": 35,
       "imageSource": "https://www.mercadolivre.com.br/kit-2-suportes-celular-tablet-de-mesa-ajustavel-dobravel-universal-dr-hank-branco-e-preto-base-antiderrapante-suporte-ergonomico-altura-regulavel/p/MLB75431351?pdp_filters=item_id%3AMLB4887696253&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB4887696253&sid=affiliates",
@@ -25134,7 +25135,7 @@
         "itemId": "MLB4887696253",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-04T23:27:24+00:00",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
         "price": 20.45,
         "oldPrice": 32.99
       }
@@ -25305,7 +25306,7 @@
       "rating": 4.9,
       "salesText": "+5mil vendidos",
       "highlight": "MAIS VENDIDO",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "source": "Mercado Livre — cartão público do produto",
       "rank": 2,
       "imageSource": "https://www.mercadolivre.com.br/apple-iphone-16-128-gb-verde-acinzentado-distribuidor-autorizado/p/MLB1040287792?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#wid=MLB3931271317",
@@ -25320,7 +25321,7 @@
         "itemId": "MLB3931271317",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-04T23:27:24+00:00",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
         "price": 4572.0,
         "oldPrice": 7799.0
       }
@@ -25412,14 +25413,14 @@
       "available": null,
       "availabilityStatus": "unknown",
       "priceSource": "poly-card-v1",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "priceCheck": {
         "status": "verified",
         "method": "poly-card-v1",
         "itemId": "MLB4562931826",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-04T23:27:24+00:00",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
         "price": 3679.0,
         "oldPrice": 4299.0
       },
@@ -25444,14 +25445,14 @@
       "available": null,
       "availabilityStatus": "unknown",
       "priceSource": "poly-card-v1",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "priceCheck": {
         "status": "verified",
         "method": "poly-card-v1",
         "itemId": "MLB7118582958",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-04T23:27:24+00:00",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
         "price": 2133.0,
         "oldPrice": null
       },
@@ -25476,14 +25477,14 @@
       "available": null,
       "availabilityStatus": "unknown",
       "priceSource": "poly-card-v1",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "priceCheck": {
         "status": "verified",
         "method": "poly-card-v1",
         "itemId": "MLB5772874118",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-04T23:27:24+00:00",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
         "price": 8171.0,
         "oldPrice": 8786.0
       },
@@ -25572,14 +25573,14 @@
       "available": null,
       "availabilityStatus": "unknown",
       "priceSource": "poly-card-v1",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "priceCheck": {
         "status": "verified",
         "method": "poly-card-v1",
         "itemId": "MLB7576763078",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-04T22:29:03+00:00",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
         "price": 2864.0,
         "oldPrice": 3536.0
       },
@@ -25636,14 +25637,14 @@
       "available": null,
       "availabilityStatus": "unknown",
       "priceSource": "poly-card-v1",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "priceCheck": {
         "status": "verified",
         "method": "poly-card-v1",
         "itemId": "MLB4196187967",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-04T23:27:24+00:00",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
         "price": 7215.0,
         "oldPrice": 9935.0
       },
@@ -25668,14 +25669,14 @@
       "available": null,
       "availabilityStatus": "unknown",
       "priceSource": "poly-card-v1",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "priceCheck": {
         "status": "verified",
         "method": "poly-card-v1",
         "itemId": "MLB3995128209",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-04T23:27:24+00:00",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
         "price": 3299.0,
         "oldPrice": 4699.0
       },
@@ -25700,14 +25701,14 @@
       "available": null,
       "availabilityStatus": "unknown",
       "priceSource": "poly-card-v1",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "priceCheck": {
         "status": "verified",
         "method": "poly-card-v1",
         "itemId": "MLB5772512192",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-04T23:27:24+00:00",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
         "price": 7934.0,
         "oldPrice": null
       },
@@ -25764,14 +25765,14 @@
       "available": null,
       "availabilityStatus": "unknown",
       "priceSource": "poly-card-v1",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "priceCheck": {
         "status": "verified",
         "method": "poly-card-v1",
         "itemId": "MLB7477437366",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-04T23:27:24+00:00",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
         "price": 2799.0,
         "oldPrice": 3199.0
       },
@@ -25796,14 +25797,14 @@
       "available": null,
       "availabilityStatus": "unknown",
       "priceSource": "poly-card-v1",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "priceCheck": {
         "status": "verified",
         "method": "poly-card-v1",
         "itemId": "MLB4604524838",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-04T23:27:24+00:00",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
         "price": 3108.0,
         "oldPrice": 3849.0
       },
@@ -25860,14 +25861,14 @@
       "available": null,
       "availabilityStatus": "unknown",
       "priceSource": "poly-card-v1",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "priceCheck": {
         "status": "verified",
         "method": "poly-card-v1",
         "itemId": "MLB5751316838",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-04T23:27:24+00:00",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
         "price": 4180.0,
         "oldPrice": 4999.0
       },
@@ -25892,14 +25893,14 @@
       "available": null,
       "availabilityStatus": "unknown",
       "priceSource": "poly-card-v1",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "priceCheck": {
         "status": "verified",
         "method": "poly-card-v1",
         "itemId": "MLB7118776540",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-04T23:27:24+00:00",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
         "price": 2449.0,
         "oldPrice": 3099.0
       },
@@ -25956,14 +25957,14 @@
       "available": null,
       "availabilityStatus": "unknown",
       "priceSource": "poly-card-v1",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "priceCheck": {
         "status": "verified",
         "method": "poly-card-v1",
         "itemId": "MLB5761444412",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-04T23:27:24+00:00",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
         "price": 4069.0,
         "oldPrice": 5855.0
       },
@@ -26052,14 +26053,14 @@
       "available": null,
       "availabilityStatus": "unknown",
       "priceSource": "poly-card-v1",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "priceCheck": {
         "status": "verified",
         "method": "poly-card-v1",
         "itemId": "MLB7645226912",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-04T23:27:24+00:00",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
         "price": 2542.0,
         "oldPrice": 6355.0
       },
@@ -26084,14 +26085,14 @@
       "available": null,
       "availabilityStatus": "unknown",
       "priceSource": "poly-card-v1",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "priceCheck": {
         "status": "verified",
         "method": "poly-card-v1",
         "itemId": "MLB4196200841",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-04T23:27:24+00:00",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
         "price": 9547.0,
         "oldPrice": 10265.0
       },
@@ -26148,14 +26149,14 @@
       "available": null,
       "availabilityStatus": "unknown",
       "priceSource": "poly-card-v1",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "priceCheck": {
         "status": "verified",
         "method": "poly-card-v1",
         "itemId": "MLB5885831406",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-04T23:27:24+00:00",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
         "price": 8099.0,
         "oldPrice": 11599.0
       },
@@ -26306,14 +26307,14 @@
       "available": null,
       "availabilityStatus": "unknown",
       "priceSource": "poly-card-v1",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "priceCheck": {
         "status": "verified",
         "method": "poly-card-v1",
         "itemId": "MLB7657450942",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-04T20:28:29+00:00",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
         "price": 7148.0,
         "oldPrice": 9281.0
       },
@@ -26380,6 +26381,70 @@
         "checkedAt": "2026-10-04T22:29:03+00:00",
         "price": 7422.0,
         "oldPrice": 9051.0
+      },
+      "source": "Mercado Livre — cartão público do produto",
+      "affiliateLinkSource": "official_existing"
+    },
+    {
+      "id": "MLB4759109869",
+      "itemId": "MLB4759109869",
+      "name": "Notebook Acer Aspire 5 A515-45-R2A3 AMD Ryzen 5 5500U Windows 11 Home 8GB 512GB SSD 15,6' Full HD",
+      "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_759351-MLU77118311686_062024-T.webp",
+      "affiliateUrl": "https://meli.la/1NguveN",
+      "productUrl": "https://www.mercadolivre.com.br/notebook-acer-aspire-5-a515-45-r2a3-amd-ryzen-5-5500u-windows-11-home-8gb-512gb-ssd-156-full-hd/p/MLB22246671?matt_event_ts=1791160831075&matt_d2id=31d0898d-eaca-460c-bebd-58851e5e2cda&matt_tracing_id=4b501852-9068-4b3e-aec3-91cb2eae8891#polycard_client=recommendations_home_affiliate_profile_v2p-recommendations&reco_backend=ranker_retrieval_system_vpp_v2p&reco_model=fallback_organicos_deduplication&reco_client=home_affiliate_profile_v2p-recommendations&matt_tool_id=29904275&reco_item_pos=13&source=affiliate-profile&reco_backend_type=low_level&reco_id=405278ee-e36f-48ba-a1a0-5ae16ead4836&tracking_id=7200ccc0-3806-4621-8e19-cad7c8a7013b&wid=MLB4759109869&sid=recos&c_id=/home/affiliate-profile-recommendations/element&c_uid=d1d93120-cfc6-4c65-aabc-fb16997cef3f",
+      "featured": false,
+      "category": "PC e hardware",
+      "rank": 61,
+      "registrationSource": "affiliate-panel",
+      "price": 3598.0,
+      "oldPrice": 5855.0,
+      "discount": 38.5482,
+      "displayedDiscount": "39% OFF",
+      "available": null,
+      "availabilityStatus": "unknown",
+      "priceSource": "poly-card-v1",
+      "collectedAt": "05/10/2026",
+      "priceCheck": {
+        "status": "verified",
+        "method": "poly-card-v1",
+        "itemId": "MLB4759109869",
+        "variationId": null,
+        "currency": "BRL",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
+        "price": 3598.0,
+        "oldPrice": 5855.0
+      },
+      "source": "Mercado Livre — cartão público do produto",
+      "affiliateLinkSource": "official_existing"
+    },
+    {
+      "id": "MLB5333308317",
+      "itemId": "MLB5333308317",
+      "name": "Notebook Acer Aspire Go AG15-51P-39MU Intel Core i3-1305U 8GB 256ssd Windows 11 Home 15,3''",
+      "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_692920-MLA100061644521_122025-T.webp",
+      "affiliateUrl": "https://meli.la/1NguveN",
+      "productUrl": "https://www.mercadolivre.com.br/notebook-acer-aspire-go-ag15-51p-39mu-intel-core-i3-1305u-8gb-256ssd-windows-11-home-153/p/MLB52936702?matt_event_ts=1791160831075&matt_d2id=31d0898d-eaca-460c-bebd-58851e5e2cda&matt_tracing_id=4b501852-9068-4b3e-aec3-91cb2eae8891#polycard_client=recommendations_home_affiliate_profile_v2p-recommendations&reco_backend=ranker_retrieval_system_vpp_v2p&reco_model=fallback_organicos_deduplication&reco_client=home_affiliate_profile_v2p-recommendations&matt_tool_id=29904275&reco_item_pos=18&source=affiliate-profile&reco_backend_type=low_level&reco_id=405278ee-e36f-48ba-a1a0-5ae16ead4836&tracking_id=7200ccc0-3806-4621-8e19-cad7c8a7013b&wid=MLB5333308317&sid=recos&c_id=/home/affiliate-profile-recommendations/element&c_uid=bc4f0550-4f89-4c8e-accb-200250774e2f",
+      "featured": false,
+      "category": "Notebooks",
+      "rank": 708,
+      "registrationSource": "affiliate-panel",
+      "price": 3502.0,
+      "oldPrice": null,
+      "discount": null,
+      "displayedDiscount": null,
+      "available": null,
+      "availabilityStatus": "unknown",
+      "priceSource": "poly-card-v1",
+      "collectedAt": "05/10/2026",
+      "priceCheck": {
+        "status": "verified",
+        "method": "poly-card-v1",
+        "itemId": "MLB5333308317",
+        "variationId": null,
+        "currency": "BRL",
+        "checkedAt": "2026-10-05T00:40:31+00:00",
+        "price": 3502.0,
+        "oldPrice": null
       },
       "source": "Mercado Livre — cartão público do produto",
       "affiliateLinkSource": "official_existing"
