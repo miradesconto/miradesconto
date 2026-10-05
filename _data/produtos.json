@@ -303,5 +303,10 @@
     "name": "Notebook Acer Aspire 5 A515-45-R2A3 AMD Ryzen 5 5500U Windows 11 Home 8GB 512GB SSD 15,6' Full HD",
     "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_759351-MLU77118311686_062024-T.webp",
     "available": true
+  },
+  "MLB5305229963": {
+    "name": "Notebook Nimo 15,6  Ryzen 7 32gb Ram 1tb Ssd",
+    "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_687236-CBT118588194569_102026-T.webp",
+    "available": true
   }
 }
