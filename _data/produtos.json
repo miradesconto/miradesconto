@@ -308,5 +308,10 @@
     "name": "Notebook Nimo 15,6  Ryzen 7 32gb Ram 1tb Ssd",
     "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_687236-CBT118588194569_102026-T.webp",
     "available": true
+  },
+  "MLB5262476569": {
+    "name": "Notebook Dell Inspiron 15,6  I3 8gb 1tb Hd Windows 10",
+    "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_689168-MLA116433023834_092026-T.webp",
+    "available": true
   }
 }
