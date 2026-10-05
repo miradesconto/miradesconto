@@ -34,7 +34,7 @@ Link na oferta
 ## 2. Carregador Magnético Fam Magsafe Usb-c 15w P/ iPhone 12 A 16 127/220v
 
 **Categoria:** Celulares
-**Preço:** R$ 31,51
+**Preço:** R$ 31,83
 **Desconto:** 68%
 **Imagem:** https://http2.mlstatic.com/D_NQ_NP_853083-MLB108107437166_032026-O-carregador-magnetico-fam-magsafe-usbc-15w-p-iphone-12-a-16.webp
 **Link afiliado:** https://meli.la/1jBu9Qo
@@ -42,7 +42,7 @@ Link na oferta
 **Legenda pronta:**
 
 Tech #2: Carregador Magnético Fam Magsafe Usb-c 15w P/ iPhone 12 A 16 127/220v
-💰 R$ 31,51
+💰 R$ 31,83
 🔥 68% sobre a referência da loja
 👉 https://meli.la/1jBu9Qo
 
@@ -52,7 +52,7 @@ Preço verificado; estoque não confirmado. Confira frete e condições no Merca
 
 TECH NA MIRA
 Carregador Magnético Fam Magsafe Usb-c 15w P/ iPhone 12 A 16 127/220v
-R$ 31,51
+R$ 31,83
 68% OFF
 Link na oferta
 

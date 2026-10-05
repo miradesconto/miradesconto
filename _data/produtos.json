@@ -313,5 +313,20 @@
     "name": "Notebook Dell Inspiron 15,6  I3 8gb 1tb Hd Windows 10",
     "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_689168-MLA116433023834_092026-T.webp",
     "available": true
+  },
+  "MLB5309280073": {
+    "name": "Notebook Nimo 17,3  Ryzen Ai 9 Hx 370, 32gb Ram, 1tb Ssd",
+    "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_795127-CBT118674372815_102026-T.webp",
+    "available": true
+  },
+  "MLB6500058678": {
+    "name": "Notebook Lenovo IdeaPad Slim 3 15IRH10 Intel Core i5-13420H 8GB 512GB SSD Windows 11 15.3\" - 83NS0002BR Luna Grey",
+    "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_721945-MLA85788494302_062025-T.webp",
+    "available": true
+  },
+  "MLB7641710278": {
+    "name": "Notebook Dell Inspiron 15,6  I3 8gb 1tb Hd Windows 10",
+    "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_714716-MLA117679311861_092026-T.webp",
+    "available": true
   }
 }
