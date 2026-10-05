@@ -6,7 +6,7 @@
     "collectedAt": "05/10/2026",
     "apiSync": {
       "source": "Mercado Livre — páginas públicas de afiliados",
-      "updatedAt": "2026-10-05T03:33:14+00:00",
+      "updatedAt": "2026-10-05T04:34:02+00:00",
       "strategy": "exact-product-card-v1",
       "linksChecked": 73,
       "pricesConfirmed": 51
@@ -998,7 +998,7 @@
         "itemId": "MLB4171634813",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 44.0,
         "oldPrice": 99.9
       }
@@ -2401,7 +2401,7 @@
         "itemId": "MLB6972453978",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 118.47,
         "oldPrice": 399.0
       }
@@ -2479,7 +2479,7 @@
         "itemId": "MLB6824618506",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 48.49,
         "oldPrice": 99.98
       }
@@ -2937,7 +2937,7 @@
         "itemId": "MLB4092967763",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 175.5,
         "oldPrice": 401.0
       }
@@ -3893,7 +3893,7 @@
         "itemId": "MLB5811879470",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 48.75,
         "oldPrice": 114.9
       }
@@ -4487,7 +4487,7 @@
         "itemId": "MLB4195554165",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 121.25,
         "oldPrice": 250.0
       }
@@ -5257,7 +5257,7 @@
         "itemId": "MLB4415801503",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 37.98,
         "oldPrice": 78.99
       }
@@ -6584,7 +6584,7 @@
         "itemId": "MLB4595951147",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 19.96,
         "oldPrice": 39.99
       }
@@ -9030,7 +9030,7 @@
         "itemId": "MLB4019563829",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 39.9,
         "oldPrice": 74.9
       }
@@ -9324,7 +9324,7 @@
         "itemId": "MLB5339791448",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 68.46,
         "oldPrice": 168.07
       }
@@ -9930,7 +9930,7 @@
         "itemId": "MLB6472092088",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 31.83,
         "oldPrice": 99.9
       }
@@ -14919,7 +14919,7 @@
         "itemId": "MLB5932934872",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 33.9,
         "oldPrice": 54.9
       }
@@ -15641,7 +15641,7 @@
         "itemId": "MLB5601054808",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 52.9,
         "oldPrice": 78.9
       }
@@ -15719,7 +15719,7 @@
         "itemId": "MLB5381954840",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 63.99,
         "oldPrice": 145.14
       }
@@ -17066,7 +17066,7 @@
         "itemId": "MLB5714906868",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 179.99,
         "oldPrice": 231.99
       }
@@ -17756,9 +17756,9 @@
         "status": "verified",
         "method": "poly-card-v1",
         "itemId": "MLB5649300420",
-        "variationId": "190223671251",
+        "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 62.9,
         "oldPrice": 78.99
       }
@@ -17934,7 +17934,7 @@
         "itemId": "MLB4235386613",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 389.0,
         "oldPrice": 799.9
       }
@@ -18120,7 +18120,7 @@
         "itemId": "MLB6538401302",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 25.9,
         "oldPrice": 39.9
       }
@@ -18198,7 +18198,7 @@
         "itemId": "MLB4693835629",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 48.99,
         "oldPrice": 72.99
       }
@@ -18276,7 +18276,7 @@
         "itemId": "MLB6618891208",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 50.65,
         "oldPrice": 99.99
       }
@@ -18315,7 +18315,7 @@
         "itemId": "MLB4849013383",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 289.95,
         "oldPrice": 599.0
       }
@@ -19459,7 +19459,7 @@
         "itemId": "MLB6212972552",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 4499.0,
         "oldPrice": 5111.0
       }
@@ -21843,7 +21843,7 @@
         "itemId": "MLB4580534701",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 33.98,
         "oldPrice": 78.89
       }
@@ -22038,7 +22038,7 @@
         "itemId": "MLB3964989671",
         "variationId": "186827495487",
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 84.38,
         "oldPrice": 125.77
       }
@@ -22077,7 +22077,7 @@
         "itemId": "MLB4032151473",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 17.48,
         "oldPrice": 29.99
       }
@@ -22185,7 +22185,7 @@
         "itemId": "MLB4530324007",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 67.71,
         "oldPrice": 78.04
       }
@@ -23534,10 +23534,10 @@
     {
       "id": "MLB4408547152",
       "name": "Apple iPhone 15 (128 GB) - Azul - Distribuidor Autorizado",
-      "price": 3998.0,
+      "price": 3798.0,
       "oldPrice": 7209.0,
-      "discount": 44.5415,
-      "displayedDiscount": "45% OFF",
+      "discount": 47.3159,
+      "displayedDiscount": "47% OFF",
       "category": "Celulares",
       "categorySource": "Organização por tipo de produto; regras e revisões em organizacao-catalogo.json",
       "store": "Mercado Livre",
@@ -23565,8 +23565,8 @@
         "itemId": "MLB4408547152",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T02:30:50+00:00",
-        "price": 3998.0,
+        "checkedAt": "2026-10-05T04:34:02+00:00",
+        "price": 3798.0,
         "oldPrice": 7209.0
       }
     },
@@ -24426,7 +24426,7 @@
         "itemId": "MLB5559182464",
         "variationId": "190916531897",
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 56.29,
         "oldPrice": 79.0
       }
@@ -24885,7 +24885,7 @@
         "itemId": "MLB5529725942",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 19.91,
         "oldPrice": 21.9
       }
@@ -25140,7 +25140,7 @@
         "itemId": "MLB4887696253",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 20.45,
         "oldPrice": 32.99
       }
@@ -25295,10 +25295,10 @@
     {
       "id": "MLB3931271317",
       "name": "Apple iPhone 16 (128 GB) - Verde-acinzentado - Distribuidor Autorizado",
-      "price": 4572.0,
+      "price": 4558.0,
       "oldPrice": 7799.0,
-      "discount": 41.3771,
-      "displayedDiscount": "41% OFF",
+      "discount": 41.5566,
+      "displayedDiscount": "42% OFF",
       "category": "Celulares",
       "categorySource": "Organização por tipo de produto; regras e revisões em organizacao-catalogo.json",
       "store": "Mercado Livre",
@@ -25326,8 +25326,8 @@
         "itemId": "MLB3931271317",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
-        "price": 4572.0,
+        "checkedAt": "2026-10-05T04:34:02+00:00",
+        "price": 4558.0,
         "oldPrice": 7799.0
       }
     },
@@ -25457,7 +25457,7 @@
         "itemId": "MLB7118582958",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 2133.0,
         "oldPrice": null
       },
@@ -25489,7 +25489,7 @@
         "itemId": "MLB5772874118",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 8171.0,
         "oldPrice": 8786.0
       },
@@ -25649,7 +25649,7 @@
         "itemId": "MLB4196187967",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 7215.0,
         "oldPrice": 9935.0
       },
@@ -25681,7 +25681,7 @@
         "itemId": "MLB3995128209",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 3299.0,
         "oldPrice": 4699.0
       },
@@ -25713,7 +25713,7 @@
         "itemId": "MLB5772512192",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 7934.0,
         "oldPrice": null
       },
@@ -25777,7 +25777,7 @@
         "itemId": "MLB7477437366",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 2799.0,
         "oldPrice": 3199.0
       },
@@ -25873,7 +25873,7 @@
         "itemId": "MLB5751316838",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 4180.0,
         "oldPrice": 4999.0
       },
@@ -25905,7 +25905,7 @@
         "itemId": "MLB7118776540",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 2449.0,
         "oldPrice": 3099.0
       },
@@ -25969,7 +25969,7 @@
         "itemId": "MLB5761444412",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T02:30:50+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 4069.0,
         "oldPrice": 5855.0
       },
@@ -25994,14 +25994,14 @@
       "available": null,
       "availabilityStatus": "unknown",
       "priceSource": "poly-card-v1",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "priceCheck": {
         "status": "verified",
         "method": "poly-card-v1",
         "itemId": "MLB4144557655",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-04T23:27:24+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 3599.0,
         "oldPrice": 4299.0
       },
@@ -26097,7 +26097,7 @@
         "itemId": "MLB4196200841",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 9547.0,
         "oldPrice": 10265.0
       },
@@ -26129,7 +26129,7 @@
         "itemId": "MLB7717002150",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 8425.0,
         "oldPrice": 10402.0
       },
@@ -26161,7 +26161,7 @@
         "itemId": "MLB5885831406",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 8099.0,
         "oldPrice": 11599.0
       },
@@ -26193,7 +26193,7 @@
         "itemId": "MLB5297292267",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 2111.0,
         "oldPrice": null
       },
@@ -26218,14 +26218,14 @@
       "available": null,
       "availabilityStatus": "unknown",
       "priceSource": "poly-card-v1",
-      "collectedAt": "04/10/2026",
+      "collectedAt": "05/10/2026",
       "priceCheck": {
         "status": "verified",
         "method": "poly-card-v1",
         "itemId": "MLB6276754000",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-04T13:40:19+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 3799.0,
         "oldPrice": 4499.0
       },
@@ -26287,7 +26287,7 @@
         "itemId": "MLB6225162726",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 3517.0,
         "oldPrice": 5609.0
       },
@@ -26319,7 +26319,7 @@
         "itemId": "MLB7657450942",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 7148.0,
         "oldPrice": 9281.0
       },
@@ -26351,7 +26351,7 @@
         "itemId": "MLB5879140276",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 4299.0,
         "oldPrice": 5799.0
       },
@@ -26511,7 +26511,7 @@
         "itemId": "MLB5262476569",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 3785.0,
         "oldPrice": 4673.0
       },
@@ -26543,7 +26543,7 @@
         "itemId": "MLB5309280073",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-05T03:33:14+00:00",
+        "checkedAt": "2026-10-05T04:34:02+00:00",
         "price": 9743.0,
         "oldPrice": 12333.0
       },
