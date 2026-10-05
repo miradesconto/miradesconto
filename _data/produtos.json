@@ -328,5 +328,10 @@
     "name": "Notebook Dell Inspiron 15,6  I3 8gb 1tb Hd Windows 10",
     "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_714716-MLA117679311861_092026-T.webp",
     "available": true
+  },
+  "MLB7717032290": {
+    "name": "Computador Portátil Nimo 15.6 Ryzen 7 32 Gb Ram 1 Tb Ssd",
+    "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_867166-CBT118590422363_102026-T.webp",
+    "available": true
   }
 }
