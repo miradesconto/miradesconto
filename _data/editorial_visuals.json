@@ -62,7 +62,7 @@
   "notebook-em-promocao-como-escolher": {
     "tone": "blue",
     "kicker": "GUIA TECH",
-    "hook": "Notebook: confira antes de pagar."
+    "hook": "Estudo e trabalho: qual notebook escolher?"
   },
   "monitor-para-setup-como-comparar": {
     "tone": "sand",
@@ -78,5 +78,10 @@
     "tone": "blue",
     "kicker": "ANÁLISE DE FICHA",
     "hook": "iPhone 15: a oferta precisa fechar."
+  },
+  "qual-celular-comprar-2026": {
+    "tone": "sage",
+    "kicker": "GUIA DE CELULARES",
+    "hook": "Seu próximo celular: o que importa?"
   }
 }
