@@ -75,7 +75,7 @@ Para uso misto, 120 Hz e 144 Hz já representam uma experiência muito mais flui
 
 </div>
 
-## 120 Hz ou 144 Hz: dá para perceber diferença?
+## 120 Hz ou 144 Hz: dá para perceber diferença? {#120-hz-ou-144-hz-da-para-perceber-diferenca}
 
 A diferença de 60/75 Hz para 120/144 Hz costuma ser muito mais relevante do que a diferença entre 120 e 144 Hz. Para uso geral, qualquer uma das duas faixas já deixa rolagem e animações mais fluidas.
 
