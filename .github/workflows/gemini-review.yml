@@ -32,10 +32,11 @@ jobs:
         run: |
           git diff --no-ext-diff "origin/${{ github.base_ref }}...HEAD" > GEMINI_PR_DIFF.txt
 
-      - name: Avisar quando Gemini ainda não estiver conectado
+      - name: Bloquear quando Gemini não estiver conectado
         if: env.GEMINI_KEY == ''
         run: |
-          echo "Gemini não executado: adicione o secret GEMINI_API_KEY em Settings > Secrets and variables > Actions." >> "$GITHUB_STEP_SUMMARY"
+          echo "Gemini não executado: o secret GEMINI_API_KEY não está disponível." >> "$GITHUB_STEP_SUMMARY"
+          exit 1
 
       - name: Revisar com Gemini
         if: env.GEMINI_KEY != ''
@@ -61,6 +62,16 @@ jobs:
             ## Veredito
             
             Se uma seção não tiver achados, escreva "Nenhum".
+            
+            REGRA OBRIGATÓRIA DE DECISÃO:
+            - Termine a resposta com exatamente uma destas linhas:
+              DECISAO_GEMINI: APROVADO
+              DECISAO_GEMINI: BLOQUEAR
+            - Use BLOQUEAR se houver qualquer achado Crítico ou risco concreto de:
+              preço/histórico enganoso, link de afiliado incorreto, exposição de segredo,
+              quebra funcional relevante, SEO técnico que impeça indexação/canonical,
+              ou automação sobrescrevendo dados editoriais importantes.
+            - Não bloqueie por preferência visual, refatoração opcional ou sugestão sem risco concreto.
           settings: |
             {
               "model": {
@@ -84,3 +95,23 @@ jobs:
           if [ -n "$GEMINI_REVIEW" ]; then
             gh pr comment "${{ github.event.pull_request.number }}" --body "## Revisão Gemini\n\n$GEMINI_REVIEW"
           fi
+
+      - name: Fiscal do MiraDesconto — decisão de integração
+        if: env.GEMINI_KEY != '' && steps.gemini.outcome == 'success'
+        env:
+          GEMINI_REVIEW: ${{ steps.gemini.outputs.summary }}
+        run: |
+          echo "$GEMINI_REVIEW" >> "$GITHUB_STEP_SUMMARY"
+
+          if echo "$GEMINI_REVIEW" | grep -Fq "DECISAO_GEMINI: BLOQUEAR"; then
+            echo "Gemini encontrou bloqueador crítico. Corrija o PR antes de integrar." >> "$GITHUB_STEP_SUMMARY"
+            exit 1
+          fi
+
+          if echo "$GEMINI_REVIEW" | grep -Fq "DECISAO_GEMINI: APROVADO"; then
+            echo "Gemini aprovou o PR sem bloqueadores críticos." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+
+          echo "Gemini não retornou uma decisão válida. PR tratado como não aprovado por segurança." >> "$GITHUB_STEP_SUMMARY"
+          exit 1
