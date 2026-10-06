@@ -34,7 +34,8 @@ jobs:
 
       - name: Avisar quando Gemini ainda não estiver conectado
         if: env.GEMINI_KEY == ''
-        run: echo "Gemini não executado: adicione o secret GEMINI_API_KEY em Settings > Secrets and variables > Actions." >> "$GITHUB_STEP_SUMMARY"
+        run: |
+          echo "Gemini não executado: adicione o secret GEMINI_API_KEY em Settings > Secrets and variables > Actions." >> "$GITHUB_STEP_SUMMARY"
 
       - name: Revisar com Gemini
         if: env.GEMINI_KEY != ''
