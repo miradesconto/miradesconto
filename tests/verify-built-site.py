@@ -32,6 +32,7 @@ for file in root.rglob('*.html'):
     pages[file.relative_to(root).as_posix()]=Page(text)
 sitemap=ElementTree.parse(root/'sitemap.xml')
 urls=[e.text for e in sitemap.findall('.//{*}loc')]
+assert len(urls)==len(set(urls)), 'Sitemap contains duplicate URLs'
 source=Path(__file__).resolve().parents[1]
 for file in (source/'_compras').glob('*.md'):
     front=file.read_text(encoding='utf-8').split('---')[1]
