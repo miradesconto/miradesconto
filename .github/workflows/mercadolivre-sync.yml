@@ -55,11 +55,13 @@ jobs:
       - name: Registrar somente mudanças reais
         shell: bash
         run: |
-          if git diff --quiet -- dados/catalogo.json historico _data/radar.json && [ -z "$(git ls-files --others --exclude-standard historico _data/radar.json)" ]; then
+          # A fila social é derivada do Radar e deve ser recalculada mesmo quando
+          # a coleta de preço não altera o catálogo nesta execução.
+          python integracoes/social/gerar_pauta.py
+          if git diff --quiet -- dados/catalogo.json historico _data/radar.json integracoes/social/pauta-do-dia.json integracoes/social/pauta-do-dia.md && [ -z "$(git ls-files --others --exclude-standard historico _data/radar.json integracoes/social/pauta-do-dia.json integracoes/social/pauta-do-dia.md)" ]; then
             echo 'Nenhuma mudança real; sem commit.'
             exit 0
           fi
-          python integracoes/social/gerar_pauta.py
           python integracoes/automacao/atualizar_home.py
           python integracoes/automacao/cache_bust.py
           git config user.name 'github-actions[bot]'
