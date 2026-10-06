@@ -448,5 +448,45 @@
     "name": "Filamento Pla Premium 1kg Granito High Speed Impressora 3d",
     "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_930178-MLA100476263505_122025-AB.webp",
     "available": true
+  },
+  "MLB5125866189": {
+    "name": "Apple iPhone 15 (128 Gb) - Preto",
+    "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_680991-MLA95497804976_102025-AB.webp",
+    "available": true
+  },
+  "MLB4492878341": {
+    "name": "Apple iPhone 16 (256 Gb) - Preto",
+    "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_810957-MLA99386727202_112025-AB.webp",
+    "available": true
+  },
+  "MLB6064737210": {
+    "name": "Celular Samsung Galaxy S25 Fe 5g, 128gb, 8gb Ram, Câmera Tripla De 50+12+8, Tela Grande De 6.7 Azul Marinho",
+    "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_993303-MLA96666133268_112025-AB.webp",
+    "available": true
+  },
+  "MLB4027229133": {
+    "name": "Smartphone Motorola Edge 60 Fusion 5g - 256gb 8gb Ram+8gb Ram Boost, 50mp Sony Ai Camera Ip68 Nfc - Cinza Vegan Leather",
+    "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_631624-MLA99926713059_112025-AB.webp",
+    "available": true
+  },
+  "MLB4079715491": {
+    "name": "Smartphone Motorola Moto G35 5g 12gb Ram Boost 128g Cor Grafite",
+    "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_649586-MLA100448312516_122025-AB.webp",
+    "available": true
+  },
+  "MLB6287289882": {
+    "name": "Celular Samsung Galaxy S26 5g, 512gb, 12gb Ram, Galaxy Ai, Câmera Tripla De 50+12+10, Tela De 6.3  Preto",
+    "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_939755-MLA109096677198_042026-AB.webp",
+    "available": true
+  },
+  "MLB5765125576": {
+    "name": "Smartphone Motorola Moto G06 - 256gb 4gb Ram + 8gb Ram Boost, E Camera 50mp Com Ai Bateria De 5200 Mah Tela 6.9 - Bege",
+    "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_793349-MLA91806774304_092025-AB.webp",
+    "available": true
+  },
+  "MLB7021511216": {
+    "name": "Smartphone Motorola Moto G56 5g - 256gb 8gb Ram+8gb Ram Boost, Camera 50mp Sony Lytia 600 Ultrarresistencia Militar E Ip68 + Ip69 - Cinza Cinza-escuro",
+    "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_748002-MLA104773303805_012026-AB.webp",
+    "available": true
   }
 }
