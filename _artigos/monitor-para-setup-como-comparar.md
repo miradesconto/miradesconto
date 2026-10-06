@@ -1,6 +1,6 @@
 ---
-title: "Monitor para setup: resolução, Hz e conexões antes do preço"
-resumo: "Saiba quais perguntas fazer ao comparar um monitor, sem confundir frequência, resolução e compatibilidade."
+title: "Monitor gamer 120 Hz, 144 Hz ou 240 Hz: como escolher"
+resumo: "Compare monitor gamer de 120 Hz, 144 Hz ou 240 Hz por resolução, conexões e compatibilidade antes de escolher pelo preço ou desconto."
 categoria: "guias"
 produtos: ["MLB4329495631"]
 status: "publicado"
@@ -45,4 +45,4 @@ Confira código do modelo, condição do produto, garantia, conexões, cabo incl
 
 ## Compare antes de abrir a loja
 
-Veja o [guia de compra de monitores]({{ '/monitores/' | relative_url }}) e os [pontos de atenção do Samsung Essential S3]({{ '/produtos/samsung-essential-s3-24/' | relative_url }}).
+Veja a página de [monitor gamer em promoção]({{ '/monitores/' | relative_url }}) e os [pontos de atenção do Samsung Essential S3]({{ '/produtos/samsung-essential-s3-24/' | relative_url }}).
