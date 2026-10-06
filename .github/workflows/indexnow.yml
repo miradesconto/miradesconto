@@ -10,6 +10,8 @@ on:
       - "_artigos/**"
       - "_compras/**"
       - "blog/**"
+      - "radar/**"
+      - "radar.css"
       - "produtos.js"
       - "catalogo/**"
       - "historico/**"
