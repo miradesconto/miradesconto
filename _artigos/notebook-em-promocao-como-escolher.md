@@ -1,6 +1,6 @@
 ---
-title: "Melhor notebook para estudar e trabalhar em 2026: como escolher"
-resumo: "Escolha um notebook para estudo, trabalho ou jogos: compare processador, SSD, 8 GB ou 16 GB de RAM, sistema e preço final nas ofertas."
+title: "Notebook para estudar e trabalhar em 2026: como escolher"
+resumo: "Como escolher notebook para estudar e trabalhar em 2026: compare processador, SSD, 8 GB ou 16 GB de RAM, sistema, expansão e preço final."
 categoria: "guias"
 produtos: []
 status: "publicado"
@@ -65,4 +65,4 @@ O desconto do catálogo compara um preço observado com a referência exibida pe
 
 ## Compare antes de abrir a loja
 
-Compare as [opções de notebooks cadastradas]({{ '/notebooks/' | relative_url }}) e veja [quando escolher 8 GB ou 16 GB]({{ '/comparativos/notebook-8gb-ou-16gb/' | relative_url }}).
+Veja a página de [notebook em promoção e custo-benefício]({{ '/notebooks/' | relative_url }}) para comparar as opções cadastradas e consulte [quando escolher 8 GB ou 16 GB]({{ '/comparativos/notebook-8gb-ou-16gb/' | relative_url }}).
