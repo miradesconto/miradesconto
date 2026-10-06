@@ -6,7 +6,7 @@ label: "Mouses"
 resumo: "Guia de compra de mouse: pegada, tamanho, conexão, botões e custo total. Saiba o que conferir sem escolher só pelo DPI."
 produtos: []
 hub: true
-ordem: 3
+ordem: 4
 schema: "CollectionPage"
 cta: "Ver situação das ofertas"
 offer_title: "Ofertas nesta categoria"
