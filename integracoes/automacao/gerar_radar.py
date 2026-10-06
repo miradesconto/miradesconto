@@ -141,11 +141,13 @@ def classify(current: float, rows: list[dict]) -> tuple[str, int, str, float, fl
     elif delta <= -5:
         label = "Excelente preço"
         strength = 3
-        reason = f"O preço atual está {abs(delta):.1f}% abaixo da média observada."
+        pct = f"{abs(delta):.1f}".replace(".", ",")
+        reason = f"O preço atual está {pct}% abaixo da média observada."
     elif delta <= -1.5:
         label = "Bom preço"
         strength = 2
-        reason = f"O preço atual está {abs(delta):.1f}% abaixo da média observada."
+        pct = f"{abs(delta):.1f}".replace(".", ",")
+        reason = f"O preço atual está {pct}% abaixo da média observada."
     elif range_pct < 1:
         label = "Preço estável"
         strength = 0
@@ -157,9 +159,10 @@ def classify(current: float, rows: list[dict]) -> tuple[str, int, str, float, fl
     else:
         label = "Acima da média"
         strength = -1
-        reason = f"O preço atual está {delta:.1f}% acima da média observada."
+        pct = f"{delta:.1f}".replace(".", ",")
+        reason = f"O preço atual está {pct}% acima da média observada."
 
-    return label, strength, reason.replace(".", ",", 1) if False else reason, delta, range_pct
+    return label, strength, reason, delta, range_pct
 
 
 def main() -> int:
