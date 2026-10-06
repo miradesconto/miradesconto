@@ -1,0 +1,38 @@
+name: Inicializar histórico de preços
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['integracoes/mercadolivre/price_history.py']
+permissions:
+  contents: write
+  pages: write
+concurrency:
+  group: mercadolivre-sync
+  cancel-in-progress: false
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python integracoes/mercadolivre/price_history.py --backfill
+      - run: python -m unittest discover -s tests -p test_price_history.py
+      - name: Publicar histórico verificado
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add historico
+          if ! git diff --cached --quiet; then
+            git commit -m 'Recupera histórico de preços observados com evidência'
+            git push origin HEAD:main
+          fi
+      - name: Atualizar GitHub Pages
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds" --silent
