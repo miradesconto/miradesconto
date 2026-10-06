@@ -61,16 +61,16 @@ Link na oferta
 ## 3. Conversor Mídia Fibra Óptica Gigabit Rj45 1000 Mb Par A+b
 
 **Categoria:** PC e hardware
-**Preço:** R$ 68,46
-**Desconto:** 59%
+**Preço:** R$ 67,11
+**Desconto:** 60%
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_668420-MLB116950397541_082026-AB.webp
 **Link afiliado:** https://meli.la/2cPnC8v
 
 **Legenda pronta:**
 
 Tech #3: Conversor Mídia Fibra Óptica Gigabit Rj45 1000 Mb Par A+b
-💰 R$ 68,46
-🔥 59% sobre a referência da loja
+💰 R$ 67,11
+🔥 60% sobre a referência da loja
 👉 https://meli.la/2cPnC8v
 
 Preço verificado; estoque não confirmado. Confira frete e condições no Mercado Livre. Link de afiliado.
@@ -79,8 +79,8 @@ Preço verificado; estoque não confirmado. Confira frete e condições no Merca
 
 TECH NA MIRA
 Conversor Mídia Fibra Óptica Gigabit Rj45 1000 Mb Par A+b
-R$ 68,46
-59% OFF
+R$ 67,11
+60% OFF
 Link na oferta
 
 ---
