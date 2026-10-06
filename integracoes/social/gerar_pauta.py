@@ -51,14 +51,18 @@ def num(v, d=0.0):
     try: return float(v)
     except (TypeError, ValueError): return d
 
-def ok(p, radar):
-    i = str(p.get("id") or "")
+def eligible(p):
     return (
-        i in (radar.get("byId") or {}) and p.get("name") and num(p.get("price")) > 0
+        bool(p.get("name")) and num(p.get("price")) > 0
+        and p.get("available") is True
+        and str(p.get("availabilityStatus") or "") == "available"
         and str(p.get("affiliateUrl") or "").startswith("https://meli.la/")
         and str(p.get("imageUrl") or "").startswith("http")
         and tech_eligible(p) and usable_price(p)
     )
+
+def ok(p, radar):
+    return str(p.get("id") or "") in (radar.get("byId") or {}) and eligible(p)
 
 def article_for(i, arts):
     m = [a for a in arts if i in a["ids"]]
