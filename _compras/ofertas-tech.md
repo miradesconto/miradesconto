@@ -6,7 +6,7 @@ label: "Ofertas tech"
 resumo: "Encontre a vitrine de ofertas tech com preço verificado e aprenda a comparar referência da loja, histórico observado, frete e configuração."
 produtos: ["MLB4604524838", "MLB4329495631"]
 hub: true
-ordem: 6
+ordem: 7
 schema: "CollectionPage"
 ---
 ## Primeiro, veja o preço verificado
