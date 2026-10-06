@@ -7,6 +7,7 @@ on:
 permissions:
   contents: read
   pull-requests: write
+  issues: write
 
 concurrency:
   group: gemini-review-${{ github.event.pull_request.number }}
@@ -14,7 +15,7 @@ concurrency:
 
 jobs:
   review:
-    if: github.event.pull_request.draft == false
+    if: github.event.pull_request.draft == false || contains(github.event.pull_request.labels.*.name, 'gemini-bloqueado')
     runs-on: ubuntu-latest
     timeout-minutes: 5
     env:
@@ -45,22 +46,55 @@ jobs:
           gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
           gemini_model: gemini-3.5-flash-lite
           prompt: |
-            Faça uma revisão técnica deste pull request.
-            Leia GEMINI.md primeiro e siga essas regras.
-            Leia GEMINI.md e GEMINI_PR_DIFF.txt. Para mudanças pequenas, limite a análise ao diff e ao contexto estritamente necessário.
-            Não modifique arquivos e não execute comandos.
-            Procure problemas reais de lógica, preço/histórico, links de afiliado,
-            SEO, acessibilidade, responsividade, segurança e risco de a automação
-            sobrescrever a mudança.
-            
-            Responda em português, em Markdown, neste formato:
+            Você é o fiscal técnico do MiraDesconto antes do merge.
+
+            Leia GEMINI.md e GEMINI_PR_DIFF.txt. Para mudanças pequenas, limite a análise
+            ao diff e ao contexto estritamente necessário. Não modifique arquivos e não
+            execute comandos.
+
+            Revise lógica, preço/histórico, links de afiliado, SEO, acessibilidade,
+            responsividade, segurança e risco de automações sobrescreverem a mudança.
+
+            O gate deve BLOQUEAR somente quando houver pelo menos um achado CRÍTICO
+            em uma destas categorias protegidas:
+            - PREÇO
+            - HISTÓRICO
+            - AFILIADO
+            - SEO
+            - SEGURANÇA
+
+            Considere CRÍTICO, por exemplo:
+            - PREÇO/HISTÓRICO: publicar preço, desconto, referência ou histórico falso;
+              confundir preço de referência da loja com observação histórica; corromper,
+              apagar ou atribuir histórico ao anúncio/variação errada.
+            - AFILIADO: remover, substituir, inventar ou quebrar link oficial de afiliado;
+              trocar link afiliado por URL comum ou fazer o tracking deixar de funcionar.
+            - SEO: introduzir noindex/robots/canonical/sitemap incorreto capaz de remover
+              páginas relevantes da indexação, criar canonicals para destino errado ou
+              causar perda ampla de indexação.
+            - SEGURANÇA: expor secret/token/credencial, introduzir XSS/injeção ou permitir
+              que dados sensíveis apareçam em código, logs, páginas ou comentários.
+
+            Problemas que não atingirem esse nível devem ser classificados como
+            IMPORTANTE ou SUGESTÃO e não devem bloquear o merge.
+
+            Responda em português, em Markdown, exatamente neste formato:
             ## Resumo
             ## Bloqueadores
             ## Pontos importantes
             ## Sugestões
             ## Veredito
-            
-            Se uma seção não tiver achados, escreva "Nenhum".
+
+            Em cada bloqueador, use:
+            - [CRÍTICO][CATEGORIA] arquivo — motivo objetivo
+
+            Se não houver bloqueadores, escreva "Nenhum" em ## Bloqueadores.
+
+            Na ÚLTIMA linha da resposta, escreva exatamente um destes marcadores:
+            GATE: BLOQUEAR
+            GATE: APROVAR
+
+            Use GATE: BLOQUEAR apenas se houver achado CRÍTICO em uma categoria protegida.
           settings: |
             {
               "model": {
@@ -82,5 +116,61 @@ jobs:
           GEMINI_REVIEW: ${{ steps.gemini.outputs.summary }}
         run: |
           if [ -n "$GEMINI_REVIEW" ]; then
-            gh pr comment "${{ github.event.pull_request.number }}" --body "## Revisão Gemini\n\n$GEMINI_REVIEW"
+            gh pr comment "${{ github.event.pull_request.number }}" --body "## Revisão Gemini
+
+$GEMINI_REVIEW"
           fi
+
+      - name: Aplicar gate de integração
+        if: env.GEMINI_KEY != '' && steps.gemini.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GEMINI_REVIEW: ${{ steps.gemini.outputs.summary }}
+        run: |
+          set -euo pipefail
+
+          PR="${{ github.event.pull_request.number }}"
+          BLOCK_LABEL="gemini-bloqueado"
+          WAS_BLOCKED="$(gh pr view "$PR" --json labels --jq '[.labels[].name] | index("gemini-bloqueado") != null')"
+
+          if printf '%s\n' "$GEMINI_REVIEW" | grep -Eq '^GATE:[[:space:]]*BLOQUEAR[[:space:]]*$'; then
+            gh label create "$BLOCK_LABEL"               --color "D73A4A"               --description "Gemini encontrou bloqueador crítico; não integrar até corrigir."               --force
+
+            gh pr edit "$PR" --add-label "$BLOCK_LABEL"
+
+            if [ "$(gh pr view "$PR" --json isDraft --jq '.isDraft')" != "true" ]; then
+              gh pr ready "$PR" --undo
+            fi
+
+            gh pr comment "$PR" --body "## ⛔ Gate Gemini: BLOQUEADO
+
+Foi encontrado pelo menos um problema **CRÍTICO** em preço, histórico, afiliado, SEO ou segurança.
+
+Este PR foi marcado como `gemini-bloqueado` e voltou para **Draft**. Corrija os bloqueadores e envie novos commits; o Gemini revisará novamente."
+
+            echo "::error title=Gate Gemini bloqueado::Há achado crítico protegido. Corrija antes do merge."
+            exit 1
+          fi
+
+          if printf '%s\n' "$GEMINI_REVIEW" | grep -Eq '^GATE:[[:space:]]*APROVAR[[:space:]]*$'; then
+            if [ "$WAS_BLOCKED" = "true" ]; then
+              gh pr edit "$PR" --remove-label "$BLOCK_LABEL"
+
+              if [ "$(gh pr view "$PR" --json isDraft --jq '.isDraft')" = "true" ]; then
+                gh pr ready "$PR"
+              fi
+
+              gh pr comment "$PR" --body "## ✅ Gate Gemini: DESBLOQUEADO
+
+Os bloqueadores críticos anteriores não aparecem mais nesta revisão. O PR voltou a ficar apto para revisão humana e integração."
+            fi
+
+            echo "Gate Gemini aprovado."
+            exit 0
+          fi
+
+          gh pr comment "$PR" --body "## ⚠️ Gate Gemini: resposta inválida
+
+A revisão não terminou com `GATE: BLOQUEAR` nem `GATE: APROVAR`. Por segurança, este check falhou e o PR não deve ser integrado."
+          echo "::error title=Gate Gemini sem veredito::Resposta sem marcador de gate reconhecível."
+          exit 1
