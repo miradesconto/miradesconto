@@ -4,3 +4,4 @@
 2026-10-06: regenerar fila social Radar → Pippit com 14 vídeos.
 2026-10-06: regenerar fila social Radar → Pippit após validação.
 2026-10-06: regenerar fila social com prioridade editorial e de audiência.
+2026-10-06: regenerar fila Pippit com nomes e hooks curtos.
