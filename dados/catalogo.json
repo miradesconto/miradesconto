@@ -6,17 +6,17 @@
     "collectedAt": "06/10/2026",
     "apiSync": {
       "source": "Mercado Livre — páginas públicas de afiliados",
-      "updatedAt": "2026-10-06T17:29:12+00:00",
+      "updatedAt": "2026-10-06T18:14:11+00:00",
       "strategy": "exact-product-card-v1",
-      "linksChecked": 91,
-      "pricesConfirmed": 52
+      "linksChecked": 98,
+      "pricesConfirmed": 58
     },
     "rotationCursor": 445,
     "rotationCycle": 1,
     "niche": "tech",
     "discountBasis": "Preço de referência informado pela loja; não comprova menor preço histórico.",
     "affiliateSources": [
-      "https://meli.la/1NguveN"
+      "https://meli.la/1pyBZm8"
     ]
   },
   "publishedIds": [
@@ -102,7 +102,14 @@
     "MLB7738436590",
     "MLB4860618173",
     "MLB3746267799",
-    "MLB5264782951"
+    "MLB5264782951",
+    "MLB5619970196",
+    "MLB4559210619",
+    "MLB4422182615",
+    "MLB4609951889",
+    "MLB4749956743",
+    "MLB4559215817",
+    "MLB5472135448"
   ],
   "products": [
     {
@@ -1015,7 +1022,7 @@
         "itemId": "MLB4171634813",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 44.0,
         "oldPrice": 99.9
       }
@@ -2418,7 +2425,7 @@
         "itemId": "MLB6972453978",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 109.48,
         "oldPrice": 399.0
       }
@@ -2496,7 +2503,7 @@
         "itemId": "MLB6824618506",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 45.6,
         "oldPrice": 99.98
       }
@@ -2954,7 +2961,7 @@
         "itemId": "MLB4092967763",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 175.5,
         "oldPrice": 401.0
       }
@@ -3910,7 +3917,7 @@
         "itemId": "MLB5811879470",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 48.75,
         "oldPrice": 114.9
       }
@@ -4473,10 +4480,10 @@
     {
       "id": "MLB4195554165",
       "name": "Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play",
-      "price": 121.25,
+      "price": 125.5,
       "oldPrice": 250.0,
-      "discount": 51.5,
-      "displayedDiscount": "52% OFF",
+      "discount": 49.8,
+      "displayedDiscount": "50% OFF",
       "category": "Celulares",
       "categorySource": "Organização por tipo de produto; regras e revisões em organizacao-catalogo.json",
       "store": "Mercado Livre",
@@ -4504,8 +4511,8 @@
         "itemId": "MLB4195554165",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
-        "price": 121.25,
+        "checkedAt": "2026-10-06T18:14:11+00:00",
+        "price": 125.5,
         "oldPrice": 250.0
       }
     },
@@ -5274,7 +5281,7 @@
         "itemId": "MLB4415801503",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 34.99,
         "oldPrice": 78.99
       }
@@ -6601,7 +6608,7 @@
         "itemId": "MLB4595951147",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 19.96,
         "oldPrice": 39.99
       }
@@ -9047,7 +9054,7 @@
         "itemId": "MLB4019563829",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 39.9,
         "oldPrice": 74.9
       }
@@ -9341,7 +9348,7 @@
         "itemId": "MLB5339791448",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 67.11,
         "oldPrice": 168.07
       }
@@ -9947,7 +9954,7 @@
         "itemId": "MLB6472092088",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 31.83,
         "oldPrice": 99.9
       }
@@ -14936,7 +14943,7 @@
         "itemId": "MLB5932934872",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 33.9,
         "oldPrice": 54.9
       }
@@ -15658,7 +15665,7 @@
         "itemId": "MLB5601054808",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 52.9,
         "oldPrice": 78.9
       }
@@ -15736,7 +15743,7 @@
         "itemId": "MLB5381954840",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 63.99,
         "oldPrice": 145.14
       }
@@ -17083,7 +17090,7 @@
         "itemId": "MLB5714906868",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 179.99,
         "oldPrice": 231.99
       }
@@ -17773,9 +17780,9 @@
         "status": "verified",
         "method": "poly-card-v1",
         "itemId": "MLB5649300420",
-        "variationId": "190223671249",
+        "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 69.9,
         "oldPrice": 78.99
       }
@@ -17951,7 +17958,7 @@
         "itemId": "MLB4235386613",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 389.0,
         "oldPrice": 799.9
       }
@@ -18137,7 +18144,7 @@
         "itemId": "MLB6538401302",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 25.9,
         "oldPrice": 39.9
       }
@@ -18215,7 +18222,7 @@
         "itemId": "MLB4693835629",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 48.99,
         "oldPrice": 72.99
       }
@@ -18293,7 +18300,7 @@
         "itemId": "MLB6618891208",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 50.65,
         "oldPrice": 99.99
       }
@@ -18332,7 +18339,7 @@
         "itemId": "MLB4849013383",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 289.95,
         "oldPrice": 599.0
       }
@@ -19476,7 +19483,7 @@
         "itemId": "MLB6212972552",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 4499.0,
         "oldPrice": 5111.0
       }
@@ -21860,7 +21867,7 @@
         "itemId": "MLB4580534701",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 33.98,
         "oldPrice": 78.89
       }
@@ -22055,7 +22062,7 @@
         "itemId": "MLB3964989671",
         "variationId": "186827495487",
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 84.38,
         "oldPrice": 125.77
       }
@@ -22094,7 +22101,7 @@
         "itemId": "MLB4032151473",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 19.0,
         "oldPrice": 29.99
       }
@@ -22202,7 +22209,7 @@
         "itemId": "MLB4530324007",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 67.71,
         "oldPrice": 78.04
       }
@@ -23582,7 +23589,7 @@
         "itemId": "MLB4408547152",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 4009.0,
         "oldPrice": 7209.0
       }
@@ -24443,7 +24450,7 @@
         "itemId": "MLB5559182464",
         "variationId": "190916531897",
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 56.29,
         "oldPrice": 79.0
       }
@@ -24902,7 +24909,7 @@
         "itemId": "MLB5529725942",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 19.91,
         "oldPrice": 21.9
       }
@@ -25157,7 +25164,7 @@
         "itemId": "MLB4887696253",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 20.45,
         "oldPrice": 32.99
       }
@@ -25343,7 +25350,7 @@
         "itemId": "MLB3931271317",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 4710.0,
         "oldPrice": 7799.0
       }
@@ -25442,7 +25449,7 @@
         "itemId": "MLB4562931826",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 3613.0,
         "oldPrice": 4299.0
       },
@@ -25666,7 +25673,7 @@
         "itemId": "MLB4196187967",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 7215.0,
         "oldPrice": 9935.0
       },
@@ -25698,7 +25705,7 @@
         "itemId": "MLB3995128209",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 3299.0,
         "oldPrice": 4699.0
       },
@@ -25730,7 +25737,7 @@
         "itemId": "MLB5772512192",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 4799.0,
         "oldPrice": 7934.0
       },
@@ -25794,7 +25801,7 @@
         "itemId": "MLB7477437366",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 2799.0,
         "oldPrice": 3199.0
       },
@@ -25826,7 +25833,7 @@
         "itemId": "MLB4604524838",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 3181.0,
         "oldPrice": 3849.0
       },
@@ -25890,7 +25897,7 @@
         "itemId": "MLB5751316838",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 4180.0,
         "oldPrice": 4999.0
       },
@@ -25922,7 +25929,7 @@
         "itemId": "MLB7118776540",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 2507.0,
         "oldPrice": 3099.0
       },
@@ -25986,7 +25993,7 @@
         "itemId": "MLB5761444412",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 4069.0,
         "oldPrice": 5855.0
       },
@@ -26018,7 +26025,7 @@
         "itemId": "MLB4144557655",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 3599.0,
         "oldPrice": 4299.0
       },
@@ -26114,7 +26121,7 @@
         "itemId": "MLB4196200841",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 6508.0,
         "oldPrice": 10265.0
       },
@@ -26146,7 +26153,7 @@
         "itemId": "MLB7717002150",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T15:31:11+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 8024.0,
         "oldPrice": 9907.0
       },
@@ -26178,7 +26185,7 @@
         "itemId": "MLB5885831406",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 8399.0,
         "oldPrice": 11599.0
       },
@@ -26306,7 +26313,7 @@
         "itemId": "MLB6225162726",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 3589.0,
         "oldPrice": 5609.0
       },
@@ -26338,7 +26345,7 @@
         "itemId": "MLB7657450942",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 6807.0,
         "oldPrice": 8839.0
       },
@@ -26370,7 +26377,7 @@
         "itemId": "MLB5879140276",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 4299.0,
         "oldPrice": 5799.0
       },
@@ -26498,7 +26505,7 @@
         "itemId": "MLB5305229963",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 6875.0,
         "oldPrice": 8487.0
       },
@@ -26562,7 +26569,7 @@
         "itemId": "MLB5309280073",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 9279.0,
         "oldPrice": 11746.0
       },
@@ -26754,7 +26761,7 @@
         "itemId": "MLB5264782951",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 2754.0,
         "oldPrice": 2899.0
       },
@@ -26818,7 +26825,7 @@
         "itemId": "MLB4102913749",
         "variationId": null,
         "currency": "BRL",
-        "checkedAt": "2026-10-06T17:29:12+00:00",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
         "price": 3999.0,
         "oldPrice": 4133.0
       },
@@ -27194,6 +27201,230 @@
         "price": 3099.0,
         "oldPrice": 4199.0
       }
+    },
+    {
+      "id": "MLB5619970196",
+      "itemId": "MLB5619970196",
+      "name": "Fone De Ouvido Bluetooth 5.1 Sem Fio Tws Wireless Bateria Longa Duração E Conexão Rápida Coolmusic Preto",
+      "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_960127-MLA109738568733_032026-AB.webp",
+      "affiliateUrl": "https://meli.la/1pyBZm8",
+      "productUrl": "https://www.mercadolivre.com.br/fone-de-ouvido-bluetooth-51-sem-fio-tws-wireless-bateria-longa-duracao-e-conexao-rapida-coolmusic/p/MLB53911392?pdp_filters=item_id%3AMLB5619970196&matt_tracing_id=d6f3e790-4e40-4127-a180-f89a26b469a2&matt_event_ts=1791310450866&matt_d2id=31501d96-a414-4f5d-b84e-c30f069984b5#polycard_client=social-profile-middleend&wid=MLB5619970196&source=lists&type=product&tracking_id=4c36784f-b4bf-4e6d-9f25-ac8d46ae6827&sid=storefronts",
+      "featured": false,
+      "category": "Áudio",
+      "rank": 84,
+      "registrationSource": "affiliate-panel",
+      "price": 24.4,
+      "oldPrice": 49.9,
+      "discount": 51.1022,
+      "displayedDiscount": "51% OFF",
+      "available": null,
+      "availabilityStatus": "unknown",
+      "priceSource": "poly-card-v1",
+      "collectedAt": "06/10/2026",
+      "priceCheck": {
+        "status": "verified",
+        "method": "poly-card-v1",
+        "itemId": "MLB5619970196",
+        "variationId": null,
+        "currency": "BRL",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
+        "price": 24.4,
+        "oldPrice": 49.9
+      },
+      "source": "Mercado Livre — cartão público do produto",
+      "affiliateLinkSource": "official_existing"
+    },
+    {
+      "id": "MLB4559210619",
+      "itemId": "MLB4559210619",
+      "name": "Tela Reflexiva Para Projetor 16:9 100 Polegadas Salange Cor Cinza",
+      "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_620798-MLA110430082397_042026-AB.webp",
+      "affiliateUrl": "https://meli.la/1pyBZm8",
+      "productUrl": "https://www.mercadolivre.com.br/tela-reflexiva-para-projetor-169-100-polegadas-salange-cor-cinza/p/MLB22943305?pdp_filters=item_id%3AMLB4559210619&matt_tracing_id=d6f3e790-4e40-4127-a180-f89a26b469a2&matt_event_ts=1791310450866&matt_d2id=31501d96-a414-4f5d-b84e-c30f069984b5#polycard_client=social-profile-middleend&wid=MLB4559210619&source=lists&type=product&tracking_id=4c36784f-b4bf-4e6d-9f25-ac8d46ae6827&sid=storefronts",
+      "featured": false,
+      "category": "TVs e projetores",
+      "rank": 85,
+      "registrationSource": "affiliate-panel",
+      "price": 78.47,
+      "oldPrice": 118.9,
+      "discount": 34.0034,
+      "displayedDiscount": "34% OFF",
+      "available": null,
+      "availabilityStatus": "unknown",
+      "priceSource": "poly-card-v1",
+      "collectedAt": "06/10/2026",
+      "priceCheck": {
+        "status": "verified",
+        "method": "poly-card-v1",
+        "itemId": "MLB4559210619",
+        "variationId": null,
+        "currency": "BRL",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
+        "price": 78.47,
+        "oldPrice": 118.9
+      },
+      "source": "Mercado Livre — cartão público do produto",
+      "affiliateLinkSource": "official_existing"
+    },
+    {
+      "id": "MLB4422182615",
+      "itemId": "MLB4422182615",
+      "name": "Projetor Smart Portátil Full Hd 4k Android 11 Wi-fi Bluetooth Mini Projetor Home Theater Cinema Em Casa Imagem Nítida Som Potente Compatível Com Diversos Dispositivos Branco 127/220 127/220v",
+      "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_985823-MLA113683572316_072026-AB.webp",
+      "affiliateUrl": "https://meli.la/1pyBZm8",
+      "productUrl": "https://www.mercadolivre.com.br/projetor-smart-portatil-full-hd-4k-android-11-wi-fi-bluetooth-mini-projetor-home-theater-cinema-em-casa-imagem-nitida-som-potente-compativel-com-diversos-dispositivos-branco-127220/p/MLB64305534?pdp_filters=item_id%3AMLB4422182615&matt_tracing_id=d6f3e790-4e40-4127-a180-f89a26b469a2&matt_event_ts=1791310450866&matt_d2id=31501d96-a414-4f5d-b84e-c30f069984b5#polycard_client=social-profile-middleend&wid=MLB4422182615&source=lists&type=product&tracking_id=4c36784f-b4bf-4e6d-9f25-ac8d46ae6827&sid=storefronts",
+      "featured": false,
+      "category": "TVs e projetores",
+      "rank": 86,
+      "registrationSource": "affiliate-panel",
+      "price": 176.35,
+      "oldPrice": 419.9,
+      "discount": 58.0019,
+      "displayedDiscount": "58% OFF",
+      "available": null,
+      "availabilityStatus": "unknown",
+      "priceSource": "poly-card-v1",
+      "collectedAt": "06/10/2026",
+      "priceCheck": {
+        "status": "verified",
+        "method": "poly-card-v1",
+        "itemId": "MLB4422182615",
+        "variationId": null,
+        "currency": "BRL",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
+        "price": 176.35,
+        "oldPrice": 419.9
+      },
+      "source": "Mercado Livre — cartão público do produto",
+      "affiliateLinkSource": "official_existing"
+    },
+    {
+      "id": "MLB4609951889",
+      "itemId": "MLB4609951889",
+      "name": "Alaxe Caixa De Som Inteligente Comando Voz Portátil Bluetoot Preto",
+      "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_735807-MLB115518695981_082026-AB.webp",
+      "affiliateUrl": "https://meli.la/1pyBZm8",
+      "productUrl": "https://www.mercadolivre.com.br/alaxe-caixa-de-som-inteligente-comando-voz-portatil-bluetoot/up/MLBU3898009017?pdp_filters=item_id%3AMLB4609951889&matt_tracing_id=d6f3e790-4e40-4127-a180-f89a26b469a2&matt_event_ts=1791310450866&matt_d2id=31501d96-a414-4f5d-b84e-c30f069984b5#polycard_client=social-profile-middleend&wid=MLB4609951889&source=lists&type=item&tracking_id=4c36784f-b4bf-4e6d-9f25-ac8d46ae6827&sid=storefronts",
+      "featured": false,
+      "category": "Áudio",
+      "rank": 87,
+      "registrationSource": "affiliate-panel",
+      "price": 86.52,
+      "oldPrice": 135.0,
+      "discount": 35.9111,
+      "displayedDiscount": "36% OFF",
+      "available": null,
+      "availabilityStatus": "unknown",
+      "priceSource": "poly-card-v1",
+      "collectedAt": "06/10/2026",
+      "priceCheck": {
+        "status": "verified",
+        "method": "poly-card-v1",
+        "itemId": "MLB4609951889",
+        "variationId": null,
+        "currency": "BRL",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
+        "price": 86.52,
+        "oldPrice": 135.0
+      },
+      "source": "Mercado Livre — cartão público do produto",
+      "affiliateLinkSource": "official_existing"
+    },
+    {
+      "id": "MLB4749956743",
+      "itemId": "MLB4749956743",
+      "name": "Smart Tv Samsung 43 Ls43f6000fgxzd Full Hd Led 110v/220v",
+      "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_850374-MLA103344560695_012026-AB.webp",
+      "affiliateUrl": "https://meli.la/1pyBZm8",
+      "productUrl": "https://www.mercadolivre.com.br/smart-tv-samsung-43-ls43f6000fgxzd-full-hd-led-110v220v/p/MLB63777677?pdp_filters=item_id%3AMLB4749956743&matt_tracing_id=d6f3e790-4e40-4127-a180-f89a26b469a2&matt_event_ts=1791310450866&matt_d2id=31501d96-a414-4f5d-b84e-c30f069984b5#polycard_client=social-profile-middleend&wid=MLB4749956743&source=lists&type=product&tracking_id=4c36784f-b4bf-4e6d-9f25-ac8d46ae6827&sid=storefronts",
+      "featured": false,
+      "category": "TVs e projetores",
+      "rank": 88,
+      "registrationSource": "affiliate-panel",
+      "price": 1599.0,
+      "oldPrice": 1719.0,
+      "discount": 6.9808,
+      "displayedDiscount": "7% OFF",
+      "available": null,
+      "availabilityStatus": "unknown",
+      "priceSource": "poly-card-v1",
+      "collectedAt": "06/10/2026",
+      "priceCheck": {
+        "status": "verified",
+        "method": "poly-card-v1",
+        "itemId": "MLB4749956743",
+        "variationId": null,
+        "currency": "BRL",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
+        "price": 1599.0,
+        "oldPrice": 1719.0
+      },
+      "source": "Mercado Livre — cartão público do produto",
+      "affiliateLinkSource": "official_existing"
+    },
+    {
+      "id": "MLB4559215817",
+      "itemId": "MLB4559215817",
+      "name": "Tela Reflexiva Salange Cinza 120 Polegadas 16:9 Projetor Led Projeção",
+      "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_952739-MLA110422339545_042026-AB.webp",
+      "affiliateUrl": "https://meli.la/1pyBZm8",
+      "productUrl": "https://www.mercadolivre.com.br/tela-reflexiva-salange-cinza-120-polegadas-169-projetor-led-projecao/p/MLB22801984?pdp_filters=item_id%3AMLB4559215817&matt_tracing_id=d6f3e790-4e40-4127-a180-f89a26b469a2&matt_event_ts=1791310450866&matt_d2id=31501d96-a414-4f5d-b84e-c30f069984b5#polycard_client=social-profile-middleend&wid=MLB4559215817&source=lists&type=product&tracking_id=4c36784f-b4bf-4e6d-9f25-ac8d46ae6827&sid=storefronts",
+      "featured": false,
+      "category": "TVs e projetores",
+      "rank": 89,
+      "registrationSource": "affiliate-panel",
+      "price": 100.78,
+      "oldPrice": 122.9,
+      "discount": 17.9984,
+      "displayedDiscount": "18% OFF",
+      "available": null,
+      "availabilityStatus": "unknown",
+      "priceSource": "poly-card-v1",
+      "collectedAt": "06/10/2026",
+      "priceCheck": {
+        "status": "verified",
+        "method": "poly-card-v1",
+        "itemId": "MLB4559215817",
+        "variationId": null,
+        "currency": "BRL",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
+        "price": 100.78,
+        "oldPrice": 122.9
+      },
+      "source": "Mercado Livre — cartão público do produto",
+      "affiliateLinkSource": "official_existing"
+    },
+    {
+      "id": "MLB5472135448",
+      "itemId": "MLB5472135448",
+      "name": "Filamento Pla Premium 1kg Granito High Speed Impressora 3d",
+      "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_930178-MLA100476263505_122025-AB.webp",
+      "affiliateUrl": "https://meli.la/1pyBZm8",
+      "productUrl": "https://www.mercadolivre.com.br/filamento-pla-premium-1kg-granito-high-speed-impressora-3d/p/MLB51167977?pdp_filters=item_id%3AMLB5472135448&matt_tracing_id=d6f3e790-4e40-4127-a180-f89a26b469a2&matt_event_ts=1791310450866&matt_d2id=31501d96-a414-4f5d-b84e-c30f069984b5#polycard_client=social-profile-middleend&wid=MLB5472135448&source=lists&type=product&tracking_id=4c36784f-b4bf-4e6d-9f25-ac8d46ae6827&sid=storefronts",
+      "featured": false,
+      "category": "Impressoras",
+      "rank": 90,
+      "registrationSource": "affiliate-panel",
+      "price": 110.43,
+      "oldPrice": 122.7,
+      "discount": 10.0,
+      "displayedDiscount": "10% OFF",
+      "available": null,
+      "availabilityStatus": "unknown",
+      "priceSource": "poly-card-v1",
+      "collectedAt": "06/10/2026",
+      "priceCheck": {
+        "status": "verified",
+        "method": "poly-card-v1",
+        "itemId": "MLB5472135448",
+        "variationId": null,
+        "currency": "BRL",
+        "checkedAt": "2026-10-06T18:14:11+00:00",
+        "price": 110.43,
+        "oldPrice": 122.7
+      },
+      "source": "Mercado Livre — cartão público do produto",
+      "affiliateLinkSource": "official_existing"
     }
   ]
 }
