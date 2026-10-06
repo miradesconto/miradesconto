@@ -6,7 +6,7 @@ label: "Teclados"
 resumo: "Compare teclados por layout ABNT2, tamanho, conexão, ruído e manutenção. Critérios para escolher um teclado para trabalho ou jogos."
 produtos: []
 hub: true
-ordem: 4
+ordem: 5
 schema: "CollectionPage"
 cta: "Ver situação das ofertas"
 offer_title: "Ofertas nesta categoria"
