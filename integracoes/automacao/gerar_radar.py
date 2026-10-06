@@ -34,6 +34,7 @@ TECH_CATEGORIES = {
 MAX_PRICE_AGE_HOURS = 36
 MIN_OBSERVATIONS = 6
 MIN_SPAN_HOURS = 24
+MIN_ACTIONABLE_SPAN_DAYS = 7
 MAX_FEATURED = 12
 MAX_PER_CATEGORY = 3
 
@@ -133,7 +134,12 @@ def classify(current: float, rows: list[dict]) -> tuple[str, int, str, float, fl
 
     if meaningful_range and current <= minimum + tolerance:
         label = "Menor observado"
-        strength = 4
+        if delta <= -5:
+            strength = 4
+        elif delta <= -1.5:
+            strength = 3
+        else:
+            strength = 2
         reason = (
             f"O preço atual está no menor valor observado neste anúncio durante "
             f"o período acompanhado."
@@ -245,7 +251,7 @@ def main() -> int:
             "label": label,
             "strength": strength,
             "reason": reason,
-            "actionable": strength >= 2,
+            "actionable": strength >= 2 and span_days >= MIN_ACTIONABLE_SPAN_DAYS,
             "stats30": stats(rows, anchor, 30),
             "stats90": stats(rows, anchor, 90) if span_days >= 30 else None,
             "stats180": stats(rows, anchor, 180) if span_days >= 90 else None,
@@ -285,6 +291,7 @@ def main() -> int:
             "historyLimitDays": 180,
             "minimumObservations": MIN_OBSERVATIONS,
             "minimumSpanHours": MIN_SPAN_HOURS,
+            "minimumActionableSpanDays": MIN_ACTIONABLE_SPAN_DAYS,
             "note": "Preço de referência da loja não é usado como histórico. Frete e cupons pessoais não entram no cálculo.",
         },
     }
