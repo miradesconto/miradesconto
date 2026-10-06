@@ -1,0 +1,84 @@
+name: Gemini — revisar pull request
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group: gemini-review-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  review:
+    if: github.event.pull_request.draft == false
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GEMINI_KEY: ${{ secrets.GEMINI_API_KEY }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Preparar diff do PR
+        run: |
+          mkdir -p .gemini
+          git diff --no-ext-diff "origin/${{ github.base_ref }}...HEAD" > .gemini/pr.diff
+
+      - name: Avisar quando Gemini ainda não estiver conectado
+        if: env.GEMINI_KEY == ''
+        run: echo "Gemini não executado: adicione o secret GEMINI_API_KEY em Settings > Secrets and variables > Actions." >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Revisar com Gemini
+        if: env.GEMINI_KEY != ''
+        id: gemini
+        uses: google-github-actions/run-gemini-cli@v0
+        with:
+          gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
+          prompt: |
+            Faça uma revisão técnica deste pull request.
+            Leia GEMINI.md primeiro e siga essas regras.
+            Leia .gemini/pr.diff e, quando necessário, os arquivos alterados.
+            Não modifique arquivos e não execute comandos.
+            Procure problemas reais de lógica, preço/histórico, links de afiliado,
+            SEO, acessibilidade, responsividade, segurança e risco de a automação
+            sobrescrever a mudança.
+            
+            Responda em português, em Markdown, neste formato:
+            ## Resumo
+            ## Bloqueadores
+            ## Pontos importantes
+            ## Sugestões
+            ## Veredito
+            
+            Se uma seção não tiver achados, escreva "Nenhum".
+          settings: |
+            {
+              "model": {
+                "maxSessionTurns": 10
+              },
+              "tools": {
+                "core": [
+                  "list_directory",
+                  "read_file",
+                  "grep_search"
+                ]
+              }
+            }
+
+      - name: Publicar revisão no pull request
+        if: env.GEMINI_KEY != '' && steps.gemini.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GEMINI_REVIEW: ${{ steps.gemini.outputs.summary }}
+        run: |
+          if [ -n "$GEMINI_REVIEW" ]; then
+            gh pr comment "${{ github.event.pull_request.number }}" --body "## Revisão Gemini\n\n$GEMINI_REVIEW"
+          fi
