@@ -36,9 +36,9 @@ class PurchaseContentTest(unittest.TestCase):
             self.assertEqual(p['list'],p['affiliateUrl'] in lists or p['affiliateUrl']=='https://meli.la/1NguveN')
             self.assertNotIn('price',p,'Prices must come from live generated catalog, never editorial snapshots')
 
-    def test_ten_unique_useful_pages(self):
+    def test_unique_useful_purchase_pages(self):
         files=list((ROOT/'_compras').glob('*.md'))
-        self.assertEqual(len(files),10)
+        self.assertEqual(len(files),11)
         paths=set()
         for file in files:
             _,front,body=file.read_text(encoding='utf-8').split('---',2)
