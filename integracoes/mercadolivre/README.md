@@ -1,5 +1,13 @@
 # Catálogo de afiliados
 
+A descoberta de produtos usa a lista **TECNOLOGIA**: https://meli.la/1pyBZm8.
+`listas-afiliadas.json` define as fontes atuais e substitui as fontes de descoberta
+anteriores. Ofertas e links individuais já cadastrados são preservados. A lista
+é reconhecida mesmo com um único produto. Novos produtos precisam de identidade,
+imagem e preço confirmados antes de entrar na vitrine. URLs específicas copiadas
+de listas usam `wid`, `source=lists` e `tracking_id` original; nenhum parâmetro
+de afiliado é inventado.
+
 O workflow `mercadolivre-sync.yml` consulta os 500 produtos publicados a cada
 hora, no minuto 17 (UTC). Às segundas-feiras, às 10h41 UTC, consulta também
 os produtos cadastrados na reserva e troca até 20 itens da vitrine. O GitHub

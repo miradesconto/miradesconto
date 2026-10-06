@@ -20,14 +20,22 @@ HEADER = '// Dados do catálogo; preços e status podem ser atualizados pela API
 def exact_offer_url(product):
     """Use the unchanged tracked product URL collected from the owner's list."""
     from urllib.parse import urlsplit, parse_qs
+    from uuid import UUID
     try:
         url = urlsplit(product.get('productUrl', ''))
         query = parse_qs(url.query)
         fragment = parse_qs(url.fragment)
         item = query.get('wid', fragment.get('wid', []))
         tool = query.get('matt_tool_id', fragment.get('matt_tool_id', []))
+        tracking = query.get('tracking_id', fragment.get('tracking_id', []))
+        list_source = query.get('source', fragment.get('source', [])) == ['lists']
+        list_tracking = False
+        if p_source := product.get('registrationSource'):
+            if p_source == 'affiliate-panel' and list_source and len(tracking) == 1:
+                UUID(tracking[0])
+                list_tracking = True
         if (url.scheme == 'https' and url.hostname in ('www.mercadolivre.com.br', 'mercadolivre.com.br')
-                and item == [product['id']] and len(tool) == 1 and tool[0].isdigit()):
+                and item == [product['id']] and ((len(tool) == 1 and tool[0].isdigit()) or list_tracking)):
             return product['productUrl']
     except (ValueError, KeyError, TypeError):
         pass
@@ -126,7 +134,7 @@ def public_data(catalog):
     for p in data['products']:
         p.pop('offerUrl', None)
         # Individual short links stay intact. Shared lists need an exact tracked destination.
-        if p.get('affiliateUrl') == 'https://meli.la/1NguveN' or counts.get(p.get('affiliateUrl'), 0) > 1:
+        if p.get('affiliateUrl') == 'https://meli.la/1NguveN' or p.get('affiliateUrl') in data.get('affiliateSources', []) or counts.get(p.get('affiliateUrl'), 0) > 1:
             destination = exact_offer_url(p)
             if destination:
                 p['offerUrl'] = destination

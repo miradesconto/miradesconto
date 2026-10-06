@@ -3,7 +3,7 @@ import unittest
 from pathlib import Path
 from datetime import datetime, timezone
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'integracoes' / 'mercadolivre'))
-from import_links import affiliate, allowed, prepare, parse_page
+from import_links import affiliate, allowed, prepare, parse_page, configured_sources
 
 class ImportTest(unittest.TestCase):
     def test_affiliate_card_resolution(self):
@@ -18,6 +18,22 @@ class ImportTest(unittest.TestCase):
                           'https://www.mercadolivre.com.br/social/owner', 'https://meli.la/example')
         self.assertEqual(len(rows), 2)
         self.assertEqual({r['id'] for r in rows}, {'MLB2766771378', 'MLB2766771379'})
+        single_list = parse_page(body, 'https://www.mercadolivre.com.br/social/owner/lists/example', 'https://meli.la/example')
+        self.assertEqual(len(single_list),1)
+        updated, archive = prepare({'products':[single_list[0]],'publishedIds':[], 'metadata':{'niche':'tech'}},[],
+                                  ['https://meli.la/example'],datetime.now(timezone.utc),lambda link:single_list)
+        self.assertEqual(len(updated['products']),1)
+        self.assertEqual(archive,[])
+        self.assertEqual(updated['metadata']['affiliateSources'],['https://meli.la/example'])
+
+    def test_configured_list_replaces_old_discovery_source(self):
+        import tempfile,json
+        current={'metadata':{'affiliateSources':['https://meli.la/old']}}
+        with tempfile.TemporaryDirectory() as folder:
+            file=Path(folder)/'lists.json'
+            file.write_text(json.dumps({'links':['https://meli.la/new']}))
+            self.assertEqual(configured_sources(current,file),['https://meli.la/new'])
+            self.assertEqual(current['metadata']['affiliateSources'],['https://meli.la/old'])
 
     def test_hosts(self):
         for url in ['http://meli.la/abc','https://meli.la.evil.com/abc','https://user@meli.la/abc','https://127.0.0.1/sec/a']:

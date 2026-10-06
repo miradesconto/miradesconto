@@ -27,7 +27,9 @@
       return url.protocol === 'https:' && (url.hostname === 'meli.la' ||
         ((url.hostname === 'www.mercadolivre.com.br' || url.hostname === 'mercadolivre.com.br')
           && (url.pathname.startsWith('/social/') || url.pathname.startsWith('/sec/') ||
-            /(?:^|[&#?])matt_tool_id=\d+(?:&|$)/.test(url.search + '&' + url.hash.slice(1)))));
+            /(?:^|[&#?])matt_tool_id=\d+(?:&|$)/.test(url.search + '&' + url.hash.slice(1)) ||
+            (/(?:^|[&#?])source=lists(?:&|$)/.test(url.search + '&' + url.hash.slice(1)) &&
+             /(?:^|[&#?])tracking_id=[0-9a-f-]{36}(?:&|$)/i.test(url.search + '&' + url.hash.slice(1))))));
     } catch { return false; }
   }
 
