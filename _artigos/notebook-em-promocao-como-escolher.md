@@ -55,7 +55,7 @@ O principal corte de decisão em 2026 é este: **8 GB ainda funcionam para uso l
 
 ## Melhores notebooks para comprar em 2026
 
-<div class="buy-guide-grid">
+<div class="buy-guide-grid" markdown="1">
 
 <article id="asus-vivobook-go-15" class="buy-guide-card" markdown="1">
   <div class="product-media"><img src="https://http2.mlstatic.com/D_Q_NP_2X_792275-MLA99470991702_112025-V.webp" alt="Notebook ASUS Vivobook Go 15 Intel Core i3 N305 8 GB 512 GB SSD" loading="lazy"></div>
