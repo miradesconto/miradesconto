@@ -1,3 +1,4 @@
 2026-10-06: sincronizar lista TECNOLOGIA https://meli.la/1pyBZm8.
 2026-10-06: regenerar Radar MiraDesconto com histórico verificado.
 2026-10-06: reaplicar Radar com mínimo de 7 dias para destaques.
+2026-10-06: regenerar fila social Radar → Pippit com 14 vídeos.
