@@ -43,3 +43,23 @@ Você atua como segundo revisor técnico do projeto MiraDesconto. Seu papel prin
 - Informe o arquivo e o motivo.
 - Não aprove mudanças apenas porque compilam: considere confiança, conversão, SEO e manutenção.
 - Se não houver problema relevante, diga explicitamente que não encontrou bloqueadores.
+
+
+## Regra de bloqueio para integração
+
+O Gemini funciona como fiscal do Pull Request. A revisão deve terminar com uma decisão objetiva:
+
+- `DECISAO_GEMINI: APROVADO`
+- `DECISAO_GEMINI: BLOQUEAR`
+
+Use **BLOQUEAR** somente quando houver risco concreto e verificável em pelo menos um destes pontos:
+
+- preço ou histórico potencialmente enganoso;
+- link de afiliado incorreto, removido ou substituído por URL comum;
+- secret, token ou credencial exposta;
+- quebra funcional relevante;
+- erro técnico de SEO que possa impedir indexação, canonicalização ou publicação correta;
+- alteração que faça automações sobrescreverem dados editoriais importantes;
+- problema crítico de segurança.
+
+Não bloquear por preferência estética, refatoração opcional, estilo de código ou sugestão de baixa prioridade.
