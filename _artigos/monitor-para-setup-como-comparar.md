@@ -47,7 +47,7 @@ O salto mais perceptível costuma acontecer quando você sai de **60/75 Hz para 
 
 ## Melhores monitores para comparar em 2026
 
-<div class="buy-guide-grid">
+<div class="buy-guide-grid" markdown="1">
 
 <article id="samsung-essential-s3" class="buy-guide-card" markdown="1">
   <div class="product-media"><img src="https://http2.mlstatic.com/D_Q_NP_2X_652104-MLA96195278152_102025-AB.webp" alt="Monitor Samsung Essential S3 24 polegadas Full HD IPS 120 Hz" loading="lazy"></div>
