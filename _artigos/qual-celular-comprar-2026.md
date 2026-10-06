@@ -54,6 +54,10 @@ Some frete e compare o total no Pix com o total parcelado. Confira capacidade, v
 
 Para acessórios, veja [como escolher carregador USB-C para iPhone]({{ '/blog/carregador-usb-c-iphone-como-escolher/' | relative_url }}). Acessórios necessários entram no custo total da compra.
 
+## Compare celulares e preços antes de decidir
+
+Veja a página de [celular em promoção e custo-benefício]({{ '/celulares/' | relative_url }}) para conferir as opções cadastradas e o preço atual antes de abrir a loja.
+
 ### Fontes e método
 
 [Apple: ficha técnica do iPhone 15](https://support.apple.com/pt-br/111831) e [Apple: ficha técnica do iPhone 16](https://support.apple.com/pt-br/121029), consultadas em 06/10/2026. Os critérios de escolha são orientação editorial. Não realizamos testes próprios nem atribuímos notas de desempenho.
