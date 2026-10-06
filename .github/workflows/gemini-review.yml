@@ -19,6 +19,7 @@ jobs:
     timeout-minutes: 10
     env:
       GEMINI_KEY: ${{ secrets.GEMINI_API_KEY }}
+      GEMINI_CLI_TRUST_WORKSPACE: "true"
 
     steps:
       - name: Checkout
@@ -78,7 +79,7 @@ jobs:
         if: env.GEMINI_KEY != '' && steps.gemini.outcome == 'success'
         env:
           GH_TOKEN: ${{ github.token }}
-          GEMINI_REVIEW: ${{ steps.gemini.outputs.summary }}
+          GEMINI_REVIEW: ${{ steps.gemini.outputs.gemini_response }}
         run: |
           if [ -n "$GEMINI_REVIEW" ]; then
             gh pr comment "${{ github.event.pull_request.number }}" --body "## Revisão Gemini\n\n$GEMINI_REVIEW"
