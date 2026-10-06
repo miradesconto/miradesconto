@@ -13,7 +13,11 @@ coleta não comprova estoque. A rota `/items/{id}/sale_price` da API retornou
 403 para os anúncios de outros vendedores; `hourly_prices.py` permanece no
 repositório, mas não é executado pelo workflow.
 
-Os links de saída vêm exclusivamente de `affiliateUrl` no catálogo. O registro
+Links individuais usam `affiliateUrl`. Para uma lista compartilhada, a geração
+deriva `offerUrl` do `productUrl` coletado na própria lista: exige HTTPS, domínio
+do Mercado Livre, `wid` igual ao ID do anúncio e `matt_tool_id` numérico. A URL
+original é preservada integralmente, sem criar parâmetros de afiliado. Isso
+evita que anúncios distintos abram a mesma lista. O registro
 `links-afiliados.json` fixa o link aprovado por ID; a validação falha se uma
 sincronização tentar substituí-lo. Isso não prova a atribuição de comissão:
 confira cliques e vendas no Portal de Afiliados.

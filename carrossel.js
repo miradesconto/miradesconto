@@ -28,18 +28,18 @@
     element('p','hero-lede','Notebooks, monitores e tecnologia: compare configurações, consulte preços observados e escolha o que atende ao seu uso.'));
   const actions = element('div','hero-actions');
   const explore = element('a','hero-primary','Explorar ofertas ↗'); explore.href='#ofertas';
-  const guide = element('a','hero-secondary','Escolher notebook →'); guide.href='notebooks/';
+  const guide = element('a','hero-secondary','Guias de compra →'); guide.href='blog/';
   actions.append(explore, guide); copy.append(actions);
   const proof = element('div','hero-proof');
   const count = element('div','hero-proof-item');
   count.append(element('strong','',String(fresh.length)), element('span','','preços verificados nas últimas 24h'));
   const rhythm = element('div','hero-proof-item');
   rhythm.append(element('strong','','1 hora'), element('span','','entre as buscas automáticas'));
-  proof.append(count,rhythm); copy.append(proof);
+  proof.append(count,rhythm);
   const disclosure = element('p','hero-disclosure');
   disclosure.append('Links de afiliado. Podemos receber comissão, sem custo adicional. ',
     element('a','','Entenda a transparência ↗'));
-  disclosure.querySelector('a').href='transparencia.html'; copy.append(disclosure);
+  disclosure.querySelector('a').href='transparencia.html';
 
   const showcase = element('div','hero-showcase');
   const top = element('div','hero-showcase-top');
@@ -67,7 +67,7 @@
   previous.setAttribute('aria-label','Oferta anterior'); next.setAttribute('aria-label','Próxima oferta');
   controls.append(previous,position,next); footer.append(status,controls);
   const rail = element('div','hero-rail');
-  showcase.append(top,card,footer,rail); shell.append(copy,showcase); hero.replaceChildren(shell);
+  showcase.append(card,footer); shell.append(copy,showcase); hero.replaceChildren(shell);
 
   let index=0;
   const badImages=new Set();
@@ -100,7 +100,7 @@
     category.textContent=p.category || 'Mercado Livre'; title.textContent=p.name;
     old.textContent=current && discount>=50 ? 'De '+money(p.oldPrice) : '';
     price.textContent=money(p.price);
-    link.textContent=isAffiliateList(p) ? 'Abrir lista na loja ↗' : 'Ver produto na loja ↗'; link.href=p.affiliateUrl; link.target='_blank';
+    link.textContent=isAffiliateList(p) ? 'Abrir lista na loja ↗' : 'Ver produto na loja ↗'; link.href=p.offerUrl || p.affiliateUrl; link.target='_blank';
     link.dataset.itemId=p.id; link.dataset.itemName=p.name; link.dataset.itemCategory=p.category || ''; link.dataset.destinationType=isAffiliateList(p) ? 'affiliate_list' : 'product';
     status.textContent=current ? 'Preço verificado em '+date : 'Último preço registrado em '+date;
     top.lastChild.textContent=current ? 'VERIFICADO RECENTEMENTE' : 'CONFIRME NA LOJA';

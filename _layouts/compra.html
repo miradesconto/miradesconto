@@ -21,8 +21,8 @@
 {% for id in page.produtos %}{% assign p = site.data.compra_products[id] %}{% if p %}<section class="buy-card" data-product-id="{{ id }}">
 {% if p.imageUrl %}<img src="{{ p.imageUrl | escape }}" alt="{{ p.name | escape }}" width="320" height="240" loading="lazy">{% endif %}
 <h3>{{ p.name | escape }}</h3><p class="buy-price" data-price aria-live="polite">Preço atual a confirmar na loja.</p>
-{% if p.list %}<p>O link abre uma lista de afiliados. Procure o modelo acima; ele pode não estar mais listado.</p>{% endif %}
-<a class="buy-cta" href="{{ p.affiliateUrl | escape }}" target="_blank" rel="sponsored nofollow noopener noreferrer" data-item-id="{{ id }}" data-item-name="{{ p.name | escape }}" data-item-category="{{ p.category | escape }}" data-link-location="purchase_page" data-destination-type="{% if p.list %}affiliate_list{% else %}product{% endif %}">{% if p.list %}Abrir lista na loja ↗{% else %}Conferir preço na loja ↗{% endif %}</a>
+{% if p.list and p.offerUrl == nil %}<p>O link abre uma lista de afiliados. Procure o modelo acima; ele pode não estar mais listado.</p>{% endif %}
+<a class="buy-cta" href="{{ p.offerUrl | default: p.affiliateUrl | escape }}" target="_blank" rel="sponsored nofollow noopener noreferrer" data-item-id="{{ id }}" data-item-name="{{ p.name | escape }}" data-item-category="{{ p.category | escape }}" data-link-location="purchase_page" data-destination-type="{% if p.list and p.offerUrl == nil %}affiliate_list{% else %}product{% endif %}">{% if p.list and p.offerUrl == nil %}Abrir lista na loja ↗{% else %}Conferir preço na loja ↗{% endif %}</a>
 {% if p.page and p.page != page.url %}<a href="{{ p.page | relative_url }}">Ver análise e condições de compra →</a>{% endif %}
 <button type="button" data-history hidden>Consultar histórico observado</button>
 </section>{% endif %}{% endfor %}</div>

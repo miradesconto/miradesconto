@@ -52,6 +52,7 @@ function element(tag, className, text) {
     return e;
 }
 function isAffiliateList(p) {
+    if (p.offerUrl) return false;
     return p.affiliateUrl === 'https://meli.la/1NguveN' || (source?.products || []).filter(item => item.affiliateUrl === p.affiliateUrl).length > 1;
 }
 function makeCard(p) {
@@ -93,7 +94,7 @@ function makeCard(p) {
     a.dataset.itemId=p.id; a.dataset.itemName=p.name; a.dataset.itemCategory=p.category || '';
     a.dataset.destinationType=isAffiliateList(p) ? 'affiliate_list' : 'product';
     if (isAffiliateList(p)) content.append(element('p','store','O link abre uma lista de afiliados. Procure este modelo e confirme a configuração.'));
-    a.href = safeUrl(p.affiliateUrl);
+    a.href = safeUrl(p.offerUrl || p.affiliateUrl);
     a.target = '_blank';
     a.rel = p.affiliateUrl ? 'noopener noreferrer sponsored' : 'noopener noreferrer';
     const share = element('button','share-button','Compartilhar');
@@ -106,7 +107,9 @@ function makeCard(p) {
     history.type = 'button'; history.addEventListener('click', () => window.MiraHistory.open(p, history));
     const guideSlug = {'MLB4604524838':'asus-vivobook-go-15-ryzen-5','MLB3914161563':'asus-vivobook-go-15-ryzen-5','MLB4329495631':'samsung-essential-s3-24','MLB4196200841':'acer-nitro-v15-rtx-4060'}[p.id];
     if (guideSlug) { const guide=element('a','product-link','Ver análise de compra →'); guide.href='produtos/'+guideSlug+'/'; content.append(guide); }
-    buttons.append(a,history,share);content.append(buttons);card.append(visual,content);
+    const extras = element('details','product-extras');
+    extras.append(element('summary','','Mais opções'),history,share);
+    buttons.append(a,extras);content.append(buttons);card.append(visual,content);
     return card;
 }
 function filteredProducts() {
@@ -187,7 +190,7 @@ $('sortSelect').addEventListener('change',renderProducts);
 document.querySelector('.logo').addEventListener('click',resetFilters);
 $('loadMore').addEventListener('click',()=>{visibleCount+=24;renderProducts(true);});
 $('dataNotice').textContent = source
-    ? 'A vitrine reúne descontos com preço verificado nas últimas 24 horas. Registros antigos aparecem apenas na consulta específica do produto, com aviso. Confirme frete e disponibilidade na loja.'
+    ? 'Preços verificados nas últimas 24 horas. Confirme frete e disponibilidade na loja.'
     : 'Não foi possível carregar as ofertas. Verifique se produtos.js está na mesma pasta do site.';
 // Links editoriais podem consultar um registro antigo identificado, com aviso explícito.
 if (requestedProduct) {

@@ -77,6 +77,7 @@ class CatalogTests(unittest.TestCase):
     def test_partial_snapshot_retains_unpublished_records(self):
         data = catalogo.public_data(self.original)
         removed = data['products'].pop()
+        removed.pop('offerUrl', None)  # Generated destination is not a source record field.
         data['products'][0]['price'] += 1
         # This simulated edit has no matching observation from the provider.
         data['products'][0].pop('priceCheck', None)

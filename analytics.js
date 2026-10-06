@@ -26,7 +26,8 @@
       const url = new URL(href, window.location.href);
       return url.protocol === 'https:' && (url.hostname === 'meli.la' ||
         ((url.hostname === 'www.mercadolivre.com.br' || url.hostname === 'mercadolivre.com.br')
-          && url.pathname.startsWith('/social/')));
+          && (url.pathname.startsWith('/social/') || url.pathname.startsWith('/sec/') ||
+            /(?:^|[&#?])matt_tool_id=\d+(?:&|$)/.test(url.search + '&' + url.hash.slice(1)))));
     } catch { return false; }
   }
 

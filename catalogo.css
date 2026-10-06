@@ -20,3 +20,8 @@ body.search-active #selectionNotice{display:none!important}
  body.search-active #ofertas{scroll-margin-top:150px}
 }
 @media(max-width:500px){.search-context{align-items:flex-start;flex-direction:column;gap:9px}.search-context button{align-self:flex-start}}
+
+/* Uma única navegação e avisos discretos; opções secundárias sob demanda. */
+#selectionNotice{padding:0;border:0;background:none;margin-bottom:10px;color:var(--muted)}
+.data-notice{font-size:12px;line-height:1.5;max-width:760px}.product-extras{margin-top:10px;text-align:center;color:var(--muted);font-size:12px}.product-extras summary{cursor:pointer;padding:6px;list-style:none}.product-extras summary::-webkit-details-marker{display:none}.product-extras summary:after{content:' +'} .product-extras[open] summary:after{content:' −'}
+.product-extras:focus-within{outline-offset:3px}.disclaimer{border:0;background:none;padding:0}.categories-container{scrollbar-width:none}.categories-container::-webkit-scrollbar{display:none}
