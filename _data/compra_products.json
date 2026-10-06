@@ -33,5 +33,21 @@
     "list": true,
     "page": "/produtos/asus-vivobook-go-15-ryzen-5/",
     "offerUrl": "https://www.mercadolivre.com.br/notebook-asus-vivobook-go-15-amd-ryzen-5-7520u-16gb-512ssd-mixed-black/p/MLB43417665?matt_event_ts=1791242830384&matt_d2id=b16ef365-e141-4f04-8a3a-dda5319707cb&matt_tracing_id=f1f66da6-0df0-4854-a4d5-a850cbb53fb8#polycard_client=recommendations_home_affiliate_profile_v2p-recommendations&reco_backend=ranker_retrieval_system_vpp_v2p&reco_model=fallback_organicos_deduplication&reco_client=home_affiliate_profile_v2p-recommendations&matt_tool_id=29904275&reco_item_pos=10&source=affiliate-profile&reco_backend_type=low_level&reco_id=9c093505-85d4-4ac5-a4c6-3ed3feaff787&tracking_id=5dd7175d-b4e8-4dac-9c2f-3118a507618d&wid=MLB3914161563&sid=recos&c_id=/home/affiliate-profile-recommendations/element&c_uid=53aa53c9-7b26-4f6e-a2f1-abcec250b025"
+  },
+  "MLB4408547152": {
+    "name": "Apple iPhone 15 (128 GB) - Azul - Distribuidor Autorizado",
+    "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_831434-MLA96401363339_102025-AB.webp",
+    "affiliateUrl": "https://meli.la/2fjdF1E",
+    "category": "Celulares",
+    "list": false,
+    "page": "/blog/iphone-15-vale-a-pena-em-oferta/"
+  },
+  "MLB3931271317": {
+    "name": "Apple iPhone 16 (128 GB) - Verde-acinzentado - Distribuidor Autorizado",
+    "imageUrl": "https://http2.mlstatic.com/D_NQ_NP_687325-MLA96079610055_102025-O.webp",
+    "affiliateUrl": "https://meli.la/2rdCTEV",
+    "category": "Celulares",
+    "list": false,
+    "page": "/blog/iphone-15-ou-16-em-promocao/"
   }
 }
