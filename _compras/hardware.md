@@ -6,7 +6,7 @@ label: "Hardware"
 resumo: "Guia para comprar SSD, memória, processador e placa de vídeo. Compare compatibilidade e custo total antes de aproveitar ofertas de hardware."
 produtos: []
 hub: true
-ordem: 5
+ordem: 6
 schema: "CollectionPage"
 cta: "Ver situação das ofertas"
 offer_title: "Ofertas nesta categoria"
