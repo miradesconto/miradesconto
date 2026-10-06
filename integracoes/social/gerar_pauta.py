@@ -107,6 +107,8 @@ def choose(products, radar, arts):
 
 def short(name):
     name = re.sub(r"\s+", " ", name).strip()
+    name = re.sub(r"^(Apple iPhone \d+\s*\([^)]+\))\s*-.*$", r"\1", name, flags=re.I)
+    name = re.sub(r"\s*-\s*Distribuidor Autorizado.*$", "", name, flags=re.I)
     return name if len(name) <= 72 else name[:68].rsplit(" ", 1)[0] + "…"
 
 def angle(r):
@@ -119,7 +121,8 @@ def hook(name, r):
     d = num(r.get("deltaAveragePct"))
     if r.get("label") == "Menor observado":
         return f"{name} está no menor valor observado neste anúncio. Mas vale comprar agora?"
-    if d <= -2: return f"{name} está {abs(d):.1f}% abaixo da média observada. É um bom momento de compra?"
+    if r.get("label") == "Bom preço" or d <= -2:
+        return f"{name} está {abs(d):.1f}% abaixo da média observada. É um bom momento de compra?"
     if r.get("label") == "Preço estável": return f"{name} quase não mudou de preço. Então o que decide a compra?"
     return f"Antes de comprar {name}, olha o que o histórico mostra."
 
