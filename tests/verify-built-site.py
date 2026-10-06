@@ -52,3 +52,30 @@ for file in (source/'_compras').glob('*.md'):
         assert (root/local).exists(),(key,href)
         if u.fragment and local in pages:assert u.fragment in pages[local].ids,(key,href)
 print('OK: 10 rendered pages, H1, descriptions, canonicals, schema, sitemap, internal links and anchors')
+
+# Editorial discovery must lead to published, indexable articles and valid offers.
+from posixpath import normpath
+editorial=['blog/index.html']
+for file in (source/'_artigos').glob('*.md'):
+    front=file.read_text(encoding='utf-8').split('---')[1]
+    if 'status: "publicado"' in front:
+        editorial.append('blog/'+file.stem+'/index.html')
+for key in editorial:
+    p=pages[key];url=origin+base+'/'+key.removesuffix('index.html')
+    assert p.h1==1 and p.canonical==[url] and len(p.description)==1 and p.description[0],key
+    assert url in urls and p.schema,key
+    for href in p.links:
+        u=urlsplit(href)
+        if u.scheme or u.netloc:continue
+        target=unquote(u.path)
+        if target.startswith('/'):
+            assert target.startswith(base+'/'),(key,href)
+            local=target[len(base)+1:]
+        elif target:
+            local=normpath(str(Path(key).parent.as_posix())+'/'+target)
+            if target.endswith('/'):local+='/'
+        else:local=key
+        if local.endswith('/'):local+='index.html'
+        assert (root/local).exists(),(key,href)
+        if u.fragment and local in pages:assert u.fragment in pages[local].ids,(key,href)
+print(f'OK: blog and {len(editorial)-1} published articles, metadata, sitemap and internal paths')

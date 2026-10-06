@@ -1,5 +1,5 @@
 ---
-title: "iPhone 15 ou 16 em promoção: quando pagar a diferença?"
+title: "iPhone 15 ou 16 em 2026: qual comprar e quando pagar a diferença?"
 resumo: "Compare chip, câmeras e controles; decida pelo preço final e pelo uso, sem confundir desconto anunciado com menor preço histórico."
 categoria: "comparativos"
 produtos: ["MLB4408547152", "MLB3931271317"]
@@ -7,7 +7,7 @@ status: "publicado"
 published: true
 autor: "MiraDesconto"
 data: "2026-10-02"
-atualizado: "2026-10-02"
+atualizado: "2026-10-06"
 ordem: 1
 destaque: true
 ---
@@ -31,6 +31,12 @@ Nossa avaliação editorial: se o objetivo é usar aplicativos, registrar fotos 
 ## Quando considerar o 16
 
 Se os controles extras e a fotografia macro são úteis para você, coloque esses recursos na conta. Não recomendamos pagar mais somente pelo número do modelo. Calcule a diferença em reais e veja se cabe no orçamento sem depender de parcelamento que aumenta o total.
+
+## Qual iPhone tem melhor custo-benefício em 2026?
+
+Compare o preço final dos dois na mesma capacidade e condição. Faça a conta: total do iPhone 16 menos total do iPhone 15. Se os recursos adicionais não resolvem uma necessidade sua, a diferença é um motivo para considerar o 15; se foto macro e controles dedicados importam, avalie o 16 dentro do orçamento. Essa é uma orientação de escolha, sem um limite de preço inventado.
+
+Estes dois modelos são o recorte deste comparativo. Para começar a decisão entre sistemas e faixas de preço, veja [qual celular comprar em 2026]({{ '/blog/qual-celular-comprar-2026/' | relative_url }}).
 
 ## Confira antes de comprar
 
