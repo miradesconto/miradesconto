@@ -1,18 +1,35 @@
 name: IndexNow
 
 on:
-  workflow_run:
-    workflows:
-      - "pages build and deployment"
-    types:
-      - completed
+  push:
+    branches:
+      - main
+    paths:
+      - "index.html"
+      - "sitemap.xml"
+      - "_artigos/**"
+      - "_compras/**"
+      - "blog/**"
+      - "produtos.js"
+      - "catalogo/**"
+      - "historico/**"
+      - "historico.js"
+      - "dados/**"
+      - "_data/**"
+      - "sobre.html"
+      - "transparencia.html"
+      - "privacidade.html"
+      - "b72a30284083f4ba3daf46c793b04329.txt"
+      - ".github/workflows/indexnow.yml"
   workflow_dispatch:
 
 jobs:
   submit:
-    if: github.event_name == 'workflow_dispatch' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main')
     runs-on: ubuntu-latest
     steps:
+      - name: Aguardar publicação do GitHub Pages
+        run: sleep 90
+
       - name: Enviar URLs recentes ao IndexNow
         uses: bojieyang/indexnow-action@v3
         with:
