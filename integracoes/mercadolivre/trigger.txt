@@ -2,3 +2,4 @@
 2026-10-06: regenerar Radar MiraDesconto com histórico verificado.
 2026-10-06: reaplicar Radar com mínimo de 7 dias para destaques.
 2026-10-06: regenerar fila social Radar → Pippit com 14 vídeos.
+2026-10-06: regenerar fila social Radar → Pippit após validação.
