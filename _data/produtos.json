@@ -393,5 +393,10 @@
     "name": "Notebook VAIO FE16 AMD Ryzen 3-7330U Linux 8GB RAM 256GB SSD 16\" IPS Full HD Antirreflexo - Permite expansão de RAM e SSD - Cinza Grafite",
     "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_704811-MLA118636981993_102026-T.webp",
     "available": true
+  },
+  "MLB7738436590": {
+    "name": "Computador Portátil Nimo Ryzen 7 15.6 16 Gb Ram 512 Gb Ssd W",
+    "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_651109-CBT117037025272_102026-T.webp",
+    "available": true
   }
 }
