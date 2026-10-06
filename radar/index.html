@@ -1,0 +1,108 @@
+---
+layout: null
+---
+{% assign radar = site.data.radar %}
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Radar de Preços | MiraDesconto</title>
+<meta name="description" content="Veja produtos de tecnologia em bom momento de compra com base no histórico de preços observado pelo MiraDesconto.">
+<link rel="canonical" href="https://miradesconto.github.io/miradesconto/radar/">
+<meta name="theme-color" content="#ffffff"><link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<meta property="og:type" content="website"><meta property="og:locale" content="pt_BR"><meta property="og:site_name" content="MiraDesconto">
+<meta property="og:title" content="Radar de Preços | MiraDesconto">
+<meta property="og:description" content="Preço atual contra o histórico realmente observado no mesmo anúncio.">
+<meta property="og:url" content="https://miradesconto.github.io/miradesconto/radar/">
+<meta property="og:image" content="https://miradesconto.github.io/miradesconto/blog/social.png">
+<link rel="stylesheet" href="../blog/blog.css?v=20261006editorial3"><link rel="stylesheet" href="../radar.css?v=20261006">
+<link rel="stylesheet" href="../analytics.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Radar de Preços MiraDesconto","description":"Produtos de tecnologia avaliados pelo preço atual em relação ao histórico observado.","url":"https://miradesconto.github.io/miradesconto/radar/","inLanguage":"pt-BR"}</script>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<header class="site-header"><div class="wrap header-inner">
+<a class="logo" href="../">Mira<span>Desconto</span></a>
+<nav aria-label="Navegação principal">
+<a href="../">Ofertas</a><a href="./" aria-current="page">Radar</a><a href="../blog/">Guias e Reviews</a><a href="../sobre.html">Sobre</a>
+</nav>
+</div></header>
+
+<main id="conteudo">
+<section class="radar-hero"><div class="wrap radar-hero-inner">
+<p class="eyebrow">Radar MiraDesconto</p>
+<h1>É uma boa hora para comprar?</h1>
+<p class="radar-lead">Comparamos o preço atual com valores que o próprio MiraDesconto já observou no mesmo anúncio e variação. Sem usar o “preço de referência” da loja como histórico.</p>
+<div class="radar-summary">
+<div><strong>{{ radar.featuredCount }}</strong><span>oportunidades em destaque</span></div>
+<div><strong>{{ radar.eligibleCount }}</strong><span>produtos com histórico utilizável</span></div>
+<div><strong>até 180 dias</strong><span>de observações acumuladas</span></div>
+</div>
+</div></section>
+
+<section class="wrap radar-legend" aria-labelledby="como-ler">
+<div><p class="eyebrow">Como ler</p><h2 id="como-ler">O selo depende do preço observado.</h2></div>
+<div class="radar-legend-grid">
+<div><span class="radar-badge badge-low">Menor observado</span><p>Preço atual igual ao menor valor registrado no período acompanhado.</p></div>
+<div><span class="radar-badge badge-great">Excelente preço</span><p>Pelo menos 5% abaixo da média observada.</p></div>
+<div><span class="radar-badge badge-good">Bom preço</span><p>Entre 1,5% e 5% abaixo da média observada.</p></div>
+</div>
+</section>
+
+<section class="wrap radar-content" aria-labelledby="destaques-title">
+<header class="radar-section-head">
+<div><p class="eyebrow">Oportunidades agora</p><h2 id="destaques-title">Preços que merecem atenção.</h2></div>
+<p>Os cards só entram aqui quando o preço foi verificado recentemente e existe histórico mínimo suficiente para comparação.</p>
+</header>
+
+{% if radar.featured.size > 0 %}
+<div class="radar-grid">
+{% for id in radar.featured %}
+{% assign item = radar.byId[id] %}
+{% if item %}
+<article class="radar-card">
+<div class="radar-card-image"><img src="{{ item.imageUrl | escape }}" alt="{{ item.name | escape }}" width="420" height="300" loading="lazy"></div>
+<div class="radar-card-body">
+<div class="radar-card-top"><span class="radar-badge {% if item.label == 'Menor observado' %}badge-low{% elsif item.label == 'Excelente preço' %}badge-great{% else %}badge-good{% endif %}">{{ item.label }}</span><span class="radar-category">{{ item.category | escape }}</span></div>
+<h3>{{ item.name | escape }}</h3>
+<div class="radar-price">{{ item.currentPriceText }}</div>
+<p class="radar-reason">{{ item.reason | escape }}</p>
+<div class="radar-facts">
+<div><span>Média observada</span><strong>{{ item.averagePriceText }}</strong></div>
+<div><span>Menor observado</span><strong>{{ item.minimumPriceText }}</strong></div>
+<div><span>Base da análise</span><strong>{{ item.periodText }}</strong></div>
+</div>
+<p class="radar-evidence">{{ item.observations }} observações verificadas no mesmo anúncio e variação.</p>
+<div class="radar-actions">
+<a class="radar-primary" href="{{ item.affiliateUrl | escape }}" data-item-id="{{ item.id }}" data-item-name="{{ item.name | escape }}" data-link-location="radar" target="_blank" rel="sponsored nofollow noopener noreferrer">Conferir oferta ↗</a>
+<a class="radar-secondary" href="../?produto={{ item.id | url_encode }}#ofertas">Ver no catálogo</a>
+</div>
+</div>
+</article>
+{% endif %}
+{% endfor %}
+</div>
+{% else %}
+<div class="radar-empty"><h3>Histórico em formação.</h3><p>O Radar só destaca produtos quando existem observações verificadas suficientes. Volte depois das próximas coletas.</p></div>
+{% endif %}
+</section>
+
+<section class="wrap radar-method">
+<div><p class="eyebrow">Método</p><h2>O que o Radar considera — e o que não considera.</h2></div>
+<div class="radar-method-grid">
+<div><h3>Mesmo anúncio</h3><p>Comparamos registros do mesmo item e, quando identificada, da mesma variação.</p></div>
+<div><h3>Preço verificado</h3><p>O produto precisa ter confirmação recente no catálogo. Preços antigos ficam fora dos destaques.</p></div>
+<div><h3>Sem falsa precisão</h3><p>Frete, cupons pessoais e condições individuais de pagamento não entram no cálculo.</p></div>
+<div><h3>“Menor histórico” só com história</h3><p>Enquanto o projeto ainda acumula dados, mostramos “menor observado” e o período efetivamente acompanhado.</p></div>
+</div>
+<p class="radar-method-note">Última geração do Radar: {{ radar.generatedAt | date: "%d/%m/%Y às %H:%M" }} UTC. A condição válida é sempre a exibida pela loja no momento da compra.</p>
+</section>
+</main>
+
+<footer><div class="wrap footer-inner">
+<div><a class="logo" href="../">Mira<span>Desconto</span></a><p>Informação para escolher melhor.<br>© 2026 MiraDesconto.</p></div>
+<nav aria-label="Informações institucionais"><a href="../sobre.html">Sobre</a><a href="../blog/">Editorial</a><a href="../transparencia.html">Transparência</a><a href="../privacidade.html">Privacidade</a></nav>
+</div></footer>
+<script src="../analytics-config.js"></script><script src="../analytics.js"></script>
+</body>
+</html>
