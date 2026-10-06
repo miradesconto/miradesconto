@@ -403,5 +403,15 @@
     "name": "Notebook ASUS Vivobook Go 15, Athlon Silver 10, 8GB RAM, 128GB SSD, Windows 11 Home, Tela 15,6\" FHD nível IPS, Rose Pink - E1504FA-BQ5316WS",
     "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_972674-MLA113064679728_072026-T.webp",
     "available": true
+  },
+  "MLB3746267799": {
+    "name": "Notebook ASUS Vivobook Go 15 E1504 AMD RYZEN 5 7520U 8GB Ram 256GB SSD Linux KeepOS 15,6” FHD Black E1504FA-NJ731",
+    "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_830301-MLA99949667885_112025-T.webp",
+    "available": true
+  },
+  "MLB5264782951": {
+    "name": "Notebook Acer Aspire Lite 15 15,6 Fhd Intel Core 3 N350 8gb Ram 128gb Ssd Windows 11 Light Silver.",
+    "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_874760-MLA110280953251_042026-T.webp",
+    "available": true
   }
 }
