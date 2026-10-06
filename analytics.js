@@ -35,16 +35,19 @@
     const link = event.target?.closest?.('a[href]');
     if (!link || !isAffiliate(link.href)) return;
     const catalog = window.MIRA_DATA?.products || [];
-    const product = catalog.find(p => p.affiliateUrl === link.href);
+    const matches = catalog.filter(p => p.affiliateUrl === link.href);
+    const product = link.dataset.itemId ? catalog.find(p => p.id === link.dataset.itemId) : matches.length === 1 ? matches[0] : null;
     const location = link.closest('.hero') ? 'hero' :
       link.closest('#productList') ? 'catalog' : link.closest('article') ? 'article' : 'other';
     const params = {
-      link_location: location,
+      link_location: link.dataset.linkLocation || location,
+      destination_type: link.dataset.destinationType || (matches.length > 1 ? 'affiliate_list' : 'product'),
+      content_path: window.location.pathname,
       affiliate_host: new URL(link.href).hostname,
-      item_name: String(product?.name || link.textContent || '').trim().slice(0,100),
+      item_name: String(link.dataset.itemName || product?.name || link.textContent || '').trim().slice(0,100),
     };
-    if (product?.id) params.item_id = product.id;
-    if (product?.category) params.item_category = product.category;
+    if (link.dataset.itemId || product?.id) params.item_id = link.dataset.itemId || product.id;
+    if (link.dataset.itemCategory || product?.category) params.item_category = link.dataset.itemCategory || product.category;
     if (typeof product?.price === 'number' && Number.isFinite(product.price)) {
       params.item_price = product.price;
       params.currency = 'BRL';
@@ -58,7 +61,9 @@
     choice = value;
     try { localStorage.setItem(key, value); } catch { /* Navegação continua sem armazenamento. */ }
     hideBanner();
-    if (value === 'granted') start();
+    window['ga-disable-' + id] = value !== 'granted';
+    if (value === 'granted') { start(); window.gtag('consent', 'update', {analytics_storage:'granted'}); }
+    else if (started) window.gtag('consent', 'update', {analytics_storage:'denied'});
   }
   function showBanner() {
     if (banner) return;

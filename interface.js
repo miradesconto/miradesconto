@@ -51,6 +51,9 @@ function element(tag, className, text) {
     if(text !== undefined) e.textContent = text;
     return e;
 }
+function isAffiliateList(p) {
+    return p.affiliateUrl === 'https://meli.la/1NguveN' || (source?.products || []).filter(item => item.affiliateUrl === p.affiliateUrl).length > 1;
+}
 function makeCard(p) {
     const card = element('article','card');
     card.dataset.id = p.id;
@@ -86,7 +89,10 @@ function makeCard(p) {
         ? 'Valor histórico · confirme preço, frete e disponibilidade na loja'
         : p.store || 'Ver loja'));
     const buttons = element('div','buttons');
-    const a = element('a','offer-button','VER NA LOJA');
+    const a = element('a','offer-button',isAffiliateList(p) ? 'ABRIR LISTA NA LOJA' : 'CONFERIR PREÇO NA LOJA');
+    a.dataset.itemId=p.id; a.dataset.itemName=p.name; a.dataset.itemCategory=p.category || '';
+    a.dataset.destinationType=isAffiliateList(p) ? 'affiliate_list' : 'product';
+    if (isAffiliateList(p)) content.append(element('p','store','O link abre uma lista de afiliados. Procure este modelo e confirme a configuração.'));
     a.href = safeUrl(p.affiliateUrl);
     a.target = '_blank';
     a.rel = p.affiliateUrl ? 'noopener noreferrer sponsored' : 'noopener noreferrer';
@@ -98,6 +104,8 @@ function makeCard(p) {
     share.addEventListener('click', () => shareProduct(p.name,siteLink.href));
     const history = element('button','share-button','Ver histórico de preço');
     history.type = 'button'; history.addEventListener('click', () => window.MiraHistory.open(p, history));
+    const guideSlug = {'MLB4604524838':'asus-vivobook-go-15-ryzen-5','MLB3914161563':'asus-vivobook-go-15-ryzen-5','MLB4329495631':'samsung-essential-s3-24','MLB4196200841':'acer-nitro-v15-rtx-4060'}[p.id];
+    if (guideSlug) { const guide=element('a','product-link','Ver análise de compra →'); guide.href='produtos/'+guideSlug+'/'; content.append(guide); }
     buttons.append(a,history,share);content.append(buttons);card.append(visual,content);
     return card;
 }

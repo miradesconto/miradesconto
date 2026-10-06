@@ -46,3 +46,7 @@ O desconto do catálogo compara um preço observado com a referência exibida pe
 ### Fonte
 
 [Intel: tabela comparativa de processadores para laptops](https://www.intel.com.br/content/www/br/pt/support/articles/000028083/processors.html), consultada em 02/10/2026. O checklist é orientação editorial, não resultado de teste.
+
+## Compare antes de abrir a loja
+
+Compare as [opções de notebooks cadastradas]({{ '/notebooks/' | relative_url }}) e veja [quando escolher 8 GB ou 16 GB]({{ '/comparativos/notebook-8gb-ou-16gb/' | relative_url }}).

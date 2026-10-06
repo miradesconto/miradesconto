@@ -4,6 +4,8 @@ baseurl: /miradesconto
 lang: pt-BR
 markdown: kramdown
 collections:
+  compras:
+    output: true
   artigos:
     output: true
     permalink: /blog/:name/

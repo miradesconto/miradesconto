@@ -1,5 +1,6 @@
 'use strict';
 window.MiraHistory = (() => {
+  const historyBase = new URL('./', document.currentScript.src);
   const fmt = n => n.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
   const date = at => new Date(at).toLocaleString('pt-BR',{timeZone:'America/Sao_Paulo'});
   function node(tag, text) { const e=document.createElement(tag); if(text!==undefined)e.textContent=text; return e; }
@@ -12,7 +13,7 @@ window.MiraHistory = (() => {
     const body=node('div','Carregando registros…'); body.setAttribute('aria-live','polite');
     dialog.append(close,title,node('p',product.name),body);document.body.append(dialog);dialog.showModal();
     try {
-      const response=await fetch(new URL('historico/'+encodeURIComponent(product.id)+'.json',document.baseURI));
+      const response=await fetch(new URL('historico/'+encodeURIComponent(product.id)+'.json',historyBase));
       if(!response.ok)throw Error('missing');
       const data=await response.json();
       const evidence=product.priceCheck || {};

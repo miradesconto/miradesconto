@@ -11,18 +11,24 @@
   const fresh = products.filter(p => recorded(p) && MiraQuality.usablePrice(p));
   const deals = fresh.filter(p => p.oldPrice > p.price && (1 - p.price / p.oldPrice) >= .5)
     .sort((a,b) => (1 - b.price / b.oldPrice) - (1 - a.price / a.oldPrice)).slice(0,8);
-  const slides = deals.length ? deals : fresh.length ? fresh.slice(0,8) : products.filter(recorded).slice(0,8);
+  // Lead with the products covered by buying guides, then other core tech.
+  // A large reference-price discount alone does not determine the first offer.
+  const buyingGuideIds = ['MLB4604524838','MLB4329495631','MLB4196200841'];
+  const guided = buyingGuideIds.map(id => fresh.find(p => p.id === id)).filter(Boolean);
+  const coreTech = fresh.filter(p => /^(notebook|monitor|mouse|teclado|ssd|processador)\b/i.test(p.name));
+  const preferred = [...guided, ...coreTech, ...deals, ...fresh];
+  const slides = fresh.length ? [...new Map(preferred.map(p => [p.id,p])).values()].slice(0,8) : products.filter(recorded).slice(0,8);
   const shell = element('div','hero-stage');
   const copy = element('div','hero-copy');
   const eyebrow = element('div','hero-eyebrow');
   eyebrow.append(element('span','hero-live-dot'), element('span','','RADAR MIRADESCONTO'));
   const heading = element('h1');
-  heading.append('Tecnologia boa. ', element('span','','Preço na mira.'));
+  heading.append('Seu próximo upgrade. ', element('span','','Preço na mira.'));
   copy.append(eyebrow, heading,
-    element('p','hero-lede','Eletrônicos, celulares, gaming e setup com desconto registrado. Compare os modelos e confira as condições na loja.'));
+    element('p','hero-lede','Notebooks, monitores e tecnologia: compare configurações, consulte preços observados e escolha o que atende ao seu uso.'));
   const actions = element('div','hero-actions');
   const explore = element('a','hero-primary','Explorar ofertas ↗'); explore.href='#ofertas';
-  const guide = element('a','hero-secondary','Como escolhemos →'); guide.href='sobre.html';
+  const guide = element('a','hero-secondary','Escolher notebook →'); guide.href='notebooks/';
   actions.append(explore, guide); copy.append(actions);
   const proof = element('div','hero-proof');
   const count = element('div','hero-proof-item');
@@ -94,7 +100,8 @@
     category.textContent=p.category || 'Mercado Livre'; title.textContent=p.name;
     old.textContent=current && discount>=50 ? 'De '+money(p.oldPrice) : '';
     price.textContent=money(p.price);
-    link.textContent='Ver produto na loja ↗'; link.href=p.affiliateUrl; link.target='_blank';
+    link.textContent=isAffiliateList(p) ? 'Abrir lista na loja ↗' : 'Ver produto na loja ↗'; link.href=p.affiliateUrl; link.target='_blank';
+    link.dataset.itemId=p.id; link.dataset.itemName=p.name; link.dataset.itemCategory=p.category || ''; link.dataset.destinationType=isAffiliateList(p) ? 'affiliate_list' : 'product';
     status.textContent=current ? 'Preço verificado em '+date : 'Último preço registrado em '+date;
     top.lastChild.textContent=current ? 'VERIFICADO RECENTEMENTE' : 'CONFIRME NA LOJA';
     position.textContent=(index+1)+' / '+slides.length;

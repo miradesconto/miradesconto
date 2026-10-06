@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title | escape }} | MiraDesconto</title>
+<meta name="description" content="{{ page.resumo | escape }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+<meta property="og:title" content="{{ page.title | escape }}"><meta property="og:description" content="{{ page.resumo | escape }}"><meta property="og:url" content="{{ page.url | absolute_url }}"><meta property="og:type" content="website"><meta property="og:locale" content="pt_BR">
+<link rel="icon" href="{{ '/favicon.svg' | relative_url }}">
+<link rel="stylesheet" href="{{ '/blog/blog.css' | relative_url }}"><link rel="stylesheet" href="{{ '/blog/artigo.css' | relative_url }}"><link rel="stylesheet" href="{{ '/compra.css' | relative_url }}"><link rel="stylesheet" href="{{ '/analytics.css' | relative_url }}"><link rel="stylesheet" href="{{ '/historico.css' | relative_url }}">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"{{ page.schema | default: 'CollectionPage' }}","name":{{ page.title | jsonify }},"description":{{ page.resumo | jsonify }},"url":{{ page.url | absolute_url | jsonify }},"inLanguage":"pt-BR"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"MiraDesconto","item":{{ '/' | absolute_url | jsonify }}},{"@type":"ListItem","position":2,"name":{{ page.title | jsonify }},"item":{{ page.url | absolute_url | jsonify }}}]}</script>
+</head><body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<header class="site-header"><div class="wrap header-inner"><a class="logo" href="{{ '/' | relative_url }}">Mira<span>Desconto</span></a><nav aria-label="Navegação principal"><a href="{{ '/notebooks/' | relative_url }}">Notebooks</a><a href="{{ '/monitores/' | relative_url }}">Monitores</a><a href="{{ '/ofertas-tech/' | relative_url }}">Ofertas tech</a><a href="{{ '/blog/' | relative_url }}">Guias</a></nav></div></header>
+<main class="wrap article-page" id="conteudo"><nav class="breadcrumbs" aria-label="Caminho de navegação"><a href="{{ '/' | relative_url }}">Início</a><span aria-hidden="true">/</span><span>{{ page.label | escape }}</span></nav>
+<article><header class="article-heading"><p class="eyebrow">Compra tech com critério</p><h1>{{ page.title | escape }}</h1><p class="lead">{{ page.resumo | escape }}</p><p class="article-meta">Por MiraDesconto · Revisão editorial: 06/10/2026</p><a class="buy-cta" href="#ofertas-relacionadas">{{ page.cta | default: 'Conferir opções e preços' | escape }} ↓</a></header>
+<aside class="notice"><p>Podemos receber comissão por compras elegíveis nos links de afiliado. Análise editorial de informações cadastradas, sem teste prático. <a href="{{ '/transparencia.html' | relative_url }}">Nossa transparência</a>.</p></aside>
+<div class="article-body">{{ content }}</div>
+<section class="related-products" id="ofertas-relacionadas"><h2>{{ page.offer_title | default: 'Opções cadastradas e consulta de preço' }}</h2>
+{% if page.produtos.size > 0 %}<p>Compare a configuração completa. Preços só aparecem quando passam pela verificação das últimas 24 horas; confirme frete, vendedor e disponibilidade no destino.</p><div class="buy-grid">
+{% for id in page.produtos %}{% assign p = site.data.compra_products[id] %}{% if p %}<section class="buy-card" data-product-id="{{ id }}">
+{% if p.imageUrl %}<img src="{{ p.imageUrl | escape }}" alt="{{ p.name | escape }}" width="320" height="240" loading="lazy">{% endif %}
+<h3>{{ p.name | escape }}</h3><p class="buy-price" data-price aria-live="polite">Preço atual a confirmar na loja.</p>
+{% if p.list %}<p>O link abre uma lista de afiliados. Procure o modelo acima; ele pode não estar mais listado.</p>{% endif %}
+<a class="buy-cta" href="{{ p.affiliateUrl | escape }}" target="_blank" rel="sponsored nofollow noopener noreferrer" data-item-id="{{ id }}" data-item-name="{{ p.name | escape }}" data-item-category="{{ p.category | escape }}" data-link-location="purchase_page" data-destination-type="{% if p.list %}affiliate_list{% else %}product{% endif %}">{% if p.list %}Abrir lista na loja ↗{% else %}Conferir preço na loja ↗{% endif %}</a>
+{% if p.page and p.page != page.url %}<a href="{{ p.page | relative_url }}">Ver análise e condições de compra →</a>{% endif %}
+<button type="button" data-history hidden>Consultar histórico observado</button>
+</section>{% endif %}{% endfor %}</div>
+{% else %}<p>Ainda não há ofertas específicas selecionadas para esta página. Use os critérios acima para comparar anúncios; não indicamos um modelo sem cadastro e link conferido.</p><a href="{{ '/' | relative_url }}#ofertas">Explorar as ofertas tech disponíveis →</a>{% endif %}</section>
+<section class="related-products"><h2>Continue sua comparação</h2>{% include compra-nav.html %}<p><a href="{{ '/blog/notebook-em-promocao-como-escolher/' | relative_url }}">Checklist de notebook</a> · <a href="{{ '/blog/monitor-para-setup-como-comparar/' | relative_url }}">Resolução, Hz e conexões do monitor</a></p></section>
+</article></main>
+<footer><div class="wrap footer-inner"><a href="{{ '/sobre.html' | relative_url }}">Sobre</a><a href="{{ '/transparencia.html' | relative_url }}">Transparência</a><a href="{{ '/privacidade.html' | relative_url }}">Privacidade</a><button type="button" data-analytics-preferences>Preferências de métricas</button></div></footer>
+<script src="{{ '/qualidade.js' | relative_url }}"></script><script src="{{ '/produtos.js' | relative_url }}"></script><script src="{{ '/historico.js' | relative_url }}"></script><script src="{{ '/compra.js' | relative_url }}"></script><script src="{{ '/analytics-config.js' | relative_url }}"></script><script src="{{ '/analytics.js' | relative_url }}"></script>
+</body></html>

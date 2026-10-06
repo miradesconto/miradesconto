@@ -1,0 +1,1 @@
+<nav class="buy-nav" aria-label="Guias de compra por categoria">{% assign hubs = site.compras | where: "hub", true | sort: "ordem" %}{% for hub in hubs %}<a href="{{ hub.url | relative_url }}"{% if page.url == hub.url %} aria-current="page"{% endif %}>{{ hub.label | escape }}</a>{% endfor %}</nav>
