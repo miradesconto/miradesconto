@@ -1,6 +1,6 @@
 # Pauta automática — MiraDesconto
 
-Catálogo-base: 05/10/2026
+Catálogo-base: 06/10/2026
 
 Somente tecnologia com desconto e preço verificado nas últimas 24 horas é elegível. Estoque não confirmado. Seleção automática com variedade de categorias. Confirme a oferta antes de publicar, pois preço e estoque podem mudar.
 
