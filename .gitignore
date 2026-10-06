@@ -3,3 +3,7 @@ __pycache__/
 preview/
 _site/
 .jekyll-cache/
+
+# Gemini CLI
+.gemini/
+gha-creds-*.json
