@@ -81,7 +81,14 @@ def score(p, radar, arts):
     s += num(r.get("strength")) * 22 + max(0, -num(r.get("deltaAveragePct"))) * 2.5
     s += min(num(r.get("observations")), 120) * .08 + min(num(r.get("spanDays")), 30) * .6
     if i in featured: s += max(10, 45 - featured.index(i) * 3)
-    if article_for(i, arts): s += 12
+    if article_for(i, arts): s += 70
+    name = str(p.get("name") or "").lower()
+    if any(k in name for k in ("iphone", "apple", "samsung", "acer", "asus", "lenovo", "motorola", "nintendo", "logitech", "jbl")):
+        s += 18
+    if num(p.get("price")) >= 500:
+        s += 8
+    if num(p.get("price")) < 50 and not article_for(i, arts):
+        s -= 8
     return s
 
 def choose(products, radar, arts):
