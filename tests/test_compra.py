@@ -19,6 +19,10 @@ class PurchaseContentTest(unittest.TestCase):
         p=dict(shared[0])
         p['productUrl']=p['productUrl'].replace('wid='+p['id'],'wid=MLB0000000000')
         self.assertIsNone(catalogo.exact_offer_url(p))
+        p.update(registrationSource='affiliate-panel',productUrl='https://www.mercadolivre.com.br/notebook/p/MLB123#wid='+p['id']+'&source=lists&tracking_id=7a00916c-b4c9-43d3-8d80-d9a2d51aac01')
+        self.assertEqual(catalogo.exact_offer_url(p),p['productUrl'])
+        p['productUrl']=p['productUrl'].replace('7a00916c-b4c9-43d3-8d80-d9a2d51aac01','invalid')
+        self.assertIsNone(catalogo.exact_offer_url(p))
         p['productUrl']='https://example.org/?wid='+p['id']+'&matt_tool_id=29904275'
         self.assertIsNone(catalogo.exact_offer_url(p))
 
@@ -29,7 +33,7 @@ class PurchaseContentTest(unittest.TestCase):
         for id,p in curated.items():
             for key in ('name','imageUrl','affiliateUrl','category'):
                 self.assertEqual(p[key],catalog[id].get(key,''),(id,key))
-            self.assertEqual(p['list'],p['affiliateUrl'] in lists)
+            self.assertEqual(p['list'],p['affiliateUrl'] in lists or p['affiliateUrl']=='https://meli.la/1NguveN')
             self.assertNotIn('price',p,'Prices must come from live generated catalog, never editorial snapshots')
 
     def test_ten_unique_useful_pages(self):

@@ -110,7 +110,8 @@ def parse_page(body, final, link):
             if key in candidates and candidates[key] != value:
                 raise ValueError('Cartões divergentes; revisão necessária')
             candidates[key] = value
-        if len(candidates) > 1:
+        # A named list with one product is still a list, not an individual link.
+        if len(candidates) > 1 or '/lists/' in urlsplit(final).path:
             rows = []
             for (found_id, found_variation), (url, title, picture) in candidates.items():
                 row = dict(id=found_id, itemId=found_id, name=title, imageUrl=picture,
@@ -197,13 +198,24 @@ def prepare(current, archive, links, now, resolver=resolve, verifier=None):
     return updated, approved
 
 
+def configured_sources(current, source_file):
+    # The editable list configuration replaces previous discovery sources.
+    # Existing product affiliate links remain registered and unchanged.
+    links = (catalogo.read_json(source_file)['links'] if source_file.exists()
+             else current['metadata'].get('affiliateSources', []))
+    links = list(dict.fromkeys(links))
+    if any(not affiliate(link) for link in links):
+        raise ValueError('Lista configurada sem link oficial de afiliado')
+    return links
+
+
 def main():
     syncing = '--sync' in sys.argv
     current = catalogo.load(ROOT)
     links = current['metadata'].get('affiliateSources', []) if syncing else os.environ.get('AFFILIATE_LINKS', '').split()
     source_file = ROOT / 'integracoes/mercadolivre/listas-afiliadas.json'
-    if syncing and source_file.exists():
-        links = list(dict.fromkeys([*links, *catalogo.read_json(source_file)['links']]))
+    if syncing:
+        links = configured_sources(current, source_file)
     if syncing and not links:
         print('Sem listas cadastradas para descobrir novos produtos')
         return
@@ -223,7 +235,8 @@ def main():
         return None
     archive = catalogo.read_json(ROOT / 'links-afiliados.json')
     if syncing:
-        updated = current
+        updated = copy.deepcopy(current)
+        updated['metadata']['affiliateSources'] = links
         for link in links:
             try:
                 updated, archive = prepare(updated, archive, [link], datetime.now(timezone.utc), verifier=verify)
