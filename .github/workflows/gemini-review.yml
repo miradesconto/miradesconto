@@ -30,8 +30,7 @@ jobs:
 
       - name: Preparar diff do PR
         run: |
-          mkdir -p .gemini
-          git diff --no-ext-diff "origin/${{ github.base_ref }}...HEAD" > .gemini/pr.diff
+          git diff --no-ext-diff "origin/${{ github.base_ref }}...HEAD" > GEMINI_PR_DIFF.txt
 
       - name: Avisar quando Gemini ainda não estiver conectado
         if: env.GEMINI_KEY == ''
@@ -44,11 +43,11 @@ jobs:
         uses: google-github-actions/run-gemini-cli@v0
         with:
           gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
-          gemini_model: gemini-3.7-flash
+          gemini_model: gemini-3.5-flash-lite
           prompt: |
             Faça uma revisão técnica deste pull request.
             Leia GEMINI.md primeiro e siga essas regras.
-            Leia GEMINI.md e .gemini/pr.diff. Para mudanças pequenas, limite a análise ao diff e ao contexto estritamente necessário.
+            Leia GEMINI.md e GEMINI_PR_DIFF.txt. Para mudanças pequenas, limite a análise ao diff e ao contexto estritamente necessário.
             Não modifique arquivos e não execute comandos.
             Procure problemas reais de lógica, preço/histórico, links de afiliado,
             SEO, acessibilidade, responsividade, segurança e risco de a automação
@@ -65,7 +64,7 @@ jobs:
           settings: |
             {
               "model": {
-                "maxSessionTurns": 4
+                "maxSessionTurns": 8
               },
               "tools": {
                 "core": [
