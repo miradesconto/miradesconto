@@ -1,0 +1,40 @@
+name: IndexNow
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "index.html"
+      - "sitemap.xml"
+      - "_artigos/**"
+      - "_compras/**"
+      - "blog/**"
+      - "produtos.js"
+      - "catalogo/**"
+      - "historico/**"
+      - "historico.js"
+      - "dados/**"
+      - "_data/**"
+      - "sobre.html"
+      - "transparencia.html"
+      - "privacidade.html"
+      - "b72a30284083f4ba3daf46c793b04329.txt"
+      - ".github/workflows/indexnow.yml"
+  workflow_dispatch:
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enviar URLs recentes ao IndexNow
+        uses: bojieyang/indexnow-action@v3
+        with:
+          sitemap-location: "https://miradesconto.github.io/miradesconto/sitemap.xml"
+          key: "b72a30284083f4ba3daf46c793b04329"
+          key-location: "https://miradesconto.github.io/miradesconto/b72a30284083f4ba3daf46c793b04329.txt"
+          endpoint: "api.indexnow.org"
+          since: 1
+          since-unit: "day"
+          lastmod-required: true
+          failure-strategy: "error"
