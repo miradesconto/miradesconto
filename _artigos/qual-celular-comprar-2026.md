@@ -53,7 +53,7 @@ Na nossa análise editorial, cruzamos as fichas oficiais dos fabricantes com o p
 
 ## Melhores celulares e iPhones para comparar em 2026
 
-<div class="buy-guide-grid">
+<div class="buy-guide-grid" markdown="1">
 
 <article id="motorola-edge-60-fusion" class="buy-guide-card" markdown="1">
   <div class="product-media"><img src="https://http2.mlstatic.com/D_Q_NP_2X_631624-MLA99926713059_112025-AB.webp" alt="Motorola Edge 60 Fusion 5G 256 GB" loading="lazy"></div>
