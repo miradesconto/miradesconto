@@ -96,7 +96,9 @@ function makeCard(p) {
     siteLink.searchParams.set('produto', p.id);
     siteLink.hash = 'ofertas';
     share.addEventListener('click', () => shareProduct(p.name,siteLink.href));
-    buttons.append(a,share);content.append(buttons);card.append(visual,content);
+    const history = element('button','share-button','Ver histórico de preço');
+    history.type = 'button'; history.addEventListener('click', () => window.MiraHistory.open(p, history));
+    buttons.append(a,history,share);content.append(buttons);card.append(visual,content);
     return card;
 }
 function filteredProducts() {
