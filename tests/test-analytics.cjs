@@ -39,6 +39,10 @@ assert.equal(event[2].link_location, 'hero');
 assert.equal(event[2].item_price, 89.9);
 assert.equal(JSON.stringify(event).includes('https://meli.la/abc'), false);
 console.log('GA4: consentimento, carregamento e clique de afiliado OK');
+const direct = {href:'https://www.mercadolivre.com.br/notebook/p/MLB123#source=affiliate-profile&matt_tool_id=29904275&wid=MLB456',textContent:'Ver produto',dataset:{itemId:'MLB456',destinationType:'product'},closest:()=>null};
+accepted.listeners.click[0]({target:{closest:()=>direct}});
+assert.equal(accepted.window.dataLayer.at(-1)[2].item_id,'MLB456');
+assert.equal(accepted.window.dataLayer.at(-1)[2].destination_type,'product');
 {
 const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
 const code=fs.readFileSync('analytics.js','utf8');

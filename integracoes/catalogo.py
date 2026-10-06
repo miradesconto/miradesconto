@@ -13,8 +13,25 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCE = Path('dados/catalogo.json')
 MIN_PRODUCTS = 450
 COMPACT_KEYS = ('id', 'name', 'category', 'price', 'oldPrice', 'discount',
-                'affiliateUrl', 'imageUrl', 'itemId', 'catalogProductId', 'lastUpdated', 'rank', 'featured', 'available', 'priceCheck', 'availabilityStatus')
+                'affiliateUrl', 'offerUrl', 'imageUrl', 'itemId', 'catalogProductId', 'lastUpdated', 'rank', 'featured', 'available', 'priceCheck', 'availabilityStatus')
 HEADER = '// Dados do catálogo; preços e status podem ser atualizados pela API oficial do Mercado Livre.\n'
+
+
+def exact_offer_url(product):
+    """Use the unchanged tracked product URL collected from the owner's list."""
+    from urllib.parse import urlsplit, parse_qs
+    try:
+        url = urlsplit(product.get('productUrl', ''))
+        query = parse_qs(url.query)
+        fragment = parse_qs(url.fragment)
+        item = query.get('wid', fragment.get('wid', []))
+        tool = query.get('matt_tool_id', fragment.get('matt_tool_id', []))
+        if (url.scheme == 'https' and url.hostname in ('www.mercadolivre.com.br', 'mercadolivre.com.br')
+                and item == [product['id']] and len(tool) == 1 and tool[0].isdigit()):
+            return product['productUrl']
+    except (ValueError, KeyError, TypeError):
+        pass
+    return None
 
 
 def dumps(value, *, pretty=False):
@@ -103,6 +120,16 @@ def public_data(catalog):
     # Preserve the original public key order (including products before apiSync).
     sync = data.pop('apiSync', None)
     data['products'] = [copy.deepcopy(by_id[i]) for i in catalog['publishedIds']]
+    counts = {}
+    for p in data['products']:
+        counts[p.get('affiliateUrl')] = counts.get(p.get('affiliateUrl'), 0) + 1
+    for p in data['products']:
+        p.pop('offerUrl', None)
+        # Individual short links stay intact. Shared lists need an exact tracked destination.
+        if p.get('affiliateUrl') == 'https://meli.la/1NguveN' or counts.get(p.get('affiliateUrl'), 0) > 1:
+            destination = exact_offer_url(p)
+            if destination:
+                p['offerUrl'] = destination
     if sync is not None:
         data['apiSync'] = sync
     return data
@@ -171,6 +198,7 @@ def apply_snapshot(data, root=ROOT):
             if p.get(key) != old.get(key):
                 raise ValueError(f"Coleta tentou alterar {key}: {p['id']}")
         by_id[p['id']] = copy.deepcopy(p)
+        by_id[p['id']].pop('offerUrl', None)  # Derived destination, never a source override.
     catalog['products'] = [by_id[p['id']] for p in catalog['products']]
     catalog['publishedIds'] = incoming_ids
     policy = {k: catalog['metadata'][k] for k in ('niche', 'discountBasis') if k in catalog['metadata']}

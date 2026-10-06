@@ -3,7 +3,25 @@ import unittest
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 
+import sys
+sys.path.insert(0,str(ROOT/'integracoes'))
+import catalogo
+
 class PurchaseContentTest(unittest.TestCase):
+    def test_shared_list_destinations_identify_each_product(self):
+        data=catalogo.public_data(catalogo.load())
+        shared=[p for p in data['products'] if p['affiliateUrl']=='https://meli.la/1NguveN']
+        self.assertGreater(len(shared),1)
+        self.assertEqual(len({p['offerUrl'] for p in shared}),len(shared))
+        for p in shared:
+            self.assertEqual(p['offerUrl'],p['productUrl'])
+            self.assertEqual(catalogo.exact_offer_url(p),p['offerUrl'])
+        p=dict(shared[0])
+        p['productUrl']=p['productUrl'].replace('wid='+p['id'],'wid=MLB0000000000')
+        self.assertIsNone(catalogo.exact_offer_url(p))
+        p['productUrl']='https://example.org/?wid='+p['id']+'&matt_tool_id=29904275'
+        self.assertIsNone(catalogo.exact_offer_url(p))
+
     def test_curated_data_matches_catalog_and_official_links(self):
         catalog={p['id']:p for p in json.loads((ROOT/'dados/catalogo.json').read_text(encoding='utf-8'))['products']}
         lists=json.loads((ROOT/'integracoes/mercadolivre/listas-afiliadas.json').read_text(encoding='utf-8'))['links']
