@@ -42,3 +42,7 @@ Confira código do modelo, condição do produto, garantia, conexões, cabo incl
 ### Origem das informações
 
 [Samsung: suporte e manuais](https://www.samsung.com/br/support/) para procurar o código do modelo. A descrição do produto é do anúncio cadastrado; este texto é um guia editorial, sem teste prático.
+
+## Compare antes de abrir a loja
+
+Veja o [guia de compra de monitores]({{ '/monitores/' | relative_url }}) e os [pontos de atenção do Samsung Essential S3]({{ '/produtos/samsung-essential-s3-24/' | relative_url }}).

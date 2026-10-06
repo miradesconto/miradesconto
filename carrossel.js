@@ -17,12 +17,12 @@
   const eyebrow = element('div','hero-eyebrow');
   eyebrow.append(element('span','hero-live-dot'), element('span','','RADAR MIRADESCONTO'));
   const heading = element('h1');
-  heading.append('Tecnologia boa. ', element('span','','Preço na mira.'));
+  heading.append('Seu próximo upgrade. ', element('span','','Preço na mira.'));
   copy.append(eyebrow, heading,
-    element('p','hero-lede','Eletrônicos, celulares, gaming e setup com desconto registrado. Compare os modelos e confira as condições na loja.'));
+    element('p','hero-lede','Notebooks, monitores e tecnologia: compare configurações, consulte preços observados e escolha o que atende ao seu uso.'));
   const actions = element('div','hero-actions');
   const explore = element('a','hero-primary','Explorar ofertas ↗'); explore.href='#ofertas';
-  const guide = element('a','hero-secondary','Como escolhemos →'); guide.href='sobre.html';
+  const guide = element('a','hero-secondary','Escolher notebook →'); guide.href='notebooks/';
   actions.append(explore, guide); copy.append(actions);
   const proof = element('div','hero-proof');
   const count = element('div','hero-proof-item');
@@ -94,7 +94,8 @@
     category.textContent=p.category || 'Mercado Livre'; title.textContent=p.name;
     old.textContent=current && discount>=50 ? 'De '+money(p.oldPrice) : '';
     price.textContent=money(p.price);
-    link.textContent='Ver produto na loja ↗'; link.href=p.affiliateUrl; link.target='_blank';
+    link.textContent=isAffiliateList(p) ? 'Abrir lista na loja ↗' : 'Ver produto na loja ↗'; link.href=p.affiliateUrl; link.target='_blank';
+    link.dataset.itemId=p.id; link.dataset.itemName=p.name; link.dataset.itemCategory=p.category || ''; link.dataset.destinationType=isAffiliateList(p) ? 'affiliate_list' : 'product';
     status.textContent=current ? 'Preço verificado em '+date : 'Último preço registrado em '+date;
     top.lastChild.textContent=current ? 'VERIFICADO RECENTEMENTE' : 'CONFIRME NA LOJA';
     position.textContent=(index+1)+' / '+slides.length;

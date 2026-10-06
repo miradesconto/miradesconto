@@ -33,6 +33,7 @@ jobs:
           node blog/verify.cjs
           node tests/test-qualidade.cjs
           node tests/test-catalogo-evidence.cjs
+          node tests/test-analytics.cjs
       - name: Confirmar geração reproduzível
         run: |
           python integracoes/catalogo.py generate
@@ -42,6 +43,8 @@ jobs:
         with:
           source: ./
           destination: ./_site
+      - name: Verificar SEO e links no HTML publicado
+        run: python tests/verify-built-site.py _site
       - name: Guardar prévia para revisão, sem publicar
         uses: actions/upload-artifact@v4
         with:

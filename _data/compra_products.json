@@ -1,0 +1,34 @@
+{
+  "MLB4329495631": {
+    "name": "Monitor Gamer Samsung Essential S3, 24\" FHD, 120 Hz, HDMI, Preto",
+    "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_652104-MLA96195278152_102025-AB.webp",
+    "affiliateUrl": "https://meli.la/2EQbWiA",
+    "category": "Setup",
+    "list": false,
+    "page": "/produtos/samsung-essential-s3-24/"
+  },
+  "MLB4604524838": {
+    "name": "Notebook ASUS VivoBook Go 15, AMD Ryzen 5 7520U, 8GB RAM, 512GB SSD, KeepOS/Linux, Tela 15,6\" FHD, Mixed Black - E1504FA-NJ732",
+    "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_737034-MLU75570682760_042024-T.webp",
+    "affiliateUrl": "https://meli.la/1NguveN",
+    "category": "PC e hardware",
+    "list": true,
+    "page": "/produtos/asus-vivobook-go-15-ryzen-5/"
+  },
+  "MLB4196200841": {
+    "name": "Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H 13ªG 512 GB SSD 16 GB RAM RTX 4060 15.6”",
+    "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_848979-MLA118254221509_092026-T.webp",
+    "affiliateUrl": "https://meli.la/1NguveN",
+    "category": "PC e hardware",
+    "list": true,
+    "page": "/produtos/acer-nitro-v15-rtx-4060/"
+  },
+  "MLB3914161563": {
+    "name": "Notebook Asus Vivobook Go 15 Amd Ryzen 5 7520u 16gb 512ssd Mixed Black",
+    "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_722728-MLA110061030541_042026-T.webp",
+    "affiliateUrl": "https://meli.la/1NguveN",
+    "category": "Notebooks",
+    "list": true,
+    "page": "/produtos/asus-vivobook-go-15-ryzen-5/"
+  }
+}
