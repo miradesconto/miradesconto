@@ -31,6 +31,17 @@ As URLs recebem HTML estático com conteúdo útil, H1 único, H2, descrição, 
 
 O histórico existente é reutilizado sem regenerar observações. Sua URL agora se resolve a partir do script, funcionando em páginas aninhadas. Ausência de dados continua sendo ausência; nenhuma curva ou menor preço foi inventado. O CTA de lista é explícito na home, carrossel e novas páginas. Solicitar links individuais de afiliado para reduzir essa etapa; não montar links com tags presumidas.
 
+O carrossel prioriza os modelos com guia de compra e outros produtos centrais do nicho entre os preços recentes elegíveis, antes de recorrer aos maiores descontos sobre referência da loja. Isso não altera preços, produtos publicados nem a seleção de destaques do cadastro.
+
+## Verificações realizadas
+
+- 62 testes Python passaram; executar com UTF-8 no Windows (`python -X utf8 -m unittest discover -s tests -v`), pois uma fixture antiga depende dessa codificação.
+- Verificadores de catálogo, evidência de preço, qualidade, capas editoriais e consentimento/atribuição GA4 passaram. Dados gerados permanecem consistentes e sem alteração.
+- GitHub Actions construiu o Jekyll e aprovou as dez páginas, sitemap, canonical, JSON-LD, links internos e âncoras.
+- Prévia real do artefato: navegação home → notebooks → produto, busca por Vivobook, busca sem resultado, limpeza e ordenação por menor preço verificadas. Em 320/390/1280 pixels, as páginas amostradas não tiveram transbordamento horizontal.
+- Histórico aberto na página aninhada: 49 observações existentes do Vivobook 8 GB. Monitor com registro vencido exibe consulta à loja, sem preço recente falso. Categoria de mouse não exibe afiliado inventado.
+- Validação técnica não confirma indexação, recebimento no painel GA4, estoque do vendedor ou vendas. O deploy de produção continua separado do artefato de PR.
+
 ## Indexação e publicação
 
 - O sitemap inclui as dez páginas; a CI valida o HTML realmente gerado pelo Jekyll, canonicals, JSON-LD, links e âncoras.

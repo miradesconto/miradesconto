@@ -11,7 +11,13 @@
   const fresh = products.filter(p => recorded(p) && MiraQuality.usablePrice(p));
   const deals = fresh.filter(p => p.oldPrice > p.price && (1 - p.price / p.oldPrice) >= .5)
     .sort((a,b) => (1 - b.price / b.oldPrice) - (1 - a.price / a.oldPrice)).slice(0,8);
-  const slides = deals.length ? deals : fresh.length ? fresh.slice(0,8) : products.filter(recorded).slice(0,8);
+  // Lead with the products covered by buying guides, then other core tech.
+  // A large reference-price discount alone does not determine the first offer.
+  const buyingGuideIds = ['MLB4604524838','MLB4329495631','MLB4196200841'];
+  const guided = buyingGuideIds.map(id => fresh.find(p => p.id === id)).filter(Boolean);
+  const coreTech = fresh.filter(p => /^(notebook|monitor|mouse|teclado|ssd|processador)\b/i.test(p.name));
+  const preferred = [...guided, ...coreTech, ...deals, ...fresh];
+  const slides = fresh.length ? [...new Map(preferred.map(p => [p.id,p])).values()].slice(0,8) : products.filter(recorded).slice(0,8);
   const shell = element('div','hero-stage');
   const copy = element('div','hero-copy');
   const eyebrow = element('div','hero-eyebrow');

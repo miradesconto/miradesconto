@@ -32,7 +32,7 @@ Antes de comparar, peça as duas fichas completas: tela, sistema, estado, garant
 
 A [página brasileira da ASUS](https://www.asus.com/br/laptops/for-home/vivobook/vivobook-go-15-e1504f/) consultada em 06/10/2026 apresenta até 8 GB para a família. O anúncio de 16 GB precisa de confirmação específica; não o consideramos validado por essa página.
 
-## Como decidir sem um vencedor inventado
+## Como decidir entre as versões
 
 Se 8 GB atendem à sua carga e há uma economia relevante no total, essa versão pode entrar na comparação. Se a carga pede mais memória ou não há expansão possível, compare a versão de 16 GB com alternativas de custo semelhante. Se os programas exigem outra CPU ou GPU, resolva isso antes de escolher só pela quantidade de RAM.
 
