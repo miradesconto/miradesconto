@@ -1,329 +1,500 @@
-# Pauta automática — MiraDesconto
+# Fila de conteúdo — MiraDesconto → Pippit
 
-Catálogo-base: 06/10/2026
+**Radar:** 2026-10-06T20:57:10+00:00
+**Fila:** 14 vídeos · 2 por dia · 7 dias
 
-Somente tecnologia com desconto e preço verificado nas últimas 24 horas é elegível. Estoque não confirmado. Seleção automática com variedade de categorias. Confirme a oferta antes de publicar, pois preço e estoque podem mudar.
+Prioridade: Radar real, histórico observado, variedade de categorias e artigo de destino. Não usa referência da loja como histórico.
 
-## 1. Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão Noturna Colorida Full Hd Externa Prova D'água Ip66 Sensor Movimento Woosh
+## Revisão no Gemini Pro
 
-**Categoria:** Smart Home
-**Preço:** R$ 109,48
-**Desconto:** 73%
+Revise a fila de vídeos do MiraDesconto. Aponte apenas afirmações sem evidência, preço/histórico incoerente, linguagem que pareça teste físico sem teste, promessa exagerada, CTA confuso ou roteiro longo demais para 20-25s. Nunca trate referência da loja como histórico. Preserve números do Radar, links e identidade. Se estiver tudo correto, diga que pode seguir para o Pippit.
+
+## Dia 1 · Vídeo 1 — Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão…
+
+**Ângulo:** Menor preço observado: vale aproveitar?
+**Preço:** R$ 109,48 · média R$ 122,80 · mínimo R$ 109,48
+**Base:** 16 dias acompanhados · 183 observações
+**Destino:** https://miradesconto.github.io/miradesconto/?produto=MLB6972453978#ofertas
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_798945-MLA112454329586_062026-AB.webp
-**Link afiliado:** https://meli.la/1DrhTfp
 
-**Legenda pronta:**
+**Hook**
 
-Tech #1: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão Noturna Colorida Full Hd Externa Prova D'água Ip66 Sensor Movimento Woosh
-💰 R$ 109,48
-🔥 73% sobre a referência da loja
-👉 https://meli.la/1DrhTfp
+Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está no menor valor observado neste anúncio. Mas vale comprar agora?
 
-Preço verificado; estoque não confirmado. Confira frete e condições no Mercado Livre. Link de afiliado.
+**Roteiro**
 
-**Texto curto para Story:**
+Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 109,48. No Radar, a média foi R$ 122,80 e o menor valor observado foi R$ 109,48, em 16 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar.
 
-TECH NA MIRA
-Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão Noturna Colorida Full Hd Externa Prova D'água Ip66 Sensor Movimento Woosh
-R$ 109,48
-73% OFF
-Link na oferta
+**Legenda**
 
----
+PREÇO NA MIRA — Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão…
+Hoje: R$ 109,48
+Média observada: R$ 122,80
+Menor observado: R$ 109,48
+Base: 16 dias acompanhados
 
-## 2. Carregador Magnético Fam Magsafe Usb-c 15w P/ iPhone 12 A 16 127/220v
+O preço atual está no menor valor observado neste anúncio durante o período acompanhado.
 
-**Categoria:** Celulares
-**Preço:** R$ 31,83
-**Desconto:** 68%
-**Imagem:** https://http2.mlstatic.com/D_NQ_NP_853083-MLB108107437166_032026-O-carregador-magnetico-fam-magsafe-usbc-15w-p-iphone-12-a-16.webp
-**Link afiliado:** https://meli.la/1jBu9Qo
+Veja no Radar MiraDesconto: https://miradesconto.github.io/miradesconto/?produto=MLB6972453978#ofertas
+Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
-**Legenda pronta:**
+**Prompt Pippit**
 
-Tech #2: Carregador Magnético Fam Magsafe Usb-c 15w P/ iPhone 12 A 16 127/220v
-💰 R$ 31,83
-🔥 68% sobre a referência da loja
-👉 https://meli.la/1jBu9Qo
-
-Preço verificado; estoque não confirmado. Confira frete e condições no Mercado Livre. Link de afiliado.
-
-**Texto curto para Story:**
-
-TECH NA MIRA
-Carregador Magnético Fam Magsafe Usb-c 15w P/ iPhone 12 A 16 127/220v
-R$ 31,83
-68% OFF
-Link na oferta
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_798945-MLA112454329586_062026-AB.webp. Hook 0-3s: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 109,48, média R$ 122,80 e menor observado R$ 109,48. Narração: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 109,48. No Radar, a média foi R$ 122,80 e o menor valor observado foi R$ 109,48, em 16 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar. CTA: Veja no Radar MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
-## 3. Conversor Mídia Fibra Óptica Gigabit Rj45 1000 Mb Par A+b
+## Dia 1 · Vídeo 2 — Kit Mouse Teclado Magnético Bluetooth Para Lite P610 Tab S6 Preto
 
-**Categoria:** PC e hardware
-**Preço:** R$ 67,11
-**Desconto:** 60%
-**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_668420-MLB116950397541_082026-AB.webp
-**Link afiliado:** https://meli.la/2cPnC8v
+**Ângulo:** Menor preço observado: vale aproveitar?
+**Preço:** R$ 52,90 · média R$ 57,83 · mínimo R$ 52,90
+**Base:** 16 dias acompanhados · 186 observações
+**Destino:** https://miradesconto.github.io/miradesconto/?produto=MLB5601054808#ofertas
+**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_863811-MLB92261713766_092025-AB.webp
 
-**Legenda pronta:**
+**Hook**
 
-Tech #3: Conversor Mídia Fibra Óptica Gigabit Rj45 1000 Mb Par A+b
-💰 R$ 67,11
-🔥 60% sobre a referência da loja
-👉 https://meli.la/2cPnC8v
+Kit Mouse Teclado Magnético Bluetooth Para Lite P610 Tab S6 Preto está no menor valor observado neste anúncio. Mas vale comprar agora?
 
-Preço verificado; estoque não confirmado. Confira frete e condições no Mercado Livre. Link de afiliado.
+**Roteiro**
 
-**Texto curto para Story:**
+Kit Mouse Teclado Magnético Bluetooth Para Lite P610 Tab S6 Preto está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 52,90. No Radar, a média foi R$ 57,83 e o menor valor observado foi R$ 52,90, em 16 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar.
 
-TECH NA MIRA
-Conversor Mídia Fibra Óptica Gigabit Rj45 1000 Mb Par A+b
-R$ 67,11
-60% OFF
-Link na oferta
+**Legenda**
 
----
+PREÇO NA MIRA — Kit Mouse Teclado Magnético Bluetooth Para Lite P610 Tab S6 Preto
+Hoje: R$ 52,90
+Média observada: R$ 57,83
+Menor observado: R$ 52,90
+Base: 16 dias acompanhados
 
-## 4. Projetor Smart Portátil Full Hd 4k Android 11 Wi-fi Bluetooth Mini Projetor Home Theater Cinema Em Casa Imagem Nítida Som Potente Compatível Com Diversos Dispositivos Branco 127/220 127/220v
+O preço atual está no menor valor observado neste anúncio durante o período acompanhado.
 
-**Categoria:** TVs e projetores
-**Preço:** R$ 176,35
-**Desconto:** 58%
-**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_985823-MLA113683572316_072026-AB.webp
-**Link afiliado:** https://meli.la/1pyBZm8
+Veja no Radar MiraDesconto: https://miradesconto.github.io/miradesconto/?produto=MLB5601054808#ofertas
+Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
-**Legenda pronta:**
+**Prompt Pippit**
 
-Tech #4: Projetor Smart Portátil Full Hd 4k Android 11 Wi-fi Bluetooth Mini Projetor Home Theater Cinema Em Casa Imagem Nítida Som Potente Compatível Com Diversos Dispositivos Branco 127/220 127/220v
-💰 R$ 176,35
-🔥 58% sobre a referência da loja
-👉 https://meli.la/1pyBZm8
-
-Preço verificado; estoque não confirmado. Confira frete e condições no Mercado Livre. Link de afiliado.
-
-**Texto curto para Story:**
-
-TECH NA MIRA
-Projetor Smart Portátil Full Hd 4k Android 11 Wi-fi Bluetooth Mini Projetor Home Theater Cinema Em Casa Imagem Nítida Som Potente Compatível Com Diversos Dispositivos Branco 127/220 127/220v
-R$ 176,35
-58% OFF
-Link na oferta
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Kit Mouse Teclado Magnético Bluetooth Para Lite P610 Tab S6 Preto. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_863811-MLB92261713766_092025-AB.webp. Hook 0-3s: Kit Mouse Teclado Magnético Bluetooth Para Lite P610 Tab S6 Preto está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 52,90, média R$ 57,83 e menor observado R$ 52,90. Narração: Kit Mouse Teclado Magnético Bluetooth Para Lite P610 Tab S6 Preto está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 52,90. No Radar, a média foi R$ 57,83 e o menor valor observado foi R$ 52,90, em 16 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar. CTA: Veja no Radar MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
-## 5. Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung Pc P4 Ps 4 Dual Shock Manete Pc Gamer Tv Smart Controle Bluetooth Celular Headset Sem Fio Com P2 Marca Redfin
+## Dia 2 · Vídeo 1 — Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung…
 
-**Categoria:** Gaming
-**Preço:** R$ 48,75
-**Desconto:** 58%
+**Ângulo:** Menor preço observado: vale aproveitar?
+**Preço:** R$ 48,75 · média R$ 51,45 · mínimo R$ 48,75
+**Base:** 16 dias acompanhados · 185 observações
+**Destino:** https://miradesconto.github.io/miradesconto/?produto=MLB5811879470#ofertas
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_762912-MLA105696431793_012026-AB.webp
-**Link afiliado:** https://meli.la/1ZWvPsz
 
-**Legenda pronta:**
+**Hook**
 
-Tech #5: Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung Pc P4 Ps 4 Dual Shock Manete Pc Gamer Tv Smart Controle Bluetooth Celular Headset Sem Fio Com P2 Marca Redfin
-💰 R$ 48,75
-🔥 58% sobre a referência da loja
-👉 https://meli.la/1ZWvPsz
+Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung… está no menor valor observado neste anúncio. Mas vale comprar agora?
 
-Preço verificado; estoque não confirmado. Confira frete e condições no Mercado Livre. Link de afiliado.
+**Roteiro**
 
-**Texto curto para Story:**
+Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 48,75. No Radar, a média foi R$ 51,45 e o menor valor observado foi R$ 48,75, em 16 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar.
 
-TECH NA MIRA
-Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung Pc P4 Ps 4 Dual Shock Manete Pc Gamer Tv Smart Controle Bluetooth Celular Headset Sem Fio Com P2 Marca Redfin
-R$ 48,75
-58% OFF
-Link na oferta
+**Legenda**
 
----
+PREÇO NA MIRA — Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung…
+Hoje: R$ 48,75
+Média observada: R$ 51,45
+Menor observado: R$ 48,75
+Base: 16 dias acompanhados
 
-## 6. Kit de Gravação Youtuber Tiktoker Video Maker Estabilizador Com Microfone Tripé Led Vlog Profissional Para Celular iPhone/android Luz Led Para Gravação E Fotos Cor Preto - Good Vision
+O preço atual está no menor valor observado neste anúncio durante o período acompanhado.
 
-**Categoria:** Setup
-**Preço:** R$ 33,98
-**Desconto:** 57%
-**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_736310-MLA110520512109_042026-AB.webp
-**Link afiliado:** https://meli.la/1qxgRfd
+Veja no Radar MiraDesconto: https://miradesconto.github.io/miradesconto/?produto=MLB5811879470#ofertas
+Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
-**Legenda pronta:**
+**Prompt Pippit**
 
-Tech #6: Kit de Gravação Youtuber Tiktoker Video Maker Estabilizador Com Microfone Tripé Led Vlog Profissional Para Celular iPhone/android Luz Led Para Gravação E Fotos Cor Preto - Good Vision
-💰 R$ 33,98
-🔥 57% sobre a referência da loja
-👉 https://meli.la/1qxgRfd
-
-Preço verificado; estoque não confirmado. Confira frete e condições no Mercado Livre. Link de afiliado.
-
-**Texto curto para Story:**
-
-TECH NA MIRA
-Kit de Gravação Youtuber Tiktoker Video Maker Estabilizador Com Microfone Tripé Led Vlog Profissional Para Celular iPhone/android Luz Led Para Gravação E Fotos Cor Preto - Good Vision
-R$ 33,98
-57% OFF
-Link na oferta
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_762912-MLA105696431793_012026-AB.webp. Hook 0-3s: Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 48,75, média R$ 51,45 e menor observado R$ 48,75. Narração: Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 48,75. No Radar, a média foi R$ 51,45 e o menor valor observado foi R$ 48,75, em 16 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar. CTA: Veja no Radar MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
-## 7. Câmera Inteligente Full HD Im3 C Mibo Cam WIFI Branca Intelbras
+## Dia 2 · Vídeo 2 — Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco…
 
-**Categoria:** Smart Home
-**Preço:** R$ 175,50
-**Desconto:** 56%
-**Imagem:** https://http2.mlstatic.com/D_NQ_NP_600720-MLA99856285817_112025-O.webp
-**Link afiliado:** https://meli.la/2Rn4wgJ
-
-**Legenda pronta:**
-
-Tech #7: Câmera Inteligente Full HD Im3 C Mibo Cam WIFI Branca Intelbras
-💰 R$ 175,50
-🔥 56% sobre a referência da loja
-👉 https://meli.la/2Rn4wgJ
-
-Preço verificado; estoque não confirmado. Confira frete e condições no Mercado Livre. Link de afiliado.
-
-**Texto curto para Story:**
-
-TECH NA MIRA
-Câmera Inteligente Full HD Im3 C Mibo Cam WIFI Branca Intelbras
-R$ 175,50
-56% OFF
-Link na oferta
-
----
-
-## 8. Carregador 30w Turbo Para iPhone 8 X Xr 11 12 13 14 Pro Max Fonte Usb C Cor Branca Dtimp
-
-**Categoria:** Celulares
-**Preço:** R$ 44,00
-**Desconto:** 56%
-**Imagem:** https://http2.mlstatic.com/D_NQ_NP_989431-MLA113963894617_062026-O.webp
-**Link afiliado:** https://meli.la/2ieozdj
-
-**Legenda pronta:**
-
-Tech #8: Carregador 30w Turbo Para iPhone 8 X Xr 11 12 13 14 Pro Max Fonte Usb C Cor Branca Dtimp
-💰 R$ 44,00
-🔥 56% sobre a referência da loja
-👉 https://meli.la/2ieozdj
-
-Preço verificado; estoque não confirmado. Confira frete e condições no Mercado Livre. Link de afiliado.
-
-**Texto curto para Story:**
-
-TECH NA MIRA
-Carregador 30w Turbo Para iPhone 8 X Xr 11 12 13 14 Pro Max Fonte Usb C Cor Branca Dtimp
-R$ 44,00
-56% OFF
-Link na oferta
-
----
-
-## 9. Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo Preto
-
-**Categoria:** Áudio
-**Preço:** R$ 63,99
-**Desconto:** 56%
-**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_888868-MLB117019480199_092026-AB.webp
-**Link afiliado:** https://meli.la/21uDpWj
-
-**Legenda pronta:**
-
-Tech #9: Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo Preto
-💰 R$ 63,99
-🔥 56% sobre a referência da loja
-👉 https://meli.la/21uDpWj
-
-Preço verificado; estoque não confirmado. Confira frete e condições no Mercado Livre. Link de afiliado.
-
-**Texto curto para Story:**
-
-TECH NA MIRA
-Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo Preto
-R$ 63,99
-56% OFF
-Link na oferta
-
----
-
-## 10. Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco Frio Quente Neutro
-
-**Categoria:** Setup
-**Preço:** R$ 45,60
-**Desconto:** 54%
+**Ângulo:** Menor preço observado: vale aproveitar?
+**Preço:** R$ 45,60 · média R$ 48,00 · mínimo R$ 45,60
+**Base:** 16 dias acompanhados · 181 observações
+**Destino:** https://miradesconto.github.io/miradesconto/?produto=MLB6824618506#ofertas
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_691904-MLA111125430926_052026-AB.webp
-**Link afiliado:** https://meli.la/17RbS8M
 
-**Legenda pronta:**
+**Hook**
 
-Tech #10: Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco Frio Quente Neutro
-💰 R$ 45,60
-🔥 54% sobre a referência da loja
-👉 https://meli.la/17RbS8M
+Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco… está no menor valor observado neste anúncio. Mas vale comprar agora?
 
-Preço verificado; estoque não confirmado. Confira frete e condições no Mercado Livre. Link de afiliado.
+**Roteiro**
 
-**Texto curto para Story:**
+Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 45,60. No Radar, a média foi R$ 48,00 e o menor valor observado foi R$ 45,60, em 16 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar.
 
-TECH NA MIRA
-Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco Frio Quente Neutro
-R$ 45,60
-54% OFF
-Link na oferta
+**Legenda**
 
----
+PREÇO NA MIRA — Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco…
+Hoje: R$ 45,60
+Média observada: R$ 48,00
+Menor observado: R$ 45,60
+Base: 16 dias acompanhados
 
-## 11. Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto 127/220v
+O preço atual está no menor valor observado neste anúncio durante o período acompanhado.
 
-**Categoria:** Impressoras
-**Preço:** R$ 289,95
-**Desconto:** 52%
-**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_737140-MLB112939930644_072026-AB.webp
-**Link afiliado:** https://meli.la/33RTYB9
+Veja no Radar MiraDesconto: https://miradesconto.github.io/miradesconto/?produto=MLB6824618506#ofertas
+Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
-**Legenda pronta:**
+**Prompt Pippit**
 
-Tech #11: Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto 127/220v
-💰 R$ 289,95
-🔥 52% sobre a referência da loja
-👉 https://meli.la/33RTYB9
-
-Preço verificado; estoque não confirmado. Confira frete e condições no Mercado Livre. Link de afiliado.
-
-**Texto curto para Story:**
-
-TECH NA MIRA
-Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto 127/220v
-R$ 289,95
-52% OFF
-Link na oferta
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_691904-MLA111125430926_052026-AB.webp. Hook 0-3s: Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 45,60, média R$ 48,00 e menor observado R$ 45,60. Narração: Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 45,60. No Radar, a média foi R$ 48,00 e o menor valor observado foi R$ 45,60, em 16 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar. CTA: Veja no Radar MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
-## 12. Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto 127/220v
+## Dia 3 · Vídeo 1 — Conversor Mídia Fibra Óptica Gigabit Rj45 1000 Mb Par A+b
 
-**Categoria:** Áudio
-**Preço:** R$ 389,00
-**Desconto:** 51%
+**Ângulo:** Menor preço observado: vale aproveitar?
+**Preço:** R$ 67,11 · média R$ 69,74 · mínimo R$ 67,11
+**Base:** 16 dias acompanhados · 186 observações
+**Destino:** https://miradesconto.github.io/miradesconto/?produto=MLB5339791448#ofertas
+**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_668420-MLB116950397541_082026-AB.webp
+
+**Hook**
+
+Conversor Mídia Fibra Óptica Gigabit Rj45 1000 Mb Par A+b está no menor valor observado neste anúncio. Mas vale comprar agora?
+
+**Roteiro**
+
+Conversor Mídia Fibra Óptica Gigabit Rj45 1000 Mb Par A+b está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 67,11. No Radar, a média foi R$ 69,74 e o menor valor observado foi R$ 67,11, em 16 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar.
+
+**Legenda**
+
+PREÇO NA MIRA — Conversor Mídia Fibra Óptica Gigabit Rj45 1000 Mb Par A+b
+Hoje: R$ 67,11
+Média observada: R$ 69,74
+Menor observado: R$ 67,11
+Base: 16 dias acompanhados
+
+O preço atual está no menor valor observado neste anúncio durante o período acompanhado.
+
+Veja no Radar MiraDesconto: https://miradesconto.github.io/miradesconto/?produto=MLB5339791448#ofertas
+Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
+
+**Prompt Pippit**
+
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Conversor Mídia Fibra Óptica Gigabit Rj45 1000 Mb Par A+b. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_668420-MLB116950397541_082026-AB.webp. Hook 0-3s: Conversor Mídia Fibra Óptica Gigabit Rj45 1000 Mb Par A+b está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 67,11, média R$ 69,74 e menor observado R$ 67,11. Narração: Conversor Mídia Fibra Óptica Gigabit Rj45 1000 Mb Par A+b está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 67,11. No Radar, a média foi R$ 69,74 e o menor valor observado foi R$ 67,11, em 16 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar. CTA: Veja no Radar MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+
+---
+
+## Dia 3 · Vídeo 2 — Apple iPhone 15 (128 GB) - Azul - Distribuidor Autorizado
+
+**Ângulo:** Abaixo da média observada: vale agora?
+**Preço:** R$ 4.009,00 · média R$ 4.089,43 · mínimo R$ 3.798,00
+**Base:** 16 dias acompanhados · 180 observações
+**Destino:** https://miradesconto.github.io/miradesconto/blog/iphone-15-vale-a-pena-em-oferta/
+**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_831434-MLA96401363339_102025-AB.webp
+
+**Hook**
+
+Antes de comprar Apple iPhone 15 (128 GB) - Azul - Distribuidor Autorizado, olha o que o histórico mostra.
+
+**Roteiro**
+
+Antes de comprar Apple iPhone 15 (128 GB) - Azul - Distribuidor Autorizado, olha o que o histórico mostra. Hoje ele aparece por R$ 4.009,00. No Radar, a média foi R$ 4.089,43 e o menor valor observado foi R$ 3.798,00, em 16 dias acompanhados. O preço atual está 2,0% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
+
+**Legenda**
+
+PREÇO NA MIRA — Apple iPhone 15 (128 GB) - Azul - Distribuidor Autorizado
+Hoje: R$ 4.009,00
+Média observada: R$ 4.089,43
+Menor observado: R$ 3.798,00
+Base: 16 dias acompanhados
+
+O preço atual está 2,0% abaixo da média observada.
+
+Veja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/iphone-15-vale-a-pena-em-oferta/
+Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
+
+**Prompt Pippit**
+
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Apple iPhone 15 (128 GB) - Azul - Distribuidor Autorizado. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_831434-MLA96401363339_102025-AB.webp. Hook 0-3s: Antes de comprar Apple iPhone 15 (128 GB) - Azul - Distribuidor Autorizado, olha o que o histórico mostra. Mostre preço atual R$ 4.009,00, média R$ 4.089,43 e menor observado R$ 3.798,00. Narração: Antes de comprar Apple iPhone 15 (128 GB) - Azul - Distribuidor Autorizado, olha o que o histórico mostra. Hoje ele aparece por R$ 4.009,00. No Radar, a média foi R$ 4.089,43 e o menor valor observado foi R$ 3.798,00, em 16 dias acompanhados. O preço atual está 2,0% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+
+---
+
+## Dia 4 · Vídeo 1 — Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor…
+
+**Ângulo:** Abaixo da média observada: vale agora?
+**Preço:** R$ 34,99 · média R$ 36,07 · mínimo R$ 29,60
+**Base:** 16 dias acompanhados · 186 observações
+**Destino:** https://miradesconto.github.io/miradesconto/?produto=MLB4415801503#ofertas
+**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_688002-MLA115581994404_092026-AB.webp
+
+**Hook**
+
+Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor… está 3.0% abaixo da média observada. É um bom momento de compra?
+
+**Roteiro**
+
+Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor… está 3.0% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 34,99. No Radar, a média foi R$ 36,07 e o menor valor observado foi R$ 29,60, em 16 dias acompanhados. O preço atual está 3,0% abaixo da média observada. Veja no Radar MiraDesconto antes de comprar.
+
+**Legenda**
+
+PREÇO NA MIRA — Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor…
+Hoje: R$ 34,99
+Média observada: R$ 36,07
+Menor observado: R$ 29,60
+Base: 16 dias acompanhados
+
+O preço atual está 3,0% abaixo da média observada.
+
+Veja no Radar MiraDesconto: https://miradesconto.github.io/miradesconto/?produto=MLB4415801503#ofertas
+Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
+
+**Prompt Pippit**
+
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_688002-MLA115581994404_092026-AB.webp. Hook 0-3s: Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor… está 3.0% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 34,99, média R$ 36,07 e menor observado R$ 29,60. Narração: Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor… está 3.0% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 34,99. No Radar, a média foi R$ 36,07 e o menor valor observado foi R$ 29,60, em 16 dias acompanhados. O preço atual está 3,0% abaixo da média observada. Veja no Radar MiraDesconto antes de comprar. CTA: Veja no Radar MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+
+---
+
+## Dia 4 · Vídeo 2 — Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H…
+
+**Ângulo:** Menor preço observado: vale aproveitar?
+**Preço:** R$ 6.508,00 · média R$ 7.712,13 · mínimo R$ 6.508,00
+**Base:** 3 dias acompanhados · 53 observações
+**Destino:** https://miradesconto.github.io/miradesconto/blog/notebook-em-promocao-como-escolher/
+**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_848979-MLA118254221509_092026-T.webp
+
+**Hook**
+
+Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H… está no menor valor observado neste anúncio. Mas vale comprar agora?
+
+**Roteiro**
+
+Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 6.508,00. No Radar, a média foi R$ 7.712,13 e o menor valor observado foi R$ 6.508,00, em 3 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+
+**Legenda**
+
+PREÇO NA MIRA — Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H…
+Hoje: R$ 6.508,00
+Média observada: R$ 7.712,13
+Menor observado: R$ 6.508,00
+Base: 3 dias acompanhados
+
+O preço atual está no menor valor observado neste anúncio durante o período acompanhado.
+
+Veja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/notebook-em-promocao-como-escolher/
+Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
+
+**Prompt Pippit**
+
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_848979-MLA118254221509_092026-T.webp. Hook 0-3s: Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 6.508,00, média R$ 7.712,13 e menor observado R$ 6.508,00. Narração: Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 6.508,00. No Radar, a média foi R$ 7.712,13 e o menor valor observado foi R$ 6.508,00, em 3 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+
+---
+
+## Dia 5 · Vídeo 1 — Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto…
+
+**Ângulo:** Abaixo da média observada: vale agora?
+**Preço:** R$ 389,00 · média R$ 396,10 · mínimo R$ 352,00
+**Base:** 16 dias acompanhados · 186 observações
+**Destino:** https://miradesconto.github.io/miradesconto/?produto=MLB4235386613#ofertas
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_848327-MLB93711830286_102025-AB.webp
-**Link afiliado:** https://meli.la/1bWnNwc
 
-**Legenda pronta:**
+**Hook**
 
-Tech #12: Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto 127/220v
-💰 R$ 389,00
-🔥 51% sobre a referência da loja
-👉 https://meli.la/1bWnNwc
+Antes de comprar Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto…, olha o que o histórico mostra.
 
-Preço verificado; estoque não confirmado. Confira frete e condições no Mercado Livre. Link de afiliado.
+**Roteiro**
 
-**Texto curto para Story:**
+Antes de comprar Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto…, olha o que o histórico mostra. Hoje ele aparece por R$ 389,00. No Radar, a média foi R$ 396,10 e o menor valor observado foi R$ 352,00, em 16 dias acompanhados. O preço atual está 1,8% abaixo da média observada. Veja no Radar MiraDesconto antes de comprar.
 
-TECH NA MIRA
-Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto 127/220v
-R$ 389,00
-51% OFF
-Link na oferta
+**Legenda**
+
+PREÇO NA MIRA — Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto…
+Hoje: R$ 389,00
+Média observada: R$ 396,10
+Menor observado: R$ 352,00
+Base: 16 dias acompanhados
+
+O preço atual está 1,8% abaixo da média observada.
+
+Veja no Radar MiraDesconto: https://miradesconto.github.io/miradesconto/?produto=MLB4235386613#ofertas
+Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
+
+**Prompt Pippit**
+
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_848327-MLB93711830286_102025-AB.webp. Hook 0-3s: Antes de comprar Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto…, olha o que o histórico mostra. Mostre preço atual R$ 389,00, média R$ 396,10 e menor observado R$ 352,00. Narração: Antes de comprar Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto…, olha o que o histórico mostra. Hoje ele aparece por R$ 389,00. No Radar, a média foi R$ 396,10 e o menor valor observado foi R$ 352,00, em 16 dias acompanhados. O preço atual está 1,8% abaixo da média observada. Veja no Radar MiraDesconto antes de comprar. CTA: Veja no Radar MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+
+---
+
+## Dia 5 · Vídeo 2 — Console Nintendo Switch 2, Modelo Nacional de Tomada
+
+**Ângulo:** Menor preço observado: vale aproveitar?
+**Preço:** R$ 4.499,00 · média R$ 4.551,82 · mínimo R$ 4.499,00
+**Base:** 16 dias acompanhados · 186 observações
+**Destino:** https://miradesconto.github.io/miradesconto/?produto=MLB6212972552#ofertas
+**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_785396-MLA99867558581_112025-AB.webp
+
+**Hook**
+
+Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora?
+
+**Roteiro**
+
+Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 4.499,00. No Radar, a média foi R$ 4.551,82 e o menor valor observado foi R$ 4.499,00, em 16 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar.
+
+**Legenda**
+
+PREÇO NA MIRA — Console Nintendo Switch 2, Modelo Nacional de Tomada
+Hoje: R$ 4.499,00
+Média observada: R$ 4.551,82
+Menor observado: R$ 4.499,00
+Base: 16 dias acompanhados
+
+O preço atual está no menor valor observado neste anúncio durante o período acompanhado.
+
+Veja no Radar MiraDesconto: https://miradesconto.github.io/miradesconto/?produto=MLB6212972552#ofertas
+Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
+
+**Prompt Pippit**
+
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Console Nintendo Switch 2, Modelo Nacional de Tomada. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_785396-MLA99867558581_112025-AB.webp. Hook 0-3s: Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 4.499,00, média R$ 4.551,82 e menor observado R$ 4.499,00. Narração: Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 4.499,00. No Radar, a média foi R$ 4.551,82 e o menor valor observado foi R$ 4.499,00, em 16 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar. CTA: Veja no Radar MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+
+---
+
+## Dia 6 · Vídeo 1 — Power Bank 20000mah Carregador Portátil Turbo Rápido 22.5w Display…
+
+**Ângulo:** Menor preço observado: vale aproveitar?
+**Preço:** R$ 67,71 · média R$ 68,06 · mínimo R$ 67,71
+**Base:** 16 dias acompanhados · 186 observações
+**Destino:** https://miradesconto.github.io/miradesconto/?produto=MLB4530324007#ofertas
+**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_867313-MLA108176802658_032026-AB.webp
+
+**Hook**
+
+Power Bank 20000mah Carregador Portátil Turbo Rápido 22.5w Display… está no menor valor observado neste anúncio. Mas vale comprar agora?
+
+**Roteiro**
+
+Power Bank 20000mah Carregador Portátil Turbo Rápido 22.5w Display… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 67,71. No Radar, a média foi R$ 68,06 e o menor valor observado foi R$ 67,71, em 16 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar.
+
+**Legenda**
+
+PREÇO NA MIRA — Power Bank 20000mah Carregador Portátil Turbo Rápido 22.5w Display…
+Hoje: R$ 67,71
+Média observada: R$ 68,06
+Menor observado: R$ 67,71
+Base: 16 dias acompanhados
+
+O preço atual está no menor valor observado neste anúncio durante o período acompanhado.
+
+Veja no Radar MiraDesconto: https://miradesconto.github.io/miradesconto/?produto=MLB4530324007#ofertas
+Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
+
+**Prompt Pippit**
+
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Power Bank 20000mah Carregador Portátil Turbo Rápido 22.5w Display…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_867313-MLA108176802658_032026-AB.webp. Hook 0-3s: Power Bank 20000mah Carregador Portátil Turbo Rápido 22.5w Display… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 67,71, média R$ 68,06 e menor observado R$ 67,71. Narração: Power Bank 20000mah Carregador Portátil Turbo Rápido 22.5w Display… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 67,71. No Radar, a média foi R$ 68,06 e o menor valor observado foi R$ 67,71, em 16 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar. CTA: Veja no Radar MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+
+---
+
+## Dia 6 · Vídeo 2 — Fone De Ouvido Bluetooth 5.3 Par Sem Fio Duplo Todos Celular
+
+**Ângulo:** Menor preço observado: vale aproveitar?
+**Preço:** R$ 56,29 · média R$ 56,34 · mínimo R$ 56,29
+**Base:** 16 dias acompanhados · 185 observações
+**Destino:** https://miradesconto.github.io/miradesconto/?produto=MLB5559182464#ofertas
+**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_760715-MLB109157249938_042026-AB-fone-de-ouvido-bluetooth-53-par-sem-fio-duplo-todos-celular.webp
+
+**Hook**
+
+Fone De Ouvido Bluetooth 5.3 Par Sem Fio Duplo Todos Celular está no menor valor observado neste anúncio. Mas vale comprar agora?
+
+**Roteiro**
+
+Fone De Ouvido Bluetooth 5.3 Par Sem Fio Duplo Todos Celular está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 56,29. No Radar, a média foi R$ 56,34 e o menor valor observado foi R$ 56,29, em 16 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar.
+
+**Legenda**
+
+PREÇO NA MIRA — Fone De Ouvido Bluetooth 5.3 Par Sem Fio Duplo Todos Celular
+Hoje: R$ 56,29
+Média observada: R$ 56,34
+Menor observado: R$ 56,29
+Base: 16 dias acompanhados
+
+O preço atual está no menor valor observado neste anúncio durante o período acompanhado.
+
+Veja no Radar MiraDesconto: https://miradesconto.github.io/miradesconto/?produto=MLB5559182464#ofertas
+Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
+
+**Prompt Pippit**
+
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Fone De Ouvido Bluetooth 5.3 Par Sem Fio Duplo Todos Celular. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_760715-MLB109157249938_042026-AB-fone-de-ouvido-bluetooth-53-par-sem-fio-duplo-todos-celular.webp. Hook 0-3s: Fone De Ouvido Bluetooth 5.3 Par Sem Fio Duplo Todos Celular está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 56,29, média R$ 56,34 e menor observado R$ 56,29. Narração: Fone De Ouvido Bluetooth 5.3 Par Sem Fio Duplo Todos Celular está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 56,29. No Radar, a média foi R$ 56,34 e o menor valor observado foi R$ 56,29, em 16 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar. CTA: Veja no Radar MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+
+---
+
+## Dia 7 · Vídeo 1 — Laptop Asus Vivobook 15 F1504va Intel Core
+
+**Ângulo:** Menor preço observado: vale aproveitar?
+**Preço:** R$ 6.807,00 · média R$ 6.912,04 · mínimo R$ 6.807,00
+**Base:** 3 dias acompanhados · 45 observações
+**Destino:** https://miradesconto.github.io/miradesconto/?produto=MLB7657450942#ofertas
+**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_861106-CBT116316724930_092026-T.webp
+
+**Hook**
+
+Laptop Asus Vivobook 15 F1504va Intel Core está no menor valor observado neste anúncio. Mas vale comprar agora?
+
+**Roteiro**
+
+Laptop Asus Vivobook 15 F1504va Intel Core está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 6.807,00. No Radar, a média foi R$ 6.912,04 e o menor valor observado foi R$ 6.807,00, em 3 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar.
+
+**Legenda**
+
+PREÇO NA MIRA — Laptop Asus Vivobook 15 F1504va Intel Core
+Hoje: R$ 6.807,00
+Média observada: R$ 6.912,04
+Menor observado: R$ 6.807,00
+Base: 3 dias acompanhados
+
+O preço atual está no menor valor observado neste anúncio durante o período acompanhado.
+
+Veja no Radar MiraDesconto: https://miradesconto.github.io/miradesconto/?produto=MLB7657450942#ofertas
+Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
+
+**Prompt Pippit**
+
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Laptop Asus Vivobook 15 F1504va Intel Core. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_861106-CBT116316724930_092026-T.webp. Hook 0-3s: Laptop Asus Vivobook 15 F1504va Intel Core está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 6.807,00, média R$ 6.912,04 e menor observado R$ 6.807,00. Narração: Laptop Asus Vivobook 15 F1504va Intel Core está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 6.807,00. No Radar, a média foi R$ 6.912,04 e o menor valor observado foi R$ 6.807,00, em 3 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar. CTA: Veja no Radar MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+
+---
+
+## Dia 7 · Vídeo 2 — Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto…
+
+**Ângulo:** Preço na Mira: vale comprar agora?
+**Preço:** R$ 289,95 · média R$ 289,79 · mínimo R$ 283,97
+**Base:** 13 dias acompanhados · 77 observações
+**Destino:** https://miradesconto.github.io/miradesconto/?produto=MLB4849013383#ofertas
+**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_737140-MLB112939930644_072026-AB.webp
+
+**Hook**
+
+Antes de comprar Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto…, olha o que o histórico mostra.
+
+**Roteiro**
+
+Antes de comprar Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto…, olha o que o histórico mostra. Hoje ele aparece por R$ 289,95. No Radar, a média foi R$ 289,79 e o menor valor observado foi R$ 283,97, em 13 dias acompanhados. O preço atual está próximo da média observada. Veja no Radar MiraDesconto antes de comprar.
+
+**Legenda**
+
+PREÇO NA MIRA — Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto…
+Hoje: R$ 289,95
+Média observada: R$ 289,79
+Menor observado: R$ 283,97
+Base: 13 dias acompanhados
+
+O preço atual está próximo da média observada.
+
+Veja no Radar MiraDesconto: https://miradesconto.github.io/miradesconto/?produto=MLB4849013383#ofertas
+Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
+
+**Prompt Pippit**
+
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_737140-MLB112939930644_072026-AB.webp. Hook 0-3s: Antes de comprar Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto…, olha o que o histórico mostra. Mostre preço atual R$ 289,95, média R$ 289,79 e menor observado R$ 283,97. Narração: Antes de comprar Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto…, olha o que o histórico mostra. Hoje ele aparece por R$ 289,95. No Radar, a média foi R$ 289,79 e o menor valor observado foi R$ 283,97, em 13 dias acompanhados. O preço atual está próximo da média observada. Veja no Radar MiraDesconto antes de comprar. CTA: Veja no Radar MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
