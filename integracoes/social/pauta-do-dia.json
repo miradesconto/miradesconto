@@ -1,6 +1,6 @@
 {
-  "sourceCollectedAt": "06/10/2026",
-  "radarGeneratedAt": "2026-10-06T23:29:02+00:00",
+  "sourceCollectedAt": "07/10/2026",
+  "radarGeneratedAt": "2026-10-07T00:42:13+00:00",
   "generatedFrom": "Radar MiraDesconto + catálogo + artigos publicados",
   "count": 14,
   "videosPerDay": 2,
@@ -21,11 +21,11 @@
       "angle": "Abaixo da média observada: vale agora?",
       "hook": "Apple iPhone 15 (128 GB) está 1.9% abaixo da média observada. É um bom momento de compra?",
       "currentPriceText": "R$ 4.009,00",
-      "averagePriceText": "R$ 4.087,25",
+      "averagePriceText": "R$ 4.086,83",
       "minimumPriceText": "R$ 3.798,00",
       "maximumPriceText": "R$ 4.599,00",
-      "deltaAveragePct": -1.91,
-      "observations": 185,
+      "deltaAveragePct": -1.9,
+      "observations": 186,
       "periodText": "16 dias acompanhados",
       "radarLabel": "Bom preço",
       "radarReason": "O preço atual está 1,9% abaixo da média observada.",
@@ -34,10 +34,10 @@
         "title": "iPhone 15 em oferta: análise de ficha técnica e limites",
         "url": "https://miradesconto.github.io/miradesconto/blog/iphone-15-vale-a-pena-em-oferta/"
       },
-      "script": "Apple iPhone 15 (128 GB) está 1.9% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 4.009,00. No Radar, a média foi R$ 4.087,25 e o menor valor observado foi R$ 3.798,00, em 16 dias acompanhados. O preço atual está 1,9% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.",
-      "caption": "PREÇO NA MIRA — Apple iPhone 15 (128 GB)\nHoje: R$ 4.009,00\nMédia observada: R$ 4.087,25\nMenor observado: R$ 3.798,00\nBase: 16 dias acompanhados\n\nO preço atual está 1,9% abaixo da média observada.\n\nVeja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/iphone-15-vale-a-pena-em-oferta/\nPreço pode mudar. Link comercial pode gerar comissão sem custo adicional.",
+      "script": "Apple iPhone 15 (128 GB) está 1.9% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 4.009,00. No Radar, a média foi R$ 4.086,83 e o menor valor observado foi R$ 3.798,00, em 16 dias acompanhados. O preço atual está 1,9% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.",
+      "caption": "PREÇO NA MIRA — Apple iPhone 15 (128 GB)\nHoje: R$ 4.009,00\nMédia observada: R$ 4.086,83\nMenor observado: R$ 3.798,00\nBase: 16 dias acompanhados\n\nO preço atual está 1,9% abaixo da média observada.\n\nVeja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/iphone-15-vale-a-pena-em-oferta/\nPreço pode mudar. Link comercial pode gerar comissão sem custo adicional.",
       "cta": "Veja o guia no MiraDesconto",
-      "pippitPrompt": "Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Apple iPhone 15 (128 GB). Imagem: https://http2.mlstatic.com/D_Q_NP_2X_831434-MLA96401363339_102025-AB.webp. Hook 0-3s: Apple iPhone 15 (128 GB) está 1.9% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 4.009,00, média R$ 4.087,25 e menor observado R$ 3.798,00. Narração: Apple iPhone 15 (128 GB) está 1.9% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 4.009,00. No Radar, a média foi R$ 4.087,25 e o menor valor observado foi R$ 3.798,00, em 16 dias acompanhados. O preço atual está 1,9% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos."
+      "pippitPrompt": "Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Apple iPhone 15 (128 GB). Imagem: https://http2.mlstatic.com/D_Q_NP_2X_831434-MLA96401363339_102025-AB.webp. Hook 0-3s: Apple iPhone 15 (128 GB) está 1.9% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 4.009,00, média R$ 4.086,83 e menor observado R$ 3.798,00. Narração: Apple iPhone 15 (128 GB) está 1.9% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 4.009,00. No Radar, a média foi R$ 4.086,83 e o menor valor observado foi R$ 3.798,00, em 16 dias acompanhados. O preço atual está 1,9% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos."
     },
     {
       "position": 2,
@@ -53,11 +53,11 @@
       "angle": "Menor preço observado: vale aproveitar?",
       "hook": "Kit Mouse Teclado Magnético Bluetooth Para Lite P610 Tab S6 Preto está no menor valor observado neste anúncio. Mas vale comprar agora?",
       "currentPriceText": "R$ 52,90",
-      "averagePriceText": "R$ 57,70",
+      "averagePriceText": "R$ 57,68",
       "minimumPriceText": "R$ 52,90",
       "maximumPriceText": "R$ 59,90",
-      "deltaAveragePct": -8.32,
-      "observations": 191,
+      "deltaAveragePct": -8.28,
+      "observations": 192,
       "periodText": "16 dias acompanhados",
       "radarLabel": "Menor observado",
       "radarReason": "O preço atual está no menor valor observado neste anúncio durante o período acompanhado.",
@@ -66,10 +66,10 @@
         "title": "Ofertas MiraDesconto",
         "url": "https://miradesconto.github.io/miradesconto/?produto=MLB5601054808#ofertas"
       },
-      "script": "Kit Mouse Teclado Magnético Bluetooth Para Lite P610 Tab S6 Preto está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 52,90. No Radar, a média foi R$ 57,70 e o menor valor observado foi R$ 52,90, em 16 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar.",
-      "caption": "PREÇO NA MIRA — Kit Mouse Teclado Magnético Bluetooth Para Lite P610 Tab S6 Preto\nHoje: R$ 52,90\nMédia observada: R$ 57,70\nMenor observado: R$ 52,90\nBase: 16 dias acompanhados\n\nO preço atual está no menor valor observado neste anúncio durante o período acompanhado.\n\nVeja no Radar MiraDesconto: https://miradesconto.github.io/miradesconto/?produto=MLB5601054808#ofertas\nPreço pode mudar. Link comercial pode gerar comissão sem custo adicional.",
+      "script": "Kit Mouse Teclado Magnético Bluetooth Para Lite P610 Tab S6 Preto está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 52,90. No Radar, a média foi R$ 57,68 e o menor valor observado foi R$ 52,90, em 16 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar.",
+      "caption": "PREÇO NA MIRA — Kit Mouse Teclado Magnético Bluetooth Para Lite P610 Tab S6 Preto\nHoje: R$ 52,90\nMédia observada: R$ 57,68\nMenor observado: R$ 52,90\nBase: 16 dias acompanhados\n\nO preço atual está no menor valor observado neste anúncio durante o período acompanhado.\n\nVeja no Radar MiraDesconto: https://miradesconto.github.io/miradesconto/?produto=MLB5601054808#ofertas\nPreço pode mudar. Link comercial pode gerar comissão sem custo adicional.",
       "cta": "Veja no Radar MiraDesconto",
-      "pippitPrompt": "Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Kit Mouse Teclado Magnético Bluetooth Para Lite P610 Tab S6 Preto. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_863811-MLB92261713766_092025-AB.webp. Hook 0-3s: Kit Mouse Teclado Magnético Bluetooth Para Lite P610 Tab S6 Preto está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 52,90, média R$ 57,70 e menor observado R$ 52,90. Narração: Kit Mouse Teclado Magnético Bluetooth Para Lite P610 Tab S6 Preto está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 52,90. No Radar, a média foi R$ 57,70 e o menor valor observado foi R$ 52,90, em 16 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar. CTA: Veja no Radar MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos."
+      "pippitPrompt": "Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Kit Mouse Teclado Magnético Bluetooth Para Lite P610 Tab S6 Preto. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_863811-MLB92261713766_092025-AB.webp. Hook 0-3s: Kit Mouse Teclado Magnético Bluetooth Para Lite P610 Tab S6 Preto está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 52,90, média R$ 57,68 e menor observado R$ 52,90. Narração: Kit Mouse Teclado Magnético Bluetooth Para Lite P610 Tab S6 Preto está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 52,90. No Radar, a média foi R$ 57,68 e o menor valor observado foi R$ 52,90, em 16 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar. CTA: Veja no Radar MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos."
     },
     {
       "position": 3,
@@ -85,11 +85,11 @@
       "angle": "Menor preço observado: vale aproveitar?",
       "hook": "Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung… está no menor valor observado neste anúncio. Mas vale comprar agora?",
       "currentPriceText": "R$ 48,75",
-      "averagePriceText": "R$ 51,38",
+      "averagePriceText": "R$ 51,36",
       "minimumPriceText": "R$ 48,75",
       "maximumPriceText": "R$ 55,90",
-      "deltaAveragePct": -5.11,
-      "observations": 190,
+      "deltaAveragePct": -5.09,
+      "observations": 191,
       "periodText": "16 dias acompanhados",
       "radarLabel": "Menor observado",
       "radarReason": "O preço atual está no menor valor observado neste anúncio durante o período acompanhado.",
@@ -98,10 +98,10 @@
         "title": "Ofertas MiraDesconto",
         "url": "https://miradesconto.github.io/miradesconto/?produto=MLB5811879470#ofertas"
       },
-      "script": "Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 48,75. No Radar, a média foi R$ 51,38 e o menor valor observado foi R$ 48,75, em 16 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar.",
-      "caption": "PREÇO NA MIRA — Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung…\nHoje: R$ 48,75\nMédia observada: R$ 51,38\nMenor observado: R$ 48,75\nBase: 16 dias acompanhados\n\nO preço atual está no menor valor observado neste anúncio durante o período acompanhado.\n\nVeja no Radar MiraDesconto: https://miradesconto.github.io/miradesconto/?produto=MLB5811879470#ofertas\nPreço pode mudar. Link comercial pode gerar comissão sem custo adicional.",
+      "script": "Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 48,75. No Radar, a média foi R$ 51,36 e o menor valor observado foi R$ 48,75, em 16 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar.",
+      "caption": "PREÇO NA MIRA — Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung…\nHoje: R$ 48,75\nMédia observada: R$ 51,36\nMenor observado: R$ 48,75\nBase: 16 dias acompanhados\n\nO preço atual está no menor valor observado neste anúncio durante o período acompanhado.\n\nVeja no Radar MiraDesconto: https://miradesconto.github.io/miradesconto/?produto=MLB5811879470#ofertas\nPreço pode mudar. Link comercial pode gerar comissão sem custo adicional.",
       "cta": "Veja no Radar MiraDesconto",
-      "pippitPrompt": "Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_762912-MLA105696431793_012026-AB.webp. Hook 0-3s: Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 48,75, média R$ 51,38 e menor observado R$ 48,75. Narração: Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 48,75. No Radar, a média foi R$ 51,38 e o menor valor observado foi R$ 48,75, em 16 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar. CTA: Veja no Radar MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos."
+      "pippitPrompt": "Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_762912-MLA105696431793_012026-AB.webp. Hook 0-3s: Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 48,75, média R$ 51,36 e menor observado R$ 48,75. Narração: Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 48,75. No Radar, a média foi R$ 51,36 e o menor valor observado foi R$ 48,75, em 16 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar. CTA: Veja no Radar MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos."
     },
     {
       "position": 4,
@@ -117,11 +117,11 @@
       "angle": "Menor preço observado: vale aproveitar?",
       "hook": "Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H… está no menor valor observado neste anúncio. Mas vale comprar agora?",
       "currentPriceText": "R$ 6.508,00",
-      "averagePriceText": "R$ 7.608,33",
+      "averagePriceText": "R$ 7.589,68",
       "minimumPriceText": "R$ 6.508,00",
       "maximumPriceText": "R$ 9.547,00",
-      "deltaAveragePct": -14.46,
-      "observations": 58,
+      "deltaAveragePct": -14.25,
+      "observations": 59,
       "periodText": "3 dias acompanhados",
       "radarLabel": "Menor observado",
       "radarReason": "O preço atual está no menor valor observado neste anúncio durante o período acompanhado.",
@@ -130,10 +130,10 @@
         "title": "Melhor notebook para estudar, trabalhar e jogar em 2026: 4 opções por perfil",
         "url": "https://miradesconto.github.io/miradesconto/blog/notebook-em-promocao-como-escolher/"
       },
-      "script": "Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 6.508,00. No Radar, a média foi R$ 7.608,33 e o menor valor observado foi R$ 6.508,00, em 3 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.",
-      "caption": "PREÇO NA MIRA — Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H…\nHoje: R$ 6.508,00\nMédia observada: R$ 7.608,33\nMenor observado: R$ 6.508,00\nBase: 3 dias acompanhados\n\nO preço atual está no menor valor observado neste anúncio durante o período acompanhado.\n\nVeja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/notebook-em-promocao-como-escolher/\nPreço pode mudar. Link comercial pode gerar comissão sem custo adicional.",
+      "script": "Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 6.508,00. No Radar, a média foi R$ 7.589,68 e o menor valor observado foi R$ 6.508,00, em 3 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.",
+      "caption": "PREÇO NA MIRA — Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H…\nHoje: R$ 6.508,00\nMédia observada: R$ 7.589,68\nMenor observado: R$ 6.508,00\nBase: 3 dias acompanhados\n\nO preço atual está no menor valor observado neste anúncio durante o período acompanhado.\n\nVeja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/notebook-em-promocao-como-escolher/\nPreço pode mudar. Link comercial pode gerar comissão sem custo adicional.",
       "cta": "Veja o guia no MiraDesconto",
-      "pippitPrompt": "Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_848979-MLA118254221509_092026-T.webp. Hook 0-3s: Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 6.508,00, média R$ 7.608,33 e menor observado R$ 6.508,00. Narração: Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 6.508,00. No Radar, a média foi R$ 7.608,33 e o menor valor observado foi R$ 6.508,00, em 3 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos."
+      "pippitPrompt": "Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_848979-MLA118254221509_092026-T.webp. Hook 0-3s: Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 6.508,00, média R$ 7.589,68 e menor observado R$ 6.508,00. Narração: Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 6.508,00. No Radar, a média foi R$ 7.589,68 e o menor valor observado foi R$ 6.508,00, em 3 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos."
     },
     {
       "position": 5,
@@ -149,23 +149,23 @@
       "angle": "Abaixo da média observada: vale agora?",
       "hook": "Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 7.7% abaixo da média observada. É um bom momento de compra?",
       "currentPriceText": "R$ 113,05",
-      "averagePriceText": "R$ 122,46",
+      "averagePriceText": "R$ 122,41",
       "minimumPriceText": "R$ 109,48",
       "maximumPriceText": "R$ 128,22",
-      "deltaAveragePct": -7.69,
-      "observations": 188,
+      "deltaAveragePct": -7.65,
+      "observations": 189,
       "periodText": "16 dias acompanhados",
       "radarLabel": "Excelente preço",
-      "radarReason": "O preço atual está 7,7% abaixo da média observada.",
+      "radarReason": "O preço atual está 7,6% abaixo da média observada.",
       "destination": {
         "type": "offer",
         "title": "Ofertas MiraDesconto",
         "url": "https://miradesconto.github.io/miradesconto/?produto=MLB6972453978#ofertas"
       },
-      "script": "Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 7.7% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 113,05. No Radar, a média foi R$ 122,46 e o menor valor observado foi R$ 109,48, em 16 dias acompanhados. O preço atual está 7,7% abaixo da média observada. Veja no Radar MiraDesconto antes de comprar.",
-      "caption": "PREÇO NA MIRA — Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão…\nHoje: R$ 113,05\nMédia observada: R$ 122,46\nMenor observado: R$ 109,48\nBase: 16 dias acompanhados\n\nO preço atual está 7,7% abaixo da média observada.\n\nVeja no Radar MiraDesconto: https://miradesconto.github.io/miradesconto/?produto=MLB6972453978#ofertas\nPreço pode mudar. Link comercial pode gerar comissão sem custo adicional.",
+      "script": "Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 7.7% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 113,05. No Radar, a média foi R$ 122,41 e o menor valor observado foi R$ 109,48, em 16 dias acompanhados. O preço atual está 7,6% abaixo da média observada. Veja no Radar MiraDesconto antes de comprar.",
+      "caption": "PREÇO NA MIRA — Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão…\nHoje: R$ 113,05\nMédia observada: R$ 122,41\nMenor observado: R$ 109,48\nBase: 16 dias acompanhados\n\nO preço atual está 7,6% abaixo da média observada.\n\nVeja no Radar MiraDesconto: https://miradesconto.github.io/miradesconto/?produto=MLB6972453978#ofertas\nPreço pode mudar. Link comercial pode gerar comissão sem custo adicional.",
       "cta": "Veja no Radar MiraDesconto",
-      "pippitPrompt": "Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_798945-MLA112454329586_062026-AB.webp. Hook 0-3s: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 7.7% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 113,05, média R$ 122,46 e menor observado R$ 109,48. Narração: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 7.7% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 113,05. No Radar, a média foi R$ 122,46 e o menor valor observado foi R$ 109,48, em 16 dias acompanhados. O preço atual está 7,7% abaixo da média observada. Veja no Radar MiraDesconto antes de comprar. CTA: Veja no Radar MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos."
+      "pippitPrompt": "Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_798945-MLA112454329586_062026-AB.webp. Hook 0-3s: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 7.7% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 113,05, média R$ 122,41 e menor observado R$ 109,48. Narração: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 7.7% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 113,05. No Radar, a média foi R$ 122,41 e o menor valor observado foi R$ 109,48, em 16 dias acompanhados. O preço atual está 7,6% abaixo da média observada. Veja no Radar MiraDesconto antes de comprar. CTA: Veja no Radar MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos."
     },
     {
       "position": 6,
@@ -181,11 +181,11 @@
       "angle": "Menor preço observado: vale aproveitar?",
       "hook": "Conversor Mídia Fibra Óptica Gigabit Rj45 1000 Mb Par A+b está no menor valor observado neste anúncio. Mas vale comprar agora?",
       "currentPriceText": "R$ 67,11",
-      "averagePriceText": "R$ 69,67",
+      "averagePriceText": "R$ 69,66",
       "minimumPriceText": "R$ 67,11",
       "maximumPriceText": "R$ 73,95",
-      "deltaAveragePct": -3.68,
-      "observations": 191,
+      "deltaAveragePct": -3.66,
+      "observations": 192,
       "periodText": "16 dias acompanhados",
       "radarLabel": "Menor observado",
       "radarReason": "O preço atual está no menor valor observado neste anúncio durante o período acompanhado.",
@@ -194,10 +194,10 @@
         "title": "Ofertas MiraDesconto",
         "url": "https://miradesconto.github.io/miradesconto/?produto=MLB5339791448#ofertas"
       },
-      "script": "Conversor Mídia Fibra Óptica Gigabit Rj45 1000 Mb Par A+b está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 67,11. No Radar, a média foi R$ 69,67 e o menor valor observado foi R$ 67,11, em 16 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar.",
-      "caption": "PREÇO NA MIRA — Conversor Mídia Fibra Óptica Gigabit Rj45 1000 Mb Par A+b\nHoje: R$ 67,11\nMédia observada: R$ 69,67\nMenor observado: R$ 67,11\nBase: 16 dias acompanhados\n\nO preço atual está no menor valor observado neste anúncio durante o período acompanhado.\n\nVeja no Radar MiraDesconto: https://miradesconto.github.io/miradesconto/?produto=MLB5339791448#ofertas\nPreço pode mudar. Link comercial pode gerar comissão sem custo adicional.",
+      "script": "Conversor Mídia Fibra Óptica Gigabit Rj45 1000 Mb Par A+b está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 67,11. No Radar, a média foi R$ 69,66 e o menor valor observado foi R$ 67,11, em 16 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar.",
+      "caption": "PREÇO NA MIRA — Conversor Mídia Fibra Óptica Gigabit Rj45 1000 Mb Par A+b\nHoje: R$ 67,11\nMédia observada: R$ 69,66\nMenor observado: R$ 67,11\nBase: 16 dias acompanhados\n\nO preço atual está no menor valor observado neste anúncio durante o período acompanhado.\n\nVeja no Radar MiraDesconto: https://miradesconto.github.io/miradesconto/?produto=MLB5339791448#ofertas\nPreço pode mudar. Link comercial pode gerar comissão sem custo adicional.",
       "cta": "Veja no Radar MiraDesconto",
-      "pippitPrompt": "Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Conversor Mídia Fibra Óptica Gigabit Rj45 1000 Mb Par A+b. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_668420-MLB116950397541_082026-AB.webp. Hook 0-3s: Conversor Mídia Fibra Óptica Gigabit Rj45 1000 Mb Par A+b está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 67,11, média R$ 69,67 e menor observado R$ 67,11. Narração: Conversor Mídia Fibra Óptica Gigabit Rj45 1000 Mb Par A+b está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 67,11. No Radar, a média foi R$ 69,67 e o menor valor observado foi R$ 67,11, em 16 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar. CTA: Veja no Radar MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos."
+      "pippitPrompt": "Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Conversor Mídia Fibra Óptica Gigabit Rj45 1000 Mb Par A+b. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_668420-MLB116950397541_082026-AB.webp. Hook 0-3s: Conversor Mídia Fibra Óptica Gigabit Rj45 1000 Mb Par A+b está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 67,11, média R$ 69,66 e menor observado R$ 67,11. Narração: Conversor Mídia Fibra Óptica Gigabit Rj45 1000 Mb Par A+b está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 67,11. No Radar, a média foi R$ 69,66 e o menor valor observado foi R$ 67,11, em 16 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar. CTA: Veja no Radar MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos."
     },
     {
       "position": 7,
@@ -213,11 +213,11 @@
       "angle": "Menor preço observado: vale aproveitar?",
       "hook": "Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco… está no menor valor observado neste anúncio. Mas vale comprar agora?",
       "currentPriceText": "R$ 45,60",
-      "averagePriceText": "R$ 47,93",
+      "averagePriceText": "R$ 47,92",
       "minimumPriceText": "R$ 45,60",
       "maximumPriceText": "R$ 49,99",
-      "deltaAveragePct": -4.86,
-      "observations": 186,
+      "deltaAveragePct": -4.84,
+      "observations": 187,
       "periodText": "16 dias acompanhados",
       "radarLabel": "Menor observado",
       "radarReason": "O preço atual está no menor valor observado neste anúncio durante o período acompanhado.",
@@ -226,10 +226,10 @@
         "title": "Ofertas MiraDesconto",
         "url": "https://miradesconto.github.io/miradesconto/?produto=MLB6824618506#ofertas"
       },
-      "script": "Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 45,60. No Radar, a média foi R$ 47,93 e o menor valor observado foi R$ 45,60, em 16 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar.",
-      "caption": "PREÇO NA MIRA — Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco…\nHoje: R$ 45,60\nMédia observada: R$ 47,93\nMenor observado: R$ 45,60\nBase: 16 dias acompanhados\n\nO preço atual está no menor valor observado neste anúncio durante o período acompanhado.\n\nVeja no Radar MiraDesconto: https://miradesconto.github.io/miradesconto/?produto=MLB6824618506#ofertas\nPreço pode mudar. Link comercial pode gerar comissão sem custo adicional.",
+      "script": "Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 45,60. No Radar, a média foi R$ 47,92 e o menor valor observado foi R$ 45,60, em 16 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar.",
+      "caption": "PREÇO NA MIRA — Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco…\nHoje: R$ 45,60\nMédia observada: R$ 47,92\nMenor observado: R$ 45,60\nBase: 16 dias acompanhados\n\nO preço atual está no menor valor observado neste anúncio durante o período acompanhado.\n\nVeja no Radar MiraDesconto: https://miradesconto.github.io/miradesconto/?produto=MLB6824618506#ofertas\nPreço pode mudar. Link comercial pode gerar comissão sem custo adicional.",
       "cta": "Veja no Radar MiraDesconto",
-      "pippitPrompt": "Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_691904-MLA111125430926_052026-AB.webp. Hook 0-3s: Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 45,60, média R$ 47,93 e menor observado R$ 45,60. Narração: Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 45,60. No Radar, a média foi R$ 47,93 e o menor valor observado foi R$ 45,60, em 16 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar. CTA: Veja no Radar MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos."
+      "pippitPrompt": "Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_691904-MLA111125430926_052026-AB.webp. Hook 0-3s: Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 45,60, média R$ 47,92 e menor observado R$ 45,60. Narração: Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 45,60. No Radar, a média foi R$ 47,92 e o menor valor observado foi R$ 45,60, em 16 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar. CTA: Veja no Radar MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos."
     },
     {
       "position": 8,
@@ -248,8 +248,8 @@
       "averagePriceText": "R$ 36,04",
       "minimumPriceText": "R$ 29,60",
       "maximumPriceText": "R$ 37,99",
-      "deltaAveragePct": -2.92,
-      "observations": 191,
+      "deltaAveragePct": -2.9,
+      "observations": 192,
       "periodText": "16 dias acompanhados",
       "radarLabel": "Bom preço",
       "radarReason": "O preço atual está 2,9% abaixo da média observada.",
@@ -277,11 +277,11 @@
       "angle": "Menor preço observado: vale aproveitar?",
       "hook": "Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora?",
       "currentPriceText": "R$ 4.499,00",
-      "averagePriceText": "R$ 4.550,43",
+      "averagePriceText": "R$ 4.550,17",
       "minimumPriceText": "R$ 4.499,00",
       "maximumPriceText": "R$ 5.111,00",
-      "deltaAveragePct": -1.13,
-      "observations": 191,
+      "deltaAveragePct": -1.12,
+      "observations": 192,
       "periodText": "16 dias acompanhados",
       "radarLabel": "Menor observado",
       "radarReason": "O preço atual está no menor valor observado neste anúncio durante o período acompanhado.",
@@ -290,10 +290,10 @@
         "title": "Ofertas MiraDesconto",
         "url": "https://miradesconto.github.io/miradesconto/?produto=MLB6212972552#ofertas"
       },
-      "script": "Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 4.499,00. No Radar, a média foi R$ 4.550,43 e o menor valor observado foi R$ 4.499,00, em 16 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar.",
-      "caption": "PREÇO NA MIRA — Console Nintendo Switch 2, Modelo Nacional de Tomada\nHoje: R$ 4.499,00\nMédia observada: R$ 4.550,43\nMenor observado: R$ 4.499,00\nBase: 16 dias acompanhados\n\nO preço atual está no menor valor observado neste anúncio durante o período acompanhado.\n\nVeja no Radar MiraDesconto: https://miradesconto.github.io/miradesconto/?produto=MLB6212972552#ofertas\nPreço pode mudar. Link comercial pode gerar comissão sem custo adicional.",
+      "script": "Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 4.499,00. No Radar, a média foi R$ 4.550,17 e o menor valor observado foi R$ 4.499,00, em 16 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar.",
+      "caption": "PREÇO NA MIRA — Console Nintendo Switch 2, Modelo Nacional de Tomada\nHoje: R$ 4.499,00\nMédia observada: R$ 4.550,17\nMenor observado: R$ 4.499,00\nBase: 16 dias acompanhados\n\nO preço atual está no menor valor observado neste anúncio durante o período acompanhado.\n\nVeja no Radar MiraDesconto: https://miradesconto.github.io/miradesconto/?produto=MLB6212972552#ofertas\nPreço pode mudar. Link comercial pode gerar comissão sem custo adicional.",
       "cta": "Veja no Radar MiraDesconto",
-      "pippitPrompt": "Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Console Nintendo Switch 2, Modelo Nacional de Tomada. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_785396-MLA99867558581_112025-AB.webp. Hook 0-3s: Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 4.499,00, média R$ 4.550,43 e menor observado R$ 4.499,00. Narração: Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 4.499,00. No Radar, a média foi R$ 4.550,43 e o menor valor observado foi R$ 4.499,00, em 16 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar. CTA: Veja no Radar MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos."
+      "pippitPrompt": "Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Console Nintendo Switch 2, Modelo Nacional de Tomada. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_785396-MLA99867558581_112025-AB.webp. Hook 0-3s: Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 4.499,00, média R$ 4.550,17 e menor observado R$ 4.499,00. Narração: Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 4.499,00. No Radar, a média foi R$ 4.550,17 e o menor valor observado foi R$ 4.499,00, em 16 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar. CTA: Veja no Radar MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos."
     },
     {
       "position": 10,
@@ -307,13 +307,13 @@
       "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_848327-MLB93711830286_102025-AB.webp",
       "affiliateUrl": "https://meli.la/1bWnNwc",
       "angle": "Abaixo da média observada: vale agora?",
-      "hook": "Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto… está 1.8% abaixo da média observada. É um bom momento de compra?",
+      "hook": "Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto… está 1.7% abaixo da média observada. É um bom momento de compra?",
       "currentPriceText": "R$ 389,00",
-      "averagePriceText": "R$ 395,91",
+      "averagePriceText": "R$ 395,88",
       "minimumPriceText": "R$ 352,00",
       "maximumPriceText": "R$ 419,90",
-      "deltaAveragePct": -1.75,
-      "observations": 191,
+      "deltaAveragePct": -1.74,
+      "observations": 192,
       "periodText": "16 dias acompanhados",
       "radarLabel": "Bom preço",
       "radarReason": "O preço atual está 1,7% abaixo da média observada.",
@@ -322,10 +322,10 @@
         "title": "Ofertas MiraDesconto",
         "url": "https://miradesconto.github.io/miradesconto/?produto=MLB4235386613#ofertas"
       },
-      "script": "Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto… está 1.8% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 389,00. No Radar, a média foi R$ 395,91 e o menor valor observado foi R$ 352,00, em 16 dias acompanhados. O preço atual está 1,7% abaixo da média observada. Veja no Radar MiraDesconto antes de comprar.",
-      "caption": "PREÇO NA MIRA — Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto…\nHoje: R$ 389,00\nMédia observada: R$ 395,91\nMenor observado: R$ 352,00\nBase: 16 dias acompanhados\n\nO preço atual está 1,7% abaixo da média observada.\n\nVeja no Radar MiraDesconto: https://miradesconto.github.io/miradesconto/?produto=MLB4235386613#ofertas\nPreço pode mudar. Link comercial pode gerar comissão sem custo adicional.",
+      "script": "Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto… está 1.7% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 389,00. No Radar, a média foi R$ 395,88 e o menor valor observado foi R$ 352,00, em 16 dias acompanhados. O preço atual está 1,7% abaixo da média observada. Veja no Radar MiraDesconto antes de comprar.",
+      "caption": "PREÇO NA MIRA — Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto…\nHoje: R$ 389,00\nMédia observada: R$ 395,88\nMenor observado: R$ 352,00\nBase: 16 dias acompanhados\n\nO preço atual está 1,7% abaixo da média observada.\n\nVeja no Radar MiraDesconto: https://miradesconto.github.io/miradesconto/?produto=MLB4235386613#ofertas\nPreço pode mudar. Link comercial pode gerar comissão sem custo adicional.",
       "cta": "Veja no Radar MiraDesconto",
-      "pippitPrompt": "Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_848327-MLB93711830286_102025-AB.webp. Hook 0-3s: Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto… está 1.8% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 389,00, média R$ 395,91 e menor observado R$ 352,00. Narração: Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto… está 1.8% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 389,00. No Radar, a média foi R$ 395,91 e o menor valor observado foi R$ 352,00, em 16 dias acompanhados. O preço atual está 1,7% abaixo da média observada. Veja no Radar MiraDesconto antes de comprar. CTA: Veja no Radar MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos."
+      "pippitPrompt": "Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_848327-MLB93711830286_102025-AB.webp. Hook 0-3s: Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto… está 1.7% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 389,00, média R$ 395,88 e menor observado R$ 352,00. Narração: Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto… está 1.7% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 389,00. No Radar, a média foi R$ 395,88 e o menor valor observado foi R$ 352,00, em 16 dias acompanhados. O preço atual está 1,7% abaixo da média observada. Veja no Radar MiraDesconto antes de comprar. CTA: Veja no Radar MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos."
     },
     {
       "position": 11,
@@ -345,7 +345,7 @@
       "minimumPriceText": "R$ 67,71",
       "maximumPriceText": "R$ 78,04",
       "deltaAveragePct": -0.5,
-      "observations": 191,
+      "observations": 192,
       "periodText": "16 dias acompanhados",
       "radarLabel": "Menor observado",
       "radarReason": "O preço atual está no menor valor observado neste anúncio durante o período acompanhado.",
@@ -377,7 +377,7 @@
       "minimumPriceText": "R$ 56,29",
       "maximumPriceText": "R$ 59,25",
       "deltaAveragePct": -0.08,
-      "observations": 190,
+      "observations": 191,
       "periodText": "16 dias acompanhados",
       "radarLabel": "Menor observado",
       "radarReason": "O preço atual está no menor valor observado neste anúncio durante o período acompanhado.",
@@ -405,11 +405,11 @@
       "angle": "Menor preço observado: vale aproveitar?",
       "hook": "Laptop Asus Vivobook 15 F1504va Intel Core está no menor valor observado neste anúncio. Mas vale comprar agora?",
       "currentPriceText": "R$ 6.807,00",
-      "averagePriceText": "R$ 6.905,48",
+      "averagePriceText": "R$ 6.903,47",
       "minimumPriceText": "R$ 6.807,00",
       "maximumPriceText": "R$ 7.148,00",
-      "deltaAveragePct": -1.43,
-      "observations": 48,
+      "deltaAveragePct": -1.4,
+      "observations": 49,
       "periodText": "3 dias acompanhados",
       "radarLabel": "Menor observado",
       "radarReason": "O preço atual está no menor valor observado neste anúncio durante o período acompanhado.",
@@ -418,10 +418,10 @@
         "title": "Ofertas MiraDesconto",
         "url": "https://miradesconto.github.io/miradesconto/?produto=MLB7657450942#ofertas"
       },
-      "script": "Laptop Asus Vivobook 15 F1504va Intel Core está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 6.807,00. No Radar, a média foi R$ 6.905,48 e o menor valor observado foi R$ 6.807,00, em 3 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar.",
-      "caption": "PREÇO NA MIRA — Laptop Asus Vivobook 15 F1504va Intel Core\nHoje: R$ 6.807,00\nMédia observada: R$ 6.905,48\nMenor observado: R$ 6.807,00\nBase: 3 dias acompanhados\n\nO preço atual está no menor valor observado neste anúncio durante o período acompanhado.\n\nVeja no Radar MiraDesconto: https://miradesconto.github.io/miradesconto/?produto=MLB7657450942#ofertas\nPreço pode mudar. Link comercial pode gerar comissão sem custo adicional.",
+      "script": "Laptop Asus Vivobook 15 F1504va Intel Core está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 6.807,00. No Radar, a média foi R$ 6.903,47 e o menor valor observado foi R$ 6.807,00, em 3 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar.",
+      "caption": "PREÇO NA MIRA — Laptop Asus Vivobook 15 F1504va Intel Core\nHoje: R$ 6.807,00\nMédia observada: R$ 6.903,47\nMenor observado: R$ 6.807,00\nBase: 3 dias acompanhados\n\nO preço atual está no menor valor observado neste anúncio durante o período acompanhado.\n\nVeja no Radar MiraDesconto: https://miradesconto.github.io/miradesconto/?produto=MLB7657450942#ofertas\nPreço pode mudar. Link comercial pode gerar comissão sem custo adicional.",
       "cta": "Veja no Radar MiraDesconto",
-      "pippitPrompt": "Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Laptop Asus Vivobook 15 F1504va Intel Core. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_861106-CBT116316724930_092026-T.webp. Hook 0-3s: Laptop Asus Vivobook 15 F1504va Intel Core está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 6.807,00, média R$ 6.905,48 e menor observado R$ 6.807,00. Narração: Laptop Asus Vivobook 15 F1504va Intel Core está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 6.807,00. No Radar, a média foi R$ 6.905,48 e o menor valor observado foi R$ 6.807,00, em 3 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar. CTA: Veja no Radar MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos."
+      "pippitPrompt": "Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Laptop Asus Vivobook 15 F1504va Intel Core. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_861106-CBT116316724930_092026-T.webp. Hook 0-3s: Laptop Asus Vivobook 15 F1504va Intel Core está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 6.807,00, média R$ 6.903,47 e menor observado R$ 6.807,00. Narração: Laptop Asus Vivobook 15 F1504va Intel Core está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 6.807,00. No Radar, a média foi R$ 6.903,47 e o menor valor observado foi R$ 6.807,00, em 3 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar. CTA: Veja no Radar MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos."
     },
     {
       "position": 14,
@@ -437,11 +437,11 @@
       "angle": "Preço na Mira: vale comprar agora?",
       "hook": "Antes de comprar Notebook Acer Aspire Go AG15-51P-39MU Intel Core i3-1305U 8GB…, olha o que o histórico mostra.",
       "currentPriceText": "R$ 3.599,00",
-      "averagePriceText": "R$ 3.563,00",
+      "averagePriceText": "R$ 3.563,64",
       "minimumPriceText": "R$ 3.239,00",
       "maximumPriceText": "R$ 3.599,00",
-      "deltaAveragePct": 1.01,
-      "observations": 55,
+      "deltaAveragePct": 0.99,
+      "observations": 56,
       "periodText": "4 dias acompanhados",
       "radarLabel": "Preço normal",
       "radarReason": "O preço atual está próximo da média observada.",
@@ -450,10 +450,10 @@
         "title": "Ofertas MiraDesconto",
         "url": "https://miradesconto.github.io/miradesconto/?produto=MLB4144557655#ofertas"
       },
-      "script": "Antes de comprar Notebook Acer Aspire Go AG15-51P-39MU Intel Core i3-1305U 8GB…, olha o que o histórico mostra. Hoje ele aparece por R$ 3.599,00. No Radar, a média foi R$ 3.563,00 e o menor valor observado foi R$ 3.239,00, em 4 dias acompanhados. O preço atual está próximo da média observada. Veja no Radar MiraDesconto antes de comprar.",
-      "caption": "PREÇO NA MIRA — Notebook Acer Aspire Go AG15-51P-39MU Intel Core i3-1305U 8GB…\nHoje: R$ 3.599,00\nMédia observada: R$ 3.563,00\nMenor observado: R$ 3.239,00\nBase: 4 dias acompanhados\n\nO preço atual está próximo da média observada.\n\nVeja no Radar MiraDesconto: https://miradesconto.github.io/miradesconto/?produto=MLB4144557655#ofertas\nPreço pode mudar. Link comercial pode gerar comissão sem custo adicional.",
+      "script": "Antes de comprar Notebook Acer Aspire Go AG15-51P-39MU Intel Core i3-1305U 8GB…, olha o que o histórico mostra. Hoje ele aparece por R$ 3.599,00. No Radar, a média foi R$ 3.563,64 e o menor valor observado foi R$ 3.239,00, em 4 dias acompanhados. O preço atual está próximo da média observada. Veja no Radar MiraDesconto antes de comprar.",
+      "caption": "PREÇO NA MIRA — Notebook Acer Aspire Go AG15-51P-39MU Intel Core i3-1305U 8GB…\nHoje: R$ 3.599,00\nMédia observada: R$ 3.563,64\nMenor observado: R$ 3.239,00\nBase: 4 dias acompanhados\n\nO preço atual está próximo da média observada.\n\nVeja no Radar MiraDesconto: https://miradesconto.github.io/miradesconto/?produto=MLB4144557655#ofertas\nPreço pode mudar. Link comercial pode gerar comissão sem custo adicional.",
       "cta": "Veja no Radar MiraDesconto",
-      "pippitPrompt": "Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook Acer Aspire Go AG15-51P-39MU Intel Core i3-1305U 8GB…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_692920-MLA100061644521_122025-T.webp. Hook 0-3s: Antes de comprar Notebook Acer Aspire Go AG15-51P-39MU Intel Core i3-1305U 8GB…, olha o que o histórico mostra. Mostre preço atual R$ 3.599,00, média R$ 3.563,00 e menor observado R$ 3.239,00. Narração: Antes de comprar Notebook Acer Aspire Go AG15-51P-39MU Intel Core i3-1305U 8GB…, olha o que o histórico mostra. Hoje ele aparece por R$ 3.599,00. No Radar, a média foi R$ 3.563,00 e o menor valor observado foi R$ 3.239,00, em 4 dias acompanhados. O preço atual está próximo da média observada. Veja no Radar MiraDesconto antes de comprar. CTA: Veja no Radar MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos."
+      "pippitPrompt": "Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook Acer Aspire Go AG15-51P-39MU Intel Core i3-1305U 8GB…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_692920-MLA100061644521_122025-T.webp. Hook 0-3s: Antes de comprar Notebook Acer Aspire Go AG15-51P-39MU Intel Core i3-1305U 8GB…, olha o que o histórico mostra. Mostre preço atual R$ 3.599,00, média R$ 3.563,64 e menor observado R$ 3.239,00. Narração: Antes de comprar Notebook Acer Aspire Go AG15-51P-39MU Intel Core i3-1305U 8GB…, olha o que o histórico mostra. Hoje ele aparece por R$ 3.599,00. No Radar, a média foi R$ 3.563,64 e o menor valor observado foi R$ 3.239,00, em 4 dias acompanhados. O preço atual está próximo da média observada. Veja no Radar MiraDesconto antes de comprar. CTA: Veja no Radar MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos."
     }
   ]
 }
