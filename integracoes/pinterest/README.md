@@ -8,7 +8,7 @@ Retorno salvo no painel: **http://localhost:8765/callback**. A variante com 127.
 
 Execute no computador do titular: `python integracoes/pinterest/oauth_ui.py`.
 Cole a chave secreta do aplicativo somente no campo protegido da tela local. Ela fica em memória durante a autorização e é enviada à API oficial para trocar o código; não é gravada. Nunca cole em chats, issues ou comandos.
-Clique em Continuar para o Pinterest e autorize na página oficial. Escopos: boards:read,pins:read,pins:write. Não solicitamos anúncios, cobrança ou pastas secretas.
+Clique em Continuar para o Pinterest e, na tela seguinte, Autorizar no Pinterest. Conceda a autorização na página oficial. Escopos: boards:read,pins:read,pins:write. Não solicitamos anúncios, cobrança ou pastas secretas.
 
 A UI valida Host, Origin, formulário e state aleatório de uso único. O callback redireciona para /done, limpando a URL. URLs, códigos e respostas sensíveis não são registrados. A troca ocorre no servidor local.
 Após conectar, Consultar pastas pela API faz GET /v5/boards. Exibe até dez pastas da primeira página; lista vazia não prova ausência de pastas. Antes de escolher destino, consultar próximas páginas quando necessário.

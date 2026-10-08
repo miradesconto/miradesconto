@@ -40,10 +40,12 @@ def create_server():
         def trusted_host(self):
             return self.headers.get('Host') == 'localhost:8765'
 
-        def reply(self, status, body=b'', location=None, kind='text/html; charset=utf-8'):
+        def reply(self, status, body=b'', location=None, kind='text/html; charset=utf-8', form_page=False):
             self.send_response(status)
             self.send_header('Cache-Control', 'no-store')
-            self.send_header('Referrer-Policy', 'no-referrer')
+            # no-referrer makes native form POST Origin null in browsers.
+            # Keep the real origin for local forms; never send it cross-origin.
+            self.send_header('Referrer-Policy', 'same-origin' if form_page else 'no-referrer')
             self.send_header('X-Content-Type-Options', 'nosniff')
             self.send_header('Content-Security-Policy', "default-src 'none'; style-src 'unsafe-inline'; img-src 'self'; form-action 'self'; frame-ancestors 'none'")
             self.send_header('Content-Type', kind)
@@ -67,7 +69,9 @@ def create_server():
 <button>Continuar para o Pinterest</button></form>
 <p><small>O Pinterest pedirá permissão para ler pastas e Pins e criar Pins. O aplicativo preparado aqui não tem função de publicação. Tokens recebidos ficam fora do repositório e, no Windows, criptografados para sua conta.</small></p>
 <p><a href="https://developers.pinterest.com/apps/1613942/" target="_blank" rel="noreferrer">Abrir painel oficial do aplicativo</a></p>
-<p><strong>Gravação:</strong> comece depois de preencher a chave. Filme a autorização oficial e a consulta de pastas. Não grave a chave nem a barra de endereço durante o retorno.</p>'''))
+<p><strong>Gravação:</strong> comece depois de preencher a chave. Filme a autorização oficial e a consulta de pastas. Não grave a chave nem a barra de endereço durante o retorno.</p>'''), form_page=True)
+            elif parsed.path == '/start':
+                self.reply(200, page('<h1>Reinicie a conexão</h1><p>Esta etapa precisa começar pelo formulário local.</p><a class="cta" href="/">Voltar ao início</a>'))
             elif parsed.path == '/callback':
                 try:
                     if not session['state'] or time.monotonic() > session['deadline']:
@@ -91,7 +95,7 @@ def create_server():
                     self.reply(200, page('<h1>Conexão não concluída</h1><p>Nenhum Pin foi enviado. Volte e autorize novamente.</p>'))
                     return
                 self.reply(200, page('<h1>Pinterest conectado</h1><p>Autorização recebida e protegida. Nenhum Pin foi enviado.</p>'
-                    '<form method="post" action="/check"><input type="hidden" name="csrf" value="'+csrf+'"><button>Consultar pastas pela API</button></form>'))
+                    '<form method="post" action="/check"><input type="hidden" name="csrf" value="'+csrf+'"><button>Consultar pastas pela API</button></form>'), form_page=True)
             elif parsed.path == '/pin.png':
                 self.reply(200, (ROOT/'assets/pinterest/monitor-120-144.png').read_bytes(), kind='image/png')
             else:
@@ -99,7 +103,7 @@ def create_server():
 
         def do_POST(self):
             if not self.trusted_host() or self.headers.get('Origin') != ORIGIN:
-                self.reply(403)
+                self.reply(403, page('<h1>Formulário não validado</h1><p>A origem da solicitação não corresponde à tela local. Reabra o início e tente novamente. Sua chave não foi enviada ao Pinterest.</p><a class="cta" href="/">Voltar ao início</a>'))
                 return
             try:
                 length = int(self.headers.get('Content-Length', '0'))
@@ -109,7 +113,7 @@ def create_server():
                 if not secrets.compare_digest(params.get('csrf', [''])[0], csrf):
                     raise ValueError()
             except (ValueError, UnicodeError):
-                self.reply(400)
+                self.reply(400, page('<h1>Formulário expirado ou inválido</h1><p>Reabra a tela inicial para começar uma nova sessão.</p><a class="cta" href="/">Voltar ao início</a>'))
                 return
             if self.path == '/start':
                 secret = params.get('secret', [''])[0].strip()
@@ -117,7 +121,11 @@ def create_server():
                     self.reply(400)
                     return
                 session.update(secret=secret, state=secrets.token_urlsafe(32), deadline=time.monotonic()+600, result=None)
-                self.reply(303, location=oauth.authorization_url(session['state']))
+                # A cross-origin redirect after POST conflicts with form-action
+                # 'self'. Keep the secret POST local and use explicit navigation.
+                target = html.escape(oauth.authorization_url(session['state']), quote=True)
+                self.reply(200, page('<h1>Pronto para autorizar</h1><p>A chave ficou somente no aplicativo local. Agora abra a página oficial para autorizar sua conta.</p>'
+                    '<a class="cta" rel="noreferrer" href="'+target+'">Autorizar no Pinterest</a><p>Nenhum Pin será publicado.</p>'))
             elif self.path == '/check' and oauth.TOKEN_FILE.is_file():
                 try:
                     items = oauth.list_boards()
