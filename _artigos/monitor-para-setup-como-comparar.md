@@ -22,7 +22,7 @@ Na nossa análise editorial, comparamos as especificações oficiais dos modelos
 - [Resposta rápida: 120 Hz ou 144 Hz?](#resposta-rapida)
 - [Samsung Essential S3 24" — 120 Hz para uso misto](#samsung-essential-s3)
 - [Acer Nitro KG243Y 23,8" — 144 Hz para jogos](#acer-nitro-kg243y)
-- [120 Hz ou 144 Hz: dá para perceber?](#120-hz-ou-144-hz-da-para-perceber-diferenca)
+- [120 Hz ou 144 Hz: dá para perceber?](#comparacao-120-144-hz)
 - [Monitor 180 Hz vale a pena?](#monitor-180-hz-vale-a-pena-em-2026)
 - [FAQ de decisão](#faq-de-decisao)
 
@@ -101,7 +101,7 @@ O Acer entra como opção mais orientada a jogos. A vantagem prática sobre o Sa
 
 > **Sobre preço:** estes dois anúncios ainda não têm amostra histórica suficiente no Radar MiraDesconto para exibirmos uma faixa confiável. Por isso, não inventamos “menor preço histórico”. Use o preço atual da loja e compare novamente quando houver série observada.
 
-## 120 Hz ou 144 Hz: dá para perceber diferença? {#120-hz-ou-144-hz-da-para-perceber-diferenca}
+## 120 Hz ou 144 Hz: dá para perceber diferença? {#comparacao-120-144-hz}
 
 Sim, mas a diferença é menor que a mudança de 60/75 Hz para 120/144 Hz.
 

@@ -144,11 +144,6 @@
     "imageUrl": "https://http2.mlstatic.com/D_NQ_NP_890540-MLB92255675680_092025-O-kit-8-grip-protetor-analogico-compativel-ps3-ps4-ps5-xbox.webp",
     "available": true
   },
-  "MLB4530324007": {
-    "name": "Power Bank 20000mah Carregador Portátil Turbo Rápido 22.5w Display Digital Branco",
-    "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_867313-MLA108176802658_032026-AB.webp",
-    "available": true
-  },
   "MLB5559182464": {
     "name": "Fone De Ouvido Bluetooth 5.3 Par Sem Fio Duplo Todos Celular",
     "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_760715-MLB109157249938_042026-AB-fone-de-ouvido-bluetooth-53-par-sem-fio-duplo-todos-celular.webp",
@@ -502,6 +497,11 @@
   "MLB5378454342": {
     "name": "Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0 Boombox Com Radio Fm E Entrada Usb Pendrive Preto 127/220v",
     "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_681719-MLA99467991212_112025-AB.webp",
+    "available": true
+  },
+  "MLB6501175600": {
+    "name": "Drone E88 Pro 4k Com Câmera Para Iniciante, + Baterias Drone Preto",
+    "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_702285-MLA80802875108_112024-AB.webp",
     "available": true
   }
 }

@@ -1,0 +1,4 @@
+# Require code-owner approval through branch protection for these trusted files.
+/.github/workflows/gemini-*.yml @miradesconto
+/.github/scripts/gemini_gate.py @miradesconto
+/GEMINI.md @miradesconto

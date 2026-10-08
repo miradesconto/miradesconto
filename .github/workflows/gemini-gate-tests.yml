@@ -1,0 +1,28 @@
+name: Validar workflow Gemini
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/gemini-*.yml'
+      - '.github/scripts/gemini_gate.py'
+      - 'tests/test_gemini_gate.py'
+      - 'GEMINI.md'
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/gemini-*.yml'
+      - '.github/scripts/gemini_gate.py'
+      - 'tests/test_gemini_gate.py'
+      - 'GEMINI.md'
+permissions:
+  contents: read
+jobs:
+  gate-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Testar decisões e recuperação sem API nem secrets
+        run: python -m unittest discover -s tests -p test_gemini_gate.py -v
+      - name: Validar sintaxe dos workflows
+        uses: docker://rhysd/actionlint:1.7.7
+        with:
+          args: .github/workflows/gemini-review.yml .github/workflows/gemini-gate-tests.yml
