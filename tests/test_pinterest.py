@@ -17,6 +17,8 @@ class PinterestTests(unittest.TestCase):
         queue = drafts.build()
         self.assertEqual(queue, drafts.build())
         self.assertEqual(len(queue['posts']), 3)
+        self.assertTrue(all(p['link'].startswith('https://miradesconto.com.br/blog/') for p in queue['posts']))
+        self.assertFalse(any('github.io' in p['link'] for p in queue['posts']))
         self.assertFalse(queue['publishingEnabled'])
         for p in queue['posts']:
             self.assertFalse(p['approved'])
@@ -30,6 +32,10 @@ class PinterestTests(unittest.TestCase):
         queue = drafts.build(config=self.config, published_links=[first])
         self.assertEqual(len(queue['posts']), 2)
         self.assertNotIn(first, [p['link'] for p in queue['posts']])
+        # A migration must not repeat Pins recorded under the old domain.
+        legacy = first.replace('https://miradesconto.com.br/', 'https://miradesconto.github.io/miradesconto/')
+        migrated = drafts.build(config=self.config, published_links=[legacy])
+        self.assertNotIn(first, [p['link'] for p in migrated['posts']])
 
     def test_unpublished_article_and_unsafe_paths_fail(self):
         self.config['articles'] = ['galaxy-buds3']
