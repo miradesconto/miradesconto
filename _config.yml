@@ -1,6 +1,6 @@
 title: MiraDesconto
-url: https://miradesconto.github.io
-baseurl: /miradesconto
+url: https://miradesconto.com.br
+baseurl: ""
 lang: pt-BR
 markdown: kramdown
 collections:

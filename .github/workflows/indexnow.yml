@@ -35,9 +35,9 @@ jobs:
       - name: Enviar URLs recentes ao IndexNow
         uses: bojieyang/indexnow-action@v3
         with:
-          sitemap-location: "https://miradesconto.github.io/miradesconto/sitemap.xml"
+          sitemap-location: "https://miradesconto.com.br/sitemap.xml"
           key: "b72a30284083f4ba3daf46c793b04329"
-          key-location: "https://miradesconto.github.io/miradesconto/b72a30284083f4ba3daf46c793b04329.txt"
+          key-location: "https://miradesconto.com.br/b72a30284083f4ba3daf46c793b04329.txt"
           endpoint: "api.indexnow.org"
           since: 1
           since-unit: "day"

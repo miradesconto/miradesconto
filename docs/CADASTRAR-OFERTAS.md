@@ -1,6 +1,6 @@
 # Cadastro de ofertas por link
 
-Abra https://miradesconto.github.io/miradesconto/admin/.
+Abra https://miradesconto.com.br/admin/.
 
 1. Gere o link oficial na ferramenta de afiliados do Mercado Livre.
 2. Cole no painel (até 20 links).

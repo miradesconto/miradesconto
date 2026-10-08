@@ -7,8 +7,8 @@ from urllib.parse import urlsplit, unquote
 from xml.etree import ElementTree
 
 root=Path(sys.argv[1] if len(sys.argv)>1 else '_site')
-base='/miradesconto'
-origin='https://miradesconto.github.io'
+base=''
+origin='https://miradesconto.com.br'
 class Page(HTMLParser):
     def __init__(self,text):
         super().__init__();self.links=[];self.ids=set();self.h1=0;self.canonical=[];self.description=[];self.schema=[];self.in_schema=False;self.buffer='';self.feed(text)
