@@ -1,41 +1,85 @@
-# MiraDesconto Publicador — preparação
+# MiraDesconto Publicador — Pinterest
 
-App 1613942. Acesso Trial solicitado pelo titular; aprovação ainda não confirmada.
-Esta entrega implementa somente geração local de rascunhos editoriais. Não possui
-cliente HTTP, OAuth, credenciais ou função de publicação. Não depende da pauta de
-ofertas, que exige estoque confirmado. Não exibe preço ou desconto nos rascunhos.
+Aplicativo **1613942**, uso interno. O titular informou autorização da API
+em 08/10/2026. O tipo de acesso (Trial ou Standard) deve ser confirmado no
+[dashboard do Pinterest](https://developers.pinterest.com/apps/).
+**Publicação pública segue desativada.** Este projeto não deve publicar
+Pins sem revisão humana, registro durável de publicação e acesso Standard.
 
-Execute `python integracoes/pinterest/preparar.py`. Abra
-`preview/pinterest/revisao.html`; `fila.json` contém os mesmos três rascunhos.
-Os artigos devem estar publicados e ter produto conhecido. A referência de imagem
-não é uma arte final. As pastas são sugestões, sem IDs inventados. Repetir o
-comando gera a mesma fila, sempre sem aprovação. `--published-links arquivo.json`
-aceita uma lista de URLs já enviadas para excluí-las; não grava histórico de envios.
+## O que já funciona
 
-O workflow **Pinterest — preparar rascunhos** roda apenas por acionamento manual,
-com permissão de leitura e sem segredos. Seu ZIP de rascunhos dura sete dias.
-O comando local também funciona sem GitHub Actions, sem serviço pago.
+- `python integracoes/pinterest/preparar.py`: gera três rascunhos a partir de
+  artigos publicados em `preview/pinterest/{fila.json,revisao.html}`.
+- `integracoes/pinterest/config.json`: base canônica
+  **https://miradesconto.com.br/** (sem `/miradesconto/`).
+- Links publicados anteriormente sob
+  `https://miradesconto.github.io/miradesconto/` são reconhecidos no filtro
+  `--published-links arquivo.json`, evitando repetir Pin ao migrar domínio.
+- A lista `pin-teste.json` prepara um único conteúdo editorial sem preço e
+  sem disparar publicação. `boardId` e arte final ainda exigem validação.
+- Workflow manual **Pinterest — preparar rascunhos**: somente leitura,
+  sem segredos, com artefatos retidos por sete dias.
 
-## Depois da aprovação Trial
+**Limite importante:** deduplicação da fila local NÃO equivale a proteção
+contra duplicatas na API. Não existe cliente de publicação automática nesta
+etapa.
 
-1. Confirmar o status no painel oficial e configurar o retorno OAuth exato.
-2. Implementar autorização OAuth com state e troca de código no ambiente privado;
-   nunca colocar o app secret ou tokens no JavaScript do site ou em arquivos públicos.
-3. Usar somente permissões de leitura dos próprios Pins/pastas e criação de Pins.
-4. Implementar cliente e teste de integração no Trial, que não produz Pins públicos.
-5. Criar artes finais, revisar textos e escolher as pastas reais.
-6. Implementar histórico de envio durável, bloqueio de concorrência e reconciliação
-   de resultados incertos antes de repetir uma chamada. A deduplicação de rascunhos
-   desta entrega não substitui isso.
-7. Demonstrar OAuth e uso real da API para solicitar Standard; somente depois
-   habilitar publicação pública, com aprovação editorial e frequência limitada.
+## Autorizar a conta usando OAuth oficial (preparado, ainda não executado)
 
-O titular pode revogar o acesso nas configurações de aplicativos conectados do
-Pinterest. Ao desconectar, remover as credenciais do ambiente privado e os dados
-operacionais que deixarem de ser necessários. Pins já publicados são geridos no
-Pinterest; remover a autorização não promete apagá-los.
+1. No painel do aplicativo Pinterest, configure exatamente esta Redirect URI:
+   `http://127.0.0.1:8765/callback`.
+   É o retorno **local** da ferramenta OAuth, não o link público do site.
+   O Pinterest exige correspondência exata, inclusive protocolo, host e caminho.
+   Se o painel não aceitar essa URI, não improvise nem redirecione para outra:
+   será necessário um callback HTTPS privado implementado pelo Work.
+2. No **computador do titular**, configure o `PINTEREST_APP_SECRET` como variável
+   de ambiente privada, **fora de gravações e sem colocar em comandos
+   compartilhados, GitHub Secrets expostos ou neste chat**.
+3. Execute `python integracoes/pinterest/oauth_local.py authorize`. O navegador
+   abre o domínio oficial `pinterest.com` para aprovação dos escopos mínimos:
+   `boards:read,pins:read,pins:write`.
+4. Após concluir, execute
+   `python integracoes/pinterest/oauth_local.py check` para consultar as
+   pastas reais. O programa não divulga tokens nem faz publicação.
+5. Remova `PINTEREST_APP_SECRET` do ambiente após autorização.
 
-Referências oficiais:
-- https://developer.pinterest.com/docs/getting-started/connect-app/
-- https://developer.pinterest.com/docs/key-concepts/access-tiers/
-- https://help.pinterest.com/en/article/connect-to-other-apps-with-pinterest
+O código OAuth usa `state` aleatório verificado, troca o código pelo token
+via servidor local, e grava as credenciais **somente no perfil privado do
+usuário** (`~/.miradesconto/pinterest/oauth.json`), fora do repositório.
+Mantenha acesso ao perfil restrito e faça revogação se perder o computador.
+**Não sincronize, versiona ou envie esse arquivo.** O token de acesso vence
+e precisa de renovação antes de 30 dias; os refresh tokens contínuos requerem
+rotação segura. O renovador e o armazenamento de produção serão feitos e
+testados antes de automatizar qualquer envio.
+
+## Teste Trial e solicitação Standard
+
+1. Verifique se `https://miradesconto.com.br/blog/monitor-para-setup-como-comparar/`
+   abre corretamente e se a arte PNG final está servida por URL HTTPS pública.
+2. Execute e grave OAuth, aprovação no Pinterest, callback e `check`. Oculte
+   valores de client secret, access/refresh tokens, código e state.
+3. No Work, implemente `POST /v5/pins` para **um único** Pin do
+   `pin-teste.json`, com board ID real, arquivo de arte final e confirmação
+   explícita. No Trial, Pins criados ficam visíveis somente ao titular.
+   Registre ID/resposta saneados e confira o Pin pela API/conta.
+4. Grave a integração real em funcionamento, a criação do Pin e a conferência.
+   Não grave credenciais, headers Authorization ou URLs com código OAuth.
+5. No painel `My apps > Upgrade`, confira a política pública
+   `https://miradesconto.com.br/privacidade.html`, anexe o vídeo e solicite
+   Standard. A aprovação depende da análise do Pinterest.
+
+## Proteção obrigatória antes da automação pública
+
+- Botão de aprovação editorial do texto, link e arte.
+- Identificador estável por conteúdo/campanha (não apenas URL).
+- Registro durável do estado `pending|sent|failed`, ID remoto, horário e
+  revisão aprovada; bloqueio de concorrência por chave.
+- Reconciliar timeout/resposta incerta consultando Pins já existentes
+  antes de reenviar. Nunca fazer retry cego em `POST /pins`.
+- Frequência limitada e refresh/rotação de token sem logs sensíveis.
+- Chave geral desativada por padrão. Publicação pública só com **Standard**.
+
+Referências:
+- https://developers.pinterest.com/docs/getting-started/connect-app/
+- https://developers.pinterest.com/docs/getting-started/set-up-authentication-and-authorization/
+- https://developers.pinterest.com/docs/key-concepts/access-tiers/
