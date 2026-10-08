@@ -15,7 +15,7 @@ class OAuthLocalTests(unittest.TestCase):
         self.assertEqual(url.netloc, 'www.pinterest.com')
         self.assertEqual(url.path, '/oauth/')
         params = parse_qs(url.query)
-        self.assertEqual(params['redirect_uri'], ['http://127.0.0.1:8765/callback'])
+        self.assertEqual(params['redirect_uri'], ['http://localhost:8765/callback'])
         self.assertEqual(params['scope'], ['boards:read,pins:read,pins:write'])
         self.assertEqual(params['response_type'], ['code'])
         self.assertEqual(params['state'], ['state-test'])

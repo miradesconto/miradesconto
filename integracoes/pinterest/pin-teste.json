@@ -11,14 +11,16 @@
   "link": "https://miradesconto.com.br/blog/monitor-para-setup-como-comparar/",
   "suggestedBoard": "Tecnologia, eletrônicos e setup",
   "boardId": null,
-  "artFile": null,
-  "artStatus": "a criar e revisar antes do teste",
+  "artFile": "assets/pinterest/monitor-120-144.png",
+  "artStatus": "PNG 1000x1500 revisado visualmente; hospedagem pendente de integrar o PR",
   "disclaimer": "Pin de teste no ambiente Trial: visível somente ao titular.",
   "pending": [
-    "Hospedar arte final PNG no domínio verificado",
-    "Confirmar pasta real por OAuth",
-    "Conferir acesso ao artigo de destino",
-    "Enviar uma única vez em Trial e conferir resposta/id",
-    "Gravar demonstração ocultando credenciais"
-  ]
+    "Concluir OAuth pelo titular e consultar pasta real",
+    "Publicar a arte no domínio após revisão do PR e validar HTTP 200",
+    "Implementar envio manual Trial com registro durável e bloqueio de repetição antes de POST /pins",
+    "Gravar OAuth e uma ação real da API sem credenciais",
+    "Solicitar Standard após conferir a gravação"
+  ],
+  "contentId": "guia-monitor-120-144-v1",
+  "artUrl": "https://miradesconto.com.br/assets/pinterest/monitor-120-144.png"
 }

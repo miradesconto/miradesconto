@@ -16,10 +16,37 @@ from urllib import error, parse, request
 import webbrowser
 
 APP_ID = '1613942'  # ID publico do MiraDesconto Publicador
-CALLBACK = 'http://127.0.0.1:8765/callback'
+CALLBACK = 'http://localhost:8765/callback'
 SCOPES = 'boards:read,pins:read,pins:write'
-PRIVATE_DIR = Path.home() / '.miradesconto' / 'pinterest'
+PRIVATE_DIR = Path(os.environ.get('PINTEREST_PRIVATE_DIR', str(Path.home() / '.miradesconto' / 'pinterest')))
 TOKEN_FILE = PRIVATE_DIR / 'oauth.json'
+
+
+def protect_windows(data, decrypt=False):
+    """DPAPI binds credentials to the signed-in Windows user; no plaintext fallback."""
+    import ctypes
+    from ctypes import wintypes
+    class Blob(ctypes.Structure):
+        _fields_ = [('size', wintypes.DWORD), ('data', ctypes.POINTER(ctypes.c_char))]
+    buffer = ctypes.create_string_buffer(data)
+    source = Blob(len(data), ctypes.cast(buffer, ctypes.POINTER(ctypes.c_char)))
+    output = Blob()
+    api = ctypes.windll.crypt32.CryptUnprotectData if decrypt else ctypes.windll.crypt32.CryptProtectData
+    if not api(ctypes.byref(source), None, None, None, None, 1, ctypes.byref(output)):
+        raise RuntimeError('Armazenamento privado indisponivel; nenhuma credencial foi salva.')
+    try:
+        return ctypes.string_at(output.data, output.size)
+    finally:
+        ctypes.windll.kernel32.LocalFree(output.data)
+
+
+def read_private():
+    raw = TOKEN_FILE.read_bytes()
+    if raw.startswith(b'DPAPI:'):
+        raw = protect_windows(base64.b64decode(raw[6:]), decrypt=True)
+    elif os.name == 'nt':
+        raise RuntimeError('Arquivo antigo sem criptografia: autorize novamente.')
+    return json.loads(raw)
 
 
 def authorization_url(state):
@@ -43,20 +70,23 @@ def validated_code(params, expected_state):
 
 
 def store_private(data):
+    repo = Path(__file__).resolve().parents[2]
+    if PRIVATE_DIR.resolve().is_relative_to(repo):
+        raise RuntimeError('Credenciais nao podem ser salvas dentro do repositorio.')
+    raw = json.dumps(data).encode('utf-8')
+    if os.name == 'nt':
+        raw = b'DPAPI:' + base64.b64encode(protect_windows(raw))
     PRIVATE_DIR.mkdir(mode=0o700, parents=True, exist_ok=True)
-    try:
+    if os.name != 'nt':
         os.chmod(PRIVATE_DIR, 0o700)
-    except OSError:
-        pass  # ACL do usuario Windows precisa ser protegida pelo sistema
     fd, temp_name = tempfile.mkstemp(prefix='.oauth-', dir=PRIVATE_DIR)
     try:
-        with os.fdopen(fd, 'w', encoding='utf-8') as output:
-            json.dump(data, output)
-            output.write('\n')
-        try:
+        with os.fdopen(fd, 'wb') as output:
+            output.write(raw)
+            output.flush()
+            os.fsync(output.fileno())
+        if os.name != 'nt':
             os.chmod(temp_name, 0o600)
-        except OSError:
-            pass
         os.replace(temp_name, TOKEN_FILE)
     finally:
         if os.path.exists(temp_name):
@@ -124,8 +154,7 @@ def authorize():
         url = authorization_url(state)
         print('Abrindo Pinterest para autorizacao OAuth. Nenhum Pin sera publicado.')
         if not webbrowser.open(url):
-            print('Abra manualmente o link abaixo, apenas em seu computador:')
-            print(url)
+            raise RuntimeError('Nao foi possivel abrir o navegador. Use oauth_ui.py.')
         deadline = time.monotonic() + 180
         while time.monotonic() < deadline and not server.authorization_code:
             server.handle_request()
@@ -141,10 +170,10 @@ def authorize():
     print('Tokens e refresh_token nao serao exibidos.')
 
 
-def check():
+def list_boards():
     if not TOKEN_FILE.is_file():
         raise RuntimeError('Autorizacao ausente: execute primeiro o comando authorize.')
-    token = json.loads(TOKEN_FILE.read_text(encoding='utf-8')).get('access_token')
+    token = read_private().get('access_token')
     if not token:
         raise RuntimeError('Token de acesso nao encontrado.')
     req = request.Request(
@@ -155,7 +184,11 @@ def check():
             data = json.load(response)
     except error.HTTPError as exc:
         raise RuntimeError(f'Consulta de pastas falhou (HTTP {exc.code}).') from None
-    items = data.get('items', [])
+    return data.get('items', [])
+
+
+def check():
+    items = list_boards()
     print(f'API Pinterest respondeu: {len(items)} pasta(s) nesta pagina.')
     for item in items:
         print('Pasta:', item.get('name', '(sem nome)'), '— ID:', item.get('id', '(sem ID)'))
