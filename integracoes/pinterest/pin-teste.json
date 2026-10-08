@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "app": "MiraDesconto Publicador",
+  "status": "draft",
+  "approved": false,
+  "publishingEnabled": false,
+  "trialOnly": true,
+  "title": "Monitor 120 Hz ou 144 Hz: qual vale mais a pena em 2026?",
+  "description": "Mais Hz nem sempre significa a melhor escolha. Compare painel, conexões, resolução e seu tipo de uso antes de comprar. Leia o guia do MiraDesconto. Conteúdo com links de afiliados.",
+  "altText": "Arte editorial do MiraDesconto que compara monitores de 120 Hz e 144 Hz sem anunciar preço.",
+  "link": "https://miradesconto.com.br/blog/monitor-para-setup-como-comparar/",
+  "suggestedBoard": "Tecnologia, eletrônicos e setup",
+  "boardId": null,
+  "artFile": null,
+  "artStatus": "a criar e revisar antes do teste",
+  "disclaimer": "Pin de teste no ambiente Trial: visível somente ao titular.",
+  "pending": [
+    "Hospedar arte final PNG no domínio verificado",
+    "Confirmar pasta real por OAuth",
+    "Conferir acesso ao artigo de destino",
+    "Enviar uma única vez em Trial e conferir resposta/id",
+    "Gravar demonstração ocultando credenciais"
+  ]
+}
