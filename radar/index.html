@@ -72,9 +72,9 @@ layout: null
 <div><span>Menor observado</span><strong>{{ item.minimumPriceText }}</strong></div>
 <div><span>Base da análise</span><strong>{{ item.periodText }}</strong></div>
 </div>
-<p class="radar-evidence">{{ item.observations }} observações verificadas no mesmo anúncio e variação.</p>
+<p class="radar-evidence">{{ item.observations }} observações verificadas no mesmo anúncio e variação.{% for article in site.artigos %}{% if article.status == 'publicado' and article.produtos contains item.id %} <a href="{{ article.url | relative_url }}">Ler análise de compra →</a>{% break %}{% endif %}{% endfor %}</p>
 <div class="radar-actions">
-<a class="radar-primary" href="{{ item.affiliateUrl | escape }}" data-item-id="{{ item.id }}" data-item-name="{{ item.name | escape }}" data-link-location="radar" target="_blank" rel="sponsored nofollow noopener noreferrer">Conferir oferta ↗</a>
+<a class="radar-primary" href="{{ item.affiliateUrl | escape }}" data-item-id="{{ item.id }}" data-item-name="{{ item.name | escape }}" data-link-location="radar" target="_blank" rel="sponsored nofollow noopener noreferrer">VER OFERTA NA LOJA ↗</a>
 <a class="radar-secondary" href="../?produto={{ item.id | url_encode }}#ofertas">Ver no catálogo</a>
 </div>
 </div>
