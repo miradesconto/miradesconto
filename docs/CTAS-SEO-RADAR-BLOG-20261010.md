@@ -111,13 +111,13 @@ Não foram alterados CSS, URLs, redirects, `interface.js`, `carrossel.js`, APIs,
 
 ## Validação obrigatória antes da aprovação final
 
-- [ ] Confirmar build Jekyll e renderização Liquid sem erros no branch; link aparece só para artigo publicado com ID idêntico.
+- [x] Build Jekyll e Liquid aprovados pelo GitHub Actions; teste de regressão confirma link apenas para artigo publicado com ID idêntico.
 - [ ] Verificar desktop e mobile: sem quebra da linha de ações, sem botão novo e sem mudança relevante de altura/alinhamento do card.
-- [ ] Confirmar que `VER OFERTA NA LOJA` preserva exatamente `href`, `target`, `rel`, analytics e URL de destino.
-- [ ] Testar oferta com artigo publicado, artigo em rascunho, artigo arquivado e produto sem artigo.
+- [x] Teste do HTML gerado confirma que `VER OFERTA NA LOJA` preserva `href`, `target`, `rel`, `data-item-id` e `data-link-location` conforme a fonte; **não prova a resolução externa do encurtador**.
+- [x] Teste Jekyll valida, para todos os produtos destacados, que links editoriais só aparecem quando há artigo publicado contendo o ID idêntico; rascunhos e arquivados ficam excluídos pela regra de status.
 - [ ] Validar ao menos um caso com várias páginas para o mesmo ID: primeira página publicada pode ser comparativo em vez de review; checar pertinência editorial.
 - [ ] Conferir manualmente anúncios individuais e parâmetros de afiliado; impedir links genéricos enganadores.
-- [ ] Verificar `node blog/verify.cjs` e `node test-catalogo.cjs` em checkout local/CI e Build Pages em ambiente de revisão.
+- [x] GitHub Actions executou `node blog/verify.cjs`, `node test-catalogo.cjs`, Python tests, build Jekyll, SEO e verificador do HTML gerado com sucesso; prévia estática armazenada como artefato (não publicada).
 - [ ] Reconciliar com `main` e PR #22 antes de considerar merge (não antecipar a arquitetura `/go/:id`).
 - [ ] Obter **aprovação final explícita** para merge/publicação. Nenhum merge ou deploy neste trabalho.
 
@@ -126,4 +126,13 @@ Não foram alterados CSS, URLs, redirects, `interface.js`, `carrossel.js`, APIs,
 - Padronização global de todos os CTAs: depende de auditoria das URLs/fluxos, incluindo PR #22.
 - Criação/revisão dos quatro artigos-alvo: depende de comprovação de ofertas atuais, variante, fontes oficiais e revisão editorial; nenhum novo permalink neste PR.
 - Automação de link dinâmico a oferta individual direta no Blog: depende da integração de redirecionamento validada; não modificar até finalizar o PR #22.
-- Prova de renderização e testes end-to-end: a preparação por conector GitHub não executou o build local; validar por CI/revisão antes de aprovar.
+- Testes automatizados e build Jekyll: **aprovados em CI** (GitHub Actions). Revisão visual desktop/mobile, testes manuais dos encurtadores e comportamento real de redirecionamento continuam pendentes.
+
+## Registro de validação da branch — 10/10/2026
+
+- Run GitHub Actions: https://github.com/miradesconto/miradesconto/actions/runs/38020826716 — testes de catálogo e site, Jekyll, SEO/links, regressão Radar ↔ Blog: **success**.
+- Resultado do verificador: **10 cards do Radar, 10 CTAs comerciais preservados e 1 link para artigo publicado com ID correto**.
+- A origem dos 10 links encurtados destacados está em `links-afiliados.json`, com `productUrl` individual e `#wid=MLB...` coerente com o ID do item. Os 10 links curtos são distintos. Isso **não confirma** que `meli.la` resolve atualmente para cada anúncio: ferramenta web não conseguiu seguir os redirecionamentos; testes manuais continuam obrigatórios.
+- PR #22 (Cloudflare) não altera diretamente os quatro arquivos desta preparação, mas exige revisão da política de redirecionamentos antes da publicação.
+- Revisão automatizada pelo Gemini: **skipped**; não tratar como aprovação editorial/de segurança.
+- Sem merge, publicação ou deploy. Aprovação final continua necessária.
