@@ -1,0 +1,15 @@
+{
+  "name": "miradesconto-edge-phase-4",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "test:runtime": "wrangler deploy --env= --dry-run --outdir build-check && node tests/runtime-check.js",
+    "test:migration": "wrangler deploy --env= --dry-run --outdir build-check && node tests/migration-check.js",
+    "dev": "wrangler dev",
+    "deploy": "python3 build_affiliate_links.py --check && python3 build_history_allowlist.py --check && wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "4.149.0"
+  }
+}

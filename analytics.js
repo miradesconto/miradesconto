@@ -22,6 +22,7 @@
   }
 
   function isAffiliate(href) {
+    if (window.MiraLinks?.isGoLink(href)) return true;
     try {
       const url = new URL(href, window.location.href);
       return url.protocol === 'https:' && (url.hostname === 'meli.la' ||

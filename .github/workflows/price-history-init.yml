@@ -1,12 +1,13 @@
 name: Inicializar histórico de preços
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths: ['integracoes/mercadolivre/price_history.py']
+    inputs:
+      backfill:
+        description: Recuperar também evidências dos commits dos últimos 180 dias
+        type: boolean
+        default: false
 permissions:
-  contents: write
-  pages: write
+  contents: read
 concurrency:
   group: mercadolivre-sync
   cancel-in-progress: false
@@ -21,18 +22,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python integracoes/mercadolivre/price_history.py --backfill
+      - run: python -m pip install -r integracoes/cloudflare/history-requirements.txt -r integracoes/social/requirements.txt
       - run: python -m unittest discover -s tests -p test_price_history.py
-      - name: Publicar histórico verificado
-        run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add historico
-          if ! git diff --cached --quiet; then
-            git commit -m 'Recupera histórico de preços observados com evidência'
-            git push origin HEAD:main
-          fi
-      - name: Atualizar GitHub Pages
+      - name: Migrar arquivos existentes para Cloudflare
         env:
-          GH_TOKEN: ${{ github.token }}
-        run: gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds" --silent
+          MIRA_HISTORY_BASE_URL: ${{ vars.MIRA_HISTORY_BASE_URL }}
+          MIRA_HISTORY_WRITE_TOKEN: ${{ secrets.MIRA_HISTORY_WRITE_TOKEN }}
+        run: python integracoes/mercadolivre/price_history.py --migrate-local ${{ inputs.backfill && '--backfill' || '' }}

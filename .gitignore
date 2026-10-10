@@ -7,3 +7,14 @@ _site/
 # Gemini CLI
 .gemini/
 gha-creds-*.json
+
+# Worker local: nunca publicar credenciais nem estado de desenvolvimento.
+node_modules/
+.wrangler/
+.dev.vars
+.dev.vars.*
+.env
+.env.*
+integracoes/cloudflare/build-check/
+# Históricos passam a ser publicados no KV; arquivos já rastreados são migrados antes da remoção.
+historico/

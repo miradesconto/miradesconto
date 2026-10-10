@@ -1,8 +1,9 @@
 'use strict';
 const source = window.MIRA_DATA;
 const requestedProduct = new URLSearchParams(window.location.search).get('produto');
+const edgePricesEnabled = window.MiraPrices?.enabled === true;
 const products = (source?.products || []).filter(p => p.name && safeUrl(p.affiliateUrl)
-    && (MiraQuality.usablePrice(p) || p.id === requestedProduct));
+    && (edgePricesEnabled || MiraQuality.usablePrice(p) || p.id === requestedProduct));
 let selectedCategory = 'Destaques';
 let visibleCount = 24;
 let categoryBeforeSearch = null;
@@ -52,6 +53,7 @@ function element(tag, className, text) {
     return e;
 }
 function isAffiliateList(p) {
+    if (window.MiraLinks?.forProduct(p)) return false;
     if (p.offerUrl) return false;
     return p.affiliateUrl === 'https://meli.la/1NguveN' || (source?.affiliateSources || []).includes(p.affiliateUrl) || (source?.products || []).filter(item => item.affiliateUrl === p.affiliateUrl).length > 1;
 }
@@ -81,9 +83,10 @@ function makeCard(p) {
     content.append(element('div','old-price',discount ? money(p.oldPrice) : ''));
     const recent = currentPrice(p) !== null;
     const lastPrice = recordedPrice(p);
-    if (!recent && lastPrice !== null) {
-        const date = new Date(p.priceCheck.checkedAt).toLocaleDateString('pt-BR',{timeZone:'America/Sao_Paulo'});
-        content.append(element('div','price-age','PREÇO REGISTRADO EM '+date));
+    if ((!recent || p.priceCheck?.method === 'ml-edge-item-v1') && lastPrice !== null) {
+        const date = new Date(p.priceCheck.checkedAt).toLocaleString('pt-BR',{
+            timeZone:'America/Sao_Paulo',day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'});
+        content.append(element('div','price-age',(recent ? 'CONSULTADO EM ' : 'PREÇO REGISTRADO EM ')+date));
     }
     content.append(element('div','price',money(recent ? p.price : lastPrice)));
     content.append(element('div','store',!recent && lastPrice !== null
@@ -94,7 +97,7 @@ function makeCard(p) {
     a.dataset.itemId=p.id; a.dataset.itemName=p.name; a.dataset.itemCategory=p.category || '';
     a.dataset.destinationType=isAffiliateList(p) ? 'affiliate_list' : 'product';
     if (isAffiliateList(p)) content.append(element('p','store','O link abre uma lista de afiliados. Procure este modelo e confirme a configuração.'));
-    a.href = safeUrl(p.offerUrl || p.affiliateUrl);
+    a.href = window.MiraLinks?.forProduct(p) || safeUrl(p.offerUrl || p.affiliateUrl);
     a.target = '_blank';
     a.rel = p.affiliateUrl ? 'noopener noreferrer sponsored' : 'noopener noreferrer';
     const share = element('button','share-button','Compartilhar');
@@ -114,7 +117,8 @@ function makeCard(p) {
 }
 function filteredProducts() {
     const query = normalize($('searchInput').value.trim());
-    const filtered = products.filter(p => (MiraQuality.usablePrice(p) || p.id === requestedProduct) && (selectedCategory === 'Todos' || (selectedCategory === 'Destaques' ? p.featured === true : p.category === selectedCategory))
+    const filtered = products.filter(p => (MiraQuality.usablePrice(p) || p.id === requestedProduct
+        || (edgePricesEnabled && p.available !== false && recordedPrice(p) !== null)) && (selectedCategory === 'Todos' || (selectedCategory === 'Destaques' ? p.featured === true : p.category === selectedCategory))
         && [p.id,p.name,p.store,p.category].some(v=>normalize(v).includes(query)));
     switch($('sortSelect').value) {
         case 'discount': filtered.sort((a,b)=>(productDiscount(b)||0)-(productDiscount(a)||0));break;
@@ -134,6 +138,27 @@ function renderProducts(keepCount = false) {
     $('emptyState').style.display = filtered.length ? 'none':'block';
     $('loadMore').hidden = visibleCount >= filtered.length;
     $('loadMore').textContent = `Mostrar mais ofertas (${Math.min(visibleCount,filtered.length)} de ${filtered.length})`;
+    if (edgePricesEnabled) {
+        updatePriceNotice();
+        queueMicrotask(refreshVisiblePrices);
+    }
+}
+function refreshVisiblePrices() {
+    if (!edgePricesEnabled) return;
+    const ids = new Set([...document.querySelectorAll('.card[data-id], .hero-offer-link[data-item-id]')]
+        .map(card => card.dataset.id || card.dataset.itemId));
+    // Guias e destaques do banner também recebem atualização, sem varrer o catálogo inteiro.
+    const guideIds = ['MLB4604524838','MLB4329495631','MLB4196200841'];
+    products.filter(p => p.featured || guideIds.includes(p.id)).slice(0,12).forEach(p => ids.add(p.id));
+    window.MiraPrices.refresh(products.filter(p => ids.has(p.id)));
+}
+function updatePriceNotice() {
+    const verified = products.some(p => p.edgePrice?.status === 'verified' && MiraQuality.usablePrice(p));
+    const failed = products.some(p => p.edgePrice?.status === 'error');
+    $('dataNotice').textContent = verified
+        ? 'Preços consultados sob demanda. Confira a data de cada valor e confirme frete e disponibilidade na loja.'
+        : failed ? 'Consulta de preços indisponível. Valores registrados; confirme o preço atual na loja.'
+        : 'Consultando preços. Valores registrados podem aparecer até a confirmação na loja.';
 }
 async function shareProduct(name,link) {
     const text = `${name} — encontrei no MiraDesconto`;
@@ -202,3 +227,7 @@ if ($('searchInput').value.trim()) updateSearch();
 
 // Recheck expiry while the visitor keeps the page open.
 setInterval(() => renderProducts(true), 60000);
+if (edgePricesEnabled) {
+    window.addEventListener('mira:prices-updated', () => renderProducts(true));
+    document.addEventListener('visibilitychange', () => {if (!document.hidden) refreshVisiblePrices();});
+}

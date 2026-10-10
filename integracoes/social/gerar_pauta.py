@@ -180,18 +180,14 @@ def markdown(payload):
     return "\n".join(lines).rstrip() + "\n"
 
 def main():
-    cat, rad, arts = load_catalog(), load_radar(), articles()
-    selected = choose(cat.get("products", []), rad, arts)
-    posts = [make_entry(p, rad["byId"][str(p["id"])], arts, n) for n, p in enumerate(selected, 1)]
-    payload = {
-        "sourceCollectedAt": cat.get("collectedAt"), "radarGeneratedAt": rad.get("generatedAt"),
-        "generatedFrom": "Radar MiraDesconto + catálogo + artigos publicados", "count": len(posts),
-        "videosPerDay": 2, "selectionPolicy": "radar-first-observed-price-tech-variety-article-priority",
-        "geminiReviewPrompt": GEMINI_PROMPT, "posts": posts
-    }
-    OUT_JSON.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    OUT_MD.write_text(markdown(payload), encoding="utf-8")
-    print(json.dumps({"social_posts_generated": len(posts), "articles_mapped": sum(p["destination"]["type"] == "article" for p in posts)}, ensure_ascii=False))
+    # Helpers editoriais anteriores permanecem disponíveis; o fluxo principal publica.
+    sys.path.insert(0, str(ROOT))
+    from integracoes.social.telegram_publisher import run, PublishError
+    try:
+        run()
+    except PublishError as error:
+        print(str(error), file=sys.stderr)
+        raise SystemExit(1)
 
 if __name__ == "__main__":
     main()
