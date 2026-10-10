@@ -112,10 +112,10 @@ Não foram alterados CSS, URLs, redirects, `interface.js`, `carrossel.js`, APIs,
 ## Validação obrigatória antes da aprovação final
 
 - [x] Build Jekyll e Liquid aprovados pelo GitHub Actions; teste de regressão confirma link apenas para artigo publicado com ID idêntico.
-- [ ] Verificar desktop e mobile: sem quebra da linha de ações, sem botão novo e sem mudança relevante de altura/alinhamento do card.
+- [x] Revisão da prévia renderizada com Chromium em 1440, 768, 390 e 320 px: sem rolagem horizontal indevida, sobreposição de CTAs ou links fora dos cards. **Imagens remotas não carregaram no ambiente isolado**, por isso ainda requer conferência final de imagens em produção.
 - [x] Teste do HTML gerado confirma que `VER OFERTA NA LOJA` preserva `href`, `target`, `rel`, `data-item-id` e `data-link-location` conforme a fonte; **não prova a resolução externa do encurtador**.
 - [x] Teste Jekyll valida, para todos os produtos destacados, que links editoriais só aparecem quando há artigo publicado contendo o ID idêntico; rascunhos e arquivados ficam excluídos pela regra de status.
-- [ ] Validar ao menos um caso com várias páginas para o mesmo ID: primeira página publicada pode ser comparativo em vez de review; checar pertinência editorial.
+- [x] Caso de várias páginas: iPhone 16 ID `MLB3931271317` aparece nos artigos publicados de comparação iPhone 15 × 16 e no guia de celulares; o link gerado no Radar aponta ao comparativo apropriado.
 - [ ] Conferir manualmente anúncios individuais e parâmetros de afiliado; impedir links genéricos enganadores.
 - [x] GitHub Actions executou `node blog/verify.cjs`, `node test-catalogo.cjs`, Python tests, build Jekyll, SEO e verificador do HTML gerado com sucesso; prévia estática armazenada como artefato (não publicada).
 - [ ] Reconciliar com `main` e PR #22 antes de considerar merge (não antecipar a arquitetura `/go/:id`).
@@ -126,7 +126,7 @@ Não foram alterados CSS, URLs, redirects, `interface.js`, `carrossel.js`, APIs,
 - Padronização global de todos os CTAs: depende de auditoria das URLs/fluxos, incluindo PR #22.
 - Criação/revisão dos quatro artigos-alvo: depende de comprovação de ofertas atuais, variante, fontes oficiais e revisão editorial; nenhum novo permalink neste PR.
 - Automação de link dinâmico a oferta individual direta no Blog: depende da integração de redirecionamento validada; não modificar até finalizar o PR #22.
-- Testes automatizados e build Jekyll: **aprovados em CI** (GitHub Actions). Revisão visual desktop/mobile, testes manuais dos encurtadores e comportamento real de redirecionamento continuam pendentes.
+- Testes automatizados e build Jekyll: **aprovados em CI** (GitHub Actions). Revisão responsiva da prévia estática: **aprovada** em 4 resoluções, mas sem carregar imagens remotas. Testes manuais dos encurtadores e comportamento real de redirecionamento continuam pendentes.
 
 ## Registro de validação da branch — 10/10/2026
 
@@ -136,3 +136,14 @@ Não foram alterados CSS, URLs, redirects, `interface.js`, `carrossel.js`, APIs,
 - PR #22 (Cloudflare) não altera diretamente os quatro arquivos desta preparação, mas exige revisão da política de redirecionamentos antes da publicação.
 - Revisão automatizada pelo Gemini: **skipped**; não tratar como aprovação editorial/de segurança.
 - Sem merge, publicação ou deploy. Aprovação final continua necessária.
+
+## Revisão adicional da prévia — 10/10/2026
+
+- Artefato GitHub Actions: https://github.com/miradesconto/miradesconto/actions/runs/38020903686/artifacts/11658142210; extraído e renderizado em Chromium, com CSS real da prévia, sem rede externa.
+- Foram renderizados **11 cards**, **11 CTAs primários** e **2 links editoriais** no estado mais recente do conteúdo do artefato. Esse número substitui a contagem anterior de 10/1, alterada por geração automática do Radar; não representa erro do PR.
+- Em larguras de 1440 px (desktop), 768 px (tablet), 390 px (iPhone) e 320 px (celular pequeno): documento sem `scrollWidth` excedente, CTAs dentro do card, links sem sobreposição e sem erros JavaScript detectados na página estática.
+- Links editoriais concretos do HTML gerado: `MLB4171634813` → `/blog/carregador-usb-c-iphone-como-escolher/`; `MLB3931271317` → `/blog/iphone-15-ou-16-em-promocao/`. Todos foram vinculados a artigos publicados pela verificação de ID do build.
+- Os **11 IDs destacados** têm entradas únicas em `links-afiliados.json` com `affiliateUrl` igual ao Radar, `productUrl` com fragmento `#wid=MLB...` correspondente e registro no allowlist do PR #22 Cloudflare. Essa conferência é **estática**, não é uma prova de redirecionamento real.
+- Bloqueio de acesso de rede em navegadores/ferramentas impediu carregar imagens remotas e seguir os atalhos `https://meli.la/...`. **Falta abrir e conferir manualmente** em navegador com rede, em especial destino e variante, não sendo seguro declarar esses testes aprovados.
+- Observação: PR #22 continua separado. Mesmo sem conflito direto de arquivos, não concluir que comportamento de redirecionamento Cloudflare e Radar já foi integrado/testado.
+- Mantido rascunho, sem merge e sem publicação.
