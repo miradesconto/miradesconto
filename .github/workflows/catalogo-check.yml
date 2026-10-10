@@ -24,6 +24,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - run: python -m pip install -r integracoes/cloudflare/history-requirements.txt -r integracoes/social/requirements.txt
       - name: Validar dados e testar falhas sem rede
         run: |
           python integracoes/catalogo.py check
@@ -34,6 +35,9 @@ jobs:
           node tests/test-qualidade.cjs
           node tests/test-catalogo-evidence.cjs
           node tests/test-analytics.cjs
+          python integracoes/cloudflare/build_affiliate_links.py --check
+          python integracoes/cloudflare/build_history_allowlist.py --check
+          node --test integracoes/cloudflare/tests/*.test.js
       - name: Confirmar geração reproduzível
         run: |
           python integracoes/catalogo.py generate

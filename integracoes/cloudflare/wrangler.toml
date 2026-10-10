@@ -1,0 +1,73 @@
+name = "miradesconto-precos"
+main = "worker.js"
+compatibility_date = "2026-10-01"
+workers_dev = true
+
+# Opcional, somente com zona/DNS proxied da Cloudflare já configurados:
+# [[routes]]
+# pattern = "https://miradesconto.com.br/go/*"
+# zone_name = "miradesconto.com.br"
+# [[routes]]
+# pattern = "https://www.miradesconto.com.br/go/*"
+# zone_name = "miradesconto.com.br"
+
+[vars]
+ALLOWED_ORIGINS = "https://miradesconto.com.br,https://www.miradesconto.com.br,https://miradesconto.github.io"
+# access_token: teste com um access token vigente; oauth: renovação automática.
+ML_AUTH_MODE = "access_token"
+ML_AUTH_SEED_VERSION = "1"
+
+[[durable_objects.bindings]]
+name = "PRICE_CACHE"
+class_name = "PriceCache"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["PriceCache"]
+
+[[durable_objects.bindings]]
+name = "HISTORY_WRITER"
+class_name = "HistoryWriter"
+
+[[migrations]]
+tag = "v2-history"
+new_sqlite_classes = ["HistoryWriter"]
+
+# Criar namespace e preencher antes de ativar o histórico:
+# [[kv_namespaces]]
+# binding = "HISTORY_KV"
+# id = "ID_REAL_DO_NAMESPACE"
+
+[[durable_objects.bindings]]
+name = "SOCIAL_LEDGER"
+class_name = "SocialLedger"
+
+[[migrations]]
+tag = "v3-social"
+new_sqlite_classes = ["SocialLedger"]
+
+[observability]
+enabled = true
+# Registrar somente eventos estruturados emitidos pelo código, sem corpos/headers.
+head_sampling_rate = 0.1
+
+[env.local.vars]
+ALLOWED_ORIGINS = "http://localhost:8000,http://127.0.0.1:8000"
+ML_AUTH_MODE = "access_token"
+ML_AUTH_SEED_VERSION = "local-1"
+
+[[env.local.durable_objects.bindings]]
+name = "PRICE_CACHE"
+class_name = "PriceCache"
+
+[[env.local.durable_objects.bindings]]
+name = "HISTORY_WRITER"
+class_name = "HistoryWriter"
+
+[[env.local.kv_namespaces]]
+binding = "HISTORY_KV"
+id = "00000000000000000000000000000000"
+
+[[env.local.durable_objects.bindings]]
+name = "SOCIAL_LEDGER"
+class_name = "SocialLedger"

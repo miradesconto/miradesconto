@@ -8,7 +8,7 @@
     && p.priceCheck?.status === 'verified' && p.priceCheck.price === p.price
     && p.priceCheck.oldPrice === p.oldPrice && p.priceCheck.currency === 'BRL'
     && Number.isFinite(Date.parse(p.priceCheck.checkedAt));
-  const fresh = products.filter(p => recorded(p) && MiraQuality.usablePrice(p));
+  let fresh = products.filter(p => recorded(p) && MiraQuality.usablePrice(p));
   const deals = fresh.filter(p => p.oldPrice > p.price && (1 - p.price / p.oldPrice) >= .5)
     .sort((a,b) => (1 - b.price / b.oldPrice) - (1 - a.price / a.oldPrice)).slice(0,8);
   // Lead with the products covered by buying guides, then other core tech.
@@ -17,7 +17,7 @@
   const guided = buyingGuideIds.map(id => fresh.find(p => p.id === id)).filter(Boolean);
   const coreTech = fresh.filter(p => /^(notebook|monitor|mouse|teclado|ssd|processador)\b/i.test(p.name));
   const preferred = [...guided, ...coreTech, ...deals, ...fresh];
-  const slides = fresh.length ? [...new Map(preferred.map(p => [p.id,p])).values()].slice(0,8) : products.filter(recorded).slice(0,8);
+  let slides = fresh.length ? [...new Map(preferred.map(p => [p.id,p])).values()].slice(0,8) : products.filter(recorded).slice(0,8);
   const shell = element('div','hero-stage');
   const copy = element('div','hero-copy');
   const eyebrow = element('div','hero-eyebrow');
@@ -100,7 +100,8 @@
     category.textContent=p.category || 'Mercado Livre'; title.textContent=p.name;
     old.textContent=current && discount>=50 ? 'De '+money(p.oldPrice) : '';
     price.textContent=money(p.price);
-    link.textContent=isAffiliateList(p) ? 'Abrir lista na loja ↗' : 'Ver produto na loja ↗'; link.href=p.offerUrl || p.affiliateUrl; link.target='_blank';
+    link.textContent=isAffiliateList(p) ? 'Abrir lista na loja ↗' : 'Ver produto na loja ↗';
+    link.href=window.MiraLinks?.forProduct(p) || p.offerUrl || p.affiliateUrl; link.target='_blank';
     link.dataset.itemId=p.id; link.dataset.itemName=p.name; link.dataset.itemCategory=p.category || ''; link.dataset.destinationType=isAffiliateList(p) ? 'affiliate_list' : 'product';
     status.textContent=current ? 'Preço verificado em '+date : 'Último preço registrado em '+date;
     top.lastChild.textContent=current ? 'VERIFICADO RECENTEMENTE' : 'CONFIRME NA LOJA';
@@ -133,6 +134,12 @@
   previous.addEventListener('click',()=>move(-1));
   next.addEventListener('click',()=>move(1));
   render();
+  window.addEventListener('mira:prices-updated', () => {
+    slides = slides.filter(recorded);
+    if (!slides.length) slides = products.filter(recorded).slice(0,8);
+    index = slides.length ? index % slides.length : 0;
+    render();
+  });
   if (slides.length>1) setInterval(()=>{
     if (!document.hidden && !showcase.matches(':hover') && !showcase.contains(document.activeElement)
       && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) move(1);

@@ -9,8 +9,14 @@ from __future__ import annotations
 
 import json
 import math
+import os
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'mercadolivre'))
+from price_history import history_base
+import requests
 
 ROOT = Path(__file__).resolve().parents[2]
 CATALOG = ROOT / "dados" / "catalogo.json"
@@ -178,11 +184,18 @@ def main() -> int:
         raise RuntimeError("dados/catalogo.json sem products válido")
 
     anchor = anchor_time(products)
+    remote = os.getenv('MIRA_HISTORY_BASE_URL', '')
+    base = history_base(remote) if remote else None
+    session = requests.Session() if base else None
+    published = set(catalog.get('publishedIds', []))
     by_id: dict[str, dict] = {}
     ranked: list[tuple[float, dict]] = []
+    remote_failed = False
 
     for product in products:
         item_id = str(product.get("id") or "")
+        if base and item_id not in published:
+            continue
         if (
             product.get("category") not in TECH_CATEGORIES
             or product.get("available") is False
@@ -204,12 +217,26 @@ def main() -> int:
         ):
             continue
 
-        history_path = HISTORY / f"{item_id}.json"
-        if not history_path.exists():
-            continue
         try:
-            history = json.loads(history_path.read_text(encoding="utf-8"))
-        except (OSError, ValueError):
+            if base:
+                response = session.get(base + '/api/history/' + item_id, timeout=(5, 15), allow_redirects=False)
+                if response.status_code >= 500 or response.status_code == 429:
+                    remote_failed = True
+                    break
+                if response.status_code != 200:
+                    continue
+                history = response.json()
+                if history.get('productId') != item_id or history.get('currency') != 'BRL':
+                    continue
+            else:
+                history_path = HISTORY / f"{item_id}.json"
+                if not history_path.exists():
+                    continue
+                history = json.loads(history_path.read_text(encoding="utf-8"))
+        except (OSError, ValueError, requests.RequestException):
+            if base:
+                remote_failed = True
+                break
             continue
 
         rows = matching_rows(product, history, anchor)
@@ -266,6 +293,9 @@ def main() -> int:
         )
         ranked.append((score, insight))
 
+    if remote_failed:
+        print('Radar remoto indisponível; o registro anterior permanece com sua data original.')
+        return 0
     featured: list[str] = []
     category_count: dict[str, int] = {}
     for _, item in sorted(ranked, key=lambda pair: pair[0], reverse=True):

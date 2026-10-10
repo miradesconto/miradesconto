@@ -7,7 +7,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 INDEX = ROOT / "index.html"
-ASSETS = ["carrossel.css", "catalogo.css", "produtos.js", "qualidade.js", "interface.js", "carrossel.js"]
+ASSETS = ["carrossel.css", "catalogo.css", "produtos.js", "qualidade.js", "historico-config.js", "historico.js", "precos-config.js", "precos.js", "links-config.js", "links.js", "interface.js", "carrossel.js", "analytics.js"]
 
 
 def main() -> int:

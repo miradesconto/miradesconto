@@ -28,6 +28,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - run: python -m pip install -r integracoes/cloudflare/history-requirements.txt -r integracoes/social/requirements.txt
       - name: Validar cadastro e testar sem rede
         run: |
           python integracoes/catalogo.py check
@@ -37,13 +38,19 @@ jobs:
       - name: Confirmar preços nos cartões dos links de afiliado
         run: python integracoes/mercadolivre/public_prices.py
       - name: Guardar observações verificadas de preço
-        run: |
-          if [ -d historico ]; then
-            python integracoes/mercadolivre/price_history.py
-          else
-            python integracoes/mercadolivre/price_history.py --backfill
-          fi
+        id: history
+        if: vars.MIRA_HISTORY_BASE_URL != ''
+        continue-on-error: true
+        env:
+          MIRA_HISTORY_BASE_URL: ${{ vars.MIRA_HISTORY_BASE_URL }}
+          MIRA_HISTORY_WRITE_TOKEN: ${{ secrets.MIRA_HISTORY_WRITE_TOKEN }}
+        run: python integracoes/mercadolivre/price_history.py
+      - name: Informar falha do histórico sem interromper preços confirmados
+        if: steps.history.outcome == 'failure'
+        run: echo '::warning::Histórico remoto falhou. Verifique a etapa de envio; o catálogo continuará com os preços confirmados.'
       - name: Atualizar Radar de Preços
+        env:
+          MIRA_HISTORY_BASE_URL: ${{ vars.MIRA_HISTORY_BASE_URL }}
         run: python integracoes/automacao/gerar_radar.py
       - name: Validar integridade antes de publicar
         run: |
@@ -52,13 +59,25 @@ jobs:
           node blog/verify.cjs
           node tests/test-qualidade.cjs
           node tests/test-catalogo-evidence.cjs
+      - name: Publicar melhor oferta no Telegram
+        if: vars.MIRA_TELEGRAM_ENABLED == 'true'
+        continue-on-error: true
+        id: telegram
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ vars.TELEGRAM_CHAT_ID }}
+          MIRA_GO_BASE_URL: ${{ vars.MIRA_GO_BASE_URL }}
+          MIRA_SOCIAL_BASE_URL: ${{ vars.MIRA_SOCIAL_BASE_URL }}
+          MIRA_SOCIAL_WRITE_TOKEN: ${{ secrets.MIRA_SOCIAL_WRITE_TOKEN }}
+          TELEGRAM_TEXT_ONLY: ${{ vars.TELEGRAM_TEXT_ONLY }}
+        run: python integracoes/social/gerar_pauta.py
+      - name: Informar falha de publicação
+        if: steps.telegram.outcome == 'failure'
+        run: echo '::warning::Telegram não confirmou publicação. Confira o registro remoto antes de reenviar.'
       - name: Registrar somente mudanças reais
         shell: bash
         run: |
-          # A fila social é derivada do Radar e deve ser recalculada mesmo quando
-          # a coleta de preço não altera o catálogo nesta execução.
-          python integracoes/social/gerar_pauta.py
-          if git diff --quiet -- dados/catalogo.json historico _data/radar.json integracoes/social/pauta-do-dia.json integracoes/social/pauta-do-dia.md && [ -z "$(git ls-files --others --exclude-standard historico _data/radar.json integracoes/social/pauta-do-dia.json integracoes/social/pauta-do-dia.md)" ]; then
+          if git diff --quiet -- dados/catalogo.json _data/radar.json && [ -z "$(git ls-files --others --exclude-standard _data/radar.json)" ]; then
             echo 'Nenhuma mudança real; sem commit.'
             exit 0
           fi
@@ -66,8 +85,7 @@ jobs:
           python integracoes/automacao/cache_bust.py
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add historico dados/catalogo.json links-afiliados.json produtos.js catalogo _data/produtos.json _data/radar.json index.html
-          git add integracoes/social/pauta-do-dia.json integracoes/social/pauta-do-dia.md
+          git add dados/catalogo.json links-afiliados.json produtos.js catalogo _data/produtos.json _data/radar.json index.html
           git diff --cached --quiet && exit 0
           git commit -m 'Atualiza preços confirmados dos links de afiliado'
           # Never force-push or merge a stale catalog over concurrent edits.
