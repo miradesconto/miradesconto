@@ -19,4 +19,6 @@ Não foi realizada validação ponta a ponta com um novo link do proprietário. 
 
 ## Listas públicas de afiliado
 
+Apenas links que resolvem para uma **lista explicitamente identificada** (com `/lists/` no destino) podem cadastrar múltiplos anúncios. Links que redirecionam ao **perfil público do afiliado** (`/social/...` sem `/lists/`) exibem recomendações e **não comprovam** que o link de afiliado corresponde a cada anúncio. O cadastro deve rejeitá-los para não atribuir o mesmo link a produtos diferentes. Para um produto individual, gere o link direto do anúncio pela ferramenta oficial de afiliados.
+
 Um link que abre uma lista pode cadastrar todos os cartões tech com anúncio, imagem e preço exatos confirmados. O sistema preserva o link oficial da lista para a compra. Itens não tech, ambíguos ou com variação são ignorados. A lista cadastrada com sucesso fica em metadata.affiliateSources e é consultada pela rotina horária para descobrir novos produtos. Falhas de leitura preservam o catálogo. Retirar um produto da lista ainda não remove seu cadastro automaticamente.
