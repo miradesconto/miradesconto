@@ -22,7 +22,7 @@ class CatalogError(ValueError):
 def secure_url(value, hosts=None, nullable=False):
     if value is None and nullable:
         return None
-    if not isinstance(value, str) or not value or re.search(r'[\\s<>"\\x00-\\x1f]', value):
+    if not isinstance(value, str) or not value or re.search(r'[\s<>"\x00-\x1f]', value):
         raise CatalogError("URL ausente ou insegura")
     try:
         u = urlsplit(value)
@@ -56,7 +56,7 @@ def validate_offer(item):
     valid_price(item.get("price"))
     if item.get("currency", "BRL") != "BRL":
         raise CatalogError("Moeda não suportada")
-    if item.get("in_stock") not in (None, True, False):
+    if item.get("in_stock") is not None and type(item["in_stock"]) is not bool:
         raise CatalogError("Estoque inválido")
     status = item.get("price_status", "unverified")
     if status not in ("unverified", "verified", "missing"):
@@ -125,14 +125,14 @@ def write_preview(products, destination):
     if destination.exists():
         raise CatalogError("Arquivo de saída já existe; nunca sobrescrever sem revisão")
     destination.parent.mkdir(parents=True, exist_ok=True)
-    destination.write_text(json.dumps(build_catalog(products), ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+    destination.write_text(json.dumps(build_catalog(products), ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return destination
 
 
 def from_legacy_ml(p, universal_id=None):
     """Lê um registro ML legado sem mudar ID nem URL do cadastro antigo."""
     original = str(p.get("id", ""))
-    if not re.fullmatch(r"MLB\\d{7,}", original):
+    if not re.fullmatch(r"MLB\d{7,}", original):
         raise CatalogError("ID ML inválido")
     affiliate = p.get("affiliate_url") or p.get("affiliateUrl")
     image = p.get("custom_image") or p.get("image_url") or p.get("imageUrl")
