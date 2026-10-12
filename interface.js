@@ -2,6 +2,7 @@
 const source = window.MIRA_DATA;
 const requestedProduct = new URLSearchParams(window.location.search).get('produto');
 const products = (source?.products || []).filter(p => p.name && safeUrl(p.affiliateUrl)
+    && !MiraQuality.priceReviewReason(p)
     && (MiraQuality.usablePrice(p) || p.id === requestedProduct));
 let selectedCategory = 'Seleção da hora';
 let visibleCount = 24;
@@ -143,7 +144,7 @@ function rotateOffers(items, now = Date.now()) {
 }
 function filteredProducts() {
     const query = normalize($('searchInput').value.trim());
-    const filtered = products.filter(p => (MiraQuality.usablePrice(p) || p.id === requestedProduct) && (selectedCategory === 'Todos' || selectedCategory === 'Seleção da hora' || (selectedCategory === 'Destaques' ? p.featured === true : p.category === selectedCategory))
+    const filtered = products.filter(p => !MiraQuality.priceReviewReason(p) && (MiraQuality.usablePrice(p) || p.id === requestedProduct) && (selectedCategory === 'Todos' || selectedCategory === 'Seleção da hora' || (selectedCategory === 'Destaques' ? p.featured === true : p.category === selectedCategory))
         && [p.id,p.name,p.store,p.category].some(v=>normalize(v).includes(query)));
     switch($('sortSelect').value) {
         case 'discount': filtered.sort((a,b)=>(productDiscount(b)||0)-(productDiscount(a)||0));break;
