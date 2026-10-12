@@ -10,16 +10,21 @@ class ImportTest(unittest.TestCase):
         body = (Path(__file__).parent / 'fixtures/MLB2766771378.html').read_text()
         body = body.replace('Creatina 1kg Suplemento Monohidratada em pó 100% Pura - Soldiers Nutrition', 'Mouse Logitech G305')
         body = body.replace('<div class="poly-card">', '<div class="poly-card"><img src="https://http2.mlstatic.com/test.jpg">')
-        row = parse_page(body, 'https://www.mercadolivre.com.br/social/owner', 'https://meli.la/example')
-        self.assertEqual(row['id'], 'MLB2766771378')
-        self.assertEqual(row['_observation']['price'], 68.90)
-        self.assertEqual(row['affiliateUrl'], 'https://meli.la/example')
+        # Perfil publico com recomendacoes nao e anuncio individual.
+        with self.assertRaisesRegex(ValueError, 'Link abre perfil'):
+            parse_page(body, 'https://www.mercadolivre.com.br/social/owner', 'https://meli.la/example')
+        with self.assertRaisesRegex(ValueError, 'Link abre perfil'):
+            parse_page(body + body.replace('MLB2766771378', 'MLB2766771379'),
+                       'https://www.mercadolivre.com.br/social/owner', 'https://meli.la/example')
+        # Uma lista identificada no caminho continua elegivel.
         rows = parse_page(body + body.replace('MLB2766771378', 'MLB2766771379'),
-                          'https://www.mercadolivre.com.br/social/owner', 'https://meli.la/example')
+                          'https://www.mercadolivre.com.br/social/owner/lists/example', 'https://meli.la/example')
         self.assertEqual(len(rows), 2)
         self.assertEqual({r['id'] for r in rows}, {'MLB2766771378', 'MLB2766771379'})
         single_list = parse_page(body, 'https://www.mercadolivre.com.br/social/owner/lists/example', 'https://meli.la/example')
         self.assertEqual(len(single_list),1)
+        self.assertEqual(single_list[0]['_observation']['price'], 68.90)
+        self.assertEqual(single_list[0]['affiliateUrl'], 'https://meli.la/example')
         updated, archive = prepare({'products':[single_list[0]],'publishedIds':[], 'metadata':{'niche':'tech'}},[],
                                   ['https://meli.la/example'],datetime.now(timezone.utc),lambda link:single_list)
         self.assertEqual(len(updated['products']),1)
