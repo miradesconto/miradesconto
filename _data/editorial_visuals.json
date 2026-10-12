@@ -83,5 +83,30 @@
     "tone": "sage",
     "kicker": "GUIA DE CELULARES",
     "hook": "Seu próximo celular: o que importa?"
+  },
+  "acer-aspire-go-i7-16gb-vale-a-pena": {
+    "kicker": "GUIA DE COMPRA",
+    "hook": "i7: confira a configuração",
+    "tone": "blue"
+  },
+  "smart-tag-android-rastreador-vale-a-pena": {
+    "kicker": "GUIA DE COMPRA",
+    "hook": "Qual rede encontra seus objetos?",
+    "tone": "sage"
+  },
+  "camera-wifi-a28b-dupla-lente-vale-a-pena": {
+    "kicker": "GUIA DE COMPRA",
+    "hook": "Duas lentes: o que conferir",
+    "tone": "sand"
+  },
+  "adaptador-carplay-sem-fio-compatibilidade": {
+    "kicker": "GUIA DE COMPRA",
+    "hook": "Seu carro aceita CarPlay sem fio?",
+    "tone": "mint"
+  },
+  "nintendo-switch-2-vale-a-pena-2026": {
+    "kicker": "GUIA DE COMPRA",
+    "hook": "Além do console: calcule os extras",
+    "tone": "lilac"
   }
 }
