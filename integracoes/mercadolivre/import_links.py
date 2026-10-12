@@ -79,6 +79,14 @@ def parse_page(body, final, link):
         name = parser.values.get('og:title', '').strip()
         image = parser.values.get('og:image', '')
     except Unconfirmed:
+        # A profile landing page contains recommendations, not necessarily
+        # products targeted by this affiliate link. Only explicit named lists
+        # may register multiple products.
+        if '/lists/' not in urlsplit(final).path:
+            raise ValueError(
+                'Link abre perfil ou pagina sem anuncio identificavel. '
+                'Gere o link oficial do produto individual ou use uma lista explicita.'
+            )
         cards = Cards()
         cards.feed(body)
         cards.close()
