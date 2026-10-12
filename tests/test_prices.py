@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'integracoes'))
 sys.path.insert(0, str(ROOT / 'integracoes/mercadolivre'))
 from product_card import extract, identity, Unconfirmed
-from qualidade import usable_price
+from qualidade import usable_price, price_review_reason
 import rebuild_catalog
 
 NOW = datetime(2026, 9, 20, 20, 0, tzinfo=timezone.utc)
@@ -119,6 +119,17 @@ class PriceTests(unittest.TestCase):
         for stamp in ['2026-09-20T20:00:00','invalid',None]:
             changed=copy.deepcopy(p);changed['priceCheck']['checkedAt']=stamp
             self.assertFalse(usable_price(changed,NOW))
+
+    def test_price_review_flags_implausible_tv_without_mutating_data(self):
+        tv = {'id': 'MLB6971944604',
+              'name': 'Smart Tv 43 Full Hd P43cra Roku Tv Hdr10 Dolby Philco',
+              'price': 9989, 'affiliateUrl': 'https://meli.la/1pyBZm8'}
+        original = copy.deepcopy(tv)
+        self.assertEqual(price_review_reason(tv), 'tv_43_fhd_above_review_limit')
+        self.assertEqual(tv, original)
+        self.assertIsNone(price_review_reason(dict(tv, price=1699)))
+        self.assertIsNone(price_review_reason(dict(tv, name='Smart TV 43 4K OLED')))
+        self.assertIsNone(price_review_reason(dict(tv, name='Notebook gamer Ryzen AI 9')))
 
 
 if __name__ == '__main__': unittest.main()
