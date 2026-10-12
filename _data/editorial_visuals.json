@@ -108,5 +108,10 @@
     "kicker": "GUIA DE COMPRA",
     "hook": "Além do console: calcule os extras",
     "tone": "lilac"
+  },
+  "qcy-t13-anc-2-vale-a-pena-2026": {
+    "kicker": "ANÁLISE DE COMPRA",
+    "hook": "ANC e multiponto: vale?",
+    "tone": "blue"
   }
 }
