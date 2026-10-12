@@ -106,7 +106,7 @@ Para quem usa planilhas maiores, muitas abas, videoconferência e tarefas que re
 > **❌ O que poderia melhorar:** por este nível de processador, 16 GB de fábrica deixariam o conjunto mais equilibrado para vários anos de uso.
 
 <p class="buyer-fit"><strong>Ideal para:</strong> trabalho diário, planilhas, muitas abas, videoconferências, estudo e tarefas com maior carga de CPU.</p>
-<a class="price-cta" href="https://meli.la/1NguveN" data-item-id="MLB5761444412" data-item-name="Lenovo IdeaPad Slim 3 i5-13420H" data-link-location="guide-card" target="_blank" rel="sponsored nofollow noopener noreferrer">Conferir preço atualizado</a>
+<a class="price-cta" href="https://meli.la/1xfhKcv" data-item-id="MLB5761444412" data-item-name="Lenovo IdeaPad Slim 3 i5-13420H" data-link-location="guide-card" target="_blank" rel="sponsored nofollow noopener noreferrer">Conferir preço atualizado</a>
 </article>
 
 <article id="acer-aspire-5" class="buy-guide-card" markdown="1">
@@ -132,7 +132,7 @@ Aqui, os **16 GB mudam a experiência mais do que uma simples troca de etiqueta 
 > **❌ O que poderia melhorar:** o Ryzen 5 5500U é uma plataforma mais antiga; quem prioriza CPU de geração mais recente deve comparar antes de pagar diferença significativa.
 
 <p class="buyer-fit"><strong>Ideal para:</strong> trabalho multitarefa, planilhas, estudo, produtividade e quem quer mais margem de memória sem entrar em notebook gamer.</p>
-<a class="price-cta" href="https://meli.la/1NguveN" data-item-id="MLB5879140276" data-item-name="Acer Aspire 5 Ryzen 5 16GB" data-link-location="guide-card" target="_blank" rel="sponsored nofollow noopener noreferrer">Conferir preço atualizado</a>
+<a class="price-cta" href="https://meli.la/2b5LzSZ" data-item-id="MLB5879140276" data-item-name="Acer Aspire 5 Ryzen 5 16GB" data-link-location="guide-card" target="_blank" rel="sponsored nofollow noopener noreferrer">Conferir preço atualizado</a>
 </article>
 
 <article id="acer-nitro-v15" class="buy-guide-card" markdown="1">
@@ -158,7 +158,7 @@ Este é outro tipo de compra. A RTX 4060 coloca o Nitro V15 em uma categoria mui
 > **❌ O que poderia melhorar:** preço, peso, consumo e autonomia tendem a ser piores que em notebooks comuns; não vale pagar por isso se a GPU não faz parte do seu uso.
 
 <p class="buyer-fit"><strong>Ideal para:</strong> jogos, edição de vídeo, criação 3D, renderização e tarefas aceleradas por GPU.</p>
-<a class="price-cta" href="https://meli.la/1NguveN" data-item-id="MLB4196200841" data-item-name="Acer Nitro V15 RTX 4060" data-link-location="guide-card" target="_blank" rel="sponsored nofollow noopener noreferrer">Conferir preço atualizado</a>
+<a class="price-cta" href="https://meli.la/2bH9YKS" data-item-id="MLB4196200841" data-item-name="Acer Nitro V15 RTX 4060" data-link-location="guide-card" target="_blank" rel="sponsored nofollow noopener noreferrer">Conferir preço atualizado</a>
 </article>
 
 </div>
@@ -256,7 +256,7 @@ Este guia compara as configurações publicadas nos anúncios e os registros de 
         "brand": {"@type": "Brand", "name": "Lenovo"},
         "offers": {
           "@type": "Offer",
-          "url": "https://meli.la/1NguveN",
+          "url": "https://meli.la/1xfhKcv",
           "priceCurrency": "BRL",
           "price": {{ lenovo_radar.currentPrice | jsonify }}
         }
@@ -272,7 +272,7 @@ Este guia compara as configurações publicadas nos anúncios e os registros de 
         "brand": {"@type": "Brand", "name": "Acer"},
         "offers": {
           "@type": "Offer",
-          "url": "https://meli.la/1NguveN",
+          "url": "https://meli.la/2b5LzSZ",
           "priceCurrency": "BRL",
           "price": {{ acer_radar.currentPrice | jsonify }}
         }
@@ -288,7 +288,7 @@ Este guia compara as configurações publicadas nos anúncios e os registros de 
         "brand": {"@type": "Brand", "name": "Acer"},
         "offers": {
           "@type": "Offer",
-          "url": "https://meli.la/1NguveN",
+          "url": "https://meli.la/2bH9YKS",
           "priceCurrency": "BRL",
           "price": {{ nitro_radar.currentPrice | jsonify }}
         }

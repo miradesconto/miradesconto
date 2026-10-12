@@ -52,7 +52,7 @@ function element(tag, className, text) {
     return e;
 }
 function isAffiliateList(p) {
-    if (p.offerUrl) return false;
+    if (p.affiliateLinkType === 'product' || p.offerUrl) return false;
     return p.affiliateUrl === 'https://meli.la/1NguveN' || (source?.affiliateSources || []).includes(p.affiliateUrl) || (source?.products || []).filter(item => item.affiliateUrl === p.affiliateUrl).length > 1;
 }
 function makeCard(p) {

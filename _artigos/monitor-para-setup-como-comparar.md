@@ -94,7 +94,7 @@ O Acer entra como opção mais orientada a jogos. A vantagem prática sobre o Sa
 > **❌ O que poderia melhorar:** não há ajuste de altura; para ergonomia séria, talvez seja necessário braço VESA ou suporte externo.
 
 <p class="buyer-fit"><strong>Ideal para:</strong> FPS, jogos competitivos e usuários de PC que querem DisplayPort e 144 Hz em formato compacto.</p>
-<a class="price-cta" href="https://meli.la/1pyBZm8" data-item-id="MLB5530406762" data-item-name="Acer Nitro KG243Y 144Hz" data-link-location="guide-card" target="_blank" rel="sponsored nofollow noopener noreferrer">Conferir preço atualizado</a>
+<a class="price-cta" href="https://meli.la/1CiNg5W" data-item-id="MLB5530406762" data-item-name="Acer Nitro KG243Y 144Hz" data-link-location="guide-card" target="_blank" rel="sponsored nofollow noopener noreferrer">Conferir preço atualizado</a>
 </article>
 
 </div>
