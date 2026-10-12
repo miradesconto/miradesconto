@@ -31,6 +31,28 @@ class ImportTest(unittest.TestCase):
         self.assertEqual(archive,[])
         self.assertEqual(updated['metadata']['affiliateSources'],['https://meli.la/example'])
 
+    def test_confirmed_primary_card_does_not_import_recommendations(self):
+        body = (Path(__file__).parent / 'fixtures/MLB2766771378.html').read_text()
+        body = body.replace(
+            'Creatina 1kg Suplemento Monohidratada em pó 100% Pura - Soldiers Nutrition',
+            'Fone QCY T13 ANC 2 Azul',
+        )
+        body = body.replace('<div class="poly-card">',
+                            '<div class="poly-card"><img src="https://http2.mlstatic.com/test.jpg">')
+        suggestions = body + body.replace('MLB2766771378', 'MLB2766771379')
+        url = 'https://www.mercadolivre.com.br/social/owner'
+        link = 'https://meli.la/abc'
+        with self.assertRaisesRegex(ValueError, 'Link abre perfil'):
+            parse_page(suggestions, url, link)
+        selected = parse_page(suggestions, url, link, 'MLB2766771378')
+        self.assertEqual(selected['id'], 'MLB2766771378')
+        self.assertEqual(selected['affiliateUrl'], link)
+        self.assertEqual(selected['_observation']['price'], 68.90)
+        with self.assertRaisesRegex(ValueError, 'nao encontrado'):
+            parse_page(suggestions, url, link, 'MLB9999999999')
+        with self.assertRaisesRegex(ValueError, 'invalido'):
+            parse_page(suggestions, url, link, 'INVALID')
+
     def test_configured_list_replaces_old_discovery_source(self):
         import tempfile,json
         current={'metadata':{'affiliateSources':['https://meli.la/old']}}
