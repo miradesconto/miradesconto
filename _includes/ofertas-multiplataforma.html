@@ -1,0 +1,54 @@
+{% comment %}Componente independente. Inclua com product_id=... após aprovar fotos, ofertas e preço. Não chama a API do Mercado Livre.{% endcomment %}
+{% assign matches = site.data.produtos_unificados.products | where: "id", include.product_id %}
+{% assign product = matches | first %}
+{% if product %}
+<article class="buy-guide-card mira-multi-offer" data-product-id="{{ product.id | escape }}">
+  {% if product.image_url and product.image_url != "" %}
+  <div class="product-media"><img src="{{ product.image_url | escape }}" alt="{{ product.title | escape }}" loading="lazy" decoding="async"></div>
+  {% endif %}
+  <h3>{{ product.title | escape }}</h3>
+  <p>{{ product.description | escape }}</p>
+  {% assign ordered_offers = product.offers | sort: "price" %}
+  {% assign verified_count = 0 %}
+  {% assign now_epoch = site.time | date: "%s" | plus: 0 %}
+  {% for offer in ordered_offers %}
+    {% if offer.price_status == "verified" and offer.in_stock == true and offer.price_verified_at and offer.price %}
+      {% assign checked_epoch = offer.price_verified_at | date: "%s" | plus: 0 %}
+      {% assign age = now_epoch | minus: checked_epoch %}
+      {% if age >= 0 and age <= 86400 %}{% assign verified_count = verified_count | plus: 1 %}{% endif %}
+    {% endif %}
+  {% endfor %}
+  {% if verified_count > 1 %}
+    {% assign best_found = false %}
+    {% for offer in ordered_offers %}
+      {% if offer.price_status == "verified" and offer.in_stock == true and offer.price_verified_at and offer.price %}
+        {% assign checked_epoch = offer.price_verified_at | date: "%s" | plus: 0 %}
+        {% assign age = now_epoch | minus: checked_epoch %}
+        {% if age >= 0 and age <= 86400 and best_found == false %}
+          <p><strong>Menor preço verificado nas últimas 24 horas: R$ {{ offer.price | round: 2 | replace: ".", "," }}</strong></p>
+          {% assign best_found = true %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+    <p>Compare preços da mesma variante e o total com frete.</p>
+  {% elsif product.offers.size > 1 %}
+    <p><strong>Sem comparação de preços verificados no momento.</strong> Confira as condições diretamente em cada loja.</p>
+  {% endif %}
+  <div class="mira-multi-links">
+  {% for offer in ordered_offers %}
+    {% assign label = "Ver na loja" %}
+    {% assign bgcolor = "#344054" %}
+    {% assign fgcolor = "#ffffff" %}
+    {% case offer.platform %}
+      {% when "shopee" %}{% assign label = "Ver na Shopee" %}{% assign bgcolor = "#ee4d2d" %}
+      {% when "mercadolivre" %}{% assign label = "Ver no Mercado Livre" %}{% assign bgcolor = "#ffe600" %}{% assign fgcolor = "#202020" %}
+      {% when "amazon" %}{% assign label = "Comprar na Amazon" %}{% assign bgcolor = "#232f3e" %}
+    {% endcase %}
+    {% unless offer.in_stock == false %}
+    <a class="price-cta" style="background-color:{{ bgcolor }};color:{{ fgcolor }};display:inline-block;margin:0.4em 0.5em 0.4em 0" href="{{ offer.affiliate_url | escape }}" target="_blank" rel="sponsored nofollow noopener noreferrer" data-item-id="{{ offer.platform_id | escape }}" data-item-name="{{ product.title | escape }}" data-link-location="multi-offer">{{ label }} ↗</a>
+    {% endunless %}
+  {% endfor %}
+  </div>
+  <small>Links de afiliado. Estoque e preço só são exibidos como confirmados com evidência recente; verifique o total na loja.</small>
+</article>
+{% endif %}
