@@ -12,7 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = Path('dados/catalogo.json')
 MIN_PRODUCTS = 450
-COMPACT_KEYS = ('id', 'name', 'category', 'price', 'oldPrice', 'discount',
+COMPACT_KEYS = ('platform', 'affiliate_url', 'custom_image', 'id', 'name', 'category', 'price', 'oldPrice', 'discount',
                 'affiliateUrl', 'affiliateLinkType', 'offerUrl', 'imageUrl', 'itemId', 'catalogProductId', 'lastUpdated', 'rank', 'featured', 'available', 'priceCheck', 'availabilityStatus')
 HEADER = '// Dados do catálogo; preços e status podem ser atualizados pela API oficial do Mercado Livre.\n'
 
@@ -112,6 +112,17 @@ def validate(catalog, root=ROOT):
                 raise ValueError(f'Cartão de preço não confirma estoque: {item_id}')
         if p.get('rank') != position or p.get('featured') is not (position <= 12):
             raise ValueError(f'Ranking/destaque divergente: {item_id}')
+    # Campos opcionais na compatibilidade ML: nenhuma migração de IDs nesta fase.
+    for p in products:
+        if p.get('platform', 'mercadolivre') != 'mercadolivre':
+            raise ValueError(f"Plataforma inesperada no catálogo legado ML: {p['id']}")
+        if 'affiliate_url' in p and p['affiliate_url'] != p.get('affiliateUrl'):
+            raise ValueError(f"Alias de afiliado divergente: {p['id']}")
+        if p.get('custom_image') is not None and (
+            not isinstance(p['custom_image'], str)
+            or not p['custom_image'].startswith('https://')
+        ):
+            raise ValueError(f"custom_image inválida: {p['id']}")
     # Also reject NaN in fields outside the price validation.
     dumps(catalog)
 

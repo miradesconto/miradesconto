@@ -91,6 +91,8 @@ layout: null
           <a class="editorial-card-media" href="{{ entry.url | relative_url }}" aria-label="Abrir {{ entry.title | escape }}">
             {% if product and product.imageUrl %}
             <img src="{{ product.imageUrl | escape }}" alt="{{ product.name | escape }}" loading="lazy" decoding="async">
+            {% elsif entry.custom_image %}
+            <img src="{{ entry.custom_image | escape }}" alt="{{ entry.title | escape }} — imagem do anúncio Shopee" loading="lazy" decoding="async">
             {% else %}
             <span class="editorial-card-placeholder">MiraDesconto<br><small>Guia editorial</small></span>
             {% endif %}
@@ -124,6 +126,8 @@ layout: null
           <a class="editorial-card-media" href="{{ entry.url | relative_url }}" aria-label="Abrir {{ entry.title | escape }}">
             {% if product and product.imageUrl %}
             <img src="{{ product.imageUrl | escape }}" alt="{{ product.name | escape }}" loading="lazy" decoding="async">
+            {% elsif entry.custom_image %}
+            <img src="{{ entry.custom_image | escape }}" alt="{{ entry.title | escape }} — imagem do anúncio Shopee" loading="lazy" decoding="async">
             {% else %}
             <span class="editorial-card-placeholder">MiraDesconto<br><small>Comparativo editorial</small></span>
             {% endif %}
@@ -157,6 +161,8 @@ layout: null
           <a class="editorial-card-media" href="{{ entry.url | relative_url }}" aria-label="Abrir {{ entry.title | escape }}">
             {% if product and product.imageUrl %}
             <img src="{{ product.imageUrl | escape }}" alt="{{ product.name | escape }}" loading="lazy" decoding="async">
+            {% elsif entry.custom_image %}
+            <img src="{{ entry.custom_image | escape }}" alt="{{ entry.title | escape }} — imagem do anúncio Shopee" loading="lazy" decoding="async">
             {% else %}
             <span class="editorial-card-placeholder">MiraDesconto<br><small>Análise editorial</small></span>
             {% endif %}
