@@ -122,7 +122,8 @@
     "MLB5988661118",
     "MLB6971944604",
     "MLB4573612827",
-    "MLB5064299465"
+    "MLB5064299465",
+    "MLB5174506341"
   ],
   "products": [
     {
@@ -28091,6 +28092,36 @@
       },
       "source": "Mercado Livre — cartão público do produto",
       "affiliateLinkSource": "official_existing"
+    },
+    {
+      "id": "MLB5174506341",
+      "itemId": "MLB5174506341",
+      "name": "Fone Qcy T13 Anc 2 Bluetooth 5.3 Conexão Multiponto Cor Azul",
+      "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_760534-MLA99450285980_112025-V.webp",
+      "affiliateUrl": "https://meli.la/1hXAjW7",
+      "productUrl": "https://www.mercadolivre.com.br/fone-qcy-t13-anc-2-bluetooth-53-conexao-multiponto-cor-azul/p/MLB40557309?pdp_filters=item_id%3AMLB5174506341&matt_event_ts=1791830271902&matt_d2id=12f20533-e529-478b-8cbf-f4300a3e46bf&matt_tracing_id=38e8c5d9-62a7-4250-9533-e63290e846b5#polycard_client=recommendations_home_affiliate-profile&wid=MLB5174506341&sid=recos&reco_backend=item_decorator&reco_client=home_affiliate-profile&matt_tool_id=29904275&reco_item_pos=0&source=affiliate-profile&reco_backend_type=function&reco_id=946ca7b9-fa9b-4cff-a91c-519fd2f1ce36&tracking_id=72b94208-8b61-49f8-baa8-770dcb9f27ab&c_id=/home/card-featured/element&c_uid=eb36e02b-f3bd-4be8-b11f-adecabb8bd6d",
+      "featured": false,
+      "category": "Áudio",
+      "rank": 104,
+      "registrationSource": "affiliate-panel",
+      "price": 199.0,
+      "oldPrice": 274.0,
+      "discount": 27.3723,
+      "displayedDiscount": "27% OFF",
+      "available": null,
+      "availabilityStatus": "unknown",
+      "priceSource": "poly-card-v1",
+      "collectedAt": "12/10/2026",
+      "priceCheck": {
+        "status": "verified",
+        "method": "poly-card-v1",
+        "itemId": "MLB5174506341",
+        "variationId": null,
+        "currency": "BRL",
+        "checkedAt": "2026-10-12T18:37:51+00:00",
+        "price": 199.0,
+        "oldPrice": 274.0
+      }
     }
   ]
 }
