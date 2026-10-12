@@ -25,4 +25,6 @@ assert.deepEqual(ids(context.filteredProducts()).sort(),['fresh-featured','fresh
 context.document.getElementById=id=>({value:id==='sortSelect'?'lowPrice':''});
 vm.runInContext('products[1].price=50;products[1].priceCheck.price=50',context);
 assert.deepEqual(ids(context.filteredProducts()),['fresh-other','fresh-featured']);
+vm.runInContext("selectedCategory='Destaques'",context);
+assert.deepEqual(ids(context.filteredProducts()),['fresh-featured']);
 console.log('OK: rodízio muda a primeira página, mistura categorias, preserva paginação e ordenação; preços vencidos e indisponíveis continuam excluídos.');
