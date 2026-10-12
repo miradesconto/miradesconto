@@ -3,7 +3,7 @@ const source = window.MIRA_DATA;
 const requestedProduct = new URLSearchParams(window.location.search).get('produto');
 const products = (source?.products || []).filter(p => p.name && safeUrl(p.affiliateUrl)
     && (MiraQuality.usablePrice(p) || p.id === requestedProduct));
-let selectedCategory = 'Destaques';
+let selectedCategory = 'Seleção da hora';
 let visibleCount = 24;
 let categoryBeforeSearch = null;
 const $ = id => document.getElementById(id);
@@ -35,14 +35,14 @@ function selectCategory(button) {
         b.setAttribute('aria-pressed', String(b === button));
     });
     $('categorySelect').value = selectedCategory;
-    $('sectionTitle').textContent = selectedCategory === 'Destaques' ? 'Tecnologia em destaque' : selectedCategory === 'Todos' ? 'Todas as ofertas tech' : selectedCategory;
-    $('selectionNotice').hidden = selectedCategory !== 'Destaques';
+    $('sectionTitle').textContent = selectedCategory === 'Seleção da hora' ? 'Ofertas da hora' : selectedCategory === 'Destaques' ? 'Tecnologia em destaque' : selectedCategory === 'Todos' ? 'Todas as ofertas tech' : selectedCategory;
+    $('selectionNotice').hidden = selectedCategory !== 'Seleção da hora';
     renderProducts();
 }
 function resetFilters() {
     $('searchInput').value = '';
     $('sortSelect').value = 'default';
-    categoryBeforeSearch = 'Destaques';
+    categoryBeforeSearch = 'Seleção da hora';
     updateSearch();
 }
 function element(tag, className, text) {
@@ -138,13 +138,13 @@ function rotateOffers(items, now = Date.now()) {
 }
 function filteredProducts() {
     const query = normalize($('searchInput').value.trim());
-    const filtered = products.filter(p => (MiraQuality.usablePrice(p) || p.id === requestedProduct) && (selectedCategory === 'Todos' || (selectedCategory === 'Destaques' || p.category === selectedCategory))
+    const filtered = products.filter(p => (MiraQuality.usablePrice(p) || p.id === requestedProduct) && (selectedCategory === 'Todos' || selectedCategory === 'Seleção da hora' || (selectedCategory === 'Destaques' ? p.featured === true : p.category === selectedCategory))
         && [p.id,p.name,p.store,p.category].some(v=>normalize(v).includes(query)));
     switch($('sortSelect').value) {
         case 'discount': filtered.sort((a,b)=>(productDiscount(b)||0)-(productDiscount(a)||0));break;
         case 'lowPrice': filtered.sort((a,b)=>(currentPrice(a) ?? Infinity)-(currentPrice(b) ?? Infinity));break;
         case 'highPrice': filtered.sort((a,b)=>(currentPrice(b) ?? -Infinity)-(currentPrice(a) ?? -Infinity));break;
-        default: if (selectedCategory === 'Destaques') return rotateOffers(filtered);
+        default: if (selectedCategory === 'Seleção da hora') return rotateOffers(filtered);
     }
     return filtered;
 }
@@ -172,7 +172,7 @@ async function shareProduct(name,link) {
 const categoryContainer = document.querySelector('.categories-container');
 const techCategories = ['PC e hardware','Notebooks','Celulares','Setup','Gaming','Áudio','Smart Home','TVs e projetores','Impressoras'];
 const availableCategories = techCategories;
-const categories = ['Destaques','Todos',...availableCategories];
+const categories = ['Seleção da hora','Destaques','Todos',...availableCategories];
 categoryContainer.replaceChildren();
 const mobileCategory = element('div','category-mobile');
 const categoryLabel = element('label','','Categoria');
@@ -180,7 +180,7 @@ categoryLabel.htmlFor = 'categorySelect';
 const categorySelect = element('select');categorySelect.id = 'categorySelect';
 mobileCategory.append(categoryLabel,categorySelect);
 [...new Set(categories)].forEach(cat=>{
-    const count = products.filter(p=>cat==='Todos'||(cat==='Destaques'||p.category===cat)).length;
+    const count = products.filter(p=>cat==='Todos'||cat==='Seleção da hora'||(cat==='Destaques'?p.featured===true:p.category===cat)).length;
     const label = `${cat} (${count})`;
     const b = element('button','category',label);
     b.type = 'button';b.dataset.category = cat;
