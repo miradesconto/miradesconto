@@ -51,7 +51,7 @@ class Metadata(HTMLParser):
                 self.values[key] = attrs.get('content', '')
 
 
-def resolve(link):
+def resolve(link, expected_item_id=None):
     if not affiliate(link):
         raise ValueError('Use um link oficial meli.la ou Mercado Livre /sec/')
     opener = build_opener(Redirects())
@@ -64,10 +64,14 @@ def resolve(link):
         body = response.read(3_000_001)
     if len(body) > 3_000_000:
         raise ValueError('Página grande demais; cadastro exige revisão')
-    return parse_page(body.decode('utf-8', errors='replace'), final, link)
+    return parse_page(body.decode('utf-8', errors='replace'), final, link, expected_item_id)
 
 
-def parse_page(body, final, link):
+def parse_page(body, final, link, expected_item_id=None):
+    # A confirmed expected ID must be supplied by the repository owner.
+    # It singles out one product within an affiliate profile with suggestions.
+    if expected_item_id is not None and not re.fullmatch(r'MLB[0-9]+', expected_item_id):
+        raise ValueError('ID esperado invalido; use o MLB do anuncio exato')
     # Affiliate landing pages carry the actual listing in a product card.
     # Never choose the first item from a list or infer an ID from tracking text.
     observation = None
@@ -82,7 +86,7 @@ def parse_page(body, final, link):
         # A profile landing page contains recommendations, not necessarily
         # products targeted by this affiliate link. Only explicit named lists
         # may register multiple products.
-        if '/lists/' not in urlsplit(final).path:
+        if '/lists/' not in urlsplit(final).path and expected_item_id is None:
             raise ValueError(
                 'Link abre perfil ou pagina sem anuncio identificavel. '
                 'Gere o link oficial do produto individual ou use uma lista explicita.'
@@ -118,29 +122,42 @@ def parse_page(body, final, link):
             if key in candidates and candidates[key] != value:
                 raise ValueError('Cartões divergentes; revisão necessária')
             candidates[key] = value
-        # A named list with one product is still a list, not an individual link.
-        if len(candidates) > 1 or '/lists/' in urlsplit(final).path:
-            rows = []
-            for (found_id, found_variation), (url, title, picture) in candidates.items():
-                row = dict(id=found_id, itemId=found_id, name=title, imageUrl=picture,
-                           affiliateUrl=link, productUrl=url, featured=False)
-                label = category(row)
-                if not label or found_variation:
-                    continue
-                try:
-                    row['_observation'] = extract(body, found_id, url)
-                except Unconfirmed:
-                    continue
-                row['category'] = label
-                rows.append(row)
-            if not rows:
-                raise ValueError('Lista sem produtos tech com cartão exato confirmado')
-            print('Produtos tech confirmados na lista:', len(rows))
-            return rows
-        if len(candidates) != 1:
-            raise ValueError('Página sem anúncio identificável e imagem confirmada')
-        (item_id, variation), (product_url, name, image) = next(iter(candidates.items()))
-        observation = extract(body, item_id, product_url)
+        # A verified product ID selects exactly one card from a public profile.
+        # Recommendations MUST NOT inherit its affiliate link.
+        if expected_item_id is not None:
+            matched = [(key, value) for key, value in candidates.items()
+                       if key == (expected_item_id, None)]
+            if len(matched) != 1:
+                raise ValueError('Produto confirmado nao encontrado de forma unica na pagina')
+            (item_id, variation), (product_url, name, image) = matched[0]
+            observation = extract(body, item_id, product_url)
+        else:
+            # Multi-product registration is allowed only for explicit /lists/.
+            if len(candidates) > 1 or '/lists/' in urlsplit(final).path:
+                rows = []
+                for (found_id, found_variation), (url, title, picture) in candidates.items():
+                    row = dict(id=found_id, itemId=found_id, name=title, imageUrl=picture,
+                               affiliateUrl=link, productUrl=url, featured=False)
+                    label = category(row)
+                    if not label or found_variation:
+                        continue
+                    try:
+                        row['_observation'] = extract(body, found_id, url)
+                    except Unconfirmed:
+                        continue
+                    row['category'] = label
+                    rows.append(row)
+                if not rows:
+                    raise ValueError('Lista sem produtos tech com cartão exato confirmado')
+                print('Produtos tech confirmados na lista:', len(rows))
+                return rows
+
+            if len(candidates) != 1:
+                raise ValueError('Página sem anúncio identificável e imagem confirmada')
+            (item_id, variation), (product_url, name, image) = next(iter(candidates.items()))
+            observation = extract(body, item_id, product_url)
+    if expected_item_id is not None and item_id != expected_item_id:
+        raise ValueError('Destino do link difere do anuncio confirmado')
     ip = urlsplit(image)
     if not name or len(name) > 300 or ip.scheme != 'https' or not (ip.hostname or '').endswith('.mlstatic.com'):
         raise ValueError('Título/imagem não confirmados; página pode estar bloqueada')
@@ -227,8 +244,11 @@ def main():
     if syncing and not links:
         print('Sem listas cadastradas para descobrir novos produtos')
         return
+    expected_ids = {}
     if not links:
-        links = catalogo.read_json(ROOT / 'integracoes/mercadolivre/cadastro-pendente.json')['links']
+        pending = catalogo.read_json(ROOT / 'integracoes/mercadolivre/cadastro-pendente.json')
+        links = pending['links']
+        expected_ids = pending.get('expectedItemIds', {})
     client = None
     try:
         client = Client()
@@ -251,7 +271,11 @@ def main():
             except Exception as exc:
                 print('Lista preservada sem importar novos itens:', str(exc))
     else:
-        updated, archive = prepare(current, archive, links, datetime.now(timezone.utc), verifier=verify)
+        updated, archive = prepare(
+            current, archive, links, datetime.now(timezone.utc),
+            resolver=lambda link: resolve(link, expected_ids.get(link)),
+            verifier=verify,
+        )
     if updated == current:
         print('Nenhum novo produto; catálogo preservado')
         return
