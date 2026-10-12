@@ -17,6 +17,14 @@ Produtos sem desconto ficam cadastrados fora da vitrine e são consultados novam
 
 Não foi realizada validação ponta a ponta com um novo link do proprietário. O painel confirma o envio da solicitação, não o sucesso do cadastro. Consulte o resultado da execução antes de divulgar o produto.
 
+## Link de produto que abre um perfil público
+
+Alguns links gerados para um anúncio individual abrem a página social do afiliado, com um produto principal e recomendações abaixo. **O cadastro automático nunca deve atribuir o mesmo link às recomendações.**
+
+Para esses casos, depois que o proprietário testar o botão "Ir para produto" e conferir o anúncio exato, o cadastro pode ser solicitado pelo arquivo `integracoes/mercadolivre/cadastro-pendente.json`, com o campo `expectedItemIds` associando o link oficial ao ID `MLB...` confirmado. O importador seleciona exclusivamente o cartão que tiver esse ID, valida o preço do cartão e rejeita a operação se o anúncio não puder ser identificado. O painel de cadastro comum continua recusando perfis sem identificação explícita.
+
+O ID confirmado pelo proprietário não substitui a checagem de preço nem garante comissão. Links de listas identificadas continuam seguindo a rotina própria.
+
 ## Listas públicas de afiliado
 
 Apenas links que resolvem para uma **lista explicitamente identificada** (com `/lists/` no destino) podem cadastrar múltiplos anúncios. Links que redirecionam ao **perfil público do afiliado** (`/social/...` sem `/lists/`) exibem recomendações e **não comprovam** que o link de afiliado corresponde a cada anúncio. O cadastro deve rejeitá-los para não atribuir o mesmo link a produtos diferentes. Para um produto individual, gere o link direto do anúncio pela ferramenta oficial de afiliados.
