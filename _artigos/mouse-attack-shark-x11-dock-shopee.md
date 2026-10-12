@@ -19,7 +19,9 @@ image_source: "https://shopee.com.br/Mouse-Attack-Shark-X11-Bluetooth-para-noteb
 catalog_product_id: "prod_sp_48360418130"
 ---
 
-> **Transparência:** este conteúdo contém link de afiliado da Shopee. Podemos receber comissão sobre compras elegíveis sem custo extra por esse vínculo. **Não fizemos teste físico**, nem confirmamos o estoque ou o preço atual. As características mencionadas do anúncio precisam ser conferidas na variação escolhida.
+<p class="shopee-disclosure"><strong>Publicidade:</strong> este artigo contém links de afiliado da Shopee.</p>
+
+{% include link-shopee.html item_id=page.shopee_item_id placement="top" %}
 
 {% include foto-shopee.html %}
 
@@ -38,13 +40,11 @@ Quem joga no PC e quer organizar a mesa com menos cabos e uma base para guardar 
 - O título menciona 63 g e 22.000 DPI; peça o modelo do sensor e confirme esses números na descrição da variante.
 - Confira se dock, receptor e cabo estão incluídos e quais são as condições de garantia.
 
-## Limitações importantes
+## Antes de decidir
 
 DPI máximo não é sinônimo de precisão. Não medimos latência, autonomia nem desempenho do sensor.
 
-## Preço: cuidado com ofertas antigas
-
-O CSV exportado em **12/10/2026** registra este anúncio com o valor de **R$ 149,89** na loja **Brand Choice**. É uma fotografia da exportação, não um preço verificado em tempo real. Não usamos esse número como promessa de desconto, menor preço ou estoque garantido. Confira frete, meios de pagamento, variação do produto e avaliações recentes no próprio anúncio.
+<p class="shopee-fineprint">Preço, frete e estoque podem mudar. Confira o valor final no anúncio antes de comprar.</p>
 
 ## Pergunta frequente
 
@@ -56,8 +56,6 @@ Pode servir, mas depende da pegada, do sensor e da conexão. Consulte testes ind
 
 {% include link-shopee.html item_id=page.shopee_item_id %}
 
-## Como elaboramos este guia
-
-O nome comercial, preço de referência, vendedor e URL vieram de uma exportação do programa de afiliados da Shopee em 12/10/2026. **Não consultamos manual técnico nem recebemos amostra para teste.** O responsável pelo MiraDesconto confirmou o redirecionamento do link em navegador. A compra só gera comissão se atender às regras do programa.
+<p class="shopee-fineprint"><strong>Sobre este guia:</strong> informações do anúncio e exportação da Shopee de 12/10/2026; não realizamos testes físicos do produto.</p>
 
 Confira também [outros guias do MiraDesconto]({{ '/blog/monitor-para-setup-como-comparar/' | relative_url }}) para comparar opções.

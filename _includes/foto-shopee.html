@@ -2,6 +2,6 @@
 {% if page.custom_image and page.platform == "shopee" %}
 <figure class="buy-guide-card">
   <div class="product-media"><img src="{{ page.custom_image | escape }}" alt="{{ page.title | escape }} — imagem da galeria do anúncio na Shopee" width="640" height="640" loading="lazy" decoding="async"></div>
-  <figcaption><small>Fotografia da galeria do anúncio Shopee. Cor, kit e acessórios podem variar: confira a opção selecionada antes de comprar.</small></figcaption>
+  <figcaption class="shopee-photo-note"><small>Foto do anúncio. Confira a variação escolhida na loja.</small></figcaption>
 </figure>
 {% endif %}
