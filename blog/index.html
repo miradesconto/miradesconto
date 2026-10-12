@@ -19,7 +19,7 @@ layout: null
 <meta property="og:url" content="https://miradesconto.com.br/blog/">
 <meta property="og:image" content="https://miradesconto.com.br/blog/social.png">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="MiraDesconto Editorial"><meta name="twitter:description" content="Guias, comparativos e reviews para comprar tecnologia com mais clareza."><meta name="twitter:image" content="https://miradesconto.com.br/blog/social.png">
-<link rel="stylesheet" href="blog.css?v=20261006editorial3"><link rel="stylesheet" href="artigo.css">
+<link rel="stylesheet" href="blog.css?v=20261012shopee-cta1"><link rel="stylesheet" href="artigo.css?v=20261012shopee-cta1">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://miradesconto.com.br/#organization","name":"MiraDesconto","url":"https://miradesconto.com.br/"},{"@type":"CollectionPage","@id":"https://miradesconto.com.br/blog/#page","url":"https://miradesconto.com.br/blog/","name":"MiraDesconto Editorial","description":"Guias de compra, comparativos e reviews de tecnologia.","inLanguage":"pt-BR","publisher":{"@id":"https://miradesconto.com.br/#organization"}}]}</script>
 <link rel="stylesheet" href="../compra.css"><link rel="stylesheet" href="../analytics.css">
 </head>
@@ -101,7 +101,15 @@ layout: null
             <span class="editorial-category">Guia</span>
             <h3><a href="{{ entry.url | relative_url }}">{{ entry.title | escape }}</a></h3>
             <p>{{ entry.resumo | escape }}</p>
+            {% if entry.platform == 'shopee' and entry.affiliate_url %}
+            <div class="editorial-card-actions">
+              <a class="editorial-shop-cta" href="{{ entry.affiliate_url | escape }}" target="_blank" rel="sponsored nofollow noopener noreferrer" data-item-id="{{ entry.shopee_item_id | escape }}" data-item-name="{{ entry.title | escape }}" data-link-location="blog-shopee-card">Ver preço na Shopee <span aria-hidden="true">↗</span></a>
+              <a class="editorial-read" href="{{ entry.url | relative_url }}">Ler análise <span aria-hidden="true">→</span></a>
+              <small class="editorial-card-affiliate">Link de afiliado</small>
+            </div>
+            {% else %}
             <a class="editorial-read" href="{{ entry.url | relative_url }}">Ler guia <span aria-hidden="true">→</span></a>
+            {% endif %}
           </div>
         </article>
         {% endfor %}
@@ -136,7 +144,15 @@ layout: null
             <span class="editorial-category">Comparativo</span>
             <h3><a href="{{ entry.url | relative_url }}">{{ entry.title | escape }}</a></h3>
             <p>{{ entry.resumo | escape }}</p>
+            {% if entry.platform == 'shopee' and entry.affiliate_url %}
+            <div class="editorial-card-actions">
+              <a class="editorial-shop-cta" href="{{ entry.affiliate_url | escape }}" target="_blank" rel="sponsored nofollow noopener noreferrer" data-item-id="{{ entry.shopee_item_id | escape }}" data-item-name="{{ entry.title | escape }}" data-link-location="blog-shopee-card">Ver preço na Shopee <span aria-hidden="true">↗</span></a>
+              <a class="editorial-read" href="{{ entry.url | relative_url }}">Ler análise <span aria-hidden="true">→</span></a>
+              <small class="editorial-card-affiliate">Link de afiliado</small>
+            </div>
+            {% else %}
             <a class="editorial-read" href="{{ entry.url | relative_url }}">Ver comparação <span aria-hidden="true">→</span></a>
+            {% endif %}
           </div>
         </article>
         {% endfor %}
@@ -171,7 +187,15 @@ layout: null
             <span class="editorial-category">Review</span>
             <h3><a href="{{ entry.url | relative_url }}">{{ entry.title | escape }}</a></h3>
             <p>{{ entry.resumo | escape }}</p>
+            {% if entry.platform == 'shopee' and entry.affiliate_url %}
+            <div class="editorial-card-actions">
+              <a class="editorial-shop-cta" href="{{ entry.affiliate_url | escape }}" target="_blank" rel="sponsored nofollow noopener noreferrer" data-item-id="{{ entry.shopee_item_id | escape }}" data-item-name="{{ entry.title | escape }}" data-link-location="blog-shopee-card">Ver preço na Shopee <span aria-hidden="true">↗</span></a>
+              <a class="editorial-read" href="{{ entry.url | relative_url }}">Ler análise <span aria-hidden="true">→</span></a>
+              <small class="editorial-card-affiliate">Link de afiliado</small>
+            </div>
+            {% else %}
             <a class="editorial-read" href="{{ entry.url | relative_url }}">Ler análise <span aria-hidden="true">→</span></a>
+            {% endif %}
           </div>
         </article>
         {% endfor %}
