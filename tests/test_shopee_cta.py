@@ -16,8 +16,16 @@ class ShopeeCtaTests(unittest.TestCase):
         text=(ROOT/"blog/index.html").read_text(encoding="utf-8")
         self.assertEqual(text.count("editorial-shop-cta"),3)
         self.assertEqual(text.count("blog-shopee-card"),3)
-        self.assertEqual(text.count("editorial-card-affiliate"),3)
-        self.assertEqual(text.count('rel="sponsored nofollow noopener noreferrer"'),3)
+        # Três modelos de card para cada loja; Shopee permanece independente.
+        self.assertEqual(text.count("editorial-card-affiliate"),6)
+        self.assertEqual(text.count('rel="sponsored nofollow noopener noreferrer"'),6)
+        self.assertEqual(text.count("editorial-ml-cta"),3)
+        self.assertEqual(text.count("blog-mercadolivre-card"),3)
+        self.assertEqual(text.count("assign buy_product = nil"),3)
+        self.assertIn("candidate_url != 'https://meli.la/1NguveN'",text)
+        self.assertIn("candidate_url != 'https://meli.la/1pyBZm8'",text)
+        css=(ROOT/"blog/blog.css").read_text(encoding="utf-8")
+        self.assertIn(".editorial-card-body .editorial-ml-cta",css)
     def test_button_is_styled_and_affiliation_clear(self):
         snippet=(ROOT/"_includes/link-shopee.html").read_text(encoding="utf-8")
         self.assertIn("shopee-cta-button",snippet)
