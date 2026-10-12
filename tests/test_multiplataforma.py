@@ -43,7 +43,9 @@ class MultiplataformaTests(unittest.TestCase):
             self.assertIn(item_id, by_id)
             self.assertEqual(offer["affiliate_url"], by_id[item_id]["affiliate_url"])
             self.assertEqual(offer["product_url"], by_id[item_id]["product_url"])
-            self.assertIsNone(product["image_url"])
+            self.assertEqual(product["image_url"], by_id[item_id]["image_url"])
+            self.assertTrue(product["image_url"].startswith("https://down-br.img.susercontent.com/file/"))
+            self.assertIn(item_id, product["image_source"])
             self.assertIsNone(offer["in_stock"])
             self.assertEqual(offer["price_status"], "unverified")
             posts = [f for f in (ROOT / "_artigos").glob("*-shopee.md")
@@ -53,6 +55,8 @@ class MultiplataformaTests(unittest.TestCase):
             self.assertIn('status: "rascunho"', frontmatter)
             self.assertIn('affiliate_url: "' + offer["affiliate_url"] + '"', frontmatter)
             self.assertIn('catalog_product_id: "' + product["id"] + '"', frontmatter)
+            self.assertIn('custom_image: "' + product["image_url"] + '"', frontmatter)
+            self.assertIn("include foto-shopee.html", posts[0].read_text(encoding="utf-8"))
 
     def test_shopee_select_and_decimal(self):
         self.assertEqual(parse_brl("R$ 1.299,90"), 1299.9)
