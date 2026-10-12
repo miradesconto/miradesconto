@@ -43,19 +43,53 @@ jobs:
       - name: Gerar e verificar publicação
         run: |
           python integracoes/automacao/atualizar_home.py
-          python integracoes/automacao/cache_bust.py
           python integracoes/catalogo.py check
           python integracoes/automacao/site_health.py
           node test-catalogo.cjs
       - name: Salvar cadastro
+        id: save
+        shell: bash
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add dados/catalogo.json links-afiliados.json produtos.js catalogo _data/produtos.json index.html
-          git diff --cached --quiet && exit 0
+          if git diff --cached --quiet; then
+            echo 'changed=false' >> "$GITHUB_OUTPUT"
+            echo 'Nenhuma mudança real no cadastro; sem commit nem publicação.'
+            exit 0
+          fi
+          python integracoes/automacao/cache_bust.py
+          git add index.html
           git commit -m 'Cadastra novos links oficiais de afiliado'
           git push origin HEAD:main
+          echo 'changed=true' >> "$GITHUB_OUTPUT"
       - name: Publicar
+        if: steps.save.outputs.changed == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds" --silent
+        run: |
+          python - <<'PY'
+          import os
+          from urllib.error import HTTPError, URLError
+          from urllib.request import Request, urlopen
+
+          request = Request(
+              "https://api.github.com/repos/" + os.environ["GITHUB_REPOSITORY"] + "/pages/builds",
+              data=b"{}",
+              headers={
+                  "Authorization": "Bearer " + os.environ["GH_TOKEN"],
+                  "Accept": "application/vnd.github+json",
+                  "Content-Type": "application/json",
+              },
+              method="POST",
+          )
+          try:
+              with urlopen(request, timeout=30) as response:
+                  if response.status != 201:
+                      raise SystemExit("Resposta inesperada ao solicitar publicação: HTTP " + str(response.status))
+                  print("Publicação solicitada: HTTP", response.status)
+          except HTTPError as exc:
+              raise SystemExit("Falha ao solicitar publicação: HTTP " + str(exc.code)) from None
+          except URLError:
+              raise SystemExit("Falha de conexão ao solicitar publicação") from None
+          PY
