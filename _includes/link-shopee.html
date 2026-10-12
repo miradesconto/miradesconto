@@ -1,9 +1,11 @@
-{% comment %}Fase 1: consulta direta ao CSV da Shopee, isolada do catálogo do ML. Não pressupõe estoque/preço atual.{% endcomment %}
+{% comment %}URL de afiliado do CSV oficial do titular. Preço e disponibilidade na loja. {% endcomment %}
 {% assign item_matches = site.data.shopee_ofertas | where: "item_id", include.item_id %}
 {% assign shopee_offer = item_matches | first %}
 {% if shopee_offer %}
-<a class="price-cta" href="{{ shopee_offer.affiliate_url | escape }}" target="_blank" rel="sponsored nofollow noopener noreferrer" data-item-id="{{ shopee_offer.item_id | escape }}" data-item-name="{{ shopee_offer.title | escape }}" data-link-location="shopee-article">Ver produto na Shopee ↗</a>
-<p><small>Loja informada no CSV: {{ shopee_offer.merchant | escape }}. O preço registrado na exportação de 12/10/2026 foi R$ {{ shopee_offer.price_brl | escape }}. <strong>Não é cotação atual nem confirmação de estoque.</strong> Verifique a variante, frete, cupom e preço final na Shopee.</small></p>
+<div class="shopee-action{% if include.placement == 'top' %} shopee-action--top{% endif %}">
+  <a class="price-cta shopee-cta-button" href="{{ shopee_offer.affiliate_url | escape }}" target="_blank" rel="sponsored nofollow noopener noreferrer" data-item-id="{{ shopee_offer.item_id | escape }}" data-item-name="{{ shopee_offer.title | escape }}" data-link-location="shopee-article-{{ include.placement | default: 'final' }}">Ver preço na Shopee <span aria-hidden="true">↗</span></a>
+  <p class="shopee-action-note">Link de afiliado · Confira preço, frete e disponibilidade na loja.</p>
+</div>
 {% else %}
-<p>O link deste produto não está disponível no catálogo editorial da Shopee.</p>
+<p>O anúncio não está disponível no catálogo editorial da Shopee.</p>
 {% endif %}

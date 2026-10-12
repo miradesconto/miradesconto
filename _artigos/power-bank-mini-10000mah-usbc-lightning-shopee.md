@@ -19,7 +19,9 @@ image_source: "https://shopee.com.br/Carregador-Port%C3%A1til-Mini-Power-Bank-10
 catalog_product_id: "prod_sp_22499247158"
 ---
 
-> **Transparência:** este conteúdo contém link de afiliado da Shopee. Podemos receber comissão sobre compras elegíveis sem custo extra por esse vínculo. **Não fizemos teste físico**, nem confirmamos o estoque ou o preço atual. As características mencionadas do anúncio precisam ser conferidas na variação escolhida.
+<p class="shopee-disclosure"><strong>Publicidade:</strong> este artigo contém links de afiliado da Shopee.</p>
+
+{% include link-shopee.html item_id=page.shopee_item_id placement="top" %}
 
 {% include foto-shopee.html %}
 
@@ -38,13 +40,11 @@ Pessoas que passam parte do dia fora de casa e precisam de carga extra para o te
 - Veja dimensões, peso, proteções elétricas e reputação do vendedor.
 - Considere perdas de conversão: a capacidade útil será inferior à capacidade nominal das células.
 
-## Limitações importantes
+## Antes de decidir
 
 Não é possível prometer duas recargas completas para qualquer smartphone com base apenas em '10.000 mAh'.
 
-## Preço: cuidado com ofertas antigas
-
-O CSV exportado em **12/10/2026** registra este anúncio com o valor de **R$ 31,99** na loja **SHR ELETRONICOS**. É uma fotografia da exportação, não um preço verificado em tempo real. Não usamos esse número como promessa de desconto, menor preço ou estoque garantido. Confira frete, meios de pagamento, variação do produto e avaliações recentes no próprio anúncio.
+<p class="shopee-fineprint">Preço, frete e estoque podem mudar. Confira o valor final no anúncio antes de comprar.</p>
 
 ## Pergunta frequente
 
@@ -56,8 +56,6 @@ Depende da conexão efetivamente fornecida, da potência e da compatibilidade do
 
 {% include link-shopee.html item_id=page.shopee_item_id %}
 
-## Como elaboramos este guia
-
-O nome comercial, preço de referência, vendedor e URL vieram de uma exportação do programa de afiliados da Shopee em 12/10/2026. **Não consultamos manual técnico nem recebemos amostra para teste.** O responsável pelo MiraDesconto confirmou o redirecionamento do link em navegador. A compra só gera comissão se atender às regras do programa.
+<p class="shopee-fineprint"><strong>Sobre este guia:</strong> informações do anúncio e exportação da Shopee de 12/10/2026; não realizamos testes físicos do produto.</p>
 
 Confira também [outros guias do MiraDesconto]({{ '/blog/carregador-usb-c-iphone-como-escolher/' | relative_url }}) para comparar opções.

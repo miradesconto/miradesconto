@@ -24,3 +24,15 @@
 .article-radar{max-width:760px;margin:0 auto 30px;padding:18px 20px;border:1px solid var(--line);border-left:3px solid var(--green);border-radius:12px;background:#f7fbf8;display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center}
 .article-radar>div{display:flex;flex-direction:column;gap:3px}.article-radar>div span{font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--green)}.article-radar>div strong{font-size:15px;color:var(--ink)}.article-radar p{margin:0;color:var(--muted);font-size:13px;line-height:1.55}.article-radar p b{color:var(--ink)}.article-radar a{white-space:nowrap;color:var(--green);font-size:12px;font-weight:800;text-decoration:none}.article-radar a:hover{text-decoration:underline}
 @media(max-width:760px){.article-radar{grid-template-columns:1fr;gap:10px}}
+
+/* CTA editorial Shopee: compra visível com divulgação publicitária legível. */
+.article-body .shopee-disclosure{margin:0 0 12px;color:#526267;font-size:13px;line-height:1.55}
+.article-body .shopee-action{margin:15px 0 24px}
+.article-body .shopee-action--top{margin-top:12px;margin-bottom:24px}
+.article-body .shopee-cta-button{display:inline-flex;justify-content:center;align-items:center;gap:10px;min-height:52px;width:100%;max-width:460px;box-sizing:border-box;padding:14px 22px;border-radius:11px;background:#bd3e1d;color:#fff!important;font-size:17px;line-height:1.35;font-weight:800;text-decoration:none;text-align:center;box-shadow:0 6px 18px rgba(119,45,24,.16);transition:background-color .16s ease,transform .16s ease}
+.article-body .shopee-cta-button:hover{background:#993114;color:#fff!important;text-decoration:none;transform:translateY(-1px)}
+.article-body .shopee-cta-button:focus-visible{outline:3px solid #0d6247;outline-offset:3px}
+.article-body .shopee-action-note,.article-body .shopee-fineprint{margin:8px 0 16px;font-size:12.5px;line-height:1.6;color:#56646a}
+.article-body .shopee-action-note{margin:8px 0 0}
+.article-body .shopee-photo-note{font-size:12px;line-height:1.5;color:#56646a}
+@media(max-width:760px){.article-body .shopee-action{margin:12px 0 20px}.article-body .shopee-cta-button{max-width:none;min-height:54px;font-size:16px}.article-body .shopee-disclosure{font-size:13px}}
