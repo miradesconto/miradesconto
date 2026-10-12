@@ -10,7 +10,7 @@ import catalogo
 class PurchaseContentTest(unittest.TestCase):
     def test_shared_list_destinations_identify_each_product(self):
         data=catalogo.public_data(catalogo.load())
-        shared=[p for p in data['products'] if p['affiliateUrl']=='https://meli.la/1NguveN']
+        shared=[p for p in data['products'] if p['affiliateUrl']=='https://meli.la/1NguveN' and p.get('affiliateLinkType') != 'product']
         self.assertGreater(len(shared),1)
         self.assertEqual(len({p['offerUrl'] for p in shared}),len(shared))
         for p in shared:
@@ -33,8 +33,15 @@ class PurchaseContentTest(unittest.TestCase):
         for id,p in curated.items():
             for key in ('name','imageUrl','affiliateUrl','category'):
                 self.assertEqual(p[key],catalog[id].get(key,''),(id,key))
-            self.assertEqual(p['list'],p['affiliateUrl'] in lists or p['affiliateUrl']=='https://meli.la/1NguveN')
+            self.assertEqual(p['list'],catalog[id].get('affiliateLinkType') != 'product' and (p['affiliateUrl'] in lists or p['affiliateUrl']=='https://meli.la/1NguveN'))
             self.assertNotIn('price',p,'Prices must come from live generated catalog, never editorial snapshots')
+
+    def test_owner_confirmed_individual_link_overrides_shared_heuristic(self):
+        data=catalogo.public_data(catalogo.load())
+        p=next(p for p in data['products'] if p['id']=='MLB4562931826')
+        self.assertEqual(p['affiliateUrl'],'https://meli.la/1NguveN')
+        self.assertEqual(p['affiliateLinkType'],'product')
+        self.assertNotIn('offerUrl',p)
 
     def test_unique_useful_purchase_pages(self):
         files=list((ROOT/'_compras').glob('*.md'))

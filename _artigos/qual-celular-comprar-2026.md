@@ -74,7 +74,7 @@ Na nossa análise de ficha técnica, o Edge 60 Fusion se destaca por entregar **
 > **❌ O que poderia melhorar:** RAM Boost não substitui RAM física; jogos pesados devem ser avaliados por testes independentes do modelo exato.
 
 <p class="buyer-fit"><strong>Ideal para:</strong> quem quer armazenamento amplo, boa tela e recursos premium sem entrar no preço dos flagships.</p>
-<a class="price-cta" href="https://meli.la/1pyBZm8" data-item-id="MLB4027229133" data-item-name="Motorola Edge 60 Fusion 5G" data-link-location="guide-card" target="_blank" rel="sponsored nofollow noopener noreferrer">Conferir preço atualizado</a>
+<a class="price-cta" href="https://meli.la/12fec17" data-item-id="MLB4027229133" data-item-name="Motorola Edge 60 Fusion 5G" data-link-location="guide-card" target="_blank" rel="sponsored nofollow noopener noreferrer">Conferir preço atualizado</a>
 </article>
 
 <article id="galaxy-s25-fe" class="buy-guide-card" markdown="1">
@@ -118,7 +118,7 @@ Aqui o diferencial de compra não é apenas “ser mais novo”. A combinação 
 > **❌ O que poderia melhorar:** o preço premium só faz sentido se você aproveitar armazenamento, formato compacto e recursos da linha principal.
 
 <p class="buyer-fit"><strong>Ideal para:</strong> quem quer Android premium atual, bastante armazenamento e tamanho menor que os modelos Ultra.</p>
-<a class="price-cta" href="https://meli.la/1pyBZm8" data-item-id="MLB6287289882" data-item-name="Samsung Galaxy S26 512GB" data-link-location="guide-card" target="_blank" rel="sponsored nofollow noopener noreferrer">Conferir preço atualizado</a>
+<a class="price-cta" href="https://meli.la/1rEEXZK" data-item-id="MLB6287289882" data-item-name="Samsung Galaxy S26 512GB" data-link-location="guide-card" target="_blank" rel="sponsored nofollow noopener noreferrer">Conferir preço atualizado</a>
 </article>
 
 <article id="iphone-15" class="buy-guide-card" markdown="1">

@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCE = Path('dados/catalogo.json')
 MIN_PRODUCTS = 450
 COMPACT_KEYS = ('id', 'name', 'category', 'price', 'oldPrice', 'discount',
-                'affiliateUrl', 'offerUrl', 'imageUrl', 'itemId', 'catalogProductId', 'lastUpdated', 'rank', 'featured', 'available', 'priceCheck', 'availabilityStatus')
+                'affiliateUrl', 'affiliateLinkType', 'offerUrl', 'imageUrl', 'itemId', 'catalogProductId', 'lastUpdated', 'rank', 'featured', 'available', 'priceCheck', 'availabilityStatus')
 HEADER = '// Dados do catálogo; preços e status podem ser atualizados pela API oficial do Mercado Livre.\n'
 
 
@@ -134,7 +134,7 @@ def public_data(catalog):
     for p in data['products']:
         p.pop('offerUrl', None)
         # Individual short links stay intact. Shared lists need an exact tracked destination.
-        if p.get('affiliateUrl') == 'https://meli.la/1NguveN' or p.get('affiliateUrl') in data.get('affiliateSources', []) or counts.get(p.get('affiliateUrl'), 0) > 1:
+        if p.get('affiliateLinkType') != 'product' and (p.get('affiliateUrl') == 'https://meli.la/1NguveN' or p.get('affiliateUrl') in data.get('affiliateSources', []) or counts.get(p.get('affiliateUrl'), 0) > 1):
             destination = exact_offer_url(p)
             if destination:
                 p['offerUrl'] = destination
