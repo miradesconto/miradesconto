@@ -2,7 +2,7 @@
 from datetime import datetime, timezone
 import math
 
-MAX_PRICE_AGE_HOURS = 24
+MAX_PRICE_AGE_HOURS = 2
 
 
 def usable_price(product, now=None):

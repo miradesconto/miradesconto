@@ -86,6 +86,11 @@ function makeCard(p) {
         content.append(element('div','price-age','PREÇO REGISTRADO EM '+date));
     }
     content.append(element('div','price',money(recent ? p.price : lastPrice)));
+    if (recent) {
+        const checked = new Date(p.priceCheck.checkedAt).toLocaleString('pt-BR', {timeZone:'America/Sao_Paulo'});
+        content.append(element('p','store','Conferido em ' + checked + ' (Brasília)'));
+        content.append(element('p','store','Pix, saldo Mercado Pago e cupons podem alterar o valor.'));
+    }
     content.append(element('div','store',!recent && lastPrice !== null
         ? 'Valor histórico · confirme preço, frete e disponibilidade na loja'
         : p.store || 'Ver loja'));
@@ -216,7 +221,7 @@ document.querySelector('.logo').addEventListener('click',resetFilters);
 $('loadMore').addEventListener('click',()=>{visibleCount+=24;renderProducts(true);});
 $('selectionNotice').textContent = 'Seleção renovada a cada hora, com ofertas de diferentes categorias.';
 $('dataNotice').textContent = source
-    ? 'Preços verificados nas últimas 24 horas. Confirme frete e disponibilidade na loja.'
+    ? 'Preços conferidos há no máximo 2 horas. Pix e cupons podem alterar o valor; confirme as condições na loja.'
     : 'Não foi possível carregar as ofertas. Verifique se produtos.js está na mesma pasta do site.';
 // Links editoriais podem consultar um registro antigo identificado, com aviso explícito.
 if (requestedProduct) {

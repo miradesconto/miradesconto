@@ -17,7 +17,7 @@
 <aside class="notice"><p>Podemos receber comissão por compras elegíveis nos links de afiliado. Análise editorial de informações cadastradas, sem teste prático. <a href="{{ '/transparencia.html' | relative_url }}">Nossa transparência</a>.</p></aside>
 <div class="article-body">{{ content }}</div>
 <section class="related-products" id="ofertas-relacionadas"><h2>{{ page.offer_title | default: 'Opções cadastradas e consulta de preço' }}</h2>
-{% if page.produtos.size > 0 %}<p>Compare a configuração completa. Preços só aparecem quando passam pela verificação das últimas 24 horas; confirme frete, vendedor e disponibilidade no destino.</p><div class="buy-grid">
+{% if page.produtos.size > 0 %}<p>Compare a configuração completa. Preços só aparecem quando passam pela verificação das últimas 2 horas; confirme frete, vendedor e disponibilidade no destino.</p><div class="buy-grid">
 {% for id in page.produtos %}{% assign p = site.data.compra_products[id] %}{% if p %}<section class="buy-card" data-product-id="{{ id }}">
 {% if p.imageUrl %}<img src="{{ p.imageUrl | escape }}" alt="{{ p.name | escape }}" width="320" height="240" loading="lazy">{% endif %}
 <h3>{{ p.name | escape }}</h3><p class="buy-price" data-price aria-live="polite">Preço atual a confirmar na loja.</p>

@@ -24,10 +24,10 @@ class Prices(unittest.TestCase):
         r = h.observe(self.p,self.c,NOW)
         self.assertEqual((r['price'],r['discount'],r['id'],r['affiliateUrl']), (80,20,ID,self.p['affiliateUrl']))
         self.assertTrue(usable_price(r,NOW))
-        self.assertEqual(h.observe(r,self.c,NOW+timedelta(hours=1)),r)
-        renewed = h.observe(r,self.c,NOW+timedelta(hours=12))
+        self.assertEqual(h.observe(r,self.c,NOW+timedelta(minutes=30)),r)
+        renewed = h.observe(r,self.c,NOW+timedelta(hours=1))
         self.assertNotEqual(renewed['lastUpdated'],r['lastUpdated'])
-        self.assertTrue(usable_price(renewed,NOW+timedelta(hours=25)))
+        self.assertTrue(usable_price(renewed,NOW+timedelta(hours=2)))
         self.assertEqual(self.p['price'],100)
 
     def test_buy_box(self):

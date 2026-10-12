@@ -215,7 +215,7 @@ def observe(product, client, now):
     if same:
         try:
             age = (now - datetime.fromisoformat(previous['checkedAt'])).total_seconds()
-            if 0 <= age < 12 * 3600:
+            if 0 <= age < 3600:
                 return result
         except (KeyError, ValueError, TypeError):
             pass

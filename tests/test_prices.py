@@ -109,8 +109,8 @@ class PriceTests(unittest.TestCase):
 
     def test_old_future_unverified_and_altered_prices_are_unusable(self):
         p,_=self.refreshed()
-        self.assertTrue(usable_price(p,NOW+timedelta(hours=24)))
-        self.assertFalse(usable_price(p,NOW+timedelta(hours=24,seconds=1)))
+        self.assertTrue(usable_price(p,NOW+timedelta(hours=2)))
+        self.assertFalse(usable_price(p,NOW+timedelta(hours=2,seconds=1)))
         self.assertFalse(usable_price(p,NOW-timedelta(seconds=1)))
         self.assertFalse(usable_price(self.product,NOW))
         for field,value in [('price',99.9),('oldPrice',999),('available',False)]:
