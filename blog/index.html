@@ -19,7 +19,7 @@ layout: null
 <meta property="og:url" content="https://miradesconto.com.br/blog/">
 <meta property="og:image" content="https://miradesconto.com.br/blog/social.png">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="MiraDesconto Editorial"><meta name="twitter:description" content="Guias, comparativos e reviews para comprar tecnologia com mais clareza."><meta name="twitter:image" content="https://miradesconto.com.br/blog/social.png">
-<link rel="stylesheet" href="blog.css?v=20261012shopee-cta1"><link rel="stylesheet" href="artigo.css?v=20261012shopee-cta1">
+<link rel="stylesheet" href="blog.css?v=20261012mlcta2"><link rel="stylesheet" href="artigo.css?v=20261012shopee-cta1">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://miradesconto.com.br/#organization","name":"MiraDesconto","url":"https://miradesconto.com.br/"},{"@type":"CollectionPage","@id":"https://miradesconto.com.br/blog/#page","url":"https://miradesconto.com.br/blog/","name":"MiraDesconto Editorial","description":"Guias de compra, comparativos e reviews de tecnologia.","inLanguage":"pt-BR","publisher":{"@id":"https://miradesconto.com.br/#organization"}}]}</script>
 <link rel="stylesheet" href="../compra.css"><link rel="stylesheet" href="../analytics.css">
 </head>
@@ -87,6 +87,17 @@ layout: null
         {% for entry in guides %}
         {% assign hero_id = entry.produtos | first %}
         {% assign product = site.data.editorial_products[hero_id] | default: site.data.produtos[hero_id] %}
+        {% assign buy_product = nil %}
+        {% assign buy_id = nil %}
+        {% for candidate_id in entry.produtos %}
+          {% assign candidate_product = site.data.editorial_products[candidate_id] | default: site.data.produtos[candidate_id] %}
+          {% assign candidate_url = candidate_product.affiliateUrl | default: '' %}
+          {% if candidate_url contains 'https://meli.la/' and candidate_url != 'https://meli.la/1NguveN' and candidate_url != 'https://meli.la/1pyBZm8' %}
+            {% assign buy_product = candidate_product %}
+            {% assign buy_id = candidate_id %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
         <article class="editorial-card-clean">
           <a class="editorial-card-media" href="{{ entry.url | relative_url }}" aria-label="Abrir {{ entry.title | escape }}">
             {% if product and product.imageUrl %}
@@ -105,6 +116,13 @@ layout: null
             <div class="editorial-card-actions">
               <a class="editorial-shop-cta" href="{{ entry.affiliate_url | escape }}" target="_blank" rel="sponsored nofollow noopener noreferrer" data-item-id="{{ entry.shopee_item_id | escape }}" data-item-name="{{ entry.title | escape }}" data-link-location="blog-shopee-card">Ver preço na Shopee <span aria-hidden="true">↗</span></a>
               <a class="editorial-read" href="{{ entry.url | relative_url }}">Ler análise <span aria-hidden="true">→</span></a>
+              <small class="editorial-card-affiliate">Link de afiliado</small>
+            </div>
+            {% elsif buy_product and buy_product.affiliateUrl %}
+            <div class="editorial-card-actions">
+              {% if entry.produtos.size > 1 %}<small class="editorial-card-offer-target">Modelo: {{ buy_product.name | truncate: 72 | escape }}</small>{% endif %}
+              <a class="editorial-ml-cta" href="{{ buy_product.affiliateUrl | escape }}" target="_blank" rel="sponsored nofollow noopener noreferrer" data-item-id="{{ buy_id | escape }}" data-item-name="{{ buy_product.name | escape }}" data-link-location="blog-mercadolivre-card">Ver preço no Mercado Livre <span aria-hidden="true">↗</span></a>
+              <a class="editorial-read" href="{{ entry.url | relative_url }}">Ler guia <span aria-hidden="true">→</span></a>
               <small class="editorial-card-affiliate">Link de afiliado</small>
             </div>
             {% else %}
@@ -130,6 +148,17 @@ layout: null
         {% for entry in comparisons %}
         {% assign hero_id = entry.produtos | first %}
         {% assign product = site.data.editorial_products[hero_id] | default: site.data.produtos[hero_id] %}
+        {% assign buy_product = nil %}
+        {% assign buy_id = nil %}
+        {% for candidate_id in entry.produtos %}
+          {% assign candidate_product = site.data.editorial_products[candidate_id] | default: site.data.produtos[candidate_id] %}
+          {% assign candidate_url = candidate_product.affiliateUrl | default: '' %}
+          {% if candidate_url contains 'https://meli.la/' and candidate_url != 'https://meli.la/1NguveN' and candidate_url != 'https://meli.la/1pyBZm8' %}
+            {% assign buy_product = candidate_product %}
+            {% assign buy_id = candidate_id %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
         <article class="editorial-card-clean">
           <a class="editorial-card-media" href="{{ entry.url | relative_url }}" aria-label="Abrir {{ entry.title | escape }}">
             {% if product and product.imageUrl %}
@@ -148,6 +177,13 @@ layout: null
             <div class="editorial-card-actions">
               <a class="editorial-shop-cta" href="{{ entry.affiliate_url | escape }}" target="_blank" rel="sponsored nofollow noopener noreferrer" data-item-id="{{ entry.shopee_item_id | escape }}" data-item-name="{{ entry.title | escape }}" data-link-location="blog-shopee-card">Ver preço na Shopee <span aria-hidden="true">↗</span></a>
               <a class="editorial-read" href="{{ entry.url | relative_url }}">Ler análise <span aria-hidden="true">→</span></a>
+              <small class="editorial-card-affiliate">Link de afiliado</small>
+            </div>
+            {% elsif buy_product and buy_product.affiliateUrl %}
+            <div class="editorial-card-actions">
+              {% if entry.produtos.size > 1 %}<small class="editorial-card-offer-target">Modelo: {{ buy_product.name | truncate: 72 | escape }}</small>{% endif %}
+              <a class="editorial-ml-cta" href="{{ buy_product.affiliateUrl | escape }}" target="_blank" rel="sponsored nofollow noopener noreferrer" data-item-id="{{ buy_id | escape }}" data-item-name="{{ buy_product.name | escape }}" data-link-location="blog-mercadolivre-card">Ver preço no Mercado Livre <span aria-hidden="true">↗</span></a>
+              <a class="editorial-read" href="{{ entry.url | relative_url }}">Ver comparação <span aria-hidden="true">→</span></a>
               <small class="editorial-card-affiliate">Link de afiliado</small>
             </div>
             {% else %}
@@ -173,6 +209,17 @@ layout: null
         {% for entry in reviews %}
         {% assign hero_id = entry.produtos | first %}
         {% assign product = site.data.editorial_products[hero_id] | default: site.data.produtos[hero_id] %}
+        {% assign buy_product = nil %}
+        {% assign buy_id = nil %}
+        {% for candidate_id in entry.produtos %}
+          {% assign candidate_product = site.data.editorial_products[candidate_id] | default: site.data.produtos[candidate_id] %}
+          {% assign candidate_url = candidate_product.affiliateUrl | default: '' %}
+          {% if candidate_url contains 'https://meli.la/' and candidate_url != 'https://meli.la/1NguveN' and candidate_url != 'https://meli.la/1pyBZm8' %}
+            {% assign buy_product = candidate_product %}
+            {% assign buy_id = candidate_id %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
         <article class="editorial-card-clean">
           <a class="editorial-card-media" href="{{ entry.url | relative_url }}" aria-label="Abrir {{ entry.title | escape }}">
             {% if product and product.imageUrl %}
@@ -190,6 +237,13 @@ layout: null
             {% if entry.platform == 'shopee' and entry.affiliate_url %}
             <div class="editorial-card-actions">
               <a class="editorial-shop-cta" href="{{ entry.affiliate_url | escape }}" target="_blank" rel="sponsored nofollow noopener noreferrer" data-item-id="{{ entry.shopee_item_id | escape }}" data-item-name="{{ entry.title | escape }}" data-link-location="blog-shopee-card">Ver preço na Shopee <span aria-hidden="true">↗</span></a>
+              <a class="editorial-read" href="{{ entry.url | relative_url }}">Ler análise <span aria-hidden="true">→</span></a>
+              <small class="editorial-card-affiliate">Link de afiliado</small>
+            </div>
+            {% elsif buy_product and buy_product.affiliateUrl %}
+            <div class="editorial-card-actions">
+              {% if entry.produtos.size > 1 %}<small class="editorial-card-offer-target">Modelo: {{ buy_product.name | truncate: 72 | escape }}</small>{% endif %}
+              <a class="editorial-ml-cta" href="{{ buy_product.affiliateUrl | escape }}" target="_blank" rel="sponsored nofollow noopener noreferrer" data-item-id="{{ buy_id | escape }}" data-item-name="{{ buy_product.name | escape }}" data-link-location="blog-mercadolivre-card">Ver preço no Mercado Livre <span aria-hidden="true">↗</span></a>
               <a class="editorial-read" href="{{ entry.url | relative_url }}">Ler análise <span aria-hidden="true">→</span></a>
               <small class="editorial-card-affiliate">Link de afiliado</small>
             </div>
