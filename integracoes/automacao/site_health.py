@@ -31,11 +31,13 @@ def valid_http(value: object) -> bool:
 def main() -> int:
     sys.path.insert(0, str(ROOT / "integracoes"))
     import catalogo
+    from qualidade import price_review_reason
     catalogo.check(ROOT)
     data = load_catalog()
     products = data["products"]
     errors: list[str] = []
     warnings: list[str] = []
+    price_review_ids: list[str] = []
 
     if data.get('niche') != 'tech' and len(products) < MIN_PRODUCTS:
         errors.append(f"catálogo caiu para {len(products)} produtos; mínimo seguro: {MIN_PRODUCTS}")
@@ -59,6 +61,10 @@ def main() -> int:
             price = 0
         if price <= 0:
             errors.append(f"{item_id or index}: preço inválido")
+        reason = price_review_reason(product)
+        if reason:
+            price_review_ids.append(item_id)
+            warnings.append(f"{item_id}: preço suspeito em revisão ({reason}); não promover")
         affiliate = str(product.get("affiliateUrl") or "")
         if not affiliate.startswith("https://meli.la/"):
             errors.append(f"{item_id or index}: link de afiliado não é meli.la oficial")
@@ -104,6 +110,8 @@ def main() -> int:
         "published_articles": published_articles,
         "article_product_refs_outside_current_catalog": stale_article_products,
         "warnings": len(warnings),
+        "prices_in_review": len(price_review_ids),
+        "price_review_ids": price_review_ids,
         "errors": errors,
         "collectedAt": data.get("collectedAt"),
     }

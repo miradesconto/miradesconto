@@ -6,7 +6,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "integracoes"))
-from qualidade import usable_price
+from qualidade import usable_price, price_review_reason
 from tech_policy import eligible as tech_eligible
 
 CATALOG = ROOT / "produtos.js"
@@ -58,7 +58,7 @@ def eligible(p):
         and str(p.get("availabilityStatus") or "") == "available"
         and str(p.get("affiliateUrl") or "").startswith("https://meli.la/")
         and str(p.get("imageUrl") or "").startswith("http")
-        and tech_eligible(p) and usable_price(p)
+        and tech_eligible(p) and usable_price(p) and not price_review_reason(p)
     )
 
 def ok(p, radar):
@@ -67,7 +67,7 @@ def ok(p, radar):
         i in (radar.get("byId") or {}) and bool(p.get("name")) and num(p.get("price")) > 0
         and str(p.get("affiliateUrl") or "").startswith("https://meli.la/")
         and str(p.get("imageUrl") or "").startswith("http")
-        and tech_eligible(p) and usable_price(p)
+        and tech_eligible(p) and usable_price(p) and not price_review_reason(p)
     )
 
 def article_for(i, arts):
