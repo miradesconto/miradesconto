@@ -1,0 +1,9 @@
+{% comment %}Fase 1: consulta direta ao CSV da Shopee, isolada do catálogo do ML. Não pressupõe estoque/preço atual.{% endcomment %}
+{% assign item_matches = site.data.shopee_ofertas | where: "item_id", include.item_id %}
+{% assign shopee_offer = item_matches | first %}
+{% if shopee_offer %}
+<a class="price-cta" href="{{ shopee_offer.affiliate_url | escape }}" target="_blank" rel="sponsored nofollow noopener noreferrer" data-item-id="{{ shopee_offer.item_id | escape }}" data-item-name="{{ shopee_offer.title | escape }}" data-link-location="shopee-article">Ver produto na Shopee ↗</a>
+<p><small>Loja informada no CSV: {{ shopee_offer.merchant | escape }}. O preço registrado na exportação de 12/10/2026 foi R$ {{ shopee_offer.price_brl | escape }}. <strong>Não é cotação atual nem confirmação de estoque.</strong> Verifique a variante, frete, cupom e preço final na Shopee.</small></p>
+{% else %}
+<p>O link deste produto não está disponível no catálogo editorial da Shopee.</p>
+{% endif %}
