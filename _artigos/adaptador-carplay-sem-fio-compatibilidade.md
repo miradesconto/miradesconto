@@ -8,7 +8,7 @@ status: "publicado"
 published: true
 autor: "MiraDesconto"
 data: "2026-10-10"
-atualizado: "2026-10-10"
+atualizado: "2026-10-11"
 destaque: false
 ---
 
@@ -34,7 +34,11 @@ O preço muda conforme anúncio, vendedor, frete, cupom e forma de pagamento. Co
 
 **Funciona em carro sem CarPlay de fábrica?**
 
-Em geral, não. Um adaptador sem fio não substitui uma central multimídia com suporte ao CarPlay; verifique a compatibilidade explícita.
+Pode funcionar com uma central instalada posteriormente, desde que ela já tenha CarPlay com fio e seja compatível com o adaptador. Se a central não oferece CarPlay, ter uma porta USB não basta.
+
+## Fonte e compatibilidade
+
+A [orientação da Apple sobre conexão ao veículo](https://support.apple.com/pt-br/102521), consultada em 11/10/2026, distingue CarPlay via USB e sem fio conforme o suporte do carro. Ela não certifica este adaptador de terceiros: a compatibilidade do modelo anunciado precisa ser confirmada com o vendedor.
 
 ## Confira o anúncio específico
 

@@ -4,11 +4,11 @@ resumo: "Guia de compra do Nintendo Switch 2: jogos, armazenamento, acessórios,
 description: "Guia de compra do Nintendo Switch 2: jogos, armazenamento, acessórios, garantia e custos além do console."
 categoria: "guias"
 produtos: ["MLB6212972552"]
-status: "publicado"
+status: "rascunho"
 published: true
 autor: "MiraDesconto"
 data: "2026-10-10"
-atualizado: "2026-10-10"
+atualizado: "2026-10-11"
 destaque: false
 ---
 
@@ -24,7 +24,7 @@ Quem deseja títulos do ecossistema Nintendo e prefere a flexibilidade de jogar 
 
 - Confira se o anúncio é do console Nintendo Switch 2 e quais acessórios acompanham o pacote.
 - Verifique jogos de seu interesse, compatibilidade e eventuais requisitos de armazenamento.
-- Some preço de jogos, controles extras, cartão de memória compatível, frete e garantia.
+- Some preço de jogos, controles extras, cartão microSD Express, frete e garantia. Para armazenar jogos, um microSD comum usado no primeiro Switch não substitui o microSD Express exigido pelo Switch 2.
 
 ## Preço: como saber se a oferta é boa?
 
@@ -36,10 +36,16 @@ O preço muda conforme anúncio, vendedor, frete, cupom e forma de pagamento. Co
 
 Não. Compare os jogos que pretende jogar, a versão vendida, a garantia e o custo dos acessórios antes de decidir.
 
+## Fonte técnica
+
+Segundo as [especificações oficiais da Nintendo](https://www.nintendo.com/pt-br/gaming-systems/switch-2/tech-specs/), consultadas em 11/10/2026, o console tem 256 GB de armazenamento interno, parte reservada ao sistema, e usa microSD Express para expansão de jogos. A ficha do fabricante não confirma acessórios, garantia ou condições do vendedor deste anúncio.
+
 ## Confira o anúncio específico
 
-<a class="price-cta" href="https://meli.la/1eV86aW" data-item-id="MLB6212972552" data-item-name="Nintendo Switch 2 vale a pena em 2026? O que conferir" data-link-location="guide-card" target="_blank" rel="sponsored nofollow noopener noreferrer">Conferir produto e preço atualizado no Mercado Livre</a>
+<a class="price-cta" href="https://meli.la/1eV86aW" data-item-id="MLB5409017988" data-item-name="Nintendo Switch 2 vale a pena em 2026? O que conferir" data-link-location="guide-card" target="_blank" rel="sponsored nofollow noopener noreferrer">Conferir produto e preço atualizado no Mercado Livre</a>
 
 Este link de afiliado foi conferido manualmente pelo responsável pelo MiraDesconto em 10/10/2026 quanto à correspondência do produto. Preço e disponibilidade não foram confirmados em tempo real nesta revisão.
+
+<!-- Revisão de 11/10/2026: o link destaca MLB5409017988, diferente do MLB6212972552 cadastrado em produtos. Manter como rascunho até alinhar o anúncio com o catálogo/Radar ou obter o link individual correspondente. -->
 
 Veja também [outros conteúdos do MiraDesconto]({{ '/ofertas-tech/' | relative_url }}) para comparar opções antes de decidir.

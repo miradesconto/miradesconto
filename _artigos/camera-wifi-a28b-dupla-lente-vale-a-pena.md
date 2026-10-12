@@ -8,7 +8,7 @@ status: "publicado"
 published: true
 autor: "MiraDesconto"
 data: "2026-10-10"
-atualizado: "2026-10-10"
+atualizado: "2026-10-11"
 destaque: false
 ---
 
@@ -35,6 +35,10 @@ O preço muda conforme anúncio, vendedor, frete, cupom e forma de pagamento. Co
 **Ela funciona sem internet?**
 
 Algumas câmeras continuam gravando localmente com energia e cartão de memória, mas acesso remoto geralmente depende de conexão; confirme no anúncio e no manual.
+
+## Base deste guia
+
+O nome do produto e a foto vêm do anúncio cadastrado, conferido em 11/10/2026. As características citadas como pontos de verificação não foram confirmadas em um manual do modelo. Peça a documentação ao vendedor antes de decidir; não trate palavras do título ou da imagem como comprovação técnica.
 
 ## Confira o anúncio específico
 

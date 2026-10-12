@@ -8,7 +8,7 @@ status: "publicado"
 published: true
 autor: "MiraDesconto"
 data: "2026-10-10"
-atualizado: "2026-10-10"
+atualizado: "2026-10-11"
 destaque: false
 ---
 
@@ -35,6 +35,10 @@ O preço muda conforme anúncio, vendedor, frete, cupom e forma de pagamento. Co
 **Smart Tag funciona longe do celular?**
 
 Depende da tecnologia e de uma eventual rede colaborativa de localização. Bluetooth simples tem alcance limitado; confira a documentação do modelo.
+
+## Base deste guia
+
+O nome do produto e a foto vêm do anúncio cadastrado, conferido em 11/10/2026. As características citadas como pontos de verificação não foram confirmadas em um manual do modelo. Peça a documentação ao vendedor antes de decidir; não trate palavras do título ou da imagem como comprovação técnica.
 
 ## Confira o anúncio específico
 
