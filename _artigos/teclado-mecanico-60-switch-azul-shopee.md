@@ -14,11 +14,14 @@ destaque: false
 platform: "shopee"
 shopee_item_id: "23597970068"
 affiliate_url: "https://s.shopee.com.br/3LRYkVcxFh"
-custom_image: null
+custom_image: "https://down-br.img.susercontent.com/file/br-11134207-81zuj-ml3uyw8m0s1u70"
+image_source: "https://shopee.com.br/Teclado-mec%C3%A2nico-projetado-para-jogadores-switch-azul-60-T61-M8701-M6101-azul-vermelho-LEY-2080-i.1147822326.23597970068"
 catalog_product_id: "prod_sp_23597970068"
 ---
 
 > **Transparência:** este conteúdo contém link de afiliado da Shopee. Podemos receber comissão sobre compras elegíveis sem custo extra por esse vínculo. **Não fizemos teste físico**, nem confirmamos o estoque ou o preço atual. As características mencionadas do anúncio precisam ser conferidas na variação escolhida.
+
+{% include foto-shopee.html %}
 
 ## Resposta rápida
 

@@ -14,11 +14,14 @@ destaque: false
 platform: "shopee"
 shopee_item_id: "11758386385"
 affiliate_url: "https://s.shopee.com.br/4qGMXGXFCq"
-custom_image: null
+custom_image: "https://down-br.img.susercontent.com/file/57d33ad946c7deb7db078d85e198a963"
+image_source: "https://shopee.com.br/Suporte-Para-Notebook-Laptop-Multi-Posi%C3%A7%C3%B5es-%C3%93tima-qualidade-Branco-e-Preto-Dobr%C3%A1vel-i.456820962.11758386385"
 catalog_product_id: "prod_sp_11758386385"
 ---
 
 > **Transparência:** este conteúdo contém link de afiliado da Shopee. Podemos receber comissão sobre compras elegíveis sem custo extra por esse vínculo. **Não fizemos teste físico**, nem confirmamos o estoque ou o preço atual. As características mencionadas do anúncio precisam ser conferidas na variação escolhida.
+
+{% include foto-shopee.html %}
 
 ## Resposta rápida
 

@@ -14,11 +14,14 @@ destaque: false
 platform: "shopee"
 shopee_item_id: "4096693174"
 affiliate_url: "https://s.shopee.com.br/9APLhEGkQN"
-custom_image: null
+custom_image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-m7cjobl8ywqy07"
+image_source: "https://shopee.com.br/Kit-Completo-Ring-Light-Profissional-12-polegadas-30cm-C-Trip%C3%A9-2-10M-i.277539644.4096693174"
 catalog_product_id: "prod_sp_4096693174"
 ---
 
 > **Transparência:** este conteúdo contém link de afiliado da Shopee. Podemos receber comissão sobre compras elegíveis sem custo extra por esse vínculo. **Não fizemos teste físico**, nem confirmamos o estoque ou o preço atual. As características mencionadas do anúncio precisam ser conferidas na variação escolhida.
+
+{% include foto-shopee.html %}
 
 ## Resposta rápida
 

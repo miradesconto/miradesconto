@@ -14,11 +14,14 @@ destaque: false
 platform: "shopee"
 shopee_item_id: "18398124948"
 affiliate_url: "https://s.shopee.com.br/40hFXjaPtl"
-custom_image: null
+custom_image: "https://down-br.img.susercontent.com/file/br-11134207-81ztc-mjewkx7069z5f0"
+image_source: "https://shopee.com.br/Adaptador-Hub-Tipo-C-5em2-6em1-7-Em-1-8em1-HDMI-Micro-Sd-Tf-M1-4k-Usb-3.0.-E-USB-A-4EM1.-Para-computador-todo-tipo-i.1314327488.18398124948"
 catalog_product_id: "prod_sp_18398124948"
 ---
 
 > **Transparência:** este conteúdo contém link de afiliado da Shopee. Podemos receber comissão sobre compras elegíveis sem custo extra por esse vínculo. **Não fizemos teste físico**, nem confirmamos o estoque ou o preço atual. As características mencionadas do anúncio precisam ser conferidas na variação escolhida.
+
+{% include foto-shopee.html %}
 
 ## Resposta rápida
 

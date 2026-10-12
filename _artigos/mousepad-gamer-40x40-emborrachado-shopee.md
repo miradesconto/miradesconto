@@ -14,11 +14,14 @@ destaque: false
 platform: "shopee"
 shopee_item_id: "52606084679"
 affiliate_url: "https://s.shopee.com.br/1B6mNpe0r"
-custom_image: null
+custom_image: "https://down-br.img.susercontent.com/file/br-11134207-81ztn-mkl0jgpjbnr623"
+image_source: "https://shopee.com.br/Mouse-Pad-Gamer-Emborrachado-Tamanho-Especial-40x40cm-Tema-Abstrato-i.1285432434.52606084679"
 catalog_product_id: "prod_sp_52606084679"
 ---
 
 > **Transparência:** este conteúdo contém link de afiliado da Shopee. Podemos receber comissão sobre compras elegíveis sem custo extra por esse vínculo. **Não fizemos teste físico**, nem confirmamos o estoque ou o preço atual. As características mencionadas do anúncio precisam ser conferidas na variação escolhida.
+
+{% include foto-shopee.html %}
 
 ## Resposta rápida
 

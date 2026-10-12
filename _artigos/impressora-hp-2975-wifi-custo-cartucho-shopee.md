@@ -14,11 +14,14 @@ destaque: false
 platform: "shopee"
 shopee_item_id: "9418376328"
 affiliate_url: "https://s.shopee.com.br/50ZmjZWbrv"
-custom_image: null
+custom_image: "https://down-br.img.susercontent.com/file/br-11134201-23010-7poibhljqemv6c"
+image_source: "https://shopee.com.br/Impressora-Multifuncional-HP-2874-Bivolt-Wifi-Bluetooth-colorida-fotogr%C3%A1fica-preta-i.329543946.9418376328"
 catalog_product_id: "prod_sp_9418376328"
 ---
 
 > **Transparência:** este conteúdo contém link de afiliado da Shopee. Podemos receber comissão sobre compras elegíveis sem custo extra por esse vínculo. **Não fizemos teste físico**, nem confirmamos o estoque ou o preço atual. As características mencionadas do anúncio precisam ser conferidas na variação escolhida.
+
+{% include foto-shopee.html %}
 
 ## Resposta rápida
 

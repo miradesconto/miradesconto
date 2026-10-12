@@ -14,11 +14,14 @@ destaque: false
 platform: "shopee"
 shopee_item_id: "19722902525"
 affiliate_url: "https://s.shopee.com.br/BUWygp0fs"
-custom_image: null
+custom_image: "https://down-br.img.susercontent.com/file/sg-11134201-825b0-mspngepe38jl75"
+image_source: "https://shopee.com.br/Kit-Teclado-Gamer-Semi-Mec%C3%A2nico-Mouse-RGB-LED-Iluminado-Multim%C3%ADdia-USB-i.816803352.19722902525"
 catalog_product_id: "prod_sp_19722902525"
 ---
 
 > **Transparência:** este conteúdo contém link de afiliado da Shopee. Podemos receber comissão sobre compras elegíveis sem custo extra por esse vínculo. **Não fizemos teste físico**, nem confirmamos o estoque ou o preço atual. As características mencionadas do anúncio precisam ser conferidas na variação escolhida.
+
+{% include foto-shopee.html %}
 
 ## Resposta rápida
 

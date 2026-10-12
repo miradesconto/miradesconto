@@ -14,11 +14,14 @@ destaque: false
 platform: "shopee"
 shopee_item_id: "22499247158"
 affiliate_url: "https://s.shopee.com.br/1BN4AWlCe2"
-custom_image: null
+custom_image: "https://down-br.img.susercontent.com/file/sg-11134201-81zvk-mik9ovwbhszk62"
+image_source: "https://shopee.com.br/Carregador-Port%C3%A1til-Mini-Power-Bank-10000mAh-Com-02-Sa%C3%ADdas-Tipo-C-Lightning-i.408715442.22499247158"
 catalog_product_id: "prod_sp_22499247158"
 ---
 
 > **Transparência:** este conteúdo contém link de afiliado da Shopee. Podemos receber comissão sobre compras elegíveis sem custo extra por esse vínculo. **Não fizemos teste físico**, nem confirmamos o estoque ou o preço atual. As características mencionadas do anúncio precisam ser conferidas na variação escolhida.
+
+{% include foto-shopee.html %}
 
 ## Resposta rápida
 

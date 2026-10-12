@@ -14,11 +14,14 @@ destaque: false
 platform: "shopee"
 shopee_item_id: "48360418130"
 affiliate_url: "https://s.shopee.com.br/W7NNInjzy"
-custom_image: null
+custom_image: "https://down-br.img.susercontent.com/file/cn-11134207-820l4-mmh5v8n2m6f4e2"
+image_source: "https://shopee.com.br/Mouse-Attack-Shark-X11-Bluetooth-para-notebook-sem-fio-com-dock-de-carregamento-magn%C3%A9tico-63-g-ultraleve-22000-DPI-novo-i.1672861664.48360418130"
 catalog_product_id: "prod_sp_48360418130"
 ---
 
 > **Transparência:** este conteúdo contém link de afiliado da Shopee. Podemos receber comissão sobre compras elegíveis sem custo extra por esse vínculo. **Não fizemos teste físico**, nem confirmamos o estoque ou o preço atual. As características mencionadas do anúncio precisam ser conferidas na variação escolhida.
+
+{% include foto-shopee.html %}
 
 ## Resposta rápida
 
