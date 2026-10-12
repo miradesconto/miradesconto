@@ -4,7 +4,7 @@
   if (!hero || !Array.isArray(products)) return;
   const money = n => new Intl.NumberFormat('pt-BR', {style:'currency', currency:'BRL'}).format(n);
   const valid = p => p && p.available !== false && p.name && safeUrl(p.imageUrl) && safeUrl(p.affiliateUrl);
-  const recorded = p => valid(p) && Number.isFinite(p.price) && p.price > 0
+  const recorded = p => valid(p) && !MiraQuality.priceReviewReason(p) && Number.isFinite(p.price) && p.price > 0
     && p.priceCheck?.status === 'verified' && p.priceCheck.price === p.price
     && p.priceCheck.oldPrice === p.oldPrice && p.priceCheck.currency === 'BRL'
     && Number.isFinite(Date.parse(p.priceCheck.checkedAt));
