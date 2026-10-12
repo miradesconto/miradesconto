@@ -47,12 +47,20 @@ class MultiplataformaTests(unittest.TestCase):
             self.assertIsNone(offer["in_stock"])
             self.assertEqual(offer["price_status"], "unverified")
             posts = [f for f in (ROOT / "_artigos").glob("*-shopee.md")
-                     if re.search(r'^shopee_item_id: "' + re.escape(item_id) + r'"
+                     if ("shopee_item_id: \"" + item_id + "\"") in f.read_text(encoding="utf-8")]
+            self.assertEqual(len(posts), 1, f"Artigo único esperado para {item_id}")
+            frontmatter = posts[0].read_text(encoding="utf-8").split("---", 2)[1]
+            self.assertIn('status: "rascunho"', frontmatter)
+            self.assertIn('affiliate_url: "' + offer["affiliate_url"] + '"', frontmatter)
+            self.assertIn('catalog_product_id: "' + product["id"] + '"', frontmatter)
+
+    def test_shopee_select_and_decimal(self):
         self.assertEqual(parse_brl("R$ 1.299,90"), 1299.9)
         subset = read_shopee_csv(ROOT / "_data/shopee_ofertas.csv", ["48360418130"])
         self.assertEqual(len(subset["products"]), 1)
         with self.assertRaises(CatalogError):
             read_shopee_csv(ROOT / "_data/shopee_ofertas.csv", ["9999999"])
+
 
     def test_abbreviated_shopee_price_is_missing_not_estimated(self):
         with tempfile.TemporaryDirectory() as td:
