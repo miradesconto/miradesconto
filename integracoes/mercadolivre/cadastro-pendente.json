@@ -1,1 +1,9 @@
-{"links":["https://meli.la/1hXAjW7"],"attempt":4}
+{
+  "links": [
+    "https://meli.la/1hXAjW7"
+  ],
+  "expectedItemIds": {
+    "https://meli.la/1hXAjW7": "MLB5174506341"
+  },
+  "attempt": 5
+}
