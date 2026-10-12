@@ -1,7 +1,7 @@
 ---
 title: "Ring light 12 polegadas com tripé de 2,10 m: como escolher?"
-resumo: "Guia independente de compra: Ring light 12 polegadas com tripé de 2,10 m: como escolher Confira compatibilidade, limitações e link do anúncio antes de decidir."
-description: "Entenda ring light 12 polegadas com tripé de 2,10 m: como escolher Confira especificações e o que observar no anúncio da Shopee."
+resumo: "Ring light 12 polegadas: veja alimentação, iluminação, estabilidade e acessórios."
+description: "Ring light com tripé de até 2,10 m: confira potência, acessórios e estabilidade antes da compra."
 categoria: "guias"
 produtos: []
 status: "rascunho"

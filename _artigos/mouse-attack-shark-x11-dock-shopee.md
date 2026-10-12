@@ -1,7 +1,7 @@
 ---
 title: "Mouse Attack Shark X11 com base de carregamento: vale a pena?"
-resumo: "Guia independente de compra: Mouse Attack Shark X11 com base de carregamento: vale a pena Confira compatibilidade, limitações e link do anúncio antes de decidir."
-description: "Entenda mouse attack shark x11 com base de carregamento: vale a pena Confira especificações e o que observar no anúncio da Shopee."
+resumo: "Mouse Attack Shark X11: o que conferir sobre dock, sensor, modos de conexão e conforto antes de comprar."
+description: "O Attack Shark X11 oferece uma proposta sem fio com dock; confira conexões, sensor e acessórios antes da compra."
 categoria: "reviews"
 produtos: []
 status: "rascunho"

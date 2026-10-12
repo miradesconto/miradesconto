@@ -1,7 +1,7 @@
 ---
 title: "Power bank de 10.000 mAh USB-C e Lightning: como escolher?"
-resumo: "Guia independente de compra: Power bank de 10.000 mAh USB-C e Lightning: como escolher Confira compatibilidade, limitações e link do anúncio antes de decidir."
-description: "Entenda power bank de 10.000 mah usb-c e lightning: como escolher Confira especificações e o que observar no anúncio da Shopee."
+resumo: "Power bank 10.000 mAh: confira conectores, potência de saída e capacidade útil antes da compra."
+description: "Power bank mini 10.000 mAh: saiba verificar carregamento, conexão USB-C ou Lightning e autonomia esperada."
 categoria: "guias"
 produtos: []
 status: "rascunho"

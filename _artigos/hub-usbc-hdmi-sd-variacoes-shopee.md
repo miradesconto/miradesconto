@@ -1,7 +1,7 @@
 ---
 title: "Hub USB-C 5 em 1, 6 em 1 ou 8 em 1: qual escolher?"
-resumo: "Guia independente de compra: Hub USB-C 5 em 1, 6 em 1 ou 8 em 1: qual escolher Confira compatibilidade, limitações e link do anúncio antes de decidir."
-description: "Entenda hub usb-c 5 em 1, 6 em 1 ou 8 em 1: qual escolher Confira especificações e o que observar no anúncio da Shopee."
+resumo: "Hub USB-C com HDMI: entenda portas, variantes, saída de vídeo e alimentação antes de comprar."
+description: "Hub USB-C 5 em 1, 6 em 1 ou 8 em 1: compare portas, HDMI e compatibilidade."
 categoria: "guias"
 produtos: []
 status: "rascunho"

@@ -1,7 +1,7 @@
 ---
 title: "Teclado mecânico 60% com switch azul: vale a pena?"
-resumo: "Guia independente de compra: Teclado mecânico 60% com switch azul: vale a pena Confira compatibilidade, limitações e link do anúncio antes de decidir."
-description: "Entenda teclado mecânico 60% com switch azul: vale a pena Confira especificações e o que observar no anúncio da Shopee."
+resumo: "Teclado 60% com switch azul: entenda tamanho, ruído e diferenças entre variantes anunciadas."
+description: "Teclado mecânico 60%: veja layout, switches, funções e versões antes de escolher."
 categoria: "reviews"
 produtos: []
 status: "rascunho"

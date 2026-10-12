@@ -1,7 +1,7 @@
 ---
 title: "Kit gamer de 7 peças para celular: compensa comprar?"
-resumo: "Guia independente de compra: Kit gamer de 7 peças para celular: compensa comprar Confira compatibilidade, limitações e link do anúncio antes de decidir."
-description: "Entenda kit gamer de 7 peças para celular: compensa comprar Confira especificações e o que observar no anúncio da Shopee."
+resumo: "Kit gamer 7 peças para celular: veja compatibilidade OTG e os acessórios realmente incluídos."
+description: "Kit gamer com teclado e mouse para celular: confira OTG, conectores e compatibilidade com jogos."
 categoria: "guias"
 produtos: []
 status: "rascunho"

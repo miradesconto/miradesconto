@@ -1,7 +1,7 @@
 ---
 title: "Suporte dobrável para notebook: o que avaliar antes de comprar?"
-resumo: "Guia independente de compra: Suporte dobrável para notebook: o que avaliar antes de comprar Confira compatibilidade, limitações e link do anúncio antes de decidir."
-description: "Entenda suporte dobrável para notebook: o que avaliar antes de comprar Confira especificações e o que observar no anúncio da Shopee."
+resumo: "Suporte dobrável para notebook: veja peso suportado, estabilidade, ventilação e ergonomia."
+description: "Suporte ajustável para notebook: como conferir compatibilidade, estabilidade e ventilação."
 categoria: "guias"
 produtos: []
 status: "rascunho"

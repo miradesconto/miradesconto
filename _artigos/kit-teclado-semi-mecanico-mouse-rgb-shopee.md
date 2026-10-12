@@ -1,7 +1,7 @@
 ---
 title: "Kit teclado semi-mecânico e mouse RGB: para quem vale a pena?"
-resumo: "Guia independente de compra: Kit teclado semi-mecânico e mouse RGB: para quem vale a pena Confira compatibilidade, limitações e link do anúncio antes de decidir."
-description: "Entenda kit teclado semi-mecânico e mouse rgb: para quem vale a pena Confira especificações e o que observar no anúncio da Shopee."
+resumo: "Kit de teclado semi-mecânico e mouse RGB: conheça as limitações e pontos de atenção."
+description: "Kit gamer de teclado e mouse RGB: veja o que significa semi-mecânico, layout e conectividade."
 categoria: "guias"
 produtos: []
 status: "rascunho"

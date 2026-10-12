@@ -1,7 +1,7 @@
 ---
 title: "Impressora HP 2975 Wi-Fi: o que conferir antes de comprar?"
-resumo: "Guia independente de compra: Impressora HP 2975 Wi-Fi: o que conferir antes de comprar Confira compatibilidade, limitações e link do anúncio antes de decidir."
-description: "Entenda impressora hp 2975 wi-fi: o que conferir antes de comprar Confira especificações e o que observar no anúncio da Shopee."
+resumo: "Impressora HP 2975: compare cartuchos, conexão, custo por página e código do modelo."
+description: "Impressora HP 2975 Wi-Fi: cuidados com modelo exato, cartuchos, custos e garantia."
 categoria: "guias"
 produtos: []
 status: "rascunho"
