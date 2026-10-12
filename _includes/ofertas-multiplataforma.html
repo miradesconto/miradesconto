@@ -8,28 +8,22 @@
   {% endif %}
   <h3>{{ product.title | escape }}</h3>
   <p>{{ product.description | escape }}</p>
-  {% assign ordered_offers = product.offers | sort: "price" %}
+  {% assign ordered_offers = product.offers %}
+  {% assign best_price = 999999999999 %}
   {% assign verified_count = 0 %}
   {% assign now_epoch = site.time | date: "%s" | plus: 0 %}
   {% for offer in ordered_offers %}
     {% if offer.price_status == "verified" and offer.in_stock == true and offer.price_verified_at and offer.price %}
       {% assign checked_epoch = offer.price_verified_at | date: "%s" | plus: 0 %}
       {% assign age = now_epoch | minus: checked_epoch %}
-      {% if age >= 0 and age <= 86400 %}{% assign verified_count = verified_count | plus: 1 %}{% endif %}
+      {% if age >= 0 and age <= 86400 %}
+        {% assign verified_count = verified_count | plus: 1 %}
+        {% if offer.price < best_price %}{% assign best_price = offer.price %}{% endif %}
+      {% endif %}
     {% endif %}
   {% endfor %}
   {% if verified_count > 1 %}
-    {% assign best_found = false %}
-    {% for offer in ordered_offers %}
-      {% if offer.price_status == "verified" and offer.in_stock == true and offer.price_verified_at and offer.price %}
-        {% assign checked_epoch = offer.price_verified_at | date: "%s" | plus: 0 %}
-        {% assign age = now_epoch | minus: checked_epoch %}
-        {% if age >= 0 and age <= 86400 and best_found == false %}
-          <p><strong>Menor preço verificado nas últimas 24 horas: R$ {{ offer.price | round: 2 | replace: ".", "," }}</strong></p>
-          {% assign best_found = true %}
-        {% endif %}
-      {% endif %}
-    {% endfor %}
+    <p><strong>Menor preço verificado nas últimas 24 horas: R$ {{ best_price | round: 2 | replace: ".", "," }}</strong></p>
     <p>Compare preços da mesma variante e o total com frete.</p>
   {% elsif product.offers.size > 1 %}
     <p><strong>Sem comparação de preços verificados no momento.</strong> Confira as condições diretamente em cada loja.</p>

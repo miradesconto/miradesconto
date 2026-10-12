@@ -66,6 +66,12 @@ def read_shopee_csv(path, only_ids=None, mapping=None):
             if image:
                 secure_url(image)
             universal_id = mapping.get(item_id, "prod_sp_" + item_id)
+            price_text = field(row, "Price", "price_brl")
+            # Valores abreviados como '1,5mil' não são preços exatos.
+            if re.fullmatch(r"\d+(?:,\d+)?mil", price_text, flags=re.IGNORECASE):
+                parsed_price = None
+            else:
+                parsed_price = parse_brl(price_text)
             product = {
                 "id": universal_id, "title": title,
                 "description": "", "category": field(row, "category") or "Tecnologia",
@@ -73,9 +79,9 @@ def read_shopee_csv(path, only_ids=None, mapping=None):
                 "offers": [{
                     "platform": "shopee", "platform_id": item_id,
                     "affiliate_url": link, "product_url": original,
-                    "price": parse_brl(field(row, "Price", "price_brl")),
+                    "price": parsed_price,
                     "currency": "BRL", "in_stock": None,
-                    "price_status": "unverified", "price_verified_at": None,
+                    "price_status": "missing" if parsed_price is None else "unverified", "price_verified_at": None,
                     "price_observed_on": field(row, "source_date") or None,
                     "seller": field(row, "Nome da loja", "merchant"),
                     "source": "shopee_csv",

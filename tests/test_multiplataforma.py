@@ -34,6 +34,18 @@ class MultiplataformaTests(unittest.TestCase):
         with self.assertRaises(CatalogError):
             read_shopee_csv(ROOT / "_data/shopee_ofertas.csv", ["9999999"])
 
+    def test_abbreviated_shopee_price_is_missing_not_estimated(self):
+        with tempfile.TemporaryDirectory() as td:
+            f = Path(td) / "abbreviated.csv"
+            f.write_text(
+                'Item Id,Item Name,Price,Product Link,Offer Link\n'
+                '22499247158,Exemplo,"1,5mil",https://shopee.com.br/product/408715442/22499247158,https://s.shopee.com.br/1BN4AWlCe2\n',
+                encoding="utf-8"
+            )
+            p = read_shopee_csv(f)["products"][0]
+            self.assertIsNone(p["offers"][0]["price"])
+            self.assertEqual(p["offers"][0]["price_status"], "missing")
+
     def test_links_never_become_trusted_by_default(self):
         p = read_catalog(ROOT / "_data/produtos_unificados.json")["products"][0]
         altered = json.loads(json.dumps(p))
