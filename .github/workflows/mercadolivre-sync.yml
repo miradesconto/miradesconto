@@ -78,4 +78,22 @@ jobs:
         run: |
           # GITHUB_TOKEN commits do not trigger branch-based Pages builds.
           # Also retry a previous failed build on an unchanged run.
-          gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds" --silent
+          python - <<'PY'
+          import os
+          from urllib.request import Request, urlopen
+          from urllib.error import HTTPError, URLError
+          request = Request(
+              "https://api.github.com/repos/" + os.environ["GITHUB_REPOSITORY"] + "/pages/builds",
+              data=b"{}",
+              headers={"Authorization": "Bearer " + os.environ["GH_TOKEN"],
+                       "Accept": "application/vnd.github+json", "Content-Type": "application/json"},
+              method="POST",
+          )
+          try:
+              with urlopen(request, timeout=30) as response:
+                  print("Publicação solicitada: HTTP", response.status)
+          except HTTPError as exc:
+              raise SystemExit("Falha ao solicitar publicação: HTTP " + str(exc.code))
+          except URLError:
+              raise SystemExit("Falha de conexão ao solicitar publicação")
+          PY
