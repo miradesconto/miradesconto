@@ -10,7 +10,7 @@
         price.textContent = 'Preço atual a confirmar na loja.';
       } else {
         const checked = new Date(product.priceCheck.checkedAt).toLocaleString('pt-BR', {timeZone:'America/Sao_Paulo'});
-        price.textContent = product.price.toLocaleString('pt-BR', {style:'currency', currency:'BRL'}) + ' · Verificado em ' + checked + ' (Brasília).';
+        price.textContent = product.price.toLocaleString('pt-BR', {style:'currency', currency:'BRL'}) + ' · Verificado em ' + checked + ' (Brasília). Pix, saldo Mercado Pago e cupons podem alterar o valor.';
       }
     }
   }

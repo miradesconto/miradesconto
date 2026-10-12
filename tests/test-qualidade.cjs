@@ -5,8 +5,8 @@ const p = {id:'MLB4592320910',price:49.99,oldPrice:135.41,available:null,
     priceCheck:{status:'verified',method:'poly-card-v1',itemId:'MLB4592320910',currency:'BRL',
     price:49.99,oldPrice:135.41,checkedAt:'2026-09-20T20:00:00Z'}};
 assert.equal(usablePrice(p,now),true);
-assert.equal(usablePrice(p,now+86400000),true);
-assert.equal(usablePrice(p,now+86400001),false);
+assert.equal(usablePrice(p,now+7200000),true);
+assert.equal(usablePrice(p,now+7200001),false);
 assert.equal(usablePrice(p,now-1),false);
 for(const change of [{priceCheck:undefined},{price:1},{oldPrice:999},{available:false},{price:NaN}])
     assert.equal(usablePrice({...p,...change},now),false);
@@ -17,4 +17,4 @@ const api = {...p,itemId:'MLB9876543210',priceCheck:{...p.priceCheck,method:'ml-
 assert.equal(usablePrice(api,now),true);
 assert.equal(usablePrice({...api,itemId:p.id},now),false);
 assert.equal(usablePrice({...api,itemId:undefined},now),false);
-assert.equal(usablePrice(api,now+86400001),false);
+assert.equal(usablePrice(api,now+7200001),false);
