@@ -5,7 +5,7 @@ description: "Guia de compra do Nintendo Switch 2: jogos, armazenamento, acessó
 categoria: "guias"
 produtos: ["MLB6212972552"]
 status: "rascunho"
-published: true
+published: false
 autor: "MiraDesconto"
 data: "2026-10-10"
 atualizado: "2026-10-11"
