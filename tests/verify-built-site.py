@@ -79,3 +79,35 @@ for key in editorial:
         assert (root/local).exists(),(key,href)
         if u.fragment and local in pages:assert u.fragment in pages[local].ids,(key,href)
 print(f'OK: blog and {len(editorial)-1} published articles, metadata, sitemap and internal paths')
+
+# Shared public navigation, generated feeds and published-only product/article links.
+for key in ['index.html','radar/index.html','sobre.html','privacidade.html','transparencia.html'] + editorial:
+    text=(root/key).read_text(encoding='utf-8')
+    assert '/site.css?v=' in text,key
+    assert 'Navegação principal' in text,key
+    assert 'Informações institucionais' in text,key
+    p=pages[key]
+    for destination in ['/radar/','/blog/','/sobre.html','/transparencia.html','/privacidade.html']:
+        assert destination in p.links,(key,destination)
+manifest=json.loads((root/'catalogo/feed.json').read_text())
+assert manifest['files']
+for file in manifest['files']:
+    assert file.startswith('/catalogo/produtos-') and (root/file.lstrip('/')).exists(),file
+    assert isinstance(json.loads((root/file.lstrip('/')).read_text()),list),file
+radar=json.loads((root/'radar/feed.json').read_text())
+assert radar['methodology']['maxPriceAgeHours']==2
+assert len(radar['featured']) <= 12
+class InlineData(HTMLParser):
+    def __init__(self,text):
+        super().__init__();self.active=False;self.buffer='';self.value=None;self.feed(text)
+    def handle_starttag(self,tag,attrs):
+        if tag=='script' and dict(attrs).get('id')=='editorial-data':self.active=True
+    def handle_data(self,data):
+        if self.active:self.buffer+=data
+    def handle_endtag(self,tag):
+        if tag=='script' and self.active:self.value=json.loads(self.buffer);self.active=False
+mapping=InlineData((root/'index.html').read_text()).value
+assert mapping and len(mapping)==len(editorial)-1
+for entry in mapping:
+    assert entry['url'].startswith('/blog/') and (root/entry['url'].lstrip('/')/'index.html').exists()
+print('OK: shared navigation, catalog/Radar feeds, and published-only editorial mapping')

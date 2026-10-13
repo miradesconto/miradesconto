@@ -1,0 +1,4 @@
+---
+layout: null
+---
+{"files":[{% assign catalog_separator = '' %}{% for file in site.static_files %}{% if file.path contains '/catalogo/produtos-' and file.extname == '.json' %}{{ catalog_separator }}{{ file.path | relative_url | jsonify }}{% assign catalog_separator = ',' %}{% endif %}{% endfor %}]}

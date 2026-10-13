@@ -9,10 +9,13 @@ from __future__ import annotations
 
 import json
 import math
+import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / 'integracoes'))
+from qualidade import price_review_reason
 CATALOG = ROOT / "dados" / "catalogo.json"
 HISTORY = ROOT / "historico"
 OUTPUT = ROOT / "_data" / "radar.json"
@@ -31,7 +34,7 @@ TECH_CATEGORIES = {
     "Notebooks",
 }
 
-MAX_PRICE_AGE_HOURS = 36
+MAX_PRICE_AGE_HOURS = 2
 MIN_OBSERVATIONS = 6
 MIN_SPAN_HOURS = 24
 MIN_ACTIONABLE_SPAN_DAYS = 7
@@ -63,15 +66,6 @@ def finite_price(value: object) -> float | None:
     if not math.isfinite(value) or value <= 0:
         return None
     return value
-
-
-def anchor_time(products: list[dict]) -> datetime:
-    checks = [
-        parse_time((product.get("priceCheck") or {}).get("checkedAt"))
-        for product in products
-    ]
-    valid = [value for value in checks if value is not None]
-    return max(valid) if valid else datetime.now(timezone.utc)
 
 
 def matching_rows(product: dict, data: dict, anchor: datetime) -> list[dict]:
@@ -171,20 +165,47 @@ def classify(current: float, rows: list[dict]) -> tuple[str, int, str, float, fl
     return label, strength, reason, delta, range_pct
 
 
-def main() -> int:
+def select_featured(items: list[dict], anchor: datetime) -> list[str]:
+    """Hourly variety across qualified offers; never relax evidence for rotation."""
+    hour = int(anchor.timestamp() // 3600)
+    groups: dict[str, list[dict]] = {}
+    for item in items:
+        if item['actionable']:
+            groups.setdefault(item['category'], []).append(item)
+    buckets: list[list[dict]] = []
+    for category in sorted(groups):
+        group = sorted(groups[category], key=lambda p: (-p['strength'], p['deltaAveragePct'], p['id']))
+        offset = hour % len(group)
+        buckets.append(group[offset:] + group[:offset])
+    if not buckets:
+        return []
+    offset = hour % len(buckets)
+    buckets = buckets[offset:] + buckets[:offset]
+    result = []
+    for row in range(MAX_PER_CATEGORY):
+        for group in buckets:
+            if row < len(group):
+                result.append(group[row]['id'])
+                if len(result) == MAX_FEATURED:
+                    return result
+    return result
+
+
+def main(now: datetime | None = None) -> int:
     catalog = json.loads(CATALOG.read_text(encoding="utf-8"))
     products = catalog.get("products", [])
     if not isinstance(products, list):
         raise RuntimeError("dados/catalogo.json sem products válido")
 
-    anchor = anchor_time(products)
+    # A stopped collector must not make stale prices look perpetually fresh.
+    anchor = now or datetime.now(timezone.utc)
     by_id: dict[str, dict] = {}
-    ranked: list[tuple[float, dict]] = []
 
     for product in products:
         item_id = str(product.get("id") or "")
         if (
             product.get("category") not in TECH_CATEGORIES
+            or price_review_reason(product)
             or product.get("available") is False
             or not item_id.startswith("MLB")
             or not str(product.get("affiliateUrl") or "").startswith("https://meli.la/")
@@ -200,6 +221,11 @@ def main() -> int:
             or checked_at is None
             or evidence.get("status") != "verified"
             or evidence.get("price") != product.get("price")
+            or evidence.get("oldPrice") != product.get("oldPrice")
+            or evidence.get("currency") != "BRL"
+            or evidence.get("method") not in ("poly-card-v1", "ml-sale-price-v1")
+            or evidence.get("itemId") != (product.get("itemId") if evidence.get("method") == "ml-sale-price-v1" else product.get("id"))
+            or checked_at > anchor
             or anchor - checked_at > timedelta(hours=MAX_PRICE_AGE_HOURS)
         ):
             continue
@@ -258,26 +284,7 @@ def main() -> int:
         }
         by_id[item_id] = insight
 
-        score = (
-            strength * 100
-            + max(-delta, 0) * 2
-            + min(len(rows), 100) / 20
-            + min(span_days, 30) / 10
-        )
-        ranked.append((score, insight))
-
-    featured: list[str] = []
-    category_count: dict[str, int] = {}
-    for _, item in sorted(ranked, key=lambda pair: pair[0], reverse=True):
-        if not item["actionable"]:
-            continue
-        category = item["category"]
-        if category_count.get(category, 0) >= MAX_PER_CATEGORY:
-            continue
-        featured.append(item["id"])
-        category_count[category] = category_count.get(category, 0) + 1
-        if len(featured) >= MAX_FEATURED:
-            break
+    featured = select_featured(list(by_id.values()), anchor)
 
     output = {
         "generatedAt": anchor.isoformat(timespec="seconds"),

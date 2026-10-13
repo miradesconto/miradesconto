@@ -22,20 +22,11 @@ layout: null
 <link rel="stylesheet" href="blog.css?v=20261012mlcta2"><link rel="stylesheet" href="artigo.css?v=20261012shopee-cta1">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://miradesconto.com.br/#organization","name":"MiraDesconto","url":"https://miradesconto.com.br/"},{"@type":"CollectionPage","@id":"https://miradesconto.com.br/blog/#page","url":"https://miradesconto.com.br/blog/","name":"MiraDesconto Editorial","description":"Guias de compra, comparativos e reviews de tecnologia.","inLanguage":"pt-BR","publisher":{"@id":"https://miradesconto.com.br/#organization"}}]}</script>
 <link rel="stylesheet" href="../compra.css"><link rel="stylesheet" href="../analytics.css">
+<link rel="stylesheet" href="{{ "/site.css?v=20261013clean1" | relative_url }}">
 </head>
 <body>
 <a class="skip" href="#conteudo">Pular para o conteúdo</a>
-<header class="site-header">
-  <div class="wrap header-inner">
-    <a class="logo" href="../" aria-label="MiraDesconto, página inicial">Mira<span>Desconto</span></a>
-    <nav aria-label="Navegação principal">
-      <a href="../">Ofertas</a>
-      <a href="../radar/">Radar</a>
-      <a href="./" aria-current="page">Guias e Reviews</a>
-      <a href="../sobre.html">Sobre</a>
-    </nav>
-  </div>
-</header>
+{% include site-header.html %}
 
 <main id="conteudo">
   <section class="editorial-hero">
@@ -54,22 +45,23 @@ layout: null
     </div>
 
     <nav class="editorial-section-nav" aria-label="Categorias editoriais">
-      <a class="section-nav-card section-nav-guides" href="#guias">
+      {% if guides.size > 0 %}<a class="section-nav-card section-nav-guides" href="#guias">
         <span class="section-nav-index">01</span>
         <strong>Guias de compra</strong>
         <small>Para descobrir o que analisar e qual tipo de produto combina com seu uso.</small>
-      </a>
-      <a class="section-nav-card section-nav-comparisons" href="#comparativos">
+      </a>{% endif %}
+      {% if comparisons.size > 0 %}<a class="section-nav-card section-nav-comparisons" href="#comparativos">
         <span class="section-nav-index">02</span>
         <strong>Comparativos</strong>
         <small>Para colocar modelos e configurações lado a lado antes de decidir.</small>
-      </a>
-      <a class="section-nav-card section-nav-reviews" href="#reviews">
+      </a>{% endif %}
+      {% if reviews.size > 0 %}<a class="section-nav-card section-nav-reviews" href="#reviews">
         <span class="section-nav-index">03</span>
         <strong>Reviews e análises</strong>
         <small>Para entender pontos fortes, limitações e o que realmente vale observar.</small>
-      </a>
+      </a>{% endif %}
     </nav>
+<div class="editorial-search"><label for="editorialSearch">Buscar no blog</label><input id="editorialSearch" type="search" placeholder="Produto, marca ou assunto"><p id="editorialSearchStatus" role="status" aria-live="polite"></p></div>
   </section>
 
   <div class="wrap editorial-lanes">
@@ -262,19 +254,15 @@ layout: null
   <section class="wrap editorial-method">
     <div>
       <p class="eyebrow">Nosso critério</p>
-      <h2>Sem transformar todo conteúdo em vitrine.</h2>
+      <h2>Escolha com mais clareza.</h2>
     </div>
     <p>As ofertas aparecem quando ajudam a decisão. O conteúdo editorial vem primeiro: contexto, comparação e clareza antes do clique de compra.</p>
     <a href="../transparencia.html">Como o MiraDesconto trabalha <span aria-hidden="true">→</span></a>
   </section>
 </main>
 
-<footer>
-  <div class="wrap footer-inner">
-    <div><a class="logo" href="../">Mira<span>Desconto</span></a><p>Informação para escolher melhor.<br>© 2026 MiraDesconto.</p></div>
-    <nav aria-label="Informações institucionais"><a href="../radar/">Radar</a><a href="../sobre.html">Sobre</a><a href="../transparencia.html">Transparência</a><a href="../privacidade.html">Privacidade</a><a href="#conteudo">Voltar ao topo ↑</a></nav>
-  </div>
-</footer>
+{% include site-footer.html %}
 <script src="../analytics-config.js"></script><script src="../analytics.js"></script>
+{% include editorial-data.html %}
 </body>
 </html>
