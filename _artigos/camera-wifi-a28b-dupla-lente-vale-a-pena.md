@@ -8,42 +8,42 @@ status: "publicado"
 published: true
 autor: "MiraDesconto"
 data: "2026-10-10"
-atualizado: "2026-10-11"
+atualizado: "2026-10-12"
 destaque: false
 ---
 
-> **Transparência:** este artigo contém link de afiliado. Podemos receber comissão por compras elegíveis, sem custo adicional para você. O MiraDesconto não realizou teste físico deste produto. Consulte o anúncio para preço, estoque e condições atualizados.
+A A28B chama atenção pela dupla lente e pelas palavras “4K” e “IP66” no anúncio. **Antes de comprar, descubra como ela grava e onde você pretende instalar.** Uma câmera que não alcança o Wi-Fi ou exige uma assinatura inesperada vira uma economia ruim.
 
-Uma câmera Wi-Fi externa de dupla lente pode ser útil para acompanhar entradas e áreas externas, desde que o local tenha alimentação elétrica e sinal adequado. Expressões como '4K', 'Full HD' e 'IP66' em anúncios precisam ser verificadas na ficha do modelo e nas condições do vendedor.
+A proposta pode interessar para acompanhar uma entrada ou área residencial. Para avaliar o modelo, precisamos separar o que o vendedor anuncia do que foi comprovado em documentação.
 
-## Para quem faz sentido
+## Duas lentes resolvem qual problema?
 
-Monitoramento residencial simples, com instalação em local adequado e rede sem fio estável.
+Pense no enquadramento necessário: portão, corredor, garagem ou quintal. Duas imagens só ajudam se mostrarem a área que você precisa e se ambas forem gravadas da forma esperada.
 
-## O que conferir antes de comprar
+O título mistura “4K” e “Full HD”. Por isso, confirme a resolução de cada sensor e dos arquivos gravados. Não estamos afirmando captura 4K real nesta variante.
 
-- Confirme resolução de cada lente: marketing 4K não garante gravação 4K em ambas.
-- Confira suporte a cartão microSD, nuvem, possíveis mensalidades e política de privacidade.
-- Verifique tensão, fonte, padrão Wi-Fi, aplicativo e proteção contra chuva antes da instalação.
+## A compra inclui mais que a câmera
 
-## Preço: como saber se a oferta é boa?
+| Item | Confira antes de pagar |
+|---|---|
+| Aplicativo | Nome, suporte e recuperação de acesso |
+| Gravação | Cartão compatível, limite de capacidade e gravação contínua/eventos |
+| Nuvem | O que funciona sem assinatura e quanto custa guardar imagens |
+| Rede | Frequência Wi-Fi e qualidade do sinal no local |
+| Energia | Fonte incluída e proteção das conexões na instalação |
 
-O preço muda conforme anúncio, vendedor, frete, cupom e forma de pagamento. Consulte o valor final na loja antes de comprar. Quando houver histórico no [Radar de Preços]({{ '/radar/' | relative_url }}), use-o como **referência observada**, não como garantia de menor preço do mercado. Evitamos publicar preço fixo aqui porque este guia deve continuar útil quando a promoção terminar.
+O anúncio menciona iCSee/Yoosee. Confirme qual aplicativo corresponde ao produto enviado; não suponha que os dois sejam intercambiáveis.
 
-## Pergunta frequente
+## Quando comparar com Intelbras
 
-**Ela funciona sem internet?**
+Se você prefere documentação identificável e suporte do fabricante, coloque as Intelbras da vitrine na comparação. Isso não comprova que a imagem é superior: muda a facilidade de conferir especificações, instalação e armazenamento.
 
-Algumas câmeras continuam gravando localmente com energia e cartão de memória, mas acesso remoto geralmente depende de conexão; confirme no anúncio e no manual.
+Veja [iM3 C ou iM5 SC]({{ '/blog/intelbras-im3-c-ou-im5-sc/' | relative_url }}). A câmera interna não deve ser escolhida para uma área exposta apenas por custar menos.
 
-## Base deste guia
+## Grava sem internet?
 
-O nome do produto e a foto vêm do anúncio cadastrado, conferido em 11/10/2026. As características citadas como pontos de verificação não foram confirmadas em um manual do modelo. Peça a documentação ao vendedor antes de decidir; não trate palavras do título ou da imagem como comprovação técnica.
+Confirme o funcionamento local no manual da variante. Acesso pelo celular fora de casa depende de conexão, enquanto a gravação local exige energia e armazenamento configurado. Não garantimos o comportamento desta A28B sem documentação.
 
-## Confira o anúncio específico
+### Base da análise
 
-<a class="price-cta" href="https://meli.la/2ZPVV9T" data-item-id="MLB6972453978" data-item-name="Câmera Wi-Fi A28B de dupla lente: o que verificar antes de comprar?" data-link-location="guide-card" target="_blank" rel="sponsored nofollow noopener noreferrer">Conferir produto e preço atualizado no Mercado Livre</a>
-
-Este link de afiliado foi conferido manualmente pelo responsável pelo MiraDesconto em 10/10/2026 quanto à correspondência do produto. Preço e disponibilidade não foram confirmados em tempo real nesta revisão.
-
-Veja também [outros conteúdos do MiraDesconto]({{ '/hardware/' | relative_url }}) para comparar opções antes de decidir.
+Anúncio `MLB6972453978` no catálogo. O link foi conferido pelo titular em 10/10/2026. Não realizamos teste físico nem confirmamos resolução, vedação ou aplicativos da variante anunciada.

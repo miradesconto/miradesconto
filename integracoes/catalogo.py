@@ -152,7 +152,8 @@ def render(catalog, root=ROOT):
         rows = [{k: p[k] for k in COMPACT_KEYS if k in p} for p in products[start:start + 100]]
         files[f'catalogo/produtos-{start // 100 + 1:03d}.json'] = dumps(rows) + '\n'
     editorial = {p['id']: {'name': p.get('name'), 'imageUrl': p.get('imageUrl'),
-                          'available': p.get('available', True) is not False} for p in products}
+                          'available': p.get('available', True) is not False,
+                          'affiliateUrl': p.get('offerUrl') or p.get('affiliateUrl')} for p in products}
     files['_data/produtos.json'] = dumps(editorial, pretty=True) + '\n'
     return files
 

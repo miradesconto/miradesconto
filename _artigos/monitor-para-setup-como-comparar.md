@@ -8,7 +8,7 @@ status: "publicado"
 published: true
 autor: "MiraDesconto"
 data: "2026-10-02"
-atualizado: "2026-10-06"
+atualizado: "2026-10-12"
 ordem: 3
 destaque: false
 ---
@@ -28,7 +28,7 @@ Na nossa análise editorial, comparamos as especificações oficiais dos modelos
 
 ## Resposta rápida {#resposta-rapida}
 
-**Para home office, estudo e jogos casuais:** Samsung Essential S3 120 Hz.  
+**Para home office, estudo e jogos casuais:** compare o Samsung Essential S3 120 Hz e suas conexões.
 **Para FPS, jogos competitivos e quem quer DisplayPort:** Acer Nitro KG243Y 144 Hz.
 
 O salto mais perceptível costuma acontecer quando você sai de **60/75 Hz para 120/144 Hz**. Entre 120 Hz e 144 Hz, a diferença existe, mas é menor. Por isso, a compra deve considerar também conectividade, tempo de resposta e ergonomia.
@@ -54,20 +54,20 @@ O salto mais perceptível costuma acontecer quando você sai de **60/75 Hz para 
 
 ### Samsung Essential S3 — 24" Full HD, IPS, 120 Hz
 
-**[O ideal para trabalho, estudo e jogos casuais]**
+**Faz sentido para trabalho, estudo e jogos casuais.**
 
 - Tela de 24"
 - Resolução Full HD 1920 × 1080
 - Painel IPS
 - Taxa de atualização de até 120 Hz
 - Brilho típico de 250 cd/m²
-- 2 entradas HDMI 1.4
+- Entradas: confirme o código exato da variante
 - VESA 100 × 100 mm
 
 Na nossa análise de uso, o Essential S3 é a opção mais simples para quem quer abandonar 60/75 Hz sem transformar a compra em um setup gamer. Os 120 Hz já melhoram rolagem, animações e jogos compatíveis, enquanto o IPS mantém um perfil adequado para produtividade.
 
-> **✅ O que amamos:** 120 Hz, painel IPS, duas entradas HDMI e VESA formam um conjunto prático para uso misto.  
-> **❌ O que poderia melhorar:** a ficha oficial não lista DisplayPort nem ajuste de altura; isso reduz a flexibilidade para alguns setups.
+> **Ponto favorável:** a proposta de 120 Hz e painel IPS merece comparação para uso misto; confira portas e suporte da variante.
+> **Ponto de atenção:** a família Essential S3 tem variantes; confira o código exato e as portas no anúncio antes de escolher cabo ou suporte.
 
 <p class="buyer-fit"><strong>Ideal para:</strong> home office, estudo, navegação, consoles e jogos casuais em uma mesa comum.</p>
 <a class="price-cta" href="https://meli.la/2EQbWiA" data-item-id="MLB4329495631" data-item-name="Samsung Essential S3 24 120Hz" data-link-location="guide-card" target="_blank" rel="sponsored nofollow noopener noreferrer">Conferir preço atualizado</a>
@@ -78,7 +78,7 @@ Na nossa análise de uso, o Essential S3 é a opção mais simples para quem que
 
 ### Acer Nitro KG243Y — 23,8" Full HD, IPS, 144 Hz
 
-**[O ideal para FPS e jogos competitivos]**
+**Faz sentido para FPS e jogos competitivos.**
 
 - Tela de 23,8"
 - Resolução Full HD 1920 × 1080
@@ -88,10 +88,10 @@ Na nossa análise de uso, o Essential S3 é a opção mais simples para quem que
 - HDMI 1.4 + DisplayPort 1.2
 - Adaptive Sync e VESA 75 × 75 mm
 
-O Acer entra como opção mais orientada a jogos. A vantagem prática sobre o Samsung não é só “24 Hz a mais”: **DisplayPort, Adaptive Sync e o posicionamento gamer** tornam o conjunto mais adequado para quem joga no PC e quer explorar taxas de quadros mais altas.
+O Acer entra como opção mais orientada a jogos. A vantagem prática sobre o Samsung não é só “24 Hz a mais”: **as conexões e os recursos de sincronização da variante** tornam o conjunto mais adequado para quem joga no PC e quer explorar taxas de quadros mais altas.
 
-> **✅ O que amamos:** 144 Hz, DisplayPort e Adaptive Sync entregam um pacote mais coerente para PC gamer.  
-> **❌ O que poderia melhorar:** não há ajuste de altura; para ergonomia séria, talvez seja necessário braço VESA ou suporte externo.
+> **Ponto favorável:** 144 Hz, DisplayPort e Adaptive Sync entregam um pacote mais coerente para PC gamer.
+> **Ponto de atenção:** não há ajuste de altura; para ergonomia séria, talvez seja necessário braço VESA ou suporte externo.
 
 <p class="buyer-fit"><strong>Ideal para:</strong> FPS, jogos competitivos e usuários de PC que querem DisplayPort e 144 Hz em formato compacto.</p>
 <a class="price-cta" href="https://meli.la/1CiNg5W" data-item-id="MLB5530406762" data-item-name="Acer Nitro KG243Y 144Hz" data-link-location="guide-card" target="_blank" rel="sponsored nofollow noopener noreferrer">Conferir preço atualizado</a>
@@ -99,7 +99,7 @@ O Acer entra como opção mais orientada a jogos. A vantagem prática sobre o Sa
 
 </div>
 
-> **Sobre preço:** estes dois anúncios ainda não têm amostra histórica suficiente no Radar MiraDesconto para exibirmos uma faixa confiável. Por isso, não inventamos “menor preço histórico”. Use o preço atual da loja e compare novamente quando houver série observada.
+> **Sobre preço:** consulte o Radar quando houver série suficiente do mesmo anúncio. A disponibilidade da análise muda conforme os registros; o percentual da loja não demonstra menor preço histórico.
 
 ## 120 Hz ou 144 Hz: dá para perceber diferença? {#comparacao-120-144-hz}
 
@@ -171,47 +171,3 @@ Para PC gamer, DisplayPort pode ser um diferencial prático. Para notebook, cons
 As especificações foram conferidas nas páginas oficiais da Samsung e da Acer em 06/10/2026. **Não afirmamos teste físico de input lag, ghosting, brilho, uniformidade ou fidelidade de cor quando não houve medição de bancada.**
 
 Fontes principais: [Samsung — Essential S3 24" 120 Hz](https://www.samsung.com/br/monitors/full-hd-1080p/essential-monitor-s3-s32gf-24-inch-fhd-ips-120hz-ls24f320galmzd/) e [Acer — Nitro KG243Y 144 Hz](https://br-store.acer.com/monitor-acer-kg243y-p1bip-23-8h-hdmi-dp-lcd-238-um-qx3aa-103/p).
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"ItemList",
-  "name":{{ page.title | jsonify }},
-  "numberOfItems":2,
-  "itemListElement":[
-    {
-      "@type":"ListItem",
-      "position":1,
-      "item":{
-        "@type":"Product",
-        "name":"Samsung Essential S3 24 Full HD IPS 120 Hz",
-        "image":"https://http2.mlstatic.com/D_Q_NP_2X_652104-MLA96195278152_102025-AB.webp",
-        "brand":{"@type":"Brand","name":"Samsung"}
-      }
-    },
-    {
-      "@type":"ListItem",
-      "position":2,
-      "item":{
-        "@type":"Product",
-        "name":"Acer Nitro KG243Y 23,8 Full HD IPS 144 Hz",
-        "image":"https://http2.mlstatic.com/D_Q_NP_2X_777139-MLA99536116310_122025-AB.webp",
-        "brand":{"@type":"Brand","name":"Acer"}
-      }
-    }
-  ]
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"FAQPage",
-  "mainEntity":[
-    {"@type":"Question","name":"Para trabalhar e jogar, 24 polegadas Full HD ainda vale a pena em 2026?","acceptedAnswer":{"@type":"Answer","text":"Sim. Em uma mesa comum, 23,8 ou 24 polegadas Full HD continua sendo uma combinação equilibrada de tamanho, nitidez, preço e exigência de GPU."}},
-    {"@type":"Question","name":"Vale pagar a mais por 144 Hz em vez de 120 Hz?","acceptedAnswer":{"@type":"Answer","text":"Faz mais sentido para quem joga no PC, sustenta FPS alto e aproveita recursos extras como DisplayPort ou Adaptive Sync. Para trabalho e jogos casuais, 120 Hz já entregam grande parte do ganho de fluidez."}},
-    {"@type":"Question","name":"DisplayPort é obrigatório para 144 Hz?","acceptedAnswer":{"@type":"Answer","text":"Não. A frequência disponível depende das versões das portas, do cabo e dos modos suportados pelo monitor e pela GPU."}},
-    {"@type":"Question","name":"Monitor 180 Hz vale a pena se meu jogo roda a 90 FPS?","acceptedAnswer":{"@type":"Answer","text":"O benefício fica limitado pelo desempenho real do PC. Melhorar estabilidade de FPS ou escolher um bom monitor de 120 ou 144 Hz pode ser mais eficiente."}}
-  ]
-}
-</script>

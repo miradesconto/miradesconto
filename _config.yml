@@ -29,6 +29,7 @@ exclude:
   - blog/README.md
   - blog/COMO-ESCREVER.md
   - blog/MODELO.md
+  - blog/PROMPT-EDITORIAL.md
   - organizar_catalogo.cjs
   - test-catalogo.cjs
   - atualizar_produtos.py

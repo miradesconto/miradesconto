@@ -2,50 +2,48 @@
 title: "Nintendo Switch 2 vale a pena em 2026? O que conferir"
 resumo: "Guia de compra do Nintendo Switch 2: jogos, armazenamento, acessórios, garantia e custos além do console."
 description: "Guia de compra do Nintendo Switch 2: jogos, armazenamento, acessórios, garantia e custos além do console."
-categoria: "guias"
+categoria: "reviews"
 produtos: ["MLB6212972552"]
-status: "rascunho"
-published: false
+status: "publicado"
+published: true
 autor: "MiraDesconto"
-data: "2026-10-10"
-atualizado: "2026-10-11"
+data: "2026-10-12"
+atualizado: "2026-10-12"
 destaque: false
 ---
 
-> **Transparência:** este artigo contém link de afiliado. Podemos receber comissão por compras elegíveis, sem custo adicional para você. O MiraDesconto não realizou teste físico deste produto. Consulte o anúncio para preço, estoque e condições atualizados.
+**O Switch 2 faz sentido quando os jogos que você quer jogar justificam o console e o custo completo da compra.** Antes de escolher um kit, monte uma lista curta de títulos: ela diz mais que comprar só pelo lançamento.
 
-O Nintendo Switch 2 pode fazer sentido para quem quer jogar os títulos disponíveis no ecossistema Nintendo e valoriza a proposta híbrida de console portátil e uso na TV. Antes da compra, compare a biblioteca de jogos, a versão do console e o custo total.
+Quem já tem um Switch precisa considerar os jogos e acessórios que poderá continuar usando. Quem vai entrar agora precisa reservar orçamento além do aparelho.
 
-## Para quem faz sentido
+## O que a Nintendo informa
 
-Quem deseja títulos do ecossistema Nintendo e prefere a flexibilidade de jogar na TV ou no modo portátil.
+A ficha oficial lista tela LCD de 7,9 polegadas com resolução Full HD, 256 GB de armazenamento e uso na TV. Para expansão de jogos, ela especifica microSD Express; não conte com um cartão microSD comum para essa função.
 
-## O que conferir antes de comprar
+A capacidade interna inclui espaço reservado pelo sistema. O número anunciado não é o espaço integral disponível para instalar jogos.
 
-- Confira se o anúncio é do console Nintendo Switch 2 e quais acessórios acompanham o pacote.
-- Verifique jogos de seu interesse, compatibilidade e eventuais requisitos de armazenamento.
-- Some preço de jogos, controles extras, cartão microSD Express, frete e garantia. Para armazenar jogos, um microSD comum usado no primeiro Switch não substitui o microSD Express exigido pelo Switch 2.
+## Sua biblioteca antiga precisa de conferência
 
-## Preço: como saber se a oferta é boa?
+A Nintendo informa que determinados jogos de Switch podem não funcionar ou não ser totalmente compatíveis no Switch 2. Consulte o título exato, especialmente aquele que é o principal motivo da troca.
 
-O preço muda conforme anúncio, vendedor, frete, cupom e forma de pagamento. Consulte o valor final na loja antes de comprar. Quando houver histórico no [Radar de Preços]({{ '/radar/' | relative_url }}), use-o como **referência observada**, não como garantia de menor preço do mercado. Evitamos publicar preço fixo aqui porque este guia deve continuar útil quando a promoção terminar.
+Não tratamos compatibilidade como promessa de melhoria automática de todos os jogos. Atualizações, upgrades e requisitos podem variar.
 
-## Pergunta frequente
+## Console, jogos e acessórios: faça a conta inteira
 
-**Vale comprar apenas pelo preço promocional?**
+Confira se o anúncio inclui jogo ou é apenas o console. Veja conteúdo da embalagem, região, tipo de tomada, vendedor e garantia. Para mais controles ou armazenamento, some esses itens ao orçamento.
 
-Não. Compare os jogos que pretende jogar, a versão vendida, a garantia e o custo dos acessórios antes de decidir.
+Se você pretende usar quase sempre na TV, pense também nas conexões do seu setup. Para uso portátil, pesquise conforto e autonomia em testes do cenário que interessa a você; não medimos esses pontos.
 
-## Fonte técnica
+## Para quem eu colocaria na lista
 
-Segundo as [especificações oficiais da Nintendo](https://www.nintendo.com/pt-br/gaming-systems/switch-2/tech-specs/), consultadas em 11/10/2026, o console tem 256 GB de armazenamento interno, parte reservada ao sistema, e usa microSD Express para expansão de jogos. A ficha do fabricante não confirma acessórios, garantia ou condições do vendedor deste anúncio.
+- Quem quer títulos disponíveis nessa plataforma e já definiu um orçamento para jogos.
+- Quem pretende aproveitar os modos portátil e TV.
+- Quem vai trocar de Switch e conferiu a compatibilidade da biblioteca relevante.
 
-## Confira o anúncio específico
+## Quando eu adiaria
 
-<a class="price-cta" href="https://meli.la/1eV86aW" data-item-id="MLB5409017988" data-item-name="Nintendo Switch 2 vale a pena em 2026? O que conferir" data-link-location="guide-card" target="_blank" rel="sponsored nofollow noopener noreferrer">Conferir produto e preço atualizado no Mercado Livre</a>
+Se a compra deixa você sem orçamento para o jogo que motivou a escolha, vale reorganizar o total. Se seu console atual ainda atende os títulos que você quer jogar, a troca não precisa acontecer por pressa.
 
-Este link de afiliado foi conferido manualmente pelo responsável pelo MiraDesconto em 10/10/2026 quanto à correspondência do produto. Preço e disponibilidade não foram confirmados em tempo real nesta revisão.
+### Fontes e método
 
-<!-- Revisão de 11/10/2026: o link destaca MLB5409017988, diferente do MLB6212972552 cadastrado em produtos. Manter como rascunho até alinhar o anúncio com o catálogo/Radar ou obter o link individual correspondente. -->
-
-Veja também [outros conteúdos do MiraDesconto]({{ '/ofertas-tech/' | relative_url }}) para comparar opções antes de decidir.
+[Nintendo: especificações do Switch 2](https://www.nintendo.com/pt-br/gaming-systems/switch-2/tech-specs/) e [compatibilidade com jogos do Switch](https://pt-americas-support.nintendo.com/app/answers/detail/a_id/69914/p/988/c/950), consultadas em 12/10/2026. Análise documental, sem teste próprio de jogos, tela ou bateria.

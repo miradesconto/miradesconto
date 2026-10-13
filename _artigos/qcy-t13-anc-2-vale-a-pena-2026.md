@@ -13,6 +13,8 @@ ordem: 1
 destaque: false
 ---
 
+Você ouve no celular e participa de reuniões no notebook? É nesse vai e vem que o multiponto do T13 ANC 2 ganha utilidade. **Ele merece comparação para quem quer ANC e conexão com dois aparelhos, mas conforto e microfone continuam sendo decisivos.**
+
 > **Transparência editorial:** este é um guia de decisão baseado no anúncio identificado e no suporte oficial da QCY. **Não testamos o fone fisicamente** nem medimos ANC, microfone ou bateria. O link abaixo é de afiliado e podemos receber comissão por compras elegíveis, sem custo adicional para você.
 
 **Resposta rápida:** o **QCY T13 ANC 2** é uma opção para quem quer um fone sem fio com cancelamento ativo de ruído (ANC) e conexão com **celular e notebook**. O principal motivo para considerá-lo é a praticidade do multiponto; o principal cuidado é não confundir o ANC 2 com o T13, T13 ANC original ou outros modelos da marca.
@@ -74,16 +76,16 @@ Não fixamos preço neste guia porque ele pode mudar ao longo do dia. A confirma
 
 ## FAQ: dúvidas antes da compra
 
-**O T13 ANC 2 funciona com Android e iPhone?**  
+**O T13 ANC 2 funciona com Android e iPhone?**
 A conexão Bluetooth é compatível com aparelhos que ofereçam os perfis necessários. Para personalização no aplicativo, confira os requisitos atuais da QCY.
 
-**Posso conectar a dois aparelhos ao mesmo tempo?**  
+**Posso conectar a dois aparelhos ao mesmo tempo?**
 Sim, o suporte oficial descreve a configuração de dois dispositivos, com alternância entre eles.
 
-**Ele é igual ao QCY T13 ANC?**  
+**Ele é igual ao QCY T13 ANC?**
 Não. O **T13 ANC 2** é um modelo diferente. Não use avaliações de outra versão como se fossem deste anúncio.
 
-**O desconto mostrado é garantido até amanhã?**  
+**O desconto mostrado é garantido até amanhã?**
 Não. Preço, cupom, frete, estoque e condições de pagamento podem mudar sem aviso.
 
 ## Vale a pena?

@@ -52,6 +52,18 @@ Não é possível prometer duas recargas completas para qualquer smartphone com 
 
 Depende da conexão efetivamente fornecida, da potência e da compatibilidade do aparelho. Confira a variante antes de pagar.
 
+## Conector embutido ou cabo: qual é melhor?
+
+O conector direto economiza espaço e evita esquecer um cabo. Em compensação, confira se ele alcança a porta com a capa instalada e se o peso fica bem apoiado. Um modelo com cabo permite apoiar a bateria na bolsa ou na mesa; pode ser mais prático para continuar usando o celular.
+
+## A conta que não dá para fazer só com mAh
+
+A energia disponível depende da tensão das células, das perdas e do modo de carga. Por isso, comparar apenas 10.000 mAh com os mAh do telefone não informa o número de recargas. Procure a capacidade em Wh e a capacidade de saída informadas na etiqueta.
+
+## Minha orientação de compra
+
+Para uma emergência curta, priorize tamanho e conexão. Para passar o dia longe de tomada, dê mais peso à energia útil, potência e identificação do fabricante. Se essas informações não aparecem, esclareça com o vendedor antes de pagar.
+
 ## Ver produto e preço atual na Shopee
 
 {% include link-shopee.html item_id=page.shopee_item_id %}
