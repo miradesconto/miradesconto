@@ -40,3 +40,22 @@ Identifique fontes e datas de consulta. Separe informações do fabricante, da l
 5. Escreva e publique. O card aparece automaticamente; imagens e links vêm do catálogo.
 
 Não precisa editar HTML nem executar programas. Se não aparecer, consulte **Actions** no GitHub: uma execução vermelha pode indicar aspas ou cabeçalho incompleto. Artigos vazios continuam como pautas, mesmo com status publicado.
+
+## Tom de voz: escrever como uma pessoa que ajuda a escolher
+
+Use o padrão editorial já adotado (resposta rápida, análise, limitações, perfil, alternativas, ofertas e fontes) com estas regras adicionais:
+
+- Abra com a dúvida concreta de quem compra e responda em duas ou três frases. Evite começar pela metodologia.
+- Escreva em português brasileiro natural. Use “você” e exemplos cotidianos sem inventar vivências do autor.
+- Varie o ritmo: parágrafos curtos de uma a três frases, subtítulos específicos e tabelas somente para comparar.
+- Explique a consequência de uma especificação. “16 GB” é um dado; trabalhar com abas, planilha e reunião é uma situação que ajuda a decidir.
+- Dê uma orientação condicional e justifique. Evite “melhor”, “imperdível”, “o ideal”, “premium” e “custo-benefício” sem critérios.
+- Não repita avisos em cada seção. Mantenha a divulgação de afiliados visível e concisa; reúna metodologia e fontes ao final. Dúvidas específicas de compatibilidade ficam junto à decisão.
+- Não escreva “testamos”, “na nossa experiência” ou “o que amamos” sem experiência real documentada. Prefira “a ficha informa” e explique sua avaliação editorial.
+- Não finja autoria humana, uso do produto, depoimentos, notas, avaliações ou números de vendas. A naturalidade vem da clareza e da utilidade.
+- Preserve URL e link cadastrado. Confira SKU, plataforma e variante; não misture o preço de um anúncio com a foto de outro.
+- Use “Conferir preço na loja”. Só prometa menor preço quando houver comparação verificável que sustente essa afirmação.
+- Preço observado não é garantia de preço atual. Evite valores fixos no corpo; linke a loja e o Radar.
+- Cubra variações do mesmo produto em um conteúdo útil. Um review exige análise suficiente do modelo; não crie páginas que só repetem o anúncio.
+
+Prompt consolidado reutilizável: [PROMPT-EDITORIAL.md](PROMPT-EDITORIAL.md). Ele organiza as regras recuperadas das instruções anteriores e esta revisão; não é uma reprodução literal de um prompt antigo.

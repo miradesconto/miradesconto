@@ -113,5 +113,105 @@
     "kicker": "ANÁLISE DE COMPRA",
     "hook": "ANC e multiponto: vale?",
     "tone": "blue"
+  },
+  "notebook-para-trabalho-configuracoes": {
+    "hook": "Notebook para trabalho",
+    "kicker": "GUIA DE COMPRA",
+    "tone": "sage"
+  },
+  "notebook-de-entrada-como-escolher": {
+    "hook": "Notebook de entrada",
+    "kicker": "GUIA DE COMPRA",
+    "tone": "sage"
+  },
+  "kit-gamer-7-pecas-celular-shopee": {
+    "hook": "Kit gamer de 7 peças para celular",
+    "kicker": "GUIA DE COMPRA",
+    "tone": "sage"
+  },
+  "attack-shark-r1-ou-x11": {
+    "hook": "Attack Shark R1 ou X11",
+    "kicker": "COMPARE",
+    "tone": "sage"
+  },
+  "mouse-attack-shark-x11-dock-shopee": {
+    "hook": "Mouse Attack Shark X11 com base de carregamento",
+    "kicker": "ANÁLISE",
+    "tone": "sage"
+  },
+  "celulares-da-vitrine-armazenamento-e-perfil": {
+    "hook": "Celulares da vitrine",
+    "kicker": "GUIA DE COMPRA",
+    "tone": "sage"
+  },
+  "power-bank-mini-10000mah-usbc-lightning-shopee": {
+    "hook": "Power bank de 10.000 mAh USB-C e Lightning",
+    "kicker": "GUIA DE COMPRA",
+    "tone": "sage"
+  },
+  "tv-ou-projetor-para-quarto": {
+    "hook": "TV ou projetor para o quarto",
+    "kicker": "GUIA DE COMPRA",
+    "tone": "sage"
+  },
+  "intelbras-im3-c-ou-im5-sc": {
+    "hook": "Intelbras iM3 C ou iM5 SC",
+    "kicker": "COMPARE",
+    "tone": "sage"
+  },
+  "kit-para-gravar-videos-com-celular": {
+    "hook": "Kit para gravar vídeos",
+    "kicker": "GUIA DE COMPRA",
+    "tone": "sage"
+  },
+  "intelbras-im3-c-vale-a-pena": {
+    "hook": "Intelbras iM3 C vale a pena para acompanhar um cômodo?",
+    "kicker": "ANÁLISE",
+    "tone": "sage"
+  },
+  "modem-4g-ou-conversor-fibra": {
+    "hook": "Modem 4G ou conversor de fibra",
+    "kicker": "GUIA DE COMPRA",
+    "tone": "sage"
+  },
+  "mouse-teclado-acessorios-setup": {
+    "hook": "Mouse, teclado e acessórios de setup",
+    "kicker": "GUIA DE COMPRA",
+    "tone": "sage"
+  },
+  "acessorios-ps4-ps5-switch-como-escolher": {
+    "hook": "Acessórios para PS4 e PS5",
+    "kicker": "GUIA DE COMPRA",
+    "tone": "sage"
+  },
+  "notebook-gamer-rtx-4060-linux-ou-windows": {
+    "hook": "Acer Nitro V15 i5 ou i7 com RTX 4060",
+    "kicker": "COMPARE",
+    "tone": "sage"
+  },
+  "attack-shark-r1-vale-a-pena": {
+    "hook": "Attack Shark R1 vale a pena? Sensor, formato e conexão na escolha",
+    "kicker": "ANÁLISE",
+    "tone": "sage"
+  },
+  "fone-bluetooth-ou-caixa-de-som-como-escolher": {
+    "hook": "Fone Bluetooth, caixa de som ou vitrola",
+    "kicker": "GUIA DE COMPRA",
+    "tone": "sage"
+  },
+  "notebook-16gb-32gb-marcas-e-variantes": {
+    "hook": "Notebook com 16 GB ou 32 GB",
+    "kicker": "GUIA DE COMPRA",
+    "tone": "sage"
+  },
+  "impressora-termica-caneta-3d-ou-filamento": {
+    "hook": "Impressora térmica, caneta 3D e filamento",
+    "kicker": "GUIA DE COMPRA",
+    "tone": "sage"
+  },
+  "drone-e88-pro-o-que-conferir": {
+    "hook": "Drone E88 Pro",
+    "kicker": "GUIA DE COMPRA",
+    "tone": "sage"
   }
 }

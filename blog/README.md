@@ -1,6 +1,6 @@
 # Blog MiraDesconto
 
-[Como escrever e publicar](COMO-ESCREVER.md) · [Modelo de novo artigo](MODELO.md)
+[Como escrever e publicar](COMO-ESCREVER.md) · [Modelo de novo artigo](MODELO.md) · [Prompt editorial](PROMPT-EDITORIAL.md)
 
 Artigos em `_artigos/*.md` são convertidos em páginas pelo Jekyll do GitHub Pages. O hub descobre arquivos automaticamente. Não execute um gerador para escrever artigos.
 

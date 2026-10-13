@@ -7,46 +7,50 @@ status: "publicado"
 published: true
 autor: "MiraDesconto"
 data: "2026-10-02"
-atualizado: "2026-10-06"
+atualizado: "2026-10-12"
 ordem: 1
 destaque: true
 ---
 
-## O que muda de verdade
+Se os dois cabem no orçamento, a dúvida é justa: vale economizar no iPhone 15 ou levar os recursos extras do 16? **O 15 continua interessante quando a diferença final é relevante. O 16 ganha sentido se você quer macro, novos controles e recursos de IA compatíveis.**
 
-O iPhone 15 usa A16 Bionic; o iPhone 16 usa A18. Ambos têm tela OLED de 6,1 polegadas e porta USB-C. O 16 acrescenta Botão de Ação e Controle da Câmera; o 15 tem a chave de toque/silencioso. A câmera principal de ambos é de 48 MP, mas a ultra-angular do 16 permite fotografia macro. Esses dados vêm das fichas da Apple, não de um teste nosso.
+Para quem já tem um 15 funcionando bem, trocar apenas porque o número mudou costuma ser uma compra difícil de justificar. Para quem vem de um aparelho mais antigo, a conversa é outra.
 
-| Critério | iPhone 15 | iPhone 16 |
+## O que muda no uso
+
+| Recurso | iPhone 15 | iPhone 16 |
 |---|---|---|
-| Processador | A16 Bionic | A18 |
+| Chip | A16 Bionic | A18 |
 | Tela | OLED de 6,1 polegadas | OLED de 6,1 polegadas |
-| Conector | USB-C | USB-C |
-| Controles dedicados | Chave de toque/silencioso | Botão de Ação e Controle da Câmera |
-| Foto macro | Não é recurso listado | Disponível pela ultra-angular |
+| Porta | USB-C | USB-C |
+| Controles | Chave de silencioso | Botão de Ação e Controle da Câmera |
+| Foto macro | Não consta como recurso | Disponível pela ultra-angular |
 
-## Quando o 15 faz sentido
+Essas diferenças constam nas fichas da Apple. A conclusão de compra é nossa: se você usa o celular para mensagens, mapas, banco e fotos ocasionais, os controles adicionais podem pesar menos que a economia. Se fotografa objetos pequenos ou quer explorar os recursos extras do 16, eles deixam de ser apenas novidade.
 
-Nossa avaliação editorial: se o objetivo é usar aplicativos, registrar fotos e continuar no iOS, um 15 com preço final suficientemente menor merece comparação. O desconto percentual do anúncio não decide isso. Compare a mesma capacidade de armazenamento, estado do aparelho, condições de pagamento e garantia.
+## Faça a conta com versões equivalentes
 
-## Quando considerar o 16
+Compare 128 GB com 128 GB, aparelho novo com novo e a mesma forma de pagamento. Um 16 de 256 GB contra um 15 de 128 GB mistura geração e armazenamento; nesse caso, parte da diferença compra espaço.
 
-Se os controles extras e a fotografia macro são úteis para você, coloque esses recursos na conta. Não recomendamos pagar mais somente pelo número do modelo. Calcule a diferença em reais e veja se cabe no orçamento sem depender de parcelamento que aumenta o total.
+Some o frete e o total das parcelas. Depois pergunte: **o que farei no 16 que hoje não consigo fazer, ou faço com dificuldade?** Se a resposta for vaga, não há motivo para correr.
 
-## Qual iPhone tem melhor custo-benefício em 2026?
+## Qual eu escolheria em cada situação?
 
-Compare o preço final dos dois na mesma capacidade e condição. Faça a conta: total do iPhone 16 menos total do iPhone 15. Se os recursos adicionais não resolvem uma necessidade sua, a diferença é um motivo para considerar o 15; se foto macro e controles dedicados importam, avalie o 16 dentro do orçamento. Essa é uma orientação de escolha, sem um limite de preço inventado.
+- **Quero continuar no iOS gastando menos:** colocaria o 15 na lista e compararia o valor final.
+- **Quero macro e os controles novos:** olharia o 16, confirmando que os recursos servem à rotina.
+- **Gravo muito vídeo:** decidiria a capacidade antes da geração.
+- **Já tenho um 15 em bom estado:** avaliaria bateria, espaço e a necessidade real de troca.
 
-Estes dois modelos são o recorte deste comparativo. Para começar a decisão entre sistemas e faixas de preço, veja [qual celular comprar em 2026]({{ '/blog/qual-celular-comprar-2026/' | relative_url }}).
+## Dúvidas que mudam a decisão
 
-## Confira antes de comprar
+**USB-C significa a mesma velocidade em qualquer cabo?** Não. Porta, aparelho e cabo determinam os recursos disponíveis. Veja o guia de carregamento abaixo.
 
-- Compare aparelhos com o mesmo armazenamento.
-- Confira vendedor, nota fiscal e condições de garantia.
-- Verifique se o anúncio é de aparelho novo e a versão comercializada.
-- Some frete e compare Pix com o total parcelado.
+**O 16 é automaticamente melhor custo-benefício?** Não. Mais recursos não dizem quanto vale a diferença para você.
 
-**Conclusão:** não existe vencedor independente do preço. O 15 pode oferecer economia; o 16 tem recursos adicionais. A escolha depende da diferença final e do uso.
+**Vale decidir pelo desconto riscado?** Compare o total cobrado. O preço de referência da loja não comprova o menor preço do mercado.
 
-### Fontes
+Veja também [o guia de celulares]({{ '/blog/qual-celular-comprar-2026/' | relative_url }}) e [como escolher fonte e cabo]({{ '/blog/carregador-usb-c-iphone-como-escolher/' | relative_url }}).
 
-[Apple: ficha técnica do iPhone 15](https://support.apple.com/pt-br/111831) e [Apple: ficha técnica do iPhone 16](https://support.apple.com/pt-br/121029), consultadas em 02/10/2026.
+### Fontes e método
+
+[Apple: iPhone 15](https://support.apple.com/pt-br/111831) e [iPhone 16](https://support.apple.com/pt-br/121029), consultadas em 12/10/2026. Comparativo de especificações e critérios de compra, sem teste físico próprio.

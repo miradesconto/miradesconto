@@ -36,3 +36,5 @@
 .article-body .shopee-action-note{margin:8px 0 0}
 .article-body .shopee-photo-note{font-size:12px;line-height:1.5;color:#56646a}
 @media(max-width:760px){.article-body .shopee-action{margin:12px 0 20px}.article-body .shopee-cta-button{max-width:none;min-height:54px;font-size:16px}.article-body .shopee-disclosure{font-size:13px}}
+
+.editorial-catalog{margin:24px 0;border:1px solid #e2e8f0;border-radius:12px;padding:16px 20px;background:#fff}.editorial-catalog summary{cursor:pointer;font-weight:650;line-height:1.5}.editorial-catalog table{margin-top:18px}.editorial-catalog td{font-size:14px;line-height:1.6;vertical-align:top}.editorial-catalog ul{margin-top:16px}.editorial-buy-action{margin:20px 0 28px}.editorial-buy-action .price-cta{white-space:normal}.article-body p{max-width:75ch}.article-body table{display:block;max-width:100%;overflow-x:auto}@media(max-width:600px){.editorial-catalog{padding:14px}.editorial-buy-action .price-cta{width:100%;box-sizing:border-box;text-align:center}}

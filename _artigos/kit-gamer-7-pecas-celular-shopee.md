@@ -52,6 +52,24 @@ Não trate o termo 'gamer' como garantia de baixa latência ou funcionamento em 
 
 Não. O funcionamento depende de OTG, sistema operacional, conexão e compatibilidade de cada jogo.
 
+## A pergunta principal é sobre o jogo
+
+Antes de escolher um kit, pesquise se o jogo oferece suporte nativo ao periférico ou exige mapeamento. Nem todo jogo que abre no Android aceita teclado e mouse. O kit também não transforma o telefone em um PC gamer.
+
+Se o aplicativo depende de adaptação por terceiros, confira as regras e o risco de restrição da conta. Não recomendamos contornar limitações do jogo.
+
+## Conte as peças pelo uso
+
+Faça uma lista do que você precisa: teclado, mouse, apoio para o celular e conexão. Depois compare com a lista da embalagem. Sete itens não significam sete equipamentos principais; cabos e adaptadores podem entrar na contagem.
+
+## Quando comprar separado?
+
+Se você já tem mouse ou teclado, adquirir apenas o adaptador ou o suporte pode evitar duplicação. O kit ganha sentido quando as peças são compatíveis entre si e o total é menor que montar a mesma combinação separadamente.
+
+## O que testar quando chegar
+
+Em uma sessão curta, confira alimentação, reconhecimento dos acessórios e funcionamento nos aplicativos pretendidos. Faça isso dentro do prazo de avaliação da compra e preserve a embalagem. Não inventamos taxa de resposta ou FPS para este conjunto.
+
 ## Ver produto e preço atual na Shopee
 
 {% include link-shopee.html item_id=page.shopee_item_id %}
