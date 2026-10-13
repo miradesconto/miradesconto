@@ -1,6 +1,6 @@
 # Fila de conteúdo — MiraDesconto → Pippit
 
-**Radar:** 2026-10-13T12:03:04+00:00
+**Radar:** 2026-10-13T12:27:51+00:00
 **Fila:** 14 vídeos · 2 por dia · 7 dias
 
 Prioridade: Radar real, histórico observado, variedade de categorias e artigo de destino. Não usa referência da loja como histórico.
@@ -12,8 +12,8 @@ Revise a fila de vídeos do MiraDesconto. Aponte apenas afirmações sem evidên
 ## Dia 1 · Vídeo 1 — Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor…
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 29,60 · média R$ 34,16 · mínimo R$ 29,60
-**Base:** 23 dias acompanhados · 381 observações
+**Preço:** R$ 29,60 · média R$ 34,15 · mínimo R$ 29,60
+**Base:** 23 dias acompanhados · 382 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/smart-tag-android-rastreador-vale-a-pena/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_688002-MLA115581994404_092026-AB.webp
 
@@ -23,13 +23,13 @@ Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor… está no m
 
 **Roteiro**
 
-Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 29,60. No Radar, a média foi R$ 34,16 e o menor valor observado foi R$ 29,60, em 23 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 29,60. No Radar, a média foi R$ 34,15 e o menor valor observado foi R$ 29,60, em 23 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor…
 Hoje: R$ 29,60
-Média observada: R$ 34,16
+Média observada: R$ 34,15
 Menor observado: R$ 29,60
 Base: 23 dias acompanhados
 
@@ -40,15 +40,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_688002-MLA115581994404_092026-AB.webp. Hook 0-3s: Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 29,60, média R$ 34,16 e menor observado R$ 29,60. Narração: Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 29,60. No Radar, a média foi R$ 34,16 e o menor valor observado foi R$ 29,60, em 23 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_688002-MLA115581994404_092026-AB.webp. Hook 0-3s: Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 29,60, média R$ 34,15 e menor observado R$ 29,60. Narração: Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 29,60. No Radar, a média foi R$ 34,15 e o menor valor observado foi R$ 29,60, em 23 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
 ## Dia 1 · Vídeo 2 — Carregador 30w Turbo Para iPhone 8 X Xr 11 12 13 14 Pro Max Fonte…
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 39,50 · média R$ 43,58 · mínimo R$ 39,50
-**Base:** 23 dias acompanhados · 275 observações
+**Preço:** R$ 39,50 · média R$ 43,57 · mínimo R$ 39,50
+**Base:** 23 dias acompanhados · 276 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/carregador-usb-c-iphone-como-escolher/
 **Imagem:** https://http2.mlstatic.com/D_NQ_NP_989431-MLA113963894617_062026-O.webp
 
@@ -58,13 +58,13 @@ Carregador 30w Turbo Para iPhone 8 X Xr 11 12 13 14 Pro Max Fonte… está no me
 
 **Roteiro**
 
-Carregador 30w Turbo Para iPhone 8 X Xr 11 12 13 14 Pro Max Fonte… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 39,50. No Radar, a média foi R$ 43,58 e o menor valor observado foi R$ 39,50, em 23 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Carregador 30w Turbo Para iPhone 8 X Xr 11 12 13 14 Pro Max Fonte… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 39,50. No Radar, a média foi R$ 43,57 e o menor valor observado foi R$ 39,50, em 23 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Carregador 30w Turbo Para iPhone 8 X Xr 11 12 13 14 Pro Max Fonte…
 Hoje: R$ 39,50
-Média observada: R$ 43,58
+Média observada: R$ 43,57
 Menor observado: R$ 39,50
 Base: 23 dias acompanhados
 
@@ -75,15 +75,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Carregador 30w Turbo Para iPhone 8 X Xr 11 12 13 14 Pro Max Fonte…. Imagem: https://http2.mlstatic.com/D_NQ_NP_989431-MLA113963894617_062026-O.webp. Hook 0-3s: Carregador 30w Turbo Para iPhone 8 X Xr 11 12 13 14 Pro Max Fonte… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 39,50, média R$ 43,58 e menor observado R$ 39,50. Narração: Carregador 30w Turbo Para iPhone 8 X Xr 11 12 13 14 Pro Max Fonte… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 39,50. No Radar, a média foi R$ 43,58 e o menor valor observado foi R$ 39,50, em 23 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Carregador 30w Turbo Para iPhone 8 X Xr 11 12 13 14 Pro Max Fonte…. Imagem: https://http2.mlstatic.com/D_NQ_NP_989431-MLA113963894617_062026-O.webp. Hook 0-3s: Carregador 30w Turbo Para iPhone 8 X Xr 11 12 13 14 Pro Max Fonte… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 39,50, média R$ 43,57 e menor observado R$ 39,50. Narração: Carregador 30w Turbo Para iPhone 8 X Xr 11 12 13 14 Pro Max Fonte… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 39,50. No Radar, a média foi R$ 43,57 e o menor valor observado foi R$ 39,50, em 23 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
 ## Dia 2 · Vídeo 1 — Notebook 15.6" Acer Aspire Go com Tela IPS Full HD Touchscreen…
 
 **Ângulo:** Abaixo da média observada: vale agora?
-**Preço:** R$ 4.999,00 · média R$ 5.405,12 · mínimo R$ 4.649,00
-**Base:** 11 dias acompanhados · 147 observações
+**Preço:** R$ 4.999,00 · média R$ 5.402,38 · mínimo R$ 4.649,00
+**Base:** 11 dias acompanhados · 148 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/acer-aspire-go-i7-16gb-vale-a-pena/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_707936-MLA116704651852_092026-T.webp
 
@@ -93,13 +93,13 @@ Notebook 15.6" Acer Aspire Go com Tela IPS Full HD Touchscreen… está 7.5% aba
 
 **Roteiro**
 
-Notebook 15.6" Acer Aspire Go com Tela IPS Full HD Touchscreen… está 7.5% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 4.999,00. No Radar, a média foi R$ 5.405,12 e o menor valor observado foi R$ 4.649,00, em 11 dias acompanhados. O preço atual está 7,5% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Notebook 15.6" Acer Aspire Go com Tela IPS Full HD Touchscreen… está 7.5% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 4.999,00. No Radar, a média foi R$ 5.402,38 e o menor valor observado foi R$ 4.649,00, em 11 dias acompanhados. O preço atual está 7,5% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Notebook 15.6" Acer Aspire Go com Tela IPS Full HD Touchscreen…
 Hoje: R$ 4.999,00
-Média observada: R$ 5.405,12
+Média observada: R$ 5.402,38
 Menor observado: R$ 4.649,00
 Base: 11 dias acompanhados
 
@@ -110,15 +110,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook 15.6" Acer Aspire Go com Tela IPS Full HD Touchscreen…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_707936-MLA116704651852_092026-T.webp. Hook 0-3s: Notebook 15.6" Acer Aspire Go com Tela IPS Full HD Touchscreen… está 7.5% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 4.999,00, média R$ 5.405,12 e menor observado R$ 4.649,00. Narração: Notebook 15.6" Acer Aspire Go com Tela IPS Full HD Touchscreen… está 7.5% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 4.999,00. No Radar, a média foi R$ 5.405,12 e o menor valor observado foi R$ 4.649,00, em 11 dias acompanhados. O preço atual está 7,5% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook 15.6" Acer Aspire Go com Tela IPS Full HD Touchscreen…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_707936-MLA116704651852_092026-T.webp. Hook 0-3s: Notebook 15.6" Acer Aspire Go com Tela IPS Full HD Touchscreen… está 7.5% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 4.999,00, média R$ 5.402,38 e menor observado R$ 4.649,00. Narração: Notebook 15.6" Acer Aspire Go com Tela IPS Full HD Touchscreen… está 7.5% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 4.999,00. No Radar, a média foi R$ 5.402,38 e o menor valor observado foi R$ 4.649,00, em 11 dias acompanhados. O preço atual está 7,5% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
 ## Dia 2 · Vídeo 2 — Console Nintendo Switch 2, Modelo Nacional de Tomada
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 4.199,00 · média R$ 4.408,25 · mínimo R$ 4.199,00
-**Base:** 23 dias acompanhados · 381 observações
+**Preço:** R$ 4.199,00 · média R$ 4.407,70 · mínimo R$ 4.199,00
+**Base:** 23 dias acompanhados · 382 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/nintendo-switch-2-vale-a-pena-2026/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_785396-MLA99867558581_112025-AB.webp
 
@@ -128,13 +128,13 @@ Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observ
 
 **Roteiro**
 
-Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 4.199,00. No Radar, a média foi R$ 4.408,25 e o menor valor observado foi R$ 4.199,00, em 23 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 4.199,00. No Radar, a média foi R$ 4.407,70 e o menor valor observado foi R$ 4.199,00, em 23 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Console Nintendo Switch 2, Modelo Nacional de Tomada
 Hoje: R$ 4.199,00
-Média observada: R$ 4.408,25
+Média observada: R$ 4.407,70
 Menor observado: R$ 4.199,00
 Base: 23 dias acompanhados
 
@@ -145,15 +145,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Console Nintendo Switch 2, Modelo Nacional de Tomada. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_785396-MLA99867558581_112025-AB.webp. Hook 0-3s: Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 4.199,00, média R$ 4.408,25 e menor observado R$ 4.199,00. Narração: Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 4.199,00. No Radar, a média foi R$ 4.408,25 e o menor valor observado foi R$ 4.199,00, em 23 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Console Nintendo Switch 2, Modelo Nacional de Tomada. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_785396-MLA99867558581_112025-AB.webp. Hook 0-3s: Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 4.199,00, média R$ 4.407,70 e menor observado R$ 4.199,00. Narração: Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 4.199,00. No Radar, a média foi R$ 4.407,70 e o menor valor observado foi R$ 4.199,00, em 23 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
 ## Dia 3 · Vídeo 1 — Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play
 
 **Ângulo:** Abaixo da média observada: vale agora?
-**Preço:** R$ 112,00 · média R$ 118,94 · mínimo R$ 110,91
-**Base:** 23 dias acompanhados · 381 observações
+**Preço:** R$ 112,00 · média R$ 118,92 · mínimo R$ 110,91
+**Base:** 23 dias acompanhados · 382 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/adaptador-carplay-sem-fio-compatibilidade/
 **Imagem:** https://http2.mlstatic.com/D_NQ_NP_622828-MLB96582387924_112025-O-apple-car-play-adaptador-usb-sem-fio-iphone-plug-play.webp
 
@@ -163,13 +163,13 @@ Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play está 5.8% abaixo da médi
 
 **Roteiro**
 
-Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play está 5.8% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 112,00. No Radar, a média foi R$ 118,94 e o menor valor observado foi R$ 110,91, em 23 dias acompanhados. O preço atual está 5,8% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play está 5.8% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 112,00. No Radar, a média foi R$ 118,92 e o menor valor observado foi R$ 110,91, em 23 dias acompanhados. O preço atual está 5,8% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play
 Hoje: R$ 112,00
-Média observada: R$ 118,94
+Média observada: R$ 118,92
 Menor observado: R$ 110,91
 Base: 23 dias acompanhados
 
@@ -180,7 +180,7 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play. Imagem: https://http2.mlstatic.com/D_NQ_NP_622828-MLB96582387924_112025-O-apple-car-play-adaptador-usb-sem-fio-iphone-plug-play.webp. Hook 0-3s: Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play está 5.8% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 112,00, média R$ 118,94 e menor observado R$ 110,91. Narração: Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play está 5.8% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 112,00. No Radar, a média foi R$ 118,94 e o menor valor observado foi R$ 110,91, em 23 dias acompanhados. O preço atual está 5,8% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play. Imagem: https://http2.mlstatic.com/D_NQ_NP_622828-MLB96582387924_112025-O-apple-car-play-adaptador-usb-sem-fio-iphone-plug-play.webp. Hook 0-3s: Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play está 5.8% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 112,00, média R$ 118,92 e menor observado R$ 110,91. Narração: Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play está 5.8% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 112,00. No Radar, a média foi R$ 118,92 e o menor valor observado foi R$ 110,91, em 23 dias acompanhados. O preço atual está 5,8% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
@@ -188,7 +188,7 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 **Ângulo:** Menor preço observado: vale aproveitar?
 **Preço:** R$ 48,75 · média R$ 50,06 · mínimo R$ 48,75
-**Base:** 23 dias acompanhados · 380 observações
+**Base:** 23 dias acompanhados · 381 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/acessorios-ps4-ps5-switch-como-escolher/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_762912-MLA105696431793_012026-AB.webp
 
@@ -222,8 +222,8 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 ## Dia 4 · Vídeo 1 — Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB…
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 8.099,00 · média R$ 8.245,37 · mínimo R$ 8.099,00
-**Base:** 10 dias acompanhados · 248 observações
+**Preço:** R$ 8.099,00 · média R$ 8.244,78 · mínimo R$ 8.099,00
+**Base:** 10 dias acompanhados · 249 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/notebook-para-trabalho-configuracoes/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_727317-MLA101294168698_122025-T.webp
 
@@ -233,13 +233,13 @@ Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB… está no 
 
 **Roteiro**
 
-Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 8.099,00. No Radar, a média foi R$ 8.245,37 e o menor valor observado foi R$ 8.099,00, em 10 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 8.099,00. No Radar, a média foi R$ 8.244,78 e o menor valor observado foi R$ 8.099,00, em 10 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB…
 Hoje: R$ 8.099,00
-Média observada: R$ 8.245,37
+Média observada: R$ 8.244,78
 Menor observado: R$ 8.099,00
 Base: 10 dias acompanhados
 
@@ -250,15 +250,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_727317-MLA101294168698_122025-T.webp. Hook 0-3s: Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 8.099,00, média R$ 8.245,37 e menor observado R$ 8.099,00. Narração: Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 8.099,00. No Radar, a média foi R$ 8.245,37 e o menor valor observado foi R$ 8.099,00, em 10 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_727317-MLA101294168698_122025-T.webp. Hook 0-3s: Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 8.099,00, média R$ 8.244,78 e menor observado R$ 8.099,00. Narração: Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 8.099,00. No Radar, a média foi R$ 8.244,78 e o menor valor observado foi R$ 8.099,00, em 10 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
 ## Dia 4 · Vídeo 2 — Kit Mouse Teclado Magnético Bluetooth Para Lite P610 Tab S6 Preto
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 52,90 · média R$ 55,31 · mínimo R$ 52,90
-**Base:** 23 dias acompanhados · 381 observações
+**Preço:** R$ 52,90 · média R$ 55,30 · mínimo R$ 52,90
+**Base:** 23 dias acompanhados · 382 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/mouse-teclado-acessorios-setup/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_863811-MLB92261713766_092025-AB.webp
 
@@ -268,13 +268,13 @@ Kit Mouse Teclado Magnético Bluetooth Para Lite P610 Tab S6 Preto está no meno
 
 **Roteiro**
 
-Kit Mouse Teclado Magnético Bluetooth Para Lite P610 Tab S6 Preto está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 52,90. No Radar, a média foi R$ 55,31 e o menor valor observado foi R$ 52,90, em 23 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Kit Mouse Teclado Magnético Bluetooth Para Lite P610 Tab S6 Preto está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 52,90. No Radar, a média foi R$ 55,30 e o menor valor observado foi R$ 52,90, em 23 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Kit Mouse Teclado Magnético Bluetooth Para Lite P610 Tab S6 Preto
 Hoje: R$ 52,90
-Média observada: R$ 55,31
+Média observada: R$ 55,30
 Menor observado: R$ 52,90
 Base: 23 dias acompanhados
 
@@ -285,15 +285,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Kit Mouse Teclado Magnético Bluetooth Para Lite P610 Tab S6 Preto. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_863811-MLB92261713766_092025-AB.webp. Hook 0-3s: Kit Mouse Teclado Magnético Bluetooth Para Lite P610 Tab S6 Preto está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 52,90, média R$ 55,31 e menor observado R$ 52,90. Narração: Kit Mouse Teclado Magnético Bluetooth Para Lite P610 Tab S6 Preto está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 52,90. No Radar, a média foi R$ 55,31 e o menor valor observado foi R$ 52,90, em 23 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Kit Mouse Teclado Magnético Bluetooth Para Lite P610 Tab S6 Preto. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_863811-MLB92261713766_092025-AB.webp. Hook 0-3s: Kit Mouse Teclado Magnético Bluetooth Para Lite P610 Tab S6 Preto está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 52,90, média R$ 55,30 e menor observado R$ 52,90. Narração: Kit Mouse Teclado Magnético Bluetooth Para Lite P610 Tab S6 Preto está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 52,90. No Radar, a média foi R$ 55,30 e o menor valor observado foi R$ 52,90, em 23 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
 ## Dia 5 · Vídeo 1 — Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão…
 
 **Ângulo:** Abaixo da média observada: vale agora?
-**Preço:** R$ 113,49 · média R$ 117,32 · mínimo R$ 106,00
-**Base:** 23 dias acompanhados · 378 observações
+**Preço:** R$ 113,49 · média R$ 117,31 · mínimo R$ 106,00
+**Base:** 23 dias acompanhados · 379 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/camera-wifi-a28b-dupla-lente-vale-a-pena/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_798945-MLA112454329586_062026-AB.webp
 
@@ -303,13 +303,13 @@ Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 3.3
 
 **Roteiro**
 
-Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 3.3% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 113,49. No Radar, a média foi R$ 117,32 e o menor valor observado foi R$ 106,00, em 23 dias acompanhados. O preço atual está 3,3% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 3.3% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 113,49. No Radar, a média foi R$ 117,31 e o menor valor observado foi R$ 106,00, em 23 dias acompanhados. O preço atual está 3,3% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão…
 Hoje: R$ 113,49
-Média observada: R$ 117,32
+Média observada: R$ 117,31
 Menor observado: R$ 106,00
 Base: 23 dias acompanhados
 
@@ -320,7 +320,7 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_798945-MLA112454329586_062026-AB.webp. Hook 0-3s: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 3.3% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 113,49, média R$ 117,32 e menor observado R$ 106,00. Narração: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 3.3% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 113,49. No Radar, a média foi R$ 117,32 e o menor valor observado foi R$ 106,00, em 23 dias acompanhados. O preço atual está 3,3% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_798945-MLA112454329586_062026-AB.webp. Hook 0-3s: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 3.3% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 113,49, média R$ 117,31 e menor observado R$ 106,00. Narração: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 3.3% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 113,49. No Radar, a média foi R$ 117,31 e o menor valor observado foi R$ 106,00, em 23 dias acompanhados. O preço atual está 3,3% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
@@ -328,7 +328,7 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 **Ângulo:** Preço na Mira: vale comprar agora?
 **Preço:** R$ 33,90 · média R$ 33,60 · mínimo R$ 28,40
-**Base:** 23 dias acompanhados · 381 observações
+**Base:** 23 dias acompanhados · 382 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/mouse-teclado-acessorios-setup/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_751055-MLA112428593866_062026-AB.webp
 
@@ -362,8 +362,8 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 ## Dia 6 · Vídeo 1 — Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto…
 
 **Ângulo:** Preço na Mira: vale comprar agora?
-**Preço:** R$ 389,00 · média R$ 391,49 · mínimo R$ 352,00
-**Base:** 23 dias acompanhados · 381 observações
+**Preço:** R$ 389,00 · média R$ 391,48 · mínimo R$ 352,00
+**Base:** 23 dias acompanhados · 382 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/fone-bluetooth-ou-caixa-de-som-como-escolher/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_848327-MLB93711830286_102025-AB.webp
 
@@ -373,13 +373,13 @@ Antes de comprar Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Pr
 
 **Roteiro**
 
-Antes de comprar Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto…, olha o que o histórico mostra. Hoje ele aparece por R$ 389,00. No Radar, a média foi R$ 391,49 e o menor valor observado foi R$ 352,00, em 23 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Antes de comprar Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto…, olha o que o histórico mostra. Hoje ele aparece por R$ 389,00. No Radar, a média foi R$ 391,48 e o menor valor observado foi R$ 352,00, em 23 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto…
 Hoje: R$ 389,00
-Média observada: R$ 391,49
+Média observada: R$ 391,48
 Menor observado: R$ 352,00
 Base: 23 dias acompanhados
 
@@ -390,15 +390,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_848327-MLB93711830286_102025-AB.webp. Hook 0-3s: Antes de comprar Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto…, olha o que o histórico mostra. Mostre preço atual R$ 389,00, média R$ 391,49 e menor observado R$ 352,00. Narração: Antes de comprar Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto…, olha o que o histórico mostra. Hoje ele aparece por R$ 389,00. No Radar, a média foi R$ 391,49 e o menor valor observado foi R$ 352,00, em 23 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_848327-MLB93711830286_102025-AB.webp. Hook 0-3s: Antes de comprar Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto…, olha o que o histórico mostra. Mostre preço atual R$ 389,00, média R$ 391,48 e menor observado R$ 352,00. Narração: Antes de comprar Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto…, olha o que o histórico mostra. Hoje ele aparece por R$ 389,00. No Radar, a média foi R$ 391,48 e o menor valor observado foi R$ 352,00, em 23 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
 ## Dia 6 · Vídeo 2 — Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo Preto
 
 **Ângulo:** Preço na Mira: vale comprar agora?
-**Preço:** R$ 64,90 · média R$ 63,28 · mínimo R$ 58,37
-**Base:** 23 dias acompanhados · 381 observações
+**Preço:** R$ 64,90 · média R$ 63,29 · mínimo R$ 58,37
+**Base:** 23 dias acompanhados · 382 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/fone-bluetooth-ou-caixa-de-som-como-escolher/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_888868-MLB117019480199_092026-AB.webp
 
@@ -408,13 +408,13 @@ Antes de comprar Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo P
 
 **Roteiro**
 
-Antes de comprar Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo Preto, olha o que o histórico mostra. Hoje ele aparece por R$ 64,90. No Radar, a média foi R$ 63,28 e o menor valor observado foi R$ 58,37, em 23 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Antes de comprar Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo Preto, olha o que o histórico mostra. Hoje ele aparece por R$ 64,90. No Radar, a média foi R$ 63,29 e o menor valor observado foi R$ 58,37, em 23 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo Preto
 Hoje: R$ 64,90
-Média observada: R$ 63,28
+Média observada: R$ 63,29
 Menor observado: R$ 58,37
 Base: 23 dias acompanhados
 
@@ -425,15 +425,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo Preto. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_888868-MLB117019480199_092026-AB.webp. Hook 0-3s: Antes de comprar Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo Preto, olha o que o histórico mostra. Mostre preço atual R$ 64,90, média R$ 63,28 e menor observado R$ 58,37. Narração: Antes de comprar Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo Preto, olha o que o histórico mostra. Hoje ele aparece por R$ 64,90. No Radar, a média foi R$ 63,28 e o menor valor observado foi R$ 58,37, em 23 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo Preto. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_888868-MLB117019480199_092026-AB.webp. Hook 0-3s: Antes de comprar Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo Preto, olha o que o histórico mostra. Mostre preço atual R$ 64,90, média R$ 63,29 e menor observado R$ 58,37. Narração: Antes de comprar Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo Preto, olha o que o histórico mostra. Hoje ele aparece por R$ 64,90. No Radar, a média foi R$ 63,29 e o menor valor observado foi R$ 58,37, em 23 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
 ## Dia 7 · Vídeo 1 — Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto…
 
 **Ângulo:** Preço na Mira: vale comprar agora?
-**Preço:** R$ 289,95 · média R$ 289,20 · mínimo R$ 274,00
-**Base:** 19 dias acompanhados · 272 observações
+**Preço:** R$ 289,95 · média R$ 289,21 · mínimo R$ 274,00
+**Base:** 19 dias acompanhados · 273 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/impressora-termica-caneta-3d-ou-filamento/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_737140-MLB112939930644_072026-AB.webp
 
@@ -443,13 +443,13 @@ Antes de comprar Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém 
 
 **Roteiro**
 
-Antes de comprar Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto…, olha o que o histórico mostra. Hoje ele aparece por R$ 289,95. No Radar, a média foi R$ 289,20 e o menor valor observado foi R$ 274,00, em 19 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Antes de comprar Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto…, olha o que o histórico mostra. Hoje ele aparece por R$ 289,95. No Radar, a média foi R$ 289,21 e o menor valor observado foi R$ 274,00, em 19 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto…
 Hoje: R$ 289,95
-Média observada: R$ 289,20
+Média observada: R$ 289,21
 Menor observado: R$ 274,00
 Base: 19 dias acompanhados
 
@@ -460,15 +460,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_737140-MLB112939930644_072026-AB.webp. Hook 0-3s: Antes de comprar Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto…, olha o que o histórico mostra. Mostre preço atual R$ 289,95, média R$ 289,20 e menor observado R$ 274,00. Narração: Antes de comprar Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto…, olha o que o histórico mostra. Hoje ele aparece por R$ 289,95. No Radar, a média foi R$ 289,20 e o menor valor observado foi R$ 274,00, em 19 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_737140-MLB112939930644_072026-AB.webp. Hook 0-3s: Antes de comprar Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto…, olha o que o histórico mostra. Mostre preço atual R$ 289,95, média R$ 289,21 e menor observado R$ 274,00. Narração: Antes de comprar Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto…, olha o que o histórico mostra. Hoje ele aparece por R$ 289,95. No Radar, a média foi R$ 289,21 e o menor valor observado foi R$ 274,00, em 19 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
 ## Dia 7 · Vídeo 2 — Caneta 3d Impressora Profissional + Refil Filamento + Usb
 
 **Ângulo:** Preço na Mira: vale comprar agora?
-**Preço:** R$ 74,90 · média R$ 66,33 · mínimo R$ 59,90
-**Base:** 15 dias acompanhados · 119 observações
+**Preço:** R$ 74,90 · média R$ 68,45 · mínimo R$ 56,90
+**Base:** 23 dias acompanhados · 176 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/impressora-termica-caneta-3d-ou-filamento/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_816284-MLB111134362535_052026-AB-caneta-3d-impressora-profissional-refil-filamento-usb.webp
 
@@ -478,23 +478,23 @@ Antes de comprar Caneta 3d Impressora Profissional + Refil Filamento + Usb, olha
 
 **Roteiro**
 
-Antes de comprar Caneta 3d Impressora Profissional + Refil Filamento + Usb, olha o que o histórico mostra. Hoje ele aparece por R$ 74,90. No Radar, a média foi R$ 66,33 e o menor valor observado foi R$ 59,90, em 15 dias acompanhados. O preço atual está 12,9% acima da média observada. Veja o guia no MiraDesconto antes de comprar.
+Antes de comprar Caneta 3d Impressora Profissional + Refil Filamento + Usb, olha o que o histórico mostra. Hoje ele aparece por R$ 74,90. No Radar, a média foi R$ 68,45 e o menor valor observado foi R$ 56,90, em 23 dias acompanhados. O preço atual está 9,4% acima da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Caneta 3d Impressora Profissional + Refil Filamento + Usb
 Hoje: R$ 74,90
-Média observada: R$ 66,33
-Menor observado: R$ 59,90
-Base: 15 dias acompanhados
+Média observada: R$ 68,45
+Menor observado: R$ 56,90
+Base: 23 dias acompanhados
 
-O preço atual está 12,9% acima da média observada.
+O preço atual está 9,4% acima da média observada.
 
 Veja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/impressora-termica-caneta-3d-ou-filamento/
 Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Caneta 3d Impressora Profissional + Refil Filamento + Usb. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_816284-MLB111134362535_052026-AB-caneta-3d-impressora-profissional-refil-filamento-usb.webp. Hook 0-3s: Antes de comprar Caneta 3d Impressora Profissional + Refil Filamento + Usb, olha o que o histórico mostra. Mostre preço atual R$ 74,90, média R$ 66,33 e menor observado R$ 59,90. Narração: Antes de comprar Caneta 3d Impressora Profissional + Refil Filamento + Usb, olha o que o histórico mostra. Hoje ele aparece por R$ 74,90. No Radar, a média foi R$ 66,33 e o menor valor observado foi R$ 59,90, em 15 dias acompanhados. O preço atual está 12,9% acima da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Caneta 3d Impressora Profissional + Refil Filamento + Usb. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_816284-MLB111134362535_052026-AB-caneta-3d-impressora-profissional-refil-filamento-usb.webp. Hook 0-3s: Antes de comprar Caneta 3d Impressora Profissional + Refil Filamento + Usb, olha o que o histórico mostra. Mostre preço atual R$ 74,90, média R$ 68,45 e menor observado R$ 56,90. Narração: Antes de comprar Caneta 3d Impressora Profissional + Refil Filamento + Usb, olha o que o histórico mostra. Hoje ele aparece por R$ 74,90. No Radar, a média foi R$ 68,45 e o menor valor observado foi R$ 56,90, em 23 dias acompanhados. O preço atual está 9,4% acima da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
