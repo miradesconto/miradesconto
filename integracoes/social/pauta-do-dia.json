@@ -1,6 +1,6 @@
 {
   "sourceCollectedAt": "13/10/2026",
-  "radarGeneratedAt": "2026-10-13T19:01:51+00:00",
+  "radarGeneratedAt": "2026-10-13T19:30:19+00:00",
   "generatedFrom": "Radar MiraDesconto + catálogo + artigos publicados",
   "count": 14,
   "videosPerDay": 2,
@@ -21,11 +21,11 @@
       "angle": "Abaixo da média observada: vale agora?",
       "hook": "Notebook 15.6\" Acer Aspire Go com Tela IPS Full HD Touchscreen… está 6.8% abaixo da média observada. É um bom momento de compra?",
       "currentPriceText": "R$ 4.999,00",
-      "averagePriceText": "R$ 5.365,26",
+      "averagePriceText": "R$ 5.363,02",
       "minimumPriceText": "R$ 4.649,00",
       "maximumPriceText": "R$ 8.171,00",
-      "deltaAveragePct": -6.83,
-      "observations": 163,
+      "deltaAveragePct": -6.79,
+      "observations": 164,
       "periodText": "11 dias acompanhados",
       "radarLabel": "Excelente preço",
       "radarReason": "O preço atual está 6,8% abaixo da média observada.",
@@ -34,10 +34,10 @@
         "title": "Acer Aspire Go i7 com 16 GB: vale a pena comprar em 2026?",
         "url": "https://miradesconto.github.io/miradesconto/blog/acer-aspire-go-i7-16gb-vale-a-pena/"
       },
-      "script": "Notebook 15.6\" Acer Aspire Go com Tela IPS Full HD Touchscreen… está 6.8% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 4.999,00. No Radar, a média foi R$ 5.365,26 e o menor valor observado foi R$ 4.649,00, em 11 dias acompanhados. O preço atual está 6,8% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.",
-      "caption": "PREÇO NA MIRA — Notebook 15.6\" Acer Aspire Go com Tela IPS Full HD Touchscreen…\nHoje: R$ 4.999,00\nMédia observada: R$ 5.365,26\nMenor observado: R$ 4.649,00\nBase: 11 dias acompanhados\n\nO preço atual está 6,8% abaixo da média observada.\n\nVeja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/acer-aspire-go-i7-16gb-vale-a-pena/\nPreço pode mudar. Link comercial pode gerar comissão sem custo adicional.",
+      "script": "Notebook 15.6\" Acer Aspire Go com Tela IPS Full HD Touchscreen… está 6.8% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 4.999,00. No Radar, a média foi R$ 5.363,02 e o menor valor observado foi R$ 4.649,00, em 11 dias acompanhados. O preço atual está 6,8% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.",
+      "caption": "PREÇO NA MIRA — Notebook 15.6\" Acer Aspire Go com Tela IPS Full HD Touchscreen…\nHoje: R$ 4.999,00\nMédia observada: R$ 5.363,02\nMenor observado: R$ 4.649,00\nBase: 11 dias acompanhados\n\nO preço atual está 6,8% abaixo da média observada.\n\nVeja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/acer-aspire-go-i7-16gb-vale-a-pena/\nPreço pode mudar. Link comercial pode gerar comissão sem custo adicional.",
       "cta": "Veja o guia no MiraDesconto",
-      "pippitPrompt": "Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook 15.6\" Acer Aspire Go com Tela IPS Full HD Touchscreen…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_707936-MLA116704651852_092026-T.webp. Hook 0-3s: Notebook 15.6\" Acer Aspire Go com Tela IPS Full HD Touchscreen… está 6.8% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 4.999,00, média R$ 5.365,26 e menor observado R$ 4.649,00. Narração: Notebook 15.6\" Acer Aspire Go com Tela IPS Full HD Touchscreen… está 6.8% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 4.999,00. No Radar, a média foi R$ 5.365,26 e o menor valor observado foi R$ 4.649,00, em 11 dias acompanhados. O preço atual está 6,8% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos."
+      "pippitPrompt": "Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook 15.6\" Acer Aspire Go com Tela IPS Full HD Touchscreen…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_707936-MLA116704651852_092026-T.webp. Hook 0-3s: Notebook 15.6\" Acer Aspire Go com Tela IPS Full HD Touchscreen… está 6.8% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 4.999,00, média R$ 5.363,02 e menor observado R$ 4.649,00. Narração: Notebook 15.6\" Acer Aspire Go com Tela IPS Full HD Touchscreen… está 6.8% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 4.999,00. No Radar, a média foi R$ 5.363,02 e o menor valor observado foi R$ 4.649,00, em 11 dias acompanhados. O preço atual está 6,8% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos."
     },
     {
       "position": 2,
@@ -53,11 +53,11 @@
       "angle": "Abaixo da média observada: vale agora?",
       "hook": "Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play está 5.6% abaixo da média observada. É um bom momento de compra?",
       "currentPriceText": "R$ 112,00",
-      "averagePriceText": "R$ 118,66",
+      "averagePriceText": "R$ 118,65",
       "minimumPriceText": "R$ 110,91",
       "maximumPriceText": "R$ 125,50",
-      "deltaAveragePct": -5.61,
-      "observations": 397,
+      "deltaAveragePct": -5.6,
+      "observations": 398,
       "periodText": "23 dias acompanhados",
       "radarLabel": "Excelente preço",
       "radarReason": "O preço atual está 5,6% abaixo da média observada.",
@@ -66,10 +66,10 @@
         "title": "Adaptador CarPlay sem fio funciona no seu carro? Confira antes",
         "url": "https://miradesconto.github.io/miradesconto/blog/adaptador-carplay-sem-fio-compatibilidade/"
       },
-      "script": "Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play está 5.6% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 112,00. No Radar, a média foi R$ 118,66 e o menor valor observado foi R$ 110,91, em 23 dias acompanhados. O preço atual está 5,6% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.",
-      "caption": "PREÇO NA MIRA — Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play\nHoje: R$ 112,00\nMédia observada: R$ 118,66\nMenor observado: R$ 110,91\nBase: 23 dias acompanhados\n\nO preço atual está 5,6% abaixo da média observada.\n\nVeja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/adaptador-carplay-sem-fio-compatibilidade/\nPreço pode mudar. Link comercial pode gerar comissão sem custo adicional.",
+      "script": "Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play está 5.6% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 112,00. No Radar, a média foi R$ 118,65 e o menor valor observado foi R$ 110,91, em 23 dias acompanhados. O preço atual está 5,6% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.",
+      "caption": "PREÇO NA MIRA — Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play\nHoje: R$ 112,00\nMédia observada: R$ 118,65\nMenor observado: R$ 110,91\nBase: 23 dias acompanhados\n\nO preço atual está 5,6% abaixo da média observada.\n\nVeja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/adaptador-carplay-sem-fio-compatibilidade/\nPreço pode mudar. Link comercial pode gerar comissão sem custo adicional.",
       "cta": "Veja o guia no MiraDesconto",
-      "pippitPrompt": "Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play. Imagem: https://http2.mlstatic.com/D_NQ_NP_622828-MLB96582387924_112025-O-apple-car-play-adaptador-usb-sem-fio-iphone-plug-play.webp. Hook 0-3s: Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play está 5.6% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 112,00, média R$ 118,66 e menor observado R$ 110,91. Narração: Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play está 5.6% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 112,00. No Radar, a média foi R$ 118,66 e o menor valor observado foi R$ 110,91, em 23 dias acompanhados. O preço atual está 5,6% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos."
+      "pippitPrompt": "Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play. Imagem: https://http2.mlstatic.com/D_NQ_NP_622828-MLB96582387924_112025-O-apple-car-play-adaptador-usb-sem-fio-iphone-plug-play.webp. Hook 0-3s: Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play está 5.6% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 112,00, média R$ 118,65 e menor observado R$ 110,91. Narração: Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play está 5.6% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 112,00. No Radar, a média foi R$ 118,65 e o menor valor observado foi R$ 110,91, em 23 dias acompanhados. O preço atual está 5,6% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos."
     },
     {
       "position": 3,
@@ -85,11 +85,11 @@
       "angle": "Menor preço observado: vale aproveitar?",
       "hook": "Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora?",
       "currentPriceText": "R$ 4.199,00",
-      "averagePriceText": "R$ 4.399,82",
+      "averagePriceText": "R$ 4.399,31",
       "minimumPriceText": "R$ 4.199,00",
       "maximumPriceText": "R$ 5.111,00",
-      "deltaAveragePct": -4.56,
-      "observations": 397,
+      "deltaAveragePct": -4.55,
+      "observations": 398,
       "periodText": "23 dias acompanhados",
       "radarLabel": "Menor observado",
       "radarReason": "O preço atual está no menor valor observado neste anúncio durante o período acompanhado.",
@@ -98,10 +98,10 @@
         "title": "Nintendo Switch 2 vale a pena em 2026? O que conferir",
         "url": "https://miradesconto.github.io/miradesconto/blog/nintendo-switch-2-vale-a-pena-2026/"
       },
-      "script": "Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 4.199,00. No Radar, a média foi R$ 4.399,82 e o menor valor observado foi R$ 4.199,00, em 23 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.",
-      "caption": "PREÇO NA MIRA — Console Nintendo Switch 2, Modelo Nacional de Tomada\nHoje: R$ 4.199,00\nMédia observada: R$ 4.399,82\nMenor observado: R$ 4.199,00\nBase: 23 dias acompanhados\n\nO preço atual está no menor valor observado neste anúncio durante o período acompanhado.\n\nVeja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/nintendo-switch-2-vale-a-pena-2026/\nPreço pode mudar. Link comercial pode gerar comissão sem custo adicional.",
+      "script": "Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 4.199,00. No Radar, a média foi R$ 4.399,31 e o menor valor observado foi R$ 4.199,00, em 23 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.",
+      "caption": "PREÇO NA MIRA — Console Nintendo Switch 2, Modelo Nacional de Tomada\nHoje: R$ 4.199,00\nMédia observada: R$ 4.399,31\nMenor observado: R$ 4.199,00\nBase: 23 dias acompanhados\n\nO preço atual está no menor valor observado neste anúncio durante o período acompanhado.\n\nVeja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/nintendo-switch-2-vale-a-pena-2026/\nPreço pode mudar. Link comercial pode gerar comissão sem custo adicional.",
       "cta": "Veja o guia no MiraDesconto",
-      "pippitPrompt": "Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Console Nintendo Switch 2, Modelo Nacional de Tomada. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_785396-MLA99867558581_112025-AB.webp. Hook 0-3s: Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 4.199,00, média R$ 4.399,82 e menor observado R$ 4.199,00. Narração: Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 4.199,00. No Radar, a média foi R$ 4.399,82 e o menor valor observado foi R$ 4.199,00, em 23 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos."
+      "pippitPrompt": "Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Console Nintendo Switch 2, Modelo Nacional de Tomada. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_785396-MLA99867558581_112025-AB.webp. Hook 0-3s: Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 4.199,00, média R$ 4.399,31 e menor observado R$ 4.199,00. Narração: Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 4.199,00. No Radar, a média foi R$ 4.399,31 e o menor valor observado foi R$ 4.199,00, em 23 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos."
     },
     {
       "position": 4,
@@ -117,11 +117,11 @@
       "angle": "Abaixo da média observada: vale agora?",
       "hook": "Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 6.4% abaixo da média observada. É um bom momento de compra?",
       "currentPriceText": "R$ 109,48",
-      "averagePriceText": "R$ 116,99",
+      "averagePriceText": "R$ 116,97",
       "minimumPriceText": "R$ 106,00",
       "maximumPriceText": "R$ 128,22",
-      "deltaAveragePct": -6.42,
-      "observations": 394,
+      "deltaAveragePct": -6.4,
+      "observations": 395,
       "periodText": "23 dias acompanhados",
       "radarLabel": "Excelente preço",
       "radarReason": "O preço atual está 6,4% abaixo da média observada.",
@@ -130,10 +130,10 @@
         "title": "Câmera Wi-Fi A28B de dupla lente: o que verificar antes de comprar?",
         "url": "https://miradesconto.github.io/miradesconto/blog/camera-wifi-a28b-dupla-lente-vale-a-pena/"
       },
-      "script": "Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 6.4% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 109,48. No Radar, a média foi R$ 116,99 e o menor valor observado foi R$ 106,00, em 23 dias acompanhados. O preço atual está 6,4% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.",
-      "caption": "PREÇO NA MIRA — Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão…\nHoje: R$ 109,48\nMédia observada: R$ 116,99\nMenor observado: R$ 106,00\nBase: 23 dias acompanhados\n\nO preço atual está 6,4% abaixo da média observada.\n\nVeja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/camera-wifi-a28b-dupla-lente-vale-a-pena/\nPreço pode mudar. Link comercial pode gerar comissão sem custo adicional.",
+      "script": "Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 6.4% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 109,48. No Radar, a média foi R$ 116,97 e o menor valor observado foi R$ 106,00, em 23 dias acompanhados. O preço atual está 6,4% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.",
+      "caption": "PREÇO NA MIRA — Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão…\nHoje: R$ 109,48\nMédia observada: R$ 116,97\nMenor observado: R$ 106,00\nBase: 23 dias acompanhados\n\nO preço atual está 6,4% abaixo da média observada.\n\nVeja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/camera-wifi-a28b-dupla-lente-vale-a-pena/\nPreço pode mudar. Link comercial pode gerar comissão sem custo adicional.",
       "cta": "Veja o guia no MiraDesconto",
-      "pippitPrompt": "Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_798945-MLA112454329586_062026-AB.webp. Hook 0-3s: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 6.4% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 109,48, média R$ 116,99 e menor observado R$ 106,00. Narração: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 6.4% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 109,48. No Radar, a média foi R$ 116,99 e o menor valor observado foi R$ 106,00, em 23 dias acompanhados. O preço atual está 6,4% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos."
+      "pippitPrompt": "Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_798945-MLA112454329586_062026-AB.webp. Hook 0-3s: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 6.4% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 109,48, média R$ 116,97 e menor observado R$ 106,00. Narração: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 6.4% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 109,48. No Radar, a média foi R$ 116,97 e o menor valor observado foi R$ 106,00, em 23 dias acompanhados. O preço atual está 6,4% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos."
     },
     {
       "position": 5,
@@ -152,8 +152,8 @@
       "averagePriceText": "R$ 50,01",
       "minimumPriceText": "R$ 48,75",
       "maximumPriceText": "R$ 55,90",
-      "deltaAveragePct": -2.52,
-      "observations": 396,
+      "deltaAveragePct": -2.51,
+      "observations": 397,
       "periodText": "23 dias acompanhados",
       "radarLabel": "Menor observado",
       "radarReason": "O preço atual está no menor valor observado neste anúncio durante o período acompanhado.",
@@ -181,11 +181,11 @@
       "angle": "Abaixo da média observada: vale agora?",
       "hook": "Conversor Mídia Fibra Óptica Gigabit Rj45 1000 Mb Par A+b está 5.5% abaixo da média observada. É um bom momento de compra?",
       "currentPriceText": "R$ 68,46",
-      "averagePriceText": "R$ 72,46",
+      "averagePriceText": "R$ 72,45",
       "minimumPriceText": "R$ 67,11",
       "maximumPriceText": "R$ 77,31",
-      "deltaAveragePct": -5.52,
-      "observations": 397,
+      "deltaAveragePct": -5.5,
+      "observations": 398,
       "periodText": "23 dias acompanhados",
       "radarLabel": "Excelente preço",
       "radarReason": "O preço atual está 5,5% abaixo da média observada.",
@@ -194,10 +194,10 @@
         "title": "Modem 4G ou conversor de fibra: qual resolve seu problema de rede?",
         "url": "https://miradesconto.github.io/miradesconto/blog/modem-4g-ou-conversor-fibra/"
       },
-      "script": "Conversor Mídia Fibra Óptica Gigabit Rj45 1000 Mb Par A+b está 5.5% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 68,46. No Radar, a média foi R$ 72,46 e o menor valor observado foi R$ 67,11, em 23 dias acompanhados. O preço atual está 5,5% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.",
-      "caption": "PREÇO NA MIRA — Conversor Mídia Fibra Óptica Gigabit Rj45 1000 Mb Par A+b\nHoje: R$ 68,46\nMédia observada: R$ 72,46\nMenor observado: R$ 67,11\nBase: 23 dias acompanhados\n\nO preço atual está 5,5% abaixo da média observada.\n\nVeja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/modem-4g-ou-conversor-fibra/\nPreço pode mudar. Link comercial pode gerar comissão sem custo adicional.",
+      "script": "Conversor Mídia Fibra Óptica Gigabit Rj45 1000 Mb Par A+b está 5.5% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 68,46. No Radar, a média foi R$ 72,45 e o menor valor observado foi R$ 67,11, em 23 dias acompanhados. O preço atual está 5,5% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.",
+      "caption": "PREÇO NA MIRA — Conversor Mídia Fibra Óptica Gigabit Rj45 1000 Mb Par A+b\nHoje: R$ 68,46\nMédia observada: R$ 72,45\nMenor observado: R$ 67,11\nBase: 23 dias acompanhados\n\nO preço atual está 5,5% abaixo da média observada.\n\nVeja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/modem-4g-ou-conversor-fibra/\nPreço pode mudar. Link comercial pode gerar comissão sem custo adicional.",
       "cta": "Veja o guia no MiraDesconto",
-      "pippitPrompt": "Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Conversor Mídia Fibra Óptica Gigabit Rj45 1000 Mb Par A+b. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_668420-MLB116950397541_082026-AB.webp. Hook 0-3s: Conversor Mídia Fibra Óptica Gigabit Rj45 1000 Mb Par A+b está 5.5% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 68,46, média R$ 72,46 e menor observado R$ 67,11. Narração: Conversor Mídia Fibra Óptica Gigabit Rj45 1000 Mb Par A+b está 5.5% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 68,46. No Radar, a média foi R$ 72,46 e o menor valor observado foi R$ 67,11, em 23 dias acompanhados. O preço atual está 5,5% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos."
+      "pippitPrompt": "Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Conversor Mídia Fibra Óptica Gigabit Rj45 1000 Mb Par A+b. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_668420-MLB116950397541_082026-AB.webp. Hook 0-3s: Conversor Mídia Fibra Óptica Gigabit Rj45 1000 Mb Par A+b está 5.5% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 68,46, média R$ 72,45 e menor observado R$ 67,11. Narração: Conversor Mídia Fibra Óptica Gigabit Rj45 1000 Mb Par A+b está 5.5% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 68,46. No Radar, a média foi R$ 72,45 e o menor valor observado foi R$ 67,11, em 23 dias acompanhados. O preço atual está 5,5% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos."
     },
     {
       "position": 7,
@@ -213,11 +213,11 @@
       "angle": "Menor preço observado: vale aproveitar?",
       "hook": "Kit Mouse Teclado Magnético Bluetooth Para Lite P610 Tab S6 Preto está no menor valor observado neste anúncio. Mas vale comprar agora?",
       "currentPriceText": "R$ 52,90",
-      "averagePriceText": "R$ 55,21",
+      "averagePriceText": "R$ 55,20",
       "minimumPriceText": "R$ 52,90",
       "maximumPriceText": "R$ 59,90",
-      "deltaAveragePct": -4.18,
-      "observations": 397,
+      "deltaAveragePct": -4.17,
+      "observations": 398,
       "periodText": "23 dias acompanhados",
       "radarLabel": "Menor observado",
       "radarReason": "O preço atual está no menor valor observado neste anúncio durante o período acompanhado.",
@@ -226,10 +226,10 @@
         "title": "Mouse, teclado e acessórios de setup: o que vale comprar primeiro?",
         "url": "https://miradesconto.github.io/miradesconto/blog/mouse-teclado-acessorios-setup/"
       },
-      "script": "Kit Mouse Teclado Magnético Bluetooth Para Lite P610 Tab S6 Preto está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 52,90. No Radar, a média foi R$ 55,21 e o menor valor observado foi R$ 52,90, em 23 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.",
-      "caption": "PREÇO NA MIRA — Kit Mouse Teclado Magnético Bluetooth Para Lite P610 Tab S6 Preto\nHoje: R$ 52,90\nMédia observada: R$ 55,21\nMenor observado: R$ 52,90\nBase: 23 dias acompanhados\n\nO preço atual está no menor valor observado neste anúncio durante o período acompanhado.\n\nVeja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/mouse-teclado-acessorios-setup/\nPreço pode mudar. Link comercial pode gerar comissão sem custo adicional.",
+      "script": "Kit Mouse Teclado Magnético Bluetooth Para Lite P610 Tab S6 Preto está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 52,90. No Radar, a média foi R$ 55,20 e o menor valor observado foi R$ 52,90, em 23 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.",
+      "caption": "PREÇO NA MIRA — Kit Mouse Teclado Magnético Bluetooth Para Lite P610 Tab S6 Preto\nHoje: R$ 52,90\nMédia observada: R$ 55,20\nMenor observado: R$ 52,90\nBase: 23 dias acompanhados\n\nO preço atual está no menor valor observado neste anúncio durante o período acompanhado.\n\nVeja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/mouse-teclado-acessorios-setup/\nPreço pode mudar. Link comercial pode gerar comissão sem custo adicional.",
       "cta": "Veja o guia no MiraDesconto",
-      "pippitPrompt": "Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Kit Mouse Teclado Magnético Bluetooth Para Lite P610 Tab S6 Preto. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_863811-MLB92261713766_092025-AB.webp. Hook 0-3s: Kit Mouse Teclado Magnético Bluetooth Para Lite P610 Tab S6 Preto está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 52,90, média R$ 55,21 e menor observado R$ 52,90. Narração: Kit Mouse Teclado Magnético Bluetooth Para Lite P610 Tab S6 Preto está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 52,90. No Radar, a média foi R$ 55,21 e o menor valor observado foi R$ 52,90, em 23 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos."
+      "pippitPrompt": "Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Kit Mouse Teclado Magnético Bluetooth Para Lite P610 Tab S6 Preto. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_863811-MLB92261713766_092025-AB.webp. Hook 0-3s: Kit Mouse Teclado Magnético Bluetooth Para Lite P610 Tab S6 Preto está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 52,90, média R$ 55,20 e menor observado R$ 52,90. Narração: Kit Mouse Teclado Magnético Bluetooth Para Lite P610 Tab S6 Preto está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 52,90. No Radar, a média foi R$ 55,20 e o menor valor observado foi R$ 52,90, em 23 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos."
     },
     {
       "position": 8,
@@ -245,11 +245,11 @@
       "angle": "Abaixo da média observada: vale agora?",
       "hook": "Câmera Inteligente Full HD Im3 C Mibo Cam WIFI Branca Intelbras está 1.7% abaixo da média observada. É um bom momento de compra?",
       "currentPriceText": "R$ 169,62",
-      "averagePriceText": "R$ 172,57",
+      "averagePriceText": "R$ 172,56",
       "minimumPriceText": "R$ 166,50",
       "maximumPriceText": "R$ 175,50",
-      "deltaAveragePct": -1.71,
-      "observations": 256,
+      "deltaAveragePct": -1.7,
+      "observations": 257,
       "periodText": "23 dias acompanhados",
       "radarLabel": "Bom preço",
       "radarReason": "O preço atual está 1,7% abaixo da média observada.",
@@ -258,10 +258,10 @@
         "title": "Intelbras iM3 C vale a pena para acompanhar um cômodo?",
         "url": "https://miradesconto.github.io/miradesconto/blog/intelbras-im3-c-vale-a-pena/"
       },
-      "script": "Câmera Inteligente Full HD Im3 C Mibo Cam WIFI Branca Intelbras está 1.7% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 169,62. No Radar, a média foi R$ 172,57 e o menor valor observado foi R$ 166,50, em 23 dias acompanhados. O preço atual está 1,7% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.",
-      "caption": "PREÇO NA MIRA — Câmera Inteligente Full HD Im3 C Mibo Cam WIFI Branca Intelbras\nHoje: R$ 169,62\nMédia observada: R$ 172,57\nMenor observado: R$ 166,50\nBase: 23 dias acompanhados\n\nO preço atual está 1,7% abaixo da média observada.\n\nVeja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/intelbras-im3-c-vale-a-pena/\nPreço pode mudar. Link comercial pode gerar comissão sem custo adicional.",
+      "script": "Câmera Inteligente Full HD Im3 C Mibo Cam WIFI Branca Intelbras está 1.7% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 169,62. No Radar, a média foi R$ 172,56 e o menor valor observado foi R$ 166,50, em 23 dias acompanhados. O preço atual está 1,7% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.",
+      "caption": "PREÇO NA MIRA — Câmera Inteligente Full HD Im3 C Mibo Cam WIFI Branca Intelbras\nHoje: R$ 169,62\nMédia observada: R$ 172,56\nMenor observado: R$ 166,50\nBase: 23 dias acompanhados\n\nO preço atual está 1,7% abaixo da média observada.\n\nVeja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/intelbras-im3-c-vale-a-pena/\nPreço pode mudar. Link comercial pode gerar comissão sem custo adicional.",
       "cta": "Veja o guia no MiraDesconto",
-      "pippitPrompt": "Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Câmera Inteligente Full HD Im3 C Mibo Cam WIFI Branca Intelbras. Imagem: https://http2.mlstatic.com/D_NQ_NP_600720-MLA99856285817_112025-O.webp. Hook 0-3s: Câmera Inteligente Full HD Im3 C Mibo Cam WIFI Branca Intelbras está 1.7% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 169,62, média R$ 172,57 e menor observado R$ 166,50. Narração: Câmera Inteligente Full HD Im3 C Mibo Cam WIFI Branca Intelbras está 1.7% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 169,62. No Radar, a média foi R$ 172,57 e o menor valor observado foi R$ 166,50, em 23 dias acompanhados. O preço atual está 1,7% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos."
+      "pippitPrompt": "Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Câmera Inteligente Full HD Im3 C Mibo Cam WIFI Branca Intelbras. Imagem: https://http2.mlstatic.com/D_NQ_NP_600720-MLA99856285817_112025-O.webp. Hook 0-3s: Câmera Inteligente Full HD Im3 C Mibo Cam WIFI Branca Intelbras está 1.7% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 169,62, média R$ 172,56 e menor observado R$ 166,50. Narração: Câmera Inteligente Full HD Im3 C Mibo Cam WIFI Branca Intelbras está 1.7% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 169,62. No Radar, a média foi R$ 172,56 e o menor valor observado foi R$ 166,50, em 23 dias acompanhados. O preço atual está 1,7% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos."
     },
     {
       "position": 9,
@@ -281,7 +281,7 @@
       "minimumPriceText": "R$ 20,45",
       "maximumPriceText": "R$ 21,97",
       "deltaAveragePct": -0.03,
-      "observations": 288,
+      "observations": 289,
       "periodText": "20 dias acompanhados",
       "radarLabel": "Menor observado",
       "radarReason": "O preço atual está no menor valor observado neste anúncio durante o período acompanhado.",
@@ -309,11 +309,11 @@
       "angle": "Preço na Mira: vale comprar agora?",
       "hook": "Antes de comprar Kit Chave Precisão Profissional 115 Peças Magnético Manutenção…, olha o que o histórico mostra.",
       "currentPriceText": "R$ 33,90",
-      "averagePriceText": "R$ 33,61",
+      "averagePriceText": "R$ 33,62",
       "minimumPriceText": "R$ 28,40",
       "maximumPriceText": "R$ 33,90",
       "deltaAveragePct": 0.85,
-      "observations": 397,
+      "observations": 398,
       "periodText": "23 dias acompanhados",
       "radarLabel": "Preço normal",
       "radarReason": "O preço atual está próximo da média observada.",
@@ -322,10 +322,10 @@
         "title": "Mouse, teclado e acessórios de setup: o que vale comprar primeiro?",
         "url": "https://miradesconto.github.io/miradesconto/blog/mouse-teclado-acessorios-setup/"
       },
-      "script": "Antes de comprar Kit Chave Precisão Profissional 115 Peças Magnético Manutenção…, olha o que o histórico mostra. Hoje ele aparece por R$ 33,90. No Radar, a média foi R$ 33,61 e o menor valor observado foi R$ 28,40, em 23 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar.",
-      "caption": "PREÇO NA MIRA — Kit Chave Precisão Profissional 115 Peças Magnético Manutenção…\nHoje: R$ 33,90\nMédia observada: R$ 33,61\nMenor observado: R$ 28,40\nBase: 23 dias acompanhados\n\nO preço atual está próximo da média observada.\n\nVeja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/mouse-teclado-acessorios-setup/\nPreço pode mudar. Link comercial pode gerar comissão sem custo adicional.",
+      "script": "Antes de comprar Kit Chave Precisão Profissional 115 Peças Magnético Manutenção…, olha o que o histórico mostra. Hoje ele aparece por R$ 33,90. No Radar, a média foi R$ 33,62 e o menor valor observado foi R$ 28,40, em 23 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar.",
+      "caption": "PREÇO NA MIRA — Kit Chave Precisão Profissional 115 Peças Magnético Manutenção…\nHoje: R$ 33,90\nMédia observada: R$ 33,62\nMenor observado: R$ 28,40\nBase: 23 dias acompanhados\n\nO preço atual está próximo da média observada.\n\nVeja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/mouse-teclado-acessorios-setup/\nPreço pode mudar. Link comercial pode gerar comissão sem custo adicional.",
       "cta": "Veja o guia no MiraDesconto",
-      "pippitPrompt": "Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Kit Chave Precisão Profissional 115 Peças Magnético Manutenção…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_751055-MLA112428593866_062026-AB.webp. Hook 0-3s: Antes de comprar Kit Chave Precisão Profissional 115 Peças Magnético Manutenção…, olha o que o histórico mostra. Mostre preço atual R$ 33,90, média R$ 33,61 e menor observado R$ 28,40. Narração: Antes de comprar Kit Chave Precisão Profissional 115 Peças Magnético Manutenção…, olha o que o histórico mostra. Hoje ele aparece por R$ 33,90. No Radar, a média foi R$ 33,61 e o menor valor observado foi R$ 28,40, em 23 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos."
+      "pippitPrompt": "Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Kit Chave Precisão Profissional 115 Peças Magnético Manutenção…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_751055-MLA112428593866_062026-AB.webp. Hook 0-3s: Antes de comprar Kit Chave Precisão Profissional 115 Peças Magnético Manutenção…, olha o que o histórico mostra. Mostre preço atual R$ 33,90, média R$ 33,62 e menor observado R$ 28,40. Narração: Antes de comprar Kit Chave Precisão Profissional 115 Peças Magnético Manutenção…, olha o que o histórico mostra. Hoje ele aparece por R$ 33,90. No Radar, a média foi R$ 33,62 e o menor valor observado foi R$ 28,40, em 23 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos."
     },
     {
       "position": 11,
@@ -341,11 +341,11 @@
       "angle": "Preço na Mira: vale comprar agora?",
       "hook": "Antes de comprar Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto…, olha o que o histórico mostra.",
       "currentPriceText": "R$ 389,00",
-      "averagePriceText": "R$ 391,39",
+      "averagePriceText": "R$ 391,38",
       "minimumPriceText": "R$ 352,00",
       "maximumPriceText": "R$ 419,90",
       "deltaAveragePct": -0.61,
-      "observations": 397,
+      "observations": 398,
       "periodText": "23 dias acompanhados",
       "radarLabel": "Preço normal",
       "radarReason": "O preço atual está próximo da média observada.",
@@ -354,10 +354,10 @@
         "title": "Fone Bluetooth, caixa de som ou vitrola: escolha pelo ambiente",
         "url": "https://miradesconto.github.io/miradesconto/blog/fone-bluetooth-ou-caixa-de-som-como-escolher/"
       },
-      "script": "Antes de comprar Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto…, olha o que o histórico mostra. Hoje ele aparece por R$ 389,00. No Radar, a média foi R$ 391,39 e o menor valor observado foi R$ 352,00, em 23 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar.",
-      "caption": "PREÇO NA MIRA — Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto…\nHoje: R$ 389,00\nMédia observada: R$ 391,39\nMenor observado: R$ 352,00\nBase: 23 dias acompanhados\n\nO preço atual está próximo da média observada.\n\nVeja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/fone-bluetooth-ou-caixa-de-som-como-escolher/\nPreço pode mudar. Link comercial pode gerar comissão sem custo adicional.",
+      "script": "Antes de comprar Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto…, olha o que o histórico mostra. Hoje ele aparece por R$ 389,00. No Radar, a média foi R$ 391,38 e o menor valor observado foi R$ 352,00, em 23 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar.",
+      "caption": "PREÇO NA MIRA — Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto…\nHoje: R$ 389,00\nMédia observada: R$ 391,38\nMenor observado: R$ 352,00\nBase: 23 dias acompanhados\n\nO preço atual está próximo da média observada.\n\nVeja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/fone-bluetooth-ou-caixa-de-som-como-escolher/\nPreço pode mudar. Link comercial pode gerar comissão sem custo adicional.",
       "cta": "Veja o guia no MiraDesconto",
-      "pippitPrompt": "Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_848327-MLB93711830286_102025-AB.webp. Hook 0-3s: Antes de comprar Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto…, olha o que o histórico mostra. Mostre preço atual R$ 389,00, média R$ 391,39 e menor observado R$ 352,00. Narração: Antes de comprar Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto…, olha o que o histórico mostra. Hoje ele aparece por R$ 389,00. No Radar, a média foi R$ 391,39 e o menor valor observado foi R$ 352,00, em 23 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos."
+      "pippitPrompt": "Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_848327-MLB93711830286_102025-AB.webp. Hook 0-3s: Antes de comprar Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto…, olha o que o histórico mostra. Mostre preço atual R$ 389,00, média R$ 391,38 e menor observado R$ 352,00. Narração: Antes de comprar Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto…, olha o que o histórico mostra. Hoje ele aparece por R$ 389,00. No Radar, a média foi R$ 391,38 e o menor valor observado foi R$ 352,00, em 23 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos."
     },
     {
       "position": 12,
@@ -376,8 +376,8 @@
       "averagePriceText": "R$ 63,35",
       "minimumPriceText": "R$ 58,37",
       "maximumPriceText": "R$ 64,90",
-      "deltaAveragePct": 2.45,
-      "observations": 397,
+      "deltaAveragePct": 2.44,
+      "observations": 398,
       "periodText": "23 dias acompanhados",
       "radarLabel": "Preço normal",
       "radarReason": "O preço atual está próximo da média observada.",
@@ -405,11 +405,11 @@
       "angle": "Preço na Mira: vale comprar agora?",
       "hook": "Antes de comprar Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto…, olha o que o histórico mostra.",
       "currentPriceText": "R$ 289,95",
-      "averagePriceText": "R$ 289,24",
+      "averagePriceText": "R$ 289,25",
       "minimumPriceText": "R$ 274,00",
       "maximumPriceText": "R$ 289,95",
       "deltaAveragePct": 0.24,
-      "observations": 288,
+      "observations": 289,
       "periodText": "20 dias acompanhados",
       "radarLabel": "Preço normal",
       "radarReason": "O preço atual está próximo da média observada.",
@@ -418,10 +418,10 @@
         "title": "Impressora térmica, caneta 3D e filamento: três compras diferentes",
         "url": "https://miradesconto.github.io/miradesconto/blog/impressora-termica-caneta-3d-ou-filamento/"
       },
-      "script": "Antes de comprar Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto…, olha o que o histórico mostra. Hoje ele aparece por R$ 289,95. No Radar, a média foi R$ 289,24 e o menor valor observado foi R$ 274,00, em 20 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar.",
-      "caption": "PREÇO NA MIRA — Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto…\nHoje: R$ 289,95\nMédia observada: R$ 289,24\nMenor observado: R$ 274,00\nBase: 20 dias acompanhados\n\nO preço atual está próximo da média observada.\n\nVeja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/impressora-termica-caneta-3d-ou-filamento/\nPreço pode mudar. Link comercial pode gerar comissão sem custo adicional.",
+      "script": "Antes de comprar Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto…, olha o que o histórico mostra. Hoje ele aparece por R$ 289,95. No Radar, a média foi R$ 289,25 e o menor valor observado foi R$ 274,00, em 20 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar.",
+      "caption": "PREÇO NA MIRA — Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto…\nHoje: R$ 289,95\nMédia observada: R$ 289,25\nMenor observado: R$ 274,00\nBase: 20 dias acompanhados\n\nO preço atual está próximo da média observada.\n\nVeja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/impressora-termica-caneta-3d-ou-filamento/\nPreço pode mudar. Link comercial pode gerar comissão sem custo adicional.",
       "cta": "Veja o guia no MiraDesconto",
-      "pippitPrompt": "Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_737140-MLB112939930644_072026-AB.webp. Hook 0-3s: Antes de comprar Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto…, olha o que o histórico mostra. Mostre preço atual R$ 289,95, média R$ 289,24 e menor observado R$ 274,00. Narração: Antes de comprar Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto…, olha o que o histórico mostra. Hoje ele aparece por R$ 289,95. No Radar, a média foi R$ 289,24 e o menor valor observado foi R$ 274,00, em 20 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos."
+      "pippitPrompt": "Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_737140-MLB112939930644_072026-AB.webp. Hook 0-3s: Antes de comprar Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto…, olha o que o histórico mostra. Mostre preço atual R$ 289,95, média R$ 289,25 e menor observado R$ 274,00. Narração: Antes de comprar Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto…, olha o que o histórico mostra. Hoje ele aparece por R$ 289,95. No Radar, a média foi R$ 289,25 e o menor valor observado foi R$ 274,00, em 20 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos."
     },
     {
       "position": 14,
@@ -437,23 +437,23 @@
       "angle": "Preço na Mira: vale comprar agora?",
       "hook": "Antes de comprar Caneta 3d Impressora Profissional + Refil Filamento + Usb, olha o que o histórico mostra.",
       "currentPriceText": "R$ 74,90",
-      "averagePriceText": "R$ 68,73",
-      "minimumPriceText": "R$ 56,90",
+      "averagePriceText": "R$ 66,87",
+      "minimumPriceText": "R$ 59,90",
       "maximumPriceText": "R$ 74,90",
-      "deltaAveragePct": 8.97,
-      "observations": 184,
-      "periodText": "23 dias acompanhados",
+      "deltaAveragePct": 12.01,
+      "observations": 127,
+      "periodText": "16 dias acompanhados",
       "radarLabel": "Acima da média",
-      "radarReason": "O preço atual está 9,0% acima da média observada.",
+      "radarReason": "O preço atual está 12,0% acima da média observada.",
       "destination": {
         "type": "article",
         "title": "Impressora térmica, caneta 3D e filamento: três compras diferentes",
         "url": "https://miradesconto.github.io/miradesconto/blog/impressora-termica-caneta-3d-ou-filamento/"
       },
-      "script": "Antes de comprar Caneta 3d Impressora Profissional + Refil Filamento + Usb, olha o que o histórico mostra. Hoje ele aparece por R$ 74,90. No Radar, a média foi R$ 68,73 e o menor valor observado foi R$ 56,90, em 23 dias acompanhados. O preço atual está 9,0% acima da média observada. Veja o guia no MiraDesconto antes de comprar.",
-      "caption": "PREÇO NA MIRA — Caneta 3d Impressora Profissional + Refil Filamento + Usb\nHoje: R$ 74,90\nMédia observada: R$ 68,73\nMenor observado: R$ 56,90\nBase: 23 dias acompanhados\n\nO preço atual está 9,0% acima da média observada.\n\nVeja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/impressora-termica-caneta-3d-ou-filamento/\nPreço pode mudar. Link comercial pode gerar comissão sem custo adicional.",
+      "script": "Antes de comprar Caneta 3d Impressora Profissional + Refil Filamento + Usb, olha o que o histórico mostra. Hoje ele aparece por R$ 74,90. No Radar, a média foi R$ 66,87 e o menor valor observado foi R$ 59,90, em 16 dias acompanhados. O preço atual está 12,0% acima da média observada. Veja o guia no MiraDesconto antes de comprar.",
+      "caption": "PREÇO NA MIRA — Caneta 3d Impressora Profissional + Refil Filamento + Usb\nHoje: R$ 74,90\nMédia observada: R$ 66,87\nMenor observado: R$ 59,90\nBase: 16 dias acompanhados\n\nO preço atual está 12,0% acima da média observada.\n\nVeja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/impressora-termica-caneta-3d-ou-filamento/\nPreço pode mudar. Link comercial pode gerar comissão sem custo adicional.",
       "cta": "Veja o guia no MiraDesconto",
-      "pippitPrompt": "Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Caneta 3d Impressora Profissional + Refil Filamento + Usb. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_816284-MLB111134362535_052026-AB-caneta-3d-impressora-profissional-refil-filamento-usb.webp. Hook 0-3s: Antes de comprar Caneta 3d Impressora Profissional + Refil Filamento + Usb, olha o que o histórico mostra. Mostre preço atual R$ 74,90, média R$ 68,73 e menor observado R$ 56,90. Narração: Antes de comprar Caneta 3d Impressora Profissional + Refil Filamento + Usb, olha o que o histórico mostra. Hoje ele aparece por R$ 74,90. No Radar, a média foi R$ 68,73 e o menor valor observado foi R$ 56,90, em 23 dias acompanhados. O preço atual está 9,0% acima da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos."
+      "pippitPrompt": "Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Caneta 3d Impressora Profissional + Refil Filamento + Usb. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_816284-MLB111134362535_052026-AB-caneta-3d-impressora-profissional-refil-filamento-usb.webp. Hook 0-3s: Antes de comprar Caneta 3d Impressora Profissional + Refil Filamento + Usb, olha o que o histórico mostra. Mostre preço atual R$ 74,90, média R$ 66,87 e menor observado R$ 59,90. Narração: Antes de comprar Caneta 3d Impressora Profissional + Refil Filamento + Usb, olha o que o histórico mostra. Hoje ele aparece por R$ 74,90. No Radar, a média foi R$ 66,87 e o menor valor observado foi R$ 59,90, em 16 dias acompanhados. O preço atual está 12,0% acima da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos."
     }
   ]
 }
