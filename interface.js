@@ -1,9 +1,8 @@
 'use strict';
 const source = window.MIRA_DATA;
 const requestedProduct = new URLSearchParams(window.location.search).get('produto');
-const products = (source?.products || []).filter(p => p.name && safeUrl(p.affiliateUrl)
-    && !MiraQuality.priceReviewReason(p)
-    && (MiraQuality.usablePrice(p) || p.id === requestedProduct));
+// Retain the registered catalog; eligibility is checked every time we render.
+const products = (source?.products || []).filter(p => p.name && safeUrl(p.affiliateUrl));
 let selectedCategory = 'Seleção da hora';
 let visibleCount = 24;
 let categoryBeforeSearch = null;
@@ -81,20 +80,12 @@ function makeCard(p) {
     content.append(element('div','category-label',p.category || 'Outros'),element('h3','',p.name));
     content.append(element('div','old-price',discount ? money(p.oldPrice) : ''));
     const recent = currentPrice(p) !== null;
-    const lastPrice = recordedPrice(p);
-    if (!recent && lastPrice !== null) {
-        const date = new Date(p.priceCheck.checkedAt).toLocaleDateString('pt-BR',{timeZone:'America/Sao_Paulo'});
-        content.append(element('div','price-age','PREÇO REGISTRADO EM '+date));
-    }
-    content.append(element('div','price',money(recent ? p.price : lastPrice)));
+    content.append(element('div','price',recent ? money(p.price) : 'Consultar preço'));
     if (recent) {
         const checked = new Date(p.priceCheck.checkedAt).toLocaleString('pt-BR', {timeZone:'America/Sao_Paulo'});
         content.append(element('p','store','Conferido em ' + checked + ' (Brasília)'));
-        content.append(element('p','store','Pix, saldo Mercado Pago e cupons podem alterar o valor.'));
     }
-    content.append(element('div','store',!recent && lastPrice !== null
-        ? 'Valor histórico · confirme preço, frete e disponibilidade na loja'
-        : p.store || 'Ver loja'));
+    content.append(element('div','store',recent ? p.store || 'Ver loja' : 'Preço e disponibilidade na loja'));
     const buttons = element('div','buttons');
     const a = element('a','offer-button',isAffiliateList(p) ? 'ABRIR LISTA NA LOJA' : 'CONFERIR PREÇO NA LOJA');
     a.dataset.itemId=p.id; a.dataset.itemName=p.name; a.dataset.itemCategory=p.category || '';
@@ -144,7 +135,7 @@ function rotateOffers(items, now = Date.now()) {
 }
 function filteredProducts() {
     const query = normalize($('searchInput').value.trim());
-    const filtered = products.filter(p => !MiraQuality.priceReviewReason(p) && (MiraQuality.usablePrice(p) || p.id === requestedProduct) && (selectedCategory === 'Todos' || selectedCategory === 'Seleção da hora' || (selectedCategory === 'Destaques' ? p.featured === true : p.category === selectedCategory))
+    const filtered = products.filter(p => p.available !== false && !MiraQuality.priceReviewReason(p) && (selectedCategory === 'Todos' || selectedCategory === 'Seleção da hora' || (selectedCategory === 'Destaques' ? p.featured === true : p.category === selectedCategory))
         && [p.id,p.name,p.store,p.category].some(v=>normalize(v).includes(query)));
     switch($('sortSelect').value) {
         case 'discount': filtered.sort((a,b)=>(productDiscount(b)||0)-(productDiscount(a)||0));break;
@@ -158,6 +149,7 @@ function renderProducts(keepCount = false) {
     if(keepCount !== true) visibleCount = 24;
     const filtered = filteredProducts();
     $('productList').replaceChildren(...filtered.slice(0,visibleCount).map(makeCard));
+    $('dataNotice').textContent = 'Valores exibidos foram conferidos há no máximo 2 horas. Quando o preço expira, consulte na loja. Pix, cupons e frete podem alterar o total.';
     $('resultCount').textContent = `${filtered.length} ${filtered.length===1?'oferta encontrada':'ofertas encontradas'}`;
     if (document.body.classList.contains('search-active')) {
         $('searchMessage').textContent = `Busca em todo o catálogo por “${$('searchInput').value.trim()}”`;
@@ -178,7 +170,7 @@ async function shareProduct(name,link) {
 const categoryContainer = document.querySelector('.categories-container');
 const techCategories = ['PC e hardware','Notebooks','Celulares','Setup','Gaming','Áudio','Smart Home','TVs e projetores','Impressoras'];
 const availableCategories = techCategories;
-const categories = ['Seleção da hora','Destaques','Todos',...availableCategories];
+const categories = ['Seleção da hora','Todos',...availableCategories];
 categoryContainer.replaceChildren();
 const mobileCategory = element('div','category-mobile');
 const categoryLabel = element('label','','Categoria');
@@ -186,8 +178,7 @@ categoryLabel.htmlFor = 'categorySelect';
 const categorySelect = element('select');categorySelect.id = 'categorySelect';
 mobileCategory.append(categoryLabel,categorySelect);
 [...new Set(categories)].forEach(cat=>{
-    const count = products.filter(p=>cat==='Todos'||cat==='Seleção da hora'||(cat==='Destaques'?p.featured===true:p.category===cat)).length;
-    const label = `${cat} (${count})`;
+    const label = cat === 'Todos' ? 'Todas as ofertas' : cat;
     const b = element('button','category',label);
     b.type = 'button';b.dataset.category = cat;
     b.classList.toggle('active',cat===selectedCategory);b.setAttribute('aria-pressed',String(cat===selectedCategory));
@@ -234,3 +225,31 @@ if ($('searchInput').value.trim()) updateSearch();
 
 // Recheck expiry while the visitor keeps the page open.
 setInterval(() => renderProducts(true), 60000);
+
+// Load the same published catalog without executing downloaded JavaScript.
+// Each shard is checked atomically; a failed refresh preserves the previous data.
+let catalogRefreshing = false;
+async function refreshCatalog() {
+    if (document.hidden || catalogRefreshing) return;
+    catalogRefreshing = true;
+    try {
+        const response = await fetch('produtos.js', {cache:'no-store'});
+        if (!response.ok) return;
+        const text = await response.text();
+        // Parse the generated JSON assignment as data; never execute downloaded code.
+        const match = text.match(/(?:^|\n)window\.MIRA_DATA\s*=\s*(\{[\s\S]*\})\s*;?\s*$/);
+        if (!match) return;
+        const next = JSON.parse(match[1]).products;
+        if (!Array.isArray(next)) return;
+        if (!next.length || new Set(next.map(p => p.id)).size !== next.length) return;
+        if (next.some(p => !p || typeof p.id !== 'string' || !p.id || !p.name || !safeUrl(p.affiliateUrl))) return;
+        products.splice(0, products.length, ...next);
+        if (source) source.products = next;
+        document.dispatchEvent(new CustomEvent('mira:catalog-updated'));
+        renderProducts(true);
+    } catch { /* Retain existing data; the freshness guard still expires prices. */ }
+    finally { catalogRefreshing = false; }
+}
+refreshCatalog();
+setInterval(refreshCatalog, 60000);
+document.addEventListener('visibilitychange', () => { if (!document.hidden) refreshCatalog(); });

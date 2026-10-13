@@ -9,26 +9,26 @@
     && p.priceCheck.oldPrice === p.oldPrice && p.priceCheck.currency === 'BRL'
     && Number.isFinite(Date.parse(p.priceCheck.checkedAt));
   const fresh = products.filter(p => recorded(p) && MiraQuality.usablePrice(p));
-  const deals = fresh.filter(p => p.oldPrice > p.price && (1 - p.price / p.oldPrice) >= .5)
-    .sort((a,b) => (1 - b.price / b.oldPrice) - (1 - a.price / a.oldPrice)).slice(0,8);
-  // Lead with the products covered by buying guides, then other core tech.
-  // A large reference-price discount alone does not determine the first offer.
-  const buyingGuideIds = ['MLB4604524838','MLB4329495631','MLB4196200841'];
-  const guided = buyingGuideIds.map(id => fresh.find(p => p.id === id)).filter(Boolean);
-  const coreTech = fresh.filter(p => /^(notebook|monitor|mouse|teclado|ssd|processador)\b/i.test(p.name));
-  const preferred = [...guided, ...coreTech, ...deals, ...fresh];
-  const slides = fresh.length ? [...new Map(preferred.map(p => [p.id,p])).values()].slice(0,8) : products.filter(recorded).slice(0,8);
+  // Include the full eligible catalog, interleave categories, vary the starting point.
+  const eligibleProducts = () => [...new Map(products.filter(p => valid(p) && !MiraQuality.priceReviewReason(p)).map(p => [p.id, p])).values()];
+  let slides = rotateOffers(eligibleProducts());
+  let start = Math.floor(Math.random() * Math.max(1, slides.length));
+  try {
+    const previousId = sessionStorage.getItem('mira:lastShowcase');
+    if (slides.length > 1 && slides[start]?.id === previousId) start = (start + 1) % slides.length;
+    if (slides[start]) sessionStorage.setItem('mira:lastShowcase', slides[start].id);
+  } catch {}
   const shell = element('div','hero-stage');
   const copy = element('div','hero-copy');
   const eyebrow = element('div','hero-eyebrow');
-  eyebrow.append(element('span','hero-live-dot'), element('span','','RADAR MIRADESCONTO'));
+  eyebrow.append(element('span','hero-live-dot'), element('span','','TECNOLOGIA NO SEU RADAR'));
   const heading = element('h1');
-  heading.append('Seu próximo upgrade. ', element('span','','Preço na mira.'));
+  heading.append('Seu próximo upgrade. ', element('span','','Começa aqui.')); 
   copy.append(eyebrow, heading,
-    element('p','hero-lede','Notebooks, monitores e tecnologia: compare configurações, consulte preços observados e escolha o que atende ao seu uso.'));
+    element('p','hero-lede','Do celular ao setup completo: descubra produtos, compare opções e encontre o que combina com você.'));
   const actions = element('div','hero-actions');
-  const explore = element('a','hero-primary','Explorar ofertas ↗'); explore.href='#ofertas';
-  const guide = element('a','hero-secondary','Guias de compra →'); guide.href='blog/';
+  const explore = element('a','hero-primary','Encontrar meu próximo upgrade ↗'); explore.href='#ofertas';
+  const guide = element('a','hero-secondary','Me ajude a escolher →'); guide.href='blog/';
   actions.append(explore, guide); copy.append(actions);
   const proof = element('div','hero-proof');
   const count = element('div','hero-proof-item');
@@ -43,7 +43,7 @@
 
   const showcase = element('div','hero-showcase');
   const top = element('div','hero-showcase-top');
-  top.append(element('span','hero-showcase-label','OFERTA EM DESTAQUE'), element('span','hero-showcase-date'));
+  top.append(element('span','hero-showcase-label','NA MIRA AGORA'), element('span','hero-showcase-date'));
   const card = element('article','hero-feature');
   const visual = element('div','hero-feature-visual');
   const badge = element('span','hero-feature-badge');
@@ -67,9 +67,9 @@
   previous.setAttribute('aria-label','Oferta anterior'); next.setAttribute('aria-label','Próxima oferta');
   controls.append(previous,position,next); footer.append(status,controls);
   const rail = element('div','hero-rail');
-  showcase.append(card,footer); shell.append(copy,showcase); hero.replaceChildren(shell);
+  showcase.append(top,card,footer,rail); shell.append(copy,showcase); hero.replaceChildren(shell);
 
-  let index=0;
+  let index=start;
   const badImages=new Set();
   function render() {
     if (!slides.length) {
@@ -86,7 +86,7 @@
     }
     const p=slides[index], current=MiraQuality.usablePrice(p);
     const discount=current && p.oldPrice>p.price ? Math.floor((1-p.price/p.oldPrice)*100) : 0;
-    const date=new Date(p.priceCheck.checkedAt).toLocaleDateString('pt-BR',{timeZone:'America/Sao_Paulo'});
+    const date=current ? new Date(p.priceCheck.checkedAt).toLocaleDateString('pt-BR',{timeZone:'America/Sao_Paulo'}) : ''; 
     const image=element('img'); image.src=p.imageUrl; image.alt=p.name;
     image.width=560; image.height=420; image.decoding='async';
     image.addEventListener('error',()=>{
@@ -99,11 +99,11 @@
     badge.hidden=discount<50; badge.textContent=discount+'% OFF';
     category.textContent=p.category || 'Mercado Livre'; title.textContent=p.name;
     old.textContent=current && discount>=50 ? 'De '+money(p.oldPrice) : '';
-    price.textContent=money(p.price);
+    price.textContent=current ? money(p.price) : 'Consultar preço';
     link.textContent=isAffiliateList(p) ? 'Abrir lista na loja ↗' : 'Ver produto na loja ↗'; link.href=p.offerUrl || p.affiliateUrl; link.target='_blank';
     link.dataset.itemId=p.id; link.dataset.itemName=p.name; link.dataset.itemCategory=p.category || ''; link.dataset.destinationType=isAffiliateList(p) ? 'affiliate_list' : 'product';
-    status.textContent=current ? 'Preço verificado em '+date : 'Último preço registrado em '+date;
-    top.lastChild.textContent=current ? 'VERIFICADO RECENTEMENTE' : 'CONFIRME NA LOJA';
+    status.textContent=current ? 'Conferido em '+new Date(p.priceCheck.checkedAt).toLocaleString('pt-BR',{timeZone:'America/Sao_Paulo',day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'}) : 'Preço e disponibilidade na loja';
+    top.lastChild.textContent=current ? 'PREÇO OBSERVADO' : 'CONFIRME NA LOJA';
     position.textContent=(index+1)+' / '+slides.length;
     const previews=slides.map((item,i)=>({item,i})).filter(x=>x.i!==index && !badImages.has(x.item.id));
     controls.hidden=previews.length===0;
@@ -117,7 +117,7 @@
         button.setAttribute('aria-label','Mostrar oferta: '+item.name);
         const thumb=element('img'); thumb.src=item.imageUrl; thumb.alt=''; thumb.loading='lazy';
         thumb.addEventListener('error',()=>{badImages.add(item.id);thumb.replaceWith(element('span','hero-rail-placeholder','↗'));},{once:true});
-        const label=element('span'); label.append(element('small','',item.category || 'Oferta'),element('strong','',money(item.price)));
+        const label=element('span'); label.append(element('small','',item.category || 'Oferta'),element('strong','',MiraQuality.usablePrice(item) ? money(item.price) : 'Ver na loja'));
         button.append(thumb,label); button.addEventListener('click',()=>{index=target;render();});
         previews.push(button);
       }
@@ -125,6 +125,7 @@
     }
   }
   function move(direction) {
+    if (!slides.length) return;
     let tries=0;
     do {index=(index+direction+slides.length)%slides.length;tries++;}
     while (badImages.has(slides[index].id) && tries<slides.length);
@@ -137,5 +138,12 @@
     if (!document.hidden && !showcase.matches(':hover') && !showcase.contains(document.activeElement)
       && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) move(1);
   },6500);
+  document.addEventListener('mira:catalog-updated', () => {
+    const currentId = slides[index]?.id;
+    slides = rotateOffers(eligibleProducts());
+    index = Math.max(0, slides.findIndex(p => p.id === currentId));
+    render();
+  });
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) render(); });
   setInterval(render,60000);
 })();

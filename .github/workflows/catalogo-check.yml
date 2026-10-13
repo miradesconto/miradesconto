@@ -31,6 +31,7 @@ jobs:
           python integracoes/automacao/site_health.py
           node test-catalogo.cjs
           node tests/test-offer-rotation.cjs
+          node tests/test-price-refresh.cjs
           node blog/verify.cjs
           node tests/test-qualidade.cjs
           node tests/test-catalogo-evidence.cjs
