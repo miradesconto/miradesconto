@@ -1,4 +1,5 @@
 'use strict';
+require('./test-site-ui.cjs');
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const root=path.resolve(__dirname,'..');
 const photos=JSON.parse(fs.readFileSync(path.join(root,'_data/editorial_products.json')));

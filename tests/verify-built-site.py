@@ -79,3 +79,28 @@ for key in editorial:
         assert (root/local).exists(),(key,href)
         if u.fragment and local in pages:assert u.fragment in pages[local].ids,(key,href)
 print(f'OK: blog and {len(editorial)-1} published articles, metadata, sitemap and internal paths')
+
+# Drafts must not leak through discovery, and known affiliate lists need honest labels.
+for file in (source/'_artigos').glob('*.md'):
+    front=file.read_text(encoding='utf-8').split('---')[1]
+    if 'status: "rascunho"' in front:
+        draft_url=origin+'/blog/'+file.stem+'/'
+        assert draft_url not in urls, draft_url
+        assert '/blog/'+file.stem+'/' not in pages['blog/index.html'].links, draft_url
+notebooks=(root/'blog/notebook-em-promocao-como-escolher/index.html').read_text(encoding='utf-8')
+assert 'Abrir lista na loja' in notebooks
+assert 'O link abre uma lista' in notebooks
+for key in editorial + ['radar/index.html']:
+    text=(root/key).read_text(encoding='utf-8')
+    assert 'blog.js?v=20261013audit' in text, f'Image recovery missing: {key}'
+# Validate actual navigation links of all landing and institutional pages too.
+for key in ['index.html','radar/index.html','sobre.html','transparencia.html','privacidade.html']:
+    for href in pages[key].links:
+        u=urlsplit(href)
+        if u.scheme or u.netloc:continue
+        target=unquote(u.path)
+        local=target.lstrip('/') if target.startswith('/') else normpath(str(Path(key).parent.as_posix())+'/'+target) if target else key
+        if target.endswith('/') or local=='.':local=local.rstrip('/')+'/index.html' if local!='.' else 'index.html'
+        assert (root/local).exists(),(key,href)
+        if u.fragment and local in pages:assert u.fragment in pages[local].ids,(key,href)
+print('OK: draft discovery, affiliate list disclosure, image recovery and primary navigation')

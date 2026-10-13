@@ -78,7 +78,8 @@ Na nossa análise de adequação ao uso, este é o modelo mais coerente para que
 > **Ponto de atenção:** 8 GB reduzem a folga para muitas abas e aplicativos simultâneos; confirme possibilidade de expansão antes da compra.
 
 <p class="buyer-fit"><strong>Ideal para:</strong> aulas, Office, navegação, sistemas web e trabalho administrativo.</p>
-<a class="price-cta" href="https://meli.la/1NguveN" data-item-id="MLB4562931826" data-item-name="ASUS Vivobook Go 15 i3 N305" data-link-location="guide-card" target="_blank" rel="sponsored nofollow noopener noreferrer">Conferir preço atualizado</a>
+<a class="price-cta" href="https://meli.la/1NguveN" data-item-id="MLB4562931826" data-item-name="ASUS Vivobook Go 15 i3 N305" data-link-location="guide-card" target="_blank" rel="sponsored nofollow noopener noreferrer">Abrir lista na loja</a>
+<p class="article-meta">Link de afiliado para uma lista. Procure o ASUS Vivobook Go 15 i3 N305 e confirme a configuração; o modelo pode não estar mais listado.</p>
 </article>
 
 <article id="lenovo-ideapad-slim-3" class="buy-guide-card" markdown="1">

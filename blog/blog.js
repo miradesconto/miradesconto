@@ -1,9 +1,17 @@
 'use strict';
 // Progressive enhancement: all editorial content and catalog links are static.
-document.querySelectorAll('.image-frame img').forEach(img => {
-  const fallback = img.previousElementSibling;
-  const fail = () => {img.classList.add('failed');img.setAttribute('aria-hidden','true');fallback.hidden = false;};
-  const loaded = () => {img.classList.remove('failed');img.removeAttribute('aria-hidden');fallback.hidden = true;};
+document.querySelectorAll('.image-frame img, .editorial-card-media img, .product-media img, .radar-card-image img, .buy-card > img').forEach(img => {
+  let fallback = img.parentElement.querySelector('.image-fallback, .media-fallback');
+  // Keep the registered source. A failed image never justifies substituting another product.
+  if (!fallback) {
+    fallback = document.createElement('span');
+    fallback.className = 'media-fallback';
+    fallback.textContent = 'Imagem indisponível';
+    img.after(fallback);
+  }
+  fallback.hidden = true;
+  const fail = () => {img.hidden = true;img.setAttribute('aria-hidden','true');fallback.hidden = false;};
+  const loaded = () => {img.hidden = false;img.removeAttribute('aria-hidden');fallback.hidden = true;};
   img.addEventListener('error', fail);
   img.addEventListener('load', loaded);
   if (img.complete) {if (img.naturalWidth) loaded(); else fail();}
