@@ -1,9 +1,8 @@
 'use strict';
 const source = window.MIRA_DATA;
 const requestedProduct = new URLSearchParams(window.location.search).get('produto');
-const products = (source?.products || []).filter(p => p.name && safeUrl(p.affiliateUrl)
-    && !MiraQuality.priceReviewReason(p)
-    && (MiraQuality.usablePrice(p) || p.id === requestedProduct));
+// Retain the registered catalog; eligibility is checked every time we render.
+const products = (source?.products || []).filter(p => p.name && safeUrl(p.affiliateUrl));
 let selectedCategory = 'Seleção da hora';
 let visibleCount = 24;
 let categoryBeforeSearch = null;
@@ -90,7 +89,6 @@ function makeCard(p) {
     if (recent) {
         const checked = new Date(p.priceCheck.checkedAt).toLocaleString('pt-BR', {timeZone:'America/Sao_Paulo'});
         content.append(element('p','store','Conferido em ' + checked + ' (Brasília)'));
-        content.append(element('p','store','Pix, saldo Mercado Pago e cupons podem alterar o valor.'));
     }
     content.append(element('div','store',!recent && lastPrice !== null
         ? 'Valor histórico · confirme preço, frete e disponibilidade na loja'
@@ -178,7 +176,7 @@ async function shareProduct(name,link) {
 const categoryContainer = document.querySelector('.categories-container');
 const techCategories = ['PC e hardware','Notebooks','Celulares','Setup','Gaming','Áudio','Smart Home','TVs e projetores','Impressoras'];
 const availableCategories = techCategories;
-const categories = ['Seleção da hora','Destaques','Todos',...availableCategories];
+const categories = ['Seleção da hora','Todos',...availableCategories];
 categoryContainer.replaceChildren();
 const mobileCategory = element('div','category-mobile');
 const categoryLabel = element('label','','Categoria');
@@ -186,8 +184,7 @@ categoryLabel.htmlFor = 'categorySelect';
 const categorySelect = element('select');categorySelect.id = 'categorySelect';
 mobileCategory.append(categoryLabel,categorySelect);
 [...new Set(categories)].forEach(cat=>{
-    const count = products.filter(p=>cat==='Todos'||cat==='Seleção da hora'||(cat==='Destaques'?p.featured===true:p.category===cat)).length;
-    const label = `${cat} (${count})`;
+    const label = cat === 'Todos' ? 'Todas as ofertas' : cat;
     const b = element('button','category',label);
     b.type = 'button';b.dataset.category = cat;
     b.classList.toggle('active',cat===selectedCategory);b.setAttribute('aria-pressed',String(cat===selectedCategory));
@@ -234,3 +231,32 @@ if ($('searchInput').value.trim()) updateSearch();
 
 // Recheck expiry while the visitor keeps the page open.
 setInterval(() => renderProducts(true), 60000);
+
+// Load the same published catalog without executing downloaded JavaScript.
+// Each shard is checked atomically; a failed refresh preserves the previous data.
+async function refreshCatalog() {
+    if (document.hidden) return;
+    try {
+        const manifestResponse = await fetch('catalogo/feed.json', {cache:'no-store'});
+        if (!manifestResponse.ok) return;
+        const files = (await manifestResponse.json()).files;
+        if (!Array.isArray(files) || !files.length) return;
+        const parts = await Promise.all(files.map(async file => {
+            if (!/^\/catalogo\/produtos-\d+\.json$/.test(file)) throw new Error('Invalid catalog path');
+            const response = await fetch(file, {cache:'no-store'});
+            if (!response.ok) throw new Error('Catalog unavailable');
+            const part = await response.json();
+            if (!Array.isArray(part)) throw new Error('Invalid catalog');
+            return part;
+        }));
+        const next = parts.flat();
+        if (!next.length || new Set(next.map(p => p.id)).size !== next.length) return;
+        if (next.some(p => !p.name || !safeUrl(p.affiliateUrl))) return;
+        products.splice(0, products.length, ...next);
+        source.products = next;
+        renderProducts(true);
+    } catch { /* Retain existing data; the freshness guard still expires prices. */ }
+}
+refreshCatalog();
+setInterval(refreshCatalog, 5 * 60000);
+document.addEventListener('visibilitychange', () => { if (!document.hidden) refreshCatalog(); });

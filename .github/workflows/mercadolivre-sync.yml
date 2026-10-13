@@ -52,6 +52,7 @@ jobs:
           node blog/verify.cjs
           node tests/test-qualidade.cjs
           node tests/test-catalogo-evidence.cjs
+          node tests/test-radar-rotation.cjs
       - name: Registrar somente mudanças reais
         shell: bash
         run: |

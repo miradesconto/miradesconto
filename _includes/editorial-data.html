@@ -1,0 +1,4 @@
+{% assign public_articles = site.artigos | where: "status", "publicado" | sort: "data" | reverse %}
+<script id="editorial-data" type="application/json">[{% for entry in public_articles %}{"ids":{{ entry.produtos | jsonify }},"title":{{ entry.title | jsonify | replace: '</', '<\/' }},"url":{{ entry.url | relative_url | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}]</script>
+<script src="{{ '/radar.js?v=20261013clean1' | relative_url }}" defer></script>
+<script src="{{ '/site.js?v=20261013clean1' | relative_url }}" defer></script>

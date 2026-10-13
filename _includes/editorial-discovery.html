@@ -1,0 +1,8 @@
+{% assign discover_entries = site.artigos | where: "status", "publicado" | sort: "data" | reverse %}
+{% if discover_entries.size > 0 %}
+<section class="wrap discovery" aria-labelledby="discover-title">
+<div class="discovery-head"><h2 id="discover-title">Antes de comprar</h2><a href="{{ '/blog/' | relative_url }}">Explorar Guias e Reviews →</a></div>
+<div class="discovery-grid">{% assign discover_count = 0 %}{% for entry in discover_entries %}{% if entry.url != page.url and discover_count < 3 %}{% assign discover_count = discover_count | plus: 1 %}
+<a class="discovery-card" href="{{ entry.url | relative_url }}"><small>{% case entry.categoria %}{% when 'reviews' %}Review{% when 'comparativos' %}Comparativo{% else %}Guia de compra{% endcase %}</small><h3>{{ entry.title | escape }}</h3><p>{{ entry.resumo | escape }}</p></a>
+{% endif %}{% endfor %}</div></section>
+{% endif %}

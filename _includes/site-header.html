@@ -1,0 +1,8 @@
+<header class="site-header"><div class="wrap header-inner">
+<a class="logo" href="{{ '/' | relative_url }}">Mira<span>Desconto</span></a>
+<nav aria-label="Navegação principal">
+<a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Ofertas</a>
+<a href="{{ '/radar/' | relative_url }}"{% if page.url == '/radar/' %} aria-current="page"{% endif %}>Radar</a>
+<a href="{{ '/blog/' | relative_url }}"{% if page.url contains '/blog/' %} aria-current="page"{% endif %}>Guias e Reviews</a>
+<a href="{{ '/sobre.html' | relative_url }}"{% if page.url == '/sobre.html' %} aria-current="page"{% endif %}>Sobre</a>
+</nav></div></header>
