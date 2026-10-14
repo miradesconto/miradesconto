@@ -1,6 +1,8 @@
 import copy
 import sys
 import unittest
+from unittest.mock import patch
+from urllib.request import Request
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -50,6 +52,10 @@ class API:
                      "body": {"id": SEED, "seller_id": SELLER}}]
         if path.startswith("/sites/MLB/search?"):
             return copy.deepcopy(SEARCH_RESULT)
+        if path == f"/items/{NEW}":
+            return {"id": NEW, "seller_id": SELLER, "site_id": "MLB",
+                    "status": "active", "currency_id": "BRL", "variations": [],
+                    "permalink": SEARCH_RESULT["results"][0]["permalink"]}
         if path == f"/items/{NEW}/sale_price?context=channel_marketplace":
             return {"currency_id": "BRL", "amount": 799.0, "regular_amount": 999.0}
         raise AssertionError(f"Unexpected API path: {path}")
@@ -138,6 +144,76 @@ class DiscoveryTests(unittest.TestCase):
         self.assertEqual(d.choose_sellers(API(), CATALOG, [SELLER]), [SELLER])
         with self.assertRaisesRegex(ValueError, "ACCESS_TOKEN"):
             d.Client("")
+
+    def test_item_identity_status_and_variations_are_required(self):
+        item = API().get(f"/items/{NEW}")
+        for changes in ({"id": OUTSIDE}, {"seller_id": 999}, {"status": "paused"},
+                        {"currency_id": "USD"}, {"site_id": "MLA"},
+                        {"variations": None}, {"variations": [{"id": 123}]}):
+            with self.subTest(changes=changes):
+                client = API()
+                original = client.get
+                def get(path):
+                    return dict(item, **changes) if path == f"/items/{NEW}" else original(path)
+                with patch.object(client, "get", side_effect=get) as mocked:
+                    report = d.discover(CATALOG, client, now=NOW)
+                self.assertEqual(report["pricesConfirmed"], 0)
+                self.assertEqual(report["candidates"][0]["priceStatus"], "unverified")
+                self.assertFalse(any("sale_price" in call.args[0] for call in mocked.call_args_list))
+
+    def test_no_available_claim_when_search_fails(self):
+        for error in (d.AccessError(429), d.AccessError(500), ValueError("bad JSON"),
+                      RuntimeError("connection")):
+            client = API()
+            with patch.object(client, "get", side_effect=error):
+                report = d.discover(CATALOG, client, [SELLER], now=NOW)
+            self.assertNotEqual(report["discoveryAccess"], "available")
+            self.assertEqual(report["sellersExamined"], 0)
+
+    def test_bulk_item_denial_and_transport_failure_are_reported(self):
+        client = API()
+        with patch.object(client, "get", return_value=[{"id": SEED, "status_code": 403}]):
+            report = d.discover(CATALOG, client, now=NOW)
+        self.assertEqual(report["discoveryAccess"], "blocked_http_403")
+        with patch.object(client, "get", side_effect=RuntimeError("connection")):
+            report = d.discover(CATALOG, client, now=NOW)
+        self.assertEqual(report["discoveryAccess"], "unverified_error")
+
+    def test_pilot_is_limited_to_five(self):
+        client = API()
+        rows = [dict(SEARCH_RESULT["results"][0], id=f"MLB23456789{i:02d}",
+                     permalink=f"https://produto.mercadolivre.com.br/MLB-23456789{i:02d}-notebook-_JM")
+                for i in range(12)]
+        with patch.object(client, "get", return_value={"results": rows}) as mocked:
+            report = d.discover(CATALOG, client, [SELLER], now=NOW)
+        self.assertEqual(report["newCandidates"], 5)
+        self.assertEqual(mocked.call_count, 6)  # One search, five item checks.
+
+    def test_bearer_redirects_are_blocked(self):
+        client = d.Client("synthetic-test-secret")
+        handler = next(h for h in client.opener.handlers if isinstance(h, d.NoRedirect))
+        request = Request(d.API + "/items/test", headers={"Authorization": "Bearer synthetic-test-secret"})
+        for target in ("https://example.com/", d.API + "/other"):
+            self.assertIsNone(handler.redirect_request(request, None, 302, "Found", {}, target))
+
+    def test_output_cannot_overwrite_public_files(self):
+        for target in ("dados/catalogo.json", "preview/../links-afiliados.json", "preview/file.txt"):
+            with self.subTest(target=target), patch.object(d, "Client") as client:
+                with self.assertRaises(ValueError):
+                    d.main(["--output", str(d.ROOT / target)])
+                client.assert_not_called()
+
+    def test_canonical_link_drops_opaque_tracking(self):
+        url = SEARCH_RESULT["results"][0]["permalink"]
+        self.assertEqual(d.canonical_product_link(url + "?opaque=secret#tracking=secret", NEW), url)
+
+    def test_echoed_secret_never_reaches_artifact(self):
+        with patch.dict(d.os.environ, {"ACCESS_TOKEN": "synthetic-test-secret"}), \
+                patch.object(d, "discover", return_value={"title": "synthetic-test-secret"}), \
+                patch.object(Path, "write_text") as write:
+            with self.assertRaises(ValueError):
+                d.main(["--output", str(d.ROOT / "preview/test-secret.json")])
+            write.assert_not_called()
 
 if __name__ == "__main__":
     unittest.main()

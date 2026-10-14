@@ -16,7 +16,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.parse import quote, urlencode, urlsplit
-from urllib.request import Request, urlopen
+from urllib.request import Request, HTTPRedirectHandler, build_opener
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "integracoes"))
@@ -29,7 +29,13 @@ MLB_ID = re.compile(r"MLB\d{7,}$")
 MAX_SEEDS = 16
 MAX_SELLERS = 6
 MAX_LISTINGS_PER_SELLER = 50
-MAX_PRICE_CHECKS = 25
+MAX_PRICE_CHECKS = 5
+
+
+class NoRedirect(HTTPRedirectHandler):
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        # Never forward the bearer token, even to another official host.
+        return None
 
 
 class AccessError(RuntimeError):
@@ -43,6 +49,7 @@ class Client:
         if not token or not token.strip():
             raise ValueError("ACCESS_TOKEN indisponível; não consultaremos dados oficiais sem autorização")
         self.token = token.strip()
+        self.opener = build_opener(NoRedirect())
 
     def get(self, path: str):
         if not path.startswith("/") or "://" in path:
@@ -55,7 +62,7 @@ class Client:
             method="GET",
         )
         try:
-            with urlopen(request, timeout=18) as response:
+            with self.opener.open(request, timeout=18) as response:
                 # Never store or log authorization headers or returned opaque tokens.
                 body = response.read(2_000_001)
         except HTTPError as exc:
@@ -139,7 +146,10 @@ def canonical_product_link(url, item_id):
         actual, variation = identity(url)
         if actual != item_id or variation:
             return None
-        return url
+        # Drop tracking/opaque parameters after checking the original identity.
+        if not re.match(r"^/MLB-\d{7,}(?:-|/|$)", parsed.path, re.I):
+            return None
+        return parsed._replace(query="", fragment="").geturl()
     except (ValueError, Unconfirmed):
         return None
 
@@ -175,6 +185,10 @@ def candidates_for_seller(response, seller_id, known_ids):
             "source": "mercadolivre-official-seller-search",
             "priceStatus": "unverified",
             "affiliateStatus": "not_registered",
+            "identityStatus": "unverified",
+            "variationStatus": "unverified",
+            "historicalDiscountVerified": False,
+            "eligibleForPublication": False,
         })
     return result
 
@@ -202,6 +216,33 @@ def attach_sale_price(candidate, response, checked_at):
     return result
 
 
+def verify_item(candidate, payload):
+    """Only a current, exact item without variations can receive an item price.
+
+    Variant listings remain pending manual review; an item-level sale price
+    cannot establish the price of a selected colour/size/configuration.
+    """
+    if not isinstance(payload, dict):
+        return False
+    if (payload.get("id") != candidate["id"]
+            or payload.get("seller_id") != candidate["sellerId"]
+            or payload.get("site_id") != "MLB"
+            or payload.get("status") != "active"
+            or payload.get("currency_id") != "BRL"
+            or not canonical_product_link(payload.get("permalink"), candidate["id"])):
+        return False
+    candidate["identityStatus"] = "confirmed_by_item_api"
+    variations = payload.get("variations")
+    if not isinstance(variations, list):
+        return False
+    if variations:
+        candidate["variationStatus"] = "requires_manual_selection"
+        return False
+    candidate["variationStatus"] = "no_variations_in_item_api"
+    candidate["visualReviewStatus"] = "pending"
+    return True
+
+
 def choose_sellers(client, catalog, explicit_sellers):
     if explicit_sellers:
         return list(dict.fromkeys(explicit_sellers))[:MAX_SELLERS]
@@ -211,7 +252,12 @@ def choose_sellers(client, catalog, explicit_sellers):
     params = urlencode({"ids": ",".join(seeds),
                         "attributes": "body.id,body.seller_id"})
     payload = client.get("/items/bulk?" + params)
-    return sellers_from_bulk(payload, seeds)
+    sellers = sellers_from_bulk(payload, seeds)
+    if not sellers:
+        for entry in payload:
+            if isinstance(entry, dict) and entry.get("status_code") in (401, 403):
+                raise AccessError(entry["status_code"])
+    return sellers
 
 
 def discover(catalog, client, explicit_sellers=(), now=None):
@@ -229,6 +275,7 @@ def discover(catalog, client, explicit_sellers=(), now=None):
         "newCandidates": 0,
         "pricesConfirmed": 0,
         "priceAccess": "not_tested",
+        "itemAccess": "not_tested",
         "discoveryAccess": "not_tested",
         "notes": [],
         "candidates": [],
@@ -239,31 +286,52 @@ def discover(catalog, client, explicit_sellers=(), now=None):
         report["discoveryAccess"] = "blocked_http_" + str(err.status)
         report["notes"].append("API negou a identificação de vendedores; nenhuma oferta foi inferida")
         return report
+    except (ValueError, RuntimeError):
+        report["discoveryAccess"] = "unverified_error"
+        report["notes"].append("Não foi possível confirmar a resposta de vendedores")
+        return report
     if not sellers:
         report["discoveryAccess"] = "no_sources"
         report["notes"].append("Nenhuma semente ou vendedor autorizado; não há candidatos")
         return report
-    report["discoveryAccess"] = "available"
     discovered = {}
     for seller_id in sellers:
         try:
             data = client.get("/sites/MLB/search?" + urlencode(
                 {"seller_id": seller_id, "limit": MAX_LISTINGS_PER_SELLER}))
+            candidates = candidates_for_seller(data, seller_id, known_ids)
             report["sellersExamined"] += 1
-            for row in candidates_for_seller(data, seller_id, known_ids):
+            report["discoveryAccess"] = "available"
+            for row in candidates:
                 discovered.setdefault(row["id"], row)
         except AccessError as err:
+            report["discoveryAccess"] = "blocked_http_" + str(err.status)
             report["notes"].append("Busca por vendedor indisponível: HTTP " + str(err.status))
             if err.status in (401, 403):
                 report["discoveryAccess"] = "blocked_http_" + str(err.status)
                 break
         except (ValueError, RuntimeError):
+            report["discoveryAccess"] = "unverified_error"
             report["notes"].append("Resposta ou conexão do vendedor não pôde ser verificada")
     rows = list(discovered.values())[:MAX_PRICE_CHECKS]
     denied_price = False
     for index, row in enumerate(rows):
         if denied_price:
             break
+        try:
+            item = client.get("/items/" + quote(row["id"]))
+            if not verify_item(row, item):
+                report["itemAccess"] = "unverified_item_or_variation"
+                continue
+            report["itemAccess"] = "available"
+        except AccessError as err:
+            report["itemAccess"] = "blocked_http_" + str(err.status)
+            if err.status in (401, 403):
+                break
+            continue
+        except (ValueError, RuntimeError):
+            report["itemAccess"] = "unverified_error"
+            continue
         try:
             price = client.get("/items/" + quote(row["id"]) +
                                "/sale_price?context=channel_marketplace")
@@ -302,13 +370,19 @@ def main(argv=None):
     parser.add_argument("--seller-ids", default="")
     args = parser.parse_args(argv)
     # Reject destination escaping the action's isolated review directory.
-    if not args.output.name.endswith(".json"):
-        raise ValueError("Arquivo de resultado deve ser JSON")
+    destination = args.output.resolve()
+    if (destination.suffix != ".json"
+            or not destination.is_relative_to((ROOT / "preview").resolve())):
+        raise ValueError("Arquivo de resultado deve ser JSON dentro de preview/")
     catalog = json.loads((ROOT / "dados/catalogo.json").read_text(encoding="utf-8"))
     client = Client(os.getenv("ACCESS_TOKEN", ""))
     result = discover(catalog, client, parse_seller_ids(args.seller_ids))
-    args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n",
+    serialized = json.dumps(result, ensure_ascii=False, indent=2) + "\n"
+    # API-controlled text must never echo the credential into an artifact.
+    if client.token in serialized:
+        raise ValueError("Resposta recusada por conter credencial")
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    destination.write_text(serialized,
                            encoding="utf-8")
     print("Descoberta: " + json.dumps({k: v for k, v in result.items()
              if k not in ("candidates", "notes")}, ensure_ascii=False))
@@ -318,6 +392,6 @@ def main(argv=None):
 if __name__ == "__main__":
     try:
         main()
-    except (ValueError, OSError, json.JSONDecodeError) as exc:
-        print("Descoberta não executada: " + str(exc), file=sys.stderr)
+    except (ValueError, OSError, RuntimeError):
+        print("Descoberta não concluída; entrada, credencial, resposta ou conexão inválida. Nenhum dado bruto registrado.", file=sys.stderr)
         raise SystemExit(1)

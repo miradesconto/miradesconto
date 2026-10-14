@@ -32,18 +32,19 @@ jobs:
     needs: tests
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    env:
-      ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-      SELLER_IDS: ${{ inputs.seller_ids }}
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: main
+          ref: ${{ github.sha }}
+          persist-credentials: false
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       - name: Buscar somente candidatos oficiais
         shell: bash
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          SELLER_IDS: ${{ inputs.seller_ids }}
         run: |
           python integracoes/mercadolivre/discover_candidates.py \
             --seller-ids "$SELLER_IDS" \

@@ -42,7 +42,7 @@ O resultado é **somente fila de revisão**. Nunca modifica `dados/catalogo.json
 ## O que precisa acontecer depois
 
 1. Confirmar em execução manual se a conta autoriza as consultas. Em caso de 403, consultar permissões oficiais, não automatizar scraping como substituto.
-2. Revisar 5 anúncios de exemplo, fotos, variações e identificação.
+2. Revisar até 5 anúncios de exemplo, fotos, variações e identificação.
 3. Gerar ou fornecer links de afiliado oficiais para **cada anúncio**, confirmando destino e comissão conforme regras do programa.
 4. Arquivar preços verificáveis por dias suficientes para obter base histórica; o Radar existente usa ao menos seis observações em sete dias para oportunidade acionável.
 5. Só depois disso criar fluxo de publicação sob revisão e avaliar agendamento. O piloto não se repete automaticamente.
@@ -55,3 +55,44 @@ python -m py_compile integracoes/mercadolivre/discover_candidates.py
 ```
 
 Os testes simulam respostas oficiais, diferenças de identidade, ausência de link de afiliado, moeda inválida e bloqueio HTTP 403. **Nenhum teste offline confirma que a API esteja liberada para a conta do MiraDesconto.**
+
+## Revisão de segurança do piloto (14/10/2026)
+
+- Limite rígido de cinco candidatos; antes de consultar preço, o piloto consulta
+  `GET /items/{id}` e exige ID, vendedor, site MLB, estado ativo, moeda BRL e
+  permalink do mesmo anúncio. Ausência de `variations` impede confirmação.
+  Anúncios com variações permanecem em `requires_manual_selection`, sem preço
+  confirmado: preço agregado do item não valida uma cor ou configuração.
+- A revisão visual de foto/modelo continua manual e pendente, mesmo quando os
+  dados de identidade e preço são confirmados pela API.
+- Redirecionamentos autenticados são recusados. O token só é disponibilizado
+  ao passo Python, sem renovação OAuth nem persistência de credenciais.
+  Se `ACCESS_TOKEN` estiver ausente ou expirado, o piloto não confirma acesso.
+- O checkout usa o SHA do disparo, sem guardar credencial Git. O relatório só
+  pode ser escrito em `preview/*.json`; URLs são limpas de parâmetros opacos,
+  respostas brutas não são registradas e eco da credencial bloqueia o artefato.
+- Erros HTTP, resposta inválida e falha de conexão não confirmam acesso.
+  `available` exige resposta de busca válida; resultado vazio não valida produtos.
+  Em caso de resultados mistos, revisar os estados por etapa e por candidato;
+  nenhum desses estados autoriza agendamento por si só.
+
+### Evidência e bloqueio encontrados
+
+Na inspeção de 14/10/2026, os PRs #45 e #48 estavam abertos, em rascunho.
+`descobrir-candidatos.yml` não existia na `main` (88d570fd1934cdc48d383ed44c2c471c0634c757).
+A execução [38647004874](https://github.com/miradesconto/miradesconto/actions/runs/38647004874)
+aprovou `tests`, mas o job `discovery` foi **skipped**. Portanto, há zero
+candidatos reais validados por essa execução e nenhuma prova de acesso da conta.
+
+O workflow de diagnóstico existente na main renova e persiste OAuth e não
+substitui este piloto manual de leitura. Não usar gatilhos push, reruns de PR
+ou extração de secrets para contornar a indisponibilidade do workflow manual.
+As páginas oficiais de documentação retornaram HTTP 403 ao navegador desta
+revisão; isso não é uma resposta da API com as credenciais da conta nem valida
+o contrato dos endpoints. A compatibilidade real continua pendente do piloto.
+
+Depois da revisão e disponibilização do workflow na branch padrão, executar
+manualmente, guardar run ID/SHA e o artefato, confirmar os estados de acesso e
+revisar até cinco candidatos (incluindo foto/variação). Só após evidência de
+acesso real avaliar um PR separado de monitoramento. Nenhum schedule é criado
+ou ativado nesta revisão. Catálogo, vitrine e links públicos permanecem intactos.
