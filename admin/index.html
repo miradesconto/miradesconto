@@ -8,6 +8,7 @@
   <title>Painel de produtos | MiraDesconto</title>
   <link rel="stylesheet" href="painel.css">
   <script src="admin.js" defer></script>
+  <script src="ofertas.js" defer></script>
   <script src="painel.js" defer></script>
   <script src="associar.js" defer></script>
 </head>
@@ -25,12 +26,12 @@
       <h1 id="titulo">Produtos sob controle.</h1>
       <p>Consulte o catálogo existente, identifique preços sem confirmação recente e encontre seus links de afiliado. A pesquisa é feita no acervo atual. Você pode selecionar anúncios, consultar seus links e solicitar revisão de um novo link oficial sem alterar a vitrine imediatamente.</p>
     </section>
-    <div class="aviso" role="note"><strong>Importante:</strong> este painel consulta os dados publicados no repositório, não pesquisa promoções ao vivo no Mercado Livre. Preços sem evidência recente nunca são apresentados como ofertas confirmadas.</div>
+    <div class="aviso" role="note"><strong>Importante:</strong> este painel consulta os dados publicados no repositório, não pesquisa promoções ao vivo no Mercado Livre. Preços sem evidência das últimas 2 horas não são apresentados como ofertas atuais. Uma referência de desconto da loja não comprova economia frente ao histórico.</div>
     <section class="resumo" aria-label="Resumo do catálogo">
       <div class="indicador"><span>Produtos cadastrados</span><strong id="total">—</strong></div>
       <div class="indicador"><span>Na vitrine</span><strong id="vitrine">—</strong></div>
-      <div class="indicador"><span>Preço confirmado (24h)</span><strong id="recentes">—</strong></div>
-      <div class="indicador"><span>Sem preço recente na vitrine</span><strong id="pendentes">—</strong></div>
+      <div class="indicador"><span>Preço confirmado (2h)</span><strong id="recentes">—</strong></div>
+      <div class="indicador"><span>Sem preço recente na vitrine (2h)</span><strong id="pendentes">—</strong></div>
     </section>
     <section class="modulo" aria-labelledby="catalogo-titulo">
       <div class="cabecalho-secao">
@@ -46,12 +47,14 @@
             <option value="todos">Todos os produtos</option>
             <option value="publicados">Na vitrine</option>
             <option value="nao-publicados">Fora da vitrine</option>
-            <option value="recentes">Preço confirmado em 24h</option>
+            <option value="recentes">Preço confirmado em 2h</option>
+            <option value="historicas">Oportunidades com histórico (2h)</option>
             <option value="pendentes">Preço não confirmado recentemente</option>
             <option value="sem-afiliado">Sem link de afiliado</option>
           </select>
         </label>
       </div>
+      <p id="radar-resumo" class="radar-resumo" role="status">Analisando histórico de preços...</p>
       <p id="resultado" class="resultado" role="status" aria-live="polite">Carregando catálogo...</p>
       <div id="grade" class="grade" role="list" aria-busy="true"></div>
       <section id="detalhes" class="detalhes" aria-label="Produto selecionado" hidden>
