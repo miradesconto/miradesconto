@@ -104,3 +104,21 @@ for key in ['index.html','radar/index.html','sobre.html','transparencia.html','p
         assert (root/local).exists(),(key,href)
         if u.fragment and local in pages:assert u.fragment in pages[local].ids,(key,href)
 print('OK: draft discovery, affiliate list disclosure, image recovery and primary navigation')
+
+# Painel administrativo: fonte de catálogo realmente disponível após build.
+admin_html = (root/'admin/index.html').read_text(encoding='utf-8')
+assert 'src="ofertas.js"' in admin_html
+assert 'src="painel.js"' in admin_html
+assert 'src="associar.js"' in admin_html
+assert (root/'admin/ofertas.js').is_file()
+assert (root/'admin/painel.js').is_file()
+assert (root/'admin/painel.css').is_file()
+public_catalog = json.loads((root/'dados/catalogo.json').read_text(encoding='utf-8'))
+source_catalog = json.loads((source/'dados/catalogo.json').read_text(encoding='utf-8'))
+assert public_catalog['publishedIds'] == source_catalog['publishedIds']
+assert len(public_catalog['products']) == len(source_catalog['products'])
+public_radar = json.loads((root/'admin/radar.json').read_text(encoding='utf-8'))
+source_radar = json.loads((source/'_data/radar.json').read_text(encoding='utf-8'))
+assert public_radar['featured'] == source_radar['featured']
+assert set(public_radar['byId']) == set(source_radar['byId'])
+print('OK: painel e feeds JSON disponíveis no site renderizado')
