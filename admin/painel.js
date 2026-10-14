@@ -220,7 +220,7 @@
       published = new Set(data.publishedIds);
       radarById = null;
       try {
-        const radarResponse = await fetch('../_data/radar.json', { cache: 'no-store' });
+        const radarResponse = await fetch('radar.json', { cache: 'no-store' });
         if (radarResponse.ok) {
           const radar = await radarResponse.json();
           if (radar && radar.byId && typeof radar.byId === 'object') radarById = radar.byId;
