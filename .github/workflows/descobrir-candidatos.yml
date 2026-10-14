@@ -1,0 +1,58 @@
+name: Descobrir candidatos de ofertas (revisão)
+on:
+  pull_request:
+    paths:
+      - 'integracoes/mercadolivre/discover_candidates.py'
+      - 'tests/test_discover_candidates.py'
+      - '.github/workflows/descobrir-candidatos.yml'
+      - 'docs/DESCOBERTA-CANDIDATOS.md'
+  workflow_dispatch:
+    inputs:
+      seller_ids:
+        description: 'Opcional: até seis IDs de vendedores conhecidos, separados por vírgula'
+        required: false
+        type: string
+permissions:
+  contents: read
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validar script offline
+        run: |
+          python -m py_compile integracoes/mercadolivre/discover_candidates.py
+          python -m unittest discover -s tests -p 'test_discover_candidates.py' -v
+  discovery:
+    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main' && github.actor == github.repository_owner
+    needs: tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+      SELLER_IDS: ${{ inputs.seller_ids }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Buscar somente candidatos oficiais
+        shell: bash
+        run: |
+          python integracoes/mercadolivre/discover_candidates.py \
+            --seller-ids "$SELLER_IDS" \
+            --output preview/candidatos-mercadolivre.json
+      - name: Guardar relatório para revisão; nunca publicar no site
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: candidatos-mercadolivre-${{ github.run_id }}
+          path: preview/candidatos-mercadolivre.json
+          if-no-files-found: warn
+          retention-days: 7
