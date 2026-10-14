@@ -10,6 +10,7 @@
     grade: document.getElementById('grade'),
     resultado: document.getElementById('resultado'),
     recarregar: document.getElementById('recarregar'),
+    radarResumo: document.getElementById('radar-resumo'),
     detalhes: document.getElementById('detalhes'),
     nome: document.getElementById('detalhe-nome'),
     situacao: document.getElementById('detalhe-status'),
@@ -23,35 +24,15 @@
     fechar: document.getElementById('fechar-detalhes')
   };
   const MAX_CARDS = 30;
-  const PRICE_AGE_MS = 24 * 60 * 60 * 1000;
-  const CLOCK_TOLERANCE_MS = 5 * 60 * 1000;
+  const { priceEvidence, storeReference, rankedHistoricalOffers } = window.MiraOfferPolicy;
   let products = [];
   let published = new Set();
   let selected = null;
   let catalogLoaded = false;
+  let radarById = null;
   const currency = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
   const validAffiliate = url => typeof url === 'string' &&
     /^https:\/\/(?:meli\.la\/[A-Za-z0-9]+|(?:www\.)?mercadolivre\.com(?:\.br)?\/sec\/[A-Za-z0-9]+)$/.test(url);
-
-  function priceEvidence(item, now = Date.now()) {
-    const proof = item && item.priceCheck;
-    if (!proof || proof.status !== 'verified' || proof.currency !== 'BRL' ||
-        proof.itemId !== item.id || !Number.isFinite(proof.price) ||
-        !Number.isFinite(item.price) || item.price <= 0 ||
-        Math.abs(proof.price - item.price) > 0.011 ||
-        typeof proof.checkedAt !== 'string') return null;
-    const time = Date.parse(proof.checkedAt);
-    if (!Number.isFinite(time) || time > now + CLOCK_TOLERANCE_MS ||
-        now - time > PRICE_AGE_MS) return null;
-    return { time, price: item.price };
-  }
-
-  function verifiedDiscount(item) {
-    const old = item.oldPrice;
-    const proof = item.priceCheck;
-    return Boolean(proof && Number.isFinite(old) && old > item.price &&
-      Number.isFinite(proof.oldPrice) && Math.abs(proof.oldPrice - old) <= 0.011);
-  }
 
   function validImage(url) {
     if (typeof url !== 'string') return false;
@@ -66,9 +47,20 @@
       timeZone: 'America/Sao_Paulo' }).format(new Date(ms)) + ' (Brasília)';
   }
 
-  function productStatus(item) {
+  function productStatus(item, opportunities) {
     if (!priceEvidence(item)) return { label: 'Preço pendente', className: 'pendente' };
-    return { label: 'Preço confirmado em 24h', className: '' };
+    if (opportunities.has(item.id)) return { label: 'Abaixo da média histórica', className: '' };
+    return { label: 'Preço confirmado em 2h', className: '' };
+  }
+
+  function currentOpportunities() {
+    return new Map(rankedHistoricalOffers(products, radarById).map(found => [found.item.id, found]));
+  }
+
+  function renderRadarSummary(opportunities) {
+    elements.radarResumo.textContent = radarById ?
+      opportunities.size + ' oportunidade(s) com histórico e preço confirmado em até 2 horas. A comparação é com a média observada do mesmo anúncio, não com outras lojas.' :
+      'Radar histórico indisponível; não é possível confirmar oportunidades históricas.';
   }
 
   function clearDetails() {
@@ -96,11 +88,18 @@
     elements.situacao.textContent = verified ?
       'Este preço tem evidência recente associada ao anúncio exato.' :
       'O sistema não possui comprovação de preço recente para este anúncio.';
+    const reference = storeReference(item);
     elements.preco.textContent = verified ? currency.format(verified.price) +
-      (verifiedDiscount(item) ? ' · Antes: ' + currency.format(item.oldPrice) : '') :
+      (reference ? ' · Referência informada pela loja: ' + currency.format(reference) : '') :
       'Consultar diretamente na loja';
+    const opportunity = currentOpportunities().get(item.id);
+    if (opportunity) {
+      const insight = opportunity.insight;
+      elements.situacao.textContent += ' ' + insight.reason +
+        ' Base: ' + insight.observations + ' observações em ' + insight.periodText + '.';
+    }
     elements.data.textContent = verified ? prettyTime(verified.time) :
-      'Sem confirmação válida nas últimas 24 horas';
+      'Sem confirmação válida nas últimas 2 horas';
     const url = validAffiliate(item.affiliateUrl) ? item.affiliateUrl : '';
     elements.link.value = url;
     elements.copiar.disabled = !url;
@@ -113,7 +112,7 @@
     elements.detalhes.scrollIntoView({ block: 'nearest' });
   }
 
-  function makeCard(item) {
+  function makeCard(item, opportunities) {
     const card = document.createElement('button');
     card.type = 'button';
     card.className = 'produto';
@@ -144,7 +143,7 @@
     const id = document.createElement('small');
     id.textContent = item.id + (published.has(item.id) ? ' · Vitrine' : ' · Acervo');
     const status = document.createElement('span');
-    const state = productStatus(item);
+    const state = productStatus(item, opportunities);
     status.className = 'selo ' + state.className;
     status.textContent = state.label;
     info.append(title, id, status);
@@ -165,11 +164,12 @@
     elements.pendentes.textContent = (inStore.length - fresh).toLocaleString('pt-BR');
   }
 
-  function matchesFilter(item, choice) {
+  function matchesFilter(item, choice, opportunities) {
     switch (choice) {
       case 'publicados': return published.has(item.id);
       case 'nao-publicados': return !published.has(item.id);
       case 'recentes': return Boolean(priceEvidence(item));
+      case 'historicas': return opportunities.has(item.id);
       case 'pendentes': return !priceEvidence(item);
       case 'sem-afiliado': return !validAffiliate(item.affiliateUrl);
       default: return true;
@@ -179,12 +179,18 @@
   function renderCards() {
     if (!catalogLoaded) return;
     const term = elements.busca.value.trim().toLocaleLowerCase('pt-BR');
+    const opportunities = currentOpportunities();
+    renderRadarSummary(opportunities);
     const matches = products.filter(item =>
-      matchesFilter(item, elements.filtro.value) &&
+      matchesFilter(item, elements.filtro.value, opportunities) &&
       (!term || (item.name + ' ' + item.id + ' ' + (item.category || '')).toLocaleLowerCase('pt-BR').includes(term))
     );
+    if (elements.filtro.value === 'historicas') {
+      matches.sort((left, right) =>
+        opportunities.get(left.id).insight.deltaAveragePct - opportunities.get(right.id).insight.deltaAveragePct);
+    }
     const fragment = document.createDocumentFragment();
-    for (const item of matches.slice(0, MAX_CARDS)) fragment.append(makeCard(item));
+    for (const item of matches.slice(0, MAX_CARDS)) fragment.append(makeCard(item, opportunities));
     elements.grade.replaceChildren(fragment);
     elements.grade.setAttribute('aria-busy', 'false');
     elements.resultado.textContent = matches.length ?
@@ -212,6 +218,16 @@
         return true;
       });
       published = new Set(data.publishedIds);
+      radarById = null;
+      try {
+        const radarResponse = await fetch('../_data/radar.json', { cache: 'no-store' });
+        if (radarResponse.ok) {
+          const radar = await radarResponse.json();
+          if (radar && radar.byId && typeof radar.byId === 'object') radarById = radar.byId;
+        }
+      } catch {
+        // A failing historical feed must not prevent consulting the base catalog.
+      }
       catalogLoaded = true;
       clearDetails();
       renderSummary();
