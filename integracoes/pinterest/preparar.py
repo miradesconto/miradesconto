@@ -9,6 +9,8 @@ from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[2]
 CONFIG = Path(__file__).with_name('config.json')
+SITE_BASE = 'https://miradesconto.com.br/'
+LEGACY_BASE = 'https://miradesconto.github.io/miradesconto/'
 
 
 def metadata(path):
@@ -25,11 +27,12 @@ def build(root=ROOT, config=None, published_links=()):
     if config.get('mode') != 'draft_only':
         raise ValueError('Somente o modo draft_only foi implementado.')
     base = config['siteUrl']
-    if base != 'https://miradesconto.github.io/miradesconto/':
+    if base != SITE_BASE:
         raise ValueError('Destino não autorizado.')
     catalog = json.loads((root / 'dados/catalogo.json').read_text(encoding='utf-8'))
     products = {p['id']: p for p in catalog['products']}
-    seen = set(published_links)
+    seen = {SITE_BASE + link[len(LEGACY_BASE):] if link.startswith(LEGACY_BASE) else link
+            for link in published_links}
     posts = []
     for slug in config['articles']:
         if not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', slug):
