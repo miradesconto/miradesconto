@@ -56,6 +56,7 @@ layout: null
 </header>
 
 {% if radar.featured.size > 0 %}
+{% assign related_articles = site.artigos | where: 'status', 'publicado' %}
 <div class="radar-grid">
 {% for id in radar.featured %}
 {% assign item = radar.byId[id] %}
@@ -74,8 +75,7 @@ layout: null
 <div><span>Base da análise</span><strong>{{ item.periodText }}</strong></div>
 </div>
 <p class="radar-evidence">{{ item.observations }} observações verificadas no mesmo anúncio e variação.</p>
-{% assign related_articles = site.artigos | where: 'status', 'publicado' | sort: 'produtos.size' %}
-{% assign related_article = nil %}{% for entry in related_articles %}{% if entry.produtos contains item.id %}{% assign related_article = entry %}{% break %}{% endif %}{% endfor %}
+{% assign related_article = nil %}{% for entry in related_articles %}{% if entry.produtos contains item.id %}{% if related_article == nil or entry.produtos.size < related_article.produtos.size %}{% assign related_article = entry %}{% endif %}{% endif %}{% endfor %}
 {% if related_article %}<p><a class="product-link" href="{{ related_article.url | relative_url }}">Ler: {{ related_article.title | escape }}</a></p>{% endif %}
 <div class="radar-actions">
 <a class="radar-primary" href="{{ item.affiliateUrl | escape }}" data-item-id="{{ item.id }}" data-item-name="{{ item.name | escape }}" data-link-location="radar" target="_blank" rel="sponsored nofollow noopener noreferrer">Conferir oferta ↗</a>
