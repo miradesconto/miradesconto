@@ -12,7 +12,7 @@ import hmac
 APP_ID = '1613942'
 REPO = 'miradesconto/miradesconto'
 REDIRECT_URI = 'http://localhost:8765/callback'
-SCOPES = ('boards:read', 'pins:read', 'pins:write', 'boards:write')
+SCOPES = ('boards:read', 'pins:read', 'pins:write', 'boards:write', 'user_accounts:read')
 TOKEN_URL = 'https://api.pinterest.com/v5/oauth/token'
 
 
@@ -42,7 +42,7 @@ def callback_code(target, expected_state):
     return code
 
 
-def token_request(app_secret, payload, opener=urlopen):
+def token_request(app_secret, payload, opener=urlopen, require_refresh=True):
     if not app_secret:
         raise ValueError('Chave secreta ausente.')
     auth = base64.b64encode((APP_ID + ':' + app_secret).encode('utf-8')).decode('ascii')
@@ -57,15 +57,26 @@ def token_request(app_secret, payload, opener=urlopen):
         with opener(request, timeout=25) as response:
             result = json.load(response)
     except HTTPError as exc:
-        raise RuntimeError(f'Pinterest recusou o OAuth (HTTP {exc.code}).') from None
+        if exc.code == 401:
+            raise RuntimeError('Pinterest recusou as credenciais do aplicativo (HTTP 401). Confira a chave secreta atual do app 1613942, não o token de teste.') from None
+        raise RuntimeError(f'Pinterest recusou o OAuth (HTTP {exc.code}). Confira o código e a URI de retorno.') from None
     except (URLError, TimeoutError, ValueError):
         raise RuntimeError('Falha ao consultar OAuth do Pinterest; confira a conexão.') from None
     if (not isinstance(result, dict)
             or not isinstance(result.get('access_token'), str)
-            or not isinstance(result.get('refresh_token'), str)
-            or not result['access_token'] or not result['refresh_token']):
-        raise RuntimeError('Pinterest não retornou os dois tokens esperados.')
+            or not result['access_token']):
+        raise RuntimeError('Pinterest não retornou um token de acesso válido.')
+    if require_refresh and (not isinstance(result.get('refresh_token'), str)
+                            or not result['refresh_token']):
+        raise RuntimeError('Pinterest não retornou o refresh token esperado.')
     return result
+
+
+def verify_client_secret(app_secret):
+    """Verifica credenciais com token app-only, sem exibir nem guardar o token."""
+    token_request(app_secret, {'grant_type': 'client_credentials',
+                               'scope': 'boards:read'}, require_refresh=False)
+    return True
 
 
 def gh_preflight():
