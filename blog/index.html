@@ -19,7 +19,7 @@ layout: null
 <meta property="og:url" content="https://miradesconto.com.br/blog/">
 <meta property="og:image" content="https://miradesconto.com.br/blog/social.png">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="MiraDesconto Editorial"><meta name="twitter:description" content="Guias, comparativos e reviews para comprar tecnologia com mais clareza."><meta name="twitter:image" content="https://miradesconto.com.br/blog/social.png">
-<link rel="stylesheet" href="blog.css?v=20261012mlcta2"><link rel="stylesheet" href="artigo.css?v=20261012shopee-cta1">
+<link rel="stylesheet" href="blog.css?v=20261013audit"><link rel="stylesheet" href="artigo.css?v=20261013audit">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://miradesconto.com.br/#organization","name":"MiraDesconto","url":"https://miradesconto.com.br/"},{"@type":"CollectionPage","@id":"https://miradesconto.com.br/blog/#page","url":"https://miradesconto.com.br/blog/","name":"MiraDesconto Editorial","description":"Guias de compra, comparativos e reviews de tecnologia.","inLanguage":"pt-BR","publisher":{"@id":"https://miradesconto.com.br/#organization"}}]}</script>
 <link rel="stylesheet" href="../compra.css"><link rel="stylesheet" href="../analytics.css">
 </head>
@@ -100,10 +100,10 @@ layout: null
         {% endfor %}
         <article class="editorial-card-clean">
           <a class="editorial-card-media" href="{{ entry.url | relative_url }}" aria-label="Abrir {{ entry.title | escape }}">
-            {% if product and product.imageUrl %}
-            <img src="{{ product.imageUrl | escape }}" alt="{{ product.name | escape }}" loading="lazy" decoding="async">
+            {% if product and product.imageUrl and product.imageVerifiedOnReview != false %}
+            <img src="{{ product.imageUrl | escape }}" alt="{{ product.name | escape }}" width="480" height="360" loading="lazy" decoding="async">
             {% elsif entry.custom_image %}
-            <img src="{{ entry.custom_image | escape }}" alt="{{ entry.title | escape }} — imagem do anúncio na Shopee" loading="lazy" decoding="async">
+            <img src="{{ entry.custom_image | escape }}" alt="{{ entry.title | escape }} — imagem do anúncio na Shopee" width="480" height="360" loading="lazy" decoding="async">
             {% else %}
             <span class="editorial-card-placeholder">MiraDesconto<br><small>Guia editorial</small></span>
             {% endif %}
@@ -161,10 +161,10 @@ layout: null
         {% endfor %}
         <article class="editorial-card-clean">
           <a class="editorial-card-media" href="{{ entry.url | relative_url }}" aria-label="Abrir {{ entry.title | escape }}">
-            {% if product and product.imageUrl %}
-            <img src="{{ product.imageUrl | escape }}" alt="{{ product.name | escape }}" loading="lazy" decoding="async">
+            {% if product and product.imageUrl and product.imageVerifiedOnReview != false %}
+            <img src="{{ product.imageUrl | escape }}" alt="{{ product.name | escape }}" width="480" height="360" loading="lazy" decoding="async">
             {% elsif entry.custom_image %}
-            <img src="{{ entry.custom_image | escape }}" alt="{{ entry.title | escape }} — imagem do anúncio na Shopee" loading="lazy" decoding="async">
+            <img src="{{ entry.custom_image | escape }}" alt="{{ entry.title | escape }} — imagem do anúncio na Shopee" width="480" height="360" loading="lazy" decoding="async">
             {% else %}
             <span class="editorial-card-placeholder">MiraDesconto<br><small>Comparativo editorial</small></span>
             {% endif %}
@@ -222,10 +222,10 @@ layout: null
         {% endfor %}
         <article class="editorial-card-clean">
           <a class="editorial-card-media" href="{{ entry.url | relative_url }}" aria-label="Abrir {{ entry.title | escape }}">
-            {% if product and product.imageUrl %}
-            <img src="{{ product.imageUrl | escape }}" alt="{{ product.name | escape }}" loading="lazy" decoding="async">
+            {% if product and product.imageUrl and product.imageVerifiedOnReview != false %}
+            <img src="{{ product.imageUrl | escape }}" alt="{{ product.name | escape }}" width="480" height="360" loading="lazy" decoding="async">
             {% elsif entry.custom_image %}
-            <img src="{{ entry.custom_image | escape }}" alt="{{ entry.title | escape }} — imagem do anúncio na Shopee" loading="lazy" decoding="async">
+            <img src="{{ entry.custom_image | escape }}" alt="{{ entry.title | escape }} — imagem do anúncio na Shopee" width="480" height="360" loading="lazy" decoding="async">
             {% else %}
             <span class="editorial-card-placeholder">MiraDesconto<br><small>Análise editorial</small></span>
             {% endif %}
@@ -275,6 +275,7 @@ layout: null
     <nav aria-label="Informações institucionais"><a href="../radar/">Radar</a><a href="../sobre.html">Sobre</a><a href="../transparencia.html">Transparência</a><a href="../privacidade.html">Privacidade</a><a href="#conteudo">Voltar ao topo ↑</a></nav>
   </div>
 </footer>
+<script src="blog.js?v=20261013audit" defer></script>
 <script src="../analytics-config.js"></script><script src="../analytics.js"></script>
 </body>
 </html>

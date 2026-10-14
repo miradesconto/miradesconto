@@ -15,7 +15,7 @@ layout: null
 <meta property="og:description" content="Preço atual contra o histórico realmente observado no mesmo anúncio.">
 <meta property="og:url" content="https://miradesconto.com.br/radar/">
 <meta property="og:image" content="https://miradesconto.com.br/blog/social.png">
-<link rel="stylesheet" href="../blog/blog.css?v=20261006editorial3"><link rel="stylesheet" href="../radar.css?v=20261006">
+<link rel="stylesheet" href="../blog/blog.css?v=20261013audit"><link rel="stylesheet" href="../radar.css?v=20261006">
 <link rel="stylesheet" href="../analytics.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Radar de Preços MiraDesconto","description":"Produtos de tecnologia avaliados pelo preço atual em relação ao histórico observado.","url":"https://miradesconto.com.br/radar/","inLanguage":"pt-BR"}</script>
 </head>
@@ -34,8 +34,8 @@ layout: null
 <h1>É uma boa hora para comprar?</h1>
 <p class="radar-lead">Comparamos o preço atual com valores que o próprio MiraDesconto já observou no mesmo anúncio e variação. Sem usar o “preço de referência” da loja como histórico.</p>
 <div class="radar-summary">
-<div><strong>{{ radar.featuredCount }}</strong><span>oportunidades em destaque</span></div>
-<div><strong>{{ radar.eligibleCount }}</strong><span>produtos com histórico utilizável</span></div>
+<div><strong>{{ radar.featuredCount }}</strong><span>destaques na última coleta</span></div>
+<div><strong>{{ radar.eligibleCount }}</strong><span>produtos na última análise</span></div>
 <div><strong>até 180 dias</strong><span>de observações acumuladas</span></div>
 </div>
 </div></section>
@@ -56,15 +56,17 @@ layout: null
 </header>
 
 {% if radar.featured.size > 0 %}
+{% assign related_articles = site.artigos | where: 'status', 'publicado' %}
 <div class="radar-grid">
 {% for id in radar.featured %}
 {% assign item = radar.byId[id] %}
 {% if item %}
-<article class="radar-card">
+<article class="radar-card" id="produto-{{ item.id | escape }}" data-checked-at="{{ item.checkedAt | escape }}">
 <div class="radar-card-image"><img src="{{ item.imageUrl | escape }}" alt="{{ item.name | escape }}" width="420" height="300" loading="lazy"></div>
 <div class="radar-card-body">
 <div class="radar-card-top"><span class="radar-badge {% if item.label == 'Menor observado' %}badge-low{% elsif item.label == 'Excelente preço' %}badge-great{% else %}badge-good{% endif %}">{{ item.label }}</span><span class="radar-category">{{ item.category | escape }}</span></div>
 <h3>{{ item.name | escape }}</h3>
+<p class="radar-evidence">Preço observado em <time datetime="{{ item.checkedAt | escape }}">{{ item.checkedAt | date: "%d/%m/%Y às %H:%M" }} UTC</time>.</p>
 <div class="radar-price">{{ item.currentPriceText }}</div>
 <p class="radar-reason">{{ item.reason | escape }}</p>
 <div class="radar-facts">
@@ -73,6 +75,8 @@ layout: null
 <div><span>Base da análise</span><strong>{{ item.periodText }}</strong></div>
 </div>
 <p class="radar-evidence">{{ item.observations }} observações verificadas no mesmo anúncio e variação.</p>
+{% assign related_article = nil %}{% for entry in related_articles %}{% if entry.produtos contains item.id %}{% if related_article == nil or entry.produtos.size < related_article.produtos.size %}{% assign related_article = entry %}{% endif %}{% endif %}{% endfor %}
+{% if related_article %}<p><a class="product-link" href="{{ related_article.url | relative_url }}">Ler: {{ related_article.title | escape }}</a></p>{% endif %}
 <div class="radar-actions">
 <a class="radar-primary" href="{{ item.affiliateUrl | escape }}" data-item-id="{{ item.id }}" data-item-name="{{ item.name | escape }}" data-link-location="radar" target="_blank" rel="sponsored nofollow noopener noreferrer">Conferir oferta ↗</a>
 <a class="radar-secondary" href="../?produto={{ item.id | url_encode }}#ofertas">Ver no catálogo</a>
@@ -103,6 +107,8 @@ layout: null
 <div><a class="logo" href="../">Mira<span>Desconto</span></a><p>Informação para escolher melhor.<br>© 2026 MiraDesconto.</p></div>
 <nav aria-label="Informações institucionais"><a href="../sobre.html">Sobre</a><a href="../blog/">Editorial</a><a href="../transparencia.html">Transparência</a><a href="../privacidade.html">Privacidade</a></nav>
 </div></footer>
+<script src="../blog/blog.js?v=20261013audit" defer></script>
+<script src="radar.js?v=20261013audit" defer></script>
 <script src="../analytics-config.js"></script><script src="../analytics.js"></script>
 </body>
 </html>

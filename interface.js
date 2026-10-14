@@ -65,6 +65,9 @@ function makeCard(p) {
         const img = element('img');
         img.alt = p.name;
         img.loading = 'lazy';
+        img.decoding = 'async';
+        img.width = 480; img.height = 360;
+        placeholder.hidden = true;
         img.addEventListener('load', () => placeholder.hidden = true);
         img.addEventListener('error', () => {img.remove();placeholder.hidden = false;});
         img.src = p.imageUrl;
@@ -214,7 +217,7 @@ $('loadMore').addEventListener('click',()=>{visibleCount+=24;renderProducts(true
 $('selectionNotice').textContent = 'Seleção renovada a cada hora, com ofertas de diferentes categorias.';
 $('dataNotice').textContent = source
     ? 'Preços conferidos há no máximo 2 horas. Pix e cupons podem alterar o valor; confirme as condições na loja.'
-    : 'Não foi possível carregar as ofertas. Verifique se produtos.js está na mesma pasta do site.';
+    : 'Não foi possível carregar as ofertas. Tente recarregar a página em instantes.';
 // Links editoriais podem consultar um registro antigo identificado, com aviso explícito.
 if (requestedProduct) {
     $('searchInput').value = products.find(p => p.id === requestedProduct)?.name || requestedProduct;
