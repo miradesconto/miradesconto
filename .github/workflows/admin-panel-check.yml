@@ -4,6 +4,8 @@ on:
     paths:
       - 'admin/**'
       - 'tests/test-admin-panel.cjs'
+      - 'tests/test-admin-offers.cjs'
+      - '_config.yml'
       - '.github/workflows/admin-panel-check.yml'
   workflow_dispatch:
 permissions:
@@ -21,7 +23,10 @@ jobs:
         run: |
           node --check admin/admin.js
           node --check admin/painel.js
+          node --check admin/ofertas.js
           node --check admin/associar.js
           node --check tests/test-admin-panel.cjs
       - name: Verificar contratos do painel
-        run: node tests/test-admin-panel.cjs
+        run: |
+          node tests/test-admin-panel.cjs
+          node tests/test-admin-offers.cjs
