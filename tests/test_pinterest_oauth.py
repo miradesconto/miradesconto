@@ -71,6 +71,20 @@ class PinterestOAuthTests(unittest.TestCase):
             core.token_request('a-secret-that-must-not-leak', {'grant_type': 'client_credentials'},
                                opener=fake_open, require_refresh=False)
 
+    def test_pinterest_internal_server_error_does_not_accuse_client_secret(self):
+        from urllib.error import HTTPError
+        def fake_open(_request, timeout):
+            raise HTTPError('https://api.pinterest.com/v5/oauth/token',
+                            500, 'Internal Server Error', {}, None)
+        with self.assertRaisesRegex(RuntimeError, 'erro interno \\(HTTP 500\\)'):
+            core.token_request('redacted-secret', {'grant_type': 'authorization_code'},
+                               opener=fake_open)
+
+    def test_real_authorization_does_not_depend_on_client_credentials(self):
+        source = (MODULE_DIR / 'autorizar.py').read_text(encoding='utf-8')
+        self.assertNotIn('verify_client_secret(', source)
+        self.assertIn("'grant_type': 'authorization_code'", source)
+
 
 if __name__ == '__main__':
     unittest.main()

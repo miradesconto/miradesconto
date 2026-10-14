@@ -59,6 +59,8 @@ def token_request(app_secret, payload, opener=urlopen, require_refresh=True):
     except HTTPError as exc:
         if exc.code == 401:
             raise RuntimeError('Pinterest recusou as credenciais do aplicativo (HTTP 401). Confira a chave secreta atual do app 1613942, não o token de teste.') from None
+        if 500 <= exc.code <= 599:
+            raise RuntimeError(f'Pinterest apresentou erro interno (HTTP {exc.code}); isso não comprova problema na chave ou no código. Aguarde e tente novamente mais tarde.') from None
         raise RuntimeError(f'Pinterest recusou o OAuth (HTTP {exc.code}). Confira o código e a URI de retorno.') from None
     except (URLError, TimeoutError, ValueError):
         raise RuntimeError('Falha ao consultar OAuth do Pinterest; confira a conexão.') from None
