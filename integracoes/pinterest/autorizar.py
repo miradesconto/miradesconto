@@ -6,7 +6,7 @@ import time
 import webbrowser
 
 from oauth_core import (REDIRECT_URI, authorization_url, callback_code,
-                        gh_preflight, save_secret, token_request)
+                        gh_preflight, save_secret, token_request, verify_client_secret)
 
 
 def main():
@@ -14,6 +14,9 @@ def main():
     app_secret = getpass('Cole a chave secreta do app Pinterest (não será exibida): ').strip()
     if not app_secret:
         raise RuntimeError('Chave secreta não informada.')
+    print('Verificando chave do Pinterest antes de abrir o navegador...')
+    verify_client_secret(app_secret)
+    print('Chave validada; iniciando autorização de Pins.')
     state = secrets.token_urlsafe(32)
     received = {'code': None}
 
