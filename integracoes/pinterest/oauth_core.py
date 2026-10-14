@@ -42,6 +42,28 @@ def callback_code(target, expected_state):
     return code
 
 
+def safe_oauth_error(exc):
+    """Retorna somente categorias predefinidas e códigos numéricos (nunca texto livre)."""
+    known = {
+        'invalid_client', 'invalid_grant', 'invalid_request',
+        'unauthorized_client', 'access_denied', 'invalid_scope',
+        'unsupported_grant_type'
+    }
+    details = []
+    try:
+        response = json.loads(exc.read(8192))
+        if isinstance(response, dict):
+            label = response.get('error')
+            if isinstance(label, str) and label in known:
+                details.append('tipo=' + label)
+            code = response.get('code', response.get('error_code'))
+            if type(code) is int and 0 <= code <= 999999:
+                details.append('codigo=' + str(code))
+    except (OSError, ValueError, TypeError, AttributeError):
+        pass
+    return (' [' + ', '.join(details) + ']') if details else ''
+
+
 def token_request(app_secret, payload, opener=urlopen, require_refresh=True):
     if not app_secret:
         raise ValueError('Chave secreta ausente.')
@@ -57,11 +79,22 @@ def token_request(app_secret, payload, opener=urlopen, require_refresh=True):
         with opener(request, timeout=25) as response:
             result = json.load(response)
     except HTTPError as exc:
+        detail = safe_oauth_error(exc)
         if exc.code == 401:
-            raise RuntimeError('Pinterest recusou as credenciais do aplicativo (HTTP 401). Confira a chave secreta atual do app 1613942, não o token de teste.') from None
+            raise RuntimeError(
+                'Pinterest recusou a troca OAuth (HTTP 401)' + detail
+                + '. A falha pode envolver a chave secreta atual, código temporário'
+                ' inválido/expirado ou autorização do aplicativo.'
+            ) from None
         if 500 <= exc.code <= 599:
-            raise RuntimeError(f'Pinterest apresentou erro interno (HTTP {exc.code}); isso não comprova problema na chave ou no código. Aguarde e tente novamente mais tarde.') from None
-        raise RuntimeError(f'Pinterest recusou o OAuth (HTTP {exc.code}). Confira o código e a URI de retorno.') from None
+            raise RuntimeError(
+                f'Pinterest apresentou erro interno (HTTP {exc.code})' + detail
+                + '; isso não comprova problema na chave nem no código.'
+            ) from None
+        raise RuntimeError(
+            f'Pinterest recusou o OAuth (HTTP {exc.code})' + detail
+            + '. Confira a autorização e o URI de retorno.'
+        ) from None
     except (URLError, TimeoutError, ValueError):
         raise RuntimeError('Falha ao consultar OAuth do Pinterest; confira a conexão.') from None
     if (not isinstance(result, dict)
