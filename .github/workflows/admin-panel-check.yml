@@ -1,0 +1,26 @@
+name: Validar painel de produtos
+on:
+  pull_request:
+    paths:
+      - 'admin/**'
+      - 'tests/test-admin-panel.cjs'
+      - '.github/workflows/admin-panel-check.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  painel:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verificar JavaScript
+        run: |
+          node --check admin/admin.js
+          node --check admin/painel.js
+          node --check tests/test-admin-panel.cjs
+      - name: Verificar contratos do painel
+        run: node tests/test-admin-panel.cjs
