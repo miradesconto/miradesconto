@@ -21,6 +21,7 @@ jobs:
         run: |
           node --check admin/admin.js
           node --check admin/painel.js
+          node --check admin/associar.js
           node --check tests/test-admin-panel.cjs
       - name: Verificar contratos do painel
         run: node tests/test-admin-panel.cjs
