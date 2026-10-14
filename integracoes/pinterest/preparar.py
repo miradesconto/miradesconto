@@ -25,7 +25,7 @@ def build(root=ROOT, config=None, published_links=()):
     if config.get('mode') != 'draft_only':
         raise ValueError('Somente o modo draft_only foi implementado.')
     base = config['siteUrl']
-    if base != 'https://miradesconto.github.io/miradesconto/':
+    if base != 'https://miradesconto.com.br/':
         raise ValueError('Destino não autorizado.')
     catalog = json.loads((root / 'dados/catalogo.json').read_text(encoding='utf-8'))
     products = {p['id']: p for p in catalog['products']}

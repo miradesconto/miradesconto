@@ -1,0 +1,44 @@
+name: Pinterest — publicar Pin revisado
+on:
+  workflow_dispatch:
+    inputs:
+      article:
+        description: "Slug do artigo publicado (sem /blog/)"
+        required: true
+        type: string
+      board_id:
+        description: "ID real da pasta no Pinterest"
+        required: true
+        type: string
+      image_url:
+        description: "URL HTTPS da arte PNG/JPG própria hospedada em miradesconto.com.br"
+        required: true
+        type: string
+      confirmation:
+        description: "Digite PUBLICAR somente após revisar imagem, legenda e destino"
+        required: true
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: pinterest-manual-publish
+  cancel-in-progress: false
+jobs:
+  publicar:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Revisar e publicar apenas um artigo aprovado
+        env:
+          PINTEREST_ACCESS_TOKEN: ${{ secrets.PINTEREST_ACCESS_TOKEN }}
+          ARTICLE: ${{ inputs.article }}
+          BOARD_ID: ${{ inputs.board_id }}
+          IMAGE_URL: ${{ inputs.image_url }}
+          CONFIRMATION: ${{ inputs.confirmation }}
+        run: |
+          python integracoes/pinterest/publicar.py --article "$ARTICLE" --board-id "$BOARD_ID" --image-url "$IMAGE_URL" --confirmation "$CONFIRMATION"
