@@ -86,5 +86,41 @@ class PinterestOAuthTests(unittest.TestCase):
         self.assertIn("'grant_type': 'authorization_code'", source)
 
 
+    def test_oauth_error_category_without_leaking_server_message(self):
+        from io import BytesIO
+        from urllib.error import HTTPError
+        def fake_open(_request, timeout):
+            raise HTTPError(
+                'https://api.pinterest.com/v5/oauth/token', 401,
+                'Unauthorized', {},
+                BytesIO(b'{"error":"invalid_grant","code":21,"message":"SECRET_DO_NOT_PRINT"}')
+            )
+        with self.assertRaises(RuntimeError) as caught:
+            core.token_request('key-DO_NOT_PRINT', {'grant_type':'authorization_code',
+                                                   'code':'AUTH-DO_NOT_PRINT'}, opener=fake_open)
+        output = str(caught.exception)
+        self.assertIn('HTTP 401', output)
+        self.assertIn('tipo=invalid_grant', output)
+        self.assertIn('codigo=21', output)
+        self.assertNotIn('SECRET_DO_NOT_PRINT', output)
+        self.assertNotIn('key-DO_NOT_PRINT', output)
+        self.assertNotIn('AUTH-DO_NOT_PRINT', output)
+
+    def test_unrecognized_server_error_fields_are_never_logged(self):
+        from io import BytesIO
+        from urllib.error import HTTPError
+        def fake_open(_request, timeout):
+            raise HTTPError(
+                'https://api.pinterest.com/v5/oauth/token', 401, 'Unauthorized',
+                {}, BytesIO(b'{"error":"secret-LEAK","code":"123-LEAK","message":"LEAK"}')
+            )
+        with self.assertRaises(RuntimeError) as caught:
+            core.token_request('private', {'grant_type':'authorization_code'}, opener=fake_open)
+        msg = str(caught.exception)
+        self.assertNotIn('LEAK', msg)
+        self.assertNotIn('tipo=', msg)
+        self.assertNotIn('codigo=', msg)
+
+
 if __name__ == '__main__':
     unittest.main()
