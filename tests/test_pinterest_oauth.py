@@ -46,6 +46,30 @@ class PinterestOAuthTests(unittest.TestCase):
             self.assertEqual(link, 'https://miradesconto.com.br/blog/iphone-15-ou-16-em-promocao/')
         finally:
             sys.path.remove(str(MODULE_DIR))
+    def test_check_secret_accepts_app_token_without_refresh_token(self):
+        from io import BytesIO
+        import json
+        seen = []
+        def fake_open(request, timeout):
+            seen.append(request)
+            return BytesIO(json.dumps({'access_token': 'pinc-test'}).encode())
+        result = core.token_request('not-a-real-secret',
+                                    {'grant_type': 'client_credentials', 'scope': 'boards:read'},
+                                    opener=fake_open, require_refresh=False)
+        self.assertEqual(result['access_token'], 'pinc-test')
+        self.assertIn('Basic ', seen[0].get_header('Authorization'))
+        with self.assertRaisesRegex(RuntimeError, 'refresh token'):
+            core.token_request('not-a-real-secret',
+                               {'grant_type': 'authorization_code', 'code': 'fake'},
+                               opener=fake_open)
+
+    def test_rejected_client_secret_has_safe_message(self):
+        from urllib.error import HTTPError
+        def fake_open(_request, timeout):
+            raise HTTPError('https://api.pinterest.com/v5/oauth/token', 401, 'Unauthorized', {}, None)
+        with self.assertRaisesRegex(RuntimeError, 'chave secreta atual'):
+            core.token_request('a-secret-that-must-not-leak', {'grant_type': 'client_credentials'},
+                               opener=fake_open, require_refresh=False)
 
 
 if __name__ == '__main__':
