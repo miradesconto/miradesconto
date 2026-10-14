@@ -1,6 +1,6 @@
 # Fila de conteúdo — MiraDesconto → Pippit
 
-**Radar:** 2026-10-14T18:40:38+00:00
+**Radar:** 2026-10-14T19:18:45+00:00
 **Fila:** 14 vídeos · 2 por dia · 7 dias
 
 Prioridade: Radar real, histórico observado, variedade de categorias e artigo de destino. Não usa referência da loja como histórico.
@@ -47,8 +47,8 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 ## Dia 1 · Vídeo 2 — Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play
 
 **Ângulo:** Abaixo da média observada: vale agora?
-**Preço:** R$ 112,00 · média R$ 118,00 · mínimo R$ 110,91
-**Base:** 24 dias acompanhados · 441 observações
+**Preço:** R$ 112,00 · média R$ 117,98 · mínimo R$ 110,91
+**Base:** 24 dias acompanhados · 442 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/adaptador-carplay-sem-fio-compatibilidade/
 **Imagem:** https://http2.mlstatic.com/D_NQ_NP_622828-MLB96582387924_112025-O-apple-car-play-adaptador-usb-sem-fio-iphone-plug-play.webp
 
@@ -58,13 +58,13 @@ Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play está 5.1% abaixo da médi
 
 **Roteiro**
 
-Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play está 5.1% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 112,00. No Radar, a média foi R$ 118,00 e o menor valor observado foi R$ 110,91, em 24 dias acompanhados. O preço atual está 5,1% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play está 5.1% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 112,00. No Radar, a média foi R$ 117,98 e o menor valor observado foi R$ 110,91, em 24 dias acompanhados. O preço atual está 5,1% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play
 Hoje: R$ 112,00
-Média observada: R$ 118,00
+Média observada: R$ 117,98
 Menor observado: R$ 110,91
 Base: 24 dias acompanhados
 
@@ -75,15 +75,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play. Imagem: https://http2.mlstatic.com/D_NQ_NP_622828-MLB96582387924_112025-O-apple-car-play-adaptador-usb-sem-fio-iphone-plug-play.webp. Hook 0-3s: Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play está 5.1% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 112,00, média R$ 118,00 e menor observado R$ 110,91. Narração: Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play está 5.1% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 112,00. No Radar, a média foi R$ 118,00 e o menor valor observado foi R$ 110,91, em 24 dias acompanhados. O preço atual está 5,1% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play. Imagem: https://http2.mlstatic.com/D_NQ_NP_622828-MLB96582387924_112025-O-apple-car-play-adaptador-usb-sem-fio-iphone-plug-play.webp. Hook 0-3s: Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play está 5.1% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 112,00, média R$ 117,98 e menor observado R$ 110,91. Narração: Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play está 5.1% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 112,00. No Radar, a média foi R$ 117,98 e o menor valor observado foi R$ 110,91, em 24 dias acompanhados. O preço atual está 5,1% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
 ## Dia 2 · Vídeo 1 — Console Nintendo Switch 2, Modelo Nacional de Tomada
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 4.199,00 · média R$ 4.380,19 · mínimo R$ 4.199,00
-**Base:** 24 dias acompanhados · 440 observações
+**Preço:** R$ 4.199,00 · média R$ 4.379,78 · mínimo R$ 4.199,00
+**Base:** 24 dias acompanhados · 441 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/nintendo-switch-2-vale-a-pena-2026/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_785396-MLA99867558581_112025-AB.webp
 
@@ -93,13 +93,13 @@ Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observ
 
 **Roteiro**
 
-Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 4.199,00. No Radar, a média foi R$ 4.380,19 e o menor valor observado foi R$ 4.199,00, em 24 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 4.199,00. No Radar, a média foi R$ 4.379,78 e o menor valor observado foi R$ 4.199,00, em 24 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Console Nintendo Switch 2, Modelo Nacional de Tomada
 Hoje: R$ 4.199,00
-Média observada: R$ 4.380,19
+Média observada: R$ 4.379,78
 Menor observado: R$ 4.199,00
 Base: 24 dias acompanhados
 
@@ -110,15 +110,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Console Nintendo Switch 2, Modelo Nacional de Tomada. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_785396-MLA99867558581_112025-AB.webp. Hook 0-3s: Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 4.199,00, média R$ 4.380,19 e menor observado R$ 4.199,00. Narração: Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 4.199,00. No Radar, a média foi R$ 4.380,19 e o menor valor observado foi R$ 4.199,00, em 24 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Console Nintendo Switch 2, Modelo Nacional de Tomada. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_785396-MLA99867558581_112025-AB.webp. Hook 0-3s: Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 4.199,00, média R$ 4.379,78 e menor observado R$ 4.199,00. Narração: Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 4.199,00. No Radar, a média foi R$ 4.379,78 e o menor valor observado foi R$ 4.199,00, em 24 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
 ## Dia 2 · Vídeo 2 — Notebook 15.6" Acer Aspire Go com Tela IPS Full HD Touchscreen…
 
 **Ângulo:** Abaixo da média observada: vale agora?
-**Preço:** R$ 4.999,00 · média R$ 5.285,71 · mínimo R$ 4.649,00
-**Base:** 12 dias acompanhados · 207 observações
+**Preço:** R$ 4.999,00 · média R$ 5.284,34 · mínimo R$ 4.649,00
+**Base:** 12 dias acompanhados · 208 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/acer-aspire-go-i7-16gb-vale-a-pena/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_707936-MLA116704651852_092026-T.webp
 
@@ -128,13 +128,13 @@ Notebook 15.6" Acer Aspire Go com Tela IPS Full HD Touchscreen… está 5.4% aba
 
 **Roteiro**
 
-Notebook 15.6" Acer Aspire Go com Tela IPS Full HD Touchscreen… está 5.4% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 4.999,00. No Radar, a média foi R$ 5.285,71 e o menor valor observado foi R$ 4.649,00, em 12 dias acompanhados. O preço atual está 5,4% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Notebook 15.6" Acer Aspire Go com Tela IPS Full HD Touchscreen… está 5.4% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 4.999,00. No Radar, a média foi R$ 5.284,34 e o menor valor observado foi R$ 4.649,00, em 12 dias acompanhados. O preço atual está 5,4% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Notebook 15.6" Acer Aspire Go com Tela IPS Full HD Touchscreen…
 Hoje: R$ 4.999,00
-Média observada: R$ 5.285,71
+Média observada: R$ 5.284,34
 Menor observado: R$ 4.649,00
 Base: 12 dias acompanhados
 
@@ -145,15 +145,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook 15.6" Acer Aspire Go com Tela IPS Full HD Touchscreen…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_707936-MLA116704651852_092026-T.webp. Hook 0-3s: Notebook 15.6" Acer Aspire Go com Tela IPS Full HD Touchscreen… está 5.4% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 4.999,00, média R$ 5.285,71 e menor observado R$ 4.649,00. Narração: Notebook 15.6" Acer Aspire Go com Tela IPS Full HD Touchscreen… está 5.4% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 4.999,00. No Radar, a média foi R$ 5.285,71 e o menor valor observado foi R$ 4.649,00, em 12 dias acompanhados. O preço atual está 5,4% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook 15.6" Acer Aspire Go com Tela IPS Full HD Touchscreen…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_707936-MLA116704651852_092026-T.webp. Hook 0-3s: Notebook 15.6" Acer Aspire Go com Tela IPS Full HD Touchscreen… está 5.4% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 4.999,00, média R$ 5.284,34 e menor observado R$ 4.649,00. Narração: Notebook 15.6" Acer Aspire Go com Tela IPS Full HD Touchscreen… está 5.4% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 4.999,00. No Radar, a média foi R$ 5.284,34 e o menor valor observado foi R$ 4.649,00, em 12 dias acompanhados. O preço atual está 5,4% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
 ## Dia 3 · Vídeo 1 — Notebook ASUS Vivobook Go 15, Intel Core i3 N305, 8GB RAM, 512GB…
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 3.459,00 · média R$ 3.598,19 · mínimo R$ 3.459,00
-**Base:** 12 dias acompanhados · 231 observações
+**Preço:** R$ 3.459,00 · média R$ 3.597,59 · mínimo R$ 3.459,00
+**Base:** 12 dias acompanhados · 232 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/notebook-em-promocao-como-escolher/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_792275-MLA99470991702_112025-V.webp
 
@@ -163,13 +163,13 @@ Notebook ASUS Vivobook Go 15, Intel Core i3 N305, 8GB RAM, 512GB… está no men
 
 **Roteiro**
 
-Notebook ASUS Vivobook Go 15, Intel Core i3 N305, 8GB RAM, 512GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 3.459,00. No Radar, a média foi R$ 3.598,19 e o menor valor observado foi R$ 3.459,00, em 12 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Notebook ASUS Vivobook Go 15, Intel Core i3 N305, 8GB RAM, 512GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 3.459,00. No Radar, a média foi R$ 3.597,59 e o menor valor observado foi R$ 3.459,00, em 12 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Notebook ASUS Vivobook Go 15, Intel Core i3 N305, 8GB RAM, 512GB…
 Hoje: R$ 3.459,00
-Média observada: R$ 3.598,19
+Média observada: R$ 3.597,59
 Menor observado: R$ 3.459,00
 Base: 12 dias acompanhados
 
@@ -180,7 +180,7 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook ASUS Vivobook Go 15, Intel Core i3 N305, 8GB RAM, 512GB…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_792275-MLA99470991702_112025-V.webp. Hook 0-3s: Notebook ASUS Vivobook Go 15, Intel Core i3 N305, 8GB RAM, 512GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 3.459,00, média R$ 3.598,19 e menor observado R$ 3.459,00. Narração: Notebook ASUS Vivobook Go 15, Intel Core i3 N305, 8GB RAM, 512GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 3.459,00. No Radar, a média foi R$ 3.598,19 e o menor valor observado foi R$ 3.459,00, em 12 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook ASUS Vivobook Go 15, Intel Core i3 N305, 8GB RAM, 512GB…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_792275-MLA99470991702_112025-V.webp. Hook 0-3s: Notebook ASUS Vivobook Go 15, Intel Core i3 N305, 8GB RAM, 512GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 3.459,00, média R$ 3.597,59 e menor observado R$ 3.459,00. Narração: Notebook ASUS Vivobook Go 15, Intel Core i3 N305, 8GB RAM, 512GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 3.459,00. No Radar, a média foi R$ 3.597,59 e o menor valor observado foi R$ 3.459,00, em 12 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
@@ -188,7 +188,7 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 **Ângulo:** Menor preço observado: vale aproveitar?
 **Preço:** R$ 48,75 · média R$ 49,88 · mínimo R$ 48,75
-**Base:** 24 dias acompanhados · 440 observações
+**Base:** 24 dias acompanhados · 441 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/acessorios-ps4-ps5-switch-como-escolher/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_762912-MLA105696431793_012026-AB.webp
 
@@ -222,8 +222,8 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 ## Dia 4 · Vídeo 1 — Celular Samsung Galaxy S26 5g, 512gb, 12gb Ram, Galaxy Ai, Câmera…
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 5.798,00 · média R$ 5.800,50 · mínimo R$ 5.798,00
-**Base:** 9 dias acompanhados · 258 observações
+**Preço:** R$ 5.798,00 · média R$ 5.800,49 · mínimo R$ 5.798,00
+**Base:** 9 dias acompanhados · 259 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/qual-celular-comprar-2026/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_939755-MLA109096677198_042026-AB.webp
 
@@ -233,13 +233,13 @@ Celular Samsung Galaxy S26 5g, 512gb, 12gb Ram, Galaxy Ai, Câmera… está no m
 
 **Roteiro**
 
-Celular Samsung Galaxy S26 5g, 512gb, 12gb Ram, Galaxy Ai, Câmera… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 5.798,00. No Radar, a média foi R$ 5.800,50 e o menor valor observado foi R$ 5.798,00, em 9 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Celular Samsung Galaxy S26 5g, 512gb, 12gb Ram, Galaxy Ai, Câmera… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 5.798,00. No Radar, a média foi R$ 5.800,49 e o menor valor observado foi R$ 5.798,00, em 9 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Celular Samsung Galaxy S26 5g, 512gb, 12gb Ram, Galaxy Ai, Câmera…
 Hoje: R$ 5.798,00
-Média observada: R$ 5.800,50
+Média observada: R$ 5.800,49
 Menor observado: R$ 5.798,00
 Base: 9 dias acompanhados
 
@@ -250,7 +250,7 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Celular Samsung Galaxy S26 5g, 512gb, 12gb Ram, Galaxy Ai, Câmera…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_939755-MLA109096677198_042026-AB.webp. Hook 0-3s: Celular Samsung Galaxy S26 5g, 512gb, 12gb Ram, Galaxy Ai, Câmera… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 5.798,00, média R$ 5.800,50 e menor observado R$ 5.798,00. Narração: Celular Samsung Galaxy S26 5g, 512gb, 12gb Ram, Galaxy Ai, Câmera… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 5.798,00. No Radar, a média foi R$ 5.800,50 e o menor valor observado foi R$ 5.798,00, em 9 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Celular Samsung Galaxy S26 5g, 512gb, 12gb Ram, Galaxy Ai, Câmera…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_939755-MLA109096677198_042026-AB.webp. Hook 0-3s: Celular Samsung Galaxy S26 5g, 512gb, 12gb Ram, Galaxy Ai, Câmera… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 5.798,00, média R$ 5.800,49 e menor observado R$ 5.798,00. Narração: Celular Samsung Galaxy S26 5g, 512gb, 12gb Ram, Galaxy Ai, Câmera… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 5.798,00. No Radar, a média foi R$ 5.800,49 e o menor valor observado foi R$ 5.798,00, em 9 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
@@ -258,7 +258,7 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 **Ângulo:** Abaixo da média observada: vale agora?
 **Preço:** R$ 46,00 · média R$ 47,44 · mínimo R$ 45,60
-**Base:** 24 dias acompanhados · 435 observações
+**Base:** 24 dias acompanhados · 436 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/kit-para-gravar-videos-com-celular/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_691904-MLA111125430926_052026-AB.webp
 
@@ -292,8 +292,8 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 ## Dia 5 · Vídeo 1 — Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão…
 
 **Ângulo:** Abaixo da média observada: vale agora?
-**Preço:** R$ 113,05 · média R$ 116,28 · mínimo R$ 106,00
-**Base:** 24 dias acompanhados · 438 observações
+**Preço:** R$ 113,05 · média R$ 116,27 · mínimo R$ 106,00
+**Base:** 24 dias acompanhados · 439 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/camera-wifi-a28b-dupla-lente-vale-a-pena/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_798945-MLA112454329586_062026-AB.webp
 
@@ -303,13 +303,13 @@ Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 2.8
 
 **Roteiro**
 
-Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 2.8% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 113,05. No Radar, a média foi R$ 116,28 e o menor valor observado foi R$ 106,00, em 24 dias acompanhados. O preço atual está 2,8% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 2.8% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 113,05. No Radar, a média foi R$ 116,27 e o menor valor observado foi R$ 106,00, em 24 dias acompanhados. O preço atual está 2,8% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão…
 Hoje: R$ 113,05
-Média observada: R$ 116,28
+Média observada: R$ 116,27
 Menor observado: R$ 106,00
 Base: 24 dias acompanhados
 
@@ -320,7 +320,7 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_798945-MLA112454329586_062026-AB.webp. Hook 0-3s: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 2.8% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 113,05, média R$ 116,28 e menor observado R$ 106,00. Narração: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 2.8% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 113,05. No Radar, a média foi R$ 116,28 e o menor valor observado foi R$ 106,00, em 24 dias acompanhados. O preço atual está 2,8% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_798945-MLA112454329586_062026-AB.webp. Hook 0-3s: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 2.8% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 113,05, média R$ 116,27 e menor observado R$ 106,00. Narração: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 2.8% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 113,05. No Radar, a média foi R$ 116,27 e o menor valor observado foi R$ 106,00, em 24 dias acompanhados. O preço atual está 2,8% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
@@ -328,7 +328,7 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 **Ângulo:** Preço na Mira: vale comprar agora?
 **Preço:** R$ 33,90 · média R$ 33,64 · mínimo R$ 28,40
-**Base:** 24 dias acompanhados · 441 observações
+**Base:** 24 dias acompanhados · 442 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/mouse-teclado-acessorios-setup/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_751055-MLA112428593866_062026-AB.webp
 
@@ -363,7 +363,7 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 **Ângulo:** Preço na Mira: vale comprar agora?
 **Preço:** R$ 389,00 · média R$ 391,15 · mínimo R$ 352,00
-**Base:** 24 dias acompanhados · 441 observações
+**Base:** 24 dias acompanhados · 442 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/fone-bluetooth-ou-caixa-de-som-como-escolher/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_848327-MLB93711830286_102025-AB.webp
 
@@ -397,8 +397,8 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 ## Dia 6 · Vídeo 2 — Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo Preto
 
 **Ângulo:** Preço na Mira: vale comprar agora?
-**Preço:** R$ 64,90 · média R$ 63,50 · mínimo R$ 58,37
-**Base:** 24 dias acompanhados · 441 observações
+**Preço:** R$ 64,90 · média R$ 63,51 · mínimo R$ 58,37
+**Base:** 24 dias acompanhados · 442 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/fone-bluetooth-ou-caixa-de-som-como-escolher/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_888868-MLB117019480199_092026-AB.webp
 
@@ -408,13 +408,13 @@ Antes de comprar Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo P
 
 **Roteiro**
 
-Antes de comprar Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo Preto, olha o que o histórico mostra. Hoje ele aparece por R$ 64,90. No Radar, a média foi R$ 63,50 e o menor valor observado foi R$ 58,37, em 24 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Antes de comprar Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo Preto, olha o que o histórico mostra. Hoje ele aparece por R$ 64,90. No Radar, a média foi R$ 63,51 e o menor valor observado foi R$ 58,37, em 24 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo Preto
 Hoje: R$ 64,90
-Média observada: R$ 63,50
+Média observada: R$ 63,51
 Menor observado: R$ 58,37
 Base: 24 dias acompanhados
 
@@ -425,7 +425,7 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo Preto. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_888868-MLB117019480199_092026-AB.webp. Hook 0-3s: Antes de comprar Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo Preto, olha o que o histórico mostra. Mostre preço atual R$ 64,90, média R$ 63,50 e menor observado R$ 58,37. Narração: Antes de comprar Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo Preto, olha o que o histórico mostra. Hoje ele aparece por R$ 64,90. No Radar, a média foi R$ 63,50 e o menor valor observado foi R$ 58,37, em 24 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo Preto. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_888868-MLB117019480199_092026-AB.webp. Hook 0-3s: Antes de comprar Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo Preto, olha o que o histórico mostra. Mostre preço atual R$ 64,90, média R$ 63,51 e menor observado R$ 58,37. Narração: Antes de comprar Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo Preto, olha o que o histórico mostra. Hoje ele aparece por R$ 64,90. No Radar, a média foi R$ 63,51 e o menor valor observado foi R$ 58,37, em 24 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
@@ -433,7 +433,7 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 **Ângulo:** Preço na Mira: vale comprar agora?
 **Preço:** R$ 289,95 · média R$ 289,34 · mínimo R$ 274,00
-**Base:** 21 dias acompanhados · 332 observações
+**Base:** 21 dias acompanhados · 333 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/impressora-termica-caneta-3d-ou-filamento/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_737140-MLB112939930644_072026-AB.webp
 
@@ -467,8 +467,8 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 ## Dia 7 · Vídeo 2 — Caneta 3d Impressora Profissional + Refil Filamento + Usb
 
 **Ângulo:** Preço na Mira: vale comprar agora?
-**Preço:** R$ 74,90 · média R$ 69,34 · mínimo R$ 56,90
-**Base:** 24 dias acompanhados · 204 observações
+**Preço:** R$ 74,90 · média R$ 68,15 · mínimo R$ 59,90
+**Base:** 17 dias acompanhados · 151 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/impressora-termica-caneta-3d-ou-filamento/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_816284-MLB111134362535_052026-AB-caneta-3d-impressora-profissional-refil-filamento-usb.webp
 
@@ -478,23 +478,23 @@ Antes de comprar Caneta 3d Impressora Profissional + Refil Filamento + Usb, olha
 
 **Roteiro**
 
-Antes de comprar Caneta 3d Impressora Profissional + Refil Filamento + Usb, olha o que o histórico mostra. Hoje ele aparece por R$ 74,90. No Radar, a média foi R$ 69,34 e o menor valor observado foi R$ 56,90, em 24 dias acompanhados. O preço atual está 8,0% acima da média observada. Veja o guia no MiraDesconto antes de comprar.
+Antes de comprar Caneta 3d Impressora Profissional + Refil Filamento + Usb, olha o que o histórico mostra. Hoje ele aparece por R$ 74,90. No Radar, a média foi R$ 68,15 e o menor valor observado foi R$ 59,90, em 17 dias acompanhados. O preço atual está 9,9% acima da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Caneta 3d Impressora Profissional + Refil Filamento + Usb
 Hoje: R$ 74,90
-Média observada: R$ 69,34
-Menor observado: R$ 56,90
-Base: 24 dias acompanhados
+Média observada: R$ 68,15
+Menor observado: R$ 59,90
+Base: 17 dias acompanhados
 
-O preço atual está 8,0% acima da média observada.
+O preço atual está 9,9% acima da média observada.
 
 Veja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/impressora-termica-caneta-3d-ou-filamento/
 Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Caneta 3d Impressora Profissional + Refil Filamento + Usb. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_816284-MLB111134362535_052026-AB-caneta-3d-impressora-profissional-refil-filamento-usb.webp. Hook 0-3s: Antes de comprar Caneta 3d Impressora Profissional + Refil Filamento + Usb, olha o que o histórico mostra. Mostre preço atual R$ 74,90, média R$ 69,34 e menor observado R$ 56,90. Narração: Antes de comprar Caneta 3d Impressora Profissional + Refil Filamento + Usb, olha o que o histórico mostra. Hoje ele aparece por R$ 74,90. No Radar, a média foi R$ 69,34 e o menor valor observado foi R$ 56,90, em 24 dias acompanhados. O preço atual está 8,0% acima da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Caneta 3d Impressora Profissional + Refil Filamento + Usb. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_816284-MLB111134362535_052026-AB-caneta-3d-impressora-profissional-refil-filamento-usb.webp. Hook 0-3s: Antes de comprar Caneta 3d Impressora Profissional + Refil Filamento + Usb, olha o que o histórico mostra. Mostre preço atual R$ 74,90, média R$ 68,15 e menor observado R$ 59,90. Narração: Antes de comprar Caneta 3d Impressora Profissional + Refil Filamento + Usb, olha o que o histórico mostra. Hoje ele aparece por R$ 74,90. No Radar, a média foi R$ 68,15 e o menor valor observado foi R$ 59,90, em 17 dias acompanhados. O preço atual está 9,9% acima da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
