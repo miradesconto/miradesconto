@@ -1,1 +1,98 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src https://api.github.com; style-src 'self' 'unsafe-inline'; script-src 'self'; base-uri 'none'; form-action 'none'"><title>Cadastrar oferta · MiraDesconto</title><style>body{font:17px system-ui;background:#101d20;color:#f8fafc;margin:0;padding:30px}main{max-width:650px;margin:auto}h1{font-size:30px}label{display:block;margin-top:24px}input,textarea,button{box-sizing:border-box;width:100%;padding:14px;margin-top:8px;border-radius:10px;border:1px solid #526563;font:inherit}input,textarea{background:#172a2d;color:white}button{background:#86efac;color:#101d20;cursor:pointer;font-weight:700}a{color:#86efac}small,p{line-height:1.6}#status{white-space:pre-wrap}button:disabled{opacity:.5}#bookmark{display:inline-block;padding:12px;border:1px solid #86efac;border-radius:8px}</style><script src="admin.js" defer></script></head><body><main><a href="../">← MiraDesconto</a><h1>Adicionar oferta tech</h1><p>Gere seu link na ferramenta oficial do Mercado Livre e cole abaixo. O cadastro verifica título, imagem e preço. Apenas produtos com desconto confirmado entram na vitrine.</p><form id="form"><label for="links">Link de afiliado</label><textarea id="links" rows="4" placeholder="https://meli.la/... ou https://mercadolivre.com/sec/..." required></textarea><small>Até 20 links, um por linha. Listas de afiliado também são aceitas: os itens tech com preço confirmado são importados e novos itens da lista são consultados na rotina horária.</small><label for="token">Autorização GitHub</label><input id="token" type="password" autocomplete="off" required><small>Token restrito a miradesconto/miradesconto, com Actions: leitura e escrita. Não é salvo pelo painel. <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener noreferrer">Criar autorização</a></small><button id="submit">Adicionar ao MiraDesconto</button></form><p id="status" role="status" aria-live="polite"></p><p><a href="https://github.com/miradesconto/miradesconto/actions/workflows/import-affiliate-links.yml" target="_blank" rel="noopener noreferrer">Acompanhar cadastro no GitHub</a></p><h2>Atalho para o navegador</h2><p>Arraste este botão para a barra de favoritos. Depois de copiar seu link oficial, clique no favorito e cole o link no painel.</p><a id="bookmark">⭐ Adicionar ao MiraDesconto</a><p><small>O painel é público; cadastrar exige sua autorização do GitHub. Receber a solicitação não significa que o produto já foi publicado. Se o Mercado Livre bloquear a consulta, o cadastro falha sem alterar a vitrine.</small></p></main></body></html>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://api.github.com; img-src 'self' https://*.mlstatic.com data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Painel de produtos | MiraDesconto</title>
+  <link rel="stylesheet" href="painel.css">
+  <script src="admin.js" defer></script>
+  <script src="painel.js" defer></script>
+</head>
+<body>
+  <header class="topo">
+    <div class="container topo-conteudo">
+      <a class="marca" href="../" aria-label="Voltar ao MiraDesconto">Mira<span>Desconto</span></a>
+      <span class="topo-etiqueta">Catálogo e afiliados</span>
+      <a class="voltar" href="../">← Voltar ao site</a>
+    </div>
+  </header>
+  <main class="container">
+    <section class="introducao" aria-labelledby="titulo">
+      <span class="sobretitulo">CENTRAL DE PRODUTOS</span>
+      <h1 id="titulo">Produtos sob controle.</h1>
+      <p>Consulte o catálogo existente, identifique preços sem confirmação recente e encontre seus links de afiliado. Esta primeira etapa não altera os produtos ao pesquisar ou selecionar.</p>
+    </section>
+    <div class="aviso" role="note"><strong>Importante:</strong> este painel consulta os dados publicados no repositório, não pesquisa promoções ao vivo no Mercado Livre. Preços sem evidência recente nunca são apresentados como ofertas confirmadas.</div>
+    <section class="resumo" aria-label="Resumo do catálogo">
+      <div class="indicador"><span>Produtos cadastrados</span><strong id="total">—</strong></div>
+      <div class="indicador"><span>Na vitrine</span><strong id="vitrine">—</strong></div>
+      <div class="indicador"><span>Preço confirmado (24h)</span><strong id="recentes">—</strong></div>
+      <div class="indicador"><span>Sem preço recente na vitrine</span><strong id="pendentes">—</strong></div>
+    </section>
+    <section class="modulo" aria-labelledby="catalogo-titulo">
+      <div class="cabecalho-secao">
+        <div><span class="sobretitulo">01 · CONSULTAR</span><h2 id="catalogo-titulo">Seu catálogo</h2></div>
+        <button id="recarregar" type="button" class="botao-secundario">Atualizar lista</button>
+      </div>
+      <div class="filtros">
+        <label>Buscar por nome ou código MLB
+          <input id="busca" type="search" placeholder="Ex.: notebook, monitor ou MLB..." autocomplete="off">
+        </label>
+        <label>Situação
+          <select id="filtro">
+            <option value="todos">Todos os produtos</option>
+            <option value="publicados">Na vitrine</option>
+            <option value="nao-publicados">Fora da vitrine</option>
+            <option value="recentes">Preço confirmado em 24h</option>
+            <option value="pendentes">Preço não confirmado recentemente</option>
+            <option value="sem-afiliado">Sem link de afiliado</option>
+          </select>
+        </label>
+      </div>
+      <p id="resultado" class="resultado" role="status" aria-live="polite">Carregando catálogo...</p>
+      <div id="grade" class="grade" role="list" aria-busy="true"></div>
+      <section id="detalhes" class="detalhes" aria-label="Produto selecionado" hidden>
+        <div class="detalhes-titulo"><h3 id="detalhe-nome"></h3><button id="fechar-detalhes" class="botao-secundario" type="button">Fechar</button></div>
+        <p id="detalhe-status" class="detalhe-status"></p>
+        <dl class="detalhes-dados">
+          <div><dt>ID do anúncio</dt><dd id="detalhe-id"></dd></div>
+          <div><dt>Preço</dt><dd id="detalhe-preco"></dd></div>
+          <div><dt>Última confirmação</dt><dd id="detalhe-data"></dd></div>
+          <div><dt>Publicação</dt><dd id="detalhe-publicacao"></dd></div>
+        </dl>
+        <label>Link de afiliado registrado
+          <input id="detalhe-link" readonly placeholder="Nenhum link cadastrado">
+        </label>
+        <div class="acoes"><button id="copiar-link" type="button" class="botao-secundario">Copiar link</button><a id="abrir-link" target="_blank" rel="noopener noreferrer" class="botao-principal">Abrir no Mercado Livre ↗</a></div>
+        <p class="miudo">O link exibido é o que já está registrado; ele não é gerado automaticamente. A comissão depende das regras do programa de afiliados.</p>
+      </section>
+    </section>
+    <section class="modulo" aria-labelledby="adicionar-titulo">
+      <div class="cabecalho-secao"><div><span class="sobretitulo">02 · CADASTRAR</span><h2 id="adicionar-titulo">Adicionar links oficiais</h2></div></div>
+      <p>Gere seus links no programa de afiliados do Mercado Livre e cole aqui. O sistema tenta identificar o anúncio exato e confirmar os dados antes de cadastrar. Não é possível substituir links existentes por este formulário.</p>
+      <form id="form">
+        <label for="links">Links de afiliado
+          <textarea id="links" rows="3" placeholder="https://meli.la/..." required></textarea>
+        </label>
+        <small>Até 20 links por envio. Aceita links oficiais meli.la e Mercado Livre /sec/. Um por linha.</small>
+        <label for="token">Token GitHub restrito ao repositório
+          <input id="token" type="password" autocomplete="off" spellcheck="false" required>
+        </label>
+        <small>Precisa de permissão Actions: escrita no repositório miradesconto/miradesconto. O token não é salvo pelo painel. <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener noreferrer">Criar token restrito ↗</a></small>
+        <button id="submit" class="botao-principal" type="submit">Solicitar cadastro</button>
+      </form>
+      <p id="status" role="status" aria-live="polite"></p>
+      <p class="miudo">A confirmação do envio não confirma preço, comissão ou publicação. <a href="https://github.com/miradesconto/miradesconto/actions/workflows/import-affiliate-links.yml" target="_blank" rel="noopener noreferrer">Ver resultado da execução no GitHub ↗</a></p>
+      <details class="ajuda"><summary>Prefere cadastrar pelo GitHub?</summary><p>Abra o workflow de cadastro e escolha “Run workflow”, sem inserir um token pessoal neste site. A execução só será aceita para o proprietário do repositório.</p></details>
+    </section>
+    <section class="modulo discreto" aria-labelledby="atalho-titulo">
+      <h2 id="atalho-titulo">Atalho para adicionar links</h2>
+      <p>Arraste o item abaixo para os favoritos do navegador. Ele abre o painel após você colar o link oficial.</p>
+      <a id="bookmark" class="botao-secundario">Adicionar ao MiraDesconto</a>
+    </section>
+    <footer class="rodape">Painel de consulta público. Operações de escrita dependem da autorização do proprietário. Nenhum produto foi alterado por esta tela.</footer>
+  </main>
+</body>
+</html>
