@@ -18,8 +18,8 @@ layout: null
 .skip-link{position:absolute;left:16px;top:-100px;z-index:1000;background:#fff;color:#15803d;padding:14px}.skip-link:focus{top:12px}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
-<link rel="stylesheet" href="carrossel.css?v=202610141214">
-<link rel="stylesheet" href="catalogo.css?v=202610141214">
+<link rel="stylesheet" href="carrossel.css?v=202610141259">
+<link rel="stylesheet" href="catalogo.css?v=202610141259">
 <link rel="stylesheet" href="compra.css"><link rel="stylesheet" href="analytics.css"><link rel="stylesheet" href="historico.css?v=20261006"></head><body>
 <a class="skip-link" href="#ofertas">Pular para as ofertas</a>
 <header><div class="header-container"><button type="button" class="logo" aria-label="MiraDesconto: limpar filtros">Mira<span>Desconto</span></button><nav class="site-nav" aria-label="Navegação principal"><a class="active" href="./">Ofertas</a><a href="radar/">Radar</a><a href="blog/">Guias e Reviews</a><a href="sobre.html">Sobre</a></nav><div class="search"><input id="searchInput" aria-label="Buscar produto, loja ou categoria" type="search" placeholder="Buscar produto, marca ou categoria"></div></div></header>
@@ -50,4 +50,4 @@ layout: null
 <section class="editorial"><div class="editorial-head"><div><h2>Antes de comprar</h2></div><a href="blog/">Ver todos os conteúdos →</a></div><div class="editorial-grid">{% assign published_home = site.artigos | where: "status", "publicado" | sort: "data" | reverse %}{% for entry in published_home limit: 3 %}<a class="editorial-card" href="{{ entry.url | relative_url }}"><small>{% case entry.categoria %}{% when 'reviews' %}REVIEW{% when 'comparativos' %}COMPARATIVO{% else %}GUIA{% endcase %}</small><h3>{{ entry.title | escape }}</h3><p>{{ entry.resumo | escape }}</p></a>{% endfor %}</div></section>
 <div class="disclaimer">Links de afiliado podem gerar comissão, sem custo adicional. Preços e disponibilidade podem mudar. <a href="transparencia.html">Transparência →</a></div></main>
 <footer class="footer"><div class="footer-inner"><div><div class="footer-brand">Mira<span>Desconto</span></div><small>© 2026 — Informação para comprar melhor.</small></div><div class="footer-links"><a href="radar/">Radar</a><a href="sobre.html">Sobre</a><a href="blog/">Guias e Reviews</a><a href="transparencia.html">Transparência</a><a href="privacidade.html">Privacidade</a></div></div></footer>
-<script src="qualidade.js?v=202610141214"></script><script src="produtos.js?v=202610141214"></script><script src="historico.js?v=20261006seo"></script><script src="interface.js?v=202610141214"></script><script src="carrossel.js?v=202610141214"></script><script src="analytics-config.js"></script><script src="analytics.js?v=20261006simples"></script>{% include editorial-data.html %}</body></html>
+<script src="qualidade.js?v=202610141259"></script><script src="produtos.js?v=202610141259"></script><script src="historico.js?v=20261006seo"></script><script src="interface.js?v=202610141259"></script><script src="carrossel.js?v=202610141259"></script><script src="analytics-config.js"></script><script src="analytics.js?v=20261006simples"></script>{% include editorial-data.html %}</body></html>
