@@ -1,0 +1,66 @@
+name: Revisar associação de afiliado
+run-name: Revisar link do anúncio ${{ inputs.product_id }}
+on:
+  workflow_dispatch:
+    inputs:
+      product_id:
+        description: "ID do anúncio existente, por exemplo MLB1234567890"
+        required: true
+        type: string
+      affiliate_url:
+        description: "Link oficial deste anúncio (meli.la ou Mercado Livre /sec/)"
+        required: true
+        type: string
+permissions:
+  contents: write
+  pull-requests: write
+concurrency:
+  group: associate-link-${{ inputs.product_id }}
+  cancel-in-progress: false
+jobs:
+  review:
+    if: github.ref == 'refs/heads/main' && github.actor == github.repository_owner
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      PRODUCT_ID: ${{ inputs.product_id }}
+      AFFILIATE_URL: ${{ inputs.affiliate_url }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Confirmar anúncio e preparar atualização isolada
+        run: |
+          python integracoes/mercadolivre/associate_link.py \
+            --item-id "$PRODUCT_ID" --affiliate-url "$AFFILIATE_URL" --apply
+      - name: Validar arquivos sem publicação
+        run: |
+          python integracoes/catalogo.py check
+          python -m unittest discover -s tests -p 'test_associate_link.py' -v
+          node test-catalogo.cjs
+          node blog/verify.cjs
+      - name: Criar branch de revisão (nunca alterar main)
+        shell: bash
+        run: |
+          git add dados/catalogo.json links-afiliados.json produtos.js catalogo _data/produtos.json
+          if git diff --cached --quiet; then
+            echo "Link já vinculado. Nada a revisar."
+            exit 0
+          fi
+          branch="review/afiliado-${PRODUCT_ID}-${GITHUB_RUN_ID}"
+          git switch -c "$branch"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Revisar novo link oficial do produto ${PRODUCT_ID}"
+          git push origin "HEAD:$branch"
+          gh pr create --draft --base main --head "$branch" \
+            --title "[REVISAR] Link de afiliado: ${PRODUCT_ID}" \
+            --body "Alteração validada do link oficial do anúncio ${PRODUCT_ID}. Origem: workflow autenticado do proprietário. O preço anterior perde a confirmação e o produto sai temporariamente da vitrine até nova coleta. Revisar o destino exato e os testes antes de aprovar. Não há publicação automática."
