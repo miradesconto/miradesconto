@@ -74,9 +74,19 @@
   function clearDetails() {
     selected = null;
     elements.detalhes.hidden = true;
+    document.getElementById('associar-id').value = '';
+    document.getElementById('associar-url').value = '';
+    document.getElementById('associar-token').value = '';
+    document.getElementById('associar-status').textContent = '';
   }
 
   function showDetails(item) {
+    if (selected !== item.id) {
+      document.getElementById('associar-id').value = item.id;
+      document.getElementById('associar-url').value = '';
+      document.getElementById('associar-token').value = '';
+      document.getElementById('associar-status').textContent = '';
+    }
     selected = item.id;
     elements.detalhes.hidden = false;
     elements.nome.textContent = item.name;
