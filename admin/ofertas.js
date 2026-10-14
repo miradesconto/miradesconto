@@ -53,6 +53,8 @@
   function historicalOffer(item, radar, now = Date.now()) {
     const evidence = priceEvidence(item, now);
     if (!evidence || !radar || radar.id !== item.id ||
+        typeof item.affiliateUrl !== 'string' ||
+        !/^https:\/\/(?:meli\.la\/[A-Za-z0-9]+|(?:www\.)?mercadolivre\.com(?:\.br)?\/sec\/[A-Za-z0-9]+)$/.test(item.affiliateUrl) ||
         radar.affiliateUrl !== item.affiliateUrl ||
         radar.actionable !== true || !(radar.strength >= 2) ||
         !(radar.observations >= MIN_HISTORICAL_OBSERVATIONS) ||
