@@ -27,7 +27,12 @@ Base: `b34f8ceb` da main. Escopo: correções de apresentação e navegação, s
 - Todas as verificações locais do workflow de catálogo: aprovadas, incluindo saúde do site, catálogo, rotação, atualização/qualidade de preços, cobertura editorial, imagens, métricas e geração reproduzível.
 - Novas regressões: imagens em carregamento/falha/recuperação/cache e limites de expiração do Radar. Executadas pelo teste visual já incluído no CI.
 - Verificação do HTML gerado ampliada para navegação institucional, divulgação de listas, carregamento do tratamento de imagens e exclusão de rascunhos da descoberta.
-- Build Jekyll, CI do PR e inspeção da prévia: resultados serão registrados após a execução.
+- Em 14/10/2026, build Jekyll e CI completo aprovados no commit `bb82b8963fc4ccd4f1ceaea43468097243386fd2`: https://github.com/miradesconto/miradesconto/actions/runs/38547580913 . A revisão Gemini também passou: https://github.com/miradesconto/miradesconto/actions/runs/38547580918 .
+- O primeiro build detectou uma ordenação de array incompatível com Jekyll 3.10. Corrigida por seleção explícita do artigo com menos produtos relacionados, preservando a correspondência por ID. O build corrigido passou sem alterar workflows.
+- Prévia oficial do CI baixada e conferida por SHA-256: `fa1d155ed5daa95b7cf0063c75a7e230a38a86226ae57daa6419ef25dd8d8a30`. Servida apenas em `127.0.0.1` para revisão; sem publicação externa.
+- Navegador: home, blog, Radar, categoria Notebooks e artigo Shopee X11 examinados em 320, 360 e 1280 px (15 combinações), com um H1 e sem transbordamento horizontal. Guia de notebooks também revisado em desktop e 360 px, incluindo botão e aviso de lista.
+- Teclado: Tab encontra “Pular para as ofertas”; Enter transfere foco para `#ofertas`. Busca por Nintendo retorna um produto com ligação ao artigo do Switch 2.
+- Testes de falha isolados da produção: 12 cards com datas expiradas perderam os 12 selos e passaram a mostrar “Consultar preço na loja”; imagem deliberadamente ausente foi ocultada com texto “Imagem indisponível”. Nenhuma URL de produto foi substituída.
 
 ## Bloqueios e limites
 
