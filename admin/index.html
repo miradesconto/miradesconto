@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="painel.css">
   <script src="admin.js" defer></script>
   <script src="painel.js" defer></script>
+  <script src="associar.js" defer></script>
 </head>
 <body>
   <header class="topo">
@@ -22,7 +23,7 @@
     <section class="introducao" aria-labelledby="titulo">
       <span class="sobretitulo">CENTRAL DE PRODUTOS</span>
       <h1 id="titulo">Produtos sob controle.</h1>
-      <p>Consulte o catálogo existente, identifique preços sem confirmação recente e encontre seus links de afiliado. Esta primeira etapa não altera os produtos ao pesquisar ou selecionar.</p>
+      <p>Consulte o catálogo existente, identifique preços sem confirmação recente e encontre seus links de afiliado. A pesquisa é feita no acervo atual. Você pode selecionar anúncios, consultar seus links e solicitar revisão de um novo link oficial sem alterar a vitrine imediatamente.</p>
     </section>
     <div class="aviso" role="note"><strong>Importante:</strong> este painel consulta os dados publicados no repositório, não pesquisa promoções ao vivo no Mercado Livre. Preços sem evidência recente nunca são apresentados como ofertas confirmadas.</div>
     <section class="resumo" aria-label="Resumo do catálogo">
@@ -67,6 +68,24 @@
         </label>
         <div class="acoes"><button id="copiar-link" type="button" class="botao-secundario">Copiar link</button><a id="abrir-link" target="_blank" rel="noopener noreferrer" class="botao-principal">Abrir no Mercado Livre ↗</a></div>
         <p class="miudo">O link exibido é o que já está registrado; ele não é gerado automaticamente. A comissão depende das regras do programa de afiliados.</p>
+        <div class="associacao" aria-labelledby="associar-titulo">
+          <h4 id="associar-titulo">Associar outro link oficial</h4>
+          <p>Selecione o anúncio acima, cole o novo link e envie para revisão. O sistema só aceita redirecionamento direto para o mesmo anúncio e a mesma variação. Links de perfis e listas serão recusados.</p>
+          <form id="associar-form">
+            <label for="associar-id">Anúncio selecionado
+              <input id="associar-id" readonly required placeholder="Selecione um produto acima">
+            </label>
+            <label for="associar-url">Novo link de afiliado
+              <input id="associar-url" type="url" inputmode="url" placeholder="https://meli.la/..." required>
+            </label>
+            <label for="associar-token">Token restrito do GitHub (Actions: escrita)
+              <input id="associar-token" type="password" autocomplete="off" spellcheck="false" required>
+            </label>
+            <button id="associar-enviar" class="botao-principal" type="submit">Solicitar revisão do link</button>
+          </form>
+          <p id="associar-status" role="status" aria-live="polite"></p>
+          <p class="miudo">Nenhum link é trocado nesta etapa. A verificação ocorre no GitHub e uma proposta separada precisa ser aprovada. <a href="https://github.com/miradesconto/miradesconto/actions/workflows/associate-affiliate-link.yml" target="_blank" rel="noopener noreferrer">Acompanhar solicitações ↗</a></p>
+        </div>
       </section>
     </section>
     <section class="modulo" aria-labelledby="adicionar-titulo">
