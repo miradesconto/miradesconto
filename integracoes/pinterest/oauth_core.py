@@ -12,7 +12,7 @@ import hmac
 APP_ID = '1613942'
 REPO = 'miradesconto/miradesconto'
 REDIRECT_URI = 'http://localhost:8765/callback'
-SCOPES = ('boards:read', 'pins:read', 'pins:write', 'boards:write')
+SCOPES = ('boards:read', 'pins:read', 'pins:write', 'boards:write', 'user_accounts:read')
 TOKEN_URL = 'https://api.pinterest.com/v5/oauth/token'
 
 
