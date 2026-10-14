@@ -35,4 +35,25 @@ assert.ok(!/innerHTML\s*=/.test(panel), 'Não usar innerHTML com dados externos'
 assert.ok(!/localStorage|sessionStorage/.test(panel + legacy), 'Não persistir token nem dados privados');
 assert.ok(/workflows\/import-affiliate-links\.yml\/dispatches/.test(legacy), 'Preservar fluxo de cadastro existente');
 assert.ok(/run-name: Cadastro solicitado/.test(read('.github/workflows/import-affiliate-links.yml')));
+
+const associate = read('admin/associar.js');
+for (const match of associate.matchAll(/getElementById\('([^']+)'\)/g)) {
+  assert.ok(htmlIds.has(match[1]), 'associar.js: elemento #' + match[1] + ' não existe');
+}
+for (const id of ['associar-form', 'associar-id', 'associar-url',
+  'associar-token', 'associar-status', 'associar-enviar']) {
+  assert.ok(htmlIds.has(id), 'Faltando formulário de associação: ' + id);
+}
+assert.match(html, /src="associar\.js"/);
+assert.match(associate, /associate-affiliate-link\.yml\/dispatches/);
+assert.match(associate, /product_id: productId/);
+assert.match(associate, /affiliate_url: affiliateUrl/);
+assert.match(panel, /document\.getElementById\('associar-id'\)\.value = item\.id/);
+assert.ok(!/innerHTML\s*=/.test(associate), 'Não usar innerHTML no formulário');
+assert.ok(!/localStorage|sessionStorage/.test(associate), 'Não salvar autorização');
+const action = read('.github/workflows/associate-affiliate-link.yml');
+assert.match(action, /github\.actor == github\.repository_owner/);
+assert.match(action, /gh pr create --draft/);
+assert.ok(!/git push origin HEAD:main/.test(action), 'Associação não pode publicar diretamente');
+
 console.log('Painel: contratos de DOM, segurança e fluxo de cadastro conferidos.');
