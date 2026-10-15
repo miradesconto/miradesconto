@@ -1,0 +1,14 @@
+<section class="vitrine-diaria" aria-labelledby="vitrine-title">
+  <div class="vitrine-heading">
+    <div><p class="vitrine-eyebrow">{% if include.lang == 'en' %}Editor's picks{% else %}Escolhas em destaque{% endif %}</p>
+      <h2 id="vitrine-title">{% if include.lang == 'en' %}Tech deals worth checking{% else %}Ofertas que merecem uma olhada{% endif %}</h2>
+      <p>{% if include.lang == 'en' %}Prices refresh from our published catalog. All purchases are through Brazilian retailers.{% else %}Seleção do catálogo e do Radar. O preço só aparece quando a verificação está válida.{% endif %}</p></div>
+    <a href="{% if include.lang == 'en' %}{{ '/en/blog/' | relative_url }}{% else %}{{ '/radar/' | relative_url }}{% endif %}">{% if include.lang == 'en' %}Buying tips →{% else %}Ver Radar →{% endif %}</a>
+  </div>
+  <div class="vitrine-grid">
+    {% for id in site.data.ofertas_diarias.ids limit: 4 %}
+      {% include vitrine-card.html id=id lang=include.lang %}
+    {% endfor %}
+  </div>
+  <p class="vitrine-footnote">{% if include.lang == 'en' %}Reference prices are provided by the retailer and are not verified historical prices.{% else %}O preço riscado, quando houver, é referência informada pela loja — não é histórico verificado.{% endif %}</p>
+</section>
