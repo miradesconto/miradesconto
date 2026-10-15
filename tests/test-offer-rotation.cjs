@@ -21,10 +21,10 @@ const now = Date.now();
 const fixture = (id,age,featured=false) => ({id,name:id,category:'Setup',featured,price:100,oldPrice:null,priceCheck:{status:'verified',method:'poly-card-v1',currency:'BRL',itemId:id,price:100,oldPrice:null,checkedAt:new Date(now-age).toISOString()}});
 context.fixtures=[fixture('fresh-featured',1000,true),fixture('fresh-other',1000),fixture('expired',25*3600000),{...fixture('unavailable',1000),available:false}];
 vm.runInContext('products.push(...fixtures)',context);
-assert.deepEqual(ids(context.filteredProducts()).sort(),['expired','fresh-featured','fresh-other']);
+assert.deepEqual(ids(context.filteredProducts()).sort(),[]); // No direct affiliate link, so exclude all fixture cards.
 context.document.getElementById=id=>({value:id==='sortSelect'?'lowPrice':''});
 vm.runInContext('products[1].price=50;products[1].priceCheck.price=50',context);
-assert.deepEqual(ids(context.filteredProducts()),['fresh-other','fresh-featured','expired']);
+assert.deepEqual(ids(context.filteredProducts()),[]);
 vm.runInContext("selectedCategory='Destaques'",context);
-assert.deepEqual(ids(context.filteredProducts()),['fresh-featured']);
-console.log('OK: rodízio muda a primeira página, mistura categorias, preserva paginação e ordenação; preços vencidos ficam para consulta na loja e indisponíveis são excluídos.');
+assert.deepEqual(ids(context.filteredProducts()),[]);
+console.log('OK: rodízio estável; ofertas sem link individual aprovado, expiradas ou indisponíveis não aparecem na seleção.');
