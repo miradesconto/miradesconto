@@ -1,0 +1,6 @@
+{% assign product_id = page.produtos | first %}
+{% assign product = site.data.compra_products[product_id] | default: site.data.editorial_products[product_id] | default: site.data.produtos[product_id] %}
+{% if page.produtos.size == 1 and product and product.name and product.imageUrl %}
+<script id="mira-product-jsonld" type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":{{ product.name | jsonify }},"image":[{{ product.imageUrl | jsonify }}],"sku":{{ product_id | jsonify }},"url":{{ page.url | absolute_url | jsonify }}}</script>
+<script src="{{ '/seo-product.js' | relative_url }}" defer></script>
+{% endif %}

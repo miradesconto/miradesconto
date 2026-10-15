@@ -1,0 +1,25 @@
+{% assign id = include.id %}
+{% assign p = site.data.radar.byId[id] %}
+{% assign reg = site.data.produtos[id] %}
+{% assign link = reg.affiliateUrl | default: p.affiliateUrl %}
+{% unless link == 'https://meli.la/1NguveN' or link == 'https://meli.la/1pyBZm8' %}
+{% if p and p.name and p.imageUrl and link %}
+<article class="vitrine-card" data-vitrine-id="{{ id | escape }}" data-locale="{{ include.lang | default: 'pt' }}">
+  <div class="vitrine-photo">
+    <img src="{{ p.imageUrl | escape }}" alt="{{ p.name | escape }}" width="400" height="300" loading="lazy" decoding="async">
+    <span class="vitrine-hot" data-hot hidden>{% if include.lang == 'en' %}Hot deal{% else %}Oferta quente{% endif %}</span>
+  </div>
+  <div class="vitrine-body">
+    <p class="vitrine-category">{{ p.category | escape }}</p>
+    <h3>{{ p.name | escape }}</h3>
+    <p class="vitrine-old" data-old hidden></p>
+    <strong class="vitrine-price" data-price>{% if include.lang == 'en' %}Check price at store{% else %}Conferir preço na loja{% endif %}</strong>
+    <p class="vitrine-check" data-checked>{% if include.lang == 'en' %}Price and availability may change{% else %}Preço e disponibilidade podem mudar{% endif %}</p>
+    <a class="vitrine-cta" href="{{ link | escape }}" target="_blank" rel="sponsored nofollow noopener noreferrer"
+       data-item-id="{{ id | escape }}" data-item-name="{{ p.name | escape }}" data-item-category="{{ p.category | escape }}" data-link-location="daily-showcase"
+       data-destination-type="product">{% if include.lang == 'en' %}Check deal at store ↗{% else %}Conferir oferta na loja ↗{% endif %}</a>
+    <small class="vitrine-disclosure">{% if include.lang == 'en' %}Affiliate link · Brazilian store (BRL){% else %}Link de afiliado · valores em reais{% endif %}</small>
+  </div>
+</article>
+{% endif %}
+{% endunless %}
