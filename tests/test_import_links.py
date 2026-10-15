@@ -62,6 +62,19 @@ class ImportTest(unittest.TestCase):
             self.assertEqual(configured_sources(current,file),['https://meli.la/new'])
             self.assertEqual(current['metadata']['affiliateSources'],['https://meli.la/old'])
 
+
+    def test_submitted_models_must_match_real_listing(self):
+        from import_links import title_matches_requested, resolve_requested
+        self.assertTrue(title_matches_requested('Smart TV LG 43LR6700PSA FULL HD', ['lg', '43lr6700']))
+        self.assertTrue(title_matches_requested('Caixa Som Kapbom KA-8596', ['kapbom', '8596']))
+        self.assertTrue(title_matches_requested('Mini Drone E88 Pro com Câmera Wi-Fi', ['drone', 'e88']))
+        self.assertFalse(title_matches_requested('Smart TV Samsung 43 Polegadas', ['lg', '43lr6700']))
+        self.assertFalse(title_matches_requested('Drone Sem Marca', ['drone', 'e88']))
+        self.assertFalse(title_matches_requested('Caixa de som Bluetooth de outra marca', ['aiwa', 'bbs']))
+        from tech_policy import category
+        self.assertEqual(category({'name':'Controle Remoto Compatível Com Aoc Smart Tv'}), 'TVs e projetores')
+        self.assertEqual(category({'name':'Mini Drone E88 Pro Com Câmera Wifi'}), 'Gaming')
+
     def test_hosts(self):
         for url in ['http://meli.la/abc','https://meli.la.evil.com/abc','https://user@meli.la/abc','https://127.0.0.1/sec/a']:
             self.assertFalse(affiliate(url))

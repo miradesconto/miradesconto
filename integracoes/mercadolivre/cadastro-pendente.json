@@ -1,9 +1,75 @@
 {
   "links": [
-    "https://meli.la/1hXAjW7"
+    "https://meli.la/1cmZy4H",
+    "https://meli.la/1iyK2pc",
+    "https://meli.la/2QmhPHR",
+    "https://meli.la/18MgyQt",
+    "https://meli.la/27ebcoK",
+    "https://meli.la/2kL9rtC",
+    "https://meli.la/26U5Bw7"
   ],
-  "expectedItemIds": {
-    "https://meli.la/1hXAjW7": "MLB5174506341"
+  "expectedItemIds": {},
+  "expectedTitleTokens": {
+    "https://meli.la/1cmZy4H": [
+      "lg",
+      "43lr6700"
+    ],
+    "https://meli.la/1iyK2pc": [
+      "fone",
+      "m10"
+    ],
+    "https://meli.la/2QmhPHR": [
+      "kapbom",
+      "8596"
+    ],
+    "https://meli.la/18MgyQt": [
+      "aiwa",
+      "bbs"
+    ],
+    "https://meli.la/27ebcoK": [
+      "controle",
+      "aoc"
+    ],
+    "https://meli.la/2kL9rtC": [
+      "drone",
+      "e88"
+    ],
+    "https://meli.la/26U5Bw7": [
+      "caixa",
+      "som",
+      "bluetooth"
+    ]
   },
-  "attempt": 5
+  "submittedProducts": [
+    {
+      "name": "Smart Tv Lg 43 Ld Wifi Bluetooth Full Hd 43lr6700psa Hdr10 Pro",
+      "affiliateUrl": "https://meli.la/1cmZy4H"
+    },
+    {
+      "name": "Fone Ouvido Bluetooth 5.3 Tws M10 A Prova D 'água Microfone",
+      "affiliateUrl": "https://meli.la/1iyK2pc"
+    },
+    {
+      "name": "Caixa de Som Bluetooth Portátil 50w Led Tws Kapbom KA-8596",
+      "affiliateUrl": "https://meli.la/2QmhPHR"
+    },
+    {
+      "name": "Caixa de Som Boombox Plus AIWA BBS-01-LBL 200W Bluetooth 30H IP66 USB RGB",
+      "affiliateUrl": "https://meli.la/18MgyQt"
+    },
+    {
+      "name": "Controle Remoto Compatível Com Aoc Smart Tv",
+      "affiliateUrl": "https://meli.la/27ebcoK"
+    },
+    {
+      "name": "Mini Drone E88 Pro Com Câmera Wifi Com Case 2 Baterias",
+      "affiliateUrl": "https://meli.la/2kL9rtC"
+    },
+    {
+      "name": "Caixa de Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0 Boombox Com Radio Fm E Entrada Usb Pendrive",
+      "affiliateUrl": "https://meli.la/26U5Bw7"
+    }
+  ],
+  "batchId": "2026-10-15-sete-produtos",
+  "attempt": 1
 }
