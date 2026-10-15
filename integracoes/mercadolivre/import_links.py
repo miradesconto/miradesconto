@@ -52,7 +52,7 @@ class Metadata(HTMLParser):
                 self.values[key] = attrs.get('content', '')
 
 
-def resolve(link, expected_item_id=None):
+def resolve(link, expected_item_id=None, expected_title_tokens=None):
     if not affiliate(link):
         raise ValueError('Use um link oficial meli.la ou Mercado Livre /sec/')
     opener = build_opener(Redirects())
@@ -65,10 +65,10 @@ def resolve(link, expected_item_id=None):
         body = response.read(3_000_001)
     if len(body) > 3_000_000:
         raise ValueError('Página grande demais; cadastro exige revisão')
-    return parse_page(body.decode('utf-8', errors='replace'), final, link, expected_item_id)
+    return parse_page(body.decode('utf-8', errors='replace'), final, link, expected_item_id, expected_title_tokens)
 
 
-def parse_page(body, final, link, expected_item_id=None):
+def parse_page(body, final, link, expected_item_id=None, expected_title_tokens=None):
     # A confirmed expected ID must be supplied by the repository owner.
     # It singles out one product within an affiliate profile with suggestions.
     if expected_item_id is not None and not re.fullmatch(r'MLB[0-9]+', expected_item_id):
@@ -87,7 +87,7 @@ def parse_page(body, final, link, expected_item_id=None):
         # A profile landing page contains recommendations, not necessarily
         # products targeted by this affiliate link. Only explicit named lists
         # may register multiple products.
-        if '/lists/' not in urlsplit(final).path and expected_item_id is None:
+        if '/lists/' not in urlsplit(final).path and expected_item_id is None and not expected_title_tokens:
             raise ValueError(
                 'Link abre perfil ou pagina sem anuncio identificavel. '
                 'Gere o link oficial do produto individual ou use uma lista explicita.'
@@ -130,6 +130,15 @@ def parse_page(body, final, link, expected_item_id=None):
                        if key == (expected_item_id, None)]
             if len(matched) != 1:
                 raise ValueError('Produto confirmado nao encontrado de forma unica na pagina')
+            (item_id, variation), (product_url, name, image) = matched[0]
+            observation = extract(body, item_id, product_url)
+        elif expected_title_tokens:
+            # A submitted product name may identify one card in a profile. Never
+            # inherit the tracking link for other profile recommendations.
+            matched = [(key, value) for key, value in candidates.items()
+                       if key[1] is None and title_matches_requested(value[1], expected_title_tokens)]
+            if len(matched) != 1:
+                raise ValueError('Modelo solicitado nao encontrado de forma unica entre os anuncios')
             (item_id, variation), (product_url, name, image) = matched[0]
             observation = extract(body, item_id, product_url)
         else:
@@ -240,7 +249,7 @@ def title_matches_requested(name, tokens):
 
 
 def resolve_requested(link, expected_id, tokens):
-    candidate = resolve(link, expected_id)
+    candidate = resolve(link, expected_id, tokens)
     # Each submitted short URL describes one product, not a shared collection.
     if isinstance(candidate, list):
         raise ValueError('Link de lista: gere um link individual do produto')

@@ -53,6 +53,30 @@ class ImportTest(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'invalido'):
             parse_page(suggestions, url, link, 'INVALID')
 
+
+    def test_explicit_model_matches_only_one_profile_card(self):
+        from import_links import parse_page
+        body = (Path(__file__).parent / 'fixtures/MLB2766771378.html').read_text()
+        body = body.replace(
+            'Creatina 1kg Suplemento Monohidratada em pó 100% Pura - Soldiers Nutrition',
+            'Smart TV LG 43LR6700PSA Full HD',
+        )
+        body = body.replace('<div class="poly-card">',
+                            '<div class="poly-card"><img src="https://http2.mlstatic.com/test.jpg">')
+        profile='https://www.mercadolivre.com.br/social/profile'
+        link='https://meli.la/example'
+        selected = parse_page(body,profile,link,expected_title_tokens=['lg','43lr6700'])
+        self.assertEqual(selected['id'],'MLB2766771378')
+        self.assertEqual(selected['affiliateUrl'],link)
+        self.assertEqual(selected['_observation']['price'],68.90)
+        with self.assertRaisesRegex(ValueError,'nao encontrado'):
+            parse_page(body,profile,link,expected_title_tokens=['samsung','qled'])
+        doubled = body + body.replace('MLB2766771378','MLB2766771379')
+        with self.assertRaisesRegex(ValueError,'nao encontrado'):
+            parse_page(doubled,profile,link,expected_title_tokens=['lg','43lr6700'])
+        with self.assertRaisesRegex(ValueError,'Link abre perfil'):
+            parse_page(body,profile,link)
+
     def test_configured_list_replaces_old_discovery_source(self):
         import tempfile,json
         current={'metadata':{'affiliateSources':['https://meli.la/old']}}
