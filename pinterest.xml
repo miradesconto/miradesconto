@@ -1,0 +1,25 @@
+---
+layout: null
+permalink: /pinterest.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>MiraDesconto - guias e reviews de tecnologia</title>
+    <link>https://miradesconto.com.br/</link>
+    <description>Artigos selecionados do MiraDesconto. O site pode receber comissao por links de afiliados.</description>
+    <language>pt-BR</language>
+    {% assign pinterest_articles = site.artigos | where: "status", "publicado" | sort: "data" | reverse %}
+    {% for article in pinterest_articles %}
+    {% if article.published == true and article.pinterest_image %}
+    <item>
+      <title>{{ article.title | escape }}</title>
+      <link>{{ article.url | absolute_url }}</link>
+      <guid isPermaLink="true">{{ article.url | absolute_url }}</guid>
+      <description>{{ article.resumo | append: " Leia o guia no MiraDesconto. Conteudo com links de afiliados; podemos receber comissao por compras elegiveis." | escape }}</description>
+      <media:content url="{{ article.pinterest_image | absolute_url }}" medium="image" type="image/png" />
+    </item>
+    {% endif %}
+    {% endfor %}
+  </channel>
+</rss>
