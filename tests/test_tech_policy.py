@@ -32,6 +32,20 @@ class TechPolicyTest(unittest.TestCase):
         self.assertEqual(c['publishedIds'], [])
         self.assertEqual(len(c['products']), 1)
 
+    def test_confirmed_individual_affiliate_without_discount_is_listed(self):
+        from tech_policy import eligible
+        p = self.product('Caixa de Som Bluetooth Kapbom', 'MLB7477193852')
+        p.update(oldPrice=None, registrationSource='affiliate-panel',
+                 affiliateUrl='https://meli.la/2QmhPHR', itemId=p['id'])
+        p['priceCheck'].update(method='poly-card-v1', itemId=p['id'], oldPrice=None)
+        self.assertTrue(eligible(p))
+        catalog = dict(products=[p],publishedIds=[p['id']],metadata={'niche':'tech'})
+        reconcile(catalog)
+        self.assertEqual(catalog['publishedIds'], [p['id']])
+        self.assertFalse(eligible({**p,'priceCheck':{**p['priceCheck'],'price':1}}))
+        self.assertFalse(eligible({**p,'registrationSource':'generic'}))
+        self.assertFalse(eligible({**p,'affiliateUrl':'https://mercadolivre.com.br/anuncio'}))
+
     def test_weekly_scan_excludes_nontech_and_never_rotates_it_back(self):
         mouse = self.product('Mouse gamer')
         kitchen = self.product('Air fryer', 'MLB1234567891')
