@@ -91,7 +91,7 @@ function makeCard(p) {
     content.append(element('div','category-label',p.category || 'Outros'),element('h3','',p.name));
     content.append(element('div','old-price',discount ? money(p.oldPrice) : ''));
     const recent = currentPrice(p) !== null;
-    content.append(element('div','price',recent ? money(p.price) : 'Consultar preço'));
+    content.append(element('div','price',recent ? money(p.price) : 'Consultar preço na loja'));
     if (recent) {
         const checked = new Date(p.priceCheck.checkedAt).toLocaleString('pt-BR', {timeZone:'America/Sao_Paulo'});
         content.append(element('p','store','Conferido em ' + checked + ' (Brasília)'));
@@ -144,10 +144,16 @@ function rotateOffers(items, now = Date.now()) {
     }
     return result;
 }
+// Price availability is the primary sort key for *every* mode and category.
+function pricedFirst(items) {
+    const priced = [], toConfirm = [];
+    for (const p of items) (currentPrice(p) !== null ? priced : toConfirm).push(p);
+    return priced.concat(toConfirm);
+}
 function filteredProducts() {
     const query = normalize($('searchInput').value.trim());
     const featuredIds = window.MiraShowcaseIds || [];
-    const filtered = products.filter(p => MiraQuality.usablePrice(p) && directAffiliate(p)
+    const filtered = products.filter(p => directAffiliate(p) && !MiraQuality.priceReviewReason(p)
         && (selectedCategory !== 'Seleção da hora' || !featuredIds.includes(p.id))
         && (selectedCategory === 'Todos' || selectedCategory === 'Seleção da hora' || (selectedCategory === 'Destaques' ? p.featured === true : p.category === selectedCategory))
         && [p.id,p.name,p.store,p.category].some(v=>normalize(v).includes(query)));
@@ -160,10 +166,13 @@ function filteredProducts() {
             const ranked = filtered.sort((a,b) => (Number(b.featured === true) - Number(a.featured === true))
                 || ((productDiscount(b) || 0) - (productDiscount(a) || 0))
                 || String(a.id).localeCompare(String(b.id)));
-            return rotateOffers(ranked.slice(0,30));
+            // Rotate each price tier separately: unverified prices never appear ahead of valid ones.
+            const first = ranked.filter(p => currentPrice(p) !== null);
+            const last = ranked.filter(p => currentPrice(p) === null);
+            return rotateOffers(first.slice(0,30)).concat(rotateOffers(last.slice(0,30)));
         }
     }
-    return filtered;
+    return pricedFirst(filtered);
 }
 function renderProducts(keepCount = false) {
     visibleCount = MAX_HOME_OFFERS;
@@ -176,12 +185,15 @@ function renderProducts(keepCount = false) {
     document.body.classList.toggle('focused-catalog', selectedCategory !== 'Seleção da hora');
     // Only focus one curated selection, not 110 unverified/expired listing records.
     $('dataNotice').textContent = 'Valores exibidos foram conferidos há no máximo 2 horas. Quando o preço expira, consulte na loja. Pix, cupons e frete podem alterar o total.';
-    $('resultCount').textContent = `${chosen.length} ${chosen.length===1?'oferta com preço conferido':'ofertas com preços conferidos'}`;
+    const pricedCount = chosen.filter(p => currentPrice(p) !== null).length;
+    const pendingCount = chosen.length - pricedCount;
+    $('resultCount').textContent = `${pricedCount} ${pricedCount===1?'oferta com preço conferido':'ofertas com preços conferidos'}`
+        + (pendingCount ? ` · ${pendingCount} ${pendingCount===1?'produto para consultar na loja':'produtos para consultar na loja'} ao final` : '');
     if (document.body.classList.contains('search-active')) {
         $('searchMessage').textContent = `Busca em todo o catálogo por “${$('searchInput').value.trim()}”`;
     }
     $('emptyState').style.display = chosen.length ? 'none':'block';
-    $('emptyState').querySelector('h3').textContent = 'Nenhuma oferta com preço recente nesta seleção.';
+    $('emptyState').querySelector('h3').textContent = 'Nenhum produto disponível nesta seleção.';
     $('emptyState').querySelector('p').textContent = 'A coleta automática pode estar atrasada. Confira novamente depois da próxima atualização.';
     $('loadMore').hidden = true;
     $('loadMore').textContent = '';
@@ -239,7 +251,7 @@ $('clearSearch').addEventListener('click',()=>{$('searchInput').value='';updateS
 $('sortSelect').addEventListener('change',renderProducts);
 document.querySelector('.logo').addEventListener('click',resetFilters);
 // No infinite browsing on the homepage: a small, high-confidence selection.
-$('selectionNotice').textContent = 'Seleção de até 10 ofertas com links individuais e preços conferidos recentemente.';
+$('selectionNotice').textContent = 'Primeiro os preços conferidos; anúncios sem preço recente ficam por último. Até 10 produtos na página inicial.';
 $('dataNotice').textContent = source
     ? 'Preços conferidos há no máximo 2 horas. Pix e cupons podem alterar o valor; confirme as condições na loja.'
     : 'Não foi possível carregar as ofertas. Tente recarregar a página em instantes.';
