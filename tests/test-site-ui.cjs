@@ -101,3 +101,6 @@ const catalogCss=fs.readFileSync(path.join(__dirname,'../catalogo.css'),'utf8');
 assert.match(catalogCss,/\.card \.card-content > a\.product-link:hover/);
 assert.match(catalogCss,/text-decoration: none;/);
 console.log('OK: apenas um link editorial por card e estilo secundário com hover');
+
+// The complete catalogue is deliberately separate from the 10-offer homepage.
+require('./test-full-catalog.cjs');

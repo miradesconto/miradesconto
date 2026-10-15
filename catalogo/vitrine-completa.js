@@ -118,7 +118,9 @@
   function setupCategories() {
     const selected = category.value;
     const all = [...new Set(rows.map(p=>p.category || 'Outros'))].sort((a,b)=>a.localeCompare(b,'pt-BR'));
-    category.replaceChildren(elem('option','','Todas as categorias'));
+    const allOption=elem('option','','Todas as categorias');
+    allOption.value='';
+    category.replaceChildren(allOption);
     for (const value of all) {
       const option=elem('option','',value);option.value=value;category.append(option);
     }

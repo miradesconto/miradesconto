@@ -104,3 +104,19 @@ for key in ['index.html','radar/index.html','sobre.html','transparencia.html','p
         assert (root/local).exists(),(key,href)
         if u.fragment and local in pages:assert u.fragment in pages[local].ids,(key,href)
 print('OK: draft discovery, affiliate list disclosure, image recovery and primary navigation')
+
+# A full catalogue must be linked from the compact homepage and indexed.
+catalog_key='catalogo/index.html'
+catalog_page=pages[catalog_key]
+assert catalog_page.h1==1 and catalog_page.canonical==[origin+'/catalogo/'], catalog_key
+assert len(catalog_page.description)==1 and catalog_page.description[0], catalog_key
+assert origin+'/catalogo/' in urls, catalog_key
+assert 'catalogo/' in pages['index.html'].links, 'Missing visible catalogue entry point'
+for href in catalog_page.links:
+    u=urlsplit(href)
+    if u.scheme or u.netloc:continue
+    target=unquote(u.path)
+    local=target.lstrip('/')
+    if local.endswith('/'):local+='index.html'
+    assert (root/local).exists(), (catalog_key,href)
+print('OK: catalogue navigation, sitemap, metadata, internal paths')
