@@ -21,10 +21,19 @@ const now = Date.now();
 const fixture = (id,age,featured=false) => ({id,name:id,category:'Setup',featured,affiliateUrl:'https://meli.la/'+id.replace(/[^A-Za-z0-9]/g,''),price:100,oldPrice:null,priceCheck:{status:'verified',method:'poly-card-v1',currency:'BRL',itemId:id,price:100,oldPrice:null,checkedAt:new Date(now-age).toISOString()}});
 context.fixtures=[fixture('fresh-featured',1000,true),fixture('fresh-other',1000),fixture('expired',25*3600000),{...fixture('unavailable',1000),available:false},{...fixture('unapproved',1000),affiliateUrl:'https://mercadolivre.com.br/normal'}];
 vm.runInContext('products.push(...fixtures)',context);
-assert.deepEqual(ids(context.filteredProducts()).sort(),['fresh-featured','fresh-other']); // Only direct affiliate links with a fresh check.
+assert.deepEqual(ids(context.filteredProducts()),['fresh-featured','fresh-other','expired']); // Valid offers first; expired last.
 context.document.getElementById=id=>({value:id==='sortSelect'?'lowPrice':''});
 vm.runInContext('products[1].price=50;products[1].priceCheck.price=50',context);
-assert.deepEqual(ids(context.filteredProducts()),['fresh-other','fresh-featured']);
+assert.deepEqual(ids(context.filteredProducts()),['fresh-other','fresh-featured','expired']);
+// Sorting by highest price must also place a price pending review after verified products.
+context.document.getElementById=id=>({value:id==='sortSelect'?'highPrice':''});
+assert.deepEqual(ids(context.filteredProducts()),['fresh-featured','fresh-other','expired']);
+// Even an old nominal discount must not outrank a valid offer.
+context.fixtures[2].oldPrice=1000;
+context.fixtures[2].priceCheck.oldPrice=1000;
+context.document.getElementById=id=>({value:id==='sortSelect'?'discount':''});
+assert.equal(ids(context.filteredProducts()).at(-1),'expired');
+context.document.getElementById=id=>({value:id==='sortSelect'?'default':''});
 vm.runInContext("selectedCategory='Destaques'",context);
 assert.deepEqual(ids(context.filteredProducts()),['fresh-featured']);
-console.log('OK: rodízio estável; ofertas sem link individual aprovado, expiradas ou indisponíveis não aparecem na seleção.');
+console.log('OK: ofertas com preço validado aparecem antes das sem preço nos filtros e ordenações, mantendo o rodízio e a exclusão de links não individuais.');
