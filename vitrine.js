@@ -42,6 +42,8 @@
       link.dataset.itemId=p.id;link.dataset.itemName=p.name;link.dataset.itemCategory=p.category || '';
     });
     window.MiraShowcaseIds = choices.map(p=>p.id);
+    const section = cards[0].closest('.vitrine-diaria');
+    if (section) section.hidden = choices.length === 0;
     document.dispatchEvent(new CustomEvent('mira:showcase-updated'));
   }
   update();

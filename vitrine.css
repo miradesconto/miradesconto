@@ -20,3 +20,5 @@
 .vitrine-cta:hover{background:#15803d}.vitrine-disclosure{color:#64748b;font-size:10px;text-align:center;margin-top:9px}
 @media(max-width:920px){.vitrine-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:500px){.vitrine-heading{align-items:flex-start}.vitrine-grid{grid-template-columns:1fr}.vitrine-photo{height:220px}.vitrine-body h3{min-height:0}}
+
+.vitrine-card[hidden],.vitrine-diaria[hidden]{display:none!important}
