@@ -1,0 +1,84 @@
+---
+layout: null
+permalink: /catalogo/
+---
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Todos os produtos de tecnologia | MiraDesconto</title>
+<meta name="description" content="Explore todos os produtos de tecnologia cadastrados no MiraDesconto. Preços conferidos aparecem primeiro; ofertas sem preço recente ficam no final.">
+<link rel="canonical" href="https://miradesconto.com.br/catalogo/">
+<link rel="icon" href="{{ '/favicon.svg' | relative_url }}" type="image/svg+xml">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Catálogo de produtos | MiraDesconto">
+<meta property="og:description" content="Tecnologia e eletrônicos: encontre produtos e veja preços recentes quando houver verificação válida.">
+<meta property="og:url" content="https://miradesconto.com.br/catalogo/">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Todos os produtos de tecnologia","url":"https://miradesconto.com.br/catalogo/","inLanguage":"pt-BR"}</script>
+<link rel="stylesheet" href="{{ '/catalogo/vitrine-completa.css' | relative_url }}?v=20261015">
+</head>
+<body>
+<a class="skip" href="#conteudo">Ir para os produtos</a>
+<header class="header">
+  <div class="wrap header-inner">
+    <a class="logo" href="{{ '/' | relative_url }}">Mira<span>Desconto</span></a>
+    <nav aria-label="Navegação principal">
+      <a href="{{ '/' | relative_url }}">Ofertas</a>
+      <a href="{{ '/catalogo/' | relative_url }}" aria-current="page">Todos os produtos</a>
+      <a href="{{ '/radar/' | relative_url }}">Radar</a>
+      <a href="{{ '/blog/' | relative_url }}">Guias e Reviews</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap" id="conteudo">
+  <div class="intro">
+    <a class="back" href="{{ '/' | relative_url }}">← Voltar à vitrine principal</a>
+    <p class="eyebrow">Catálogo MiraDesconto</p>
+    <h1>Todos os produtos, sem poluição.</h1>
+    <p>Explore o catálogo completo de tecnologia. Os produtos com preço conferido nas últimas 2 horas aparecem primeiro. Os que precisam de nova verificação ficam por último, sem exibir valores antigos.</p>
+  </div>
+  <section class="catalog" aria-label="Catálogo completo">
+    <div class="catalog-top">
+      <div><h2>Encontre o que procura</h2><p id="catalogSummary" role="status" aria-live="polite">Carregando catálogo...</p></div>
+      <a class="featured-link" href="{{ '/' | relative_url }}#ofertas">Ver ofertas selecionadas →</a>
+    </div>
+    <div class="filters">
+      <label class="search-label">Buscar produto
+        <input id="catalogSearch" type="search" placeholder="Ex.: notebook, iPhone, mouse..." autocomplete="off">
+      </label>
+      <label>Categoria
+        <select id="catalogCategory"><option value="">Todas as categorias</option></select>
+      </label>
+      <label>Ordenar
+        <select id="catalogSort">
+          <option value="featured">Recomendados</option>
+          <option value="low">Menor preço</option>
+          <option value="high">Maior preço</option>
+          <option value="discount">Maior desconto</option>
+          <option value="name">Nome A–Z</option>
+        </select>
+      </label>
+    </div>
+    <p class="rule"><span class="status-dot"></span> Preço recente primeiro · Produtos sem preço válido ao final · Valores em reais</p>
+    <noscript>Ative o JavaScript para visualizar os produtos e filtrar o catálogo.</noscript>
+    <div class="cards" id="catalogGrid"></div>
+    <div class="empty" id="catalogEmpty" hidden><h3>Nenhum produto encontrado</h3><p>Tente outro termo ou categoria.</p></div>
+    <nav class="pagination" aria-label="Paginação do catálogo">
+      <button id="catalogPrev" type="button" disabled>← Anterior</button>
+      <span id="catalogPage" aria-live="polite"></span>
+      <button id="catalogNext" type="button" disabled>Próxima →</button>
+    </nav>
+  </section>
+  <p class="note">Podemos receber comissão em compras elegíveis por links individuais de afiliados, sem custo adicional. Produtos sem link individual confirmado não exibem botão de compra. Preços, frete e disponibilidade devem ser confirmados na loja. <a href="{{ '/transparencia.html' | relative_url }}">Saiba mais sobre nossa transparência</a>.</p>
+</main>
+<footer><div class="wrap footer-inner"><span class="footer-logo">Mira<span>Desconto</span></span><nav aria-label="Links institucionais"><a href="{{ '/' | relative_url }}">Ofertas</a><a href="{{ '/blog/' | relative_url }}">Guias</a><a href="{{ '/transparencia.html' | relative_url }}">Transparência</a><a href="{{ '/privacidade.html' | relative_url }}">Privacidade</a></nav></div></footer>
+<script src="{{ '/qualidade.js' | relative_url }}?v=20261015"></script>
+<script src="{{ '/produtos.js' | relative_url }}?v=20261015"></script>
+<script src="{{ '/catalogo/vitrine-completa.js' | relative_url }}?v=20261015"></script>
+<script src="{{ '/analytics-config.js' | relative_url }}"></script>
+<script src="{{ '/analytics.js' | relative_url }}"></script>
+</body>
+</html>
