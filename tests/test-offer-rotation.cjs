@@ -21,7 +21,9 @@ const now = Date.now();
 const fixture = (id,age,featured=false) => ({id,name:id,category:'Setup',featured,affiliateUrl:'https://meli.la/'+id.replace(/[^A-Za-z0-9]/g,''),price:100,oldPrice:null,priceCheck:{status:'verified',method:'poly-card-v1',currency:'BRL',itemId:id,price:100,oldPrice:null,checkedAt:new Date(now-age).toISOString()}});
 context.fixtures=[fixture('fresh-featured',1000,true),fixture('fresh-other',1000),fixture('expired',25*3600000),{...fixture('unavailable',1000),available:false},{...fixture('unapproved',1000),affiliateUrl:'https://mercadolivre.com.br/normal'}];
 vm.runInContext('products.push(...fixtures)',context);
-assert.deepEqual(ids(context.filteredProducts()),['fresh-featured','fresh-other','expired']); // Valid offers first; expired last.
+const defaultOrder = ids(context.filteredProducts());
+assert.equal(defaultOrder.at(-1),'expired'); // The rotation may change the order of fresh offers.
+assert.deepEqual(defaultOrder.slice(0,-1).sort(),['fresh-featured','fresh-other']);
 context.document.getElementById=id=>({value:id==='sortSelect'?'lowPrice':''});
 vm.runInContext('products[1].price=50;products[1].priceCheck.price=50',context);
 assert.deepEqual(ids(context.filteredProducts()),['fresh-other','fresh-featured','expired']);
