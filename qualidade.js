@@ -25,4 +25,6 @@ const MiraQuality = (() => {
     }
     return {usablePrice, priceReviewReason};
 })();
+// Classic scripts share top-level lexical bindings, but features also read a window property.
+if (typeof window !== 'undefined') window.MiraQuality = MiraQuality;
 if (typeof module !== 'undefined') module.exports = MiraQuality;
