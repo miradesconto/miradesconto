@@ -8,9 +8,12 @@
     && p.priceCheck?.status === 'verified' && p.priceCheck.price === p.price
     && p.priceCheck.oldPrice === p.oldPrice && p.priceCheck.currency === 'BRL'
     && Number.isFinite(Date.parse(p.priceCheck.checkedAt));
-  const fresh = products.filter(p => recorded(p) && MiraQuality.usablePrice(p));
+  const fresh = products.filter(p => recorded(p) && MiraQuality.usablePrice(p) && directAffiliate(p));
   // Include the full eligible catalog, interleave categories, vary the starting point.
-  const eligibleProducts = () => [...new Map(products.filter(p => valid(p) && !MiraQuality.priceReviewReason(p)).map(p => [p.id, p])).values()];
+  const eligibleProducts = () => {
+    const selection = window.MiraHomepageSelection || [];
+    return [...new Map(products.filter(p => selection.includes(p.id) && valid(p) && MiraQuality.usablePrice(p)).map(p => [p.id, p])).values()];
+  };
   let slides = rotateOffers(eligibleProducts());
   let start = Math.floor(Math.random() * Math.max(1, slides.length));
   try {
@@ -32,7 +35,7 @@
   actions.append(explore, guide); copy.append(actions);
   const proof = element('div','hero-proof');
   const count = element('div','hero-proof-item');
-  count.append(element('strong','',String(fresh.length)), element('span','','preços verificados nas últimas 24h'));
+  count.append(element('strong','',String(fresh.length)), element('span','','preços conferidos nas últimas 2 horas no catálogo'));
   const rhythm = element('div','hero-proof-item');
   rhythm.append(element('strong','','1 hora'), element('span','','entre as buscas automáticas'));
   proof.append(count,rhythm);
@@ -145,5 +148,5 @@
     render();
   });
   document.addEventListener('visibilitychange', () => { if (!document.hidden) render(); });
-  setInterval(render,60000);
+  setInterval(()=>{const currentId=slides[index]?.id;slides=rotateOffers(eligibleProducts());index=Math.max(0,slides.findIndex(p=>p.id===currentId));render();},60000);
 })();

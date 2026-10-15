@@ -2,9 +2,17 @@
 const source = window.MIRA_DATA;
 const requestedProduct = new URLSearchParams(window.location.search).get('produto');
 // Retain the registered catalog; eligibility is checked every time we render.
-const products = (source?.products || []).filter(p => p.name && safeUrl(p.affiliateUrl));
+// Catalogue data stays intact; the homepage only features recent, monetizable offers.
+const MAX_HOME_OFFERS = 6; // Four curated cards + six grid cards = ten visible offers.
+function directAffiliate(p) {
+    const link = p?.affiliateUrl;
+    if (typeof link !== 'string' || !/^https:\/\/meli\.la\/[A-Za-z0-9]+$/.test(link)) return false;
+    if (['https://meli.la/1NguveN','https://meli.la/1pyBZm8'].includes(link)) return false;
+    return p.affiliateLinkType !== 'list' && p.available !== false;
+}
+const products = (source?.products || []).filter(p => p.name && directAffiliate(p));
 let selectedCategory = 'Seleção da hora';
-let visibleCount = 24;
+let visibleCount = MAX_HOME_OFFERS;
 let categoryBeforeSearch = null;
 const $ = id => document.getElementById(id);
 function safeUrl(value) {
@@ -138,28 +146,45 @@ function rotateOffers(items, now = Date.now()) {
 }
 function filteredProducts() {
     const query = normalize($('searchInput').value.trim());
-    const filtered = products.filter(p => p.available !== false && !MiraQuality.priceReviewReason(p) && (selectedCategory === 'Todos' || selectedCategory === 'Seleção da hora' || (selectedCategory === 'Destaques' ? p.featured === true : p.category === selectedCategory))
+    const featuredIds = window.MiraShowcaseIds || [];
+    const filtered = products.filter(p => MiraQuality.usablePrice(p) && directAffiliate(p)
+        && (selectedCategory !== 'Seleção da hora' || !featuredIds.includes(p.id))
+        && (selectedCategory === 'Todos' || selectedCategory === 'Seleção da hora' || (selectedCategory === 'Destaques' ? p.featured === true : p.category === selectedCategory))
         && [p.id,p.name,p.store,p.category].some(v=>normalize(v).includes(query)));
     switch($('sortSelect').value) {
         case 'discount': filtered.sort((a,b)=>(productDiscount(b)||0)-(productDiscount(a)||0));break;
         case 'lowPrice': filtered.sort((a,b)=>(currentPrice(a) ?? Infinity)-(currentPrice(b) ?? Infinity));break;
         case 'highPrice': filtered.sort((a,b)=>(currentPrice(b) ?? -Infinity)-(currentPrice(a) ?? -Infinity));break;
-        default: if (selectedCategory === 'Seleção da hora') return rotateOffers(filtered);
+        default: if (selectedCategory === 'Seleção da hora') {
+            // Choose strong verified discounts before rotating categories and items.
+            const ranked = filtered.sort((a,b) => (Number(b.featured === true) - Number(a.featured === true))
+                || ((productDiscount(b) || 0) - (productDiscount(a) || 0))
+                || String(a.id).localeCompare(String(b.id)));
+            return rotateOffers(ranked.slice(0,30));
+        }
     }
     return filtered;
 }
 function renderProducts(keepCount = false) {
-    if(keepCount !== true) visibleCount = 24;
+    visibleCount = MAX_HOME_OFFERS;
     const filtered = filteredProducts();
-    $('productList').replaceChildren(...filtered.slice(0,visibleCount).map(makeCard));
+    const chosen = filtered.slice(0,visibleCount);
+    $('productList').replaceChildren(...chosen.map(makeCard));
+    if (selectedCategory === 'Seleção da hora') {
+        window.MiraHomepageSelection = [...(window.MiraShowcaseIds || []), ...chosen.map(p=>p.id)];
+    }
+    document.body.classList.toggle('focused-catalog', selectedCategory !== 'Seleção da hora');
+    // Only focus one curated selection, not 110 unverified/expired listing records.
     $('dataNotice').textContent = 'Valores exibidos foram conferidos há no máximo 2 horas. Quando o preço expira, consulte na loja. Pix, cupons e frete podem alterar o total.';
-    $('resultCount').textContent = `${filtered.length} ${filtered.length===1?'oferta encontrada':'ofertas encontradas'}`;
+    $('resultCount').textContent = `${chosen.length} ${chosen.length===1?'oferta com preço conferido':'ofertas com preços conferidos'}`;
     if (document.body.classList.contains('search-active')) {
         $('searchMessage').textContent = `Busca em todo o catálogo por “${$('searchInput').value.trim()}”`;
     }
-    $('emptyState').style.display = filtered.length ? 'none':'block';
-    $('loadMore').hidden = visibleCount >= filtered.length;
-    $('loadMore').textContent = `Mostrar mais ofertas (${Math.min(visibleCount,filtered.length)} de ${filtered.length})`;
+    $('emptyState').style.display = chosen.length ? 'none':'block';
+    $('emptyState').querySelector('h3').textContent = 'Nenhuma oferta com preço recente nesta seleção.';
+    $('emptyState').querySelector('p').textContent = 'A coleta automática pode estar atrasada. Confira novamente depois da próxima atualização.';
+    $('loadMore').hidden = true;
+    $('loadMore').textContent = '';
 }
 async function shareProduct(name,link) {
     const text = `${name} — encontrei no MiraDesconto`;
@@ -213,8 +238,8 @@ $('searchInput').addEventListener('input',updateSearch);
 $('clearSearch').addEventListener('click',()=>{$('searchInput').value='';updateSearch();});
 $('sortSelect').addEventListener('change',renderProducts);
 document.querySelector('.logo').addEventListener('click',resetFilters);
-$('loadMore').addEventListener('click',()=>{visibleCount+=24;renderProducts(true);});
-$('selectionNotice').textContent = 'Seleção renovada a cada hora, com ofertas de diferentes categorias.';
+// No infinite browsing on the homepage: a small, high-confidence selection.
+$('selectionNotice').textContent = 'Seleção de até 10 ofertas com links individuais e preços conferidos recentemente.';
 $('dataNotice').textContent = source
     ? 'Preços conferidos há no máximo 2 horas. Pix e cupons podem alterar o valor; confirme as condições na loja.'
     : 'Não foi possível carregar as ofertas. Tente recarregar a página em instantes.';
@@ -228,6 +253,7 @@ if ($('searchInput').value.trim()) updateSearch();
 
 // Recheck expiry while the visitor keeps the page open.
 setInterval(() => renderProducts(true), 60000);
+document.addEventListener('mira:showcase-updated',()=>renderProducts(true));
 
 // Load the same published catalog without executing downloaded JavaScript.
 // Each shard is checked atomically; a failed refresh preserves the previous data.
@@ -246,7 +272,8 @@ async function refreshCatalog() {
         if (!Array.isArray(next)) return;
         if (!next.length || new Set(next.map(p => p.id)).size !== next.length) return;
         if (next.some(p => !p || typeof p.id !== 'string' || !p.id || !p.name || !safeUrl(p.affiliateUrl))) return;
-        products.splice(0, products.length, ...next);
+        products.splice(0, products.length, ...next.filter(p => directAffiliate(p)));
+        if (!products.length) return;
         if (source) source.products = next;
         document.dispatchEvent(new CustomEvent('mira:catalog-updated'));
         renderProducts(true);
