@@ -1,2 +1,2 @@
 <script id="editorial-data" type="application/json">[{% assign entries = site.artigos | where: "status", "publicado" %}{% for entry in entries %}{"ids":{{ entry.produtos | jsonify }},"title":{{ entry.title | jsonify }},"url":{{ entry.url | relative_url | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}]</script>
-<script src="{{ '/blog/conectar-ofertas.js?v=20261012editorial' | relative_url }}" defer></script>
+<script src="{{ '/blog/conectar-ofertas.js?v=20261015pills' | relative_url }}" defer></script>

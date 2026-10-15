@@ -39,3 +39,65 @@ for (const existingFallback of [undefined,{hidden:false}]) {
 assert.equal(imageFixture({complete:true,naturalWidth:0}).fallback.hidden,false);
 assert.equal(imageFixture({complete:true,naturalWidth:480}).fallback.hidden,true);
 console.log('OK: image loading/error/recovery and Radar expiry boundaries');
+
+
+// An existing product analysis takes precedence over an injected blog guide.
+// Repeated connector passes must never produce more than one editorial CTA.
+function editorialFixture(id, count) {
+  const links=[];
+  const buttons={};
+  const body={
+    querySelectorAll(selector) {
+      assert.equal(selector,'a.product-link');
+      return [...links];
+    },
+    querySelector(selector) {
+      return selector==='.buttons' ? buttons : null;
+    },
+    insertBefore(link, target) {
+      assert.equal(target,buttons);
+      links.push(link);
+    },
+  };
+  for(let i=0;i<count;i++) {
+    const link={href:'/produtos/analise-'+i+'/'};
+    link.remove=()=>{const at=links.indexOf(link);if(at!==-1)links.splice(at,1);};
+    links.push(link);
+  }
+  return {dataset:{id},querySelector:s=>s==='.card-content'?body:null,links};
+}
+const editorialCards=[editorialFixture('MLB111',2),editorialFixture('MLB222',0)];
+const editorialGrid={querySelectorAll:selector=>{
+  assert.equal(selector,'.card[data-id]');
+  return editorialCards;
+}};
+let runEditorial;
+const editorialDocument={
+  getElementById(id) {
+    if(id==='productList')return editorialGrid;
+    if(id==='editorial-data')return {textContent:JSON.stringify([{ids:['MLB111','MLB222'],title:'Guia revisado',url:'/blog/guia/' }])};
+    return null;
+  },
+  createElement(tag){
+    assert.equal(tag,'a');
+    return {setAttribute(key,value){this[key]=value;}};
+  },
+};
+class EditorialObserver {
+  constructor(callback){runEditorial=callback;}
+  observe(node,options){assert.equal(node,editorialGrid);assert.equal(options.childList,true);}
+}
+vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../blog/conectar-ofertas.js'),'utf8'),{
+  document:editorialDocument, MutationObserver:EditorialObserver,
+});
+assert.equal(editorialCards[0].links.length,1,'Análise original deve ter prioridade');
+assert.equal(editorialCards[0].links[0].href,'/produtos/analise-0/');
+assert.equal(editorialCards[1].links.length,1,'Um guia deve ser inserido quando não existir link');
+assert.equal(editorialCards[1].links[0].href,'/blog/guia/');
+runEditorial();
+assert.equal(editorialCards[0].links.length,1,'Não duplicar links em chamadas posteriores');
+assert.equal(editorialCards[1].links.length,1,'Não inserir guias duplicados');
+const catalogCss=fs.readFileSync(path.join(__dirname,'../catalogo.css'),'utf8');
+assert.match(catalogCss,/\.card \.card-content > a\.product-link:hover/);
+assert.match(catalogCss,/text-decoration: none;/);
+console.log('OK: apenas um link editorial por card e estilo secundário com hover');

@@ -13,15 +13,24 @@
   }
   function connect() {
     for (const card of grid.querySelectorAll('.card[data-id]')) {
-      if (card.querySelector('.product-editorial-link')) continue;
+      const body = card.querySelector('.card-content');
+      if (!body) continue;
+      // interface.js may already add a buying analysis. Keep that link and
+      // never stack a second editorial destination over the purchase button.
+      const existing = [...body.querySelectorAll('a.product-link')];
+      if (existing.length) {
+        existing.slice(1).forEach(link => link.remove());
+        continue;
+      }
       const entry = byId.get(card.dataset.id);
       if (!entry) continue;
+      const buttons = body.querySelector('.buttons');
+      if (!buttons) continue;
       const link = document.createElement('a');
       link.className = 'product-link product-editorial-link';
       link.href = entry.url; link.textContent = 'Vale a pena? Veja o guia →';
       link.setAttribute('aria-label', 'Ler: ' + entry.title);
-      const body = card.querySelector('.card-content');
-      body?.insertBefore(link, body.querySelector('.buttons'));
+      body.insertBefore(link, buttons);
     }
   }
   connect();
