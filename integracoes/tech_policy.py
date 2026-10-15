@@ -11,6 +11,8 @@ def category(product):
     if re.search(r'pressao arterial|brinquedo|infantil|barbie|musculacao|academia|parafusadeira|carro eletrico|astronauta|sino de mesa|mochila|chroma key|bobinas|globo|bts army|fumaca|monoculo|visao noturna 1080', text):
         return None
     for pattern, label in (
+        (r'^controle remoto.*(?:aoc|smart tv|televisor|\btv\b)', 'TVs e projetores'),
+        (r'\b(?:mini\s*)?drone\b.*(?:camera|wifi|\be88\b)', 'Gaming'),
         (r'^controle.*(?:ps4|ps5|xbox)', 'Gaming'),
         (r'^kit de gravacao|kit chave precisao', 'Setup'),
         (r'fone|headset|microfone|vitrola|caixa de som', 'Áudio'),

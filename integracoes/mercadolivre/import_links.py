@@ -4,6 +4,7 @@ import json
 import os
 import re
 import sys
+import unicodedata
 import tempfile
 from datetime import datetime, timezone
 from html.parser import HTMLParser
@@ -223,6 +224,31 @@ def prepare(current, archive, links, now, resolver=resolve, verifier=None):
     return updated, approved
 
 
+def title_matches_requested(name, tokens):
+    """Check that a verified destination corresponds to the submitted product name.
+
+    Titles may differ in punctuation and accents but the requested brand/model
+    tokens must remain present. A marketplace's recommendation card isn't proof.
+    """
+    if not tokens:
+        return True
+    def fold(value):
+        return unicodedata.normalize('NFKD', str(value)).encode('ascii', 'ignore').decode().lower()
+    normalized = re.sub(r'[^a-z0-9]+', '', fold(name))
+    return all(isinstance(word, str) and word.strip() and
+               re.sub(r'[^a-z0-9]+', '', fold(word)) in normalized for word in tokens)
+
+
+def resolve_requested(link, expected_id, tokens):
+    candidate = resolve(link, expected_id)
+    # Each submitted short URL describes one product, not a shared collection.
+    if isinstance(candidate, list):
+        raise ValueError('Link de lista: gere um link individual do produto')
+    if not title_matches_requested(candidate.get('name', ''), tokens):
+        raise ValueError('O anuncio redirecionado nao corresponde ao modelo enviado')
+    return candidate
+
+
 def configured_sources(current, source_file):
     # The editable list configuration replaces previous discovery sources.
     # Existing product affiliate links remain registered and unchanged.
@@ -244,11 +270,14 @@ def main():
     if syncing and not links:
         print('Sem listas cadastradas para descobrir novos produtos')
         return
-    expected_ids = {}
+    expected_ids, expected_tokens = {}, {}
     if not links:
         pending = catalogo.read_json(ROOT / 'integracoes/mercadolivre/cadastro-pendente.json')
         links = pending['links']
         expected_ids = pending.get('expectedItemIds', {})
+        expected_tokens = pending.get('expectedTitleTokens', {})
+    if not links or len(links) > 20 or any(not affiliate(link) for link in links):
+        raise ValueError('Envie entre 1 e 20 links meli.la ou /sec/ oficiais')
     client = None
     try:
         client = Client()
@@ -271,11 +300,27 @@ def main():
             except Exception as exc:
                 print('Lista preservada sem importar novos itens:', str(exc))
     else:
-        updated, archive = prepare(
-            current, archive, links, datetime.now(timezone.utc),
-            resolver=lambda link: resolve(link, expected_ids.get(link)),
-            verifier=verify,
-        )
+        updated = copy.deepcopy(current)
+        failures, successful = [], []
+        # Process individually: an unavailable link must not cancel confirmed items.
+        for link in dict.fromkeys(links):
+            try:
+                updated, archive = prepare(
+                    updated, archive, [link], datetime.now(timezone.utc),
+                    resolver=lambda value: resolve_requested(
+                        value, expected_ids.get(value), expected_tokens.get(value, [])),
+                    verifier=verify,
+                )
+                successful.append(link)
+                print('CADASTRADO:', link)
+            except (ValueError, RuntimeError, OSError, TimeoutError) as exc:
+                failures.append(link)
+                print('PENDENTE:', link, '-', str(exc))
+        print(f'Resumo dos links: {len(successful)} cadastrados, {len(failures)} pendentes')
+        if failures:
+            print('Links pendentes para revisao individual:', ', '.join(failures))
+        if failures and not successful:
+            raise ValueError('Nenhum anuncio teve identidade e preco confirmados; cadastro mantido')
     if updated == current:
         print('Nenhum novo produto; catálogo preservado')
         return
