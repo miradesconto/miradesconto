@@ -29,3 +29,33 @@ body.search-active #selectionNotice{display:none!important}
 .category-mobile{display:flex;min-width:150px;max-width:240px;align-items:center;flex:1 0 150px;margin-left:auto}
 .category-mobile label{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
 .category-mobile select{width:100%;min-width:0;border:1px solid #cbd5e1;background:#fff;color:#334155;border-radius:999px;padding:9px 12px;font-size:13px}
+
+
+/* Links editoriais secundários: badge discreto, separado do CTA de compra. */
+.card .card-content > a.product-link,
+.card .card-content > a.product-link:visited {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  max-width: 100%;
+  box-sizing: border-box;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.35;
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  margin: auto 0 12px;
+}
+.card .card-content > a.product-link:hover,
+.card .card-content > a.product-link:focus-visible {
+  border-color: #15803d;
+  color: #15803d;
+  text-decoration: none;
+}
+.card .card-content > a.product-link + .buttons {
+  margin-top: 0;
+}
