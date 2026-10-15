@@ -32,11 +32,24 @@ def category(product):
 def eligible(product):
     evidence = product.get('priceCheck') or {}
     price, old = product.get('price'), product.get('oldPrice')
-    return bool(category(product) and product.get('available') is not False
-        and all(isinstance(n, (int, float)) and not isinstance(n, bool) and math.isfinite(n) for n in (price, old))
-        and 0 < price < old and evidence.get('status') == 'verified'
-        and evidence.get('price') == price and evidence.get('oldPrice') == old
-        and evidence.get('currency') == 'BRL')
+    if not category(product) or product.get('available') is False:
+        return False
+    if not (isinstance(price, (int, float)) and not isinstance(price, bool)
+            and math.isfinite(price) and price > 0):
+        return False
+    if (evidence.get('status') != 'verified' or evidence.get('price') != price
+            or evidence.get('oldPrice') != old or evidence.get('currency') != 'BRL'):
+        return False
+    if (isinstance(old, (int, float)) and not isinstance(old, bool)
+            and math.isfinite(old) and old > price):
+        return True
+    # A user-submitted, individually confirmed affiliate product may be listed
+    # without a discount. Never show a crossed-out reference price for it.
+    # Existing generic products still need a genuine discounted observation.
+    return bool(product.get('registrationSource') == 'affiliate-panel'
+                and old is None and evidence.get('method') in ('poly-card-v1', 'ml-sale-price-v1')
+                and evidence.get('itemId') == (product.get('itemId') or product.get('id'))
+                and str(product.get('affiliateUrl', '')).startswith('https://meli.la/'))
 
 def reconcile(catalog):
     if catalog.get('metadata', {}).get('niche') != 'tech':

@@ -312,7 +312,19 @@ def main():
         updated = copy.deepcopy(current)
         failures, successful = [], []
         # Process individually: an unavailable link must not cancel confirmed items.
+        from tech_policy import eligible
         for link in dict.fromkeys(links):
+            # Never re-register a previously confirmed product or overwrite its link.
+            existing = [p for p in updated['products'] if p.get('affiliateUrl') == link]
+            if (len(existing) == 1 and title_matches_requested(
+                    existing[0].get('name', ''), expected_tokens.get(link, []))):
+                item = existing[0]
+                if eligible(item) and item['id'] not in updated['publishedIds']:
+                    updated['publishedIds'].append(item['id'])
+                    reconcile(updated)
+                successful.append(link)
+                print('JA CADASTRADO:', link)
+                continue
             try:
                 updated, archive = prepare(
                     updated, archive, [link], datetime.now(timezone.utc),

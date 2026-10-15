@@ -117,6 +117,20 @@ class ImportTest(unittest.TestCase):
         self.assertEqual(current['products'], [])
         with self.assertRaises(ValueError):
             prepare(updated,archive,[link],datetime.now(timezone.utc),resolver,verify)
+    def test_verified_no_discount_is_listed_for_submitted_affiliate_product(self):
+        current = {'products':[], 'publishedIds':[], 'metadata':{'niche':'tech'}}
+        def resolver(url):
+            return dict(id='MLB123456789',itemId='MLB123456789',name='Caixa de Som Bluetooth Kapbom',
+                        affiliateUrl=url,productUrl='https://produto.mercadolivre.com.br/MLB-123456789-x',
+                        imageUrl='https://http2.mlstatic.com/x.jpg',category='Áudio')
+        def verify(p, now):
+            return dict(p, registrationSource='affiliate-panel', price=49, oldPrice=None,
+                available=None, availabilityStatus='unknown',
+                priceCheck={'status':'verified','method':'poly-card-v1',
+                    'itemId':p['id'],'price':49,'oldPrice':None,'currency':'BRL'})
+        updated, _ = prepare(current, [], ['https://meli.la/Kapbom'], datetime.now(timezone.utc), resolver, verify)
+        self.assertEqual(updated['publishedIds'], ['MLB123456789'])
+
     def test_no_discount_stays_unpublished(self):
         current = {'products':[], 'publishedIds':[], 'metadata':{'niche':'tech'}}
         def resolver(url):
