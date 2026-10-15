@@ -19,3 +19,24 @@ for(const name of fs.readdirSync(path.join(root,'_artigos'))){
   }
 }
 console.log(`${published} artigos publicados com fotos e capas distintas`);
+
+
+// Product-specific editorial reviews must use the exact registered affiliate URLs and photos.
+for (const [slug, id, link] of [
+  ['lg-43lr6700psa-vale-a-pena','MLB6739753074','https://meli.la/1cmZy4H'],
+  ['kapbom-ka-8596-vale-a-pena','MLB7477193852','https://meli.la/2QmhPHR'],
+]) {
+  const article=fs.readFileSync(path.join(root,'_artigos',slug+'.md'),'utf8');
+  const front=article.split('---')[1],body=article.split('---').slice(2).join('---');
+  assert.match(front,/status: "publicado"/);
+  assert.ok(front.includes(id),'Article ID must match published listing');
+  assert.ok(body.includes(link),'CTA must use the individual affiliate link');
+  assert.ok(body.includes(photos[id].imageUrl),'Real listing image required');
+  assert.ok(!/["']@type["']\s*:\s*["']Offer["']|R\\\$\s*\d/.test(body),'No stale price or offers schema in article');
+  assert.match(body,/Fontes e método/);
+  assert.match(body,/Perguntas/);
+  assert.match(body,/rel="sponsored nofollow noopener noreferrer"/);
+  assert.ok(covers[slug],'Editorial cover entry is required');
+  assert.strictEqual(photos[id].affiliateUrl, link);
+}
+console.log('OK: reviews LG e Kapbom com SKU, imagens reais, CTA e método editorial.');

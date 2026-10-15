@@ -213,5 +213,15 @@
     "hook": "Drone E88 Pro",
     "kicker": "GUIA DE COMPRA",
     "tone": "sage"
+  },
+  "lg-43lr6700psa-vale-a-pena": {
+    "kicker": "ANÁLISE DE FICHA",
+    "hook": "LG 43LR6700PSA: Full HD ou 4K?",
+    "tone": "blue"
+  },
+  "kapbom-ka-8596-vale-a-pena": {
+    "kicker": "ANÁLISE DE COMPRA",
+    "hook": "Kapbom KA-8596: 50 W no anúncio",
+    "tone": "mint"
   }
 }
