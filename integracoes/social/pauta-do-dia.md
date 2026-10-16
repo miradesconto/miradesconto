@@ -1,6 +1,6 @@
 # Fila de conteúdo — MiraDesconto → Pippit
 
-**Radar:** 2026-10-16T07:02:48+00:00
+**Radar:** 2026-10-16T07:37:33+00:00
 **Fila:** 14 vídeos · 2 por dia · 7 dias
 
 Prioridade: Radar real, histórico observado, variedade de categorias e artigo de destino. Não usa referência da loja como histórico.
@@ -13,7 +13,7 @@ Revise a fila de vídeos do MiraDesconto. Aponte apenas afirmações sem evidên
 
 **Ângulo:** Menor preço observado: vale aproveitar?
 **Preço:** R$ 29,60 · média R$ 33,76 · mínimo R$ 29,60
-**Base:** 26 dias acompanhados · 509 observações
+**Base:** 26 dias acompanhados · 510 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/smart-tag-android-rastreador-vale-a-pena/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_688002-MLA115581994404_092026-AB.webp
 
@@ -47,8 +47,8 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 ## Dia 1 · Vídeo 2 — Apple iPhone 16 (256 Gb)
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 5.599,00 · média R$ 6.029,62 · mínimo R$ 5.599,00
-**Base:** 10 dias acompanhados · 323 observações
+**Preço:** R$ 5.599,00 · média R$ 6.028,29 · mínimo R$ 5.599,00
+**Base:** 10 dias acompanhados · 324 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/celulares-da-vitrine-armazenamento-e-perfil/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_810957-MLA99386727202_112025-AB.webp
 
@@ -58,13 +58,13 @@ Apple iPhone 16 (256 Gb) está no menor valor observado neste anúncio. Mas vale
 
 **Roteiro**
 
-Apple iPhone 16 (256 Gb) está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 5.599,00. No Radar, a média foi R$ 6.029,62 e o menor valor observado foi R$ 5.599,00, em 10 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Apple iPhone 16 (256 Gb) está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 5.599,00. No Radar, a média foi R$ 6.028,29 e o menor valor observado foi R$ 5.599,00, em 10 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Apple iPhone 16 (256 Gb)
 Hoje: R$ 5.599,00
-Média observada: R$ 6.029,62
+Média observada: R$ 6.028,29
 Menor observado: R$ 5.599,00
 Base: 10 dias acompanhados
 
@@ -75,15 +75,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Apple iPhone 16 (256 Gb). Imagem: https://http2.mlstatic.com/D_Q_NP_2X_810957-MLA99386727202_112025-AB.webp. Hook 0-3s: Apple iPhone 16 (256 Gb) está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 5.599,00, média R$ 6.029,62 e menor observado R$ 5.599,00. Narração: Apple iPhone 16 (256 Gb) está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 5.599,00. No Radar, a média foi R$ 6.029,62 e o menor valor observado foi R$ 5.599,00, em 10 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Apple iPhone 16 (256 Gb). Imagem: https://http2.mlstatic.com/D_Q_NP_2X_810957-MLA99386727202_112025-AB.webp. Hook 0-3s: Apple iPhone 16 (256 Gb) está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 5.599,00, média R$ 6.028,29 e menor observado R$ 5.599,00. Narração: Apple iPhone 16 (256 Gb) está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 5.599,00. No Radar, a média foi R$ 6.028,29 e o menor valor observado foi R$ 5.599,00, em 10 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
 ## Dia 2 · Vídeo 1 — Console Nintendo Switch 2, Modelo Nacional de Tomada
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 4.199,00 · média R$ 4.355,94 · mínimo R$ 4.199,00
-**Base:** 26 dias acompanhados · 508 observações
+**Preço:** R$ 4.199,00 · média R$ 4.355,63 · mínimo R$ 4.199,00
+**Base:** 26 dias acompanhados · 509 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/nintendo-switch-2-vale-a-pena-2026/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_785396-MLA99867558581_112025-AB.webp
 
@@ -93,13 +93,13 @@ Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observ
 
 **Roteiro**
 
-Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 4.199,00. No Radar, a média foi R$ 4.355,94 e o menor valor observado foi R$ 4.199,00, em 26 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 4.199,00. No Radar, a média foi R$ 4.355,63 e o menor valor observado foi R$ 4.199,00, em 26 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Console Nintendo Switch 2, Modelo Nacional de Tomada
 Hoje: R$ 4.199,00
-Média observada: R$ 4.355,94
+Média observada: R$ 4.355,63
 Menor observado: R$ 4.199,00
 Base: 26 dias acompanhados
 
@@ -110,15 +110,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Console Nintendo Switch 2, Modelo Nacional de Tomada. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_785396-MLA99867558581_112025-AB.webp. Hook 0-3s: Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 4.199,00, média R$ 4.355,94 e menor observado R$ 4.199,00. Narração: Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 4.199,00. No Radar, a média foi R$ 4.355,94 e o menor valor observado foi R$ 4.199,00, em 26 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Console Nintendo Switch 2, Modelo Nacional de Tomada. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_785396-MLA99867558581_112025-AB.webp. Hook 0-3s: Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 4.199,00, média R$ 4.355,63 e menor observado R$ 4.199,00. Narração: Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 4.199,00. No Radar, a média foi R$ 4.355,63 e o menor valor observado foi R$ 4.199,00, em 26 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
 ## Dia 2 · Vídeo 2 — Notebook Lenovo IdeaPad Slim 3 15IRH10 Intel Core i5-13420H 8GB…
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 3.879,00 · média R$ 4.012,41 · mínimo R$ 3.879,00
-**Base:** 13 dias acompanhados · 164 observações
+**Preço:** R$ 3.879,00 · média R$ 4.011,61 · mínimo R$ 3.879,00
+**Base:** 13 dias acompanhados · 165 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/notebook-em-promocao-como-escolher/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_721945-MLA85788494302_062025-T.webp
 
@@ -128,13 +128,13 @@ Notebook Lenovo IdeaPad Slim 3 15IRH10 Intel Core i5-13420H 8GB… está no meno
 
 **Roteiro**
 
-Notebook Lenovo IdeaPad Slim 3 15IRH10 Intel Core i5-13420H 8GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 3.879,00. No Radar, a média foi R$ 4.012,41 e o menor valor observado foi R$ 3.879,00, em 13 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Notebook Lenovo IdeaPad Slim 3 15IRH10 Intel Core i5-13420H 8GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 3.879,00. No Radar, a média foi R$ 4.011,61 e o menor valor observado foi R$ 3.879,00, em 13 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Notebook Lenovo IdeaPad Slim 3 15IRH10 Intel Core i5-13420H 8GB…
 Hoje: R$ 3.879,00
-Média observada: R$ 4.012,41
+Média observada: R$ 4.011,61
 Menor observado: R$ 3.879,00
 Base: 13 dias acompanhados
 
@@ -145,15 +145,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook Lenovo IdeaPad Slim 3 15IRH10 Intel Core i5-13420H 8GB…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_721945-MLA85788494302_062025-T.webp. Hook 0-3s: Notebook Lenovo IdeaPad Slim 3 15IRH10 Intel Core i5-13420H 8GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 3.879,00, média R$ 4.012,41 e menor observado R$ 3.879,00. Narração: Notebook Lenovo IdeaPad Slim 3 15IRH10 Intel Core i5-13420H 8GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 3.879,00. No Radar, a média foi R$ 4.012,41 e o menor valor observado foi R$ 3.879,00, em 13 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook Lenovo IdeaPad Slim 3 15IRH10 Intel Core i5-13420H 8GB…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_721945-MLA85788494302_062025-T.webp. Hook 0-3s: Notebook Lenovo IdeaPad Slim 3 15IRH10 Intel Core i5-13420H 8GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 3.879,00, média R$ 4.011,61 e menor observado R$ 3.879,00. Narração: Notebook Lenovo IdeaPad Slim 3 15IRH10 Intel Core i5-13420H 8GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 3.879,00. No Radar, a média foi R$ 4.011,61 e o menor valor observado foi R$ 3.879,00, em 13 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
 ## Dia 3 · Vídeo 1 — Notebook ASUS Vivobook Go 15, Intel Core i3 N305, 8GB RAM, 512GB…
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 3.459,00 · média R$ 3.566,53 · mínimo R$ 3.459,00
-**Base:** 13 dias acompanhados · 299 observações
+**Preço:** R$ 3.459,00 · média R$ 3.566,17 · mínimo R$ 3.459,00
+**Base:** 13 dias acompanhados · 300 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/notebook-em-promocao-como-escolher/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_792275-MLA99470991702_112025-V.webp
 
@@ -163,13 +163,13 @@ Notebook ASUS Vivobook Go 15, Intel Core i3 N305, 8GB RAM, 512GB… está no men
 
 **Roteiro**
 
-Notebook ASUS Vivobook Go 15, Intel Core i3 N305, 8GB RAM, 512GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 3.459,00. No Radar, a média foi R$ 3.566,53 e o menor valor observado foi R$ 3.459,00, em 13 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Notebook ASUS Vivobook Go 15, Intel Core i3 N305, 8GB RAM, 512GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 3.459,00. No Radar, a média foi R$ 3.566,17 e o menor valor observado foi R$ 3.459,00, em 13 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Notebook ASUS Vivobook Go 15, Intel Core i3 N305, 8GB RAM, 512GB…
 Hoje: R$ 3.459,00
-Média observada: R$ 3.566,53
+Média observada: R$ 3.566,17
 Menor observado: R$ 3.459,00
 Base: 13 dias acompanhados
 
@@ -180,15 +180,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook ASUS Vivobook Go 15, Intel Core i3 N305, 8GB RAM, 512GB…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_792275-MLA99470991702_112025-V.webp. Hook 0-3s: Notebook ASUS Vivobook Go 15, Intel Core i3 N305, 8GB RAM, 512GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 3.459,00, média R$ 3.566,53 e menor observado R$ 3.459,00. Narração: Notebook ASUS Vivobook Go 15, Intel Core i3 N305, 8GB RAM, 512GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 3.459,00. No Radar, a média foi R$ 3.566,53 e o menor valor observado foi R$ 3.459,00, em 13 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook ASUS Vivobook Go 15, Intel Core i3 N305, 8GB RAM, 512GB…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_792275-MLA99470991702_112025-V.webp. Hook 0-3s: Notebook ASUS Vivobook Go 15, Intel Core i3 N305, 8GB RAM, 512GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 3.459,00, média R$ 3.566,17 e menor observado R$ 3.459,00. Narração: Notebook ASUS Vivobook Go 15, Intel Core i3 N305, 8GB RAM, 512GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 3.459,00. No Radar, a média foi R$ 3.566,17 e o menor valor observado foi R$ 3.459,00, em 13 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
 ## Dia 3 · Vídeo 2 — Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play
 
 **Ângulo:** Abaixo da média observada: vale agora?
-**Preço:** R$ 112,00 · média R$ 117,20 · mínimo R$ 110,91
-**Base:** 26 dias acompanhados · 509 observações
+**Preço:** R$ 112,00 · média R$ 117,19 · mínimo R$ 110,91
+**Base:** 26 dias acompanhados · 510 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/adaptador-carplay-sem-fio-compatibilidade/
 **Imagem:** https://http2.mlstatic.com/D_NQ_NP_622828-MLB96582387924_112025-O-apple-car-play-adaptador-usb-sem-fio-iphone-plug-play.webp
 
@@ -198,13 +198,13 @@ Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play está 4.4% abaixo da médi
 
 **Roteiro**
 
-Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play está 4.4% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 112,00. No Radar, a média foi R$ 117,20 e o menor valor observado foi R$ 110,91, em 26 dias acompanhados. O preço atual está 4,4% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play está 4.4% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 112,00. No Radar, a média foi R$ 117,19 e o menor valor observado foi R$ 110,91, em 26 dias acompanhados. O preço atual está 4,4% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play
 Hoje: R$ 112,00
-Média observada: R$ 117,20
+Média observada: R$ 117,19
 Menor observado: R$ 110,91
 Base: 26 dias acompanhados
 
@@ -215,15 +215,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play. Imagem: https://http2.mlstatic.com/D_NQ_NP_622828-MLB96582387924_112025-O-apple-car-play-adaptador-usb-sem-fio-iphone-plug-play.webp. Hook 0-3s: Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play está 4.4% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 112,00, média R$ 117,20 e menor observado R$ 110,91. Narração: Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play está 4.4% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 112,00. No Radar, a média foi R$ 117,20 e o menor valor observado foi R$ 110,91, em 26 dias acompanhados. O preço atual está 4,4% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play. Imagem: https://http2.mlstatic.com/D_NQ_NP_622828-MLB96582387924_112025-O-apple-car-play-adaptador-usb-sem-fio-iphone-plug-play.webp. Hook 0-3s: Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play está 4.4% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 112,00, média R$ 117,19 e menor observado R$ 110,91. Narração: Apple Car Play Adaptador Usb Sem Fio iPhone Plug Play está 4.4% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 112,00. No Radar, a média foi R$ 117,19 e o menor valor observado foi R$ 110,91, em 26 dias acompanhados. O preço atual está 4,4% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
 ## Dia 4 · Vídeo 1 — Notebook Asus Vivobook Go 15 Amd Ryzen 5 7520u 16gb 512ssd Mixed Black
 
 **Ângulo:** Abaixo da média observada: vale agora?
-**Preço:** R$ 3.372,00 · média R$ 3.509,17 · mínimo R$ 3.334,00
-**Base:** 11 dias acompanhados · 121 observações
+**Preço:** R$ 3.372,00 · média R$ 3.508,04 · mínimo R$ 3.334,00
+**Base:** 11 dias acompanhados · 122 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/notebook-para-trabalho-configuracoes/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_722728-MLA110061030541_042026-T.webp
 
@@ -233,13 +233,13 @@ Notebook Asus Vivobook Go 15 Amd Ryzen 5 7520u 16gb 512ssd Mixed Black está 3.9
 
 **Roteiro**
 
-Notebook Asus Vivobook Go 15 Amd Ryzen 5 7520u 16gb 512ssd Mixed Black está 3.9% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 3.372,00. No Radar, a média foi R$ 3.509,17 e o menor valor observado foi R$ 3.334,00, em 11 dias acompanhados. O preço atual está 3,9% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Notebook Asus Vivobook Go 15 Amd Ryzen 5 7520u 16gb 512ssd Mixed Black está 3.9% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 3.372,00. No Radar, a média foi R$ 3.508,04 e o menor valor observado foi R$ 3.334,00, em 11 dias acompanhados. O preço atual está 3,9% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Notebook Asus Vivobook Go 15 Amd Ryzen 5 7520u 16gb 512ssd Mixed Black
 Hoje: R$ 3.372,00
-Média observada: R$ 3.509,17
+Média observada: R$ 3.508,04
 Menor observado: R$ 3.334,00
 Base: 11 dias acompanhados
 
@@ -250,15 +250,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook Asus Vivobook Go 15 Amd Ryzen 5 7520u 16gb 512ssd Mixed Black. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_722728-MLA110061030541_042026-T.webp. Hook 0-3s: Notebook Asus Vivobook Go 15 Amd Ryzen 5 7520u 16gb 512ssd Mixed Black está 3.9% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 3.372,00, média R$ 3.509,17 e menor observado R$ 3.334,00. Narração: Notebook Asus Vivobook Go 15 Amd Ryzen 5 7520u 16gb 512ssd Mixed Black está 3.9% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 3.372,00. No Radar, a média foi R$ 3.509,17 e o menor valor observado foi R$ 3.334,00, em 11 dias acompanhados. O preço atual está 3,9% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook Asus Vivobook Go 15 Amd Ryzen 5 7520u 16gb 512ssd Mixed Black. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_722728-MLA110061030541_042026-T.webp. Hook 0-3s: Notebook Asus Vivobook Go 15 Amd Ryzen 5 7520u 16gb 512ssd Mixed Black está 3.9% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 3.372,00, média R$ 3.508,04 e menor observado R$ 3.334,00. Narração: Notebook Asus Vivobook Go 15 Amd Ryzen 5 7520u 16gb 512ssd Mixed Black está 3.9% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 3.372,00. No Radar, a média foi R$ 3.508,04 e o menor valor observado foi R$ 3.334,00, em 11 dias acompanhados. O preço atual está 3,9% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
 ## Dia 4 · Vídeo 2 — Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco…
 
 **Ângulo:** Abaixo da média observada: vale agora?
-**Preço:** R$ 46,00 · média R$ 47,25 · mínimo R$ 45,60
-**Base:** 26 dias acompanhados · 503 observações
+**Preço:** R$ 46,00 · média R$ 47,24 · mínimo R$ 45,60
+**Base:** 26 dias acompanhados · 504 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/kit-para-gravar-videos-com-celular/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_691904-MLA111125430926_052026-AB.webp
 
@@ -268,13 +268,13 @@ Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco… está 2.6
 
 **Roteiro**
 
-Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco… está 2.6% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 46,00. No Radar, a média foi R$ 47,25 e o menor valor observado foi R$ 45,60, em 26 dias acompanhados. O preço atual está 2,6% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco… está 2.6% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 46,00. No Radar, a média foi R$ 47,24 e o menor valor observado foi R$ 45,60, em 26 dias acompanhados. O preço atual está 2,6% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco…
 Hoje: R$ 46,00
-Média observada: R$ 47,25
+Média observada: R$ 47,24
 Menor observado: R$ 45,60
 Base: 26 dias acompanhados
 
@@ -285,15 +285,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_691904-MLA111125430926_052026-AB.webp. Hook 0-3s: Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco… está 2.6% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 46,00, média R$ 47,25 e menor observado R$ 45,60. Narração: Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco… está 2.6% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 46,00. No Radar, a média foi R$ 47,25 e o menor valor observado foi R$ 45,60, em 26 dias acompanhados. O preço atual está 2,6% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_691904-MLA111125430926_052026-AB.webp. Hook 0-3s: Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco… está 2.6% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 46,00, média R$ 47,24 e menor observado R$ 45,60. Narração: Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco… está 2.6% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 46,00. No Radar, a média foi R$ 47,24 e o menor valor observado foi R$ 45,60, em 26 dias acompanhados. O preço atual está 2,6% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
 ## Dia 5 · Vídeo 1 — Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão…
 
 **Ângulo:** Abaixo da média observada: vale agora?
-**Preço:** R$ 113,05 · média R$ 115,81 · mínimo R$ 106,00
-**Base:** 26 dias acompanhados · 506 observações
+**Preço:** R$ 113,05 · média R$ 115,80 · mínimo R$ 106,00
+**Base:** 26 dias acompanhados · 507 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/camera-wifi-a28b-dupla-lente-vale-a-pena/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_798945-MLA112454329586_062026-AB.webp
 
@@ -303,13 +303,13 @@ Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 2.4
 
 **Roteiro**
 
-Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 2.4% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 113,05. No Radar, a média foi R$ 115,81 e o menor valor observado foi R$ 106,00, em 26 dias acompanhados. O preço atual está 2,4% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 2.4% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 113,05. No Radar, a média foi R$ 115,80 e o menor valor observado foi R$ 106,00, em 26 dias acompanhados. O preço atual está 2,4% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão…
 Hoje: R$ 113,05
-Média observada: R$ 115,81
+Média observada: R$ 115,80
 Menor observado: R$ 106,00
 Base: 26 dias acompanhados
 
@@ -320,7 +320,7 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_798945-MLA112454329586_062026-AB.webp. Hook 0-3s: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 2.4% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 113,05, média R$ 115,81 e menor observado R$ 106,00. Narração: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 2.4% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 113,05. No Radar, a média foi R$ 115,81 e o menor valor observado foi R$ 106,00, em 26 dias acompanhados. O preço atual está 2,4% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_798945-MLA112454329586_062026-AB.webp. Hook 0-3s: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 2.4% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 113,05, média R$ 115,80 e menor observado R$ 106,00. Narração: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 2.4% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 113,05. No Radar, a média foi R$ 115,80 e o menor valor observado foi R$ 106,00, em 26 dias acompanhados. O preço atual está 2,4% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
@@ -328,7 +328,7 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 **Ângulo:** Abaixo da média observada: vale agora?
 **Preço:** R$ 56,90 · média R$ 57,90 · mínimo R$ 56,29
-**Base:** 25 dias acompanhados · 507 observações
+**Base:** 25 dias acompanhados · 508 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/fone-bluetooth-ou-caixa-de-som-como-escolher/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_760715-MLB109157249938_042026-AB-fone-de-ouvido-bluetooth-53-par-sem-fio-duplo-todos-celular.webp
 
@@ -362,8 +362,8 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 ## Dia 6 · Vídeo 1 — Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby…
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 946,72 · média R$ 1.016,50 · mínimo R$ 946,72
-**Base:** 4 dias acompanhados · 92 observações
+**Preço:** R$ 946,72 · média R$ 1.015,75 · mínimo R$ 946,72
+**Base:** 4 dias acompanhados · 93 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/tv-ou-projetor-para-quarto/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_778226-MLA114547893248_082026-AB.webp
 
@@ -373,13 +373,13 @@ Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby… está no meno
 
 **Roteiro**
 
-Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 946,72. No Radar, a média foi R$ 1.016,50 e o menor valor observado foi R$ 946,72, em 4 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 946,72. No Radar, a média foi R$ 1.015,75 e o menor valor observado foi R$ 946,72, em 4 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby…
 Hoje: R$ 946,72
-Média observada: R$ 1.016,50
+Média observada: R$ 1.015,75
 Menor observado: R$ 946,72
 Base: 4 dias acompanhados
 
@@ -390,15 +390,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_778226-MLA114547893248_082026-AB.webp. Hook 0-3s: Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 946,72, média R$ 1.016,50 e menor observado R$ 946,72. Narração: Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 946,72. No Radar, a média foi R$ 1.016,50 e o menor valor observado foi R$ 946,72, em 4 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_778226-MLA114547893248_082026-AB.webp. Hook 0-3s: Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 946,72, média R$ 1.015,75 e menor observado R$ 946,72. Narração: Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 946,72. No Radar, a média foi R$ 1.015,75 e o menor valor observado foi R$ 946,72, em 4 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
 ## Dia 6 · Vídeo 2 — Drone E88 Pro 4k Com Câmera Para Iniciante, + Baterias Drone Preto
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 299,00 · média R$ 313,77 · mínimo R$ 299,00
-**Base:** 7 dias acompanhados · 218 observações
+**Preço:** R$ 299,00 · média R$ 313,70 · mínimo R$ 299,00
+**Base:** 7 dias acompanhados · 219 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/drone-e88-pro-o-que-conferir/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_702285-MLA80802875108_112024-AB.webp
 
@@ -408,13 +408,13 @@ Drone E88 Pro 4k Com Câmera Para Iniciante, + Baterias Drone Preto está no men
 
 **Roteiro**
 
-Drone E88 Pro 4k Com Câmera Para Iniciante, + Baterias Drone Preto está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 299,00. No Radar, a média foi R$ 313,77 e o menor valor observado foi R$ 299,00, em 7 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Drone E88 Pro 4k Com Câmera Para Iniciante, + Baterias Drone Preto está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 299,00. No Radar, a média foi R$ 313,70 e o menor valor observado foi R$ 299,00, em 7 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Drone E88 Pro 4k Com Câmera Para Iniciante, + Baterias Drone Preto
 Hoje: R$ 299,00
-Média observada: R$ 313,77
+Média observada: R$ 313,70
 Menor observado: R$ 299,00
 Base: 7 dias acompanhados
 
@@ -425,7 +425,7 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Drone E88 Pro 4k Com Câmera Para Iniciante, + Baterias Drone Preto. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_702285-MLA80802875108_112024-AB.webp. Hook 0-3s: Drone E88 Pro 4k Com Câmera Para Iniciante, + Baterias Drone Preto está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 299,00, média R$ 313,77 e menor observado R$ 299,00. Narração: Drone E88 Pro 4k Com Câmera Para Iniciante, + Baterias Drone Preto está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 299,00. No Radar, a média foi R$ 313,77 e o menor valor observado foi R$ 299,00, em 7 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Drone E88 Pro 4k Com Câmera Para Iniciante, + Baterias Drone Preto. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_702285-MLA80802875108_112024-AB.webp. Hook 0-3s: Drone E88 Pro 4k Com Câmera Para Iniciante, + Baterias Drone Preto está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 299,00, média R$ 313,70 e menor observado R$ 299,00. Narração: Drone E88 Pro 4k Com Câmera Para Iniciante, + Baterias Drone Preto está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 299,00. No Radar, a média foi R$ 313,70 e o menor valor observado foi R$ 299,00, em 7 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
@@ -433,7 +433,7 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 **Ângulo:** Preço na Mira: vale comprar agora?
 **Preço:** R$ 33,90 · média R$ 33,68 · mínimo R$ 28,40
-**Base:** 26 dias acompanhados · 509 observações
+**Base:** 26 dias acompanhados · 510 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/mouse-teclado-acessorios-setup/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_751055-MLA112428593866_062026-AB.webp
 
@@ -468,7 +468,7 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 **Ângulo:** Preço na Mira: vale comprar agora?
 **Preço:** R$ 389,00 · média R$ 390,86 · mínimo R$ 352,00
-**Base:** 26 dias acompanhados · 509 observações
+**Base:** 26 dias acompanhados · 510 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/fone-bluetooth-ou-caixa-de-som-como-escolher/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_848327-MLB93711830286_102025-AB.webp
 
