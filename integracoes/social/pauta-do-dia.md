@@ -1,6 +1,6 @@
 # Fila de conteúdo — MiraDesconto → Pippit
 
-**Radar:** 2026-10-18T13:36:17+00:00
+**Radar:** 2026-10-18T16:50:26+00:00
 **Fila:** 14 vídeos · 2 por dia · 7 dias
 
 Prioridade: Radar real, histórico observado, variedade de categorias e artigo de destino. Não usa referência da loja como histórico.
@@ -9,11 +9,46 @@ Prioridade: Radar real, histórico observado, variedade de categorias e artigo d
 
 Revise a fila de vídeos do MiraDesconto. Aponte apenas afirmações sem evidência, preço/histórico incoerente, linguagem que pareça teste físico sem teste, promessa exagerada, CTA confuso ou roteiro longo demais para 20-25s. Nunca trate referência da loja como histórico. Preserve números do Radar, links e identidade. Se estiver tudo correto, diga que pode seguir para o Pippit.
 
-## Dia 1 · Vídeo 1 — Notebook ASUS Vivobook Go 15 E1504, AMD RYZEN 5 7520U 2,8 GHz, 8GB…
+## Dia 1 · Vídeo 1 — Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor…
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 2.999,00 · média R$ 3.337,73 · mínimo R$ 2.999,00
-**Base:** 16 dias acompanhados · 394 observações
+**Preço:** R$ 29,60 · média R$ 33,68 · mínimo R$ 29,60
+**Base:** 28 dias acompanhados · 531 observações
+**Destino:** https://miradesconto.github.io/miradesconto/blog/smart-tag-android-rastreador-vale-a-pena/
+**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_688002-MLA115581994404_092026-AB.webp
+
+**Hook**
+
+Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor… está no menor valor observado neste anúncio. Mas vale comprar agora?
+
+**Roteiro**
+
+Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 29,60. No Radar, a média foi R$ 33,68 e o menor valor observado foi R$ 29,60, em 28 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+
+**Legenda**
+
+PREÇO NA MIRA — Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor…
+Hoje: R$ 29,60
+Média observada: R$ 33,68
+Menor observado: R$ 29,60
+Base: 28 dias acompanhados
+
+O preço atual está no menor valor observado neste anúncio durante o período acompanhado.
+
+Veja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/smart-tag-android-rastreador-vale-a-pena/
+Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
+
+**Prompt Pippit**
+
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_688002-MLA115581994404_092026-AB.webp. Hook 0-3s: Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 29,60, média R$ 33,68 e menor observado R$ 29,60. Narração: Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 29,60. No Radar, a média foi R$ 33,68 e o menor valor observado foi R$ 29,60, em 28 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+
+---
+
+## Dia 1 · Vídeo 2 — Notebook ASUS Vivobook Go 15 E1504, AMD RYZEN 5 7520U 2,8 GHz, 8GB…
+
+**Ângulo:** Menor preço observado: vale aproveitar?
+**Preço:** R$ 2.999,00 · média R$ 3.336,87 · mínimo R$ 2.999,00
+**Base:** 16 dias acompanhados · 395 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/notebook-para-trabalho-configuracoes/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_874571-MLA99984971829_112025-T.webp
 
@@ -23,13 +58,13 @@ Notebook ASUS Vivobook Go 15 E1504, AMD RYZEN 5 7520U 2,8 GHz, 8GB… está no m
 
 **Roteiro**
 
-Notebook ASUS Vivobook Go 15 E1504, AMD RYZEN 5 7520U 2,8 GHz, 8GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 2.999,00. No Radar, a média foi R$ 3.337,73 e o menor valor observado foi R$ 2.999,00, em 16 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Notebook ASUS Vivobook Go 15 E1504, AMD RYZEN 5 7520U 2,8 GHz, 8GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 2.999,00. No Radar, a média foi R$ 3.336,87 e o menor valor observado foi R$ 2.999,00, em 16 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Notebook ASUS Vivobook Go 15 E1504, AMD RYZEN 5 7520U 2,8 GHz, 8GB…
 Hoje: R$ 2.999,00
-Média observada: R$ 3.337,73
+Média observada: R$ 3.336,87
 Menor observado: R$ 2.999,00
 Base: 16 dias acompanhados
 
@@ -40,15 +75,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook ASUS Vivobook Go 15 E1504, AMD RYZEN 5 7520U 2,8 GHz, 8GB…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_874571-MLA99984971829_112025-T.webp. Hook 0-3s: Notebook ASUS Vivobook Go 15 E1504, AMD RYZEN 5 7520U 2,8 GHz, 8GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 2.999,00, média R$ 3.337,73 e menor observado R$ 2.999,00. Narração: Notebook ASUS Vivobook Go 15 E1504, AMD RYZEN 5 7520U 2,8 GHz, 8GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 2.999,00. No Radar, a média foi R$ 3.337,73 e o menor valor observado foi R$ 2.999,00, em 16 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook ASUS Vivobook Go 15 E1504, AMD RYZEN 5 7520U 2,8 GHz, 8GB…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_874571-MLA99984971829_112025-T.webp. Hook 0-3s: Notebook ASUS Vivobook Go 15 E1504, AMD RYZEN 5 7520U 2,8 GHz, 8GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 2.999,00, média R$ 3.336,87 e menor observado R$ 2.999,00. Narração: Notebook ASUS Vivobook Go 15 E1504, AMD RYZEN 5 7520U 2,8 GHz, 8GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 2.999,00. No Radar, a média foi R$ 3.336,87 e o menor valor observado foi R$ 2.999,00, em 16 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
-## Dia 1 · Vídeo 2 — Apple iPhone 16 (256 Gb)
+## Dia 2 · Vídeo 1 — Apple iPhone 16 (256 Gb)
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 5.599,00 · média R$ 6.003,33 · mínimo R$ 5.599,00
-**Base:** 12 dias acompanhados · 344 observações
+**Preço:** R$ 5.599,00 · média R$ 6.002,16 · mínimo R$ 5.599,00
+**Base:** 12 dias acompanhados · 345 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/celulares-da-vitrine-armazenamento-e-perfil/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_810957-MLA99386727202_112025-AB.webp
 
@@ -58,13 +93,13 @@ Apple iPhone 16 (256 Gb) está no menor valor observado neste anúncio. Mas vale
 
 **Roteiro**
 
-Apple iPhone 16 (256 Gb) está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 5.599,00. No Radar, a média foi R$ 6.003,33 e o menor valor observado foi R$ 5.599,00, em 12 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Apple iPhone 16 (256 Gb) está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 5.599,00. No Radar, a média foi R$ 6.002,16 e o menor valor observado foi R$ 5.599,00, em 12 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Apple iPhone 16 (256 Gb)
 Hoje: R$ 5.599,00
-Média observada: R$ 6.003,33
+Média observada: R$ 6.002,16
 Menor observado: R$ 5.599,00
 Base: 12 dias acompanhados
 
@@ -75,15 +110,50 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Apple iPhone 16 (256 Gb). Imagem: https://http2.mlstatic.com/D_Q_NP_2X_810957-MLA99386727202_112025-AB.webp. Hook 0-3s: Apple iPhone 16 (256 Gb) está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 5.599,00, média R$ 6.003,33 e menor observado R$ 5.599,00. Narração: Apple iPhone 16 (256 Gb) está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 5.599,00. No Radar, a média foi R$ 6.003,33 e o menor valor observado foi R$ 5.599,00, em 12 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Apple iPhone 16 (256 Gb). Imagem: https://http2.mlstatic.com/D_Q_NP_2X_810957-MLA99386727202_112025-AB.webp. Hook 0-3s: Apple iPhone 16 (256 Gb) está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 5.599,00, média R$ 6.002,16 e menor observado R$ 5.599,00. Narração: Apple iPhone 16 (256 Gb) está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 5.599,00. No Radar, a média foi R$ 6.002,16 e o menor valor observado foi R$ 5.599,00, em 12 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
-## Dia 2 · Vídeo 1 — Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H…
+## Dia 2 · Vídeo 2 — Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo Preto
+
+**Ângulo:** Menor preço observado: vale aproveitar?
+**Preço:** R$ 58,37 · média R$ 63,73 · mínimo R$ 58,37
+**Base:** 28 dias acompanhados · 531 observações
+**Destino:** https://miradesconto.github.io/miradesconto/blog/fone-bluetooth-ou-caixa-de-som-como-escolher/
+**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_888868-MLB117019480199_092026-AB.webp
+
+**Hook**
+
+Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo Preto está no menor valor observado neste anúncio. Mas vale comprar agora?
+
+**Roteiro**
+
+Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo Preto está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 58,37. No Radar, a média foi R$ 63,73 e o menor valor observado foi R$ 58,37, em 28 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+
+**Legenda**
+
+PREÇO NA MIRA — Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo Preto
+Hoje: R$ 58,37
+Média observada: R$ 63,73
+Menor observado: R$ 58,37
+Base: 28 dias acompanhados
+
+O preço atual está no menor valor observado neste anúncio durante o período acompanhado.
+
+Veja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/fone-bluetooth-ou-caixa-de-som-como-escolher/
+Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
+
+**Prompt Pippit**
+
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo Preto. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_888868-MLB117019480199_092026-AB.webp. Hook 0-3s: Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo Preto está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 58,37, média R$ 63,73 e menor observado R$ 58,37. Narração: Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo Preto está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 58,37. No Radar, a média foi R$ 63,73 e o menor valor observado foi R$ 58,37, em 28 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+
+---
+
+## Dia 3 · Vídeo 1 — Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H…
 
 **Ângulo:** Abaixo da média observada: vale agora?
-**Preço:** R$ 6.699,00 · média R$ 7.243,12 · mínimo R$ 6.230,00
-**Base:** 15 dias acompanhados · 397 observações
+**Preço:** R$ 6.699,00 · média R$ 7.241,75 · mínimo R$ 6.230,00
+**Base:** 15 dias acompanhados · 398 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/notebook-gamer-rtx-4060-linux-ou-windows/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_848979-MLA118254221509_092026-T.webp
 
@@ -93,13 +163,13 @@ Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H… está 7
 
 **Roteiro**
 
-Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H… está 7.5% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 6.699,00. No Radar, a média foi R$ 7.243,12 e o menor valor observado foi R$ 6.230,00, em 15 dias acompanhados. O preço atual está 7,5% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H… está 7.5% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 6.699,00. No Radar, a média foi R$ 7.241,75 e o menor valor observado foi R$ 6.230,00, em 15 dias acompanhados. O preço atual está 7,5% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H…
 Hoje: R$ 6.699,00
-Média observada: R$ 7.243,12
+Média observada: R$ 7.241,75
 Menor observado: R$ 6.230,00
 Base: 15 dias acompanhados
 
@@ -110,15 +180,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_848979-MLA118254221509_092026-T.webp. Hook 0-3s: Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H… está 7.5% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 6.699,00, média R$ 7.243,12 e menor observado R$ 6.230,00. Narração: Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H… está 7.5% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 6.699,00. No Radar, a média foi R$ 7.243,12 e o menor valor observado foi R$ 6.230,00, em 15 dias acompanhados. O preço atual está 7,5% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_848979-MLA118254221509_092026-T.webp. Hook 0-3s: Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H… está 7.5% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 6.699,00, média R$ 7.241,75 e menor observado R$ 6.230,00. Narração: Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H… está 7.5% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 6.699,00. No Radar, a média foi R$ 7.241,75 e o menor valor observado foi R$ 6.230,00, em 15 dias acompanhados. O preço atual está 7,5% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
-## Dia 2 · Vídeo 2 — Console Nintendo Switch 2, Modelo Nacional de Tomada
+## Dia 3 · Vídeo 2 — Console Nintendo Switch 2, Modelo Nacional de Tomada
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 4.199,00 · média R$ 4.349,71 · mínimo R$ 4.199,00
-**Base:** 28 dias acompanhados · 529 observações
+**Preço:** R$ 4.199,00 · média R$ 4.349,42 · mínimo R$ 4.199,00
+**Base:** 28 dias acompanhados · 530 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/nintendo-switch-2-vale-a-pena-2026/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_785396-MLA99867558581_112025-AB.webp
 
@@ -128,13 +198,13 @@ Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observ
 
 **Roteiro**
 
-Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 4.199,00. No Radar, a média foi R$ 4.349,71 e o menor valor observado foi R$ 4.199,00, em 28 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 4.199,00. No Radar, a média foi R$ 4.349,42 e o menor valor observado foi R$ 4.199,00, em 28 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Console Nintendo Switch 2, Modelo Nacional de Tomada
 Hoje: R$ 4.199,00
-Média observada: R$ 4.349,71
+Média observada: R$ 4.349,42
 Menor observado: R$ 4.199,00
 Base: 28 dias acompanhados
 
@@ -145,50 +215,50 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Console Nintendo Switch 2, Modelo Nacional de Tomada. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_785396-MLA99867558581_112025-AB.webp. Hook 0-3s: Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 4.199,00, média R$ 4.349,71 e menor observado R$ 4.199,00. Narração: Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 4.199,00. No Radar, a média foi R$ 4.349,71 e o menor valor observado foi R$ 4.199,00, em 28 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Console Nintendo Switch 2, Modelo Nacional de Tomada. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_785396-MLA99867558581_112025-AB.webp. Hook 0-3s: Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 4.199,00, média R$ 4.349,42 e menor observado R$ 4.199,00. Narração: Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 4.199,00. No Radar, a média foi R$ 4.349,42 e o menor valor observado foi R$ 4.199,00, em 28 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
-## Dia 3 · Vídeo 1 — Notebook Asus Vivobook Go 15 Amd Ryzen 5 7520u 16gb 512ssd Mixed Black
+## Dia 4 · Vídeo 1 — Notebook Asus Vivobook Go 15 Amd Ryzen 5 7520u 16gb 512ssd Mixed Black
 
 **Ângulo:** Abaixo da média observada: vale agora?
-**Preço:** R$ 3.372,00 · média R$ 3.488,88 · mínimo R$ 3.334,00
-**Base:** 13 dias acompanhados · 142 observações
+**Preço:** R$ 3.372,00 · média R$ 3.488,06 · mínimo R$ 3.334,00
+**Base:** 13 dias acompanhados · 143 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/notebook-para-trabalho-configuracoes/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_722728-MLA110061030541_042026-T.webp
 
 **Hook**
 
-Notebook Asus Vivobook Go 15 Amd Ryzen 5 7520u 16gb 512ssd Mixed Black está 3.4% abaixo da média observada. É um bom momento de compra?
+Notebook Asus Vivobook Go 15 Amd Ryzen 5 7520u 16gb 512ssd Mixed Black está 3.3% abaixo da média observada. É um bom momento de compra?
 
 **Roteiro**
 
-Notebook Asus Vivobook Go 15 Amd Ryzen 5 7520u 16gb 512ssd Mixed Black está 3.4% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 3.372,00. No Radar, a média foi R$ 3.488,88 e o menor valor observado foi R$ 3.334,00, em 13 dias acompanhados. O preço atual está 3,4% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Notebook Asus Vivobook Go 15 Amd Ryzen 5 7520u 16gb 512ssd Mixed Black está 3.3% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 3.372,00. No Radar, a média foi R$ 3.488,06 e o menor valor observado foi R$ 3.334,00, em 13 dias acompanhados. O preço atual está 3,3% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Notebook Asus Vivobook Go 15 Amd Ryzen 5 7520u 16gb 512ssd Mixed Black
 Hoje: R$ 3.372,00
-Média observada: R$ 3.488,88
+Média observada: R$ 3.488,06
 Menor observado: R$ 3.334,00
 Base: 13 dias acompanhados
 
-O preço atual está 3,4% abaixo da média observada.
+O preço atual está 3,3% abaixo da média observada.
 
 Veja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/notebook-para-trabalho-configuracoes/
 Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook Asus Vivobook Go 15 Amd Ryzen 5 7520u 16gb 512ssd Mixed Black. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_722728-MLA110061030541_042026-T.webp. Hook 0-3s: Notebook Asus Vivobook Go 15 Amd Ryzen 5 7520u 16gb 512ssd Mixed Black está 3.4% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 3.372,00, média R$ 3.488,88 e menor observado R$ 3.334,00. Narração: Notebook Asus Vivobook Go 15 Amd Ryzen 5 7520u 16gb 512ssd Mixed Black está 3.4% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 3.372,00. No Radar, a média foi R$ 3.488,88 e o menor valor observado foi R$ 3.334,00, em 13 dias acompanhados. O preço atual está 3,4% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook Asus Vivobook Go 15 Amd Ryzen 5 7520u 16gb 512ssd Mixed Black. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_722728-MLA110061030541_042026-T.webp. Hook 0-3s: Notebook Asus Vivobook Go 15 Amd Ryzen 5 7520u 16gb 512ssd Mixed Black está 3.3% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 3.372,00, média R$ 3.488,06 e menor observado R$ 3.334,00. Narração: Notebook Asus Vivobook Go 15 Amd Ryzen 5 7520u 16gb 512ssd Mixed Black está 3.3% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 3.372,00. No Radar, a média foi R$ 3.488,06 e o menor valor observado foi R$ 3.334,00, em 13 dias acompanhados. O preço atual está 3,3% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
-## Dia 3 · Vídeo 2 — Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão…
+## Dia 4 · Vídeo 2 — Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão…
 
 **Ângulo:** Abaixo da média observada: vale agora?
-**Preço:** R$ 112,24 · média R$ 115,71 · mínimo R$ 106,00
-**Base:** 28 dias acompanhados · 527 observações
+**Preço:** R$ 112,24 · média R$ 115,70 · mínimo R$ 106,00
+**Base:** 28 dias acompanhados · 528 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/camera-wifi-a28b-dupla-lente-vale-a-pena/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_798945-MLA112454329586_062026-AB.webp
 
@@ -198,13 +268,13 @@ Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 3.0
 
 **Roteiro**
 
-Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 3.0% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 112,24. No Radar, a média foi R$ 115,71 e o menor valor observado foi R$ 106,00, em 28 dias acompanhados. O preço atual está 3,0% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 3.0% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 112,24. No Radar, a média foi R$ 115,70 e o menor valor observado foi R$ 106,00, em 28 dias acompanhados. O preço atual está 3,0% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão…
 Hoje: R$ 112,24
-Média observada: R$ 115,71
+Média observada: R$ 115,70
 Menor observado: R$ 106,00
 Base: 28 dias acompanhados
 
@@ -215,50 +285,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_798945-MLA112454329586_062026-AB.webp. Hook 0-3s: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 3.0% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 112,24, média R$ 115,71 e menor observado R$ 106,00. Narração: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 3.0% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 112,24. No Radar, a média foi R$ 115,71 e o menor valor observado foi R$ 106,00, em 28 dias acompanhados. O preço atual está 3,0% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_798945-MLA112454329586_062026-AB.webp. Hook 0-3s: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 3.0% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 112,24, média R$ 115,70 e menor observado R$ 106,00. Narração: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 3.0% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 112,24. No Radar, a média foi R$ 115,70 e o menor valor observado foi R$ 106,00, em 28 dias acompanhados. O preço atual está 3,0% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
-## Dia 4 · Vídeo 1 — Celular Samsung Galaxy S26 5g, 512gb, 12gb Ram, Galaxy Ai, Câmera…
-
-**Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 5.798,00 · média R$ 5.799,90 · mínimo R$ 5.798,00
-**Base:** 12 dias acompanhados · 340 observações
-**Destino:** https://miradesconto.github.io/miradesconto/blog/qual-celular-comprar-2026/
-**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_939755-MLA109096677198_042026-AB.webp
-
-**Hook**
-
-Celular Samsung Galaxy S26 5g, 512gb, 12gb Ram, Galaxy Ai, Câmera… está no menor valor observado neste anúncio. Mas vale comprar agora?
-
-**Roteiro**
-
-Celular Samsung Galaxy S26 5g, 512gb, 12gb Ram, Galaxy Ai, Câmera… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 5.798,00. No Radar, a média foi R$ 5.799,90 e o menor valor observado foi R$ 5.798,00, em 12 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
-
-**Legenda**
-
-PREÇO NA MIRA — Celular Samsung Galaxy S26 5g, 512gb, 12gb Ram, Galaxy Ai, Câmera…
-Hoje: R$ 5.798,00
-Média observada: R$ 5.799,90
-Menor observado: R$ 5.798,00
-Base: 12 dias acompanhados
-
-O preço atual está no menor valor observado neste anúncio durante o período acompanhado.
-
-Veja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/qual-celular-comprar-2026/
-Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
-
-**Prompt Pippit**
-
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Celular Samsung Galaxy S26 5g, 512gb, 12gb Ram, Galaxy Ai, Câmera…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_939755-MLA109096677198_042026-AB.webp. Hook 0-3s: Celular Samsung Galaxy S26 5g, 512gb, 12gb Ram, Galaxy Ai, Câmera… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 5.798,00, média R$ 5.799,90 e menor observado R$ 5.798,00. Narração: Celular Samsung Galaxy S26 5g, 512gb, 12gb Ram, Galaxy Ai, Câmera… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 5.798,00. No Radar, a média foi R$ 5.799,90 e o menor valor observado foi R$ 5.798,00, em 12 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
-
----
-
-## Dia 4 · Vídeo 2 — Kit 2 Suportes Celular Tablet De Mesa Ajustável Dobrável Universal…
+## Dia 5 · Vídeo 1 — Kit 2 Suportes Celular Tablet De Mesa Ajustável Dobrável Universal…
 
 **Ângulo:** Abaixo da média observada: vale agora?
 **Preço:** R$ 19,99 · média R$ 20,37 · mínimo R$ 19,79
-**Base:** 24 dias acompanhados · 385 observações
+**Base:** 24 dias acompanhados · 386 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/mouse-teclado-acessorios-setup/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_929109-MLA113249552236_072026-AB.webp
 
@@ -289,11 +324,11 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 ---
 
-## Dia 5 · Vídeo 1 — Fone De Ouvido Bluetooth 5.3 Par Sem Fio Duplo Todos Celular
+## Dia 5 · Vídeo 2 — Fone De Ouvido Bluetooth 5.3 Par Sem Fio Duplo Todos Celular
 
 **Ângulo:** Abaixo da média observada: vale agora?
 **Preço:** R$ 56,90 · média R$ 57,86 · mínimo R$ 56,29
-**Base:** 28 dias acompanhados · 528 observações
+**Base:** 28 dias acompanhados · 529 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/fone-bluetooth-ou-caixa-de-som-como-escolher/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_760715-MLB109157249938_042026-AB-fone-de-ouvido-bluetooth-53-par-sem-fio-duplo-todos-celular.webp
 
@@ -324,11 +359,11 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 ---
 
-## Dia 5 · Vídeo 2 — Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby…
+## Dia 6 · Vídeo 1 — Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby…
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 901,60 · média R$ 999,18 · mínimo R$ 901,60
-**Base:** 6 dias acompanhados · 113 observações
+**Preço:** R$ 901,60 · média R$ 998,33 · mínimo R$ 901,60
+**Base:** 6 dias acompanhados · 114 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/tv-ou-projetor-para-quarto/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_778226-MLA114547893248_082026-AB.webp
 
@@ -338,13 +373,13 @@ Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby… está no meno
 
 **Roteiro**
 
-Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 901,60. No Radar, a média foi R$ 999,18 e o menor valor observado foi R$ 901,60, em 6 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 901,60. No Radar, a média foi R$ 998,33 e o menor valor observado foi R$ 901,60, em 6 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby…
 Hoje: R$ 901,60
-Média observada: R$ 999,18
+Média observada: R$ 998,33
 Menor observado: R$ 901,60
 Base: 6 dias acompanhados
 
@@ -355,15 +390,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_778226-MLA114547893248_082026-AB.webp. Hook 0-3s: Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 901,60, média R$ 999,18 e menor observado R$ 901,60. Narração: Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 901,60. No Radar, a média foi R$ 999,18 e o menor valor observado foi R$ 901,60, em 6 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_778226-MLA114547893248_082026-AB.webp. Hook 0-3s: Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 901,60, média R$ 998,33 e menor observado R$ 901,60. Narração: Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 901,60. No Radar, a média foi R$ 998,33 e o menor valor observado foi R$ 901,60, em 6 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
-## Dia 6 · Vídeo 1 — Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung…
+## Dia 6 · Vídeo 2 — Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung…
 
 **Ângulo:** Preço na Mira: vale comprar agora?
 **Preço:** R$ 51,32 · média R$ 49,95 · mínimo R$ 48,75
-**Base:** 28 dias acompanhados · 529 observações
+**Base:** 28 dias acompanhados · 530 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/acessorios-ps4-ps5-switch-como-escolher/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_762912-MLA105696431793_012026-AB.webp
 
@@ -394,11 +429,11 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 ---
 
-## Dia 6 · Vídeo 2 — Kit Chave Precisão Profissional 115 Peças Magnético Manutenção…
+## Dia 7 · Vídeo 1 — Kit Chave Precisão Profissional 115 Peças Magnético Manutenção…
 
 **Ângulo:** Preço na Mira: vale comprar agora?
 **Preço:** R$ 33,90 · média R$ 33,69 · mínimo R$ 28,40
-**Base:** 28 dias acompanhados · 530 observações
+**Base:** 28 dias acompanhados · 531 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/mouse-teclado-acessorios-setup/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_751055-MLA112428593866_062026-AB.webp
 
@@ -429,11 +464,11 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 ---
 
-## Dia 7 · Vídeo 1 — Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v
+## Dia 7 · Vídeo 2 — Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v
 
 **Ângulo:** Preço na Mira: vale comprar agora?
 **Preço:** R$ 48,99 · média R$ 49,38 · mínimo R$ 46,07
-**Base:** 28 dias acompanhados · 530 observações
+**Base:** 28 dias acompanhados · 531 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/mouse-teclado-acessorios-setup/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_922391-MLB111917338465_052026-AB.webp
 
@@ -461,40 +496,5 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 **Prompt Pippit**
 
 Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_922391-MLB111917338465_052026-AB.webp. Hook 0-3s: Antes de comprar Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v, olha o que o histórico mostra. Mostre preço atual R$ 48,99, média R$ 49,38 e menor observado R$ 46,07. Narração: Antes de comprar Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v, olha o que o histórico mostra. Hoje ele aparece por R$ 48,99. No Radar, a média foi R$ 49,38 e o menor valor observado foi R$ 46,07, em 28 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
-
----
-
-## Dia 7 · Vídeo 2 — Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto…
-
-**Ângulo:** Preço na Mira: vale comprar agora?
-**Preço:** R$ 389,00 · média R$ 390,79 · mínimo R$ 352,00
-**Base:** 28 dias acompanhados · 530 observações
-**Destino:** https://miradesconto.github.io/miradesconto/blog/fone-bluetooth-ou-caixa-de-som-como-escolher/
-**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_848327-MLB93711830286_102025-AB.webp
-
-**Hook**
-
-Antes de comprar Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto…, olha o que o histórico mostra.
-
-**Roteiro**
-
-Antes de comprar Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto…, olha o que o histórico mostra. Hoje ele aparece por R$ 389,00. No Radar, a média foi R$ 390,79 e o menor valor observado foi R$ 352,00, em 28 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar.
-
-**Legenda**
-
-PREÇO NA MIRA — Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto…
-Hoje: R$ 389,00
-Média observada: R$ 390,79
-Menor observado: R$ 352,00
-Base: 28 dias acompanhados
-
-O preço atual está próximo da média observada.
-
-Veja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/fone-bluetooth-ou-caixa-de-som-como-escolher/
-Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
-
-**Prompt Pippit**
-
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_848327-MLB93711830286_102025-AB.webp. Hook 0-3s: Antes de comprar Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto…, olha o que o histórico mostra. Mostre preço atual R$ 389,00, média R$ 390,79 e menor observado R$ 352,00. Narração: Antes de comprar Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto…, olha o que o histórico mostra. Hoje ele aparece por R$ 389,00. No Radar, a média foi R$ 390,79 e o menor valor observado foi R$ 352,00, em 28 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
