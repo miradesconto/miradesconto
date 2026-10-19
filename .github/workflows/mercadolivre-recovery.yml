@@ -1,0 +1,31 @@
+name: Mercado Livre — recuperar coleta atrasada
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '16,46 * * * *'
+permissions:
+  contents: write
+  pages: write
+concurrency:
+  group: mercadolivre-recovery
+  cancel-in-progress: false
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      needed: ${{ steps.freshness.outputs.needed }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - id: freshness
+        name: Conferir preços com reserva de uma hora
+        run: python integracoes/automacao/price_freshness.py
+  recover:
+    needs: check
+    if: needs.check.outputs.needed == 'true'
+    uses: ./.github/workflows/mercadolivre-sync.yml
