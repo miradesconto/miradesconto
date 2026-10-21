@@ -1,6 +1,6 @@
 # Fila de conteúdo — MiraDesconto → Pippit
 
-**Radar:** 2026-10-21T01:59:21+00:00
+**Radar:** 2026-10-21T04:41:24+00:00
 **Fila:** 14 vídeos · 2 por dia · 7 dias
 
 Prioridade: Radar real, histórico observado, variedade de categorias e artigo de destino. Não usa referência da loja como histórico.
@@ -12,8 +12,8 @@ Revise a fila de vídeos do MiraDesconto. Aponte apenas afirmações sem evidên
 ## Dia 1 · Vídeo 1 — Apple iPhone 16 (256 Gb)
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 5.599,00 · média R$ 5.985,36 · mínimo R$ 5.599,00
-**Base:** 15 dias acompanhados · 360 observações
+**Preço:** R$ 5.599,00 · média R$ 5.984,29 · mínimo R$ 5.599,00
+**Base:** 15 dias acompanhados · 361 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/celulares-da-vitrine-armazenamento-e-perfil/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_810957-MLA99386727202_112025-AB.webp
 
@@ -23,13 +23,13 @@ Apple iPhone 16 (256 Gb) está no menor valor observado neste anúncio. Mas vale
 
 **Roteiro**
 
-Apple iPhone 16 (256 Gb) está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 5.599,00. No Radar, a média foi R$ 5.985,36 e o menor valor observado foi R$ 5.599,00, em 15 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Apple iPhone 16 (256 Gb) está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 5.599,00. No Radar, a média foi R$ 5.984,29 e o menor valor observado foi R$ 5.599,00, em 15 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Apple iPhone 16 (256 Gb)
 Hoje: R$ 5.599,00
-Média observada: R$ 5.985,36
+Média observada: R$ 5.984,29
 Menor observado: R$ 5.599,00
 Base: 15 dias acompanhados
 
@@ -40,85 +40,50 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Apple iPhone 16 (256 Gb). Imagem: https://http2.mlstatic.com/D_Q_NP_2X_810957-MLA99386727202_112025-AB.webp. Hook 0-3s: Apple iPhone 16 (256 Gb) está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 5.599,00, média R$ 5.985,36 e menor observado R$ 5.599,00. Narração: Apple iPhone 16 (256 Gb) está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 5.599,00. No Radar, a média foi R$ 5.985,36 e o menor valor observado foi R$ 5.599,00, em 15 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Apple iPhone 16 (256 Gb). Imagem: https://http2.mlstatic.com/D_Q_NP_2X_810957-MLA99386727202_112025-AB.webp. Hook 0-3s: Apple iPhone 16 (256 Gb) está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 5.599,00, média R$ 5.984,29 e menor observado R$ 5.599,00. Narração: Apple iPhone 16 (256 Gb) está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 5.599,00. No Radar, a média foi R$ 5.984,29 e o menor valor observado foi R$ 5.599,00, em 15 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
-## Dia 1 · Vídeo 2 — Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo Preto
+## Dia 1 · Vídeo 2 — Notebook ASUS Vivobook Go 15, Intel Core i3 N305, 8GB RAM, 512GB…
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 58,37 · média R$ 63,66 · mínimo R$ 58,37
-**Base:** 31 dias acompanhados · 546 observações
-**Destino:** https://miradesconto.github.io/miradesconto/blog/fone-bluetooth-ou-caixa-de-som-como-escolher/
-**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_888868-MLB117019480199_092026-AB.webp
+**Preço:** R$ 3.357,00 · média R$ 3.557,62 · mínimo R$ 3.357,00
+**Base:** 18 dias acompanhados · 325 observações
+**Destino:** https://miradesconto.github.io/miradesconto/blog/notebook-em-promocao-como-escolher/
+**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_792275-MLA99470991702_112025-V.webp
 
 **Hook**
 
-Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo Preto está no menor valor observado neste anúncio. Mas vale comprar agora?
+Notebook ASUS Vivobook Go 15, Intel Core i3 N305, 8GB RAM, 512GB… está no menor valor observado neste anúncio. Mas vale comprar agora?
 
 **Roteiro**
 
-Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo Preto está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 58,37. No Radar, a média foi R$ 63,66 e o menor valor observado foi R$ 58,37, em 31 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Notebook ASUS Vivobook Go 15, Intel Core i3 N305, 8GB RAM, 512GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 3.357,00. No Radar, a média foi R$ 3.557,62 e o menor valor observado foi R$ 3.357,00, em 18 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
-PREÇO NA MIRA — Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo Preto
-Hoje: R$ 58,37
-Média observada: R$ 63,66
-Menor observado: R$ 58,37
-Base: 31 dias acompanhados
+PREÇO NA MIRA — Notebook ASUS Vivobook Go 15, Intel Core i3 N305, 8GB RAM, 512GB…
+Hoje: R$ 3.357,00
+Média observada: R$ 3.557,62
+Menor observado: R$ 3.357,00
+Base: 18 dias acompanhados
 
 O preço atual está no menor valor observado neste anúncio durante o período acompanhado.
-
-Veja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/fone-bluetooth-ou-caixa-de-som-como-escolher/
-Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
-
-**Prompt Pippit**
-
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo Preto. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_888868-MLB117019480199_092026-AB.webp. Hook 0-3s: Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo Preto está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 58,37, média R$ 63,66 e menor observado R$ 58,37. Narração: Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo Preto está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 58,37. No Radar, a média foi R$ 63,66 e o menor valor observado foi R$ 58,37, em 31 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
-
----
-
-## Dia 2 · Vídeo 1 — Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB…
-
-**Ângulo:** Abaixo da média observada: vale agora?
-**Preço:** R$ 4.179,00 · média R$ 4.629,16 · mínimo R$ 3.998,00
-**Base:** 17 dias acompanhados · 383 observações
-**Destino:** https://miradesconto.github.io/miradesconto/blog/notebook-em-promocao-como-escolher/
-**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_872069-MLA96255973058_102025-T.webp
-
-**Hook**
-
-Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB… está 9.7% abaixo da média observada. É um bom momento de compra?
-
-**Roteiro**
-
-Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB… está 9.7% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 4.179,00. No Radar, a média foi R$ 4.629,16 e o menor valor observado foi R$ 3.998,00, em 17 dias acompanhados. O preço atual está 9,7% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
-
-**Legenda**
-
-PREÇO NA MIRA — Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB…
-Hoje: R$ 4.179,00
-Média observada: R$ 4.629,16
-Menor observado: R$ 3.998,00
-Base: 17 dias acompanhados
-
-O preço atual está 9,7% abaixo da média observada.
 
 Veja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/notebook-em-promocao-como-escolher/
 Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_872069-MLA96255973058_102025-T.webp. Hook 0-3s: Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB… está 9.7% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 4.179,00, média R$ 4.629,16 e menor observado R$ 3.998,00. Narração: Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB… está 9.7% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 4.179,00. No Radar, a média foi R$ 4.629,16 e o menor valor observado foi R$ 3.998,00, em 17 dias acompanhados. O preço atual está 9,7% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook ASUS Vivobook Go 15, Intel Core i3 N305, 8GB RAM, 512GB…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_792275-MLA99470991702_112025-V.webp. Hook 0-3s: Notebook ASUS Vivobook Go 15, Intel Core i3 N305, 8GB RAM, 512GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 3.357,00, média R$ 3.557,62 e menor observado R$ 3.357,00. Narração: Notebook ASUS Vivobook Go 15, Intel Core i3 N305, 8GB RAM, 512GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 3.357,00. No Radar, a média foi R$ 3.557,62 e o menor valor observado foi R$ 3.357,00, em 18 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
-## Dia 2 · Vídeo 2 — Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H…
+## Dia 2 · Vídeo 1 — Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H…
 
 **Ângulo:** Abaixo da média observada: vale agora?
-**Preço:** R$ 6.699,00 · média R$ 7.222,04 · mínimo R$ 6.230,00
-**Base:** 17 dias acompanhados · 413 observações
+**Preço:** R$ 6.699,00 · média R$ 7.220,77 · mínimo R$ 6.230,00
+**Base:** 18 dias acompanhados · 414 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/notebook-gamer-rtx-4060-linux-ou-windows/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_848979-MLA118254221509_092026-T.webp
 
@@ -128,15 +93,15 @@ Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H… está 7
 
 **Roteiro**
 
-Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H… está 7.2% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 6.699,00. No Radar, a média foi R$ 7.222,04 e o menor valor observado foi R$ 6.230,00, em 17 dias acompanhados. O preço atual está 7,2% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H… está 7.2% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 6.699,00. No Radar, a média foi R$ 7.220,77 e o menor valor observado foi R$ 6.230,00, em 18 dias acompanhados. O preço atual está 7,2% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H…
 Hoje: R$ 6.699,00
-Média observada: R$ 7.222,04
+Média observada: R$ 7.220,77
 Menor observado: R$ 6.230,00
-Base: 17 dias acompanhados
+Base: 18 dias acompanhados
 
 O preço atual está 7,2% abaixo da média observada.
 
@@ -145,15 +110,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_848979-MLA118254221509_092026-T.webp. Hook 0-3s: Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H… está 7.2% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 6.699,00, média R$ 7.222,04 e menor observado R$ 6.230,00. Narração: Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H… está 7.2% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 6.699,00. No Radar, a média foi R$ 7.222,04 e o menor valor observado foi R$ 6.230,00, em 17 dias acompanhados. O preço atual está 7,2% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_848979-MLA118254221509_092026-T.webp. Hook 0-3s: Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H… está 7.2% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 6.699,00, média R$ 7.220,77 e menor observado R$ 6.230,00. Narração: Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H… está 7.2% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 6.699,00. No Radar, a média foi R$ 7.220,77 e o menor valor observado foi R$ 6.230,00, em 18 dias acompanhados. O preço atual está 7,2% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
-## Dia 3 · Vídeo 1 — Console Nintendo Switch 2, Modelo Nacional de Tomada
+## Dia 2 · Vídeo 2 — Console Nintendo Switch 2, Modelo Nacional de Tomada
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 4.199,00 · média R$ 4.345,28 · mínimo R$ 4.199,00
-**Base:** 31 dias acompanhados · 545 observações
+**Preço:** R$ 4.199,00 · média R$ 4.345,01 · mínimo R$ 4.199,00
+**Base:** 31 dias acompanhados · 546 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/nintendo-switch-2-vale-a-pena-2026/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_785396-MLA99867558581_112025-AB.webp
 
@@ -163,13 +128,13 @@ Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observ
 
 **Roteiro**
 
-Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 4.199,00. No Radar, a média foi R$ 4.345,28 e o menor valor observado foi R$ 4.199,00, em 31 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 4.199,00. No Radar, a média foi R$ 4.345,01 e o menor valor observado foi R$ 4.199,00, em 31 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Console Nintendo Switch 2, Modelo Nacional de Tomada
 Hoje: R$ 4.199,00
-Média observada: R$ 4.345,28
+Média observada: R$ 4.345,01
 Menor observado: R$ 4.199,00
 Base: 31 dias acompanhados
 
@@ -180,50 +145,50 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Console Nintendo Switch 2, Modelo Nacional de Tomada. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_785396-MLA99867558581_112025-AB.webp. Hook 0-3s: Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 4.199,00, média R$ 4.345,28 e menor observado R$ 4.199,00. Narração: Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 4.199,00. No Radar, a média foi R$ 4.345,28 e o menor valor observado foi R$ 4.199,00, em 31 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Console Nintendo Switch 2, Modelo Nacional de Tomada. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_785396-MLA99867558581_112025-AB.webp. Hook 0-3s: Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 4.199,00, média R$ 4.345,01 e menor observado R$ 4.199,00. Narração: Console Nintendo Switch 2, Modelo Nacional de Tomada está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 4.199,00. No Radar, a média foi R$ 4.345,01 e o menor valor observado foi R$ 4.199,00, em 31 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
-## Dia 3 · Vídeo 2 — Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão…
+## Dia 3 · Vídeo 1 — Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão…
 
 **Ângulo:** Abaixo da média observada: vale agora?
-**Preço:** R$ 106,03 · média R$ 115,56 · mínimo R$ 106,00
-**Base:** 31 dias acompanhados · 543 observações
+**Preço:** R$ 107,10 · média R$ 115,55 · mínimo R$ 106,00
+**Base:** 31 dias acompanhados · 544 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/camera-wifi-a28b-dupla-lente-vale-a-pena/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_798945-MLA112454329586_062026-AB.webp
 
 **Hook**
 
-Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 8.2% abaixo da média observada. É um bom momento de compra?
+Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 7.3% abaixo da média observada. É um bom momento de compra?
 
 **Roteiro**
 
-Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 8.2% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 106,03. No Radar, a média foi R$ 115,56 e o menor valor observado foi R$ 106,00, em 31 dias acompanhados. O preço atual está 8,2% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 7.3% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 107,10. No Radar, a média foi R$ 115,55 e o menor valor observado foi R$ 106,00, em 31 dias acompanhados. O preço atual está 7,3% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão…
-Hoje: R$ 106,03
-Média observada: R$ 115,56
+Hoje: R$ 107,10
+Média observada: R$ 115,55
 Menor observado: R$ 106,00
 Base: 31 dias acompanhados
 
-O preço atual está 8,2% abaixo da média observada.
+O preço atual está 7,3% abaixo da média observada.
 
 Veja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/camera-wifi-a28b-dupla-lente-vale-a-pena/
 Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_798945-MLA112454329586_062026-AB.webp. Hook 0-3s: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 8.2% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 106,03, média R$ 115,56 e menor observado R$ 106,00. Narração: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 8.2% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 106,03. No Radar, a média foi R$ 115,56 e o menor valor observado foi R$ 106,00, em 31 dias acompanhados. O preço atual está 8,2% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_798945-MLA112454329586_062026-AB.webp. Hook 0-3s: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 7.3% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 107,10, média R$ 115,55 e menor observado R$ 106,00. Narração: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 7.3% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 107,10. No Radar, a média foi R$ 115,55 e o menor valor observado foi R$ 106,00, em 31 dias acompanhados. O preço atual está 7,3% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
-## Dia 4 · Vídeo 1 — Carregador Magnético Fam Magsafe Usb-c 15w P/ iPhone 12 A 16 127/220v
+## Dia 3 · Vídeo 2 — Carregador Magnético Fam Magsafe Usb-c 15w P/ iPhone 12 A 16 127/220v
 
 **Ângulo:** Menor preço observado: vale aproveitar?
 **Preço:** R$ 30,87 · média R$ 31,72 · mínimo R$ 30,87
-**Base:** 31 dias acompanhados · 545 observações
+**Base:** 31 dias acompanhados · 546 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/carregador-usb-c-iphone-como-escolher/
 **Imagem:** https://http2.mlstatic.com/D_NQ_NP_853083-MLB108107437166_032026-O-carregador-magnetico-fam-magsafe-usbc-15w-p-iphone-12-a-16.webp
 
@@ -254,81 +219,46 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 ---
 
-## Dia 4 · Vídeo 2 — Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby…
+## Dia 4 · Vídeo 1 — Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco…
 
-**Ângulo:** Abaixo da média observada: vale agora?
-**Preço:** R$ 946,72 · média R$ 993,26 · mínimo R$ 901,60
-**Base:** 9 dias acompanhados · 128 observações
-**Destino:** https://miradesconto.github.io/miradesconto/blog/tv-ou-projetor-para-quarto/
-**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_778226-MLA114547893248_082026-AB.webp
-
-**Hook**
-
-Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby… está 4.7% abaixo da média observada. É um bom momento de compra?
-
-**Roteiro**
-
-Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby… está 4.7% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 946,72. No Radar, a média foi R$ 993,26 e o menor valor observado foi R$ 901,60, em 9 dias acompanhados. O preço atual está 4,7% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
-
-**Legenda**
-
-PREÇO NA MIRA — Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby…
-Hoje: R$ 946,72
-Média observada: R$ 993,26
-Menor observado: R$ 901,60
-Base: 9 dias acompanhados
-
-O preço atual está 4,7% abaixo da média observada.
-
-Veja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/tv-ou-projetor-para-quarto/
-Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
-
-**Prompt Pippit**
-
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_778226-MLA114547893248_082026-AB.webp. Hook 0-3s: Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby… está 4.7% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 946,72, média R$ 993,26 e menor observado R$ 901,60. Narração: Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby… está 4.7% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 946,72. No Radar, a média foi R$ 993,26 e o menor valor observado foi R$ 901,60, em 9 dias acompanhados. O preço atual está 4,7% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
-
----
-
-## Dia 5 · Vídeo 1 — Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco…
-
-**Ângulo:** Abaixo da média observada: vale agora?
-**Preço:** R$ 46,00 · média R$ 47,20 · mínimo R$ 45,60
-**Base:** 31 dias acompanhados · 540 observações
+**Ângulo:** Menor preço observado: vale aproveitar?
+**Preço:** R$ 45,54 · média R$ 47,19 · mínimo R$ 45,54
+**Base:** 31 dias acompanhados · 541 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/kit-para-gravar-videos-com-celular/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_691904-MLA111125430926_052026-AB.webp
 
 **Hook**
 
-Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco… está 2.5% abaixo da média observada. É um bom momento de compra?
+Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco… está no menor valor observado neste anúncio. Mas vale comprar agora?
 
 **Roteiro**
 
-Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco… está 2.5% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 46,00. No Radar, a média foi R$ 47,20 e o menor valor observado foi R$ 45,60, em 31 dias acompanhados. O preço atual está 2,5% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 45,54. No Radar, a média foi R$ 47,19 e o menor valor observado foi R$ 45,54, em 31 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco…
-Hoje: R$ 46,00
-Média observada: R$ 47,20
-Menor observado: R$ 45,60
+Hoje: R$ 45,54
+Média observada: R$ 47,19
+Menor observado: R$ 45,54
 Base: 31 dias acompanhados
 
-O preço atual está 2,5% abaixo da média observada.
+O preço atual está no menor valor observado neste anúncio durante o período acompanhado.
 
 Veja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/kit-para-gravar-videos-com-celular/
 Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_691904-MLA111125430926_052026-AB.webp. Hook 0-3s: Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco… está 2.5% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 46,00, média R$ 47,20 e menor observado R$ 45,60. Narração: Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco… está 2.5% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 46,00. No Radar, a média foi R$ 47,20 e o menor valor observado foi R$ 45,60, em 31 dias acompanhados. O preço atual está 2,5% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_691904-MLA111125430926_052026-AB.webp. Hook 0-3s: Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 45,54, média R$ 47,19 e menor observado R$ 45,54. Narração: Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 45,54. No Radar, a média foi R$ 47,19 e o menor valor observado foi R$ 45,54, em 31 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
-## Dia 5 · Vídeo 2 — Celular Samsung Galaxy S26 5g, 512gb, 12gb Ram, Galaxy Ai, Câmera…
+## Dia 4 · Vídeo 2 — Celular Samsung Galaxy S26 5g, 512gb, 12gb Ram, Galaxy Ai, Câmera…
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 5.798,00 · média R$ 5.799,82 · mínimo R$ 5.798,00
-**Base:** 15 dias acompanhados · 355 observações
+**Preço:** R$ 5.798,00 · média R$ 5.799,81 · mínimo R$ 5.798,00
+**Base:** 15 dias acompanhados · 356 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/qual-celular-comprar-2026/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_939755-MLA109096677198_042026-AB.webp
 
@@ -338,13 +268,13 @@ Celular Samsung Galaxy S26 5g, 512gb, 12gb Ram, Galaxy Ai, Câmera… está no m
 
 **Roteiro**
 
-Celular Samsung Galaxy S26 5g, 512gb, 12gb Ram, Galaxy Ai, Câmera… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 5.798,00. No Radar, a média foi R$ 5.799,82 e o menor valor observado foi R$ 5.798,00, em 15 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Celular Samsung Galaxy S26 5g, 512gb, 12gb Ram, Galaxy Ai, Câmera… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 5.798,00. No Radar, a média foi R$ 5.799,81 e o menor valor observado foi R$ 5.798,00, em 15 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Celular Samsung Galaxy S26 5g, 512gb, 12gb Ram, Galaxy Ai, Câmera…
 Hoje: R$ 5.798,00
-Média observada: R$ 5.799,82
+Média observada: R$ 5.799,81
 Menor observado: R$ 5.798,00
 Base: 15 dias acompanhados
 
@@ -355,15 +285,50 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Celular Samsung Galaxy S26 5g, 512gb, 12gb Ram, Galaxy Ai, Câmera…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_939755-MLA109096677198_042026-AB.webp. Hook 0-3s: Celular Samsung Galaxy S26 5g, 512gb, 12gb Ram, Galaxy Ai, Câmera… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 5.798,00, média R$ 5.799,82 e menor observado R$ 5.798,00. Narração: Celular Samsung Galaxy S26 5g, 512gb, 12gb Ram, Galaxy Ai, Câmera… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 5.798,00. No Radar, a média foi R$ 5.799,82 e o menor valor observado foi R$ 5.798,00, em 15 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Celular Samsung Galaxy S26 5g, 512gb, 12gb Ram, Galaxy Ai, Câmera…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_939755-MLA109096677198_042026-AB.webp. Hook 0-3s: Celular Samsung Galaxy S26 5g, 512gb, 12gb Ram, Galaxy Ai, Câmera… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 5.798,00, média R$ 5.799,81 e menor observado R$ 5.798,00. Narração: Celular Samsung Galaxy S26 5g, 512gb, 12gb Ram, Galaxy Ai, Câmera… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 5.798,00. No Radar, a média foi R$ 5.799,81 e o menor valor observado foi R$ 5.798,00, em 15 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
-## Dia 6 · Vídeo 1 — Fone De Ouvido Bluetooth 5.3 Par Sem Fio Duplo Todos Celular
+## Dia 5 · Vídeo 1 — Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby…
+
+**Ângulo:** Abaixo da média observada: vale agora?
+**Preço:** R$ 946,72 · média R$ 992,90 · mínimo R$ 901,60
+**Base:** 9 dias acompanhados · 129 observações
+**Destino:** https://miradesconto.github.io/miradesconto/blog/tv-ou-projetor-para-quarto/
+**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_778226-MLA114547893248_082026-AB.webp
+
+**Hook**
+
+Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby… está 4.7% abaixo da média observada. É um bom momento de compra?
+
+**Roteiro**
+
+Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby… está 4.7% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 946,72. No Radar, a média foi R$ 992,90 e o menor valor observado foi R$ 901,60, em 9 dias acompanhados. O preço atual está 4,7% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
+
+**Legenda**
+
+PREÇO NA MIRA — Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby…
+Hoje: R$ 946,72
+Média observada: R$ 992,90
+Menor observado: R$ 901,60
+Base: 9 dias acompanhados
+
+O preço atual está 4,7% abaixo da média observada.
+
+Veja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/tv-ou-projetor-para-quarto/
+Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
+
+**Prompt Pippit**
+
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_778226-MLA114547893248_082026-AB.webp. Hook 0-3s: Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby… está 4.7% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 946,72, média R$ 992,90 e menor observado R$ 901,60. Narração: Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby… está 4.7% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 946,72. No Radar, a média foi R$ 992,90 e o menor valor observado foi R$ 901,60, em 9 dias acompanhados. O preço atual está 4,7% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+
+---
+
+## Dia 5 · Vídeo 2 — Fone De Ouvido Bluetooth 5.3 Par Sem Fio Duplo Todos Celular
 
 **Ângulo:** Abaixo da média observada: vale agora?
 **Preço:** R$ 56,90 · média R$ 57,83 · mínimo R$ 56,29
-**Base:** 30 dias acompanhados · 544 observações
+**Base:** 30 dias acompanhados · 545 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/fone-bluetooth-ou-caixa-de-som-como-escolher/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_760715-MLB109157249938_042026-AB-fone-de-ouvido-bluetooth-53-par-sem-fio-duplo-todos-celular.webp
 
@@ -394,46 +359,11 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 ---
 
-## Dia 6 · Vídeo 2 — Notebook Acer Aspire Go AG15-51P-39MU Intel Core i3-1305U 8GB…
-
-**Ângulo:** Preço na Mira: vale comprar agora?
-**Preço:** R$ 3.517,00 · média R$ 3.561,27 · mínimo R$ 2.855,00
-**Base:** 18 dias acompanhados · 124 observações
-**Destino:** https://miradesconto.github.io/miradesconto/blog/notebook-para-trabalho-configuracoes/
-**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_692920-MLA100061644521_122025-T.webp
-
-**Hook**
-
-Antes de comprar Notebook Acer Aspire Go AG15-51P-39MU Intel Core i3-1305U 8GB…, olha o que o histórico mostra.
-
-**Roteiro**
-
-Antes de comprar Notebook Acer Aspire Go AG15-51P-39MU Intel Core i3-1305U 8GB…, olha o que o histórico mostra. Hoje ele aparece por R$ 3.517,00. No Radar, a média foi R$ 3.561,27 e o menor valor observado foi R$ 2.855,00, em 18 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar.
-
-**Legenda**
-
-PREÇO NA MIRA — Notebook Acer Aspire Go AG15-51P-39MU Intel Core i3-1305U 8GB…
-Hoje: R$ 3.517,00
-Média observada: R$ 3.561,27
-Menor observado: R$ 2.855,00
-Base: 18 dias acompanhados
-
-O preço atual está próximo da média observada.
-
-Veja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/notebook-para-trabalho-configuracoes/
-Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
-
-**Prompt Pippit**
-
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook Acer Aspire Go AG15-51P-39MU Intel Core i3-1305U 8GB…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_692920-MLA100061644521_122025-T.webp. Hook 0-3s: Antes de comprar Notebook Acer Aspire Go AG15-51P-39MU Intel Core i3-1305U 8GB…, olha o que o histórico mostra. Mostre preço atual R$ 3.517,00, média R$ 3.561,27 e menor observado R$ 2.855,00. Narração: Antes de comprar Notebook Acer Aspire Go AG15-51P-39MU Intel Core i3-1305U 8GB…, olha o que o histórico mostra. Hoje ele aparece por R$ 3.517,00. No Radar, a média foi R$ 3.561,27 e o menor valor observado foi R$ 2.855,00, em 18 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
-
----
-
-## Dia 7 · Vídeo 1 — Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung…
+## Dia 6 · Vídeo 1 — Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung…
 
 **Ângulo:** Preço na Mira: vale comprar agora?
 **Preço:** R$ 51,32 · média R$ 49,99 · mínimo R$ 48,75
-**Base:** 31 dias acompanhados · 545 observações
+**Base:** 31 dias acompanhados · 546 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/acessorios-ps4-ps5-switch-como-escolher/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_762912-MLA105696431793_012026-AB.webp
 
@@ -464,11 +394,11 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 ---
 
-## Dia 7 · Vídeo 2 — Kit Chave Precisão Profissional 115 Peças Magnético Manutenção…
+## Dia 6 · Vídeo 2 — Kit Chave Precisão Profissional 115 Peças Magnético Manutenção…
 
 **Ângulo:** Preço na Mira: vale comprar agora?
 **Preço:** R$ 33,90 · média R$ 33,69 · mínimo R$ 28,40
-**Base:** 31 dias acompanhados · 546 observações
+**Base:** 31 dias acompanhados · 547 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/mouse-teclado-acessorios-setup/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_751055-MLA112428593866_062026-AB.webp
 
@@ -496,5 +426,75 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 **Prompt Pippit**
 
 Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Kit Chave Precisão Profissional 115 Peças Magnético Manutenção…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_751055-MLA112428593866_062026-AB.webp. Hook 0-3s: Antes de comprar Kit Chave Precisão Profissional 115 Peças Magnético Manutenção…, olha o que o histórico mostra. Mostre preço atual R$ 33,90, média R$ 33,69 e menor observado R$ 28,40. Narração: Antes de comprar Kit Chave Precisão Profissional 115 Peças Magnético Manutenção…, olha o que o histórico mostra. Hoje ele aparece por R$ 33,90. No Radar, a média foi R$ 33,69 e o menor valor observado foi R$ 28,40, em 31 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+
+---
+
+## Dia 7 · Vídeo 1 — Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto…
+
+**Ângulo:** Preço na Mira: vale comprar agora?
+**Preço:** R$ 389,00 · média R$ 390,61 · mínimo R$ 352,00
+**Base:** 31 dias acompanhados · 547 observações
+**Destino:** https://miradesconto.github.io/miradesconto/blog/fone-bluetooth-ou-caixa-de-som-como-escolher/
+**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_848327-MLB93711830286_102025-AB.webp
+
+**Hook**
+
+Antes de comprar Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto…, olha o que o histórico mostra.
+
+**Roteiro**
+
+Antes de comprar Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto…, olha o que o histórico mostra. Hoje ele aparece por R$ 389,00. No Radar, a média foi R$ 390,61 e o menor valor observado foi R$ 352,00, em 31 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar.
+
+**Legenda**
+
+PREÇO NA MIRA — Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto…
+Hoje: R$ 389,00
+Média observada: R$ 390,61
+Menor observado: R$ 352,00
+Base: 31 dias acompanhados
+
+O preço atual está próximo da média observada.
+
+Veja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/fone-bluetooth-ou-caixa-de-som-como-escolher/
+Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
+
+**Prompt Pippit**
+
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_848327-MLB93711830286_102025-AB.webp. Hook 0-3s: Antes de comprar Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto…, olha o que o histórico mostra. Mostre preço atual R$ 389,00, média R$ 390,61 e menor observado R$ 352,00. Narração: Antes de comprar Vitrola Anos 80 Maleta Grava Reproduz Lp Cor Preto 110v/220v Preto…, olha o que o histórico mostra. Hoje ele aparece por R$ 389,00. No Radar, a média foi R$ 390,61 e o menor valor observado foi R$ 352,00, em 31 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+
+---
+
+## Dia 7 · Vídeo 2 — Notebook Acer Aspire Go AG15-51P-39MU Intel Core i3-1305U 8GB…
+
+**Ângulo:** Preço na Mira: vale comprar agora?
+**Preço:** R$ 3.912,00 · média R$ 3.564,07 · mínimo R$ 2.855,00
+**Base:** 18 dias acompanhados · 125 observações
+**Destino:** https://miradesconto.github.io/miradesconto/blog/notebook-para-trabalho-configuracoes/
+**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_692920-MLA100061644521_122025-T.webp
+
+**Hook**
+
+Antes de comprar Notebook Acer Aspire Go AG15-51P-39MU Intel Core i3-1305U 8GB…, olha o que o histórico mostra.
+
+**Roteiro**
+
+Antes de comprar Notebook Acer Aspire Go AG15-51P-39MU Intel Core i3-1305U 8GB…, olha o que o histórico mostra. Hoje ele aparece por R$ 3.912,00. No Radar, a média foi R$ 3.564,07 e o menor valor observado foi R$ 2.855,00, em 18 dias acompanhados. O preço atual está 9,8% acima da média observada. Veja o guia no MiraDesconto antes de comprar.
+
+**Legenda**
+
+PREÇO NA MIRA — Notebook Acer Aspire Go AG15-51P-39MU Intel Core i3-1305U 8GB…
+Hoje: R$ 3.912,00
+Média observada: R$ 3.564,07
+Menor observado: R$ 2.855,00
+Base: 18 dias acompanhados
+
+O preço atual está 9,8% acima da média observada.
+
+Veja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/notebook-para-trabalho-configuracoes/
+Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
+
+**Prompt Pippit**
+
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook Acer Aspire Go AG15-51P-39MU Intel Core i3-1305U 8GB…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_692920-MLA100061644521_122025-T.webp. Hook 0-3s: Antes de comprar Notebook Acer Aspire Go AG15-51P-39MU Intel Core i3-1305U 8GB…, olha o que o histórico mostra. Mostre preço atual R$ 3.912,00, média R$ 3.564,07 e menor observado R$ 2.855,00. Narração: Antes de comprar Notebook Acer Aspire Go AG15-51P-39MU Intel Core i3-1305U 8GB…, olha o que o histórico mostra. Hoje ele aparece por R$ 3.912,00. No Radar, a média foi R$ 3.564,07 e o menor valor observado foi R$ 2.855,00, em 18 dias acompanhados. O preço atual está 9,8% acima da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
