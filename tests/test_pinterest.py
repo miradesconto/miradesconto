@@ -1,9 +1,11 @@
 import importlib.util
 import json
+import sys
 from pathlib import Path
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / 'integracoes/pinterest'))
 spec = importlib.util.spec_from_file_location('pinterest_drafts', ROOT / 'integracoes/pinterest/preparar.py')
 drafts = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(drafts)
@@ -13,10 +15,12 @@ class PinterestTests(unittest.TestCase):
     def setUp(self):
         self.config = json.loads(drafts.CONFIG.read_text(encoding='utf-8'))
 
-    def test_three_drafts_are_deterministic_and_never_approved(self):
+    def test_six_site_and_affiliate_drafts_are_deterministic_and_never_approved(self):
         queue = drafts.build()
         self.assertEqual(queue, drafts.build())
-        self.assertEqual(len(queue['posts']), 3)
+        self.assertEqual(len(queue['posts']), 6)
+        self.assertEqual([p['destination'] for p in queue['posts']].count('site'), 3)
+        self.assertEqual([p['destination'] for p in queue['posts']].count('mercado_livre'), 3)
         self.assertFalse(queue['publishingEnabled'])
         for p in queue['posts']:
             self.assertFalse(p['approved'])
@@ -28,7 +32,7 @@ class PinterestTests(unittest.TestCase):
         self.config['articles'] *= 2
         first = drafts.build()['posts'][0]['link']
         queue = drafts.build(config=self.config, published_links=[first])
-        self.assertEqual(len(queue['posts']), 2)
+        self.assertEqual(len(queue['posts']), 5)
         self.assertNotIn(first, [p['link'] for p in queue['posts']])
 
     def test_unpublished_article_and_unsafe_paths_fail(self):
@@ -45,6 +49,20 @@ class PinterestTests(unittest.TestCase):
         self.config['mode'] = 'draft_only'
         self.config['siteUrl'] = 'https://example.com/'
         with self.assertRaises(ValueError): drafts.build(config=self.config)
+
+    def test_affiliate_drafts_are_unapproved_and_disclose_commission(self):
+        queue = drafts.build()
+        for pin in queue['posts']:
+            if pin['destination'] == 'mercado_livre':
+                self.assertTrue(pin['link'].startswith('https://meli.la/'))
+                self.assertIn('podemos receber comissão', pin['description'])
+                self.assertEqual(pin['referenceImageUrl'], '')
+                self.assertFalse(pin['approved'])
+
+    def test_affiliate_untrusted_domain_fails(self):
+        self.config['affiliateOffers'][0]['affiliateUrl'] = 'https://meli.la.evil.test/x'
+        with self.assertRaises(ValueError):
+            drafts.build(config=self.config)
 
     def test_preview_escapes_editorial_text(self):
         queue = drafts.build()
