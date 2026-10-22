@@ -1,4 +1,4 @@
-"""Offline editorial drafts. No credentials, HTTP client or publishing endpoint."""
+"""Rascunhos editoriais offline para site e afiliados. Nunca publica nem usa credenciais."""
 import argparse
 import hashlib
 import html
@@ -6,6 +6,8 @@ import json
 from pathlib import Path
 import re
 from urllib.parse import urlsplit
+
+from link_rules import affiliate_description, validate_ml_link
 
 ROOT = Path(__file__).resolve().parents[2]
 CONFIG = Path(__file__).with_name('config.json')
@@ -43,7 +45,6 @@ def build(root=ROOT, config=None, published_links=()):
         title = meta['title']
         if not isinstance(title, str) or not 1 <= len(title) <= 100:
             raise ValueError(f'Título exige revisão: {slug}')
-        # Generic editorial copy deliberately avoids carrying price/stock claims.
         description = ('Leia a análise completa no MiraDesconto antes de decidir sua compra. '
                        'O site contém links de afiliados; podemos receber comissão por compras realizadas por esses links.')
         refs = [products[x] for x in meta['produtos'] if x in products]
@@ -55,22 +56,56 @@ def build(root=ROOT, config=None, published_links=()):
         seen.add(link)
         posts.append({
             'key': hashlib.sha256(link.encode()).hexdigest()[:20],
+            'destination': 'site',
             'status': 'draft', 'approved': False, 'title': title,
             'description': description, 'link': link,
             'referenceImageUrl': image, 'boardId': None,
             'suggestedBoard': 'Tecnologia, eletrônicos e setup',
-            'pending': ['Revisar texto', 'Criar e revisar arte final', 'Escolher pasta', 'Autorizar conta após aprovação da API']
+            'pending': ['Revisar texto', 'Criar e revisar arte final', 'Escolher pasta', 'Aprovar publicação manual']
         })
-    return {'schemaVersion': 1, 'mode': 'draft_only', 'publishingEnabled': False, 'posts': posts}
+
+    for offer in config.get('affiliateOffers', []):
+        if not isinstance(offer, dict) or not re.fullmatch(
+                r'[a-z0-9]+(?:-[a-z0-9]+)*', str(offer.get('id', ''))):
+            raise ValueError('Identificador de oferta inválido.')
+        link = validate_ml_link(offer.get('affiliateUrl'))
+        if link in seen:
+            continue
+        title = offer.get('title')
+        if (not isinstance(title, str) or title != title.strip()
+                or not 1 <= len(title) <= 100):
+            raise ValueError(f'Título de oferta exige revisão: {offer["id"]}')
+        description = affiliate_description(offer.get('caption'))
+        seen.add(link)
+        posts.append({
+            'key': hashlib.sha256(link.encode()).hexdigest()[:20],
+            'destination': 'mercado_livre', 'offerId': offer['id'],
+            'status': 'draft', 'approved': False, 'title': title,
+            'caption': offer['caption'], 'description': description, 'link': link,
+            'referenceImageUrl': '', 'boardId': None,
+            'suggestedBoard': offer.get('suggestedBoard', 'Tecnologia e eletrônicos'),
+            'pending': ['Confirmar que o anúncio e o link afiliado estão ativos',
+                        'Confirmar Pinterest cadastrado no programa de afiliados',
+                        'Verificar se o Pinterest aceita o link meli.la; não ocultar destino',
+                        'Criar arte própria PNG/JPG e hospedar no MiraDesconto',
+                        'Conferir legenda, pasta e destino; autorizar publicação manual']
+        })
+    return {'schemaVersion': 2, 'mode': 'draft_only',
+            'publishingEnabled': False, 'posts': posts}
 
 
 def render(queue):
     esc = html.escape
     cards = []
     for p in queue['posts']:
-        cards.append('<article><h2>' + esc(p['title']) + '</h2><p>' + esc(p['description'])
-                     + '</p><p><a href="' + esc(p['link'], quote=True) + '">Abrir artigo</a></p>'
-                     + '<p><a href="' + esc(p['referenceImageUrl'], quote=True) + '">Ver imagem de referência</a></p>'
+        label = 'Abrir artigo' if p['destination'] == 'site' else 'Conferir anúncio e link afiliado'
+        ref = p.get('referenceImageUrl')
+        reference = (('<p><a href="' + esc(ref, quote=True) +
+                      '">Ver imagem de referência (não é arte final)</a></p>') if ref else '')
+        cards.append('<article><small>' + esc(p['destination']) + '</small><h2>'
+                     + esc(p['title']) + '</h2><p>' + esc(p['description'])
+                     + '</p><p><a href="' + esc(p['link'], quote=True) + '">'
+                     + label + '</a></p>' + reference
                      + '<p>Pasta sugerida: ' + esc(p['suggestedBoard']) + '</p><ul>'
                      + ''.join('<li>' + esc(x) + '</li>' for x in p['pending']) + '</ul></article>')
     return ('<!doctype html><html lang="pt-BR"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
