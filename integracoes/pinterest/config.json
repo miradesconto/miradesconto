@@ -7,5 +7,28 @@
     "iphone-15-ou-16-em-promocao",
     "monitor-para-setup-como-comparar",
     "carregador-usb-c-iphone-como-escolher"
+  ],
+  "affiliateOffers": [
+    {
+      "id": "aspire-go-i7",
+      "title": "Notebook Acer Aspire Go i7: o que conferir na configuração",
+      "caption": "Compare processador, memória, tela e garantia do anúncio antes de decidir se este notebook atende ao seu uso",
+      "affiliateUrl": "https://meli.la/1zsVjAj",
+      "suggestedBoard": "Notebooks e tecnologia"
+    },
+    {
+      "id": "smart-tag-android",
+      "title": "Smart Tag Android: confira a compatibilidade antes de comprar",
+      "caption": "Veja o aplicativo, o método de localização e a compatibilidade com seu celular antes de escolher uma tag",
+      "affiliateUrl": "https://meli.la/2tsxgJV",
+      "suggestedBoard": "Acessórios e tecnologia"
+    },
+    {
+      "id": "camera-a28b",
+      "title": "Câmera Wi-Fi A28B: veja o que checar antes da compra",
+      "caption": "Confira a conexão Wi-Fi, a forma de armazenamento e as condições de instalação indicadas no anúncio",
+      "affiliateUrl": "https://meli.la/2ZPVV9T",
+      "suggestedBoard": "Casa conectada e segurança"
+    }
   ]
 }

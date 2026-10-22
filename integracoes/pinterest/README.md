@@ -11,7 +11,7 @@ A integração roda no Python/GitHub Actions, jamais no JavaScript público do s
    `python integracoes/pinterest/autorizar.py`
 3. Quando solicitado, cole a **chave secreta do app** copiada diretamente do painel do Pinterest. Ela fica só na memória do processo local; o GitHub não permite reler o secret previamente cadastrado.
 4. O navegador abrirá a tela OAuth. Autorize o aplicativo. Use o mesmo computador (localhost). O script verifica um `state` aleatório, troca o código no endpoint oficial e grava `PINTEREST_ACCESS_TOKEN` e `PINTEREST_REFRESH_TOKEN` em GitHub Actions Secrets via `gh`. **Não envie códigos, tokens ou chave pelo chat.**
-5. Execute o workflow manual **Pinterest — validar conexão** na aba Actions. Ele somente lê usuário/pastas; nunca cria Pins.
+5. Execute o workflow manual **Pinterest — validar conexão** na aba Actions. Ele somente lê pastas/Pins; nunca cria Pins.
 
 Permissões solicitadas no OAuth: `boards:read`, `pins:read`, `pins:write`, `boards:write`.
 O botão 'Gerar token' do painel do Pinterest oferece principalmente permissões de leitura e **não** substitui este fluxo.
@@ -26,14 +26,26 @@ Para funcionar, os Secrets necessários são:
 
 Se `GH_SECRETS_TOKEN` não estiver configurado, a renovação permanece pendente, sem publicar nada. **Nunca salve tokens no repositório, em logs, páginas ou artefatos**. Valide a renovação manualmente antes de depender do agendamento.
 
-## Publicação manual — apenas depois do teste
+## Publicação híbrida (manual, somente após revisar)
 
-O workflow **Pinterest — publicar Pin revisado** aceita um único artigo publicado, ID real da pasta, URL de arte final PNG/JPG hospedada em `https://miradesconto.com.br/` e a palavra de confirmação `PUBLICAR`.
-Antes de executar, confira que tem direitos sobre a arte e que a URL é pública e correta. O conteúdo indica a possibilidade de comissão. O programa consulta Pins já existentes na conta para evitar republicar o mesmo link. Se falhar a consulta, bloqueia o envio.
+O workflow **Pinterest — publicar Pin revisado** tem o seletor `destination`:
 
-**Nenhum agendamento de publicação foi habilitado.** O fluxo `Pinterest — preparar rascunhos` continua somente produzindo rascunhos sem aprovação. Não envie imagens de referência de produtos como se fossem artes finais licenciadas.
+- `site`: preencher somente `article` (slug de artigo publicado); a URL será gerada no MiraDesconto. Deixar `affiliate_url`, `affiliate_title` e `caption` vazios.
+- `mercado_livre`: preencher `affiliate_url` (link do produto gerado no programa de afiliados), `affiliate_title` e `caption`. Deixar `article` vazio. A validação aceita HTTPS em `meli.la`, `mercadolivre.com.br`, `www.mercadolivre.com.br` ou `produto.mercadolivre.com.br`. Um domínio permitido **não garante** que o link está afiliado, ativo ou aceito pelo Pinterest.
 
-Depois de aprovar uma publicação, confira-a visualmente no Pinterest. Se a API retornar erro/incerteza, **verifique os Pins da conta antes de tentar novamente**. A API pode exigir conta Business ou permissões adicionais para contas pessoais conforme a data de criação do app.
+Os dois tipos exigem `board_id` real, arte PNG/JPG **própria e aprovada** hospedada em `https://miradesconto.com.br/` e `confirmation=PUBLICAR`. O sistema adiciona aviso comercial, consulta Pins existentes para evitar duplicação e bloqueia a publicação se essa consulta falhar. Não copie fotos de anúncios como artes próprias sem permissão de uso.
+
+Antes de publicar um Pin de afiliado, confirme:
+1. A conta/canal Pinterest está cadastrada e autorizada no programa de afiliados do Mercado Livre.
+2. O link é realmente de afiliado e direciona ao produto correto, com anúncio ativo. Alguns destinos encurtados (`meli.la`) podem não ser aceitos pelo Pinterest; caso rejeitados, revise no programa a possibilidade de usar um link afiliado longo, sem remover os parâmetros de atribuição.
+3. A arte e a legenda correspondem ao produto, informam o caráter comercial e não prometem preço, entrega ou estoque não verificados.
+4. O link foi aberto, a pasta Pinterest foi selecionada e a publicação individual foi aprovada.
+
+## Rascunhos de três ofertas do Mercado Livre
+
+O arquivo `config.json` inclui três **sugestões não aprovadas** (Acer Aspire Go i7, Smart Tag Android e câmera A28B) com links fornecidos anteriormente pelo titular. O workflow **Pinterest — preparar rascunhos** agora gera rascunhos do site e dessas três ofertas, em JSON e HTML para revisão. Links, disponibilidade, afiliação, aprovação da plataforma e imagens finais **não foram validados por API**. Nenhuma publicação automática foi habilitada.
+
+Depois de aprovar uma publicação, confira-a visualmente no Pinterest. Se a API retornar erro ou incerteza, verifique os Pins antes de tentar novamente. A API pode exigir conta Business ou permissões adicionais.
 
 ## Reverter/revogar
 
