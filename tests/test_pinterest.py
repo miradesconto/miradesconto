@@ -25,7 +25,7 @@ class PinterestTests(unittest.TestCase):
         for p in queue['posts']:
             self.assertFalse(p['approved'])
             self.assertIsNone(p['boardId'])
-            self.assertIn('afiliados', p['description'])
+            self.assertIn('afiliado', p['description'])
             self.assertNotIn('price', p)
 
     def test_duplicates_and_previously_published_links_are_excluded(self):
