@@ -4,6 +4,8 @@ baseurl: ""
 lang: pt-BR
 markdown: kramdown
 collections:
+  ofertas:
+    output: true
   compras:
     output: true
   artigos:

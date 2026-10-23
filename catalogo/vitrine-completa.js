@@ -18,7 +18,7 @@
     const url = p?.affiliateUrl;
     return p?.available !== false
       && typeof url === 'string'
-      && /^https:\/\/meli\.la\/[a-zA-Z0-9]+$/.test(url)
+      && (typeof window !== 'undefined' && window.MiraAffiliate ? window.MiraAffiliate.individual(p) : /^https:\/\/meli\.la\/[a-zA-Z0-9]+$/.test(url))
       && !GENERIC_LISTS.has(url)
       && !sources.includes(url)
       && p.affiliateLinkType !== 'list'
@@ -70,7 +70,7 @@
   const validImage = url => {
     try {
       const u = new URL(url);
-      return u.protocol === 'https:' && (u.hostname === 'mlstatic.com' || u.hostname.endsWith('.mlstatic.com'));
+      return u.protocol === 'https:' && !u.username && !u.password;
     } catch { return false; }
   };
   function makeCard(p, counts, now) {
@@ -108,6 +108,10 @@
       a.dataset.itemId=p.id; a.dataset.itemName=p.name;a.dataset.itemCategory=p.category||'';
       a.dataset.destinationType='product';a.dataset.linkLocation='full-catalog';
       actions.append(a);
+      if (!window.MiraQuality?.priceReviewReason(p)) {
+        const details=elem('a','shop','Detalhes e cuidados →');
+        details.href='/oferta/'+p.id.toLowerCase()+'/';actions.append(details);
+      }
       actions.append(elem('small','disclose','Link individual de afiliado'));
     } else {
       actions.append(elem('span','unlinked',p.available===false ? 'Produto indisponível' : 'Link individual de afiliado pendente'));
@@ -159,7 +163,7 @@
       const next=JSON.parse(match[1]);
       if (!Array.isArray(next.products) || !next.products.length || next.products.some(p=>!p||!p.id||!p.name)) return;
       if (new Set(next.products.map(p=>p.id)).size!==next.products.length) return;
-      rows=byId(next.products);sources=Array.isArray(next.affiliateSources)?next.affiliateSources:[];
+      rows=byId(window.MiraAffiliate ? window.MiraAffiliate.merge(next.products) : next.products);sources=Array.isArray(next.affiliateSources)?next.affiliateSources:[];
       setupCategories();render();
     } catch { /* Keep last valid catalogue; expiring prices are always hidden. */ }
     finally {busy=false;}

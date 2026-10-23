@@ -24,6 +24,11 @@
   function isAffiliate(href) {
     try {
       const url = new URL(href, window.location.href);
+      if (window.MiraAffiliate?.platform(href)) return true;
+      if (url.protocol === 'https:' && !url.username && !url.password && !url.port) {
+        if (['amzn.to','a.co','s.shopee.com.br','shope.ee'].includes(url.hostname) && /^\/[A-Za-z0-9]+\/?$/.test(url.pathname)) return true;
+        if (['amazon.com.br','www.amazon.com.br'].includes(url.hostname) && url.searchParams.get('tag') && /\/(?:dp|gp\/product)\/[A-Z0-9]{10}(?:\/|$)/i.test(url.pathname)) return true;
+      }
       return url.protocol === 'https:' && (url.hostname === 'meli.la' ||
         ((url.hostname === 'www.mercadolivre.com.br' || url.hostname === 'mercadolivre.com.br')
           && (url.pathname.startsWith('/social/') || url.pathname.startsWith('/sec/') ||
@@ -51,7 +56,7 @@
     };
     if (link.dataset.itemId || product?.id) params.item_id = link.dataset.itemId || product.id;
     if (link.dataset.itemCategory || product?.category) params.item_category = link.dataset.itemCategory || product.category;
-    if (typeof product?.price === 'number' && Number.isFinite(product.price)) {
+    if (typeof product?.price === 'number' && Number.isFinite(product.price) && (!window.MiraQuality || window.MiraQuality.usablePrice(product))) {
       params.item_price = product.price;
       params.currency = 'BRL';
     }
