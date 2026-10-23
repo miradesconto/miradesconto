@@ -25,7 +25,7 @@ def main():
             raise RuntimeError('Consulta de Pins incompleta; nenhuma alteração.')
         for pin in page['items']:
             title = str(pin.get('title', '')).casefold()
-            if str(pin.get('link', '')).rstrip('/') in (OLD, NEW) or ('acer' in title and 'aspire go' in title and 'i7' in title):
+            if str(pin.get('link', '')).rstrip('/') in (OLD, NEW) or title == 'notebook acer aspire go i7: o que conferir na configuração':
                 matches.append(pin)
         bookmark = page.get('bookmark')
         if not bookmark:
