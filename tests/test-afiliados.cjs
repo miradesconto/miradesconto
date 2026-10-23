@@ -13,3 +13,11 @@ for(const [url,store] of [['https://meli.la/Test','mercadolivre'],['https://amzn
 assert.equal(a.platform('https://www.amazon.com.br/dp/B012345678'),null);
 assert.equal(a.individual({affiliateUrl:'https://meli.la/1NguveN'}),false);
 console.log('OK: três lojas, links confirmados, listas e domínios impostores bloqueados');
+
+const fs=require('node:fs');
+for(const path of ['index.html','catalogo/index.html']) {
+ const html=fs.readFileSync(path,'utf8');
+ assert.ok(html.indexOf('afiliados.js')<html.indexOf('produtos.js'),path);
+ assert.ok(html.indexOf('produtos-extras.js')>html.indexOf('produtos.js'),path);
+ assert.ok(html.includes('produtos-extras.js'),path);
+}
