@@ -5,6 +5,7 @@ const requestedProduct = new URLSearchParams(window.location.search).get('produt
 // Catalogue data stays intact; the homepage only features recent, monetizable offers.
 const MAX_HOME_OFFERS = 6; // Four curated cards + six grid cards = ten visible offers.
 function directAffiliate(p) {
+    if (window.MiraAffiliate) return window.MiraAffiliate.individual(p);
     const link = p?.affiliateUrl;
     if (typeof link !== 'string' || !/^https:\/\/meli\.la\/[A-Za-z0-9]+$/.test(link)) return false;
     if (['https://meli.la/1NguveN','https://meli.la/1pyBZm8'].includes(link)) return false;
@@ -107,12 +108,12 @@ function makeCard(p) {
     a.rel = p.affiliateUrl ? 'noopener noreferrer sponsored' : 'noopener noreferrer';
     const share = element('button','share-button','Compartilhar');
     share.type = 'button';
-    const siteLink = new URL('./', window.location.href);
-    siteLink.searchParams.set('produto', p.id);
-    siteLink.hash = 'ofertas';
+    const siteLink = new URL('/oferta/'+p.id.toLowerCase()+'/', window.location.href);
     share.addEventListener('click', () => shareProduct(p.name,siteLink.href));
     const history = element('button','share-button','Ver histórico de preço');
     history.type = 'button'; history.addEventListener('click', () => window.MiraHistory.open(p, history));
+    const landing=element('a','product-link','Detalhes e cuidados →');
+    landing.href='/oferta/'+p.id.toLowerCase()+'/';content.append(landing);
     const guideSlug = {'MLB4604524838':'asus-vivobook-go-15-ryzen-5','MLB3914161563':'asus-vivobook-go-15-ryzen-5','MLB4329495631':'samsung-essential-s3-24','MLB4196200841':'acer-nitro-v15-rtx-4060'}[p.id];
     if (guideSlug) { const guide=element('a','product-link','Ver análise de compra →'); guide.href='produtos/'+guideSlug+'/'; content.append(guide); }
     const extras = element('details','product-extras');
@@ -284,9 +285,10 @@ async function refreshCatalog() {
         if (!Array.isArray(next)) return;
         if (!next.length || new Set(next.map(p => p.id)).size !== next.length) return;
         if (next.some(p => !p || typeof p.id !== 'string' || !p.id || !p.name || !safeUrl(p.affiliateUrl))) return;
-        products.splice(0, products.length, ...next.filter(p => directAffiliate(p)));
+        const combined = window.MiraAffiliate ? window.MiraAffiliate.merge(next) : next;
+        products.splice(0, products.length, ...combined.filter(p => directAffiliate(p)));
         if (!products.length) return;
-        if (source) source.products = next;
+        if (source) source.products = combined;
         document.dispatchEvent(new CustomEvent('mira:catalog-updated'));
         renderProducts(true);
     } catch { /* Retain existing data; the freshness guard still expires prices. */ }

@@ -49,6 +49,8 @@ jobs:
           fi
       - name: Atualizar Radar de Preços
         run: python integracoes/automacao/gerar_radar.py
+      - name: Atualizar destinos permanentes e cadastro de campanha
+        run: python integracoes/campanha.py
       - name: Validar integridade antes de publicar
         run: |
           python integracoes/automacao/site_health.py
@@ -72,10 +74,18 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add historico dados/catalogo.json links-afiliados.json produtos.js catalogo _data/produtos.json _data/radar.json index.html
           git add integracoes/social/pauta-do-dia.json integracoes/social/pauta-do-dia.md
+          git add _ofertas _data/ofertas_site.json produtos-extras.js docs/pinterest-destinos.json
           git diff --cached --quiet && exit 0
           git commit -m 'Atualiza preços confirmados dos links de afiliado'
           # Never force-push or merge a stale catalog over concurrent edits.
-          git push origin HEAD:main
+          # Retry transient DNS/network failures without overwriting concurrent edits.
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then
+              break
+            fi
+            if [ "$attempt" -eq 3 ]; then exit 1; fi
+            sleep 5
+          done
       - name: Solicitar publicação no GitHub Pages
         env:
           GH_TOKEN: ${{ github.token }}
