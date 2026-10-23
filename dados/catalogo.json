@@ -145,7 +145,10 @@
     "MLB5534626278",
     "MLB5446552831",
     "MLB6215775384",
-    "MLB5211868675"
+    "MLB5211868675",
+    "MLB4508706691",
+    "MLB5125769735",
+    "MLB5209104787"
   ],
   "products": [
     {
@@ -28796,6 +28799,96 @@
         "checkedAt": "2026-10-23T20:08:24+00:00",
         "price": 196.48,
         "oldPrice": 203.51
+      }
+    },
+    {
+      "id": "MLB4508706691",
+      "itemId": "MLB4508706691",
+      "name": "Fone Ouvido Jbl Tune 780nc Headphone Bluetooth Cancela Ruído Preto",
+      "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_856745-MLB116518663672_092026-V.webp",
+      "affiliateUrl": "https://meli.la/1YVasyD",
+      "productUrl": "https://www.mercadolivre.com.br/fone-ouvido-jbl-tune-780nc-headphone-bluetooth-cancela-ruido/up/MLBU3831208724?pdp_filters=item_id%3AMLB4508706691&matt_event_ts=1792786248774&matt_d2id=c5c2c306-31d4-4143-adf2-d8169c4927d1&matt_tracing_id=11ce188e-5221-4fd4-8919-fb2154c698cc#polycard_client=recommendations_home_affiliate-profile&wid=MLB4508706691&sid=recos&reco_backend=item_decorator&reco_client=home_affiliate-profile&matt_tool_id=29904275&reco_item_pos=0&source=affiliate-profile&reco_backend_type=function&reco_id=94316ce6-4329-4028-bbcb-6b98f8082035&tracking_id=1546cc5b-4a0b-436a-8008-046f577e097d&c_id=/home/card-featured/element&c_uid=14cf0103-7b09-4cef-872d-313a4563078e",
+      "featured": false,
+      "category": "Áudio",
+      "rank": 127,
+      "registrationSource": "affiliate-panel",
+      "price": 457.58,
+      "oldPrice": 785.0,
+      "discount": 41.7096,
+      "displayedDiscount": "42% OFF",
+      "available": null,
+      "availabilityStatus": "unknown",
+      "priceSource": "poly-card-v1",
+      "collectedAt": "23/10/2026",
+      "priceCheck": {
+        "status": "verified",
+        "method": "poly-card-v1",
+        "itemId": "MLB4508706691",
+        "variationId": null,
+        "currency": "BRL",
+        "checkedAt": "2026-10-23T20:10:48+00:00",
+        "price": 457.58,
+        "oldPrice": 785.0
+      }
+    },
+    {
+      "id": "MLB5125769735",
+      "itemId": "MLB5125769735",
+      "name": "Machenike K500B-B87 Teclado Mecânico Gamer Switch Red Retroiluminação RGB Hot-Swappable",
+      "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_720850-MLA113258867736_072026-V.webp",
+      "affiliateUrl": "https://meli.la/2CRn8K3",
+      "productUrl": "https://www.mercadolivre.com.br/machenike-k500b-b87-teclado-mecanico-gamer-switch-red-retroiluminacao-rgb-hot-swappable/p/MLB75448392?matt_event_ts=1792786249596&matt_d2id=b9ac5874-9706-438e-8f8e-c09bb8d371e0&matt_tracing_id=cfcde2a5-e6ce-4135-aa60-75fbe75a9a29#polycard_client=recommendations_home_affiliate-profile&reco_backend=item_decorator&reco_client=home_affiliate-profile&matt_tool_id=29904275&reco_item_pos=0&source=affiliate-profile&reco_backend_type=function&reco_id=96a273a5-45bd-4d46-ba62-9e34d2debb9d&tracking_id=769909ed-d88c-4ff4-8749-0c9a221c9bbb&wid=MLB5125769735&sid=recos&c_id=/home/card-featured/element&c_uid=1c7a7da0-86ad-49ba-8504-641b5d61fe2f",
+      "featured": false,
+      "category": "Setup",
+      "rank": 128,
+      "registrationSource": "affiliate-panel",
+      "price": 139.99,
+      "oldPrice": null,
+      "discount": null,
+      "displayedDiscount": null,
+      "available": null,
+      "availabilityStatus": "unknown",
+      "priceSource": "poly-card-v1",
+      "collectedAt": "23/10/2026",
+      "priceCheck": {
+        "status": "verified",
+        "method": "poly-card-v1",
+        "itemId": "MLB5125769735",
+        "variationId": null,
+        "currency": "BRL",
+        "checkedAt": "2026-10-23T20:10:49+00:00",
+        "price": 139.99,
+        "oldPrice": null
+      }
+    },
+    {
+      "id": "MLB5209104787",
+      "itemId": "MLB5209104787",
+      "name": "Fechadura Digital Biometrica Touch Id Senha Tag Inteligente Preta",
+      "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_692155-MLB115943772042_092026-V.webp",
+      "affiliateUrl": "https://meli.la/1HoTph8",
+      "productUrl": "https://www.mercadolivre.com.br/fechadura-digital-biometrica-touch-id-senha-tag-inteligente/up/MLBU5154813830?pdp_filters=item_id%3AMLB5209104787&matt_event_ts=1792786250263&matt_d2id=366648a7-6ee1-4e5b-973a-8cc49d0b5639&matt_tracing_id=a8e267ce-819b-4cf0-9949-934d2ab756fa#polycard_client=recommendations_home_affiliate-profile&wid=MLB5209104787&sid=recos&reco_backend=item_decorator&reco_client=home_affiliate-profile&matt_tool_id=29904275&reco_item_pos=0&source=affiliate-profile&reco_backend_type=function&reco_id=0e4a3754-5131-4876-b7d7-aaff9e4357a2&tracking_id=42f08f29-6537-4baa-86cd-4f8096e6eb57&c_id=/home/card-featured/element&c_uid=3127fe0b-150d-4255-98fd-018d54b4b867",
+      "featured": false,
+      "category": "Smart Home",
+      "rank": 129,
+      "registrationSource": "affiliate-panel",
+      "price": 234.0,
+      "oldPrice": 390.0,
+      "discount": 40.0,
+      "displayedDiscount": "40% OFF",
+      "available": null,
+      "availabilityStatus": "unknown",
+      "priceSource": "poly-card-v1",
+      "collectedAt": "23/10/2026",
+      "priceCheck": {
+        "status": "verified",
+        "method": "poly-card-v1",
+        "itemId": "MLB5209104787",
+        "variationId": null,
+        "currency": "BRL",
+        "checkedAt": "2026-10-23T20:10:49+00:00",
+        "price": 234.0,
+        "oldPrice": 390.0
       }
     }
   ]
