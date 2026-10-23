@@ -223,5 +223,30 @@
     "kicker": "ANÁLISE DE COMPRA",
     "hook": "Kapbom KA-8596: 50 W no anúncio",
     "tone": "mint"
+  },
+  "jbl-tune-780nc-vale-a-pena": {
+    "kicker": "Áudio e trabalho",
+    "hook": "ANC para sua rotina?",
+    "tone": "sky"
+  },
+  "machenike-k500b-b87-switch-red-vale-a-pena": {
+    "kicker": "Antes do RGB",
+    "hook": "Red, layout e troca de switches",
+    "tone": "lilac"
+  },
+  "robo-aspirador-kabum-ksar100pt-vale-a-pena": {
+    "kicker": "Rotina da casa",
+    "hook": "K100: limpeza sem aplicativo",
+    "tone": "sage"
+  },
+  "qcy-gt-s8-vale-a-pena": {
+    "kicker": "Relógio conectado",
+    "hook": "AMOLED: e o restante?",
+    "tone": "mint"
+  },
+  "fechadura-digital-biometrica-touch-id-como-escolher": {
+    "kicker": "Antes de instalar",
+    "hook": "Essa fechadura cabe na sua porta?",
+    "tone": "cream"
   }
 }

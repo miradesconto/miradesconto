@@ -25,6 +25,11 @@ console.log(`${published} artigos publicados com fotos e capas distintas`);
 for (const [slug, id, link] of [
   ['lg-43lr6700psa-vale-a-pena','MLB6739753074','https://meli.la/1cmZy4H'],
   ['kapbom-ka-8596-vale-a-pena','MLB7477193852','https://meli.la/2QmhPHR'],
+  ['jbl-tune-780nc-vale-a-pena','MLB4508706691','https://meli.la/1YVasyD'],
+  ['machenike-k500b-b87-switch-red-vale-a-pena','MLB5125769735','https://meli.la/2CRn8K3'],
+  ['robo-aspirador-kabum-ksar100pt-vale-a-pena','MLB6215775384','https://meli.la/2ZSDYix'],
+  ['qcy-gt-s8-vale-a-pena','MLB5211868675','https://meli.la/2vPrV86'],
+  ['fechadura-digital-biometrica-touch-id-como-escolher','MLB5209104787','https://meli.la/1HoTph8'],
 ]) {
   const article=fs.readFileSync(path.join(root,'_artigos',slug+'.md'),'utf8');
   const front=article.split('---')[1],body=article.split('---').slice(2).join('---');
@@ -39,4 +44,4 @@ for (const [slug, id, link] of [
   assert.ok(covers[slug],'Editorial cover entry is required');
   assert.strictEqual(photos[id].affiliateUrl, link);
 }
-console.log('OK: reviews LG e Kapbom com SKU, imagens reais, CTA e método editorial.');
+console.log('OK: sete artigos com SKU, foto cadastrada, CTA exato e método editorial.');
