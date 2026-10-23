@@ -16,7 +16,7 @@ def category(product):
         (r'^controle.*(?:ps4|ps5|xbox)', 'Gaming'),
         (r'^kit de gravacao|kit chave precisao', 'Setup'),
         (r'fone|headset|microfone|vitrola|caixa de som', 'Áudio'),
-        (r'camera|fechadura digital|campainha|smart tag|smart home', 'Smart Home'),
+        (r'camera|fechadura digital|campainha|smart tag|smart home|robo aspirador|aspirador robo', 'Smart Home'),
         (r'projetor|smart tv|televisor', 'TVs e projetores'),
         (r'impressora|caneta 3d', 'Impressoras'),
         (r'controle.*(?:ps4|ps5|xbox)|playstation|nintendo|borderlands|grip|analogico|cooler dobe', 'Gaming'),

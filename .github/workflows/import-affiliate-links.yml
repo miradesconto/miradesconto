@@ -43,6 +43,8 @@ jobs:
       - name: Gerar e verificar publicação
         run: |
           python integracoes/automacao/atualizar_home.py
+          python integracoes/campanha.py --select-pending
+          python integracoes/campanha.py --check
           python integracoes/catalogo.py check
           python integracoes/automacao/site_health.py
           node test-catalogo.cjs
@@ -53,6 +55,7 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add dados/catalogo.json links-afiliados.json produtos.js catalogo _data/produtos.json index.html
+          git add _ofertas _data/ofertas_site.json _data/black_friday.json produtos-extras.js docs/pinterest-destinos.json
           if git diff --cached --quiet; then
             echo 'changed=false' >> "$GITHUB_OUTPUT"
             echo 'Nenhuma mudança real no cadastro; sem commit nem publicação.'
@@ -61,7 +64,11 @@ jobs:
           python integracoes/automacao/cache_bust.py
           git add index.html
           git commit -m 'Cadastra novos links oficiais de afiliado'
-          git push origin HEAD:main
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then break; fi
+            if [ "$attempt" -eq 3 ]; then exit 1; fi
+            sleep 5
+          done
           echo 'changed=true' >> "$GITHUB_OUTPUT"
       - name: Publicar
         if: steps.save.outputs.changed == 'true'

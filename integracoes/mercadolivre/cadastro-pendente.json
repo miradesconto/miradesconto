@@ -1,75 +1,55 @@
 {
+  "batchId": "2026-10-23-cinco-produtos-black-friday",
   "links": [
-    "https://meli.la/1cmZy4H",
-    "https://meli.la/1iyK2pc",
-    "https://meli.la/2QmhPHR",
-    "https://meli.la/18MgyQt",
-    "https://meli.la/27ebcoK",
-    "https://meli.la/2kL9rtC",
-    "https://meli.la/26U5Bw7"
+    "https://meli.la/1YVasyD",
+    "https://meli.la/2CRn8K3",
+    "https://meli.la/2ZSDYix",
+    "https://meli.la/2vPrV86",
+    "https://meli.la/1HoTph8"
   ],
   "expectedItemIds": {},
   "expectedTitleTokens": {
-    "https://meli.la/1cmZy4H": [
-      "lg",
-      "43lr6700"
+    "https://meli.la/1YVasyD": [
+      "jbl",
+      "780"
     ],
-    "https://meli.la/1iyK2pc": [
-      "fone",
-      "m10"
+    "https://meli.la/2CRn8K3": [
+      "machenike",
+      "k500"
     ],
-    "https://meli.la/2QmhPHR": [
-      "kapbom",
-      "8596"
+    "https://meli.la/2ZSDYix": [
+      "kabum",
+      "ksar100"
     ],
-    "https://meli.la/18MgyQt": [
-      "aiwa",
-      "bbs"
+    "https://meli.la/2vPrV86": [
+      "qcy",
+      "s8"
     ],
-    "https://meli.la/27ebcoK": [
-      "controle",
-      "aoc"
-    ],
-    "https://meli.la/2kL9rtC": [
-      "drone",
-      "e88"
-    ],
-    "https://meli.la/26U5Bw7": [
-      "caixa",
-      "som",
-      "bluetooth"
+    "https://meli.la/1HoTph8": [
+      "fechadura",
+      "biometr"
     ]
   },
   "submittedProducts": [
     {
-      "name": "Smart Tv Lg 43 Ld Wifi Bluetooth Full Hd 43lr6700psa Hdr10 Pro",
-      "affiliateUrl": "https://meli.la/1cmZy4H"
+      "name": "Fone JBL Tune 780NC",
+      "affiliateUrl": "https://meli.la/1YVasyD"
     },
     {
-      "name": "Fone Ouvido Bluetooth 5.3 Tws M10 A Prova D 'água Microfone",
-      "affiliateUrl": "https://meli.la/1iyK2pc"
+      "name": "Teclado Machenike K500B-B87",
+      "affiliateUrl": "https://meli.la/2CRn8K3"
     },
     {
-      "name": "Caixa de Som Bluetooth Portátil 50w Led Tws Kapbom KA-8596",
-      "affiliateUrl": "https://meli.la/2QmhPHR"
+      "name": "Robô aspirador KaBuM! Smart KSAR100PT",
+      "affiliateUrl": "https://meli.la/2ZSDYix"
     },
     {
-      "name": "Caixa de Som Boombox Plus AIWA BBS-01-LBL 200W Bluetooth 30H IP66 USB RGB",
-      "affiliateUrl": "https://meli.la/18MgyQt"
+      "name": "Smartwatch QCY GT S8",
+      "affiliateUrl": "https://meli.la/2vPrV86"
     },
     {
-      "name": "Controle Remoto Compatível Com Aoc Smart Tv",
-      "affiliateUrl": "https://meli.la/27ebcoK"
-    },
-    {
-      "name": "Mini Drone E88 Pro Com Câmera Wifi Com Case 2 Baterias",
-      "affiliateUrl": "https://meli.la/2kL9rtC"
-    },
-    {
-      "name": "Caixa de Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0 Boombox Com Radio Fm E Entrada Usb Pendrive",
-      "affiliateUrl": "https://meli.la/26U5Bw7"
+      "name": "Fechadura digital biométrica Touch ID",
+      "affiliateUrl": "https://meli.la/1HoTph8"
     }
-  ],
-  "batchId": "2026-10-15-sete-produtos",
-  "attempt": 3
+  ]
 }

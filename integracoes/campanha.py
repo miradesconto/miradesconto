@@ -91,5 +91,15 @@ def generate(check=False,root=ROOT):
     return files
 
 if __name__=='__main__':
-    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--check',action='store_true');args=parser.parse_args()
+    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--check',action='store_true');parser.add_argument('--select-pending',action='store_true');args=parser.parse_args()
+    if args.select_pending:
+        pending=catalogo.read_json(ROOT/'integracoes/mercadolivre/cadastro-pendente.json')
+        source=catalogo.public_data(catalogo.read_json(ROOT/'dados/catalogo.json'))['products']
+        valid=render(ROOT)
+        offers=json.loads(valid['_data/ofertas_site.json'])
+        selected=[p['id'] for link in pending['links'] for p in source if p.get('affiliateUrl')==link and p['id'] in offers]
+        cfg=catalogo.read_json(ROOT/'_data/black_friday.json')
+        cfg['selectedIds']=list(dict.fromkeys(selected+cfg['selectedIds']))[:10]
+        (ROOT/'_data/black_friday.json').write_text(catalogo.dumps(cfg,pretty=True)+'\n')
+        print(str(len(selected))+' produtos confirmados deste lote na seleção da campanha')
     generate(args.check);print('Campanha, destinos dos Pins e cadastro adicional consistentes')
