@@ -11,11 +11,17 @@
   "expectedTitleTokens": {
     "https://meli.la/1YVasyD": [
       "jbl",
-      "780"
+      "tune",
+      "780nc",
+      "headphone",
+      "cancela",
+      "ruido"
     ],
     "https://meli.la/2CRn8K3": [
       "machenike",
-      "k500"
+      "k500b",
+      "b87",
+      "red"
     ],
     "https://meli.la/2ZSDYix": [
       "kabum",
@@ -27,7 +33,13 @@
     ],
     "https://meli.la/1HoTph8": [
       "fechadura",
-      "biometr"
+      "digital",
+      "biometrica",
+      "touch",
+      "id",
+      "senha",
+      "tag",
+      "inteligente"
     ]
   },
   "submittedProducts": [
@@ -52,5 +64,5 @@
       "affiliateUrl": "https://meli.la/1HoTph8"
     }
   ],
-  "attempt": 2
+  "attempt": 3
 }
