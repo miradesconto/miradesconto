@@ -1,0 +1,23 @@
+name: Pinterest — cinco artes finais corrigidas
+on:
+  push:
+    branches: [main]
+    paths: ['integracoes/pinterest/cinco_corrigidos.json']
+permissions:
+  contents: read
+concurrency:
+  group: pinterest-manual-publish
+  cancel-in-progress: false
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Publicar somente versões finais sem duplicar
+        env:
+          PINTEREST_ACCESS_TOKEN: ${{ secrets.PINTEREST_ACCESS_TOKEN }}
+        run: python integracoes/pinterest/publicar_cinco_corrigidos.py
