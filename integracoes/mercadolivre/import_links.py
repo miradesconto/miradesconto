@@ -117,6 +117,8 @@ def parse_page(body, final, link, expected_item_id=None, expected_title_tokens=N
             image_urls = [u for u in images(card) if urlsplit(u).scheme == 'https'
                           and (urlsplit(u).hostname or '').endswith('.mlstatic.com')]
             if len(set(image_urls)) != 1:
+                if expected_title_tokens and title_matches_requested(titles[0].text(), expected_title_tokens):
+                    print('Modelo com imagem ambigua:', found_id, titles[0].text().strip(), 'imagens:', len(set(image_urls)))
                 continue
             key = (found_id, found_variation)
             value = (url, titles[0].text().strip(), image_urls[0])
@@ -138,6 +140,8 @@ def parse_page(body, final, link, expected_item_id=None, expected_title_tokens=N
             matched = [(key, value) for key, value in candidates.items()
                        if key[1] is None and title_matches_requested(value[1], expected_title_tokens)]
             if len(matched) != 1:
+                print('Correspondencias do modelo:', len(matched))
+                print('Titulos identificados:', json.dumps([{'id':key[0], 'title':value[1]} for key,value in candidates.items()], ensure_ascii=False))
                 raise ValueError('Modelo solicitado nao encontrado de forma unica entre os anuncios')
             (item_id, variation), (product_url, name, image) = matched[0]
             observation = extract(body, item_id, product_url)
