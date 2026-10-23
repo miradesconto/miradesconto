@@ -86,7 +86,8 @@ def generate(check=False,root=ROOT):
         if errors or stale: raise ValueError('Campanha desatualizada: '+', '.join(errors+[p.name for p in stale]))
     else:
         for p in stale:p.unlink()
-        catalogo.write_files(files,root)
+        for name,text in files.items():
+            target=root/name;target.parent.mkdir(parents=True,exist_ok=True);target.write_text(text)
     return files
 
 if __name__=='__main__':

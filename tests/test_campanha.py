@@ -21,3 +21,15 @@ class CampaignTests(unittest.TestCase):
         self.assertEqual(len({p['destination'] for p in pins}),len(pins))
         self.assertTrue(all('/oferta/' in p['destination'] and 'utm_source=pinterest' in p['destination'] for p in pins))
         self.assertEqual(files,render(ROOT))
+
+    def test_generation_preserves_primary_catalog_shards(self):
+        import tempfile
+        import shutil
+        from campanha import generate
+        with tempfile.TemporaryDirectory() as tmp:
+            target=Path(tmp)
+            for folder in ('dados','_data','_artigos','catalogo'):
+                shutil.copytree(ROOT/folder,target/folder)
+            before={p.name:p.read_bytes() for p in (target/'catalogo').glob('produtos-*.json')}
+            generate(root=target)
+            self.assertEqual(before,{p.name:p.read_bytes() for p in (target/'catalogo').glob('produtos-*.json')})
