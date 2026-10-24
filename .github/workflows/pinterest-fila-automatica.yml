@@ -1,0 +1,55 @@
+name: Pinterest — fila diária aprovada
+on:
+  schedule:
+    - cron: '35 12 * * *'
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'integracoes/pinterest/fila_automatica.py'
+      - 'integracoes/pinterest/fila_aprovada.json'
+      - 'tests/test_pinterest_queue.py'
+      - '.github/workflows/pinterest-fila-automatica.yml'
+permissions:
+  contents: read
+concurrency:
+  group: pinterest-manual-publish
+  cancel-in-progress: false
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -p 'test_pinterest_queue.py' -v
+      - run: python integracoes/pinterest/fila_automatica.py
+  publish:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: tests
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Preparar diário persistente
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+      - name: Publicar até dois Pins inéditos com arte aprovada
+        env:
+          PINTEREST_ACCESS_TOKEN: ${{ secrets.PINTEREST_ACCESS_TOKEN }}
+        run: python integracoes/pinterest/fila_automatica.py --publish
+      - name: Guardar diário para diagnóstico
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: estado-fila-pinterest-${{ github.run_id }}
+          path: integracoes/pinterest/estado_fila.json
+          retention-days: 30
