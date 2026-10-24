@@ -12,6 +12,10 @@
     "kabum-k100": {
       "status": "existing",
       "pinId": "1104718983637140042"
+    },
+    "qcy-gt-s8": {
+      "status": "existing",
+      "pinId": "1104718983637140044"
     }
   }
 }
