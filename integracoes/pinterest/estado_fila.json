@@ -1,1 +1,9 @@
-{"schemaVersion":1,"posts":{}}
+{
+  "schemaVersion": 1,
+  "posts": {
+    "jbl-tune-780nc": {
+      "status": "existing",
+      "pinId": "1104718983637140036"
+    }
+  }
+}
