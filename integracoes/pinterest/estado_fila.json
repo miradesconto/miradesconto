@@ -8,6 +8,10 @@
     "machenike-k500b-b87": {
       "status": "existing",
       "pinId": "1104718983637140039"
+    },
+    "kabum-k100": {
+      "status": "existing",
+      "pinId": "1104718983637140042"
     }
   }
 }
