@@ -16,6 +16,10 @@
     "qcy-gt-s8": {
       "status": "existing",
       "pinId": "1104718983637140044"
+    },
+    "fechadura-digital": {
+      "status": "existing",
+      "pinId": "1104718983637140055"
     }
   }
 }
