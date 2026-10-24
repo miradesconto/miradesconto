@@ -1,3 +1,5 @@
+> Atualização: o fluxo diário autorizado posteriormente está descrito em [PILOTO-AUTOMATICO.md](PILOTO-AUTOMATICO.md). A agenda atual substitui as restrições de agendamento da fase experimental relatada abaixo; acesso real à API continua sujeito a validação.
+
 # MiraDesconto — Descoberta de candidatos (piloto, sem publicação)
 
 ## Objetivo

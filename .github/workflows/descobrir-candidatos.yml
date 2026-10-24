@@ -1,5 +1,7 @@
 name: Descobrir candidatos de ofertas (revisão)
 on:
+  schedule:
+    - cron: '5 11 * * *'
   pull_request:
     paths:
       - 'integracoes/mercadolivre/discover_candidates.py'
@@ -28,7 +30,7 @@ jobs:
           python -m py_compile integracoes/mercadolivre/discover_candidates.py
           python -m unittest discover -s tests -p 'test_discover_candidates.py' -v
   discovery:
-    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main' && github.actor == github.repository_owner
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && github.actor == github.repository_owner))
     needs: tests
     runs-on: ubuntu-latest
     timeout-minutes: 10
