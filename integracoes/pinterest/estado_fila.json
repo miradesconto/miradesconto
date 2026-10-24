@@ -4,6 +4,10 @@
     "jbl-tune-780nc": {
       "status": "existing",
       "pinId": "1104718983637140036"
+    },
+    "machenike-k500b-b87": {
+      "status": "existing",
+      "pinId": "1104718983637140039"
     }
   }
 }
