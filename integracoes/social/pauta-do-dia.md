@@ -1,6 +1,6 @@
 # Fila de conteúdo — MiraDesconto → Pippit
 
-**Radar:** 2026-10-26T23:08:58+00:00
+**Radar:** 2026-10-27T01:05:22+00:00
 **Fila:** 14 vídeos · 2 por dia · 7 dias
 
 Prioridade: Radar real, histórico observado, variedade de categorias e artigo de destino. Não usa referência da loja como histórico.
@@ -12,8 +12,8 @@ Revise a fila de vídeos do MiraDesconto. Aponte apenas afirmações sem evidên
 ## Dia 1 · Vídeo 1 — Apple iPhone 15 (128 GB)
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 3.779,00 · média R$ 4.025,58 · mínimo R$ 3.779,00
-**Base:** 36 dias acompanhados · 544 observações
+**Preço:** R$ 3.779,00 · média R$ 4.025,12 · mínimo R$ 3.779,00
+**Base:** 36 dias acompanhados · 545 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/iphone-15-vale-a-pena-em-oferta/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_831434-MLA96401363339_102025-AB.webp
 
@@ -23,13 +23,13 @@ Apple iPhone 15 (128 GB) está no menor valor observado neste anúncio. Mas vale
 
 **Roteiro**
 
-Apple iPhone 15 (128 GB) está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 3.779,00. No Radar, a média foi R$ 4.025,58 e o menor valor observado foi R$ 3.779,00, em 36 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Apple iPhone 15 (128 GB) está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 3.779,00. No Radar, a média foi R$ 4.025,12 e o menor valor observado foi R$ 3.779,00, em 36 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Apple iPhone 15 (128 GB)
 Hoje: R$ 3.779,00
-Média observada: R$ 4.025,58
+Média observada: R$ 4.025,12
 Menor observado: R$ 3.779,00
 Base: 36 dias acompanhados
 
@@ -40,15 +40,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Apple iPhone 15 (128 GB). Imagem: https://http2.mlstatic.com/D_Q_NP_2X_831434-MLA96401363339_102025-AB.webp. Hook 0-3s: Apple iPhone 15 (128 GB) está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 3.779,00, média R$ 4.025,58 e menor observado R$ 3.779,00. Narração: Apple iPhone 15 (128 GB) está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 3.779,00. No Radar, a média foi R$ 4.025,58 e o menor valor observado foi R$ 3.779,00, em 36 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Apple iPhone 15 (128 GB). Imagem: https://http2.mlstatic.com/D_Q_NP_2X_831434-MLA96401363339_102025-AB.webp. Hook 0-3s: Apple iPhone 15 (128 GB) está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 3.779,00, média R$ 4.025,12 e menor observado R$ 3.779,00. Narração: Apple iPhone 15 (128 GB) está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 3.779,00. No Radar, a média foi R$ 4.025,12 e o menor valor observado foi R$ 3.779,00, em 36 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
 ## Dia 1 · Vídeo 2 — Notebook Asus Vivobook 15 X1504va Intel Core I5 1334u 8gb Ram 512gb…
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 3.899,00 · média R$ 4.160,84 · mínimo R$ 3.899,00
-**Base:** 24 dias acompanhados · 87 observações
+**Preço:** R$ 3.899,00 · média R$ 4.157,86 · mínimo R$ 3.899,00
+**Base:** 24 dias acompanhados · 88 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/notebook-para-trabalho-configuracoes/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_704459-MLA99979883783_112025-T.webp
 
@@ -58,13 +58,13 @@ Notebook Asus Vivobook 15 X1504va Intel Core I5 1334u 8gb Ram 512gb… está no 
 
 **Roteiro**
 
-Notebook Asus Vivobook 15 X1504va Intel Core I5 1334u 8gb Ram 512gb… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 3.899,00. No Radar, a média foi R$ 4.160,84 e o menor valor observado foi R$ 3.899,00, em 24 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Notebook Asus Vivobook 15 X1504va Intel Core I5 1334u 8gb Ram 512gb… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 3.899,00. No Radar, a média foi R$ 4.157,86 e o menor valor observado foi R$ 3.899,00, em 24 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Notebook Asus Vivobook 15 X1504va Intel Core I5 1334u 8gb Ram 512gb…
 Hoje: R$ 3.899,00
-Média observada: R$ 4.160,84
+Média observada: R$ 4.157,86
 Menor observado: R$ 3.899,00
 Base: 24 dias acompanhados
 
@@ -75,15 +75,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook Asus Vivobook 15 X1504va Intel Core I5 1334u 8gb Ram 512gb…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_704459-MLA99979883783_112025-T.webp. Hook 0-3s: Notebook Asus Vivobook 15 X1504va Intel Core I5 1334u 8gb Ram 512gb… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 3.899,00, média R$ 4.160,84 e menor observado R$ 3.899,00. Narração: Notebook Asus Vivobook 15 X1504va Intel Core I5 1334u 8gb Ram 512gb… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 3.899,00. No Radar, a média foi R$ 4.160,84 e o menor valor observado foi R$ 3.899,00, em 24 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook Asus Vivobook 15 X1504va Intel Core I5 1334u 8gb Ram 512gb…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_704459-MLA99979883783_112025-T.webp. Hook 0-3s: Notebook Asus Vivobook 15 X1504va Intel Core I5 1334u 8gb Ram 512gb… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 3.899,00, média R$ 4.157,86 e menor observado R$ 3.899,00. Narração: Notebook Asus Vivobook 15 X1504va Intel Core I5 1334u 8gb Ram 512gb… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 3.899,00. No Radar, a média foi R$ 4.157,86 e o menor valor observado foi R$ 3.899,00, em 24 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
 ## Dia 2 · Vídeo 1 — Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0…
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 140,00 · média R$ 157,32 · mínimo R$ 140,00
-**Base:** 21 dias acompanhados · 417 observações
+**Preço:** R$ 140,00 · média R$ 157,27 · mínimo R$ 140,00
+**Base:** 21 dias acompanhados · 418 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/fone-bluetooth-ou-caixa-de-som-como-escolher/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_681719-MLA99467991212_112025-AB.webp
 
@@ -93,13 +93,13 @@ Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0… está no m
 
 **Roteiro**
 
-Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 140,00. No Radar, a média foi R$ 157,32 e o menor valor observado foi R$ 140,00, em 21 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 140,00. No Radar, a média foi R$ 157,27 e o menor valor observado foi R$ 140,00, em 21 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0…
 Hoje: R$ 140,00
-Média observada: R$ 157,32
+Média observada: R$ 157,27
 Menor observado: R$ 140,00
 Base: 21 dias acompanhados
 
@@ -110,15 +110,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_681719-MLA99467991212_112025-AB.webp. Hook 0-3s: Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 140,00, média R$ 157,32 e menor observado R$ 140,00. Narração: Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 140,00. No Radar, a média foi R$ 157,32 e o menor valor observado foi R$ 140,00, em 21 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_681719-MLA99467991212_112025-AB.webp. Hook 0-3s: Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 140,00, média R$ 157,27 e menor observado R$ 140,00. Narração: Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 140,00. No Radar, a média foi R$ 157,27 e o menor valor observado foi R$ 140,00, em 21 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
 ## Dia 2 · Vídeo 2 — Smart Tv Lg 43 Ld Wifi Bluetooth Full Hd 43lr6700psa Hdr10 Pro
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 1.529,00 · média R$ 1.714,67 · mínimo R$ 1.529,00
-**Base:** 12 dias acompanhados · 60 observações
+**Preço:** R$ 1.529,00 · média R$ 1.711,62 · mínimo R$ 1.529,00
+**Base:** 12 dias acompanhados · 61 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/lg-43lr6700psa-vale-a-pena/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_741946-MLA107875422514_032026-V.webp
 
@@ -128,13 +128,13 @@ Smart Tv Lg 43 Ld Wifi Bluetooth Full Hd 43lr6700psa Hdr10 Pro está no menor va
 
 **Roteiro**
 
-Smart Tv Lg 43 Ld Wifi Bluetooth Full Hd 43lr6700psa Hdr10 Pro está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 1.529,00. No Radar, a média foi R$ 1.714,67 e o menor valor observado foi R$ 1.529,00, em 12 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Smart Tv Lg 43 Ld Wifi Bluetooth Full Hd 43lr6700psa Hdr10 Pro está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 1.529,00. No Radar, a média foi R$ 1.711,62 e o menor valor observado foi R$ 1.529,00, em 12 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Smart Tv Lg 43 Ld Wifi Bluetooth Full Hd 43lr6700psa Hdr10 Pro
 Hoje: R$ 1.529,00
-Média observada: R$ 1.714,67
+Média observada: R$ 1.711,62
 Menor observado: R$ 1.529,00
 Base: 12 dias acompanhados
 
@@ -145,7 +145,7 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Smart Tv Lg 43 Ld Wifi Bluetooth Full Hd 43lr6700psa Hdr10 Pro. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_741946-MLA107875422514_032026-V.webp. Hook 0-3s: Smart Tv Lg 43 Ld Wifi Bluetooth Full Hd 43lr6700psa Hdr10 Pro está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 1.529,00, média R$ 1.714,67 e menor observado R$ 1.529,00. Narração: Smart Tv Lg 43 Ld Wifi Bluetooth Full Hd 43lr6700psa Hdr10 Pro está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 1.529,00. No Radar, a média foi R$ 1.714,67 e o menor valor observado foi R$ 1.529,00, em 12 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Smart Tv Lg 43 Ld Wifi Bluetooth Full Hd 43lr6700psa Hdr10 Pro. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_741946-MLA107875422514_032026-V.webp. Hook 0-3s: Smart Tv Lg 43 Ld Wifi Bluetooth Full Hd 43lr6700psa Hdr10 Pro está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 1.529,00, média R$ 1.711,62 e menor observado R$ 1.529,00. Narração: Smart Tv Lg 43 Ld Wifi Bluetooth Full Hd 43lr6700psa Hdr10 Pro está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 1.529,00. No Radar, a média foi R$ 1.711,62 e o menor valor observado foi R$ 1.529,00, em 12 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
@@ -153,7 +153,7 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 **Ângulo:** Menor preço observado: vale aproveitar?
 **Preço:** R$ 45,99 · média R$ 49,16 · mínimo R$ 45,99
-**Base:** 36 dias acompanhados · 601 observações
+**Base:** 36 dias acompanhados · 602 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/mouse-teclado-acessorios-setup/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_922391-MLB111917338465_052026-AB.webp
 
@@ -187,24 +187,24 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 ## Dia 3 · Vídeo 2 — Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H…
 
 **Ângulo:** Abaixo da média observada: vale agora?
-**Preço:** R$ 6.699,00 · média R$ 7.199,03 · mínimo R$ 6.230,00
-**Base:** 23 dias acompanhados · 432 observações
+**Preço:** R$ 6.699,00 · média R$ 7.197,88 · mínimo R$ 6.230,00
+**Base:** 23 dias acompanhados · 433 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/notebook-gamer-rtx-4060-linux-ou-windows/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_848979-MLA118254221509_092026-T.webp
 
 **Hook**
 
-Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H… está 7.0% abaixo da média observada. É um bom momento de compra?
+Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H… está 6.9% abaixo da média observada. É um bom momento de compra?
 
 **Roteiro**
 
-Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H… está 7.0% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 6.699,00. No Radar, a média foi R$ 7.199,03 e o menor valor observado foi R$ 6.230,00, em 23 dias acompanhados. O preço atual está 6,9% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H… está 6.9% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 6.699,00. No Radar, a média foi R$ 7.197,88 e o menor valor observado foi R$ 6.230,00, em 23 dias acompanhados. O preço atual está 6,9% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H…
 Hoje: R$ 6.699,00
-Média observada: R$ 7.199,03
+Média observada: R$ 7.197,88
 Menor observado: R$ 6.230,00
 Base: 23 dias acompanhados
 
@@ -215,15 +215,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_848979-MLA118254221509_092026-T.webp. Hook 0-3s: Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H… está 7.0% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 6.699,00, média R$ 7.199,03 e menor observado R$ 6.230,00. Narração: Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H… está 7.0% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 6.699,00. No Radar, a média foi R$ 7.199,03 e o menor valor observado foi R$ 6.230,00, em 23 dias acompanhados. O preço atual está 6,9% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_848979-MLA118254221509_092026-T.webp. Hook 0-3s: Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H… está 6.9% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 6.699,00, média R$ 7.197,88 e menor observado R$ 6.230,00. Narração: Notebook Gamer Acer Nitro V15 ANV15-52-52VN Intel® Core™ i5-13420H… está 6.9% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 6.699,00. No Radar, a média foi R$ 7.197,88 e o menor valor observado foi R$ 6.230,00, em 23 dias acompanhados. O preço atual está 6,9% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
 ## Dia 4 · Vídeo 1 — Apple iPhone 16 (128 GB)
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 4.557,00 · média R$ 4.680,82 · mínimo R$ 4.557,00
-**Base:** 33 dias acompanhados · 492 observações
+**Preço:** R$ 4.557,00 · média R$ 4.680,56 · mínimo R$ 4.557,00
+**Base:** 33 dias acompanhados · 493 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/iphone-15-ou-16-em-promocao/
 **Imagem:** https://http2.mlstatic.com/D_NQ_NP_687325-MLA96079610055_102025-O.webp
 
@@ -233,13 +233,13 @@ Apple iPhone 16 (128 GB) está no menor valor observado neste anúncio. Mas vale
 
 **Roteiro**
 
-Apple iPhone 16 (128 GB) está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 4.557,00. No Radar, a média foi R$ 4.680,82 e o menor valor observado foi R$ 4.557,00, em 33 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Apple iPhone 16 (128 GB) está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 4.557,00. No Radar, a média foi R$ 4.680,56 e o menor valor observado foi R$ 4.557,00, em 33 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Apple iPhone 16 (128 GB)
 Hoje: R$ 4.557,00
-Média observada: R$ 4.680,82
+Média observada: R$ 4.680,56
 Menor observado: R$ 4.557,00
 Base: 33 dias acompanhados
 
@@ -250,15 +250,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Apple iPhone 16 (128 GB). Imagem: https://http2.mlstatic.com/D_NQ_NP_687325-MLA96079610055_102025-O.webp. Hook 0-3s: Apple iPhone 16 (128 GB) está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 4.557,00, média R$ 4.680,82 e menor observado R$ 4.557,00. Narração: Apple iPhone 16 (128 GB) está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 4.557,00. No Radar, a média foi R$ 4.680,82 e o menor valor observado foi R$ 4.557,00, em 33 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Apple iPhone 16 (128 GB). Imagem: https://http2.mlstatic.com/D_NQ_NP_687325-MLA96079610055_102025-O.webp. Hook 0-3s: Apple iPhone 16 (128 GB) está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 4.557,00, média R$ 4.680,56 e menor observado R$ 4.557,00. Narração: Apple iPhone 16 (128 GB) está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 4.557,00. No Radar, a média foi R$ 4.680,56 e o menor valor observado foi R$ 4.557,00, em 33 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
 ## Dia 4 · Vídeo 2 — Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung…
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 48,54 · média R$ 50,21 · mínimo R$ 48,54
-**Base:** 36 dias acompanhados · 600 observações
+**Preço:** R$ 48,54 · média R$ 50,20 · mínimo R$ 48,54
+**Base:** 36 dias acompanhados · 601 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/acessorios-ps4-ps5-switch-como-escolher/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_762912-MLA105696431793_012026-AB.webp
 
@@ -268,13 +268,13 @@ Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung… está no me
 
 **Roteiro**
 
-Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 48,54. No Radar, a média foi R$ 50,21 e o menor valor observado foi R$ 48,54, em 36 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 48,54. No Radar, a média foi R$ 50,20 e o menor valor observado foi R$ 48,54, em 36 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung…
 Hoje: R$ 48,54
-Média observada: R$ 50,21
+Média observada: R$ 50,20
 Menor observado: R$ 48,54
 Base: 36 dias acompanhados
 
@@ -285,15 +285,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_762912-MLA105696431793_012026-AB.webp. Hook 0-3s: Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 48,54, média R$ 50,21 e menor observado R$ 48,54. Narração: Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 48,54. No Radar, a média foi R$ 50,21 e o menor valor observado foi R$ 48,54, em 36 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_762912-MLA105696431793_012026-AB.webp. Hook 0-3s: Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 48,54, média R$ 50,20 e menor observado R$ 48,54. Narração: Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 48,54. No Radar, a média foi R$ 50,20 e o menor valor observado foi R$ 48,54, em 36 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
 ## Dia 5 · Vídeo 1 — Fone Qcy T13 Anc 2 Bluetooth 5.3 Conexão Multiponto Cor Azul
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 189,97 · média R$ 197,95 · mínimo R$ 189,97
-**Base:** 15 dias acompanhados · 269 observações
+**Preço:** R$ 189,97 · média R$ 197,92 · mínimo R$ 189,97
+**Base:** 15 dias acompanhados · 270 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/qcy-t13-anc-2-vale-a-pena-2026/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_760534-MLA99450285980_112025-V.webp
 
@@ -303,13 +303,13 @@ Fone Qcy T13 Anc 2 Bluetooth 5.3 Conexão Multiponto Cor Azul está no menor val
 
 **Roteiro**
 
-Fone Qcy T13 Anc 2 Bluetooth 5.3 Conexão Multiponto Cor Azul está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 189,97. No Radar, a média foi R$ 197,95 e o menor valor observado foi R$ 189,97, em 15 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Fone Qcy T13 Anc 2 Bluetooth 5.3 Conexão Multiponto Cor Azul está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 189,97. No Radar, a média foi R$ 197,92 e o menor valor observado foi R$ 189,97, em 15 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Fone Qcy T13 Anc 2 Bluetooth 5.3 Conexão Multiponto Cor Azul
 Hoje: R$ 189,97
-Média observada: R$ 197,95
+Média observada: R$ 197,92
 Menor observado: R$ 189,97
 Base: 15 dias acompanhados
 
@@ -320,42 +320,42 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Fone Qcy T13 Anc 2 Bluetooth 5.3 Conexão Multiponto Cor Azul. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_760534-MLA99450285980_112025-V.webp. Hook 0-3s: Fone Qcy T13 Anc 2 Bluetooth 5.3 Conexão Multiponto Cor Azul está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 189,97, média R$ 197,95 e menor observado R$ 189,97. Narração: Fone Qcy T13 Anc 2 Bluetooth 5.3 Conexão Multiponto Cor Azul está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 189,97. No Radar, a média foi R$ 197,95 e o menor valor observado foi R$ 189,97, em 15 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Fone Qcy T13 Anc 2 Bluetooth 5.3 Conexão Multiponto Cor Azul. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_760534-MLA99450285980_112025-V.webp. Hook 0-3s: Fone Qcy T13 Anc 2 Bluetooth 5.3 Conexão Multiponto Cor Azul está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 189,97, média R$ 197,92 e menor observado R$ 189,97. Narração: Fone Qcy T13 Anc 2 Bluetooth 5.3 Conexão Multiponto Cor Azul está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 189,97. No Radar, a média foi R$ 197,92 e o menor valor observado foi R$ 189,97, em 15 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
 ## Dia 5 · Vídeo 2 — Celular Samsung Galaxy S25 Fe 5g, 128gb, 8gb Ram, Câmera Tripla De…
 
 **Ângulo:** Abaixo da média observada: vale agora?
-**Preço:** R$ 2.841,00 · média R$ 2.900,75 · mínimo R$ 2.789,00
-**Base:** 21 dias acompanhados · 180 observações
+**Preço:** R$ 2.841,00 · média R$ 2.900,42 · mínimo R$ 2.789,00
+**Base:** 21 dias acompanhados · 181 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/qual-celular-comprar-2026/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_993303-MLA96666133268_112025-AB.webp
 
 **Hook**
 
-Celular Samsung Galaxy S25 Fe 5g, 128gb, 8gb Ram, Câmera Tripla De… está 2.1% abaixo da média observada. É um bom momento de compra?
+Celular Samsung Galaxy S25 Fe 5g, 128gb, 8gb Ram, Câmera Tripla De… está 2.0% abaixo da média observada. É um bom momento de compra?
 
 **Roteiro**
 
-Celular Samsung Galaxy S25 Fe 5g, 128gb, 8gb Ram, Câmera Tripla De… está 2.1% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 2.841,00. No Radar, a média foi R$ 2.900,75 e o menor valor observado foi R$ 2.789,00, em 21 dias acompanhados. O preço atual está 2,1% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Celular Samsung Galaxy S25 Fe 5g, 128gb, 8gb Ram, Câmera Tripla De… está 2.0% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 2.841,00. No Radar, a média foi R$ 2.900,42 e o menor valor observado foi R$ 2.789,00, em 21 dias acompanhados. O preço atual está 2,0% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Celular Samsung Galaxy S25 Fe 5g, 128gb, 8gb Ram, Câmera Tripla De…
 Hoje: R$ 2.841,00
-Média observada: R$ 2.900,75
+Média observada: R$ 2.900,42
 Menor observado: R$ 2.789,00
 Base: 21 dias acompanhados
 
-O preço atual está 2,1% abaixo da média observada.
+O preço atual está 2,0% abaixo da média observada.
 
 Veja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/qual-celular-comprar-2026/
 Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Celular Samsung Galaxy S25 Fe 5g, 128gb, 8gb Ram, Câmera Tripla De…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_993303-MLA96666133268_112025-AB.webp. Hook 0-3s: Celular Samsung Galaxy S25 Fe 5g, 128gb, 8gb Ram, Câmera Tripla De… está 2.1% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 2.841,00, média R$ 2.900,75 e menor observado R$ 2.789,00. Narração: Celular Samsung Galaxy S25 Fe 5g, 128gb, 8gb Ram, Câmera Tripla De… está 2.1% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 2.841,00. No Radar, a média foi R$ 2.900,75 e o menor valor observado foi R$ 2.789,00, em 21 dias acompanhados. O preço atual está 2,1% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Celular Samsung Galaxy S25 Fe 5g, 128gb, 8gb Ram, Câmera Tripla De…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_993303-MLA96666133268_112025-AB.webp. Hook 0-3s: Celular Samsung Galaxy S25 Fe 5g, 128gb, 8gb Ram, Câmera Tripla De… está 2.0% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 2.841,00, média R$ 2.900,42 e menor observado R$ 2.789,00. Narração: Celular Samsung Galaxy S25 Fe 5g, 128gb, 8gb Ram, Câmera Tripla De… está 2.0% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 2.841,00. No Radar, a média foi R$ 2.900,42 e o menor valor observado foi R$ 2.789,00, em 21 dias acompanhados. O preço atual está 2,0% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
@@ -363,7 +363,7 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 **Ângulo:** Menor preço observado: vale aproveitar?
 **Preço:** R$ 5.798,00 · média R$ 5.799,60 · mínimo R$ 5.798,00
-**Base:** 21 dias acompanhados · 403 observações
+**Base:** 21 dias acompanhados · 404 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/qual-celular-comprar-2026/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_939755-MLA109096677198_042026-AB.webp
 
@@ -398,7 +398,7 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 **Ângulo:** Abaixo da média observada: vale agora?
 **Preço:** R$ 19,00 · média R$ 19,81 · mínimo R$ 18,81
-**Base:** 36 dias acompanhados · 601 observações
+**Base:** 36 dias acompanhados · 602 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/acessorios-ps4-ps5-switch-como-escolher/
 **Imagem:** https://http2.mlstatic.com/D_NQ_NP_641341-MLB109378980820_042026-O-kit-4-botao-capa-analogico-protetora-compativel-controle-ps5.webp
 
@@ -429,46 +429,11 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 ---
 
-## Dia 7 · Vídeo 1 — Smart Tv LG 43 Ld Wifi Bluetooth Full Hd 43lr6700psa Hdr10 Pro
-
-**Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 1.563,00 · média R$ 1.670,60 · mínimo R$ 1.563,00
-**Base:** 12 dias acompanhados · 20 observações
-**Destino:** https://miradesconto.github.io/miradesconto/?produto=MLB5013835942#ofertas
-**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_741946-MLA107875422514_032026-AB.webp
-
-**Hook**
-
-Smart Tv LG 43 Ld Wifi Bluetooth Full Hd 43lr6700psa Hdr10 Pro está no menor valor observado neste anúncio. Mas vale comprar agora?
-
-**Roteiro**
-
-Smart Tv LG 43 Ld Wifi Bluetooth Full Hd 43lr6700psa Hdr10 Pro está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 1.563,00. No Radar, a média foi R$ 1.670,60 e o menor valor observado foi R$ 1.563,00, em 12 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar.
-
-**Legenda**
-
-PREÇO NA MIRA — Smart Tv LG 43 Ld Wifi Bluetooth Full Hd 43lr6700psa Hdr10 Pro
-Hoje: R$ 1.563,00
-Média observada: R$ 1.670,60
-Menor observado: R$ 1.563,00
-Base: 12 dias acompanhados
-
-O preço atual está no menor valor observado neste anúncio durante o período acompanhado.
-
-Veja no Radar MiraDesconto: https://miradesconto.github.io/miradesconto/?produto=MLB5013835942#ofertas
-Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
-
-**Prompt Pippit**
-
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Smart Tv LG 43 Ld Wifi Bluetooth Full Hd 43lr6700psa Hdr10 Pro. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_741946-MLA107875422514_032026-AB.webp. Hook 0-3s: Smart Tv LG 43 Ld Wifi Bluetooth Full Hd 43lr6700psa Hdr10 Pro está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 1.563,00, média R$ 1.670,60 e menor observado R$ 1.563,00. Narração: Smart Tv LG 43 Ld Wifi Bluetooth Full Hd 43lr6700psa Hdr10 Pro está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 1.563,00. No Radar, a média foi R$ 1.670,60 e o menor valor observado foi R$ 1.563,00, em 12 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar. CTA: Veja no Radar MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
-
----
-
-## Dia 7 · Vídeo 2 — Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco…
+## Dia 7 · Vídeo 1 — Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco…
 
 **Ângulo:** Abaixo da média observada: vale agora?
 **Preço:** R$ 46,00 · média R$ 47,05 · mínimo R$ 45,54
-**Base:** 36 dias acompanhados · 595 observações
+**Base:** 36 dias acompanhados · 596 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/kit-para-gravar-videos-com-celular/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_691904-MLA111125430926_052026-AB.webp
 
@@ -496,5 +461,40 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 **Prompt Pippit**
 
 Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_691904-MLA111125430926_052026-AB.webp. Hook 0-3s: Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco… está 2.2% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 46,00, média R$ 47,05 e menor observado R$ 45,54. Narração: Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco… está 2.2% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 46,00. No Radar, a média foi R$ 47,05 e o menor valor observado foi R$ 45,54, em 36 dias acompanhados. O preço atual está 2,2% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+
+---
+
+## Dia 7 · Vídeo 2 — Caneta 3d Impressora Profissional + Refil Filamento + Usb
+
+**Ângulo:** Preço na Mira: vale comprar agora?
+**Preço:** R$ 69,90 · média R$ 70,64 · mínimo R$ 56,90
+**Base:** 36 dias acompanhados · 289 observações
+**Destino:** https://miradesconto.github.io/miradesconto/blog/impressora-termica-caneta-3d-ou-filamento/
+**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_816284-MLB111134362535_052026-AB-caneta-3d-impressora-profissional-refil-filamento-usb.webp
+
+**Hook**
+
+Antes de comprar Caneta 3d Impressora Profissional + Refil Filamento + Usb, olha o que o histórico mostra.
+
+**Roteiro**
+
+Antes de comprar Caneta 3d Impressora Profissional + Refil Filamento + Usb, olha o que o histórico mostra. Hoje ele aparece por R$ 69,90. No Radar, a média foi R$ 70,64 e o menor valor observado foi R$ 56,90, em 36 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar.
+
+**Legenda**
+
+PREÇO NA MIRA — Caneta 3d Impressora Profissional + Refil Filamento + Usb
+Hoje: R$ 69,90
+Média observada: R$ 70,64
+Menor observado: R$ 56,90
+Base: 36 dias acompanhados
+
+O preço atual está próximo da média observada.
+
+Veja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/impressora-termica-caneta-3d-ou-filamento/
+Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
+
+**Prompt Pippit**
+
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Caneta 3d Impressora Profissional + Refil Filamento + Usb. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_816284-MLB111134362535_052026-AB-caneta-3d-impressora-profissional-refil-filamento-usb.webp. Hook 0-3s: Antes de comprar Caneta 3d Impressora Profissional + Refil Filamento + Usb, olha o que o histórico mostra. Mostre preço atual R$ 69,90, média R$ 70,64 e menor observado R$ 56,90. Narração: Antes de comprar Caneta 3d Impressora Profissional + Refil Filamento + Usb, olha o que o histórico mostra. Hoje ele aparece por R$ 69,90. No Radar, a média foi R$ 70,64 e o menor valor observado foi R$ 56,90, em 36 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
