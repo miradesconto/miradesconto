@@ -1,6 +1,6 @@
 # Fila de conteúdo — MiraDesconto → Pippit
 
-**Radar:** 2026-11-02T00:40:11+00:00
+**Radar:** 2026-11-02T02:28:08+00:00
 **Fila:** 14 vídeos · 2 por dia · 7 dias
 
 Prioridade: Radar real, histórico observado, variedade de categorias e artigo de destino. Não usa referência da loja como histórico.
@@ -12,8 +12,8 @@ Revise a fila de vídeos do MiraDesconto. Aponte apenas afirmações sem evidên
 ## Dia 1 · Vídeo 1 — Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB…
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 3.989,00 · média R$ 4.576,09 · mínimo R$ 3.989,00
-**Base:** 29 dias acompanhados · 487 observações
+**Preço:** R$ 3.989,00 · média R$ 4.574,89 · mínimo R$ 3.989,00
+**Base:** 29 dias acompanhados · 488 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/notebook-em-promocao-como-escolher/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_872069-MLA96255973058_102025-T.webp
 
@@ -23,13 +23,13 @@ Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB… está no me
 
 **Roteiro**
 
-Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 3.989,00. No Radar, a média foi R$ 4.576,09 e o menor valor observado foi R$ 3.989,00, em 29 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 3.989,00. No Radar, a média foi R$ 4.574,89 e o menor valor observado foi R$ 3.989,00, em 29 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB…
 Hoje: R$ 3.989,00
-Média observada: R$ 4.576,09
+Média observada: R$ 4.574,89
 Menor observado: R$ 3.989,00
 Base: 29 dias acompanhados
 
@@ -40,7 +40,7 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_872069-MLA96255973058_102025-T.webp. Hook 0-3s: Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 3.989,00, média R$ 4.576,09 e menor observado R$ 3.989,00. Narração: Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 3.989,00. No Radar, a média foi R$ 4.576,09 e o menor valor observado foi R$ 3.989,00, em 29 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_872069-MLA96255973058_102025-T.webp. Hook 0-3s: Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 3.989,00, média R$ 4.574,89 e menor observado R$ 3.989,00. Narração: Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 3.989,00. No Radar, a média foi R$ 4.574,89 e o menor valor observado foi R$ 3.989,00, em 29 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
@@ -48,7 +48,7 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 **Ângulo:** Menor preço observado: vale aproveitar?
 **Preço:** R$ 29,22 · média R$ 33,45 · mínimo R$ 29,22
-**Base:** 42 dias acompanhados · 650 observações
+**Base:** 43 dias acompanhados · 651 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/smart-tag-android-rastreador-vale-a-pena/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_688002-MLA115581994404_092026-AB.webp
 
@@ -58,7 +58,7 @@ Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor… está no m
 
 **Roteiro**
 
-Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 29,22. No Radar, a média foi R$ 33,45 e o menor valor observado foi R$ 29,22, em 42 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 29,22. No Radar, a média foi R$ 33,45 e o menor valor observado foi R$ 29,22, em 43 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
@@ -66,7 +66,7 @@ PREÇO NA MIRA — Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveir
 Hoje: R$ 29,22
 Média observada: R$ 33,45
 Menor observado: R$ 29,22
-Base: 42 dias acompanhados
+Base: 43 dias acompanhados
 
 O preço atual está no menor valor observado neste anúncio durante o período acompanhado.
 
@@ -75,7 +75,7 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_688002-MLA115581994404_092026-AB.webp. Hook 0-3s: Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 29,22, média R$ 33,45 e menor observado R$ 29,22. Narração: Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 29,22. No Radar, a média foi R$ 33,45 e o menor valor observado foi R$ 29,22, em 42 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_688002-MLA115581994404_092026-AB.webp. Hook 0-3s: Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 29,22, média R$ 33,45 e menor observado R$ 29,22. Narração: Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 29,22. No Radar, a média foi R$ 33,45 e o menor valor observado foi R$ 29,22, em 43 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
@@ -117,8 +117,8 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 ## Dia 2 · Vídeo 2 — Notebook ASUS Vivobook Go 15 E1504 AMD RYZEN 5 7520U 8GB Ram 256GB…
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 2.799,00 · média R$ 2.984,71 · mínimo R$ 2.799,00
-**Base:** 27 dias acompanhados · 21 observações
+**Preço:** R$ 2.799,00 · média R$ 2.976,27 · mínimo R$ 2.799,00
+**Base:** 27 dias acompanhados · 22 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/notebook-para-trabalho-configuracoes/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_830301-MLA99949667885_112025-T.webp
 
@@ -128,13 +128,13 @@ Notebook ASUS Vivobook Go 15 E1504 AMD RYZEN 5 7520U 8GB Ram 256GB… está no m
 
 **Roteiro**
 
-Notebook ASUS Vivobook Go 15 E1504 AMD RYZEN 5 7520U 8GB Ram 256GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 2.799,00. No Radar, a média foi R$ 2.984,71 e o menor valor observado foi R$ 2.799,00, em 27 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Notebook ASUS Vivobook Go 15 E1504 AMD RYZEN 5 7520U 8GB Ram 256GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 2.799,00. No Radar, a média foi R$ 2.976,27 e o menor valor observado foi R$ 2.799,00, em 27 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Notebook ASUS Vivobook Go 15 E1504 AMD RYZEN 5 7520U 8GB Ram 256GB…
 Hoje: R$ 2.799,00
-Média observada: R$ 2.984,71
+Média observada: R$ 2.976,27
 Menor observado: R$ 2.799,00
 Base: 27 dias acompanhados
 
@@ -145,7 +145,7 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook ASUS Vivobook Go 15 E1504 AMD RYZEN 5 7520U 8GB Ram 256GB…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_830301-MLA99949667885_112025-T.webp. Hook 0-3s: Notebook ASUS Vivobook Go 15 E1504 AMD RYZEN 5 7520U 8GB Ram 256GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 2.799,00, média R$ 2.984,71 e menor observado R$ 2.799,00. Narração: Notebook ASUS Vivobook Go 15 E1504 AMD RYZEN 5 7520U 8GB Ram 256GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 2.799,00. No Radar, a média foi R$ 2.984,71 e o menor valor observado foi R$ 2.799,00, em 27 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook ASUS Vivobook Go 15 E1504 AMD RYZEN 5 7520U 8GB Ram 256GB…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_830301-MLA99949667885_112025-T.webp. Hook 0-3s: Notebook ASUS Vivobook Go 15 E1504 AMD RYZEN 5 7520U 8GB Ram 256GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 2.799,00, média R$ 2.976,27 e menor observado R$ 2.799,00. Narração: Notebook ASUS Vivobook Go 15 E1504 AMD RYZEN 5 7520U 8GB Ram 256GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 2.799,00. No Radar, a média foi R$ 2.976,27 e o menor valor observado foi R$ 2.799,00, em 27 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
@@ -153,7 +153,7 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 **Ângulo:** Menor preço observado: vale aproveitar?
 **Preço:** R$ 45,99 · média R$ 48,91 · mínimo R$ 45,99
-**Base:** 42 dias acompanhados · 652 observações
+**Base:** 43 dias acompanhados · 653 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/mouse-teclado-acessorios-setup/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_922391-MLB111917338465_052026-AB.webp
 
@@ -163,7 +163,7 @@ Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v está no
 
 **Roteiro**
 
-Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 45,99. No Radar, a média foi R$ 48,91 e o menor valor observado foi R$ 45,99, em 42 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 45,99. No Radar, a média foi R$ 48,91 e o menor valor observado foi R$ 45,99, em 43 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
@@ -171,7 +171,7 @@ PREÇO NA MIRA — Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Pret
 Hoje: R$ 45,99
 Média observada: R$ 48,91
 Menor observado: R$ 45,99
-Base: 42 dias acompanhados
+Base: 43 dias acompanhados
 
 O preço atual está no menor valor observado neste anúncio durante o período acompanhado.
 
@@ -180,15 +180,50 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_922391-MLB111917338465_052026-AB.webp. Hook 0-3s: Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 45,99, média R$ 48,91 e menor observado R$ 45,99. Narração: Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 45,99. No Radar, a média foi R$ 48,91 e o menor valor observado foi R$ 45,99, em 42 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_922391-MLB111917338465_052026-AB.webp. Hook 0-3s: Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 45,99, média R$ 48,91 e menor observado R$ 45,99. Narração: Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 45,99. No Radar, a média foi R$ 48,91 e o menor valor observado foi R$ 45,99, em 43 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
-## Dia 3 · Vídeo 2 — Drone E88 Pro 4k Com Câmera Para Iniciante, + Baterias Drone Preto
+## Dia 3 · Vídeo 2 — Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung…
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 134,48 · média R$ 172,17 · mínimo R$ 134,48
-**Base:** 26 dias acompanhados · 100 observações
+**Preço:** R$ 47,84 · média R$ 50,07 · mínimo R$ 47,84
+**Base:** 43 dias acompanhados · 649 observações
+**Destino:** https://miradesconto.github.io/miradesconto/blog/acessorios-ps4-ps5-switch-como-escolher/
+**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_762912-MLA105696431793_012026-AB.webp
+
+**Hook**
+
+Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung… está no menor valor observado neste anúncio. Mas vale comprar agora?
+
+**Roteiro**
+
+Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 47,84. No Radar, a média foi R$ 50,07 e o menor valor observado foi R$ 47,84, em 43 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+
+**Legenda**
+
+PREÇO NA MIRA — Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung…
+Hoje: R$ 47,84
+Média observada: R$ 50,07
+Menor observado: R$ 47,84
+Base: 43 dias acompanhados
+
+O preço atual está no menor valor observado neste anúncio durante o período acompanhado.
+
+Veja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/acessorios-ps4-ps5-switch-como-escolher/
+Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
+
+**Prompt Pippit**
+
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_762912-MLA105696431793_012026-AB.webp. Hook 0-3s: Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 47,84, média R$ 50,07 e menor observado R$ 47,84. Narração: Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 47,84. No Radar, a média foi R$ 50,07 e o menor valor observado foi R$ 47,84, em 43 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+
+---
+
+## Dia 4 · Vídeo 1 — Drone E88 Pro 4k Com Câmera Para Iniciante, + Baterias Drone Preto
+
+**Ângulo:** Menor preço observado: vale aproveitar?
+**Preço:** R$ 134,48 · média R$ 171,80 · mínimo R$ 134,48
+**Base:** 26 dias acompanhados · 101 observações
 **Destino:** https://miradesconto.github.io/miradesconto/?produto=MLB5179923093#ofertas
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_702285-MLA80802875108_112024-AB.webp
 
@@ -198,13 +233,13 @@ Drone E88 Pro 4k Com Câmera Para Iniciante, + Baterias Drone Preto está no men
 
 **Roteiro**
 
-Drone E88 Pro 4k Com Câmera Para Iniciante, + Baterias Drone Preto está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 134,48. No Radar, a média foi R$ 172,17 e o menor valor observado foi R$ 134,48, em 26 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar.
+Drone E88 Pro 4k Com Câmera Para Iniciante, + Baterias Drone Preto está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 134,48. No Radar, a média foi R$ 171,80 e o menor valor observado foi R$ 134,48, em 26 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Drone E88 Pro 4k Com Câmera Para Iniciante, + Baterias Drone Preto
 Hoje: R$ 134,48
-Média observada: R$ 172,17
+Média observada: R$ 171,80
 Menor observado: R$ 134,48
 Base: 26 dias acompanhados
 
@@ -215,50 +250,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Drone E88 Pro 4k Com Câmera Para Iniciante, + Baterias Drone Preto. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_702285-MLA80802875108_112024-AB.webp. Hook 0-3s: Drone E88 Pro 4k Com Câmera Para Iniciante, + Baterias Drone Preto está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 134,48, média R$ 172,17 e menor observado R$ 134,48. Narração: Drone E88 Pro 4k Com Câmera Para Iniciante, + Baterias Drone Preto está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 134,48. No Radar, a média foi R$ 172,17 e o menor valor observado foi R$ 134,48, em 26 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar. CTA: Veja no Radar MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
-
----
-
-## Dia 4 · Vídeo 1 — Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung…
-
-**Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 47,84 · média R$ 50,08 · mínimo R$ 47,84
-**Base:** 42 dias acompanhados · 648 observações
-**Destino:** https://miradesconto.github.io/miradesconto/blog/acessorios-ps4-ps5-switch-como-escolher/
-**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_762912-MLA105696431793_012026-AB.webp
-
-**Hook**
-
-Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung… está no menor valor observado neste anúncio. Mas vale comprar agora?
-
-**Roteiro**
-
-Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 47,84. No Radar, a média foi R$ 50,08 e o menor valor observado foi R$ 47,84, em 42 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
-
-**Legenda**
-
-PREÇO NA MIRA — Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung…
-Hoje: R$ 47,84
-Média observada: R$ 50,08
-Menor observado: R$ 47,84
-Base: 42 dias acompanhados
-
-O preço atual está no menor valor observado neste anúncio durante o período acompanhado.
-
-Veja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/acessorios-ps4-ps5-switch-como-escolher/
-Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
-
-**Prompt Pippit**
-
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_762912-MLA105696431793_012026-AB.webp. Hook 0-3s: Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 47,84, média R$ 50,08 e menor observado R$ 47,84. Narração: Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 47,84. No Radar, a média foi R$ 50,08 e o menor valor observado foi R$ 47,84, em 42 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Drone E88 Pro 4k Com Câmera Para Iniciante, + Baterias Drone Preto. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_702285-MLA80802875108_112024-AB.webp. Hook 0-3s: Drone E88 Pro 4k Com Câmera Para Iniciante, + Baterias Drone Preto está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 134,48, média R$ 171,80 e menor observado R$ 134,48. Narração: Drone E88 Pro 4k Com Câmera Para Iniciante, + Baterias Drone Preto está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 134,48. No Radar, a média foi R$ 171,80 e o menor valor observado foi R$ 134,48, em 26 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja no Radar MiraDesconto antes de comprar. CTA: Veja no Radar MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
 ## Dia 4 · Vídeo 2 — Apple iPhone 16 (128 GB)
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 4.557,00 · média R$ 4.669,19 · mínimo R$ 4.557,00
-**Base:** 39 dias acompanhados · 543 observações
+**Preço:** R$ 4.557,00 · média R$ 4.668,98 · mínimo R$ 4.557,00
+**Base:** 39 dias acompanhados · 544 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/iphone-15-ou-16-em-promocao/
 **Imagem:** https://http2.mlstatic.com/D_NQ_NP_687325-MLA96079610055_102025-O.webp
 
@@ -268,13 +268,13 @@ Apple iPhone 16 (128 GB) está no menor valor observado neste anúncio. Mas vale
 
 **Roteiro**
 
-Apple iPhone 16 (128 GB) está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 4.557,00. No Radar, a média foi R$ 4.669,19 e o menor valor observado foi R$ 4.557,00, em 39 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Apple iPhone 16 (128 GB) está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 4.557,00. No Radar, a média foi R$ 4.668,98 e o menor valor observado foi R$ 4.557,00, em 39 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Apple iPhone 16 (128 GB)
 Hoje: R$ 4.557,00
-Média observada: R$ 4.669,19
+Média observada: R$ 4.668,98
 Menor observado: R$ 4.557,00
 Base: 39 dias acompanhados
 
@@ -285,7 +285,7 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Apple iPhone 16 (128 GB). Imagem: https://http2.mlstatic.com/D_NQ_NP_687325-MLA96079610055_102025-O.webp. Hook 0-3s: Apple iPhone 16 (128 GB) está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 4.557,00, média R$ 4.669,19 e menor observado R$ 4.557,00. Narração: Apple iPhone 16 (128 GB) está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 4.557,00. No Radar, a média foi R$ 4.669,19 e o menor valor observado foi R$ 4.557,00, em 39 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Apple iPhone 16 (128 GB). Imagem: https://http2.mlstatic.com/D_NQ_NP_687325-MLA96079610055_102025-O.webp. Hook 0-3s: Apple iPhone 16 (128 GB) está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 4.557,00, média R$ 4.668,98 e menor observado R$ 4.557,00. Narração: Apple iPhone 16 (128 GB) está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 4.557,00. No Radar, a média foi R$ 4.668,98 e o menor valor observado foi R$ 4.557,00, em 39 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
@@ -293,7 +293,7 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 **Ângulo:** Abaixo da média observada: vale agora?
 **Preço:** R$ 32,88 · média R$ 33,65 · mínimo R$ 28,40
-**Base:** 42 dias acompanhados · 650 observações
+**Base:** 43 dias acompanhados · 651 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/mouse-teclado-acessorios-setup/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_751055-MLA112428593866_062026-AB.webp
 
@@ -303,7 +303,7 @@ Kit Chave Precisão Profissional 115 Peças Magnético Manutenção… está 2.3
 
 **Roteiro**
 
-Kit Chave Precisão Profissional 115 Peças Magnético Manutenção… está 2.3% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 32,88. No Radar, a média foi R$ 33,65 e o menor valor observado foi R$ 28,40, em 42 dias acompanhados. O preço atual está 2,3% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Kit Chave Precisão Profissional 115 Peças Magnético Manutenção… está 2.3% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 32,88. No Radar, a média foi R$ 33,65 e o menor valor observado foi R$ 28,40, em 43 dias acompanhados. O preço atual está 2,3% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
@@ -311,7 +311,7 @@ PREÇO NA MIRA — Kit Chave Precisão Profissional 115 Peças Magnético Manute
 Hoje: R$ 32,88
 Média observada: R$ 33,65
 Menor observado: R$ 28,40
-Base: 42 dias acompanhados
+Base: 43 dias acompanhados
 
 O preço atual está 2,3% abaixo da média observada.
 
@@ -320,7 +320,7 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Kit Chave Precisão Profissional 115 Peças Magnético Manutenção…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_751055-MLA112428593866_062026-AB.webp. Hook 0-3s: Kit Chave Precisão Profissional 115 Peças Magnético Manutenção… está 2.3% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 32,88, média R$ 33,65 e menor observado R$ 28,40. Narração: Kit Chave Precisão Profissional 115 Peças Magnético Manutenção… está 2.3% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 32,88. No Radar, a média foi R$ 33,65 e o menor valor observado foi R$ 28,40, em 42 dias acompanhados. O preço atual está 2,3% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Kit Chave Precisão Profissional 115 Peças Magnético Manutenção…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_751055-MLA112428593866_062026-AB.webp. Hook 0-3s: Kit Chave Precisão Profissional 115 Peças Magnético Manutenção… está 2.3% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 32,88, média R$ 33,65 e menor observado R$ 28,40. Narração: Kit Chave Precisão Profissional 115 Peças Magnético Manutenção… está 2.3% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 32,88. No Radar, a média foi R$ 33,65 e o menor valor observado foi R$ 28,40, em 43 dias acompanhados. O preço atual está 2,3% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
@@ -328,7 +328,7 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 **Ângulo:** Abaixo da média observada: vale agora?
 **Preço:** R$ 55,27 · média R$ 57,69 · mínimo R$ 55,00
-**Base:** 42 dias acompanhados · 650 observações
+**Base:** 42 dias acompanhados · 651 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/fone-bluetooth-ou-caixa-de-som-como-escolher/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_760715-MLB109157249938_042026-AB-fone-de-ouvido-bluetooth-53-par-sem-fio-duplo-todos-celular.webp
 
@@ -362,8 +362,8 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 ## Dia 6 · Vídeo 1 — Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0…
 
 **Ângulo:** Abaixo da média observada: vale agora?
-**Preço:** R$ 149,24 · média R$ 156,43 · mínimo R$ 140,00
-**Base:** 27 dias acompanhados · 461 observações
+**Preço:** R$ 149,24 · média R$ 156,41 · mínimo R$ 140,00
+**Base:** 27 dias acompanhados · 462 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/fone-bluetooth-ou-caixa-de-som-como-escolher/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_681719-MLA99467991212_112025-AB.webp
 
@@ -373,13 +373,13 @@ Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0… está 4.6%
 
 **Roteiro**
 
-Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0… está 4.6% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 149,24. No Radar, a média foi R$ 156,43 e o menor valor observado foi R$ 140,00, em 27 dias acompanhados. O preço atual está 4,6% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0… está 4.6% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 149,24. No Radar, a média foi R$ 156,41 e o menor valor observado foi R$ 140,00, em 27 dias acompanhados. O preço atual está 4,6% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0…
 Hoje: R$ 149,24
-Média observada: R$ 156,43
+Média observada: R$ 156,41
 Menor observado: R$ 140,00
 Base: 27 dias acompanhados
 
@@ -390,15 +390,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_681719-MLA99467991212_112025-AB.webp. Hook 0-3s: Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0… está 4.6% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 149,24, média R$ 156,43 e menor observado R$ 140,00. Narração: Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0… está 4.6% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 149,24. No Radar, a média foi R$ 156,43 e o menor valor observado foi R$ 140,00, em 27 dias acompanhados. O preço atual está 4,6% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_681719-MLA99467991212_112025-AB.webp. Hook 0-3s: Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0… está 4.6% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 149,24, média R$ 156,41 e menor observado R$ 140,00. Narração: Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0… está 4.6% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 149,24. No Radar, a média foi R$ 156,41 e o menor valor observado foi R$ 140,00, em 27 dias acompanhados. O preço atual está 4,6% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
 ## Dia 6 · Vídeo 2 — Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão…
 
 **Ângulo:** Abaixo da média observada: vale agora?
-**Preço:** R$ 112,49 · média R$ 115,05 · mínimo R$ 106,00
-**Base:** 42 dias acompanhados · 647 observações
+**Preço:** R$ 112,49 · média R$ 115,04 · mínimo R$ 106,00
+**Base:** 43 dias acompanhados · 648 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/camera-wifi-a28b-dupla-lente-vale-a-pena/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_798945-MLA112454329586_062026-AB.webp
 
@@ -408,15 +408,15 @@ Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 2.2
 
 **Roteiro**
 
-Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 2.2% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 112,49. No Radar, a média foi R$ 115,05 e o menor valor observado foi R$ 106,00, em 42 dias acompanhados. O preço atual está 2,2% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 2.2% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 112,49. No Radar, a média foi R$ 115,04 e o menor valor observado foi R$ 106,00, em 43 dias acompanhados. O preço atual está 2,2% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão…
 Hoje: R$ 112,49
-Média observada: R$ 115,05
+Média observada: R$ 115,04
 Menor observado: R$ 106,00
-Base: 42 dias acompanhados
+Base: 43 dias acompanhados
 
 O preço atual está 2,2% abaixo da média observada.
 
@@ -425,7 +425,7 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_798945-MLA112454329586_062026-AB.webp. Hook 0-3s: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 2.2% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 112,49, média R$ 115,05 e menor observado R$ 106,00. Narração: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 2.2% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 112,49. No Radar, a média foi R$ 115,05 e o menor valor observado foi R$ 106,00, em 42 dias acompanhados. O preço atual está 2,2% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_798945-MLA112454329586_062026-AB.webp. Hook 0-3s: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 2.2% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 112,49, média R$ 115,04 e menor observado R$ 106,00. Narração: Câmera de Segurança Wi-Fi iCSee/Yoosee A28B 4K Dupla Lente Visão… está 2.2% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 112,49. No Radar, a média foi R$ 115,04 e o menor valor observado foi R$ 106,00, em 43 dias acompanhados. O preço atual está 2,2% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
@@ -467,8 +467,8 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 ## Dia 7 · Vídeo 2 — Caneta 3d Impressora Profissional + Refil Filamento + Usb
 
 **Ângulo:** Preço na Mira: vale comprar agora?
-**Preço:** R$ 69,90 · média R$ 70,57 · mínimo R$ 56,90
-**Base:** 42 dias acompanhados · 321 observações
+**Preço:** R$ 69,90 · média R$ 70,56 · mínimo R$ 56,90
+**Base:** 43 dias acompanhados · 322 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/impressora-termica-caneta-3d-ou-filamento/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_816284-MLB111134362535_052026-AB-caneta-3d-impressora-profissional-refil-filamento-usb.webp
 
@@ -478,15 +478,15 @@ Antes de comprar Caneta 3d Impressora Profissional + Refil Filamento + Usb, olha
 
 **Roteiro**
 
-Antes de comprar Caneta 3d Impressora Profissional + Refil Filamento + Usb, olha o que o histórico mostra. Hoje ele aparece por R$ 69,90. No Radar, a média foi R$ 70,57 e o menor valor observado foi R$ 56,90, em 42 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Antes de comprar Caneta 3d Impressora Profissional + Refil Filamento + Usb, olha o que o histórico mostra. Hoje ele aparece por R$ 69,90. No Radar, a média foi R$ 70,56 e o menor valor observado foi R$ 56,90, em 43 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Caneta 3d Impressora Profissional + Refil Filamento + Usb
 Hoje: R$ 69,90
-Média observada: R$ 70,57
+Média observada: R$ 70,56
 Menor observado: R$ 56,90
-Base: 42 dias acompanhados
+Base: 43 dias acompanhados
 
 O preço atual está próximo da média observada.
 
@@ -495,6 +495,6 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Caneta 3d Impressora Profissional + Refil Filamento + Usb. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_816284-MLB111134362535_052026-AB-caneta-3d-impressora-profissional-refil-filamento-usb.webp. Hook 0-3s: Antes de comprar Caneta 3d Impressora Profissional + Refil Filamento + Usb, olha o que o histórico mostra. Mostre preço atual R$ 69,90, média R$ 70,57 e menor observado R$ 56,90. Narração: Antes de comprar Caneta 3d Impressora Profissional + Refil Filamento + Usb, olha o que o histórico mostra. Hoje ele aparece por R$ 69,90. No Radar, a média foi R$ 70,57 e o menor valor observado foi R$ 56,90, em 42 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Caneta 3d Impressora Profissional + Refil Filamento + Usb. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_816284-MLB111134362535_052026-AB-caneta-3d-impressora-profissional-refil-filamento-usb.webp. Hook 0-3s: Antes de comprar Caneta 3d Impressora Profissional + Refil Filamento + Usb, olha o que o histórico mostra. Mostre preço atual R$ 69,90, média R$ 70,56 e menor observado R$ 56,90. Narração: Antes de comprar Caneta 3d Impressora Profissional + Refil Filamento + Usb, olha o que o histórico mostra. Hoje ele aparece por R$ 69,90. No Radar, a média foi R$ 70,56 e o menor valor observado foi R$ 56,90, em 43 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
