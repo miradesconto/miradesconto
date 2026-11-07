@@ -1,6 +1,6 @@
 # Fila de conteúdo — MiraDesconto → Pippit
 
-**Radar:** 2026-11-06T23:31:06+00:00
+**Radar:** 2026-11-07T00:31:47+00:00
 **Fila:** 14 vídeos · 2 por dia · 7 dias
 
 Prioridade: Radar real, histórico observado, variedade de categorias e artigo de destino. Não usa referência da loja como histórico.
@@ -12,8 +12,8 @@ Revise a fila de vídeos do MiraDesconto. Aponte apenas afirmações sem evidên
 ## Dia 1 · Vídeo 1 — Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB…
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 3.779,00 · média R$ 4.528,05 · mínimo R$ 3.779,00
-**Base:** 34 dias acompanhados · 523 observações
+**Preço:** R$ 3.779,00 · média R$ 4.526,62 · mínimo R$ 3.779,00
+**Base:** 34 dias acompanhados · 524 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/notebook-em-promocao-como-escolher/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_872069-MLA96255973058_102025-T.webp
 
@@ -23,13 +23,13 @@ Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB… está no me
 
 **Roteiro**
 
-Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 3.779,00. No Radar, a média foi R$ 4.528,05 e o menor valor observado foi R$ 3.779,00, em 34 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 3.779,00. No Radar, a média foi R$ 4.526,62 e o menor valor observado foi R$ 3.779,00, em 34 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB…
 Hoje: R$ 3.779,00
-Média observada: R$ 4.528,05
+Média observada: R$ 4.526,62
 Menor observado: R$ 3.779,00
 Base: 34 dias acompanhados
 
@@ -40,15 +40,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_872069-MLA96255973058_102025-T.webp. Hook 0-3s: Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 3.779,00, média R$ 4.528,05 e menor observado R$ 3.779,00. Narração: Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 3.779,00. No Radar, a média foi R$ 4.528,05 e o menor valor observado foi R$ 3.779,00, em 34 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_872069-MLA96255973058_102025-T.webp. Hook 0-3s: Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 3.779,00, média R$ 4.526,62 e menor observado R$ 3.779,00. Narração: Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 3.779,00. No Radar, a média foi R$ 4.526,62 e o menor valor observado foi R$ 3.779,00, em 34 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
 ## Dia 1 · Vídeo 2 — Apresentador Controle Passador Slide Caneta Laser Profissional Sem…
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 20,99 · média R$ 25,79 · mínimo R$ 20,99
-**Base:** 47 dias acompanhados · 675 observações
+**Preço:** R$ 20,99 · média R$ 25,78 · mínimo R$ 20,99
+**Base:** 47 dias acompanhados · 676 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/kit-para-gravar-videos-com-celular/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_736960-MLA108725614078_032026-AB.webp
 
@@ -58,13 +58,13 @@ Apresentador Controle Passador Slide Caneta Laser Profissional Sem… está no m
 
 **Roteiro**
 
-Apresentador Controle Passador Slide Caneta Laser Profissional Sem… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 20,99. No Radar, a média foi R$ 25,79 e o menor valor observado foi R$ 20,99, em 47 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Apresentador Controle Passador Slide Caneta Laser Profissional Sem… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 20,99. No Radar, a média foi R$ 25,78 e o menor valor observado foi R$ 20,99, em 47 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Apresentador Controle Passador Slide Caneta Laser Profissional Sem…
 Hoje: R$ 20,99
-Média observada: R$ 25,79
+Média observada: R$ 25,78
 Menor observado: R$ 20,99
 Base: 47 dias acompanhados
 
@@ -75,15 +75,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Apresentador Controle Passador Slide Caneta Laser Profissional Sem…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_736960-MLA108725614078_032026-AB.webp. Hook 0-3s: Apresentador Controle Passador Slide Caneta Laser Profissional Sem… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 20,99, média R$ 25,79 e menor observado R$ 20,99. Narração: Apresentador Controle Passador Slide Caneta Laser Profissional Sem… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 20,99. No Radar, a média foi R$ 25,79 e o menor valor observado foi R$ 20,99, em 47 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Apresentador Controle Passador Slide Caneta Laser Profissional Sem…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_736960-MLA108725614078_032026-AB.webp. Hook 0-3s: Apresentador Controle Passador Slide Caneta Laser Profissional Sem… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 20,99, média R$ 25,78 e menor observado R$ 20,99. Narração: Apresentador Controle Passador Slide Caneta Laser Profissional Sem… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 20,99. No Radar, a média foi R$ 25,78 e o menor valor observado foi R$ 20,99, em 47 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
 ## Dia 2 · Vídeo 1 — Apple iPhone 15 (128 GB)
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 3.779,00 · média R$ 3.997,44 · mínimo R$ 3.779,00
-**Base:** 47 dias acompanhados · 616 observações
+**Preço:** R$ 3.779,00 · média R$ 3.997,08 · mínimo R$ 3.779,00
+**Base:** 47 dias acompanhados · 617 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/iphone-15-vale-a-pena-em-oferta/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_831434-MLA96401363339_102025-AB.webp
 
@@ -93,13 +93,13 @@ Apple iPhone 15 (128 GB) está no menor valor observado neste anúncio. Mas vale
 
 **Roteiro**
 
-Apple iPhone 15 (128 GB) está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 3.779,00. No Radar, a média foi R$ 3.997,44 e o menor valor observado foi R$ 3.779,00, em 47 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Apple iPhone 15 (128 GB) está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 3.779,00. No Radar, a média foi R$ 3.997,08 e o menor valor observado foi R$ 3.779,00, em 47 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Apple iPhone 15 (128 GB)
 Hoje: R$ 3.779,00
-Média observada: R$ 3.997,44
+Média observada: R$ 3.997,08
 Menor observado: R$ 3.779,00
 Base: 47 dias acompanhados
 
@@ -110,15 +110,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Apple iPhone 15 (128 GB). Imagem: https://http2.mlstatic.com/D_Q_NP_2X_831434-MLA96401363339_102025-AB.webp. Hook 0-3s: Apple iPhone 15 (128 GB) está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 3.779,00, média R$ 3.997,44 e menor observado R$ 3.779,00. Narração: Apple iPhone 15 (128 GB) está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 3.779,00. No Radar, a média foi R$ 3.997,44 e o menor valor observado foi R$ 3.779,00, em 47 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Apple iPhone 15 (128 GB). Imagem: https://http2.mlstatic.com/D_Q_NP_2X_831434-MLA96401363339_102025-AB.webp. Hook 0-3s: Apple iPhone 15 (128 GB) está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 3.779,00, média R$ 3.997,08 e menor observado R$ 3.779,00. Narração: Apple iPhone 15 (128 GB) está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 3.779,00. No Radar, a média foi R$ 3.997,08 e o menor valor observado foi R$ 3.779,00, em 47 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
 ## Dia 2 · Vídeo 2 — Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto…
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 274,00 · média R$ 295,78 · mínimo R$ 274,00
-**Base:** 44 dias acompanhados · 550 observações
+**Preço:** R$ 274,00 · média R$ 295,74 · mínimo R$ 274,00
+**Base:** 44 dias acompanhados · 551 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/impressora-termica-caneta-3d-ou-filamento/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_737140-MLB112939930644_072026-AB.webp
 
@@ -128,13 +128,13 @@ Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto… está no
 
 **Roteiro**
 
-Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 274,00. No Radar, a média foi R$ 295,78 e o menor valor observado foi R$ 274,00, em 44 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 274,00. No Radar, a média foi R$ 295,74 e o menor valor observado foi R$ 274,00, em 44 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto…
 Hoje: R$ 274,00
-Média observada: R$ 295,78
+Média observada: R$ 295,74
 Menor observado: R$ 274,00
 Base: 44 dias acompanhados
 
@@ -145,15 +145,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_737140-MLB112939930644_072026-AB.webp. Hook 0-3s: Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 274,00, média R$ 295,78 e menor observado R$ 274,00. Narração: Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 274,00. No Radar, a média foi R$ 295,78 e o menor valor observado foi R$ 274,00, em 44 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_737140-MLB112939930644_072026-AB.webp. Hook 0-3s: Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 274,00, média R$ 295,74 e menor observado R$ 274,00. Narração: Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 274,00. No Radar, a média foi R$ 295,74 e o menor valor observado foi R$ 274,00, em 44 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
 ## Dia 3 · Vídeo 1 — Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB…
 
 **Ângulo:** Abaixo da média observada: vale agora?
-**Preço:** R$ 7.469,00 · média R$ 8.362,14 · mínimo R$ 7.199,00
-**Base:** 34 dias acompanhados · 554 observações
+**Preço:** R$ 7.469,00 · média R$ 8.360,53 · mínimo R$ 7.199,00
+**Base:** 34 dias acompanhados · 555 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/notebook-para-trabalho-configuracoes/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_727317-MLA101294168698_122025-T.webp
 
@@ -163,13 +163,13 @@ Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB… está 10.
 
 **Roteiro**
 
-Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB… está 10.7% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 7.469,00. No Radar, a média foi R$ 8.362,14 e o menor valor observado foi R$ 7.199,00, em 34 dias acompanhados. O preço atual está 10,7% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB… está 10.7% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 7.469,00. No Radar, a média foi R$ 8.360,53 e o menor valor observado foi R$ 7.199,00, em 34 dias acompanhados. O preço atual está 10,7% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB…
 Hoje: R$ 7.469,00
-Média observada: R$ 8.362,14
+Média observada: R$ 8.360,53
 Menor observado: R$ 7.199,00
 Base: 34 dias acompanhados
 
@@ -180,15 +180,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_727317-MLA101294168698_122025-T.webp. Hook 0-3s: Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB… está 10.7% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 7.469,00, média R$ 8.362,14 e menor observado R$ 7.199,00. Narração: Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB… está 10.7% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 7.469,00. No Radar, a média foi R$ 8.362,14 e o menor valor observado foi R$ 7.199,00, em 34 dias acompanhados. O preço atual está 10,7% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_727317-MLA101294168698_122025-T.webp. Hook 0-3s: Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB… está 10.7% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 7.469,00, média R$ 8.360,53 e menor observado R$ 7.199,00. Narração: Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB… está 10.7% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 7.469,00. No Radar, a média foi R$ 8.360,53 e o menor valor observado foi R$ 7.199,00, em 34 dias acompanhados. O preço atual está 10,7% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
 ## Dia 3 · Vídeo 2 — Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby…
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 908,90 · média R$ 957,59 · mínimo R$ 908,90
-**Base:** 32 dias acompanhados · 220 observações
+**Preço:** R$ 908,90 · média R$ 957,37 · mínimo R$ 908,90
+**Base:** 32 dias acompanhados · 221 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/tv-ou-projetor-para-quarto/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_778226-MLA114547893248_082026-AB.webp
 
@@ -198,13 +198,13 @@ Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby… está no meno
 
 **Roteiro**
 
-Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 908,90. No Radar, a média foi R$ 957,59 e o menor valor observado foi R$ 908,90, em 32 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 908,90. No Radar, a média foi R$ 957,37 e o menor valor observado foi R$ 908,90, em 32 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby…
 Hoje: R$ 908,90
-Média observada: R$ 957,59
+Média observada: R$ 957,37
 Menor observado: R$ 908,90
 Base: 32 dias acompanhados
 
@@ -215,15 +215,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_778226-MLA114547893248_082026-AB.webp. Hook 0-3s: Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 908,90, média R$ 957,59 e menor observado R$ 908,90. Narração: Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 908,90. No Radar, a média foi R$ 957,59 e o menor valor observado foi R$ 908,90, em 32 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_778226-MLA114547893248_082026-AB.webp. Hook 0-3s: Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 908,90, média R$ 957,37 e menor observado R$ 908,90. Narração: Smart Tv Semp 32 Polegadas Led Full Hd S42r Roku Tv Wi-fi Dolby… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 908,90. No Radar, a média foi R$ 957,37 e o menor valor observado foi R$ 908,90, em 32 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
 ## Dia 4 · Vídeo 1 — Caneta 3d Impressora Profissional + Refil Filamento + Usb
 
 **Ângulo:** Abaixo da média observada: vale agora?
-**Preço:** R$ 61,90 · média R$ 70,41 · mínimo R$ 56,90
-**Base:** 47 dias acompanhados · 336 observações
+**Preço:** R$ 61,90 · média R$ 70,38 · mínimo R$ 56,90
+**Base:** 47 dias acompanhados · 337 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/impressora-termica-caneta-3d-ou-filamento/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_816284-MLB111134362535_052026-AB-caneta-3d-impressora-profissional-refil-filamento-usb.webp
 
@@ -233,13 +233,13 @@ Caneta 3d Impressora Profissional + Refil Filamento + Usb está 12.1% abaixo da 
 
 **Roteiro**
 
-Caneta 3d Impressora Profissional + Refil Filamento + Usb está 12.1% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 61,90. No Radar, a média foi R$ 70,41 e o menor valor observado foi R$ 56,90, em 47 dias acompanhados. O preço atual está 12,1% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Caneta 3d Impressora Profissional + Refil Filamento + Usb está 12.1% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 61,90. No Radar, a média foi R$ 70,38 e o menor valor observado foi R$ 56,90, em 47 dias acompanhados. O preço atual está 12,1% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Caneta 3d Impressora Profissional + Refil Filamento + Usb
 Hoje: R$ 61,90
-Média observada: R$ 70,41
+Média observada: R$ 70,38
 Menor observado: R$ 56,90
 Base: 47 dias acompanhados
 
@@ -250,7 +250,7 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Caneta 3d Impressora Profissional + Refil Filamento + Usb. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_816284-MLB111134362535_052026-AB-caneta-3d-impressora-profissional-refil-filamento-usb.webp. Hook 0-3s: Caneta 3d Impressora Profissional + Refil Filamento + Usb está 12.1% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 61,90, média R$ 70,41 e menor observado R$ 56,90. Narração: Caneta 3d Impressora Profissional + Refil Filamento + Usb está 12.1% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 61,90. No Radar, a média foi R$ 70,41 e o menor valor observado foi R$ 56,90, em 47 dias acompanhados. O preço atual está 12,1% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Caneta 3d Impressora Profissional + Refil Filamento + Usb. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_816284-MLB111134362535_052026-AB-caneta-3d-impressora-profissional-refil-filamento-usb.webp. Hook 0-3s: Caneta 3d Impressora Profissional + Refil Filamento + Usb está 12.1% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 61,90, média R$ 70,38 e menor observado R$ 56,90. Narração: Caneta 3d Impressora Profissional + Refil Filamento + Usb está 12.1% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 61,90. No Radar, a média foi R$ 70,38 e o menor valor observado foi R$ 56,90, em 47 dias acompanhados. O preço atual está 12,1% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
@@ -258,7 +258,7 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 **Ângulo:** Abaixo da média observada: vale agora?
 **Preço:** R$ 43,58 · média R$ 48,69 · mínimo R$ 40,09
-**Base:** 47 dias acompanhados · 688 observações
+**Base:** 47 dias acompanhados · 689 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/mouse-teclado-acessorios-setup/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_922391-MLB111917338465_052026-AB.webp
 
@@ -292,8 +292,8 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 ## Dia 5 · Vídeo 1 — Apple iPhone 16 (128 GB)
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 4.549,00 · média R$ 4.661,84 · mínimo R$ 4.549,00
-**Base:** 44 dias acompanhados · 579 observações
+**Preço:** R$ 4.549,00 · média R$ 4.661,64 · mínimo R$ 4.549,00
+**Base:** 44 dias acompanhados · 580 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/iphone-15-ou-16-em-promocao/
 **Imagem:** https://http2.mlstatic.com/D_NQ_NP_687325-MLA96079610055_102025-O.webp
 
@@ -303,13 +303,13 @@ Apple iPhone 16 (128 GB) está no menor valor observado neste anúncio. Mas vale
 
 **Roteiro**
 
-Apple iPhone 16 (128 GB) está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 4.549,00. No Radar, a média foi R$ 4.661,84 e o menor valor observado foi R$ 4.549,00, em 44 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Apple iPhone 16 (128 GB) está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 4.549,00. No Radar, a média foi R$ 4.661,64 e o menor valor observado foi R$ 4.549,00, em 44 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Apple iPhone 16 (128 GB)
 Hoje: R$ 4.549,00
-Média observada: R$ 4.661,84
+Média observada: R$ 4.661,64
 Menor observado: R$ 4.549,00
 Base: 44 dias acompanhados
 
@@ -320,15 +320,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Apple iPhone 16 (128 GB). Imagem: https://http2.mlstatic.com/D_NQ_NP_687325-MLA96079610055_102025-O.webp. Hook 0-3s: Apple iPhone 16 (128 GB) está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 4.549,00, média R$ 4.661,84 e menor observado R$ 4.549,00. Narração: Apple iPhone 16 (128 GB) está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 4.549,00. No Radar, a média foi R$ 4.661,84 e o menor valor observado foi R$ 4.549,00, em 44 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Apple iPhone 16 (128 GB). Imagem: https://http2.mlstatic.com/D_NQ_NP_687325-MLA96079610055_102025-O.webp. Hook 0-3s: Apple iPhone 16 (128 GB) está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 4.549,00, média R$ 4.661,64 e menor observado R$ 4.549,00. Narração: Apple iPhone 16 (128 GB) está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 4.549,00. No Radar, a média foi R$ 4.661,64 e o menor valor observado foi R$ 4.549,00, em 44 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
 ## Dia 5 · Vídeo 2 — Fone Ouvido Jbl Tune 780nc Headphone Bluetooth Cancela Ruído Preto
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 447,06 · média R$ 468,90 · mínimo R$ 447,06
-**Base:** 15 dias acompanhados · 118 observações
+**Preço:** R$ 447,06 · média R$ 468,72 · mínimo R$ 447,06
+**Base:** 15 dias acompanhados · 119 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/jbl-tune-780nc-vale-a-pena/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_856745-MLB116518663672_092026-V.webp
 
@@ -338,13 +338,13 @@ Fone Ouvido Jbl Tune 780nc Headphone Bluetooth Cancela Ruído Preto está no men
 
 **Roteiro**
 
-Fone Ouvido Jbl Tune 780nc Headphone Bluetooth Cancela Ruído Preto está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 447,06. No Radar, a média foi R$ 468,90 e o menor valor observado foi R$ 447,06, em 15 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Fone Ouvido Jbl Tune 780nc Headphone Bluetooth Cancela Ruído Preto está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 447,06. No Radar, a média foi R$ 468,72 e o menor valor observado foi R$ 447,06, em 15 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Fone Ouvido Jbl Tune 780nc Headphone Bluetooth Cancela Ruído Preto
 Hoje: R$ 447,06
-Média observada: R$ 468,90
+Média observada: R$ 468,72
 Menor observado: R$ 447,06
 Base: 15 dias acompanhados
 
@@ -355,7 +355,7 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Fone Ouvido Jbl Tune 780nc Headphone Bluetooth Cancela Ruído Preto. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_856745-MLB116518663672_092026-V.webp. Hook 0-3s: Fone Ouvido Jbl Tune 780nc Headphone Bluetooth Cancela Ruído Preto está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 447,06, média R$ 468,90 e menor observado R$ 447,06. Narração: Fone Ouvido Jbl Tune 780nc Headphone Bluetooth Cancela Ruído Preto está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 447,06. No Radar, a média foi R$ 468,90 e o menor valor observado foi R$ 447,06, em 15 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Fone Ouvido Jbl Tune 780nc Headphone Bluetooth Cancela Ruído Preto. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_856745-MLB116518663672_092026-V.webp. Hook 0-3s: Fone Ouvido Jbl Tune 780nc Headphone Bluetooth Cancela Ruído Preto está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 447,06, média R$ 468,72 e menor observado R$ 447,06. Narração: Fone Ouvido Jbl Tune 780nc Headphone Bluetooth Cancela Ruído Preto está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 447,06. No Radar, a média foi R$ 468,72 e o menor valor observado foi R$ 447,06, em 15 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
@@ -363,7 +363,7 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 **Ângulo:** Menor preço observado: vale aproveitar?
 **Preço:** R$ 55,00 · média R$ 57,57 · mínimo R$ 55,00
-**Base:** 47 dias acompanhados · 686 observações
+**Base:** 47 dias acompanhados · 687 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/fone-bluetooth-ou-caixa-de-som-como-escolher/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_760715-MLB109157249938_042026-AB-fone-de-ouvido-bluetooth-53-par-sem-fio-duplo-todos-celular.webp
 
@@ -398,7 +398,7 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 **Ângulo:** Abaixo da média observada: vale agora?
 **Preço:** R$ 19,00 · média R$ 19,71 · mínimo R$ 18,81
-**Base:** 47 dias acompanhados · 688 observações
+**Base:** 47 dias acompanhados · 689 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/acessorios-ps4-ps5-switch-como-escolher/
 **Imagem:** https://http2.mlstatic.com/D_NQ_NP_641341-MLB109378980820_042026-O-kit-4-botao-capa-analogico-protetora-compativel-controle-ps5.webp
 
@@ -432,8 +432,8 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 ## Dia 7 · Vídeo 1 — Smartphone Motorola Edge 60 Fusion 5g - 256gb 8gb Ram+8gb Ram…
 
 **Ângulo:** Preço na Mira: vale comprar agora?
-**Preço:** R$ 1.799,00 · média R$ 1.805,86 · mínimo R$ 1.733,00
-**Base:** 32 dias acompanhados · 487 observações
+**Preço:** R$ 1.799,00 · média R$ 1.805,84 · mínimo R$ 1.733,00
+**Base:** 32 dias acompanhados · 488 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/qual-celular-comprar-2026/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_631624-MLA99926713059_112025-AB.webp
 
@@ -443,13 +443,13 @@ Antes de comprar Smartphone Motorola Edge 60 Fusion 5g - 256gb 8gb Ram+8gb Ram�
 
 **Roteiro**
 
-Antes de comprar Smartphone Motorola Edge 60 Fusion 5g - 256gb 8gb Ram+8gb Ram…, olha o que o histórico mostra. Hoje ele aparece por R$ 1.799,00. No Radar, a média foi R$ 1.805,86 e o menor valor observado foi R$ 1.733,00, em 32 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Antes de comprar Smartphone Motorola Edge 60 Fusion 5g - 256gb 8gb Ram+8gb Ram…, olha o que o histórico mostra. Hoje ele aparece por R$ 1.799,00. No Radar, a média foi R$ 1.805,84 e o menor valor observado foi R$ 1.733,00, em 32 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Smartphone Motorola Edge 60 Fusion 5g - 256gb 8gb Ram+8gb Ram…
 Hoje: R$ 1.799,00
-Média observada: R$ 1.805,86
+Média observada: R$ 1.805,84
 Menor observado: R$ 1.733,00
 Base: 32 dias acompanhados
 
@@ -460,7 +460,7 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Smartphone Motorola Edge 60 Fusion 5g - 256gb 8gb Ram+8gb Ram…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_631624-MLA99926713059_112025-AB.webp. Hook 0-3s: Antes de comprar Smartphone Motorola Edge 60 Fusion 5g - 256gb 8gb Ram+8gb Ram…, olha o que o histórico mostra. Mostre preço atual R$ 1.799,00, média R$ 1.805,86 e menor observado R$ 1.733,00. Narração: Antes de comprar Smartphone Motorola Edge 60 Fusion 5g - 256gb 8gb Ram+8gb Ram…, olha o que o histórico mostra. Hoje ele aparece por R$ 1.799,00. No Radar, a média foi R$ 1.805,86 e o menor valor observado foi R$ 1.733,00, em 32 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Smartphone Motorola Edge 60 Fusion 5g - 256gb 8gb Ram+8gb Ram…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_631624-MLA99926713059_112025-AB.webp. Hook 0-3s: Antes de comprar Smartphone Motorola Edge 60 Fusion 5g - 256gb 8gb Ram+8gb Ram…, olha o que o histórico mostra. Mostre preço atual R$ 1.799,00, média R$ 1.805,84 e menor observado R$ 1.733,00. Narração: Antes de comprar Smartphone Motorola Edge 60 Fusion 5g - 256gb 8gb Ram+8gb Ram…, olha o que o histórico mostra. Hoje ele aparece por R$ 1.799,00. No Radar, a média foi R$ 1.805,84 e o menor valor observado foi R$ 1.733,00, em 32 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
@@ -468,7 +468,7 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 **Ângulo:** Preço na Mira: vale comprar agora?
 **Preço:** R$ 49,40 · média R$ 50,09 · mínimo R$ 47,84
-**Base:** 47 dias acompanhados · 684 observações
+**Base:** 47 dias acompanhados · 685 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/acessorios-ps4-ps5-switch-como-escolher/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_762912-MLA105696431793_012026-AB.webp
 
