@@ -16,9 +16,6 @@ on:
         description: Testar geração individual e em lote para os anúncios cadastrados
         type: boolean
         default: false
-      validation_id:
-        description: ID de validação da Shopee (opcional)
-        type: string
 
 permissions:
   contents: read
@@ -42,7 +39,7 @@ jobs:
           SHOPEE_APP_SECRET: ${{ secrets.SHOPEE_APP_SECRET }}
           KEYWORD: ${{ inputs.keyword }}
           GENERATE_LINKS: ${{ inputs.generate_links || github.event_name == 'push' }}
-          VALIDATION_ID: ${{ inputs.validation_id || vars.SHOPEE_VALIDATION_ID }}
+          VALIDATION_ID: ${{ secrets.SHOPEE_VALIDATION_ID }}
         run: |
           args=(--keyword "${KEYWORD:-Attack Shark X11}" --output preview/shopee.json --public-prices preview/shopee-precos.json)
           if [[ "$GENERATE_LINKS" == "true" ]]; then args+=(--generate-links); fi
