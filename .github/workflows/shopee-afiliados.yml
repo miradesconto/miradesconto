@@ -1,0 +1,109 @@
+name: Shopee — ofertas e diagnóstico
+
+on:
+  schedule:
+    - cron: '20 11 * * *'
+  push:
+    branches: [main, codex/shopee-afiliados]
+    paths: [.github/workflows/shopee-afiliados.yml]
+  workflow_dispatch:
+    inputs:
+      keyword:
+        description: Termo para a busca de ofertas
+        type: string
+        default: Attack Shark X11
+      generate_links:
+        description: Testar geração individual e em lote para os anúncios cadastrados
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: shopee-afiliados-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  review:
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/codex/shopee-afiliados'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Consultar a Shopee
+        env:
+          SHOPEE_APP_ID: ${{ secrets.SHOPEE_APP_ID }}
+          SHOPEE_APP_SECRET: ${{ secrets.SHOPEE_APP_SECRET }}
+          KEYWORD: ${{ inputs.keyword }}
+          GENERATE_LINKS: ${{ inputs.generate_links || (github.event_name == 'push' && github.ref == 'refs/heads/codex/shopee-afiliados') }}
+          VALIDATION_ID: ${{ secrets.SHOPEE_VALIDATION_ID }}
+        run: |
+          args=(--keyword "${KEYWORD:-Attack Shark X11}" --output preview/shopee.json --public-prices preview/shopee-precos.json)
+          if [[ "$GENERATE_LINKS" == "true" ]]; then args+=(--generate-links); fi
+          if [[ -n "$VALIDATION_ID" ]]; then args+=(--validation-id="$VALIDATION_ID"); fi
+          python3 integracoes/shopee/afiliados.py "${args[@]}"
+      - name: Mostrar status e preços na execução
+        if: always()
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          source = Path("preview/shopee.json")
+          if not source.is_file():
+              raise SystemExit(0)
+          result = json.loads(source.read_text())
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a") as summary:
+              print("### Verificações da Shopee", file=summary)
+              for name, check in result["checks"].items():
+                  print(f"- **{name}**: {check['status']} {check.get('detail', '')}", file=summary)
+              print("\n### Preços informados pela API", file=summary)
+              for item, offer in result["catalog"].items():
+                  low, high = offer["price_min_brl"], offer["price_max_brl"]
+                  price = f"R$ {low}" if low == high and low else f"R$ {low} a R$ {high}" if low else "sem preço confirmado"
+                  print(f"- Anúncio {item}: {price}", file=summary)
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: shopee-previsao-${{ github.run_id }}
+          path: |
+            preview/shopee.json
+            preview/shopee-precos.json
+          if-no-files-found: ignore
+          retention-days: 7
+  publish-prices:
+    if: github.ref == 'refs/heads/main' && vars.SHOPEE_PUBLICAR_PRECOS != 'false'
+    needs: review
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+      pages: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/download-artifact@v4
+        with:
+          name: shopee-previsao-${{ github.run_id }}
+          path: preview
+      - name: Atualizar somente os preços verificados
+        run: |
+          test -s preview/shopee-precos.json
+          cp preview/shopee-precos.json _data/shopee_api_prices.json
+          git add _data/shopee_api_prices.json
+          if ! git diff --cached --quiet; then
+            git -c user.name='github-actions[bot]' \
+                -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+                commit -m 'Atualiza preços observados na Shopee'
+            git push origin HEAD:main
+          fi
+      - name: Solicitar atualização do GitHub Pages
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds" --silent
