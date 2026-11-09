@@ -146,7 +146,10 @@ def feed_product(row, wanted):
     link = columns.get("product_link")
     if not isinstance(link, str):
         return None
-    parts = urlsplit(link)
+    try:
+        parts = urlsplit(link)
+    except ValueError:
+        return None
     if parts.scheme != "https" or parts.netloc not in {"shopee.com.br", "www.shopee.com.br"}:
         return None
     match = re.search(r"(?:/product/|-i\.)(\d+)[/.](\d+)/?$", parts.path)
@@ -285,18 +288,9 @@ def collect(api, args):
         if offer["category_ids"] and offer["category_ids"][-1] in categories
         and wanted & tokens(offer["title"])
     ]
-    keyword_matches = {}
-    for category in list(dict.fromkeys(relevant_categories or categories))[:3] if wanted else []:
-        direct = check(f"busca_por_categoria/{category}", lambda: api.products(
-            keyword=quoted(args.keyword), productCatId=category, limit=20))
-        for node in direct or []:
-            if wanted <= tokens(node.get("productName")):
-                offer = product_summary(node)
-                keyword_matches[(offer["shop_id"], offer["item_id"])] = offer
     fallback = {(offer["shop_id"], offer["item_id"]): offer
                 for offer in [*snapshot["catalog"].values(), *candidates]
                 if wanted and wanted <= tokens(offer["title"])}
-    discovery["keyword_source"] = "shopee_categoria" if keyword_matches else None
 
     for op, key, fields in (
         ("shopOfferV2", "shops", "shopId shopName commissionRate periodEndTime"),
@@ -314,16 +308,15 @@ def collect(api, args):
     full_feeds = [f for f in feed_entries if f.get("datafeedId") and f.get("feedMode") == "FULL"]
     feed_results = {}
     known_ids = {str(item_id) for _, item_id, _ in rows}
-    has_new_native = any(item_id not in known_ids for _, item_id in keyword_matches)
     if full_feeds:
         total_rows = 0
         has_more = False
-        for feed in full_feeds[:2]:
-            limit = 10 if has_new_native or not wanted else 500
+        for feed_number, feed in enumerate(full_feeds[:2], start=1):
+            limit = 500 if wanted else 10
             offset = 0
             page_has_more = False
             for _ in range(1 if limit == 10 else 4):
-                feed_page = check(f"getItemFeedData/{total_rows}", lambda: api.call(
+                feed_page = check(f"getItemFeedData/{feed_number}/{offset}", lambda: api.call(
                     "getItemFeedData", "rows { columns } pageInfo { hasMore totalCount }",
                     datafeedId=quoted(feed["datafeedId"]), offset=offset, limit=limit,
                 ))
@@ -344,8 +337,19 @@ def collect(api, args):
     else:
         statuses["getItemFeedData"] = {"status": "bloqueado", "detail": "sem feed completo disponível"}
 
-    if not keyword_matches:
-        discovery["keyword_source"] = "feed_shopee" if feed_results else "filtro_local" if fallback else None
+    has_new_feed = any(item_id not in known_ids for _, item_id in feed_results)
+    keyword_matches = {}
+    for category in list(dict.fromkeys(relevant_categories or categories))[:3] if wanted and not has_new_feed else []:
+        direct = check(f"busca_por_categoria/{category}", lambda: api.products(
+            keyword=quoted(args.keyword), productCatId=category, limit=20))
+        for node in direct or []:
+            if wanted <= tokens(node.get("productName")):
+                offer = product_summary(node)
+                keyword_matches[(offer["shop_id"], offer["item_id"])] = offer
+    discovery["keyword_source"] = (
+        "feed_shopee" if feed_results else "shopee_categoria" if keyword_matches
+        else "filtro_local" if fallback else None
+    )
     all_matches = {**fallback, **feed_results, **keyword_matches}
     results = sorted(all_matches.values(), key=lambda offer: offer["item_id"] in known_ids)
     discovery["keyword_results"] = results[:20]
@@ -395,7 +399,7 @@ def collect(api, args):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--keyword", default="Attack Shark X11")
+    parser.add_argument("--keyword", default="mouse")
     parser.add_argument("--validation-id", type=int)
     parser.add_argument("--generate-links", action="store_true")
     parser.add_argument("--output", type=Path, required=True)
