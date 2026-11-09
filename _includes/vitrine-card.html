@@ -50,7 +50,7 @@
 {% endcomment %}
 {% assign specs_source = include.specs | default: offer.specs | default: product.specs | default: reg.specs | default: p.specs %}
 {% assign specs_raw = '' %}
-{% if specs_source != blank %}
+{% if specs_source %}
   {% if specs_source.first %}
     {% assign specs_raw = specs_source | join: '|' %}
   {% else %}
