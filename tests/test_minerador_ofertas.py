@@ -105,6 +105,14 @@ class MineradorTest(unittest.TestCase):
         got = m.merge_items([row], [row], [], shopee_ok=True, ml_ok=True)
         self.assertEqual(len(got),1)
 
+    def test_shopee_parcial_publica_resultados_validos_e_intercala(self):
+        shop = m.normalize('Headset USB', 120, 'https://img.shopee.com/1.jpg', 'https://s.shopee.com.br/xyz', 'Shopee')
+        ml = m.normalize('Monitor Gamer', 799, 'https://img.mlstatic.com/1.jpg', 'https://meli.la/xyz', 'Mercado Livre')
+        out = m.merge_items([shop], [ml], [], shopee_ok=False, ml_ok=True)
+        self.assertEqual([x['loja'] for x in out], ['Shopee', 'Mercado Livre'])
+        out2 = m.merge_items([], [ml], [shop], shopee_ok=False, ml_ok=True)
+        self.assertEqual([x['loja'] for x in out2], ['Shopee', 'Mercado Livre'])
+
     def test_feed_e_home_estao_conectados(self):
         data = json.loads((ROOT / 'api/produtos.json').read_text(encoding='utf-8'))
         self.assertGreaterEqual(len(data),4)
