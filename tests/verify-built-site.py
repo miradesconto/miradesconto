@@ -142,4 +142,7 @@ for lang_page, cta in [('index.html', 'Ver Oferta'), ('en/index.html', 'View Dea
         expected_price = product.get('currentPriceText')
         if expected_price:
             assert expected_price in unescape(body), (lang_page, product_id, 'preço não renderizado')
+    if lang_page == 'index.html':
+        notebook = next((body for product_id, body in cards if product_id == 'MLB5879140276'), '')
+        assert 'Ryzen 5' in notebook, 'Fallback Liquid não gerou badge Ryzen 5'
 print('OK: 4 cards em PT/EN, CTA, preço inicial Liquid, limite de tags e títulos.')
