@@ -1,0 +1,119 @@
+name: Shopee — teste de afiliados
+
+on:
+  push:
+    branches: [codex/shopee-api-smoke]
+    paths: [.github/workflows/shopee-api-smoke.yml]
+
+permissions: {}
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    env:
+      SHOPEE_APP_ID: ${{ secrets.SHOPEE_APP_ID }}
+      SHOPEE_APP_SECRET: ${{ secrets.SHOPEE_APP_SECRET }}
+    steps:
+      - name: Consultar uma oferta e gerar o link
+        run: |
+          python3 - <<'PY'
+          import hashlib
+          import json
+          import os
+          import re
+          import time
+          from urllib.error import HTTPError, URLError
+          from urllib.parse import urlsplit
+          from urllib.request import HTTPRedirectHandler, Request, build_opener, urlopen
+
+          endpoint = "https://open-api.affiliate.shopee.com.br/graphql"
+          app_id = os.environ.get("SHOPEE_APP_ID", "").strip()
+          secret = os.environ.get("SHOPEE_APP_SECRET", "").strip()
+          if not app_id or not secret:
+              raise SystemExit("Secrets da Shopee ausentes ou vazios.")
+
+          def graphql(operation, query, variables=None):
+              body = {"query": query}
+              if variables is not None:
+                  body["variables"] = variables
+              payload = json.dumps(body, separators=(",", ":")).encode()
+              timestamp = str(int(time.time()))
+              signature = hashlib.sha256(
+                  (app_id + timestamp).encode() + payload + secret.encode()
+              ).hexdigest()
+              request = Request(endpoint, data=payload, headers={
+                  "Content-Type": "application/json",
+                  "Authorization": (
+                      f"SHA256 Credential={app_id}, Timestamp={timestamp}, Signature={signature}"
+                  ),
+              })
+              try:
+                  with urlopen(request, timeout=20) as response:
+                      result = json.load(response)
+              except HTTPError as error:
+                  raise SystemExit(f"{operation}: HTTP {error.code}.") from None
+              except (URLError, TimeoutError, ValueError):
+                  raise SystemExit(f"{operation}: falha de conexão ou resposta inválida.") from None
+              if result.get("errors"):
+                  codes = [e.get("extensions", {}).get("code") for e in result["errors"]]
+                  safe_codes = [str(c) for c in codes if type(c) is int]
+                  detail = ", ".join(safe_codes) or "sem código numérico"
+                  raise SystemExit(f"{operation}: a Shopee retornou erro GraphQL ({detail}).")
+              return result.get("data", {}).get(operation)
+
+          def shopee_url(url):
+              parts = urlsplit(url or "")
+              return (
+                  parts.scheme == "https"
+                  and parts.username is None
+                  and (parts.hostname == "shopee.com.br" or
+                       (parts.hostname or "").endswith(".shopee.com.br"))
+              )
+
+          class ShopeeRedirects(HTTPRedirectHandler):
+              def redirect_request(self, request, fp, code, msg, headers, new_url):
+                  if not shopee_url(new_url):
+                      raise ValueError("Redirecionamento fora da Shopee.")
+                  return super().redirect_request(request, fp, code, msg, headers, new_url)
+
+          offers = graphql("productOfferV2", """
+            query {
+              productOfferV2(keyword: "mouse Attack Shark X11", limit: 1) {
+                nodes { itemId shopId productName productLink }
+              }
+            }
+          """)
+          nodes = (offers or {}).get("nodes") or []
+          if not nodes:
+              raise SystemExit("Consulta autenticada, mas a busca não retornou ofertas.")
+          item = nodes[0]
+          item_id, shop_id = int(item["itemId"]), int(item["shopId"])
+          title = re.sub(r"[^\w .,+()/-]", " ", item["productName"] or "").strip()
+          print(f"Consulta OK: {title[:120]} (item {item_id}, loja {shop_id}).", flush=True)
+          if not re.search(r"\battack\s*shark\b.*\bx11\b", title, re.IGNORECASE):
+              raise SystemExit("O resultado não corresponde ao modelo escolhido.")
+          if not shopee_url(item.get("productLink")):
+              raise SystemExit("A Shopee não retornou uma URL válida para o produto.")
+
+          link = graphql("generateShortLink", """
+            mutation ($input: ShortLinkInput!) {
+              generateShortLink(input: $input) { shortLink }
+            }
+          """, {"input": {"originUrl": item["productLink"]}})
+          short_url = (link or {}).get("shortLink")
+          if not shopee_url(short_url):
+              raise SystemExit("A API não retornou um link curto válido da Shopee.")
+          print("Geração do link de afiliado OK.", flush=True)
+
+          try:
+              with build_opener(ShopeeRedirects()).open(short_url, timeout=20) as response:
+                  final_path = urlsplit(response.geturl()).path
+          except (URLError, TimeoutError, ValueError) as error:
+              detail = f"HTTP {error.code}" if isinstance(error, HTTPError) else "falha ao abrir"
+              raise SystemExit(f"Destino do link não verificado ({detail}).") from None
+          expected_paths = (f"-i.{shop_id}.{item_id}", f"/product/{shop_id}/{item_id}")
+          if not final_path.rstrip("/").endswith(expected_paths):
+              raise SystemExit("Destino do link não confirmado pelo ID do anúncio.")
+          print("Destino OK: o link abre o mesmo anúncio retornado pela busca.")
+          PY
