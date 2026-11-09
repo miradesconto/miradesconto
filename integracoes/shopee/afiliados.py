@@ -146,9 +146,10 @@ def catalog_rows():
 
 
 def verified_product(api, shop_id, item_id):
-    for node in api.products(shopId=shop_id, itemId=item_id, limit=1):
-        if (str(node.get("shopId")), str(node.get("itemId"))) == (str(shop_id), str(item_id)):
-            return product_summary(node)
+    for filters in ({"shopId": shop_id}, {}):
+        for node in api.products(itemId=item_id, limit=1, **filters):
+            if (str(node.get("shopId")), str(node.get("itemId"))) == (str(shop_id), str(item_id)):
+                return product_summary(node)
     raise ApiError("oferta não retornada para a loja e o anúncio informados")
 
 
@@ -231,7 +232,7 @@ def collect(api, args):
             snapshot["catalog"][str(item_id)] = offer
 
     discovery = snapshot["discovery"]
-    direct = check("busca_por_palavra", lambda: api.products(keyword=quoted(args.keyword), sortType=1, limit=10))
+    direct = check("busca_por_palavra", lambda: api.products(keyword=quoted(args.keyword), listType=0, sortType=1, page=1, limit=10))
     if direct is None:
         direct = check("busca_por_palavra_sem_ordenacao",
                        lambda: api.products(keyword=quoted(args.keyword), limit=10))
@@ -319,6 +320,9 @@ def collect(api, args):
     else:
         statuses["validatedReport"] = {"status": "bloqueado", "detail": "validationId exigido pela Shopee"}
 
+    for operation, key in (("conversionReport", "conversions"), ("validatedReport", "validated")):
+        if (report := private.get(key)) and not report["complete"]:
+            statuses[operation] = {"status": "atenção", "detail": "paginação incompleta"}
     return snapshot, private
 
 
