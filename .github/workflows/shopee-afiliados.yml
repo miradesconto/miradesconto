@@ -5,7 +5,7 @@ on:
     - cron: '20 11 * * *'
   push:
     branches: [codex/shopee-afiliados]
-    paths: [.github/workflows/shopee-afiliados.yml, integracoes/shopee/afiliados.py]
+    paths: [.github/workflows/shopee-afiliados.yml]
   workflow_dispatch:
     inputs:
       keyword:
@@ -44,7 +44,7 @@ jobs:
           GENERATE_LINKS: ${{ inputs.generate_links || github.event_name == 'push' }}
           VALIDATION_ID: ${{ inputs.validation_id || vars.SHOPEE_VALIDATION_ID }}
         run: |
-          args=(--keyword "${KEYWORD:-Attack Shark X11}" --output preview/shopee.json)
+          args=(--keyword "${KEYWORD:-Attack Shark X11}" --output preview/shopee.json --public-prices preview/shopee-precos.json)
           if [[ "$GENERATE_LINKS" == "true" ]]; then args+=(--generate-links); fi
           if [[ -n "$VALIDATION_ID" ]]; then args+=(--validation-id="$VALIDATION_ID"); fi
           python3 integracoes/shopee/afiliados.py "${args[@]}"
@@ -74,6 +74,39 @@ jobs:
         if: always()
         with:
           name: shopee-previsao-${{ github.run_id }}
-          path: preview/shopee.json
+          path: |
+            preview/shopee.json
+            preview/shopee-precos.json
           if-no-files-found: ignore
           retention-days: 7
+  publish-prices:
+    if: github.ref == 'refs/heads/main' && vars.SHOPEE_PUBLICAR_PRECOS == 'true'
+    needs: review
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+      pages: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/download-artifact@v4
+        with:
+          name: shopee-previsao-${{ github.run_id }}
+          path: preview
+      - name: Atualizar somente os preços verificados
+        run: |
+          test -s preview/shopee-precos.json
+          cp preview/shopee-precos.json _data/shopee_api_prices.json
+          git add _data/shopee_api_prices.json
+          if ! git diff --cached --quiet; then
+            git -c user.name='github-actions[bot]' \
+                -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+                commit -m 'Atualiza preços observados na Shopee'
+            git push origin HEAD:main
+          fi
+      - name: Solicitar atualização do GitHub Pages
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds" --silent
