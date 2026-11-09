@@ -6,7 +6,7 @@ O workflow **Shopee — ofertas e diagnóstico** consulta os anúncios cadastrad
 - **Feed** — lista os feeds disponíveis e verifica a primeira página do primeiro feed com até dez registros. A prévia guarda somente a cobertura do teste. O conteúdo bruto fica restrito à exportação local opcional.
 - **Links** — a opção manual `generate_links` testa a geração individual e em lote para os anúncios cadastrados. Os links já publicados continuam a ser lidos do CSV. O teste não gera links no agendamento diário.
 - **Conversões** — consulta os últimos sete dias, com paginação. O log registra o estado da consulta. A exportação privada opcional grava o total líquido somente quando a paginação termina.
-- **Validações** — o relatório exige um ID de validação da conta. Informe `validation_id` na execução manual ou configure `SHOPEE_VALIDATION_ID` para a rotina. Sem ID o relatório fica bloqueado.
+- **Validações** — o relatório exige um ID de validação da conta. Configure o Secret opcional `SHOPEE_VALIDATION_ID` para consultá-lo na rotina. Sem ID o relatório fica bloqueado.
 
 Após a integração na branch principal, o GitHub Actions agenda a coleta às 08h20 de Brasília e guarda a prévia por sete dias. A publicação de preços é habilitada separadamente com a variável de repositório `SHOPEE_PUBLICAR_PRECOS=true`. Quando habilitada, o workflow publica somente faixas de preço verificadas para os anúncios já cadastrados e solicita um build do GitHub Pages. Os artigos rotulam o preço com a data da consulta e mantêm o botão para conferir o valor na loja.
 
