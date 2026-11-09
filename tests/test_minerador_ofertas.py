@@ -7,6 +7,25 @@ import unittest
 from datetime import datetime, timedelta
 from pathlib import Path
 from unittest.mock import patch
+import sys
+import types
+
+# O workflow geral do projeto não instala dependências do minerador.
+# Testes offline conseguem rodar com stubs; o workflow minerador instala bibliotecas reais.
+try:
+    import github
+except ModuleNotFoundError:
+    fake = types.ModuleType('github')
+    fake.Auth = type('Auth', (), {'Token': staticmethod(lambda token: token)})
+    fake.Github = lambda **kwargs: None
+    fake.GithubException = type('GithubException', (Exception,), {})
+    sys.modules['github'] = fake
+try:
+    import dotenv
+except ModuleNotFoundError:
+    fake = types.ModuleType('dotenv')
+    fake.load_dotenv = lambda *args, **kwargs: None
+    sys.modules['dotenv'] = fake
 
 ROOT = Path(__file__).resolve().parents[1]
 file = ROOT / 'integracoes/automacao/minerador_ofertas.py'
