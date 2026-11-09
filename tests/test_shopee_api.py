@@ -1,8 +1,9 @@
+import json
 from types import SimpleNamespace
 from unittest import TestCase
 from unittest.mock import patch
 
-from integracoes.shopee.afiliados import ApiError, collect, price_snapshot, report_page
+from integracoes.shopee.afiliados import ApiError, collect, feed_product, price_snapshot, report_page, tokens
 
 
 class ShopeeApiTests(TestCase):
@@ -45,3 +46,13 @@ class ShopeeApiTests(TestCase):
         result = report_page(API(), "conversionReport")
         self.assertFalse(result["complete"])
         self.assertIsNone(result["net_commission_brl"])
+
+
+    def test_feed_checks_title_and_listing_identity(self):
+        row = {"title": "Mouse Gamer Sem Fio", "itemid": "123",
+               "product_link": "https://shopee.com.br/Mouse-Gamer-i.456.123?tracking=secret"}
+        parsed = feed_product({"columns": json.dumps(row)}, tokens("mouse gamer"))
+        self.assertEqual(parsed["product_url"], "https://shopee.com.br/product/456/123")
+        self.assertIsNone(feed_product({"columns": row}, tokens("teclado")))
+        row["itemid"] = "999"
+        self.assertIsNone(feed_product({"columns": row}, tokens("mouse")))
