@@ -82,6 +82,20 @@ jobs:
           item_id, shop_id = 48360418130, 1672861664
           product_url = f"https://shopee.com.br/product/{shop_id}/{item_id}"
 
+          def check_keyword():
+              offers = graphql("productOfferV2", """
+                query {
+                  productOfferV2(keyword: "Attack Shark X11", sortType: 1, limit: 1) {
+                    nodes { productName }
+                  }
+                }
+              """)
+              nodes = (offers or {}).get("nodes") or []
+              title = nodes[0]["productName"] if nodes else ""
+              if not re.search(r"\battack\s*shark\b.*\bx11\b", title, re.IGNORECASE):
+                  raise SystemExit("A busca por palavra-chave não retornou o modelo esperado.")
+              print("Busca por palavra-chave OK: Attack Shark X11.", flush=True)
+
           def check_offer():
               offers = graphql("productOfferV2", f"""
                 query {{
@@ -116,13 +130,17 @@ jobs:
               except (URLError, TimeoutError, ValueError) as error:
                   detail = f"HTTP {error.code}" if isinstance(error, HTTPError) else "falha ao abrir"
                   raise SystemExit(f"Destino do link não verificado ({detail}).") from None
-              expected_paths = (f"-i.{shop_id}.{item_id}", f"/product/{shop_id}/{item_id}")
+              expected_paths = (
+                  f"-i.{shop_id}.{item_id}",
+                  f"/product/{shop_id}/{item_id}",
+                  f"/opaanlp/{shop_id}/{item_id}",
+              )
               if not final_path.rstrip("/").endswith(expected_paths):
                   raise SystemExit("Destino do link não confirmado pelo ID do anúncio.")
-              print("Destino OK: o link abre o mesmo anúncio retornado pela busca.")
+              print("Destino OK: a Shopee redirecionou para a loja e o item esperados.")
 
           failed = False
-          for check in (check_offer, check_affiliate_link):
+          for check in (check_keyword, check_offer, check_affiliate_link):
               try:
                   check()
               except SystemExit as error:
