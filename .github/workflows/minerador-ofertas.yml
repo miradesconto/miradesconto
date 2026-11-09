@@ -3,6 +3,12 @@ on:
   schedule:
     - cron: '25 11 * * *'
   workflow_dispatch:
+  pull_request:
+    paths:
+      - 'integracoes/automacao/minerador_ofertas.py'
+      - 'integracoes/automacao/minerador-requirements.txt'
+      - 'tests/test_minerador_ofertas.py'
+      - '.github/workflows/minerador-ofertas.yml'
   push:
     branches: [main]
     paths:
