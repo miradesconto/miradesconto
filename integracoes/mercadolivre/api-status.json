@@ -1,0 +1,24 @@
+{
+  "generatedAt": "2026-11-09T19:25:05+00:00",
+  "source": "api.mercadolibre.com",
+  "capabilities": {
+    "items": {
+      "ok": 0,
+      "failed": 1,
+      "status": "bloqueado",
+      "http": 403
+    },
+    "trends": {
+      "ok": 1,
+      "failed": 0,
+      "status": "ok"
+    }
+  },
+  "pricesConfirmed": 0,
+  "itemsChecked": 0,
+  "candidates": [],
+  "status": "atenção",
+  "trendsFound": 5,
+  "catalogTrendMatches": 8,
+  "calls": 3
+}

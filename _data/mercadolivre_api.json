@@ -1,0 +1,60 @@
+{
+  "generatedAt": "2026-11-09T19:25:05+00:00",
+  "trendsCheckedAt": "2026-11-09T19:25:05+00:00",
+  "trends": [
+    {
+      "keyword": "iphone 15 pro max",
+      "categoryId": null,
+      "group": "mais_buscadas"
+    },
+    {
+      "keyword": "iphone 16",
+      "categoryId": null,
+      "group": "mais_buscadas"
+    },
+    {
+      "keyword": "notebook",
+      "categoryId": null,
+      "group": "mais_buscadas"
+    },
+    {
+      "keyword": "iphone 17 pro max",
+      "categoryId": null,
+      "group": "populares"
+    },
+    {
+      "keyword": "iphone 14",
+      "categoryId": null,
+      "group": "populares"
+    }
+  ],
+  "highlights": [],
+  "items": {},
+  "matches": {
+    "MLB3931271317": [
+      "iphone 16"
+    ],
+    "MLB6472092088": [
+      "iphone 16"
+    ],
+    "MLB4171634813": [
+      "iphone 14"
+    ],
+    "MLB4492878341": [
+      "iphone 16"
+    ],
+    "MLB5988661118": [
+      "iphone 17 pro max"
+    ],
+    "MLB7573323484": [
+      "iphone 16"
+    ],
+    "MLB5096607647": [
+      "iphone 16"
+    ],
+    "MLB7500956540": [
+      "iphone 16"
+    ]
+  },
+  "cursor": 40
+}
