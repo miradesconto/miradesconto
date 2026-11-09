@@ -115,6 +115,7 @@ def product_summary(node):
         "item_id": str(node["itemId"]),
         "shop_id": str(node["shopId"]),
         "title": node.get("productName"),
+        "product_url": f"https://shopee.com.br/product/{int(node['shopId'])}/{int(node['itemId'])}",
         "merchant": node.get("shopName"),
         "price_min_brl": low,
         "price_max_brl": high,
@@ -128,6 +129,37 @@ def product_summary(node):
 def tokens(text):
     ascii_text = unicodedata.normalize("NFKD", text or "").encode("ascii", "ignore").decode()
     return set(re.findall(r"[a-z0-9]+", ascii_text.lower()))
+
+
+def feed_product(row, wanted):
+    columns = row.get("columns")
+    if isinstance(columns, str):
+        try:
+            columns = json.loads(columns)
+        except ValueError:
+            return None
+    if not isinstance(columns, dict):
+        return None
+    title = columns.get("title")
+    if not wanted or not isinstance(title, str) or not wanted <= tokens(title):
+        return None
+    link = columns.get("product_link")
+    if not isinstance(link, str):
+        return None
+    try:
+        parts = urlsplit(link)
+    except ValueError:
+        return None
+    if parts.scheme != "https" or parts.netloc not in {"shopee.com.br", "www.shopee.com.br"}:
+        return None
+    match = re.search(r"(?:/product/|-i\.)(\d+)[/.](\d+)/?$", parts.path)
+    if not match or match[2] != str(columns.get("itemid")):
+        return None
+    return {
+        "shop_id": match[1], "item_id": match[2], "title": title,
+        "product_url": f"https://shopee.com.br/product/{match[1]}/{match[2]}",
+        "source": "feed_shopee",
+    }
 
 
 def catalog_rows():
@@ -232,10 +264,6 @@ def collect(api, args):
             snapshot["catalog"][str(item_id)] = offer
 
     discovery = snapshot["discovery"]
-    direct = check("busca_por_palavra", lambda: api.products(keyword=quoted(args.keyword), listType=0, sortType=1, page=1, limit=10))
-    if direct is None:
-        direct = check("busca_por_palavra_sem_ordenacao",
-                       lambda: api.products(keyword=quoted(args.keyword), limit=10))
     top = check("produtos_em_alta", lambda: api.products(listType=2, limit=10))
     if top is not None:
         discovery["top_products"] = [product_summary(node) for node in top]
@@ -255,11 +283,14 @@ def collect(api, args):
             discovery["category_products"][str(category)] = group
             candidates.extend(group)
     wanted = tokens(args.keyword)
+    relevant_categories = [
+        offer["category_ids"][-1] for offer in snapshot["catalog"].values()
+        if offer["category_ids"] and offer["category_ids"][-1] in categories
+        and wanted & tokens(offer["title"])
+    ]
     fallback = {(offer["shop_id"], offer["item_id"]): offer
                 for offer in [*snapshot["catalog"].values(), *candidates]
                 if wanted and wanted <= tokens(offer["title"])}
-    discovery["keyword_source"] = "shopee" if direct else "filtro_local" if fallback else None
-    discovery["keyword_results"] = [product_summary(node) for node in direct] if direct else list(fallback.values())
 
     for op, key, fields in (
         ("shopOfferV2", "shops", "shopId shopName commissionRate periodEndTime"),
@@ -273,18 +304,58 @@ def collect(api, args):
                               for row in records]
 
     feeds = check("listItemFeeds", lambda: api.call("listItemFeeds", "feeds { datafeedId totalCount feedMode }"))
-    feed_ids = [feed["datafeedId"] for feed in (feeds or {}).get("feeds") or [] if feed.get("datafeedId")]
-    if feed_ids:
-        feed_page = check("getItemFeedData", lambda: api.call(
-            "getItemFeedData", "rows { columns updateType } pageInfo { hasMore totalCount }",
-            datafeedId=quoted(feed_ids[0]), offset=0, limit=10,
-        ))
-        if feed_page is not None:
-            discovery["feed_sample"] = {"rows_checked": len(feed_page.get("rows") or []),
-                                        "has_more": (feed_page.get("pageInfo") or {}).get("hasMore")}
-            private["feed_sample"] = feed_page
+    feed_entries = (feeds or {}).get("feeds") or []
+    full_feeds = [f for f in feed_entries if f.get("datafeedId") and f.get("feedMode") == "FULL"]
+    feed_results = {}
+    known_ids = {str(item_id) for _, item_id, _ in rows}
+    if full_feeds:
+        total_rows = 0
+        has_more = False
+        for feed_number, feed in enumerate(full_feeds[:2], start=1):
+            limit = 500 if wanted else 10
+            offset = 0
+            page_has_more = False
+            for _ in range(1 if limit == 10 else 4):
+                feed_page = check(f"getItemFeedData/{feed_number}/{offset}", lambda: api.call(
+                    "getItemFeedData", "rows { columns } pageInfo { hasMore totalCount }",
+                    datafeedId=quoted(feed["datafeedId"]), offset=offset, limit=limit,
+                ))
+                if feed_page is None:
+                    break
+                feed_rows = feed_page.get("rows") or []
+                total_rows += len(feed_rows)
+                page_has_more = bool((feed_page.get("pageInfo") or {}).get("hasMore"))
+                for row in feed_rows:
+                    offer = feed_product(row, wanted)
+                    if offer:
+                        feed_results[(offer["shop_id"], offer["item_id"])] = offer
+                if not page_has_more or not feed_rows:
+                    break
+                offset += len(feed_rows)
+            has_more = has_more or bool(feed_page is None or page_has_more)
+        discovery["feed_sample"] = {"rows_checked": total_rows, "has_more": has_more}
     else:
-        statuses["getItemFeedData"] = {"status": "bloqueado", "detail": "sem ID de feed disponível"}
+        statuses["getItemFeedData"] = {"status": "bloqueado", "detail": "sem feed completo disponível"}
+
+    has_new_feed = any(item_id not in known_ids for _, item_id in feed_results)
+    keyword_matches = {}
+    for category in list(dict.fromkeys(relevant_categories or categories))[:3] if wanted and not has_new_feed else []:
+        direct = check(f"busca_por_categoria/{category}", lambda: api.products(
+            keyword=quoted(args.keyword), productCatId=category, limit=20))
+        for node in direct or []:
+            if wanted <= tokens(node.get("productName")):
+                offer = product_summary(node)
+                keyword_matches[(offer["shop_id"], offer["item_id"])] = offer
+    discovery["keyword_source"] = (
+        "feed_shopee" if feed_results else "shopee_categoria" if keyword_matches
+        else "filtro_local" if fallback else None
+    )
+    all_matches = {**fallback, **feed_results, **keyword_matches}
+    results = sorted(all_matches.values(), key=lambda offer: offer["item_id"] in known_ids)
+    discovery["keyword_results"] = results[:20]
+    discovery["keyword_new_count"] = sum(offer["item_id"] not in known_ids for offer in results[:20])
+    print(f"Busca: {len(results[:20])} resultados, {discovery['keyword_new_count']} novos para o catálogo.",
+          flush=True)
 
     if args.generate_links and rows:
         urls = [url for _, _, url in rows]
@@ -328,7 +399,7 @@ def collect(api, args):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--keyword", default="Attack Shark X11")
+    parser.add_argument("--keyword", default="mouse")
     parser.add_argument("--validation-id", type=int)
     parser.add_argument("--generate-links", action="store_true")
     parser.add_argument("--output", type=Path, required=True)

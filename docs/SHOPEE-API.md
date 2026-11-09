@@ -2,8 +2,8 @@
 
 O workflow **Shopee — ofertas e diagnóstico** consulta os anúncios cadastrados em `_data/shopee_ofertas.csv`. O resultado separa preços verificados, candidatos para revisão e o status de cada operação. As credenciais vêm de `SHOPEE_APP_ID` e `SHOPEE_APP_SECRET`.
 
-- **Ofertas** — consulta por loja e anúncio, busca por palavra, listas de produtos em alta, categorias, lojas e campanhas. Se a busca da Shopee falhar, o script procura o termo entre as ofertas que conseguiu consultar. O alcance dessa busca local é limitado à amostra.
-- **Feed** — lista os feeds disponíveis e verifica a primeira página do primeiro feed com até dez registros. A prévia guarda somente a cobertura do teste. O conteúdo bruto fica restrito à exportação local opcional.
+- **Ofertas** — consulta por loja e anúncio, busca por palavra com filtro de categoria, listas de produtos em alta, lojas e campanhas. O script confere se o título corresponde ao termo, remove duplicatas e prioriza anúncios novos. Começa pelo feed oficial e tenta a consulta por categoria quando a amostra não traz anúncios novos. A coleta diária começa com o termo `mouse`, e o campo `keyword` permite testar outros termos.
+- **Feed** — lê até duas fontes completas. Verifica até quatro páginas de 500 registros por fonte. A prévia inclui candidatos que correspondem ao termo e informa a cobertura da amostra.
 - **Links** — a opção manual `generate_links` testa a geração individual e em lote para os anúncios cadastrados. Os links já publicados continuam a ser lidos do CSV. O teste não gera links no agendamento diário.
 - **Conversões** — consulta os últimos sete dias, com paginação. O log registra o estado da consulta. A exportação privada opcional grava o total líquido somente quando a paginação termina.
 - **Validações** — o relatório exige um ID de validação da conta. Configure o Secret opcional `SHOPEE_VALIDATION_ID` para consultá-lo na rotina. Sem ID o relatório fica bloqueado.
