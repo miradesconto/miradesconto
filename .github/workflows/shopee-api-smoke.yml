@@ -33,11 +33,8 @@ jobs:
           if not app_id or not secret:
               raise SystemExit("Secrets da Shopee ausentes ou vazios.")
 
-          def graphql(operation, query, variables=None):
-              body = {"query": query}
-              if variables is not None:
-                  body["variables"] = variables
-              payload = json.dumps(body, separators=(",", ":")).encode()
+          def graphql(operation, query):
+              payload = json.dumps({"query": query}, separators=(",", ":")).encode()
               timestamp = str(int(time.time()))
               signature = hashlib.sha256(
                   (app_id + timestamp).encode() + payload + secret.encode()
@@ -57,7 +54,11 @@ jobs:
                   raise SystemExit(f"{operation}: falha de conexão ou resposta inválida.") from None
               if result.get("errors"):
                   codes = [e.get("extensions", {}).get("code") for e in result["errors"]]
-                  safe_codes = [str(c) for c in codes if type(c) is int]
+                  meanings = {10000: "erro de sistema", 10010: "consulta inválida",
+                              10020: "falha de autenticação", 10030: "limite de tráfego",
+                              11000: "erro de processamento"}
+                  safe_codes = [f"{c}: {meanings.get(c, 'desconhecido')}"
+                                for c in codes if type(c) is int]
                   detail = ", ".join(safe_codes) or "sem código numérico"
                   raise SystemExit(f"{operation}: a Shopee retornou erro GraphQL ({detail}).")
               return result.get("data", {}).get(operation)
@@ -77,43 +78,55 @@ jobs:
                       raise ValueError("Redirecionamento fora da Shopee.")
                   return super().redirect_request(request, fp, code, msg, headers, new_url)
 
-          offers = graphql("productOfferV2", """
-            query {
-              productOfferV2(keyword: "mouse Attack Shark X11", limit: 1) {
-                nodes { itemId shopId productName productLink }
-              }
-            }
-          """)
-          nodes = (offers or {}).get("nodes") or []
-          if not nodes:
-              raise SystemExit("Consulta autenticada, mas a busca não retornou ofertas.")
-          item = nodes[0]
-          item_id, shop_id = int(item["itemId"]), int(item["shopId"])
-          title = re.sub(r"[^\w .,+()/-]", " ", item["productName"] or "").strip()
-          print(f"Consulta OK: {title[:120]} (item {item_id}, loja {shop_id}).", flush=True)
-          if not re.search(r"\battack\s*shark\b.*\bx11\b", title, re.IGNORECASE):
-              raise SystemExit("O resultado não corresponde ao modelo escolhido.")
-          if not shopee_url(item.get("productLink")):
-              raise SystemExit("A Shopee não retornou uma URL válida para o produto.")
+          # IDs do anúncio que já consta no catálogo do MiraDesconto.
+          item_id, shop_id = 48360418130, 1672861664
+          product_url = f"https://shopee.com.br/product/{shop_id}/{item_id}"
 
-          link = graphql("generateShortLink", """
-            mutation ($input: ShortLinkInput!) {
-              generateShortLink(input: $input) { shortLink }
-            }
-          """, {"input": {"originUrl": item["productLink"]}})
-          short_url = (link or {}).get("shortLink")
-          if not shopee_url(short_url):
-              raise SystemExit("A API não retornou um link curto válido da Shopee.")
-          print("Geração do link de afiliado OK.", flush=True)
+          def check_offer():
+              offers = graphql("productOfferV2", f"""
+                query {{
+                  productOfferV2(itemId: {item_id}, shopId: {shop_id}, limit: 1) {{
+                    nodes {{ itemId shopId productName }}
+                  }}
+                }}
+              """)
+              nodes = (offers or {}).get("nodes") or []
+              if not nodes:
+                  raise SystemExit("Consulta autenticada, mas o anúncio não retornou oferta.")
+              item = nodes[0]
+              if (int(item["itemId"]), int(item["shopId"])) != (item_id, shop_id):
+                  raise SystemExit("A consulta retornou outro anúncio.")
+              title = re.sub(r"[^\w .,+()/-]", " ", item["productName"] or "").strip()
+              print(f"Consulta OK: {title[:120]} (item {item_id}, loja {shop_id}).", flush=True)
 
-          try:
-              with build_opener(ShopeeRedirects()).open(short_url, timeout=20) as response:
-                  final_path = urlsplit(response.geturl()).path
-          except (URLError, TimeoutError, ValueError) as error:
-              detail = f"HTTP {error.code}" if isinstance(error, HTTPError) else "falha ao abrir"
-              raise SystemExit(f"Destino do link não verificado ({detail}).") from None
-          expected_paths = (f"-i.{shop_id}.{item_id}", f"/product/{shop_id}/{item_id}")
-          if not final_path.rstrip("/").endswith(expected_paths):
-              raise SystemExit("Destino do link não confirmado pelo ID do anúncio.")
-          print("Destino OK: o link abre o mesmo anúncio retornado pela busca.")
+          def check_affiliate_link():
+              link = graphql("generateShortLink", f"""
+                mutation {{
+                  generateShortLink(input: {{originUrl: "{product_url}"}}) {{ shortLink }}
+                }}
+              """)
+              short_url = (link or {}).get("shortLink")
+              if not shopee_url(short_url):
+                  raise SystemExit("A API não retornou um link curto válido da Shopee.")
+              print("Geração do link de afiliado OK.", flush=True)
+
+              try:
+                  with build_opener(ShopeeRedirects()).open(short_url, timeout=20) as response:
+                      final_path = urlsplit(response.geturl()).path
+              except (URLError, TimeoutError, ValueError) as error:
+                  detail = f"HTTP {error.code}" if isinstance(error, HTTPError) else "falha ao abrir"
+                  raise SystemExit(f"Destino do link não verificado ({detail}).") from None
+              expected_paths = (f"-i.{shop_id}.{item_id}", f"/product/{shop_id}/{item_id}")
+              if not final_path.rstrip("/").endswith(expected_paths):
+                  raise SystemExit("Destino do link não confirmado pelo ID do anúncio.")
+              print("Destino OK: o link abre o mesmo anúncio retornado pela busca.")
+
+          failed = False
+          for check in (check_offer, check_affiliate_link):
+              try:
+                  check()
+              except SystemExit as error:
+                  print(f"Falha: {error}", flush=True)
+                  failed = True
+          raise SystemExit(int(failed))
           PY
