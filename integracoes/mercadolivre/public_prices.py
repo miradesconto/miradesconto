@@ -17,21 +17,27 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / 'integracoes'))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import catalogo
+from qualidade import usable_price
 from tech_policy import category, reconcile
 from rebuild_catalog import refresh_one
 
 
 def update(current, timestamp, workers=10, rotate=False):
     products = current['products']
+    api_ids = {p['id'] for p in products
+               if (p.get('priceCheck') or {}).get('method') == 'ml-sale-price-v1'
+               and usable_price(p, timestamp)}
     published = set(current['publishedIds'])
     # Keep unpublished products, all affiliate URLs, and the editorial ordering.
     candidates = [(index, product) for index, product in enumerate(products)
-                  if (rotate or product['id'] in published or product.get('registrationSource') == 'affiliate-panel')
+                  if product['id'] not in api_ids
+                  and (rotate or product['id'] in published or product.get('registrationSource') == 'affiliate-panel')
                   and (current.get('metadata', {}).get('niche') != 'tech' or category(product))]
     result = dict(current)
     result['products'] = list(products)
-    confirmed = changed = 0
-    fresh_ids = set()
+    confirmed = len(api_ids)
+    changed = 0
+    fresh_ids = set(api_ids)
     failures = Counter()
     with ThreadPoolExecutor(max_workers=workers) as executor:
         futures = {executor.submit(refresh_one, product, timestamp.isoformat(timespec='seconds')): index
@@ -82,7 +88,8 @@ def update(current, timestamp, workers=10, rotate=False):
             print(f'Rotação: {len(newcomers)} produtos verificados entraram na vitrine')
     metadata['collectedAt'] = timestamp.strftime('%d/%m/%Y')
     metadata['apiSync'] = {
-        'source': 'Mercado Livre — páginas públicas de afiliados',
+        'source': 'Mercado Livre — API oficial e páginas de afiliados' if api_ids else 'Mercado Livre — páginas públicas de afiliados',
+        'officialApiPrices': len(api_ids),
         'updatedAt': timestamp.isoformat(timespec='seconds'),
         'strategy': 'exact-product-card-v1',
         'linksChecked': len(candidates),

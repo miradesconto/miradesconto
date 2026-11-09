@@ -43,15 +43,19 @@ class API:
         self.paths.append(path)
         if self.block == "bulk" and path.startswith("/items/bulk?"):
             raise d.AccessError(403)
-        if self.block == "seller" and path.startswith("/sites/"):
+        if self.block == "seller" and path.startswith("/users/"):
             raise d.AccessError(403)
         if self.block == "price" and "/sale_price?" in path:
             raise d.AccessError(403)
+        if path.startswith("/items/bulk?") and "attributes=" not in path:
+            return [{"id": row['id'], "status_code": 200,
+                     "body": dict(row, seller_id=row['seller']['id'])}
+                    for row in SEARCH_RESULT['results'] if row['id'] in path]
         if path.startswith("/items/bulk?"):
             return [{"id": SEED, "status_code": 200,
                      "body": {"id": SEED, "seller_id": SELLER}}]
-        if path.startswith("/sites/MLB/search?"):
-            return copy.deepcopy(SEARCH_RESULT)
+        if path.startswith(f"/users/{SELLER}/items/search?"):
+            return {"results": [row['id'] for row in SEARCH_RESULT['results']]}
         if path == f"/items/{NEW}":
             return {"id": NEW, "seller_id": SELLER, "site_id": "MLB",
                     "status": "active", "currency_id": "BRL", "variations": [],
@@ -184,10 +188,17 @@ class DiscoveryTests(unittest.TestCase):
         rows = [dict(SEARCH_RESULT["results"][0], id=f"MLB23456789{i:02d}",
                      permalink=f"https://produto.mercadolivre.com.br/MLB-23456789{i:02d}-notebook-_JM")
                 for i in range(12)]
-        with patch.object(client, "get", return_value={"results": rows}) as mocked:
+        def get(path):
+            if path.startswith('/users/'):
+                return {"results": [row['id'] for row in rows]}
+            if path.startswith('/items/bulk?'):
+                return [{"id": row['id'], "status_code": 200,
+                         "body": dict(row, seller_id=SELLER)} for row in rows]
+            return {}  # Item identity unconfirmed: do not request prices.
+        with patch.object(client, "get", side_effect=get) as mocked:
             report = d.discover(CATALOG, client, [SELLER], now=NOW)
         self.assertEqual(report["newCandidates"], 5)
-        self.assertEqual(mocked.call_count, 6)  # One search, five item checks.
+        self.assertEqual(mocked.call_count, 7)  # ID search, bulk, five item checks.
 
     def test_bearer_redirects_are_blocked(self):
         client = d.Client("synthetic-test-secret")

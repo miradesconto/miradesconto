@@ -297,8 +297,26 @@ def discover(catalog, client, explicit_sellers=(), now=None):
     discovered = {}
     for seller_id in sellers:
         try:
-            data = client.get("/sites/MLB/search?" + urlencode(
-                {"seller_id": seller_id, "limit": MAX_LISTINGS_PER_SELLER}))
+            listing = client.get(f"/users/{seller_id}/items/search?" + urlencode(
+                {"status": "active", "limit": MAX_LISTINGS_PER_SELLER}))
+            if not isinstance(listing, dict) or not isinstance(listing.get("results"), list):
+                raise ValueError("Resposta sem IDs")
+            ids = [i for i in listing["results"][:MAX_LISTINGS_PER_SELLER]
+                   if isinstance(i, str) and MLB_ID.fullmatch(i) and i not in known_ids]
+            data = {"results": []}
+            for start in range(0, len(ids), 20):
+                batch = ids[start:start + 20]
+                bulk = client.get("/items/bulk?" + urlencode({"ids": ",".join(batch)}))
+                if not isinstance(bulk, list):
+                    raise ValueError("Consulta múltipla inválida")
+                for entry in bulk:
+                    if not isinstance(entry, dict):
+                        continue
+                    body = entry.get("body")
+                    if (entry.get("status_code") == 200 and isinstance(body, dict)
+                            and entry.get("id") in batch and body.get("id") == entry["id"]
+                            and body.get("seller_id") == seller_id):
+                        data["results"].append(dict(body, seller={"id": seller_id}))
             candidates = candidates_for_seller(data, seller_id, known_ids)
             report["sellersExamined"] += 1
             report["discoveryAccess"] = "available"
@@ -375,7 +393,8 @@ def main(argv=None):
             or not destination.is_relative_to((ROOT / "preview").resolve())):
         raise ValueError("Arquivo de resultado deve ser JSON dentro de preview/")
     catalog = json.loads((ROOT / "dados/catalogo.json").read_text(encoding="utf-8"))
-    client = Client(os.getenv("ACCESS_TOKEN", ""))
+    from api_intelligence import Client as RenewingClient
+    client = RenewingClient()
     result = discover(catalog, client, parse_seller_ids(args.seller_ids))
     serialized = json.dumps(result, ensure_ascii=False, indent=2) + "\n"
     # API-controlled text must never echo the credential into an artifact.

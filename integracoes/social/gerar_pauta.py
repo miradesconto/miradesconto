@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 import json, math, re, sys
+from datetime import datetime, timezone
 from collections import Counter
 from pathlib import Path
 
@@ -74,7 +75,14 @@ def article_for(i, arts):
     m = [a for a in arts if i in a["ids"]]
     return sorted(m, key=lambda a: len(a["ids"]))[0] if m else None
 
-def score(p, radar, arts):
+def api_trend_matches(p, intelligence, now=None):
+    sys.path.insert(0, str(ROOT / 'integracoes/mercadolivre'))
+    from api_intelligence import fresh
+    if not fresh(intelligence.get('trendsCheckedAt'), now or datetime.now(timezone.utc), 24):
+        return []
+    return intelligence.get('matches', {}).get(str(p['id']), [])
+
+def score(p, radar, arts, intelligence=None):
     i, r = str(p["id"]), radar["byId"][str(p["id"])]
     featured = radar.get("featured") or []
     s = 55 if r.get("actionable") else 0
@@ -89,10 +97,12 @@ def score(p, radar, arts):
         s += 8
     if num(p.get("price")) < 50 and not article_for(i, arts):
         s -= 8
+    if api_trend_matches(p, intelligence or {}):
+        s += 15  # Small signal; never overrides price/history eligibility.
     return s
 
-def choose(products, radar, arts):
-    ranked = sorted([p for p in products if ok(p, radar)], key=lambda p: (-score(p, radar, arts), int(p.get("rank") or 999999)))
+def choose(products, radar, arts, intelligence=None):
+    ranked = sorted([p for p in products if ok(p, radar)], key=lambda p: (-score(p, radar, arts, intelligence), int(p.get("rank") or 999999)))
     out, cats, seen = [], Counter(), set()
     for p in ranked:
         c = str(p.get("category") or "Outros")
@@ -181,8 +191,14 @@ def markdown(payload):
 
 def main():
     cat, rad, arts = load_catalog(), load_radar(), articles()
-    selected = choose(cat.get("products", []), rad, arts)
+    try:
+        intelligence = json.loads((ROOT / '_data/mercadolivre_api.json').read_text(encoding='utf-8'))
+    except (OSError, ValueError):
+        intelligence = {}
+    selected = choose(cat.get("products", []), rad, arts, intelligence)
     posts = [make_entry(p, rad["byId"][str(p["id"])], arts, n) for n, p in enumerate(selected, 1)]
+    for post in posts:
+        post['marketTrendKeywords'] = api_trend_matches(post, intelligence)
     payload = {
         "sourceCollectedAt": cat.get("collectedAt"), "radarGeneratedAt": rad.get("generatedAt"),
         "generatedFrom": "Radar MiraDesconto + catálogo + artigos publicados", "count": len(posts),
