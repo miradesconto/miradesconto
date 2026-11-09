@@ -4,6 +4,16 @@
 {% if shopee_offer %}
 <div class="shopee-action{% if include.placement == 'top' %} shopee-action--top{% endif %}">
   <a class="price-cta shopee-cta-button" href="{{ shopee_offer.affiliate_url | escape }}" target="_blank" rel="sponsored nofollow noopener noreferrer" data-item-id="{{ shopee_offer.item_id | escape }}" data-item-name="{{ shopee_offer.title | escape }}" data-link-location="shopee-article-{{ include.placement | default: 'final' }}">Ver preço na Shopee <span aria-hidden="true">↗</span></a>
+  {% assign shopee_price = site.data.shopee_api_prices[shopee_offer.item_id] %}
+  {% if shopee_price.min and shopee_price.max and shopee_price.checked_at and include.placement == 'top' %}
+    {% assign shopee_checked = shopee_price.checked_at | date: "%s" | plus: 0 %}
+    {% assign shopee_age = site.time | date: "%s" | minus: shopee_checked %}
+    {% if shopee_age >= 0 and shopee_age < 129600 %}
+      <p class="shopee-action-note">Preço observado em {{ shopee_price.checked_at | date: "%d/%m/%Y" }}:
+        R$ {{ shopee_price.min | replace: ".", "," }}{% if shopee_price.min != shopee_price.max %} a R$ {{ shopee_price.max | replace: ".", "," }}{% endif %}.
+      </p>
+    {% endif %}
+  {% endif %}
   <p class="shopee-action-note">Link de afiliado · Confira preço, frete e disponibilidade na loja.</p>
 </div>
 {% else %}
