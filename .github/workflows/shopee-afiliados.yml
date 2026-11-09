@@ -4,7 +4,7 @@ on:
   schedule:
     - cron: '20 11 * * *'
   push:
-    branches: [codex/shopee-afiliados]
+    branches: [main, codex/shopee-afiliados]
     paths: [.github/workflows/shopee-afiliados.yml]
   workflow_dispatch:
     inputs:
@@ -38,7 +38,7 @@ jobs:
           SHOPEE_APP_ID: ${{ secrets.SHOPEE_APP_ID }}
           SHOPEE_APP_SECRET: ${{ secrets.SHOPEE_APP_SECRET }}
           KEYWORD: ${{ inputs.keyword }}
-          GENERATE_LINKS: ${{ inputs.generate_links || github.event_name == 'push' }}
+          GENERATE_LINKS: ${{ inputs.generate_links || (github.event_name == 'push' && github.ref == 'refs/heads/codex/shopee-afiliados') }}
           VALIDATION_ID: ${{ secrets.SHOPEE_VALIDATION_ID }}
         run: |
           args=(--keyword "${KEYWORD:-Attack Shark X11}" --output preview/shopee.json --public-prices preview/shopee-precos.json)
@@ -61,7 +61,7 @@ jobs:
               print("### Verificações da Shopee", file=summary)
               for name, check in result["checks"].items():
                   print(f"- **{name}**: {check['status']} {check.get('detail', '')}", file=summary)
-              print("\\n### Preços informados pela API", file=summary)
+              print("\n### Preços informados pela API", file=summary)
               for item, offer in result["catalog"].items():
                   low, high = offer["price_min_brl"], offer["price_max_brl"]
                   price = f"R$ {low}" if low == high and low else f"R$ {low} a R$ {high}" if low else "sem preço confirmado"
@@ -77,7 +77,7 @@ jobs:
           if-no-files-found: ignore
           retention-days: 7
   publish-prices:
-    if: github.ref == 'refs/heads/main' && vars.SHOPEE_PUBLICAR_PRECOS == 'true'
+    if: github.ref == 'refs/heads/main' && vars.SHOPEE_PUBLICAR_PRECOS != 'false'
     needs: review
     runs-on: ubuntu-latest
     timeout-minutes: 5
