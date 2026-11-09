@@ -29,3 +29,4 @@ jobs:
     needs: check
     if: needs.check.outputs.needed == 'true'
     uses: ./.github/workflows/mercadolivre-sync.yml
+    secrets: inherit

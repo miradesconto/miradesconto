@@ -3,6 +3,9 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+concurrency:
+  group: mercadolivre-api
+  cancel-in-progress: false
 jobs:
   authorize:
     if: github.ref == 'refs/heads/main'

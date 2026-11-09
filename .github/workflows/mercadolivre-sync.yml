@@ -2,17 +2,29 @@ name: Mercado Livre — sincronizar catálogo
 on:
   workflow_dispatch:
   workflow_call:
+    secrets:
+      ACCESS_TOKEN:
+        required: false
+      CLIENT_ID:
+        required: false
+      CLIENT_SECRET:
+        required: false
+      REFRESH_TOKEN:
+        required: false
+      GH_SECRETS_TOKEN:
+        required: false
   schedule:
     - cron: '8,23,38,53 * * * *'
   push:
     paths:
       - 'integracoes/mercadolivre/trigger.txt'
       - '.github/workflows/mercadolivre-sync.yml'
+      - 'integracoes/mercadolivre/api_intelligence.py'
 permissions:
   contents: write
   pages: write
 concurrency:
-  group: mercadolivre-sync
+  group: mercadolivre-api
   cancel-in-progress: false
 jobs:
   sync:
@@ -36,6 +48,29 @@ jobs:
           python -m unittest discover -s tests -v
       - name: Descobrir novos produtos nas listas cadastradas
         run: python integracoes/mercadolivre/import_links.py --sync
+      - name: Consultar API oficial e atualizar inteligência de mercado
+        id: official_api
+        continue-on-error: true
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          CLIENT_ID: ${{ secrets.CLIENT_ID }}
+          CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
+          REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
+          GH_SECRETS_TOKEN: ${{ secrets.GH_SECRETS_TOKEN }}
+        run: python integracoes/mercadolivre/api_intelligence.py
+      - name: Guardar evidências da API oficial
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mercadolivre-api-${{ github.run_id }}
+          path: |
+            integracoes/mercadolivre/api-status.json
+            _data/mercadolivre_api.json
+          if-no-files-found: warn
+          retention-days: 14
+      - name: Sinalizar falha inesperada da API
+        if: steps.official_api.outcome == 'failure'
+        run: echo '::warning::API oficial falhou; consulte a etapa de inteligência. Coleta pública preservada.'
       - name: Confirmar preços nos cartões dos links de afiliado
         run: python integracoes/mercadolivre/public_prices.py
       - name: Verificar cobertura de preços recentes
@@ -64,7 +99,7 @@ jobs:
           # A fila social é derivada do Radar e deve ser recalculada mesmo quando
           # a coleta de preço não altera o catálogo nesta execução.
           python integracoes/social/gerar_pauta.py
-          if git diff --quiet -- dados/catalogo.json historico _data/radar.json integracoes/social/pauta-do-dia.json integracoes/social/pauta-do-dia.md && [ -z "$(git ls-files --others --exclude-standard historico _data/radar.json integracoes/social/pauta-do-dia.json integracoes/social/pauta-do-dia.md)" ]; then
+          if git diff --quiet -- _data/mercadolivre_api.json integracoes/mercadolivre/api-status.json dados/catalogo.json historico _data/radar.json integracoes/social/pauta-do-dia.json integracoes/social/pauta-do-dia.md && [ -z "$(git ls-files --others --exclude-standard _data/mercadolivre_api.json integracoes/mercadolivre/api-status.json historico _data/radar.json integracoes/social/pauta-do-dia.json integracoes/social/pauta-do-dia.md)" ]; then
             echo 'Nenhuma mudança real; sem commit.'
             exit 0
           fi
@@ -72,6 +107,9 @@ jobs:
           python integracoes/automacao/cache_bust.py
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          for api_file in _data/mercadolivre_api.json integracoes/mercadolivre/api-status.json; do
+            if [ -f "$api_file" ]; then git add "$api_file"; fi
+          done
           git add historico dados/catalogo.json links-afiliados.json produtos.js catalogo _data/produtos.json _data/radar.json index.html
           git add integracoes/social/pauta-do-dia.json integracoes/social/pauta-do-dia.md
           git add _ofertas _data/ofertas_site.json produtos-extras.js docs/pinterest-destinos.json

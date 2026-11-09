@@ -8,18 +8,21 @@ imagem e preço confirmados antes de entrar na vitrine. URLs específicas copiad
 de listas usam `wid`, `source=lists` e `tracking_id` original; nenhum parâmetro
 de afiliado é inventado.
 
-O workflow `mercadolivre-sync.yml` consulta os 500 produtos publicados a cada
-hora, no minuto 17 (UTC). Às segundas-feiras, às 10h41 UTC, consulta também
-os produtos cadastrados na reserva e troca até 20 itens da vitrine. O GitHub
-pode atrasar execuções agendadas. O banner usa apenas preços confirmados nas
-últimas 24 horas para anunciar descontos de 50% ou mais.
+O workflow `mercadolivre-sync.yml` está agendado a cada 15 minutos (minutos
+8, 23, 38 e 53). Primeiro consulta a API oficial para enriquecer o catálogo,
+confirmar preços de anúncios sem variações e coletar tendências e rankings.
+Depois consulta as páginas públicas para preços não confirmados pela API.
+O GitHub pode atrasar execuções agendadas.
 
-O preço é extraído do cartão exato do anúncio aberto pelo link `meli.la`, com
-checagem de ID, variação e moeda. Se a página não confirmar o preço, o valor
-antigo mantém sua data de verificação e o produto não entra na rotação. A
-coleta não comprova estoque. A rota `/items/{id}/sale_price` da API retornou
-403 para os anúncios de outros vendedores; `hourly_prices.py` permanece no
-repositório, mas não é executado pelo workflow.
+O acesso por API é medido por recurso, sem presumir que o token libera anúncios
+de outros vendedores. Bloqueios 403 ficam registrados; não apagam preços nem
+criam estoque ou comissão presumidos. O relatório `api-status.json` e o resumo
+da execução mostram as contagens reais. A pauta usa tendências recentes apenas
+como um sinal adicional aos filtros existentes de preço e histórico.
+
+Veja [API operacional](../../docs/API-MERCADOLIVRE.md) para os recursos,
+autenticação, limites e consumo dos dados. A coleta pública continua verificando
+ID, variação e moeda; se não confirmar o preço, preserva a evidência anterior.
 
 Links individuais usam `affiliateUrl`. Para uma lista compartilhada, a geração
 deriva `offerUrl` do `productUrl` coletado na própria lista: exige HTTPS, domínio
