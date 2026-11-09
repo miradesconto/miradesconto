@@ -11,7 +11,7 @@ on:
       keyword:
         description: Termo para a busca de ofertas
         type: string
-        default: Attack Shark X11
+        default: mouse
       generate_links:
         description: Testar geração individual e em lote para os anúncios cadastrados
         type: boolean
@@ -41,16 +41,15 @@ jobs:
           GENERATE_LINKS: ${{ inputs.generate_links }}
           VALIDATION_ID: ${{ secrets.SHOPEE_VALIDATION_ID }}
         run: |
-          args=(--keyword "${KEYWORD:-Attack Shark X11}" --output preview/shopee.json --public-prices preview/shopee-precos.json)
+          args=(--keyword "${KEYWORD:-mouse}" --output preview/shopee.json --public-prices preview/shopee-precos.json)
           if [[ "$GENERATE_LINKS" == "true" ]]; then args+=(--generate-links); fi
           if [[ -n "$VALIDATION_ID" ]]; then args+=(--validation-id="$VALIDATION_ID"); fi
           python3 integracoes/shopee/afiliados.py "${args[@]}"
           if [[ "$GITHUB_REF" == "refs/heads/codex/shopee-busca-categoria" ]]; then
-            python3 integracoes/shopee/afiliados.py --keyword mouse --output preview/shopee-busca-mouse.json
             python3 - <<'PY'
           import json
           from pathlib import Path
-          data = json.loads(Path("preview/shopee-busca-mouse.json").read_text())["discovery"]
+          data = json.loads(Path("preview/shopee.json").read_text())["discovery"]
           assert data["keyword_new_count"] > 0, "A busca de teste precisa encontrar anúncios fora do catálogo."
           print(f"Busca validada via {data['keyword_source']}: {data['keyword_new_count']} anúncios novos.")
           PY
@@ -84,7 +83,6 @@ jobs:
           path: |
             preview/shopee.json
             preview/shopee-precos.json
-            preview/shopee-busca-mouse.json
           if-no-files-found: ignore
           retention-days: 7
   publish-prices:
