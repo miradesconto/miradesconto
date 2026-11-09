@@ -36,7 +36,7 @@
     const title = create('h3','auto-title',item.titulo.length > 55 ? item.titulo.slice(0,52)+'...' : item.titulo);
     title.title = item.titulo;
     body.append(title);
-    body.append(create('strong','auto-price',money.format(Number(item.preco_atual))));
+    body.append(create('strong','auto-price',(item.loja === 'Shopee' ? 'A partir de ' : '')+money.format(Number(item.preco_atual))));
     body.append(create('p','auto-note','Confirme preço e disponibilidade na loja'));
     const link = create('a','auto-cta','Ver Oferta ↗');
     link.href = item.link_afiliado;
