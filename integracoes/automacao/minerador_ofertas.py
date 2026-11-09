@@ -135,7 +135,7 @@ def mine_shopee(session, keywords):
                     rows.append(row)
             LOG.info("Shopee [%s]: %s candidatos", keyword, len(nodes))
         except (requests.RequestException, ValueError) as e:
-            LOG.warning("Shopee [%s]: %s", keyword, type(e).__name__)
+            LOG.warning("Shopee [%s]: %s", keyword, str(e)[:140] if isinstance(e, ValueError) else type(e).__name__)
     return rows, success == len(keywords)
 
 
@@ -239,13 +239,19 @@ def previous_items(path):
 
 def merge_items(shopee, ml, old, *, shopee_ok, ml_ok, limit=36):
     # Falhas não apagam links aprovados em execução anterior.
-    if not shopee_ok:
+    # Uma palavra-chave pode falhar mesmo com outras respostas autênticas.
+    # Publicar os resultados válidos da consulta parcial, sem descartar tudo.
+    if not shopee_ok and not shopee:
         shopee = [r for r in old if r["loja"] == "Shopee"]
     if not ml_ok and not ml:
         ml = [r for r in old if r["loja"] == "Mercado Livre"]
     unique = {}
-    for row in [*shopee, *ml]:
-        unique.setdefault(row["loja"] + ":" + row["link_afiliado"], row)
+    # Intercalar lojas para a vitrine não exibir somente um marketplace.
+    for i in range(max(len(shopee), len(ml))):
+        for group in (shopee, ml):
+            if i < len(group):
+                row = group[i]
+                unique.setdefault(row["loja"] + ":" + row["link_afiliado"], row)
     return list(unique.values())[:limit]
 
 
