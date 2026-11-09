@@ -16,13 +16,17 @@
 {% comment %}Não inventar preço: utilizar somente um campo disponível.{% endcomment %}
 {% assign preco = nil %}
 {% assign preco_texto = nil %}
-{% if offer.price != blank %}
+{% comment %}
+  Em Liquid/Jekyll, comparações "nil != blank" podem ser verdadeiras.
+  Utilizar checagem de presença: preço zero continua sem valor exibível.
+{% endcomment %}
+{% if offer.price %}
   {% assign preco = offer.price %}
   {% assign preco_texto = offer.priceText %}
-{% elsif product.price != blank %}
+{% elsif product.price %}
   {% assign preco = product.price %}
   {% assign preco_texto = product.priceText %}
-{% elsif p.currentPrice != blank %}
+{% elsif p.currentPrice %}
   {% assign preco = p.currentPrice %}
   {% assign preco_texto = p.currentPriceText %}
 {% endif %}
