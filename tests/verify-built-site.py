@@ -120,3 +120,29 @@ for href in catalog_page.links:
     if local.endswith('/'):local+='index.html'
     assert (root/local).exists(), (catalog_key,href)
 print('OK: catalogue navigation, sitemap, metadata, internal paths')
+
+
+# Smoke test da vitrine Liquid realmente renderizada (PT e EN).
+import re
+from html import unescape
+
+radar_source = json.loads((source / '_data' / 'radar.json').read_text(encoding='utf-8'))
+for lang_page, cta in [('index.html', 'Ver Oferta'), ('en/index.html', 'View Deal')]:
+    page_html = (root / lang_page).read_text(encoding='utf-8')
+    cards = re.findall(r'<article class="vitrine-card[^"]*" data-vitrine-id="([^"]+)"[^>]*>(.*?)</article>', page_html, re.S)
+    assert len(cards) == 4, f'{lang_page}: esperado 4 cards, encontrados {len(cards)}'
+    for product_id, body in cards:
+        product = radar_source['byId'].get(product_id)
+        assert product, (lang_page, product_id, 'item não está no radar')
+        assert cta in body, (lang_page, product_id, 'CTA ausente')
+        assert 'data-item-id="' + product_id + '"' in body, (lang_page, product_id, 'analytics ID divergente')
+        assert len(re.findall(r'class="vitrine-spec"', body)) <= 3, (lang_page, product_id, 'mais de 3 tags')
+        title = re.search(r'<h3[^>]*>(.*?)</h3>', body, re.S)
+        assert title and len(unescape(title.group(1)).strip()) <= 55, (lang_page, product_id, 'título longo')
+        expected_price = product.get('currentPriceText')
+        if expected_price:
+            assert expected_price in unescape(body), (lang_page, product_id, 'preço não renderizado')
+    if lang_page == 'index.html':
+        notebook = next((body for product_id, body in cards if product_id == 'MLB5879140276'), '')
+        assert 'Ryzen 5' in notebook, 'Fallback Liquid não gerou badge Ryzen 5'
+print('OK: 4 cards em PT/EN, CTA, preço inicial Liquid, limite de tags e títulos.')

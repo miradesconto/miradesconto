@@ -34,6 +34,7 @@ jobs:
           node test-catalogo.cjs
           node tests/test-offer-rotation.cjs
           node tests/test-price-refresh.cjs
+          node tests/test-vitrine-cro.cjs
           node blog/verify.cjs
           node tests/test-editorial-coverage.cjs
           node tests/test_editorial_visual.cjs

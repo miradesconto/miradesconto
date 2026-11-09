@@ -6,8 +6,23 @@
     <a href="{% if include.lang == 'en' %}{{ '/en/blog/' | relative_url }}{% else %}{{ '/radar/' | relative_url }}{% endif %}">{% if include.lang == 'en' %}Buying tips →{% else %}Ver Radar →{% endif %}</a>
   </div>
   <div class="vitrine-grid">
-    {% for id in site.data.ofertas_diarias.ids limit: 4 %}
-      {% include vitrine-card.html id=id lang=include.lang %}
+    {% comment %}
+      A seleção manual antiga ficou com IDs removidos do Radar.
+      Priorizar os destaques atuais; só contar cards com vínculo
+      individual válido. vitrine.js ainda exige preço verificado.
+    {% endcomment %}
+    {% assign vitrine_ids = site.data.radar.featured | default: site.data.ofertas_diarias.ids %}
+    {% assign exibidos = 0 %}
+    {% for id in vitrine_ids %}
+      {% if exibidos < 4 %}
+        {% assign item = site.data.radar.byId[id] %}
+        {% assign reg = site.data.produtos[id] %}
+        {% assign link_item = reg.affiliateUrl | default: item.affiliateUrl %}
+        {% if item and item.name and item.imageUrl and link_item and link_item != 'https://meli.la/1NguveN' and link_item != 'https://meli.la/1pyBZm8' %}
+          {% include vitrine-card.html id=id lang=include.lang %}
+          {% assign exibidos = exibidos | plus: 1 %}
+        {% endif %}
+      {% endif %}
     {% endfor %}
   </div>
   <p class="vitrine-footnote">{% if include.lang == 'en' %}Reference prices are provided by the retailer and are not verified historical prices.{% else %}O preço riscado, quando houver, é referência informada pela loja — não é histórico verificado.{% endif %}</p>
