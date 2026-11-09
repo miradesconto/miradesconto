@@ -84,7 +84,7 @@ assert.equal(card.hidden,false);
 assert.ok(fields.get('h3').textContent.length <= 55, 'Título dinâmico acima de 55 caracteres');
 assert.equal(fields.get('[data-specs]').children.length,3);
 assert.deepEqual(fields.get('[data-specs]').children.map(x=>x.textContent),['Ryzen 5','16GB RAM','512GB SSD']);
-assert.equal(fields.get('[data-price]').textContent,'R$ 2.900,00');
+assert.equal(fields.get('[data-price]').textContent.replace(/\s/g,' '),'R$ 2.900,00');
 assert.equal(fields.get('.vitrine-cta').href,valid.affiliateUrl);
 assert.equal(fields.get('.vitrine-cta').dataset.itemId,valid.id);
 assert.equal(fields.get('.vitrine-cta').attributes['aria-label'],'Ver oferta: '+valid.name);
