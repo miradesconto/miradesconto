@@ -1,10 +1,24 @@
 [
   {
+    "titulo": "Notebook VAIO FE16 AMD Ryzen 7 5825U, Linux, 8GB RAM 256GB M.2 NVMe 16\"  IPS - Cinza Grafite fe 16",
+    "preco_atual": 4020.65,
+    "imagem": "https://cf.shopee.com.br/file/br-11134207-81zup-mkv2xqtnpf5ue9",
+    "link_afiliado": "https://s.shopee.com.br/9KjUnH30sg",
+    "loja": "Shopee"
+  },
+  {
     "titulo": "Apresentador Controle Passador Slide Caneta Laser Profissional Sem Fio Preto Mouse Multimidia Wireless Usb Para Palestras Aulas Reuniões Apresentações Usb - Diggicom",
     "preco_atual": 20.99,
     "imagem": "https://http2.mlstatic.com/D_Q_NP_2X_736960-MLA108725614078_032026-AB.webp",
     "link_afiliado": "https://meli.la/32RGtBJ",
     "loja": "Mercado Livre"
+  },
+  {
+    "titulo": "Mini Case de alumínio para SSD M.2 NVME conector duplo Tipo C/USBA celular/computador ECASE-M2NV80",
+    "preco_atual": 54.9,
+    "imagem": "https://cf.shopee.com.br/file/br-11134207-7r98r-lm3n930algkr6d",
+    "link_afiliado": "https://s.shopee.com.br/9V2uza2NXj",
+    "loja": "Shopee"
   },
   {
     "titulo": "Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo  Preto 127/220v",
@@ -14,11 +28,25 @@
     "loja": "Mercado Livre"
   },
   {
+    "titulo": "Dissipador SSD M.2 2280 NVMe Delta-CN510 ARGB 5V 3 Pinos Aura Sync",
+    "preco_atual": 40.99,
+    "imagem": "https://cf.shopee.com.br/file/br-11134207-820m7-mou0986n2qyt11",
+    "link_afiliado": "https://s.shopee.com.br/906eOf4HYe",
+    "loja": "Shopee"
+  },
+  {
     "titulo": "Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB DDR4 • 512 GB SSD • Tela 15,6\" FHD IPS • Windows 11 Home • Wi-Fi 6",
     "preco_atual": 3779.0,
     "imagem": "https://http2.mlstatic.com/D_Q_NP_2X_872069-MLA96255973058_102025-T.webp",
     "link_afiliado": "https://meli.la/2b5LzSZ",
     "loja": "Mercado Livre"
+  },
+  {
+    "titulo": "Mini Case Transparente Para SSD M.2 NVME e NFGG Com Cabo Duplo PC Ou Android CGHD-M2NX920 EXBOM",
+    "preco_atual": 59.99,
+    "imagem": "https://cf.shopee.com.br/file/br-11134207-7r98o-m0xcrkj9sdefe8",
+    "link_afiliado": "https://s.shopee.com.br/9AQ4ay3eDh",
+    "loja": "Shopee"
   },
   {
     "titulo": "Caneta 3d Impressora Profissional + Refil Filamento + Usb",
@@ -28,11 +56,25 @@
     "loja": "Mercado Livre"
   },
   {
+    "titulo": "SSD NVME M.2 Kingston 4TB/ 2TB/ 1TB e 500GB NVMe PCIe 4.0 - SNV3S Preto",
+    "preco_atual": 839.0,
+    "imagem": "https://cf.shopee.com.br/file/br-11134207-820m7-mn3rxvtcvw1w90",
+    "link_afiliado": "https://s.shopee.com.br/8fTo035YEc",
+    "loja": "Shopee"
+  },
+  {
     "titulo": "Apple iPhone 15 (128 GB) - Azul - Distribuidor Autorizado",
     "preco_atual": 3779.0,
     "imagem": "https://http2.mlstatic.com/D_Q_NP_2X_831434-MLA96401363339_102025-AB.webp",
     "link_afiliado": "https://meli.la/2fjdF1E",
     "loja": "Mercado Livre"
+  },
+  {
+    "titulo": "SSD Kingston NV3 500GB M.2 NVMe PCIe – Alta Velocidade e Desempenho",
+    "preco_atual": 734.54,
+    "imagem": "https://cf.shopee.com.br/file/br-11134207-7r98o-m97fvgsnxjcpf7",
+    "link_afiliado": "https://s.shopee.com.br/8pnECM4utf",
+    "loja": "Shopee"
   },
   {
     "titulo": "Notebook Acer Aspire Go AG15-51P-39MU Intel Core i3-1305U 8GB 256ssd Windows 11 Home 15,3''",
@@ -42,11 +84,25 @@
     "loja": "Mercado Livre"
   },
   {
+    "titulo": "Dissipador de Calor SSD M.2 NVMe 2280 com Thermal Pad",
+    "preco_atual": 17.99,
+    "imagem": "https://cf.shopee.com.br/file/br-11134207-820ma-mrbmy2x8wm4l3f",
+    "link_afiliado": "https://s.shopee.com.br/8VANnk6BZd",
+    "loja": "Shopee"
+  },
+  {
     "titulo": "Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB SSD, Windows 11 Home, Tela 14\" IPS, Matte Gray - S3407CA-LY115W",
     "preco_atual": 7469.0,
     "imagem": "https://http2.mlstatic.com/D_Q_NP_2X_727317-MLA101294168698_122025-T.webp",
     "link_afiliado": "https://meli.la/2ZscFu8",
     "loja": "Mercado Livre"
+  },
+  {
+    "titulo": "Dissipador Alumínio SSD M.2 NVMe NGFF + Thermalpad para PC PS5 Notebook",
+    "preco_atual": 19.92,
+    "imagem": "https://cf.shopee.com.br/file/br-11134207-7r98o-m8nhpczsfg5t37",
+    "link_afiliado": "https://s.shopee.com.br/80E7Cp85aY",
+    "loja": "Shopee"
   },
   {
     "titulo": "Smart Tv Lg 43 Ld Wifi Bluetooth Full Hd 43lr6700psa Hdr10 Pro",
@@ -56,6 +112,13 @@
     "loja": "Mercado Livre"
   },
   {
+    "titulo": "Adaptador Conversor SSD NVME M.2 2230 (30mm) Para M.2 2280 (80mm) Extensão Suporte",
+    "preco_atual": 10.0,
+    "imagem": "https://cf.shopee.com.br/file/br-11134207-81z1k-mfumyhccbjlzcf",
+    "link_afiliado": "https://s.shopee.com.br/8AXXP87SFb",
+    "loja": "Shopee"
+  },
+  {
     "titulo": "Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto 127/220v",
     "preco_atual": 277.99,
     "imagem": "https://http2.mlstatic.com/D_Q_NP_2X_737140-MLB112939930644_072026-AB.webp",
@@ -63,11 +126,25 @@
     "loja": "Mercado Livre"
   },
   {
+    "titulo": "ACASIS Estação de Conectividade com Bloco para SSD 10Gbps USB-C Magnético com Ventilador de Arrefecimento para Série",
+    "preco_atual": 235.0,
+    "imagem": "https://cf.shopee.com.br/file/cn-11134207-820l4-mst8d0jzsw09e4",
+    "link_afiliado": "https://s.shopee.com.br/2LZkSPTf5U",
+    "loja": "Shopee"
+  },
+  {
     "titulo": "Notebook Acer Aspire Go 15 i7-13620H 16 GB 512 GB SSD Full HD",
     "preco_atual": 4928.0,
     "imagem": "https://http2.mlstatic.com/D_Q_NP_2X_707936-MLA116704651852_092026-T.webp",
     "link_afiliado": "https://meli.la/2HFXYWD",
     "loja": "Mercado Livre"
+  },
+  {
+    "titulo": "Ssd Nvme Samsung 256gb Pcie G3 X4 Mz-vlb256b (ML449)",
+    "preco_atual": 299.9,
+    "imagem": "https://cf.shopee.com.br/file/br-11134207-820m6-mswyauuj4vlz57",
+    "link_afiliado": "https://s.shopee.com.br/2VtAeiT1kX",
+    "loja": "Shopee"
   },
   {
     "titulo": "Notebook ASUS Vivobook Go 15 E1504 AMD RYZEN 5 7520U 8GB Ram 256GB SSD Linux KeepOS 15,6” FHD Black E1504FA-NJ731",
@@ -172,41 +249,6 @@
     "preco_atual": 164.0,
     "imagem": "https://http2.mlstatic.com/D_Q_NP_2X_702285-MLA80802875108_112024-AB.webp",
     "link_afiliado": "https://meli.la/2FRfdQt",
-    "loja": "Mercado Livre"
-  },
-  {
-    "titulo": "Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0 Boombox Com Radio Fm E Entrada Usb Pendrive Preto 127/220v",
-    "preco_atual": 149.24,
-    "imagem": "https://http2.mlstatic.com/D_Q_NP_2X_681719-MLA99467991212_112025-AB.webp",
-    "link_afiliado": "https://meli.la/26U5Bw7",
-    "loja": "Mercado Livre"
-  },
-  {
-    "titulo": "Fone Esportivo Bluetooth Corrida Sem Fio Prova Àgua Ciclismo Preto",
-    "preco_atual": 64.9,
-    "imagem": "https://http2.mlstatic.com/D_Q_NP_2X_888868-MLB117019480199_092026-AB.webp",
-    "link_afiliado": "https://meli.la/21uDpWj",
-    "loja": "Mercado Livre"
-  },
-  {
-    "titulo": "Monitor Gamer Acer Nitro Kg243y P1bip 23,8 | Full Hd  144hz  1ms Vrb  Ips  Hdmi  Displayport  Zeroframe Preto 127/220v",
-    "preco_atual": 650.0,
-    "imagem": "https://http2.mlstatic.com/D_Q_NP_2X_777139-MLA99536116310_122025-AB.webp",
-    "link_afiliado": "https://meli.la/1CiNg5W",
-    "loja": "Mercado Livre"
-  },
-  {
-    "titulo": "Fone De Ouvido Bluetooth 5.3 Par Sem Fio Duplo Todos Celular",
-    "preco_atual": 55.0,
-    "imagem": "https://http2.mlstatic.com/D_Q_NP_2X_760715-MLB109157249938_042026-AB-fone-de-ouvido-bluetooth-53-par-sem-fio-duplo-todos-celular.webp",
-    "link_afiliado": "https://meli.la/14UfzMq",
-    "loja": "Mercado Livre"
-  },
-  {
-    "titulo": "Smartphone Motorola Moto G06 - 256gb 4gb Ram + 8gb Ram Boost, E Camera 50mp Com Ai Bateria De 5200 Mah Tela 6.9 - Bege",
-    "preco_atual": 971.1,
-    "imagem": "https://http2.mlstatic.com/D_Q_NP_2X_793349-MLA91806774304_092025-AB.webp",
-    "link_afiliado": "https://meli.la/2zfQjut",
     "loja": "Mercado Livre"
   }
 ]
