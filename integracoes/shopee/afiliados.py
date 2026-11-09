@@ -20,7 +20,7 @@ ROOT = Path(__file__).resolve().parents[2]
 ENDPOINT = "https://open-api.affiliate.shopee.com.br/graphql"
 PRODUCT_FIELDS = (
     "shopId itemId productName shopName productLink imageUrl priceMin priceMax "
-    "commissionRate sales ratingStar productCatIds periodEndTime"
+    "sales ratingStar productCatIds periodEndTime"
 )
 ERROR_LABELS = {
     10000: "erro de sistema",
@@ -189,6 +189,15 @@ def net_commission(records):
     return format(total, ".2f")
 
 
+def price_snapshot(snapshot):
+    return {
+        item: {"min": offer["price_min_brl"], "max": offer["price_max_brl"],
+               "checked_at": snapshot["checked_at"]}
+        for item, offer in snapshot["catalog"].items()
+        if offer["price_min_brl"] and offer["price_max_brl"]
+    }
+
+
 def write_private(path, data):
     # Never used by the workflow in this public repository.
     with os.fdopen(
@@ -230,21 +239,26 @@ def collect(api, args):
     if top is not None:
         discovery["top_products"] = [product_summary(node) for node in top]
 
-    categories = [cat for offer in snapshot["catalog"].values() for cat in offer["category_ids"]
-                  if type(cat) is int and cat > 0]
-    candidates = list(top or [])
-    if categories:
-        category = categories[-1]
-        category_rows = check("ofertas_por_categoria",
+    categories = list(dict.fromkeys(
+        offer["category_ids"][-1] for offer in snapshot["catalog"].values()
+        if offer["category_ids"] and type(offer["category_ids"][-1]) is int
+        and offer["category_ids"][-1] > 0
+    ))
+    candidates = [product_summary(node) for node in top or []]
+    discovery["category_products"] = {}
+    for category in categories[:3]:
+        category_rows = check(f"ofertas_por_categoria/{category}",
                               lambda: api.products(listType=4, matchId=category, limit=10))
-        candidates.extend(category_rows or [])
+        if category_rows is not None:
+            group = [product_summary(node) for node in category_rows]
+            discovery["category_products"][str(category)] = group
+            candidates.extend(group)
     wanted = tokens(args.keyword)
-    fallback = {(node["shopId"], node["itemId"]): node for node in candidates
-                if wanted and wanted <= tokens(node.get("productName"))}
-    discovery["keyword_source"] = "shopee" if direct else "filtro_local"
-    discovery["keyword_results"] = [product_summary(node) for node in (direct or fallback.values())]
-    if not direct and not fallback:
-        discovery["keyword_source"] = None
+    fallback = {(offer["shop_id"], offer["item_id"]): offer
+                for offer in [*snapshot["catalog"].values(), *candidates]
+                if wanted and wanted <= tokens(offer["title"])}
+    discovery["keyword_source"] = "shopee" if direct else "filtro_local" if fallback else None
+    discovery["keyword_results"] = [product_summary(node) for node in direct] if direct else list(fallback.values())
 
     for op, key, fields in (
         ("shopOfferV2", "shops", "shopId shopName commissionRate periodEndTime"),
@@ -252,7 +266,10 @@ def collect(api, args):
     ):
         data = check(op, lambda: api.call(op, f"nodes {{ {fields} }}", limit=10))
         if data is not None:
-            discovery[key] = data.get("nodes") or []
+            records = data.get("nodes") or []
+            private[key] = records
+            discovery[key] = [{k: v for k, v in row.items() if k != "commissionRate"}
+                              for row in records]
 
     feeds = check("listItemFeeds", lambda: api.call("listItemFeeds", "feeds { datafeedId totalCount feedMode }"))
     feed_ids = [feed["datafeedId"] for feed in (feeds or {}).get("feeds") or [] if feed.get("datafeedId")]
@@ -312,6 +329,7 @@ def main():
     parser.add_argument("--generate-links", action="store_true")
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--private-report", type=Path)
+    parser.add_argument("--public-prices", type=Path)
     args = parser.parse_args()
     if args.validation_id is not None and args.validation_id <= 0:
         parser.error("--validation-id deve ser positivo")
@@ -320,6 +338,11 @@ def main():
         snapshot, private = collect(api, args)
         args.output.parent.mkdir(parents=True, exist_ok=True)
         args.output.write_text(json.dumps(snapshot, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        if args.public_prices and snapshot["catalog"]:
+            args.public_prices.parent.mkdir(parents=True, exist_ok=True)
+            args.public_prices.write_text(
+                json.dumps(price_snapshot(snapshot), indent=2) + "\n", encoding="utf-8"
+            )
         if args.private_report:
             write_private(args.private_report, private)
     except ApiError as error:
