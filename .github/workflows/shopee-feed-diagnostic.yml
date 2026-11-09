@@ -1,0 +1,69 @@
+name: Shopee — diagnóstico de busca
+on:
+  push:
+    branches: [codex/shopee-busca-feed]
+    paths: [.github/workflows/shopee-feed-diagnostic.yml]
+permissions:
+  contents: read
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Conferir busca nativa e formato do feed
+        env:
+          SHOPEE_APP_ID: ${{ secrets.SHOPEE_APP_ID }}
+          SHOPEE_APP_SECRET: ${{ secrets.SHOPEE_APP_SECRET }}
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          from concurrent.futures import ThreadPoolExecutor
+          from integracoes.shopee.afiliados import ApiError, Shopee, quoted
+
+          api = Shopee(os.environ["SHOPEE_APP_ID"], os.environ["SHOPEE_APP_SECRET"])
+
+          def probe(test):
+              label, arguments = test
+              try:
+                  result = api.call("productOfferV2", "nodes { itemId productName }", **arguments)
+                  print(label, "retornou", len(result.get("nodes") or []), flush=True)
+              except ApiError as error:
+                  print(label, str(error), flush=True)
+
+          probes = [
+              ("palavra única", {"keyword": quoted("mouse"), "limit": 20}),
+              ("termo em categoria", {"keyword": quoted("mouse"), "listType": 4, "matchId": 101998, "limit": 20}),
+              ("termo e filtro de categoria", {"keyword": quoted("mouse"), "productCatId": 101998, "limit": 20}),
+              ("termo com ordenação por vendas", {"keyword": quoted("mouse"), "sortType": 2, "limit": 20}),
+          ]
+          with ThreadPoolExecutor(max_workers=3) as pool:
+              list(pool.map(probe, probes))
+
+          data = api.call("listItemFeeds", "feeds { datafeedId datafeedName totalCount date feedMode }")
+          feeds = data.get("feeds") or []
+          print("FEEDS", [(f.get("datafeedName"), f.get("totalCount"), f.get("date"), f.get("feedMode")) for f in feeds][:20])
+          for feed in feeds[:4]:
+              try:
+                  page = api.call("getItemFeedData", "rows { columns updateType } pageInfo { offset limit totalCount hasMore }",
+                                  datafeedId=quoted(feed["datafeedId"]), offset=0, limit=50)
+              except ApiError as error:
+                  print("FEED FALHA", str(error))
+                  continue
+              rows = page.get("rows") or []
+              print("PAGE", page.get("pageInfo"), "rows", len(rows))
+              for row in rows[:2]:
+                  cols = row["columns"]
+                  try:
+                      cols = json.loads(cols) if isinstance(cols, str) else cols
+                  except ValueError:
+                      print("COLS não JSON", type(cols).__name__)
+                      continue
+                  print("COLS", type(cols).__name__,
+                        list(cols)[:45] if isinstance(cols, dict) else
+                        [list(x) if isinstance(x, dict) else type(x).__name__ for x in cols[:10]]
+                        if isinstance(cols, list) else None)
+          PY
