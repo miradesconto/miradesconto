@@ -1,23 +1,94 @@
+{% comment %}
+  Vitrine MiraDesconto (CRO): campos opcionais include.offer/include.product.
+  Preço prioritário: offer.price, product.price e radar.currentPrice.
+  Os dados de execução do catálogo são atualizados por vitrine.js.
+{% endcomment %}
 {% assign id = include.id %}
 {% assign p = site.data.radar.byId[id] %}
 {% assign reg = site.data.produtos[id] %}
-{% assign link = reg.affiliateUrl | default: p.affiliateUrl %}
+{% assign offer = include.offer %}
+{% assign product = include.product | default: p %}
+{% assign titulo = product.name | default: p.name %}
+{% assign imagem = product.imageUrl | default: p.imageUrl %}
+{% assign categoria = product.category | default: p.category %}
+{% assign link = reg.affiliateUrl | default: offer.affiliateUrl | default: product.affiliateUrl | default: p.affiliateUrl %}
+
+{% comment %}Não inventar preço: utilizar somente um campo disponível.{% endcomment %}
+{% assign preco = nil %}
+{% assign preco_texto = nil %}
+{% if offer.price != blank %}
+  {% assign preco = offer.price %}
+  {% assign preco_texto = offer.priceText %}
+{% elsif product.price != blank %}
+  {% assign preco = product.price %}
+  {% assign preco_texto = product.priceText %}
+{% elsif p.currentPrice != blank %}
+  {% assign preco = p.currentPrice %}
+  {% assign preco_texto = p.currentPriceText %}
+{% endif %}
+{% assign preco_num = preco | plus: 0 %}
+
+{% comment %}Formato BRL, usado apenas se não houver priceText pronto.{% endcomment %}
+{% if preco_num > 0 and preco_texto == blank %}
+  {% assign centavos_total = preco_num | times: 100 | round %}
+  {% assign reais = centavos_total | divided_by: 100 %}
+  {% assign centavos = centavos_total | modulo: 100 | prepend: '0' | slice: -2, 2 %}
+  {% assign milhar = reais | divided_by: 1000 %}
+  {% assign unidade = reais | modulo: 1000 | prepend: '000' | slice: -3, 3 %}
+  {% assign milhao = milhar | divided_by: 1000 %}
+  {% assign milhar_resto = milhar | modulo: 1000 | prepend: '000' | slice: -3, 3 %}
+  {% capture preco_texto %}R$ {% if milhao > 0 %}{{ milhao }}.{{ milhar_resto }}.{{ unidade }}{% elsif milhar > 0 %}{{ milhar }}.{{ unidade }}{% else %}{{ reais }}{% endif %},{{ centavos }}{% endcapture %}
+{% endif %}
+
+{% comment %}
+  Specs estruturadas: array ou string "Ryzen 5|16GB RAM|512GB SSD".
+  Na ausência delas, extrair apenas características explícitas no título.
+{% endcomment %}
+{% assign specs_source = include.specs | default: offer.specs | default: product.specs | default: reg.specs | default: p.specs %}
+{% assign specs_raw = '' %}
+{% if specs_source != blank %}
+  {% if specs_source.first %}
+    {% assign specs_raw = specs_source | join: '|' %}
+  {% else %}
+    {% assign specs_raw = specs_source %}
+  {% endif %}
+{% else %}
+  {% assign nome_lower = titulo | downcase %}
+  {% capture specs_raw %}{% if nome_lower contains 'ryzen 7' %}Ryzen 7|{% elsif nome_lower contains 'ryzen 5' %}Ryzen 5|{% elsif nome_lower contains 'core i7' %}Core i7|{% elsif nome_lower contains 'core i5' %}Core i5|{% elsif nome_lower contains 'core i3' %}Core i3|{% endif %}{% if nome_lower contains '16gb ram' or nome_lower contains '16 gb ram' or nome_lower contains '16gb de ram' %}16GB RAM|{% elsif nome_lower contains '8gb ram' or nome_lower contains '8 gb ram' or nome_lower contains '8gb de ram' %}8GB RAM|{% endif %}{% if nome_lower contains '512gb ssd' or nome_lower contains '512ssd' %}512GB SSD|{% elsif nome_lower contains '256gb ssd' or nome_lower contains '256ssd' %}256GB SSD|{% endif %}{% endcapture %}
+{% endif %}
+{% assign specs_raw = specs_raw | strip %}
+{% assign specs_lista = specs_raw | split: '|' %}
+
+{% comment %}Preservar bloqueio de links de lista não atribuídos a um produto.{% endcomment %}
 {% unless link == 'https://meli.la/1NguveN' or link == 'https://meli.la/1pyBZm8' %}
-{% if p and p.name and p.imageUrl and link %}
-<article class="vitrine-card" data-vitrine-id="{{ id | escape }}" data-locale="{{ include.lang | default: 'pt' }}">
+{% if p and titulo != blank and imagem != blank and link != blank %}
+<article class="vitrine-card vitrine-card--cro" data-vitrine-id="{{ id | escape }}" data-locale="{{ include.lang | default: 'pt' }}">
   <div class="vitrine-photo">
-    <img src="{{ p.imageUrl | escape }}" alt="{{ p.name | escape }}" width="400" height="300" loading="lazy" decoding="async">
+    <img src="{{ imagem | escape }}" alt="{{ titulo | escape }}" width="400" height="300" loading="lazy" decoding="async">
     <span class="vitrine-hot" data-hot hidden>{% if include.lang == 'en' %}Hot deal{% else %}Oferta quente{% endif %}</span>
   </div>
   <div class="vitrine-body">
-    <p class="vitrine-category">{{ p.category | escape }}</p>
-    <h3>{{ p.name | escape }}</h3>
-    <p class="vitrine-old" data-old hidden></p>
-    <strong class="vitrine-price" data-price>{% if include.lang == 'en' %}Check price at store{% else %}Conferir preço na loja{% endif %}</strong>
-    <p class="vitrine-check" data-checked>{% if include.lang == 'en' %}Price and availability may change{% else %}Preço e disponibilidade podem mudar{% endif %}</p>
+    <p class="vitrine-category">{{ categoria | escape }}</p>
+    <h3 title="{{ titulo | escape }}">{{ titulo | truncate: 55 | escape }}</h3>
+    <div class="vitrine-specs" data-specs aria-label="{% if include.lang == 'en' %}Product specifications{% else %}Especificações do produto{% endif %}"{% if specs_raw == blank %} hidden{% endif %}>
+      {% assign exibidas = 0 %}
+      {% for tag in specs_lista %}
+        {% assign tag_curta = tag | strip | truncate: 20, '' %}
+        {% if tag_curta != blank and exibidas < 3 %}
+          <span class="vitrine-spec">{{ tag_curta | escape }}</span>
+          {% assign exibidas = exibidas | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+    </div>
+    <div class="vitrine-pricing">
+      <p class="vitrine-old" data-old hidden></p>
+      <strong class="vitrine-price{% if preco_num <= 0 %} vitrine-price--missing{% endif %}" data-price>{% if preco_num > 0 %}{{ preco_texto | strip | escape }}{% elsif include.lang == 'en' %}On Sale!{% else %}Em Oferta!{% endif %}</strong>
+      <p class="vitrine-check" data-checked>{% if include.lang == 'en' %}Check current price and availability at the store{% else %}Confirme preço e disponibilidade na loja{% endif %}</p>
+    </div>
     <a class="vitrine-cta" href="{{ link | escape }}" target="_blank" rel="sponsored nofollow noopener noreferrer"
-       data-item-id="{{ id | escape }}" data-item-name="{{ p.name | escape }}" data-item-category="{{ p.category | escape }}" data-link-location="daily-showcase"
-       data-destination-type="product">{% if include.lang == 'en' %}Check deal at store ↗{% else %}Conferir oferta na loja ↗{% endif %}</a>
+       aria-label="{% if include.lang == 'en' %}View deal: {% else %}Ver oferta: {% endif %}{{ titulo | escape }}"
+       data-item-id="{{ id | escape }}" data-item-name="{{ titulo | escape }}" data-item-category="{{ categoria | escape }}" data-link-location="daily-showcase"
+       data-destination-type="product">{% if include.lang == 'en' %}View Deal{% else %}Ver Oferta{% endif %} <span aria-hidden="true">↗</span></a>
     <small class="vitrine-disclosure">{% if include.lang == 'en' %}Affiliate link · Brazilian store (BRL){% else %}Link de afiliado · valores em reais{% endif %}</small>
   </div>
 </article>
