@@ -36,7 +36,7 @@ TECH = ("notebook", "ssd", "ram", "ryzen", "intel", "core i", "rtx", "placa de v
         "iphone", "tablet", "câmera", "camera", "roteador", "usb", "hdmi",
         "smartwatch", "controle", "bluetooth", "impressora", "drone", "pc gamer")
 # Excluir vestuário/bolsas encontrados como falso positivo na busca por "notebook".
-NOT_TECH = ("mochila", "bolsa viagem", "bolsa feminina", "pochete", "roupa", "camiseta",
+NOT_TECH = ("mochila", "bolsa", "pochete", "roupa", "camiseta",
             "calça", "tenis esportivo", "sapato", "mala de viagem")
 QUERIES = ("notebook", "ssd nvme", "monitor gamer", "fone bluetooth", "mouse gamer")
 LOG = logging.getLogger("minerador")
