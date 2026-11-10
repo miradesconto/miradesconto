@@ -14,6 +14,8 @@ assert.match(markup, /Em Oferta!/);
 assert.match(markup, /data-specs/);
 assert.match(markup, /Ver Oferta/);
 assert.match(markup, /data-link-location="daily-showcase"/);
+assert.match(markup, /site\.data\.ofertas_automaticas/);
+assert.match(markup, /data-affiliate-image/);
 assert.match(style, /min-height:48px/);
 
 function element() {
@@ -22,6 +24,8 @@ function element() {
     dataset: {}, attributes: {},
     classList: {removed: [], remove(name) { this.removed.push(name); }},
     setAttribute(name, value) { this.attributes[name] = value; },
+    getAttribute(name) { return this.attributes[name] || this[name] || null; },
+    closest(name) { return name === '.vitrine-photo' ? {querySelector:()=>null} : null; },
     replaceChildren(...children) { this.children = children; }
   };
 }
@@ -77,6 +81,8 @@ const rotated = {
 const window = {MIRA_DATA:{products:[valid]},MiraQuality:{usablePrice:()=>true}};
 vm.runInNewContext(fs.readFileSync('vitrine.js','utf8'), {
   window, document, Intl, Date, setInterval:()=>{},
+  fetch:()=>Promise.reject(new Error('sem rede no teste')),
+
   CustomEvent:class { constructor(type) { this.type = type; } }
 });
 
