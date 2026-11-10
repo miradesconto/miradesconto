@@ -1,38 +1,96 @@
+{% comment %}
+  MiraDesconto / Shopee: seleção editorial da API oficial.
+  Somente produtos existentes, com URL de afiliado e preço observado.
+  Destaque: monitor gamer, com fallback determinístico para outro produto real.
+{% endcomment %}
 {% assign shopee_items = site.data.shopee_gamer_publicados %}
 {% if shopee_items and shopee_items.size > 0 %}
-{% assign shopee_groups = 'headset gamer|mouse gamer sem fio|teclado mecanico switch red|cadeira gamer|monitor gamer 144hz|placa de video rtx|ssd nvme 1tb' | split: '|' %}
-{% assign shopee_labels = 'Headsets|Mouses sem fio|Teclados switch red|Cadeiras|Monitores 144 Hz|Placas RTX|SSDs NVMe 1 TB' | split: '|' %}
-{% assign shopee_pick = include.offset | default: 0 %}
+{% assign shopee_monitors = shopee_items | where: 'keyword', 'monitor gamer 144hz' %}
+{% assign shopee_primary = shopee_monitors.first | default: shopee_items.first %}
+{% assign shopee_compact_keywords = 'headset gamer|mouse gamer sem fio|teclado mecanico switch red|ssd nvme 1tb|placa de video rtx|cadeira gamer' | split: '|' %}
+{% assign shopee_compact_labels = 'Áudio gamer|Mouse sem fio|Teclado mecânico|Armazenamento|Placa de vídeo|Setup gamer' | split: '|' %}
 <section class="shopee-highlights{% if include.wrap %} wrap{% endif %}" aria-labelledby="shopee-highlights-title">
   <div class="shopee-highlights-head">
     <div>
-      <p class="shopee-highlights-kicker">Seleção Shopee</p>
-      <h2 id="shopee-highlights-title">{{ include.title | escape }}</h2>
-      <p>{{ include.note | escape }}</p>
+      <p class="shopee-highlights-kicker">SELEÇÃO DE TECNOLOGIA</p>
+      <h2 id="shopee-highlights-title">{{ include.title | default: 'Na mira da Shopee' | escape }}</h2>
+      <p>{{ include.note | default: 'Produtos para quem leva tecnologia a sério, selecionados entre as ofertas do dia.' | escape }}</p>
     </div>
-    <a class="shopee-highlights-all" href="{{ '/shopee-gamer/' | relative_url }}">Ver todos na Shopee gamer →</a>
+    <a class="shopee-highlights-all" href="{{ '/shopee-gamer/' | relative_url }}">Explorar a seleção completa <span aria-hidden="true">↗</span></a>
   </div>
-  <div class="shopee-highlights-grid">
-    {% for keyword in shopee_groups %}
-      {% assign shopee_group = shopee_items | where: 'keyword', keyword %}
-      {% assign shopee_item = shopee_group[shopee_pick] | default: shopee_group.first %}
-      {% if shopee_item and shopee_item.image_url and shopee_item.affiliate_url %}
-        {% assign shopee_checked = shopee_item.checked_at | date: '%s' | plus: 0 %}
-        {% assign shopee_age = site.time | date: '%s' | minus: shopee_checked %}
-        <a class="shopee-highlight-card" href="{{ shopee_item.affiliate_url | escape }}" rel="sponsored nofollow noopener noreferrer" target="_blank" data-item-id="{{ shopee_item.item_id | escape }}" data-item-name="{{ shopee_item.title | escape }}" data-link-location="shopee-{{ include.location | escape }}">
-          <div class="shopee-highlight-image"><img src="{{ shopee_item.image_url | escape }}" alt="" width="320" height="240" loading="lazy" decoding="async"></div>
-          <div class="shopee-highlight-body">
-            <span class="shopee-highlight-category">{{ shopee_labels[forloop.index0] }}</span>
-            <h3>{{ shopee_item.title | escape }}</h3>
-            {% if shopee_age >= 0 and shopee_age < 7200 %}
-              <p class="shopee-highlight-price">R$ {{ shopee_item.price_min_brl | replace: '.', ',' }}{% if shopee_item.price_min_brl != shopee_item.price_max_brl %} a R$ {{ shopee_item.price_max_brl | replace: '.', ',' }}{% endif %}</p>
-            {% endif %}
-            <span class="shopee-highlight-cta">Ver na Shopee ↗</span>
-          </div>
+
+  <div class="shopee-showcase">
+    {% if shopee_primary and shopee_primary.affiliate_url and shopee_primary.image_url %}
+    {% assign primary_checked = shopee_primary.checked_at | date: '%s' | plus: 0 %}
+    {% assign primary_age = site.time | date: '%s' | minus: primary_checked %}
+    <article class="shopee-feature" data-shopee-feature>
+      <div class="shopee-feature-photo">
+        <span class="shopee-feature-label">EM DESTAQUE</span>
+        <img src="{{ shopee_primary.image_url | escape }}" alt="{{ shopee_primary.title | escape }}" loading="eager" decoding="async" width="600" height="520">
+        <span class="shopee-photo-fallback" hidden>Foto em atualização</span>
+      </div>
+      <div class="shopee-feature-info">
+        <span class="shopee-feature-store">Shopee · {{ shopee_primary.merchant | default: 'Tecnologia' | escape }}</span>
+        <h3>{{ shopee_primary.title | escape }}</h3>
+        <p class="shopee-feature-description">Conheça o produto e compare as características antes de decidir.</p>
+        {% if primary_age >= 0 and primary_age < 129600 and shopee_primary.price_min_brl %}
+        <div class="shopee-feature-price">
+          <span>Preço observado na plataforma</span>
+          <strong>A partir de R$ {{ shopee_primary.price_min_brl | replace: '.', ',' }}</strong>
+        </div>
+        {% else %}
+        <p class="shopee-feature-price-unavailable">Consulte o preço atualizado na loja</p>
+        {% endif %}
+        <a class="shopee-feature-cta" href="{{ shopee_primary.affiliate_url | escape }}" rel="sponsored nofollow noopener noreferrer" target="_blank" data-item-id="{{ shopee_primary.item_id | escape }}" data-item-name="{{ shopee_primary.title | escape }}" data-link-location="shopee-feature" data-destination-type="product">
+          Ver oferta na Shopee <span aria-hidden="true">↗</span>
         </a>
-      {% endif %}
-    {% endfor %}
+        <span class="shopee-feature-footnote">Link de afiliado · preço, frete e estoque sujeitos a alteração</span>
+      </div>
+    </article>
+    {% endif %}
+
+    <div class="shopee-finds" aria-label="Achados de tecnologia na Shopee">
+      <div class="shopee-finds-heading">
+        <span>ACHADOS PARA SEU SETUP</span>
+        <strong>Mais opções para comparar</strong>
+      </div>
+      <div class="shopee-finds-grid">
+        {% assign featured_ids = '|' | append: shopee_primary.item_id | append: '|' %}
+        {% assign shown = 0 %}
+        {% for keyword in shopee_compact_keywords %}
+          {% assign current_group = shopee_items | where: 'keyword', keyword %}
+          {% assign item = current_group.first %}
+          {% assign token = '|' | append: item.item_id | append: '|' %}
+          {% unless item == nil or item.affiliate_url == nil or item.image_url == nil or featured_ids contains token %}
+            {% if shown < 4 %}
+              {% assign item_checked = item.checked_at | date: '%s' | plus: 0 %}
+              {% assign item_age = site.time | date: '%s' | minus: item_checked %}
+              <article class="shopee-find-card" data-shopee-find>
+                <div class="shopee-find-photo">
+                  <img src="{{ item.image_url | escape }}" alt="{{ item.title | escape }}" loading="lazy" decoding="async" width="200" height="170">
+                  <span class="shopee-photo-fallback" hidden>Foto em atualização</span>
+                </div>
+                <div class="shopee-find-info">
+                  <span class="shopee-find-category">{{ shopee_compact_labels[forloop.index0] }}</span>
+                  <h3>{{ item.title | escape }}</h3>
+                  {% if item_age >= 0 and item_age < 129600 and item.price_min_brl %}
+                  <div class="shopee-find-price"><span>A partir de</span><strong>R$ {{ item.price_min_brl | replace: '.', ',' }}</strong></div>
+                  {% else %}
+                  <span class="shopee-find-price-missing">Consulte o preço</span>
+                  {% endif %}
+                  <a href="{{ item.affiliate_url | escape }}" class="shopee-find-link" target="_blank" rel="sponsored nofollow noopener noreferrer" data-item-id="{{ item.item_id | escape }}" data-item-name="{{ item.title | escape }}" data-link-location="shopee-finds" data-destination-type="product">
+                    Ver oferta <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+              </article>
+              {% assign shown = shown | plus: 1 %}
+              {% assign featured_ids = featured_ids | append: item.item_id | append: '|' %}
+            {% endif %}
+          {% endunless %}
+        {% endfor %}
+      </div>
+    </div>
   </div>
-  <p class="shopee-highlights-disclosure">Links de afiliado. Confira preço, frete e disponibilidade na loja.</p>
+  <p class="shopee-highlights-disclosure">Seleção obtida por integração oficial de afiliados. Não é garantia de menor preço; confirme valores, frete e disponibilidade na Shopee.</p>
 </section>
 {% endif %}
