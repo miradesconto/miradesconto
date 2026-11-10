@@ -5,6 +5,13 @@ import tempfile
 import unittest
 from pathlib import Path
 
+# O pipeline geral do catálogo não instala requests. O workflow do minerador
+# instala a dependência e executa estes testes de forma completa.
+try:
+    import requests
+except ModuleNotFoundError as exc:
+    raise unittest.SkipTest("requests instalado e validado no workflow do minerador") from exc
+
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT = ROOT / "integracoes/automacao/cache_imagens_ofertas.py"
 spec = importlib.util.spec_from_file_location("cache_image_test", SCRIPT)
