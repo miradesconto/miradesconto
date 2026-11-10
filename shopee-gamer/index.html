@@ -3,8 +3,8 @@ layout: null
 permalink: /shopee-gamer/
 ---
 {% assign items = site.data.shopee_gamer_publicados %}
-{% assign keywords = "headset gamer|mouse gamer sem fio|teclado mecanico switch red|cadeira gamer|monitor gamer 144hz|placa de video rtx|ssd nvme 1tb" | split: "|" %}
-{% assign labels = "Headsets gamer|Mouses gamer sem fio|Teclados mecânicos switch red|Cadeiras gamer|Monitores gamer 144 Hz|Placas de vídeo RTX|SSDs NVMe 1 TB" | split: "|" %}
+{% assign keywords = "headset gamer|mouse gamer sem fio|teclado mecanico switch red|cadeira gamer|monitor gamer 144hz|placa de video rtx|ssd nvme 1tb|mesa gamer|suporte para monitor|microfone usb|power bank usb c|console playstation 5|console xbox series|controle dualsense|controle xbox series" | split: "|" %}
+{% assign labels = "Headsets gamer|Mouses gamer sem fio|Teclados mecânicos switch red|Cadeiras gamer|Monitores gamer 144 Hz|Placas de vídeo RTX|SSDs NVMe 1 TB|Mesas gamer|Suportes para monitor|Microfones USB|Carregadores portáteis|PlayStation 5|Xbox Series X e S|Controles DualSense para PS5|Controles para Xbox Series" | split: "|" %}
 <!doctype html>
 <html lang="pt-BR">
 <head>
@@ -32,6 +32,7 @@ permalink: /shopee-gamer/
       <p class="eyebrow">Seleção MiraDesconto</p>
       <h1>Ofertas gamer na Shopee</h1>
       <p class="radar-lead">{% if items.size > 0 %}{{ items.size }} anúncios conferidos. Confirme o preço, a variante, o frete e a disponibilidade na loja.{% else %}Estamos atualizando a seleção. <a href="/catalogo/">Explore o catálogo de tecnologia</a> enquanto isso.{% endif %}</p>
+      <p>Montando um setup para GTA VI? Veja as opções de PlayStation 5, Xbox Series X e S e controles por plataforma. <a href="https://www.rockstargames.com/VI">Confira o jogo na Rockstar</a>.</p>
       <p>Publicidade. A página contém links de afiliado. O MiraDesconto pode receber comissão por compras atribuídas a esses links.</p>
     </div>
   </section>
@@ -64,6 +65,7 @@ permalink: /shopee-gamer/
               {% endif %}
               <div class="radar-card-body">
                 <h3>{{ item.title | escape }}</h3>
+                {% if item.sales %}<p class="radar-evidence">{{ item.sales }} vendas informadas pela Shopee na coleta.</p>{% endif %}
                 {% if item.merchant %}<p class="radar-evidence">Loja {{ item.merchant | escape }}</p>{% endif %}
                 {% assign checked_seconds = item.checked_at | date: "%s" | plus: 0 %}
                 {% assign price_age = site.time | date: "%s" | minus: checked_seconds %}

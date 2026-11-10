@@ -39,6 +39,26 @@ TECH = ("notebook", "ssd", "ram", "ryzen", "intel", "core i", "rtx", "placa de v
 NOT_TECH = ("mochila", "bolsa", "pochete", "roupa", "camiseta",
             "calça", "tenis esportivo", "sapato", "mala de viagem")
 QUERIES = ("notebook", "ssd nvme", "monitor gamer", "fone bluetooth", "mouse gamer")
+SHOPEE_SETUP_QUERIES = {
+    "mesa gamer": r"\b(?:mesa|escrivaninha)\b.*\b(?:gamer|computador)\b|\b(?:madesa|bonatto)\b",
+    "cadeira gamer": r"\bcadeira\b.*\b(?:gamer|ergon[oô]mica)\b",
+    "suporte para monitor": r"\b(?:suporte|bra[cç]o)\b.*\b(?:monitor|vesa)\b",
+    "microfone usb": r"\bmicrofone\b.*\busb\b",
+    "power bank usb c": r"\b(?:power\s*bank|carregador port[aá]til)\b",
+    "controle dualsense": r"\bdualsense\b",
+    "controle xbox series": r"\b(?:controle|controller)\b.*\bxbox\b",
+    "console playstation 5": r"\b(?:playstation\s*5|ps5)\b",
+    "console xbox series": r"\bxbox\s+series\s+[sx]\b",
+}
+SHOPEE_NON_PRODUCT = re.compile(
+    r"\b(?:adesivo|skin|capa|case|decora(?:tivo|ção)|fake|réplica|miniatura|"
+    r"conta digital|aluguel|sorteio|caixa vazia|peças de reposição)\b", re.I
+)
+SHOPEE_CONSOLE_ACCESSORY = re.compile(
+    r"\b(?:controle|dualsense|suporte|base|carregador|fone|headset|"
+    r"m[ií]dia|jogo|garantia|cabo|ventilador|pel[ií]cula)\b", re.I
+)
+SHOPEE_PUBLISHED = "_data/shopee_gamer_publicados.json"
 LOG = logging.getLogger("minerador")
 FIELDS = ("titulo", "preco_atual", "imagem", "link_afiliado", "loja")
 
@@ -154,6 +174,97 @@ def mine_shopee(session, keywords):
         except (requests.RequestException, ValueError) as e:
             LOG.warning("Shopee [%s]: %s", keyword, str(e)[:140] if isinstance(e, ValueError) else type(e).__name__)
     return rows, success == len(keywords)
+
+
+def select_shopee_setup(nodes, keyword, checked_at):
+    matches = re.compile(SHOPEE_SETUP_QUERIES[keyword], re.I)
+    results = []
+    for node in nodes:
+        if not isinstance(node, dict):
+            continue
+        title = str(node.get("productName") or "").strip()
+        if not matches.search(title) or SHOPEE_NON_PRODUCT.search(title) or "<" in title:
+            continue
+        low, high = price(node.get("priceMin")), price(node.get("priceMax"))
+        if keyword.startswith("console ") and (
+            not low or low < 1500 or SHOPEE_CONSOLE_ACCESSORY.search(title.split(" com ", 1)[0])
+        ):
+            continue
+        item_id, shop_id = str(node.get("itemId", "")), str(node.get("shopId", ""))
+        link, image = https(node.get("offerLink")), https(node.get("imageUrl"))
+        if not item_id.isdigit() or not shop_id.isdigit() or not low or not high or high < low:
+            continue
+        if not re.fullmatch(r"https://s\.shopee\.com\.br/[A-Za-z0-9]+", link):
+            continue
+        if not re.fullmatch(r"https://cf\.shopee\.com\.br/file/[A-Za-z0-9_-]+", image):
+            continue
+        try:
+            sales = int(node.get("sales") or 0)
+            rating = float(node.get("ratingStar") or 0)
+            ends = int(node.get("periodEndTime") or 0)
+        except (TypeError, ValueError):
+            continue
+        if sales <= 0 or not 4.5 <= rating <= 5 or (ends and ends <= checked_at.timestamp()):
+            continue
+        results.append({
+            "shop_id": shop_id,
+            "item_id": item_id,
+            "title": title,
+            "merchant": str(node.get("shopName") or "").replace("<", ""),
+            "price_min_brl": f"{low:.2f}",
+            "price_max_brl": f"{high:.2f}",
+            "image_url": image,
+            "keyword": keyword,
+            "checked_at": checked_at.isoformat(),
+            "affiliate_url": link,
+            "sales": sales,
+        })
+    results.sort(key=lambda row: row["sales"], reverse=True)
+    return results
+
+
+def refresh_shopee_setup(session):
+    app_id, secret = os.getenv("SHOPEE_APP_ID", ""), os.getenv("SHOPEE_APP_SECRET", "")
+    if not app_id or not secret:
+        return False
+    old = json.loads((ROOT / SHOPEE_PUBLISHED).read_text(encoding="utf-8"))
+    checked_at = datetime.now(timezone.utc).replace(microsecond=0)
+    selected = []
+    seen = set()
+    refreshed = set()
+    for keyword in SHOPEE_SETUP_QUERIES:
+        query = (
+            'query { productOfferV2(keyword: %s, listType: 2, sortType: 2, page: 1, limit: 20)'
+            ' { nodes { itemId shopId productName shopName offerLink imageUrl priceMin priceMax'
+            ' sales ratingStar periodEndTime } } }'
+        ) % json.dumps(keyword)
+        try:
+            data = shopee_request(session, app_id, secret, query)
+            nodes = (data.get("productOfferV2") or {}).get("nodes") or []
+            ranked = select_shopee_setup(nodes, keyword, checked_at)
+        except (requests.RequestException, ValueError) as error:
+            LOG.warning("Seleção Shopee [%s]: %s", keyword, type(error).__name__)
+            continue
+        batch = []
+        for offer in ranked:
+            if offer["item_id"] in seen:
+                continue
+            seen.add(offer["item_id"])
+            batch.append(offer)
+            if len(batch) == 2:
+                break
+        if batch:
+            refreshed.add(keyword)
+            selected.extend(batch)
+        LOG.info("Seleção Shopee [%s]: %d anúncios aprovados", keyword, len(batch))
+    if not selected:
+        return False
+    # Preserva o catálogo editorial e as categorias que falharam nesta coleta.
+    selected.extend(row for row in old if row["item_id"] not in seen
+                    and not (row.get("sales") and row["keyword"] in refreshed))
+    content = json.dumps(selected, ensure_ascii=False, indent=2) + "\n"
+    return commit_github(SHOPEE_PUBLISHED, content)
+
 
 
 def is_tech(title):
@@ -358,7 +469,8 @@ def run(*, publish=False, output=ROOT / "api/produtos.json"):
         if publish:
             uploaded = commit_github("api/produtos.json", content)
             LOG.info("GitHub atualizado=%s", uploaded)
-            if uploaded:
+            setup_uploaded = refresh_shopee_setup(s)
+            if uploaded or setup_uploaded:
                 trigger_pages(s)
         return 0
 

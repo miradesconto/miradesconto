@@ -11,6 +11,13 @@ function directAffiliate(p) {
     if (['https://meli.la/1NguveN','https://meli.la/1pyBZm8'].includes(link)) return false;
     return p.affiliateLinkType !== 'list' && p.available !== false;
 }
+const shopeeCategories = {
+ 'mesa gamer': 'Setup',
+ 'cadeira gamer': 'Setup',
+ 'suporte para monitor': 'Setup',
+ 'microfone usb': 'Áudio',
+ 'power bank usb c': 'Celulares',
+};
 let shopeeProducts = [];
 try {
  const data = JSON.parse(document.getElementById('shopee-offers-data')?.textContent || '[]');
@@ -19,7 +26,7 @@ try {
    && /^https:\/\/s\.shopee\.com\.br\/[A-Za-z0-9]+$/.test(p.affiliateUrl || '')
    && (String(p.imageUrl || '').startsWith('/assets/ofertas/') || String(p.imageUrl || '').startsWith('https://cf.shopee.com.br/file/'))
    && !ids.has(p.id) && ids.add(p.id))
-   .map(p => ({...p, id:'SHOPEE-'+p.id, price:Number(p.price), category:'Gaming', store:'Shopee', platform:'shopee'}));
+   .map(p => ({...p, id:'SHOPEE-'+p.id, price:Number(p.price), category:shopeeCategories[p.category] || 'Gaming', store:'Shopee', platform:'shopee'}));
 } catch (_) { /* Keep Mercado Livre working if the Shopee feed is invalid. */ }
 const products = (source?.products || []).filter(p => p.name && directAffiliate(p));
 const allOffers = () => products.concat(shopeeProducts);
