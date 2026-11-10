@@ -23,10 +23,12 @@
     {% if shopee_primary and shopee_primary.affiliate_url and shopee_primary.image_url %}
     {% assign primary_checked = shopee_primary.checked_at | date: '%s' | plus: 0 %}
     {% assign primary_age = site.time | date: '%s' | minus: primary_checked %}
+    {% assign primary_photo_local = site.data.shopee_fotos_locais[shopee_primary.item_id] %}
+    {% assign primary_photo = primary_photo_local | default: shopee_primary.image_url %}
     <article class="shopee-feature" data-shopee-feature>
       <div class="shopee-feature-photo">
         <span class="shopee-feature-label">EM DESTAQUE</span>
-        <img src="{{ shopee_primary.image_url | escape }}" alt="{{ shopee_primary.title | escape }}" loading="eager" decoding="async" width="600" height="520">
+        <img src="{{ primary_photo | escape }}" alt="{{ shopee_primary.title | escape }}" loading="eager" decoding="async" width="600" height="520">
         <span class="shopee-photo-fallback" hidden>Foto em atualização</span>
       </div>
       <div class="shopee-feature-info">
@@ -65,9 +67,11 @@
             {% if shown < 4 %}
               {% assign item_checked = item.checked_at | date: '%s' | plus: 0 %}
               {% assign item_age = site.time | date: '%s' | minus: item_checked %}
+              {% assign find_photo_local = site.data.shopee_fotos_locais[item.item_id] %}
+              {% assign find_photo = find_photo_local | default: item.image_url %}
               <article class="shopee-find-card" data-shopee-find>
                 <div class="shopee-find-photo">
-                  <img src="{{ item.image_url | escape }}" alt="{{ item.title | escape }}" loading="lazy" decoding="async" width="200" height="170">
+                  <img src="{{ find_photo | escape }}" alt="{{ item.title | escape }}" loading="lazy" decoding="async" width="200" height="170">
                   <span class="shopee-photo-fallback" hidden>Foto em atualização</span>
                 </div>
                 <div class="shopee-find-info">
