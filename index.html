@@ -86,23 +86,23 @@ body.focused-catalog .vitrine-diaria,body.search-active .vitrine-diaria{display:
 <section id="auto-ofertas" class="auto-section" aria-labelledby="auto-ofertas-title">
   <div class="auto-head">
     <div>
-      <p class="auto-kicker">Shopee + Mercado Livre</p>
+      <p class="auto-kicker">Outras ofertas de tecnologia</p>
       <h2 id="auto-ofertas-title">Mais ofertas para comparar</h2>
-      <p>Ofertas encontradas pelo robô. As fotos são servidas pelo MiraDesconto para evitar falhas de carregamento.</p>
+      <p>Mais opções do Mercado Livre, com imagens protegidas e links individuais.</p>
     </div>
   </div>
   <div class="auto-grid" data-auto-grid>
     {% comment %}Fallback renderizado no servidor: não depende da API nem de JS no navegador.{% endcomment %}
-    {% assign ofertas_shopee = site.data.ofertas_automaticas | where: 'loja', 'Shopee' %}
-    {% for oferta in ofertas_shopee limit: 6 %}
+    {% assign ofertas_ml = site.data.ofertas_automaticas | where: 'loja', 'Mercado Livre' %}
+    {% for oferta in ofertas_ml limit: 6 %}
     <article class="auto-card" data-auto-server-card>
       <div class="auto-photo">
         <img src="{{ oferta.imagem | escape }}" alt="{{ oferta.titulo | escape }}" width="400" height="300" loading="lazy" decoding="async">
       </div>
       <div class="auto-body">
-        <span class="auto-store">Shopee</span>
+        <span class="auto-store">Mercado Livre</span>
         <h3 class="auto-title" title="{{ oferta.titulo | escape }}">{{ oferta.titulo | truncate: 55 | escape }}</h3>
-        <strong class="auto-price">A partir de R$ {{ oferta.preco_atual | replace: '.', ',' }}</strong>
+        <strong class="auto-price">R$ {{ oferta.preco_atual | replace: '.', ',' }}</strong>
         <p class="auto-note">Confirme o valor na loja</p>
         <a class="auto-cta" href="{{ oferta.link_afiliado | escape }}" target="_blank" rel="sponsored nofollow noopener noreferrer" data-link-location="auto-showcase" data-destination-type="product">Ver Oferta ↗</a>
         <small class="auto-disclosure">Link de afiliado · valores em reais</small>
