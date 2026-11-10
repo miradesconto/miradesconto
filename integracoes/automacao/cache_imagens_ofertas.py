@@ -142,7 +142,11 @@ def mirror(root: Path = ROOT, getter=requests.get, workers: int = 7) -> dict:
     if len(valid) < 4:
         raise ValueError(f"Apenas {len(valid)} fotos válidas; preservar feed anterior")
     # Conservar todas as ofertas do parceiro: sem garantia artificial de estoque infinito.
-    path.write_text(json.dumps(valid, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    snapshot = root / "_data/ofertas_automaticas.json"
+    snapshot.parent.mkdir(parents=True, exist_ok=True)
+    output = json.dumps(valid, ensure_ascii=False, indent=2) + "\n"
+    path.write_text(output, encoding="utf-8")
+    snapshot.write_text(output, encoding="utf-8")
     LOG.info("CACHE_FOTOS_OK total=%d shopee=%d mercado_livre=%d removidos=%d", len(valid), shopee, ml, broken)
     return {"total": len(valid), "shopee": shopee, "mercado_livre": ml, "sem_foto": broken}
 
