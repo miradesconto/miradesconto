@@ -41,6 +41,8 @@ jobs:
           node tests/test-qualidade.cjs
           node tests/test-catalogo-evidence.cjs
           node tests/test-analytics.cjs
+          node --check gamer.js
+          node --check modo-visual.js
       - name: Confirmar geração reproduzível
         run: |
           python integracoes/catalogo.py generate
@@ -53,6 +55,15 @@ jobs:
           destination: ./_site
       - name: Verificar SEO e links no HTML publicado
         run: python tests/verify-built-site.py _site
+      - name: Confirmar visual Clássico e Gamer na prévia
+        run: |
+          test -s _site/index.html
+          test -s _site/gamer.html
+          test -s _site/gamer.js
+          test -s _site/gamer.css
+          test -s _site/modo-visual.js
+          test -s _site/modo-visual.css
+          test -s _site/api/produtos.json
       - name: Guardar prévia para revisão, sem publicar
         uses: actions/upload-artifact@v4
         with:
