@@ -12,26 +12,28 @@
     const previousLink = img.dataset.affiliateImage;
     const mirrored = imagesByAffiliate.get(product.affiliateUrl)
       || (previousLink === product.affiliateUrl && validCacheImage(original) ? original : null);
+    const photo = img.closest('.vitrine-photo');
+    const oldFallback = photo?.querySelector('.vitrine-image-unavailable');
+    if (oldFallback) oldFallback.remove();
     img.onerror = null;
     img.src = mirrored || product.imageUrl;
     img.dataset.affiliateImage = product.affiliateUrl;
-    img.addEventListener('error', function failedImage() {
-      img.removeEventListener('error', failedImage);
+    img.hidden = false;
+    img.onerror = function handleBrokenPhoto() {
+      img.onerror = null;
       const backup = imagesByAffiliate.get(product.affiliateUrl);
       if (backup && img.getAttribute('src') !== backup) {
         img.src = backup;
       } else {
         img.hidden = true;
-        const photo = img.closest('.vitrine-photo');
         if (photo && !photo.querySelector('.vitrine-image-unavailable')) {
-          const text = document.createElement('span');
-          text.className = 'vitrine-image-unavailable';
-          text.textContent = 'Foto em atualização';
-          photo.append(text);
+          const label = document.createElement('span');
+          label.className = 'vitrine-image-unavailable';
+          label.textContent = 'Foto em atualização';
+          photo.append(label);
         }
       }
-    });
-    img.hidden = false;
+    };
   }
 
   const money = (n, en) => new Intl.NumberFormat(en ? 'en-US' : 'pt-BR', {style:'currency',currency:'BRL'}).format(n);
