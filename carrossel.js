@@ -41,7 +41,7 @@
     const affiliateUrl = d.affiliate || '';
     const loja = d.store || '';
     const price = Number(d.price);
-    const localPhoto = /^\\/assets\\/ofertas\\/[a-f0-9]{24}\\.(?:jpg|webp|png)$/.test(imageUrl);
+    const localPhoto = /^\/assets\/ofertas\/[a-f0-9]{24}\.(?:jpg|webp|png)$/.test(imageUrl);
     let validLink = false;
     try {
       const uri = new URL(affiliateUrl);
