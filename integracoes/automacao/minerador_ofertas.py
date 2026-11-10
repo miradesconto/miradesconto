@@ -35,6 +35,9 @@ TECH = ("notebook", "ssd", "ram", "ryzen", "intel", "core i", "rtx", "placa de v
         "monitor", "headset", "fone", "mouse", "teclado", "smartphone", "celular",
         "iphone", "tablet", "câmera", "camera", "roteador", "usb", "hdmi",
         "smartwatch", "controle", "bluetooth", "impressora", "drone", "pc gamer")
+# Excluir vestuário/bolsas encontrados como falso positivo na busca por "notebook".
+NOT_TECH = ("mochila", "bolsa", "pochete", "roupa", "camiseta",
+            "calça", "tenis esportivo", "sapato", "mala de viagem")
 QUERIES = ("notebook", "ssd nvme", "monitor gamer", "fone bluetooth", "mouse gamer")
 LOG = logging.getLogger("minerador")
 FIELDS = ("titulo", "preco_atual", "imagem", "link_afiliado", "loja")
@@ -154,7 +157,8 @@ def mine_shopee(session, keywords):
 
 
 def is_tech(title):
-    return any(term in str(title).lower() for term in TECH)
+    name = str(title or "").lower()
+    return not any(term in name for term in NOT_TECH) and any(term in name for term in TECH)
 
 
 def mine_ml_bot(session, keywords):
@@ -246,7 +250,7 @@ def previous_items(path):
     try:
         old = json.loads(path.read_text(encoding="utf-8"))
         return [normalized for p in old if isinstance(p, dict) and
-                (normalized := normalize(*(p.get(k) for k in FIELDS))) is not None]
+                (normalized := normalize(*(p.get(k) for k in FIELDS))) is not None and is_tech(normalized["titulo"])]
     except (OSError, ValueError, TypeError):
         return []
 

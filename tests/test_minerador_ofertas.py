@@ -127,6 +127,12 @@ class MineradorTest(unittest.TestCase):
         out2 = m.merge_items([], [ml], [shop], shopee_ok=False, ml_ok=True)
         self.assertEqual([x['loja'] for x in out2], ['Shopee', 'Mercado Livre'])
 
+    def test_nicho_exclui_mochilas_e_bolsas(self):
+        self.assertFalse(m.is_tech('Mochila Grande Reforçada para Notebook'))
+        self.assertFalse(m.is_tech('Bolsa Reforçada para Notebook 15'))
+        self.assertTrue(m.is_tech('Notebook Acer Ryzen 5 com SSD 512GB'))
+        self.assertTrue(m.is_tech('Dissipador SSD M.2 NVMe'))
+
     def test_feed_e_home_estao_conectados(self):
         data = json.loads((ROOT / 'api/produtos.json').read_text(encoding='utf-8'))
         self.assertGreaterEqual(len(data),4)
