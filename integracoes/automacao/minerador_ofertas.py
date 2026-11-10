@@ -258,7 +258,7 @@ def previous_items(path):
                 continue
             img = p.get("imagem")
             local = isinstance(img, str) and re.fullmatch(
-                r"/assets/ofertas/[a-f0-9]{24}\\.(?:jpg|png|webp)", img)
+                r"/assets/ofertas/[a-f0-9]{24}\.(?:jpg|png|webp)", img)
             if local:
                 image_file = ROOT / img.lstrip("/")
                 if not image_file.is_file():
