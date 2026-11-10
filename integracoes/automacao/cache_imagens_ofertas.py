@@ -114,6 +114,57 @@ def cached_image(row: dict, root: Path, getter=requests.get) -> str | None:
     return "/assets/ofertas/" + image_file.name
 
 
+def mirror_curated_shopee(root: Path = ROOT, getter=requests.get, workers: int = 7) -> dict[str, str]:
+    """Espelha fotos dos destaques oficiais sem alterar links nem preços.
+
+    O cadastro da Shopee mantém a URL remota; Liquid consulta este mapa local
+    pelo item_id. Em instabilidade do CDN preservamos os arquivos anteriores.
+    """
+    source = root / "_data/shopee_gamer_publicados.json"
+    output = root / "_data/shopee_fotos_locais.json"
+    if not source.exists():
+        return {}
+    offers = json.loads(source.read_text(encoding="utf-8"))
+    if not isinstance(offers, list):
+        raise ValueError("Lista Shopee inválida")
+    try:
+        older = json.loads(output.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        older = {}
+    if not isinstance(older, dict):
+        older = {}
+    unique = {}
+    for offer in offers:
+        if not isinstance(offer, dict):
+            continue
+        item_id = str(offer.get("item_id", ""))
+        if not re.fullmatch(r"[0-9]{5,24}", item_id):
+            continue
+        url = offer.get("affiliate_url")
+        image = offer.get("image_url")
+        if not isinstance(url, str) or not url.startswith("https://s.shopee.com.br/"):
+            continue
+        if not isinstance(image, str):
+            continue
+        unique[item_id] = {"imagem": image, "link_afiliado": url}
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        fetched = list(pool.map(lambda row: cached_image(row, root, getter), unique.values()))
+    photos = {}
+    for item_id, img in zip(unique, fetched):
+        if img:
+            photos[item_id] = img
+        else:
+            previous = older.get(item_id)
+            if isinstance(previous, str) and re.fullmatch(
+                r"/assets/ofertas/[a-f0-9]{24}\.(jpg|png|webp)", previous
+            ) and (root / previous.lstrip("/")).is_file():
+                photos[item_id] = previous
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_text(json.dumps(photos, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    LOG.info("CACHE_SHOPEE_DESTAQUES_OK fotos=%d itens=%d", len(photos), len(unique))
+    return photos
+
+
 def mirror(root: Path = ROOT, getter=requests.get, workers: int = 7) -> dict:
     path = root / "api/produtos.json"
     products = json.loads(path.read_text(encoding="utf-8"))
@@ -148,6 +199,7 @@ def mirror(root: Path = ROOT, getter=requests.get, workers: int = 7) -> dict:
     path.write_text(output, encoding="utf-8")
     snapshot.write_text(output, encoding="utf-8")
     LOG.info("CACHE_FOTOS_OK total=%d shopee=%d mercado_livre=%d removidos=%d", len(valid), shopee, ml, broken)
+    mirror_curated_shopee(root, getter=getter, workers=workers)
     return {"total": len(valid), "shopee": shopee, "mercado_livre": ml, "sem_foto": broken}
 
 
