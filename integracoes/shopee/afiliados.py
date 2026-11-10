@@ -9,6 +9,7 @@ import re
 import sys
 import time
 import unicodedata
+from collections import deque
 from datetime import datetime, timezone
 from decimal import Decimal, InvalidOperation
 from pathlib import Path
@@ -128,10 +129,15 @@ def product_summary(node):
 
 def tokens(text):
     ascii_text = unicodedata.normalize("NFKD", text or "").encode("ascii", "ignore").decode()
-    return set(re.findall(r"[a-z0-9]+", ascii_text.lower()))
+    normalized = ascii_text.lower()
+    normalized = re.sub(r"\b(\d+)\s+(hz|tb)\b", r"\1\2", normalized)
+    normalized = re.sub(r"\brtx(?=\d)", "rtx ", normalized)
+    normalized = re.sub(r"\bwireless\b", "sem fio", normalized)
+    normalized = re.sub(r"\bgaming\b", "gamer", normalized)
+    return set(re.findall(r"[a-z0-9]+", normalized)) - {"de"}
 
 
-def feed_product(row, wanted):
+def feed_product(row, *wanted):
     columns = row.get("columns")
     if isinstance(columns, str):
         try:
@@ -141,7 +147,10 @@ def feed_product(row, wanted):
     if not isinstance(columns, dict):
         return None
     title = columns.get("title")
-    if not wanted or not isinstance(title, str) or not wanted <= tokens(title):
+    if not isinstance(title, str):
+        return None
+    title_tokens = tokens(title)
+    if not any(term and term <= title_tokens for term in wanted):
         return None
     link = columns.get("product_link")
     if not isinstance(link, str):
@@ -160,6 +169,37 @@ def feed_product(row, wanted):
         "product_url": f"https://shopee.com.br/product/{match[1]}/{match[2]}",
         "source": "feed_shopee",
     }
+
+
+def select_candidates(offers, terms, known_ids, maximum):
+    """Alternate between terms and return at most one entry per listing."""
+    queues = {label: deque() for label in terms}
+    ordered = sorted(offers.values(), key=lambda offer: offer["item_id"] in known_ids)
+    for offer in ordered:
+        title = tokens(offer["title"])
+        for label, term in terms.items():
+            if term <= title:
+                queues[label].append(offer)
+    matched_counts = {label: len(queue) for label, queue in queues.items()}
+    selected_counts = dict.fromkeys(terms, 0)
+    selected, seen = [], set()
+    while len(selected) < maximum:
+        added = False
+        for label, queue in queues.items():
+            while queue and (queue[0]["shop_id"], queue[0]["item_id"]) in seen:
+                queue.popleft()
+            if not queue:
+                continue
+            offer = queue.popleft()
+            seen.add((offer["shop_id"], offer["item_id"]))
+            selected.append({**offer, "matched_keyword": label})
+            selected_counts[label] += 1
+            added = True
+            if len(selected) >= maximum:
+                break
+        if not added:
+            break
+    return selected, selected_counts, matched_counts
 
 
 def catalog_rows():
@@ -282,15 +322,13 @@ def collect(api, args):
             group = [product_summary(node) for node in category_rows]
             discovery["category_products"][str(category)] = group
             candidates.extend(group)
-    wanted = tokens(args.keyword)
-    relevant_categories = [
-        offer["category_ids"][-1] for offer in snapshot["catalog"].values()
-        if offer["category_ids"] and offer["category_ids"][-1] in categories
-        and wanted & tokens(offer["title"])
-    ]
+    labels = (getattr(args, "keywords", None) or args.keyword).split(",")
+    terms = {label.strip(): tokens(label) for label in labels if tokens(label)}
+    maximum = getattr(args, "max_products", 20)
+    pages_per_feed = 20 if len(terms) > 1 else 4
     fallback = {(offer["shop_id"], offer["item_id"]): offer
                 for offer in [*snapshot["catalog"].values(), *candidates]
-                if wanted and wanted <= tokens(offer["title"])}
+                if any(term <= tokens(offer["title"]) for term in terms.values())}
 
     for op, key, fields in (
         ("shopOfferV2", "shops", "shopId shopName commissionRate periodEndTime"),
@@ -312,10 +350,10 @@ def collect(api, args):
         total_rows = 0
         has_more = False
         for feed_number, feed in enumerate(full_feeds[:2], start=1):
-            limit = 500 if wanted else 10
+            limit = 500 if terms else 10
             offset = 0
             page_has_more = False
-            for _ in range(1 if limit == 10 else 4):
+            for _ in range(pages_per_feed if terms else 1):
                 feed_page = check(f"getItemFeedData/{feed_number}/{offset}", lambda: api.call(
                     "getItemFeedData", "rows { columns } pageInfo { hasMore totalCount }",
                     datafeedId=quoted(feed["datafeedId"]), offset=offset, limit=limit,
@@ -326,7 +364,7 @@ def collect(api, args):
                 total_rows += len(feed_rows)
                 page_has_more = bool((feed_page.get("pageInfo") or {}).get("hasMore"))
                 for row in feed_rows:
-                    offer = feed_product(row, wanted)
+                    offer = feed_product(row, *terms.values())
                     if offer:
                         feed_results[(offer["shop_id"], offer["item_id"])] = offer
                 if not page_has_more or not feed_rows:
@@ -339,23 +377,34 @@ def collect(api, args):
 
     has_new_feed = any(item_id not in known_ids for _, item_id in feed_results)
     keyword_matches = {}
-    for category in list(dict.fromkeys(relevant_categories or categories))[:3] if wanted and not has_new_feed else []:
-        direct = check(f"busca_por_categoria/{category}", lambda: api.products(
-            keyword=quoted(args.keyword), productCatId=category, limit=20))
-        for node in direct or []:
-            if wanted <= tokens(node.get("productName")):
-                offer = product_summary(node)
-                keyword_matches[(offer["shop_id"], offer["item_id"])] = offer
+    if len(terms) == 1 and not has_new_feed:
+        label, wanted = next(iter(terms.items()))
+        relevant_categories = [
+            offer["category_ids"][-1] for offer in snapshot["catalog"].values()
+            if offer["category_ids"] and offer["category_ids"][-1] in categories
+            and wanted & tokens(offer["title"])
+        ]
+        for category in list(dict.fromkeys(relevant_categories or categories))[:3]:
+            direct = check(f"busca_por_categoria/{category}", lambda: api.products(
+                keyword=quoted(label), productCatId=category, limit=20))
+            for node in direct or []:
+                if wanted <= tokens(node.get("productName")):
+                    offer = product_summary(node)
+                    keyword_matches[(offer["shop_id"], offer["item_id"])] = offer
     discovery["keyword_source"] = (
         "feed_shopee" if feed_results else "shopee_categoria" if keyword_matches
         else "filtro_local" if fallback else None
     )
     all_matches = {**fallback, **feed_results, **keyword_matches}
-    results = sorted(all_matches.values(), key=lambda offer: offer["item_id"] in known_ids)
-    discovery["keyword_results"] = results[:20]
-    discovery["keyword_new_count"] = sum(offer["item_id"] not in known_ids for offer in results[:20])
-    print(f"Busca: {len(results[:20])} resultados, {discovery['keyword_new_count']} novos para o catálogo.",
+    results, selected_counts, matched_counts = select_candidates(all_matches, terms, known_ids, maximum)
+    discovery.update(keyword_results=results, keyword_limit=maximum,
+                     keyword_counts=selected_counts, keyword_matches_before_limit=matched_counts,
+                     keyword_new_count=sum(offer["item_id"] not in known_ids for offer in results))
+    print(f"Busca: {len(results)}/{maximum} resultados, {discovery['keyword_new_count']} novos para o catálogo.",
           flush=True)
+    for label in terms:
+        print(f"  {label}: {selected_counts[label]} selecionados, {matched_counts[label]} correspondências",
+              flush=True)
 
     if args.generate_links and rows:
         urls = [url for _, _, url in rows]
@@ -400,6 +449,9 @@ def collect(api, args):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--keyword", default="mouse")
+    parser.add_argument("--keywords", help="Termos separados por vírgula")
+    parser.add_argument("--max-products", type=int, choices=range(1, 61), default=20,
+                        metavar="1..60")
     parser.add_argument("--validation-id", type=int)
     parser.add_argument("--generate-links", action="store_true")
     parser.add_argument("--output", type=Path, required=True)
