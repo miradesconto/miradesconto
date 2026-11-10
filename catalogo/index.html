@@ -19,19 +19,13 @@ permalink: /catalogo/
 <meta name="twitter:card" content="summary">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Todos os produtos de tecnologia","url":"https://miradesconto.com.br/catalogo/","inLanguage":"pt-BR"}</script>
 <link rel="stylesheet" href="{{ '/catalogo/vitrine-completa.css' | relative_url }}?v=20261015">
-<link rel="stylesheet" href="/shopee-destaques.css">
-</head>
-<body>
+<link rel="stylesheet" href="/site-polish.css?v=20261110"></head>
+<body class="mira-polished">
 <a class="skip" href="#conteudo">Ir para os produtos</a>
 <header class="header">
   <div class="wrap header-inner">
     <a class="logo" href="{{ '/' | relative_url }}">Mira<span>Desconto</span></a>
-    <nav aria-label="Navegação principal">
-      <a href="{{ '/' | relative_url }}">Ofertas</a>
-      <a href="{{ '/catalogo/' | relative_url }}" aria-current="page">Todos os produtos</a>
-      <a href="{{ '/radar/' | relative_url }}">Radar</a>
-      <a href="{{ '/blog/' | relative_url }}">Guias e Reviews</a>
-    </nav>
+    <nav class="mira-global-nav" aria-label="Navegação principal"><a href="/">Ofertas</a><a href="/black-friday/">Black Friday</a><a href="/catalogo/" aria-current="page">Catálogo</a><a href="/radar/">Radar</a><a href="/blog/">Guias e Reviews</a><a href="/sobre.html">Sobre</a></nav>
   </div>
 </header>
 <main class="wrap" id="conteudo">
@@ -41,8 +35,7 @@ permalink: /catalogo/
     <h1>Todos os produtos, sem poluição.</h1>
     <p>Explore o catálogo completo de tecnologia. Os produtos com preço conferido nas últimas 2 horas aparecem primeiro. Os que precisam de nova verificação ficam por último, sem exibir valores antigos.</p>
   </div>
-{% include shopee-destaques.html location="catalogo" title="Produtos gamer na Shopee" note="Explore mais opções de tecnologia no catálogo da Shopee." offset=3 %}
-  <section class="catalog" aria-label="Catálogo completo">
+<section class="catalog" aria-label="Catálogo completo">
     <div class="catalog-top">
       <div><h2>Encontre o que procura</h2><p id="catalogSummary" role="status" aria-live="polite">Carregando catálogo...</p></div>
       <a class="featured-link" href="{{ '/' | relative_url }}#ofertas">Ver ofertas selecionadas →</a>
