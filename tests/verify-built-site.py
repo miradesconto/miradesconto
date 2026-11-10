@@ -1,5 +1,6 @@
 """Validate actual Jekyll output, including links, canonicals and JSON-LD."""
 import json
+import re
 import sys
 from html.parser import HTMLParser
 from pathlib import Path
@@ -89,21 +90,44 @@ for file in (source/'_artigos').glob('*.md'):
         assert '/blog/'+file.stem+'/' not in pages['blog/index.html'].links, draft_url
 notebooks=(root/'blog/notebook-em-promocao-como-escolher/index.html').read_text(encoding='utf-8')
 assert 'Abrir lista na loja' in notebooks
-assert 'O link abre uma lista' in notebooks
+assert 'Link de afiliado para uma lista.' in notebooks
 for key in editorial + ['radar/index.html']:
     text=(root/key).read_text(encoding='utf-8')
     assert 'blog.js?v=20261013audit' in text, f'Image recovery missing: {key}'
-# Validate actual navigation links of all landing and institutional pages too.
-for key in ['index.html','radar/index.html','sobre.html','transparencia.html','privacidade.html']:
+# The public sections share one menu and keep their landing page purpose.
+main_routes = ['/', '/black-friday/', '/catalogo/', '/radar/', '/blog/', '/sobre.html']
+def route_file(route):
+    return route.lstrip('/') + ('index.html' if route.endswith('/') else '')
+
+menu_pages = [route_file(route) for route in main_routes]
+other_pages = ['transparencia.html', 'privacidade.html', 'shopee-gamer/index.html']
+for key in menu_pages + other_pages + editorial[1:]:
+    page_text = (root / key).read_text(encoding='utf-8')
+    menu = re.search(r'<nav class="mira-global-nav"[^>]*>(.*?)</nav>', page_text, re.S)
+    assert menu and re.findall(r'href="([^"]+)"', menu[1]) == main_routes, key
+    if key in menu_pages:
+        route = main_routes[menu_pages.index(key)]
+        assert f'href="{route}" aria-current="page"' in menu[1], key
+
+for key in menu_pages + other_pages + ['en/index.html', 'en/blog/index.html']:
+    assert pages[key].h1 == 1, key
     for href in pages[key].links:
-        u=urlsplit(href)
-        if u.scheme or u.netloc:continue
-        target=unquote(u.path)
-        local=target.lstrip('/') if target.startswith('/') else normpath(str(Path(key).parent.as_posix())+'/'+target) if target else key
-        if target.endswith('/') or local=='.':local=local.rstrip('/')+'/index.html' if local!='.' else 'index.html'
-        assert (root/local).exists(),(key,href)
-        if u.fragment and local in pages:assert u.fragment in pages[local].ids,(key,href)
-print('OK: draft discovery, affiliate list disclosure, image recovery and primary navigation')
+        u = urlsplit(href)
+        if u.scheme or u.netloc:
+            continue
+        target = unquote(u.path)
+        local = target.lstrip('/') if target.startswith('/') else normpath(str(Path(key).parent / target)) if target else key
+        if target.endswith('/') or local == '.':
+            local = local.rstrip('/') + '/index.html' if local not in ('', '.') else 'index.html'
+        assert (root / local).exists(), (key, href)
+        if u.fragment and local in pages:
+            assert u.fragment in pages[local].ids, (key, href)
+
+for key in ('blog/index.html', 'en/blog/index.html'):
+    page_text = (root / key).read_text(encoding='utf-8')
+    for marker in ('vitrine-diaria', 'auto-ofertas', 'shopee-highlights', 'mira-shop-entry', 'editorial-shop-cta'):
+        assert marker not in page_text, (key, marker)
+print('OK: menu, active page, public links and editorial boundaries')
 
 # A full catalogue must be linked from the compact homepage and indexed.
 catalog_key='catalogo/index.html'
@@ -112,18 +136,10 @@ assert catalog_page.h1==1 and catalog_page.canonical==[origin+'/catalogo/'], cat
 assert len(catalog_page.description)==1 and catalog_page.description[0], catalog_key
 assert origin+'/catalogo/' in urls, catalog_key
 assert 'catalogo/' in pages['index.html'].links, 'Missing visible catalogue entry point'
-for href in catalog_page.links:
-    u=urlsplit(href)
-    if u.scheme or u.netloc:continue
-    target=unquote(u.path)
-    local=target.lstrip('/')
-    if local.endswith('/'):local+='index.html'
-    assert (root/local).exists(), (catalog_key,href)
 print('OK: catalogue navigation, sitemap, metadata, internal paths')
 
 
 # Smoke test da vitrine Liquid realmente renderizada (PT e EN).
-import re
 from html import unescape
 
 radar_source = json.loads((source / '_data' / 'radar.json').read_text(encoding='utf-8'))

@@ -17,13 +17,13 @@ permalink: /shopee-gamer/
   <link rel="stylesheet" href="/blog/blog.css?v=20261013audit">
   <link rel="stylesheet" href="/radar.css?v=20261006">
   <link rel="stylesheet" href="/analytics.css">
-<link rel="stylesheet" href="/site-polish.css?v=20261110"></head>
+<link rel="stylesheet" href="/site-polish.css?v=20261110nav"></head>
 <body class="mira-polished">
 <a class="skip" href="#conteudo">Pular para o conteúdo</a>
 <header class="site-header">
   <div class="wrap header-inner">
     <a class="logo" href="/">Mira<span>Desconto</span></a>
-    <nav class="mira-global-nav" aria-label="Navegação principal"><a href="/">Ofertas</a><a href="/black-friday/">Black Friday</a><a href="/catalogo/">Catálogo</a><a href="/radar/">Radar</a><a href="/blog/">Guias e Reviews</a><a href="/sobre.html">Sobre</a></nav>
+    {% include site-nav.html current="/catalogo/" %}
   </div>
 </header>
 <main id="conteudo">
@@ -31,11 +31,12 @@ permalink: /shopee-gamer/
     <div class="wrap radar-hero-inner">
       <p class="eyebrow">Seleção MiraDesconto</p>
       <h1>Ofertas gamer na Shopee</h1>
-      <p class="radar-lead">{{ items.size }} anúncios conferidos. Confirme o preço, a variante, o frete e a disponibilidade na loja.</p>
+      <p class="radar-lead">{% if items.size > 0 %}{{ items.size }} anúncios conferidos. Confirme o preço, a variante, o frete e a disponibilidade na loja.{% else %}Estamos atualizando a seleção. <a href="/catalogo/">Explore o catálogo de tecnologia</a> enquanto isso.{% endif %}</p>
       <p>Publicidade. A página contém links de afiliado. O MiraDesconto pode receber comissão por compras atribuídas a esses links.</p>
     </div>
   </section>
-  <nav class="wrap radar-content" aria-label="Categorias de ofertas">
+  {% if items.size > 0 %}
+  <nav class="wrap shopee-category-nav" aria-label="Categorias de ofertas">
     <ul>
       {% for keyword in keywords %}
         {% assign group = items | where: "keyword", keyword %}
@@ -45,6 +46,7 @@ permalink: /shopee-gamer/
       {% endfor %}
     </ul>
   </nav>
+  {% endif %}
   {% for keyword in keywords %}
     {% assign group = items | where: "keyword", keyword %}
     {% if group.size > 0 %}
@@ -55,8 +57,10 @@ permalink: /shopee-gamer/
         <div class="radar-grid">
           {% for item in group %}
             <article class="radar-card" data-shopee-item="{{ item.item_id | escape }}">
-              {% if item.image_url %}
-                <div class="radar-card-image"><img src="{{ item.image_url | escape }}" alt="" loading="lazy" decoding="async" width="420" height="300"></div>
+              {% assign local_photo = site.data.shopee_fotos_locais[item.item_id] %}
+              {% assign photo = local_photo | default: item.image_url %}
+              {% if photo %}
+                <div class="radar-card-image"><img src="{{ photo | escape }}" alt="" loading="lazy" decoding="async" width="420" height="300"></div>
               {% endif %}
               <div class="radar-card-body">
                 <h3>{{ item.title | escape }}</h3>
@@ -84,6 +88,7 @@ permalink: /shopee-gamer/
     <nav aria-label="Informações institucionais"><a href="/sobre.html">Sobre</a><a href="/transparencia.html">Transparência</a><a href="/privacidade.html">Privacidade</a></nav>
   </div>
 </footer>
+<script src="/blog/blog.js?v=20261013audit" defer></script>
 <script src="/analytics-config.js"></script><script src="/analytics.js"></script>
 </body>
 </html>

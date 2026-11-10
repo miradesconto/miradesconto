@@ -18,19 +18,19 @@ layout: null
 <link rel="stylesheet" href="../blog/blog.css?v=20261013audit"><link rel="stylesheet" href="../radar.css?v=20261006">
 <link rel="stylesheet" href="../analytics.css"><link rel="stylesheet" href="../idiomas.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Radar de Preços MiraDesconto","description":"Produtos de tecnologia avaliados pelo preço atual em relação ao histórico observado.","url":"https://miradesconto.com.br/radar/","inLanguage":"pt-BR"}</script>
-<link rel="stylesheet" href="/site-polish.css?v=20261110"></head>
+<link rel="stylesheet" href="/site-polish.css?v=20261110nav"></head>
 <body class="mira-polished">
 <a class="skip" href="#conteudo">Pular para o conteúdo</a>
 <header class="site-header"><div class="wrap header-inner">
 <a class="logo" href="../">Mira<span>Desconto</span></a>
-<nav class="mira-global-nav" aria-label="Navegação principal"><a href="/">Ofertas</a><a href="/black-friday/">Black Friday</a><a href="/catalogo/">Catálogo</a><a href="/radar/" aria-current="page">Radar</a><a href="/blog/">Guias e Reviews</a><a href="/sobre.html">Sobre</a></nav>
+{% include site-nav.html %}
 <nav class="mira-languages" aria-label="Idioma / Language"><a href="/radar/" lang="pt-BR" aria-current="page">PT</a><a href="/en/" lang="en" aria-label="English homepage">EN</a></nav>
 </div></header>
 
 <main id="conteudo">
 <section class="radar-hero"><div class="wrap radar-hero-inner">
 <p class="eyebrow">Radar MiraDesconto</p>
-<h1>É uma boa hora para comprar?</h1>
+<h1>Radar de preços</h1>
 <p class="radar-lead">Comparamos o preço atual com valores que o próprio MiraDesconto já observou no mesmo anúncio e variação. Sem usar o “preço de referência” da loja como histórico.</p>
 <div class="radar-summary">
 <div><strong>{{ radar.featuredCount }}</strong><span>destaques na última coleta</span></div>
@@ -39,14 +39,7 @@ layout: null
 </div>
 </div></section>
 
-<section class="wrap radar-legend" aria-labelledby="como-ler">
-<div><p class="eyebrow">Como ler</p><h2 id="como-ler">O selo depende do preço observado.</h2></div>
-<div class="radar-legend-grid">
-<div><span class="radar-badge badge-low">Menor observado</span><p>Preço atual igual ao menor valor registrado no período acompanhado.</p></div>
-<div><span class="radar-badge badge-great">Excelente preço</span><p>Pelo menos 5% abaixo da média observada.</p></div>
-<div><span class="radar-badge badge-good">Bom preço</span><p>Entre 1,5% e 5% abaixo da média observada.</p></div>
-</div>
-</section>
+
 
 <section class="wrap radar-content" aria-labelledby="destaques-title">
 <header class="radar-section-head">
@@ -90,8 +83,18 @@ layout: null
 {% endif %}
 </section>
 
+<details class="wrap radar-legend">
+<summary>Como ler os selos do Radar</summary>
+<div class="radar-legend-grid">
+<div><span class="radar-badge badge-low">Menor observado</span><p>Preço atual igual ao menor valor registrado no período acompanhado.</p></div>
+<div><span class="radar-badge badge-great">Excelente preço</span><p>Pelo menos 5% abaixo da média observada.</p></div>
+<div><span class="radar-badge badge-good">Bom preço</span><p>Entre 1,5% e 5% abaixo da média observada.</p></div>
+</div>
+</details>
+{% include shopee-entry.html wrap=true note="Seleção separada dos preços comparados pelo Radar." %}
+
 <section class="wrap radar-method">
-<div><p class="eyebrow">Método</p><h2>O que o Radar considera — e o que não considera.</h2></div>
+<div><p class="eyebrow">Método</p><h2>Como o Radar compara preços</h2></div>
 <div class="radar-method-grid">
 <div><h3>Mesmo anúncio</h3><p>Comparamos registros do mesmo item e, quando identificada, da mesma variação.</p></div>
 <div><h3>Preço verificado</h3><p>O produto precisa ter confirmação recente no catálogo. Preços antigos ficam fora dos destaques.</p></div>

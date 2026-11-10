@@ -5,7 +5,7 @@
 <link rel="canonical" href="{{ page.url | absolute_url }}"><meta property="og:type" content="website"><meta property="og:title" content="{{ page.title | escape }}"><meta property="og:description" content="{{ page.description | escape }}"><meta property="og:url" content="{{ page.url | absolute_url }}"><meta property="og:image" content="{{ p.imageUrl | escape }}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="{{ p.imageUrl | escape }}">
 <link rel="icon" href="/favicon.svg"><link rel="stylesheet" href="/blog/blog.css"><link rel="stylesheet" href="/blog/artigo.css"><link rel="stylesheet" href="/campanha.css?v=20261023"><link rel="stylesheet" href="/analytics.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":{{ page.title | jsonify }},"description":{{ page.description | jsonify }},"url":{{ page.url | absolute_url | jsonify }},"image":{{ p.imageUrl | jsonify }}}</script>
-</head><body><a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<link rel="stylesheet" href="/site-polish.css?v=20261110nav"></head><body><a class="skip" href="#conteudo">Pular para o conteúdo</a>
 {% include campanha-nav.html %}
 <main class="wrap article-page" id="conteudo"><nav class="breadcrumbs" aria-label="Caminho"><a href="/">Início</a> / <a href="/black-friday/">Black Friday</a> / {{ p.category | escape }}</nav>
 <article class="offer-detail" data-offer-id="{{ page.product_id | escape }}"><div class="offer-photo"><img src="{{ p.imageUrl | escape }}" alt="{{ p.name | escape }}" width="600" height="450" fetchpriority="high"></div><div>

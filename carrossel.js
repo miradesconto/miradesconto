@@ -4,11 +4,6 @@
   if (!hero || !Array.isArray(products)) return;
   const money = n => new Intl.NumberFormat('pt-BR', {style:'currency', currency:'BRL'}).format(n);
   const valid = p => p && p.available !== false && p.name && safeUrl(p.imageUrl) && safeUrl(p.affiliateUrl);
-  const recorded = p => valid(p) && !MiraQuality.priceReviewReason(p) && Number.isFinite(p.price) && p.price > 0
-    && p.priceCheck?.status === 'verified' && p.priceCheck.price === p.price
-    && p.priceCheck.oldPrice === p.oldPrice && p.priceCheck.currency === 'BRL'
-    && Number.isFinite(Date.parse(p.priceCheck.checkedAt));
-  const fresh = products.filter(p => recorded(p) && MiraQuality.usablePrice(p) && directAffiliate(p));
   // Include the full eligible catalog, interleave categories, vary the starting point.
   const eligibleProducts = () => {
     const selection = window.MiraHomepageSelection || [];
@@ -40,37 +35,33 @@
     const imageUrl = d.image || '';
     const affiliateUrl = d.affiliate || '';
     const loja = d.store || '';
-    const price = Number(d.price);
     const localPhoto = /^\/assets\/ofertas\/[a-f0-9]{24}\.(?:jpg|webp|png)$/.test(imageUrl);
     let validLink = false;
     try {
       const uri = new URL(affiliateUrl);
-      validLink = uri.protocol === 'https:'
+      validLink = uri.protocol === 'https:' && !uri.username && !uri.password
         && ((loja === 'Shopee' && uri.hostname === 's.shopee.com.br')
         || (loja === 'Mercado Livre' && (uri.hostname === 'meli.la'
-          || (uri.hostname.endsWith('mercadolivre.com.br') && uri.searchParams.has('matt_tool_id')))));
+          || ((uri.hostname === 'mercadolivre.com.br' || uri.hostname.endsWith('.mercadolivre.com.br')) && uri.searchParams.has('matt_tool_id')))));
     } catch {}
-    if (!name || !localPhoto || !validLink || !Number.isFinite(price) || price <= 0) return null;
+    if (!name || !localPhoto || !validLink) return null;
     return {
       id: 'hero-feed-' + i, name, imageUrl, affiliateUrl,
-      price, loja, category: loja === 'Shopee' ? 'Shopee • Tecnologia' : 'Mercado Livre • Tecnologia',
+      loja, category: loja === 'Shopee' ? 'Shopee • Tecnologia' : 'Mercado Livre • Tecnologia',
       isFeed: true, rank: sourceRank(name)
     };
   }).filter(Boolean);
-  const best = (source, count) => source.sort((a, b) => b.rank - a.rank).slice(0, count);
-  const shop = best(feedOffers.filter(p => p.loja === 'Shopee'), 6);
-  const ml = best(feedOffers.filter(p => p.loja === 'Mercado Livre'), 3);
-  const fallbackSlides = [
-    ...shop.slice(0, 4), ...ml.slice(0, 2), ...shop.slice(4, 6), ...ml.slice(2, 3)
-  ];
-  const chooseSlides = () => {
-    const featured = rotateOffers(eligibleProducts());
-    if (!fallbackSlides.length) return featured;
-    // Inicialmente mostramos ofertas Shopee reais. A navegação continua a
-    // alternar também para itens já verificados do catálogo tradicional.
-    return [...fallbackSlides, ...featured.filter(p =>
-      !fallbackSlides.some(x => x.affiliateUrl === p.affiliateUrl))].slice(0, 15);
-  };
+  const uniqueFeed = [...new Map(feedOffers.map(offer => [offer.affiliateUrl, offer])).values()];
+  const best = store => uniqueFeed.filter(offer => offer.loja === store)
+    .sort((a, b) => b.rank - a.rank).slice(0, 2);
+  const [firstShopee, secondShopee] = best('Shopee');
+  const [firstML, secondML] = best('Mercado Livre');
+  const fallbackSlides = [firstShopee, firstML, secondShopee, secondML].filter(Boolean);
+  const chooseSlides = () => [
+    ...fallbackSlides,
+    ...rotateOffers(eligibleProducts()).filter(offer =>
+      !fallbackSlides.some(item => item.affiliateUrl === offer.affiliateUrl))
+  ].slice(0, 6);
   let slides = chooseSlides();
   let start = fallbackSlides.length ? 0 : Math.floor(Math.random() * Math.max(1, slides.length));
   try {
@@ -90,17 +81,6 @@
   const explore = element('a','hero-primary','Encontrar meu próximo upgrade ↗'); explore.href='#ofertas';
   const guide = element('a','hero-secondary','Me ajude a escolher →'); guide.href='blog/';
   actions.append(explore, guide); copy.append(actions);
-  const proof = element('div','hero-proof');
-  const count = element('div','hero-proof-item');
-  count.append(element('strong','',String(fresh.length)), element('span','','preços conferidos nas últimas 2 horas no catálogo'));
-  const rhythm = element('div','hero-proof-item');
-  rhythm.append(element('strong','','1 hora'), element('span','','entre as buscas automáticas'));
-  proof.append(count,rhythm);
-  const disclosure = element('p','hero-disclosure');
-  disclosure.append('Links de afiliado. Podemos receber comissão, sem custo adicional. ',
-    element('a','','Entenda a transparência ↗'));
-  disclosure.querySelector('a').href='transparencia.html';
-
   const showcase = element('div','hero-showcase');
   const top = element('div','hero-showcase-top');
   top.append(element('span','hero-showcase-label','NA MIRA AGORA'), element('span','hero-showcase-date'));
@@ -146,7 +126,6 @@
     }
     const p=slides[index], current=!p.isFeed && MiraQuality.usablePrice(p);
     const discount=current && p.oldPrice>p.price ? Math.floor((1-p.price/p.oldPrice)*100) : 0;
-    const date=current ? new Date(p.priceCheck.checkedAt).toLocaleDateString('pt-BR',{timeZone:'America/Sao_Paulo'}) : ''; 
     const image=element('img'); image.src=p.imageUrl; image.alt=p.name;
     image.width=560; image.height=420; image.decoding='async';
     image.addEventListener('error',()=>{
@@ -154,22 +133,21 @@
       if (!visual.contains(image)) return;
       visual.classList.add('image-error');
       if (badImages.size<slides.length) move(1);
+      else visual.replaceChildren(element('span','hero-empty-icon','Foto indisponível'));
     },{once:true});
     visual.classList.remove('image-error'); visual.replaceChildren(image,badge);
     badge.hidden=discount<50; badge.textContent=discount+'% OFF';
     category.textContent=p.category || 'Mercado Livre'; title.textContent=p.name;
     old.textContent=current && discount>=50 ? 'De '+money(p.oldPrice) : '';
-    price.textContent=p.isFeed
-      ? (p.loja === 'Shopee' ? 'A partir de ' : '') + money(p.price)
-      : (current ? money(p.price) : 'Consultar preço');
+    price.textContent=current ? money(p.price) : 'Consultar preço na loja';
     const listLink = !p.isFeed && isAffiliateList(p);
-    link.textContent = p.isFeed ? 'Ver oferta na ' + p.loja + ' ↗'
+    link.textContent = p.isFeed ? 'Ver na loja ↗'
       : (listLink ? 'Abrir lista na loja ↗' : 'Ver produto na loja ↗');
     link.href=p.offerUrl || p.affiliateUrl; link.target='_blank';
     link.dataset.itemId=p.id; link.dataset.itemName=p.name; link.dataset.itemCategory=p.category || ''; link.dataset.destinationType=listLink ? 'affiliate_list' : 'product';
     status.textContent=p.isFeed ? 'Oferta da ' + p.loja + ' · confirme o valor na loja'
       : (current ? 'Conferido em '+new Date(p.priceCheck.checkedAt).toLocaleString('pt-BR',{timeZone:'America/Sao_Paulo',day:'2-digit',month:'2-digit',hour:'2-digit'}) : 'Preço e disponibilidade na loja');
-    top.lastChild.textContent=p.isFeed ? 'PREÇO INFORMADO · CONFIRME' : (current ? 'PREÇO OBSERVADO' : 'CONFIRME NA LOJA');
+    top.lastChild.textContent=p.isFeed ? 'CONSULTE NA LOJA' : (current ? 'PREÇO OBSERVADO' : 'CONFIRME NA LOJA');
     position.textContent=(index+1)+' / '+slides.length;
     const previews=slides.map((item,i)=>({item,i})).filter(x=>x.i!==index && !badImages.has(x.item.id));
     controls.hidden=previews.length===0;
@@ -200,10 +178,6 @@
   previous.addEventListener('click',()=>move(-1));
   next.addEventListener('click',()=>move(1));
   render();
-  if (slides.length>1) setInterval(()=>{
-    if (!document.hidden && !showcase.matches(':hover') && !showcase.contains(document.activeElement)
-      && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) move(1);
-  },6500);
   document.addEventListener('mira:catalog-updated', () => {
     const currentId = slides[index]?.id;
     slides = chooseSlides();

@@ -1,0 +1,8 @@
+{% assign nav_paths = '/|/black-friday/|/catalogo/|/radar/|/blog/|/sobre.html' | split: '|' %}
+{% assign nav_labels = 'Ofertas|Black Friday|Catálogo|Radar|Guias e Reviews|Sobre' | split: '|' %}
+{% assign nav_current = include.current | default: page.url %}
+<nav class="mira-global-nav" aria-label="Navegação principal">
+  {% for nav_path in nav_paths %}
+  <a href="{{ nav_path | relative_url }}"{% if nav_path == nav_current %} aria-current="{% if page.url == nav_path %}page{% else %}location{% endif %}"{% endif %}>{{ nav_labels[forloop.index0] }}</a>
+  {% endfor %}
+</nav>

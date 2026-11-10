@@ -29,9 +29,9 @@ html[data-mira-layout="gamer"]{
 [data-mira-layout="gamer"] header{background:rgba(9,17,31,.97);border-color:#2a3a53}
 [data-mira-layout="gamer"] header .logo{color:#fff}
 [data-mira-layout="gamer"] header .logo span{color:#10b981}
-[data-mira-layout="gamer"] .site-nav a{color:#c3d0e2}
-[data-mira-layout="gamer"] .site-nav a:hover,
-[data-mira-layout="gamer"] .site-nav a.active{color:#10b981;background:#162a3e}
+[data-mira-layout="gamer"] .mira-global-nav a{color:#c3d0e2}
+[data-mira-layout="gamer"] .mira-global-nav a:hover,
+[data-mira-layout="gamer"] .mira-global-nav a[aria-current="page"]{color:#10b981;background:#162a3e}
 [data-mira-layout="gamer"] .search input{background:#101f34;border-color:#37516e;color:#f8fafc}
 [data-mira-layout="gamer"] .search input::placeholder{color:#99abc1}
 [data-mira-layout="gamer"] .search input:focus{border-color:#10b981;box-shadow:0 0 0 3px #10b98133}
@@ -160,3 +160,5 @@ html[data-mira-layout="gamer"]{
 @media(prefers-reduced-motion:reduce){
   .mira-mode-option{transition:none}
 }
+
+[data-mira-layout="gamer"] .mira-shop-entry a{color:#6ee7b7}

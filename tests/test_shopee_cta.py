@@ -12,20 +12,13 @@ class ShopeeCtaTests(unittest.TestCase):
             self.assertIn('class="shopee-disclosure"',text)
             self.assertIn("Publicidade:",text)
             self.assertIn('status: "publicado"',text)
-    def test_blog_has_shop_link_alongside_article_link(self):
-        text=(ROOT/"blog/index.html").read_text(encoding="utf-8")
-        self.assertEqual(text.count("editorial-shop-cta"),3)
-        self.assertEqual(text.count("blog-shopee-card"),3)
-        # Três modelos de card para cada loja; Shopee permanece independente.
-        self.assertEqual(text.count("editorial-card-affiliate"),6)
-        self.assertEqual(text.count('rel="sponsored nofollow noopener noreferrer"'),6)
-        self.assertEqual(text.count("editorial-ml-cta"),3)
-        self.assertEqual(text.count("blog-mercadolivre-card"),3)
-        self.assertEqual(text.count("assign buy_product = nil"),3)
-        self.assertIn("candidate_url != 'https://meli.la/1NguveN'",text)
-        self.assertIn("candidate_url != 'https://meli.la/1pyBZm8'",text)
-        css=(ROOT/"blog/blog.css").read_text(encoding="utf-8")
-        self.assertIn(".editorial-card-body .editorial-ml-cta",css)
+    def test_blog_landing_links_to_articles_without_shopping_cards(self):
+        text = (ROOT / "blog/index.html").read_text(encoding="utf-8")
+        self.assertIn('entry.url | relative_url', text)
+        for marker in ("editorial-shop-cta", "editorial-card-affiliate", "shopee-destaques.html",
+                       "shopee-entry.html", "vitrine-diaria.html"):
+            with self.subTest(marker=marker):
+                self.assertNotIn(marker, text)
     def test_button_is_styled_and_affiliation_clear(self):
         snippet=(ROOT/"_includes/link-shopee.html").read_text(encoding="utf-8")
         self.assertIn("shopee-cta-button",snippet)

@@ -21,7 +21,7 @@ class LayoutModesTest(unittest.TestCase):
             'id="productList"',
             'id="sortSelect"',
             'id="loadMore"',
-            'id="auto-ofertas"',
+            'id="hero-product-seeds"',
             'vitrine-diaria.html',
             'id="shareStatus"',
             'analytics.js',
@@ -36,7 +36,7 @@ class LayoutModesTest(unittest.TestCase):
         for marker in ('data-mira-layout="classic"', 'mira-mode-switch',
                        'data-layout-option="classic"', 'data-layout-option="gamer"',
                        'href="?modo=classic"', 'href="?modo=gamer"',
-                       'modo-visual.js?v=2', 'modo-visual.css?v=2'):
+                       'modo-visual.js?v=2', 'modo-visual.css?v=3'):
             with self.subTest(marker=marker):
                 self.assertIn(marker, self.home)
         for marker in ('event.preventDefault()', "html.setAttribute('data-mira-layout'",
@@ -52,7 +52,6 @@ class LayoutModesTest(unittest.TestCase):
         self.assertIn('[data-mira-layout="classic"]', self.styles)
         self.assertNotIn('display:none', self.styles.replace(' ', '').lower())
         self.assertIn('id="productList"', self.home)
-        self.assertIn("fetch('/api/produtos.json'", (ROOT / 'ofertas-automaticas.js').read_text())
         self.assertNotIn('gamer.js?v=', self.home)
 
     def test_link_antigo_redireciona_para_home_em_gamer(self):

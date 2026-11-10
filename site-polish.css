@@ -20,3 +20,19 @@ body.mira-polished .mira-info-header{border-bottom:1px solid #e2e8f0;background:
 body.mira-polished .mira-info-header .wrap{max-width:1180px;display:flex;gap:18px;justify-content:space-between;align-items:center;flex-wrap:wrap}
 body.mira-polished .mira-info-header .logo{flex:none}
 @media(max-width:760px){.mira-global-nav{width:100%;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:thin;padding-bottom:3px}.mira-global-nav a{flex:0 0 auto;font-size:12px;padding:8px 10px}.site-header .header-inner,.header .header-inner{align-items:flex-start}body.mira-polished .mira-info-header .wrap{align-items:flex-start}}
+
+.mira-global-nav a[aria-current="location"]{background:#edf7ef;color:#166534}
+.mira-shop-entry{display:flex;justify-content:space-between;align-items:center;gap:12px 24px;flex-wrap:wrap;margin-block:24px;padding:16px 20px;background:var(--white,#fff);border:1px solid var(--line,#e2e8f0);border-radius:12px}
+.mira-shop-entry.wrap{width:calc(100% - 44px);max-width:1136px}
+.mira-shop-entry p{margin:3px 0 0;color:var(--muted,#475569);font-size:.875rem}
+.mira-shop-entry a{font-size:.875rem;font-weight:750;color:var(--green2,#166534)}
+body.search-active .mira-shop-entry,body.focused-catalog .mira-shop-entry{display:none}
+.radar-legend summary{cursor:pointer;font-weight:750;padding:10px 0}
+.radar-legend[open] summary{margin-bottom:12px}
+.shopee-category-nav{margin-block:20px}
+.shopee-category-nav ul{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.shopee-category-nav a{display:block;padding:7px 11px;border:1px solid #e2e8f0;border-radius:8px;font-size:.875rem}
+@media(max-width:980px){.header-container{flex-wrap:wrap;gap:10px 16px}.header-container .mira-global-nav{order:3;flex-basis:100%}.header-container .search{max-width:none;min-width:130px}}
+@media(max-width:760px){.header-container .search{order:4}.mira-global-nav{flex-wrap:wrap;overflow:visible}}
+details.radar-legend{display:block;padding:12px 0 18px}
+@media(max-width:1180px){.radar-hero-inner,.radar-content,details.radar-legend,.radar-method{padding-inline:22px}}

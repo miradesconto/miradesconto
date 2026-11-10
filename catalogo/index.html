@@ -19,21 +19,21 @@ permalink: /catalogo/
 <meta name="twitter:card" content="summary">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Todos os produtos de tecnologia","url":"https://miradesconto.com.br/catalogo/","inLanguage":"pt-BR"}</script>
 <link rel="stylesheet" href="{{ '/catalogo/vitrine-completa.css' | relative_url }}?v=20261015">
-<link rel="stylesheet" href="/site-polish.css?v=20261110"></head>
+<link rel="stylesheet" href="/site-polish.css?v=20261110nav"></head>
 <body class="mira-polished">
 <a class="skip" href="#conteudo">Ir para os produtos</a>
 <header class="header">
   <div class="wrap header-inner">
     <a class="logo" href="{{ '/' | relative_url }}">Mira<span>Desconto</span></a>
-    <nav class="mira-global-nav" aria-label="Navegação principal"><a href="/">Ofertas</a><a href="/black-friday/">Black Friday</a><a href="/catalogo/" aria-current="page">Catálogo</a><a href="/radar/">Radar</a><a href="/blog/">Guias e Reviews</a><a href="/sobre.html">Sobre</a></nav>
+    {% include site-nav.html %}
   </div>
 </header>
 <main class="wrap" id="conteudo">
   <div class="intro">
     <a class="back" href="{{ '/' | relative_url }}">← Voltar à vitrine principal</a>
     <p class="eyebrow">Catálogo MiraDesconto</p>
-    <h1>Todos os produtos, sem poluição.</h1>
-    <p>Explore o catálogo completo de tecnologia. Os produtos com preço conferido nas últimas 2 horas aparecem primeiro. Os que precisam de nova verificação ficam por último, sem exibir valores antigos.</p>
+    <h1>Catálogo de tecnologia</h1>
+    <p>Busque por produto ou filtre por categoria. Os preços conferidos recentemente aparecem primeiro.</p>
   </div>
 <section class="catalog" aria-label="Catálogo completo">
     <div class="catalog-top">
@@ -67,6 +67,7 @@ permalink: /catalogo/
       <button id="catalogNext" type="button" disabled>Próxima →</button>
     </nav>
   </section>
+  {% include shopee-entry.html %}
   <p class="note">Podemos receber comissão em compras elegíveis por links individuais de afiliados, sem custo adicional. Produtos sem link individual confirmado não exibem botão de compra. Preços, frete e disponibilidade devem ser confirmados na loja. <a href="{{ '/transparencia.html' | relative_url }}">Saiba mais sobre nossa transparência</a>.</p>
 </main>
 <footer><div class="wrap footer-inner"><span class="footer-logo">Mira<span>Desconto</span></span><nav aria-label="Links institucionais"><a href="{{ '/' | relative_url }}">Ofertas</a><a href="{{ '/blog/' | relative_url }}">Guias</a><a href="{{ '/transparencia.html' | relative_url }}">Transparência</a><a href="{{ '/privacidade.html' | relative_url }}">Privacidade</a></nav></div></footer>

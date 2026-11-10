@@ -160,10 +160,8 @@ class MineradorTest(unittest.TestCase):
         self.assertGreaterEqual(len(data),4)
         self.assertEqual(set(data[0]),set(m.FIELDS))
         html = (ROOT/'index.html').read_text(encoding='utf-8')
-        js = (ROOT/'ofertas-automaticas.js').read_text(encoding='utf-8')
-        self.assertIn('id="auto-ofertas"',html)
-        self.assertIn('ofertas-automaticas.js',html)
-        self.assertIn('/api/produtos.json',js)
+        self.assertIn('id="hero-product-seeds"', html)
+        self.assertIn('site.data.ofertas_automaticas', html)
 
 if __name__ == '__main__':
     unittest.main()
