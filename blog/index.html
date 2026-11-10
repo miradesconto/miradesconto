@@ -84,13 +84,10 @@ layout: null
       </header>
       <div class="editorial-grid-clean">
         {% for entry in guides %}
-        {% assign hero_id = entry.produtos | first %}
-        {% assign product = site.data.editorial_products[hero_id] | default: site.data.produtos[hero_id] %}
+
         <article class="editorial-card-clean">
           <a class="editorial-card-media" href="{{ entry.url | relative_url }}" aria-label="Abrir {{ entry.title | escape }}">
-            {% if product and product.imageUrl and product.imageVerifiedOnReview != false %}
-            <img src="{{ product.imageUrl | escape }}" alt="{{ product.name | escape }}" width="480" height="360" loading="lazy" decoding="async">
-            {% elsif entry.custom_image %}
+            {% if entry.custom_image %}
             <img src="{{ entry.custom_image | escape }}" alt="{{ entry.title | escape }} — imagem ilustrativa do artigo" width="480" height="360" loading="lazy" decoding="async">
             {% else %}
             <span class="editorial-card-placeholder">MiraDesconto<br><small>Guia editorial</small></span>
@@ -119,13 +116,10 @@ layout: null
       </header>
       <div class="editorial-grid-clean">
         {% for entry in comparisons %}
-        {% assign hero_id = entry.produtos | first %}
-        {% assign product = site.data.editorial_products[hero_id] | default: site.data.produtos[hero_id] %}
+
         <article class="editorial-card-clean">
           <a class="editorial-card-media" href="{{ entry.url | relative_url }}" aria-label="Abrir {{ entry.title | escape }}">
-            {% if product and product.imageUrl and product.imageVerifiedOnReview != false %}
-            <img src="{{ product.imageUrl | escape }}" alt="{{ product.name | escape }}" width="480" height="360" loading="lazy" decoding="async">
-            {% elsif entry.custom_image %}
+            {% if entry.custom_image %}
             <img src="{{ entry.custom_image | escape }}" alt="{{ entry.title | escape }} — imagem ilustrativa do artigo" width="480" height="360" loading="lazy" decoding="async">
             {% else %}
             <span class="editorial-card-placeholder">MiraDesconto<br><small>Comparativo editorial</small></span>
@@ -154,13 +148,10 @@ layout: null
       </header>
       <div class="editorial-grid-clean">
         {% for entry in reviews %}
-        {% assign hero_id = entry.produtos | first %}
-        {% assign product = site.data.editorial_products[hero_id] | default: site.data.produtos[hero_id] %}
+
         <article class="editorial-card-clean">
           <a class="editorial-card-media" href="{{ entry.url | relative_url }}" aria-label="Abrir {{ entry.title | escape }}">
-            {% if product and product.imageUrl and product.imageVerifiedOnReview != false %}
-            <img src="{{ product.imageUrl | escape }}" alt="{{ product.name | escape }}" width="480" height="360" loading="lazy" decoding="async">
-            {% elsif entry.custom_image %}
+            {% if entry.custom_image %}
             <img src="{{ entry.custom_image | escape }}" alt="{{ entry.title | escape }} — imagem ilustrativa do artigo" width="480" height="360" loading="lazy" decoding="async">
             {% else %}
             <span class="editorial-card-placeholder">MiraDesconto<br><small>Análise editorial</small></span>
