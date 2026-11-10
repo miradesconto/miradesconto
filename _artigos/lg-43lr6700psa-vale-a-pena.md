@@ -1,14 +1,15 @@
 ---
-title: "Smart TV LG 43LR6700PSA vale a pena? Full HD, webOS e limites"
-resumo: "Veja para quem a LG 43LR6700PSA de 43 polegadas faz sentido, o que muda entre Full HD e 4K e quais detalhes conferir antes de comprar."
-description: "LG 43LR6700PSA: ficha oficial, tela Full HD de 60 Hz, webOS 23, conexões, vantagens, limitações e dúvidas para comprar com critério."
+custom_image: "https://miradesconto.com.br/assets/ofertas/dea76b4b75399b5a125d1872.webp"
+title: "LG 43LR6700PSA vale a pena em 2026? Full HD, webOS e 60 Hz"
+resumo: "LG 43LR6700PSA de 43 polegadas: veja se Full HD 60 Hz, webOS 23, HDR10 Pro e duas HDMI atendem seu uso antes de comprar."
+description: "Smart TV LG 43LR6700PSA vale a pena? Entenda Full HD x 4K, webOS, HDR, 60 Hz, HDMI e controle Magic antes de comprar."
 categoria: "reviews"
 produtos: ["MLB6739753074"]
 status: "publicado"
 published: true
 autor: "MiraDesconto"
 data: "2026-10-15"
-atualizado: "2026-10-15"
+atualizado: "2026-11-10"
 ordem: 6
 destaque: false
 ---
@@ -21,6 +22,12 @@ Se você pretende usar a TV por vários anos, compare o preço final dela com o 
   <img src="https://http2.mlstatic.com/D_Q_NP_2X_741946-MLA107875422514_032026-V.webp" alt="Smart TV LG 43LR6700PSA de 43 polegadas, foto do anúncio vinculado ao MiraDesconto" width="680" height="480" loading="lazy" decoding="async">
   <figcaption>Foto do anúncio vinculado ao produto MLB6739753074. A aparência não substitui a conferência do código e dos acessórios.</figcaption>
 </figure>
+
+## Resposta rápida: para quem a LG 43LR6700PSA faz sentido?
+
+**Para streaming, televisão aberta e uso cotidiano em uma sala ou quarto**, o modelo pode ser suficiente se o preço final estiver abaixo de alternativas 4K comparáveis. Quem pretende usar videogames a 120 Hz ou dar prioridade à resolução UHD deve procurar outra categoria. Não confunda suporte a HDR com painel 4K ou alta taxa de atualização.
+
+Este é o mesmo modelo divulgado no Pinterest do MiraDesconto; consulte [o artigo sobre escolher TV ou projetor]({{ '/blog/tv-ou-projetor-para-quarto/' | relative_url }}) para pensar no ambiente antes da compra.
 
 ## O que muda no uso: Full HD, processador e HDR
 
