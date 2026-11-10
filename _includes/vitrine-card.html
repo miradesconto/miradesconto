@@ -12,6 +12,11 @@
 {% assign imagem = product.imageUrl | default: p.imageUrl %}
 {% assign categoria = product.category | default: p.category %}
 {% assign link = reg.affiliateUrl | default: offer.affiliateUrl | default: product.affiliateUrl | default: p.affiliateUrl %}
+{% comment %}A foto espelhada pelo robô não depende do CDN externo no navegador.{% endcomment %}
+{% assign foto_local = site.data.ofertas_automaticas | where: 'link_afiliado', link | first %}
+{% if foto_local and foto_local.imagem contains '/assets/ofertas/' %}
+  {% assign imagem = foto_local.imagem %}
+{% endif %}
 
 {% comment %}Não inventar preço: utilizar somente um campo disponível.{% endcomment %}
 {% assign preco = nil %}
@@ -68,7 +73,7 @@
 {% if p and titulo != blank and imagem != blank and link != blank %}
 <article class="vitrine-card vitrine-card--cro" data-vitrine-id="{{ id | escape }}" data-locale="{{ include.lang | default: 'pt' }}">
   <div class="vitrine-photo">
-    <img src="{{ imagem | escape }}" alt="{{ titulo | escape }}" width="400" height="300" loading="lazy" decoding="async">
+    <img src="{{ imagem | escape }}" alt="{{ titulo | escape }}" data-affiliate-image="{{ link | escape }}" width="400" height="300" loading="lazy" decoding="async">
     <span class="vitrine-hot" data-hot hidden>{% if include.lang == 'en' %}Hot deal{% else %}Oferta quente{% endif %}</span>
   </div>
   <div class="vitrine-body">
