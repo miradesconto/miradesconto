@@ -37,15 +37,19 @@ Faz sentido comparar esta opção quando você pretende comprar jogos por downlo
 
 Para GTA 6, a ausência de leitor não impede o uso de um código de download válido. Coloque o preço do jogo na conta antes de comparar bundles.
 
-<!-- Afiliados pendentes: PS5 Slim Edicao Digital — Mercado Livre / Amazon. Inserir apenas URLs fornecidas e conferidas, com rel="sponsored noopener". -->
+**Na Amazon: PS5 Slim Digital 825 GB — pacote ASTRO BOT e Gran Turismo 7.** Os jogos citados no pacote são diferentes de GTA 6; considere a compra de GTA 6 separadamente. Confira a variante selecionada e o conteúdo do pacote na loja.
 
-### PS5 Slim com leitor: para quem também usa jogos em disco
+<p class="editorial-buy-action"><a class="price-cta" href="https://link.amazon/B0jatgSKF" data-item-id="B0FPGF9J2J" data-item-name="PS5 Slim Digital 825 GB — ASTRO BOT e Gran Turismo 7" data-link-location="guide-body" target="_blank" rel="sponsored nofollow noopener noreferrer">Conferir preço na Amazon →</a></p>
+
+### PS5 Standard 1 TB com leitor: para quem também usa jogos em disco
 
 O leitor pode ser útil se você já tem uma coleção compatível ou pretende comprar outros jogos em mídia física. A página brasileira da Sony apresenta a versão com 1 TB.
 
 **Não pague a diferença pelo leitor esperando encontrar um disco de GTA 6 na caixa.** Confira o conteúdo de cada edição anunciada antes de comprar.
 
-<!-- Afiliados pendentes: PS5 Slim com leitor — Mercado Livre / Amazon. -->
+**No Mercado Livre: Console PlayStation 5 Standard 1 TB Sony.** Confira o código do modelo, os itens da embalagem e as condições do vendedor antes de comprar.
+
+<p class="editorial-buy-action"><a class="price-cta" href="https://meli.la/1DCVFvT" data-item-name="Console PlayStation 5 Standard 1 TB Sony" data-link-location="guide-body" target="_blank" rel="sponsored nofollow noopener noreferrer">Conferir preço no Mercado Livre →</a></p>
 
 ### Xbox Series S: compare o custo total e o armazenamento
 
@@ -125,4 +129,4 @@ Guia elaborado por consulta documental em **10/11/2026**, sem teste prático dos
 - [Xbox: variantes de Series X e Series S](https://news.xbox.com/en-us/2024/11/15/xbox-series-xs-every-console-option-available-now/), catálogo de variantes; não usado como referência de preço brasileiro.
 - [Xbox Wire Brasil: GTA VI por nuvem no Xbox One e Series X|S](https://news.xbox.com/pt-br/2026/11/10/grand-theft-auto-vi-chega-ao-xbox-one-e-xbox-series-xs-por-meio-do-xbox-cloud-gaming/), publicado em 10/11/2026.
 
-Os links desta versão são informativos e não afiliados. Preços e disponibilidade devem ser conferidos na loja.
+Os botões da Amazon e do Mercado Livre usam links de afiliado e podem gerar comissão em compras elegíveis. Como associado da Amazon, o MiraDesconto recebe por compras qualificadas. Os links das fontes e da PlayStation Store são informativos, não afiliados. Preços, estoque, frete e condições devem ser conferidos na loja.
