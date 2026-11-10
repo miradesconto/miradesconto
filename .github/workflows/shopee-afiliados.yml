@@ -80,6 +80,8 @@ jobs:
               print("\n### Mineração de produtos", file=summary)
               print(f"{len(discovery['keyword_results'])}/{discovery['keyword_limit']} anúncios, "
                     f"{discovery['keyword_new_count']} fora do catálogo.", file=summary)
+              if sample := discovery.get("feed_sample"):
+                  print(f"Registros do feed lidos: {sample['rows_checked']}.", file=summary)
               for keyword, count in discovery["keyword_counts"].items():
                   print(f"- {keyword}: {count}", file=summary)
               print("\n### Preços informados pela API", file=summary)
