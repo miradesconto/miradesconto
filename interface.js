@@ -85,7 +85,7 @@ function makeCard(p) {
     const visual = element('div','product-image');
     const placeholder = element('span','image-placeholder','Imagem não disponível');
     visual.append(placeholder);
-    if(safeUrl(p.imageUrl)) {
+    if(safeUrl(p.imageUrl) || /^\/assets\/ofertas\/[a-f0-9]{24}\.(jpg|webp|png)$/.test(p.imageUrl || '')) {
         const img = element('img');
         img.alt = p.name;
         img.loading = 'lazy';
@@ -112,7 +112,7 @@ function makeCard(p) {
         const checked = new Date(p.platform === 'shopee' ? p.checkedAt : p.priceCheck.checkedAt).toLocaleString('pt-BR', {timeZone:'America/Sao_Paulo'});
         content.append(element('p','store','Conferido em ' + checked + ' (Brasília)'));
     }
-    content.append(element('div','store',recent ? p.store || 'Ver loja' : 'Preço e disponibilidade na loja'));
+    content.append(element('div','store',recent ? p.store || 'Ver loja' : (p.platform === 'shopee' ? 'Shopee · confira o preço na loja' : 'Preço e disponibilidade na loja')));
     const buttons = element('div','buttons');
     const a = element('a','offer-button',p.platform === 'shopee' ? 'VER NA SHOPEE' : (isAffiliateList(p) ? 'ABRIR LISTA NA LOJA' : 'CONFERIR PREÇO NA LOJA'));
     a.dataset.itemId=p.id; a.dataset.itemName=p.name; a.dataset.itemCategory=p.category || '';
@@ -214,7 +214,7 @@ function renderProducts(keepCount = false) {
     }
     document.body.classList.toggle('focused-catalog', selectedCategory !== 'Seleção da hora');
     // Only focus one curated selection, not 110 unverified/expired listing records.
-    $('dataNotice').textContent = 'Valores exibidos foram conferidos há no máximo 2 horas. Quando o preço expira, consulte na loja. Pix, cupons e frete podem alterar o total.';
+    $('dataNotice').textContent = 'Mercado Livre: preço válido por até 2 horas. Shopee: preço coletado há até 36 horas. Confirme preço, variante e frete na loja.';
     const pricedCount = chosen.filter(p => currentPrice(p) !== null).length;
     const pendingCount = chosen.length - pricedCount;
     $('resultCount').textContent = `${pricedCount} ${pricedCount===1?'oferta com preço conferido':'ofertas com preços conferidos'}`
@@ -283,7 +283,7 @@ document.querySelector('.logo').addEventListener('click',resetFilters);
 // No infinite browsing on the homepage: a small, high-confidence selection.
 $('selectionNotice').textContent = 'Primeiro os preços conferidos; anúncios sem preço recente ficam por último. Até 10 produtos na página inicial, incluindo Shopee e Mercado Livre.';
 $('dataNotice').textContent = source
-    ? 'Preços conferidos há no máximo 2 horas. Pix e cupons podem alterar o valor; confirme as condições na loja.'
+    ? 'Preços verificados pelo Mercado Livre (até 2h) e coletados na Shopee (até 36h); confira as condições na loja.'
     : 'Não foi possível carregar as ofertas. Tente recarregar a página em instantes.';
 // Links editoriais podem consultar um registro antigo identificado, com aviso explícito.
 if (requestedProduct) {
