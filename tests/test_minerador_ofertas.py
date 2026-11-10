@@ -133,6 +133,28 @@ class MineradorTest(unittest.TestCase):
         self.assertTrue(m.is_tech('Notebook Acer Ryzen 5 com SSD 512GB'))
         self.assertTrue(m.is_tech('Dissipador SSD M.2 NVMe'))
 
+    def test_preserva_produto_shopee_com_foto_local(self):
+        import tempfile
+        from pathlib import Path
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            (root / "assets/ofertas").mkdir(parents=True)
+            name = "a" * 24 + ".jpg"
+            (root / "assets/ofertas" / name).write_bytes(b"jpeg_local")
+            feed = root / "api/produtos.json"
+            feed.parent.mkdir()
+            row = {
+                "titulo": "Fone Bluetooth Shopee",
+                "preco_atual": 49.90,
+                "imagem": "/assets/ofertas/" + name,
+                "link_afiliado": "https://s.shopee.com.br/abcDEF",
+                "loja": "Shopee"
+            }
+            feed.write_text(json.dumps([row]), encoding="utf-8")
+            with patch.object(m, "ROOT", root):
+                preserved = m.previous_items(feed)
+            self.assertEqual(preserved, [row])
+
     def test_feed_e_home_estao_conectados(self):
         data = json.loads((ROOT / 'api/produtos.json').read_text(encoding='utf-8'))
         self.assertGreaterEqual(len(data),4)

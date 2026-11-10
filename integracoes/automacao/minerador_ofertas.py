@@ -247,10 +247,29 @@ def verified_radar(now=None):
 
 
 def previous_items(path):
+    """Conservar ofertas Shopee e ML com fotos espelhadas localmente.
+    A validação anterior eliminava o histórico ao encontrar /assets/ofertas/.
+    """
     try:
         old = json.loads(path.read_text(encoding="utf-8"))
-        return [normalized for p in old if isinstance(p, dict) and
-                (normalized := normalize(*(p.get(k) for k in FIELDS))) is not None and is_tech(normalized["titulo"])]
+        records = []
+        for p in old:
+            if not isinstance(p, dict) or not is_tech(p.get("titulo")):
+                continue
+            img = p.get("imagem")
+            local = isinstance(img, str) and re.fullmatch(
+                r"/assets/ofertas/[a-f0-9]{24}\.(?:jpg|png|webp)", img)
+            if local:
+                image_file = ROOT / img.lstrip("/")
+                if not image_file.is_file():
+                    continue
+            safe_img = "https://cf.shopee.com.br/file/cache-placeholder" if local else img
+            row = normalize(p.get("titulo"), p.get("preco_atual"), safe_img,
+                            p.get("link_afiliado"), p.get("loja"))
+            if row:
+                row["imagem"] = img
+                records.append(row)
+        return records
     except (OSError, ValueError, TypeError):
         return []
 
@@ -259,8 +278,10 @@ def merge_items(shopee, ml, old, *, shopee_ok, ml_ok, limit=36):
     # Falhas não apagam links aprovados em execução anterior.
     # Uma palavra-chave pode falhar mesmo com outras respostas autênticas.
     # Publicar os resultados válidos da consulta parcial, sem descartar tudo.
-    if not shopee_ok and not shopee:
-        shopee = [r for r in old if r["loja"] == "Shopee"]
+    if not shopee_ok:
+        # Resultado parcial: completar com ofertas Shopee anteriores verificadas,
+        # sem descartar os anúncios válidos coletados nesta execução.
+        shopee = shopee + [r for r in old if r["loja"] == "Shopee"]
     if not ml_ok and not ml:
         ml = [r for r in old if r["loja"] == "Mercado Livre"]
     unique = {}
