@@ -1,0 +1,40 @@
+name: Pinterest — publicar 5 produtos novembro 2026
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'integracoes/pinterest/lote_produtos_20261110.json'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: pinterest-manual-publish
+  cancel-in-progress: false
+jobs:
+  publicar:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install pillow==11.3.0
+      - name: Publicar 5 artes de produtos sem duplicar
+        env:
+          PINTEREST_ACCESS_TOKEN: ${{ secrets.PINTEREST_ACCESS_TOKEN }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          python integracoes/pinterest/publicar_produtos_20261110.py
+      - name: Guardar relatório de publicação
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pinterest-produtos-20261110-${{ github.run_id }}
+          path: integracoes/pinterest/estado_produtos_20261110.json
+          retention-days: 30

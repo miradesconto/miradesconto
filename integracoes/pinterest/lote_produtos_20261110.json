@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "boardName": "Ofertas de Tecnologia e Achadinhos | MiraDesconto",
+  "posts": [
+    {
+      "key": "nitro-v15-rtx4060-nov26",
+      "title": "Acer Nitro V15 RTX 4060: notebook gamer",
+      "subtitle": "Desempenho para jogos e criação",
+      "category": "Notebook gamer",
+      "image": "assets/ofertas/d77042ab91ad930a8b8382d1.webp",
+      "link": "https://meli.la/2UH9rtz"
+    },
+    {
+      "key": "iphone-16-128gb-nov26",
+      "title": "iPhone 16 de 128 GB: veja os detalhes",
+      "subtitle": "Confira o modelo e condições da loja",
+      "category": "Smartphone",
+      "image": "assets/ofertas/e2e64d787c3fd21c44caa346.webp",
+      "link": "https://meli.la/2rdCTEV"
+    },
+    {
+      "key": "lg-tv-43-fullhd-nov26",
+      "title": "Smart TV LG 43 polegadas Full HD",
+      "subtitle": "Conectividade e imagem para sua sala",
+      "category": "TV e entretenimento",
+      "image": "assets/ofertas/dea76b4b75399b5a125d1872.webp",
+      "link": "https://meli.la/1cmZy4H"
+    },
+    {
+      "key": "motorola-edge-60-fusion-nov26",
+      "title": "Motorola Edge 60 Fusion 5G: conheça",
+      "subtitle": "Smartphone com 256 GB de armazenamento",
+      "category": "Smartphone",
+      "image": "assets/ofertas/9f3596897e4e886358b38fc8.webp",
+      "link": "https://meli.la/12fec17"
+    },
+    {
+      "key": "mini-impressora-etiquetas-nov26",
+      "title": "Mini impressora de etiquetas Bluetooth",
+      "subtitle": "Organização para casa e pequenos negócios",
+      "category": "Acessórios",
+      "image": "assets/ofertas/04c3bdbba4bbb650b21c996c.webp",
+      "link": "https://meli.la/33RTYB9"
+    }
+  ]
+}
