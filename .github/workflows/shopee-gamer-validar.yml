@@ -60,7 +60,7 @@ jobs:
                       return None, "título divergente"
                   image = row.get("imageUrl") or ""
                   parts = urlsplit(image)
-                  image = image if parts.scheme == "https" and parts.netloc.endswith(".img.susercontent.com") else None
+                  image = image if parts.scheme == "https" and any((parts.hostname or "").endswith(suffix) for suffix in (".susercontent.com", ".shopee.com.br", ".shopeemobile.com")) else None
                   return {**offer, "image_url": image, "keyword": keyword, "checked_at": checked_at}, None
               return None, "anúncio sem oferta confirmada"
 
