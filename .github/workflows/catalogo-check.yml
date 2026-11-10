@@ -43,6 +43,7 @@ jobs:
           node tests/test-analytics.cjs
           node --check gamer.js
           node --check modo-visual.js
+          node tests/test-modo-visual.cjs
       - name: Confirmar geração reproduzível
         run: |
           python integracoes/catalogo.py generate
@@ -63,6 +64,9 @@ jobs:
           test -s _site/gamer.css
           test -s _site/modo-visual.js
           test -s _site/modo-visual.css
+          grep -q 'href="?modo=gamer"' _site/index.html
+          grep -q 'modo-visual.css?v=2' _site/index.html
+          grep -q 'url=/?modo=gamer' _site/gamer.html
           test -s _site/api/produtos.json
       - name: Guardar prévia para revisão, sem publicar
         uses: actions/upload-artifact@v4
