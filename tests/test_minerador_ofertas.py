@@ -83,6 +83,20 @@ class MineradorTest(unittest.TestCase):
         self.assertEqual(rows[0]['loja'],'Shopee')
         self.assertEqual(rows[0]['link_afiliado'],'https://s.shopee.com.br/a123')
 
+    def test_shopee_retry_em_erro_10000(self):
+        class RetrySession(FakeSession):
+            attempt = 0
+            def post(self, url, **kwargs):
+                self.attempt += 1
+                if self.attempt == 1:
+                    return FakeResponse({'errors': [{'extensions': {'code': 10000}}]})
+                return super().post(url, **kwargs)
+        session = RetrySession()
+        with patch.object(m.time, 'sleep', return_value=None):
+            response = m.shopee_request(session, 'app', 'secret', 'query { productOfferV2 { nodes { itemId } } }')
+        self.assertIn('productOfferV2', response)
+        self.assertEqual(session.attempt, 2)
+
     def test_busca_mercado_livre_e_bot(self):
         with patch.dict(os.environ, {'BOT_API_KEY':'bot-secret'}):
             rows, ok = m.mine_ml_bot(FakeSession(),('rtx 4060',))
