@@ -85,7 +85,7 @@ jobs:
           python integracoes/automacao/cache_imagens_ofertas.py
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add api/produtos.json _data/ofertas_automaticas.json assets/ofertas
+          git add api/produtos.json _data/ofertas_automaticas.json _data/shopee_fotos_locais.json assets/ofertas
           if git diff --cached --quiet; then
             echo "Fotos já estão atualizadas"
           else
