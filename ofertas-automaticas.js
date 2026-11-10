@@ -126,10 +126,11 @@
         seen.add(p.link_afiliado);
         return true;
       });
-      // Até seis Shopee e dois Mercado Livre, sem excluir Shopee quando API cai.
+      // A Shopee já possui sua seleção premium acima; evitar anúncios repetidos.
+      // Se o Mercado Livre ficar indisponível, usar Shopee como reserva legítima.
       const shop = eligibleRows.filter(p => p.loja === 'Shopee');
       const ml = eligibleRows.filter(p => p.loja === 'Mercado Livre');
-      const picks = [...shop.slice(0, 6), ...ml.slice(0, 2)].slice(0, 8);
+      const picks = ml.length ? ml.slice(0, 6) : shop.slice(0, 6);
       if (!picks.length) throw new Error('Sem itens válidos');
       grid.replaceChildren(...picks.map(card));
       section.hidden = false;
