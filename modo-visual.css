@@ -1,0 +1,18 @@
+/* Alternador de visual: preserva o site clássico e oferece vitrine Gamer separada. */
+.mira-mode-bar{background:#f0fdf4;border-bottom:1px solid #d1fae5}
+.mira-mode-inner{max-width:1180px;margin:0 auto;padding:10px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.mira-mode-label{font:600 12px/1.5 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:#334155}
+.mira-mode-switch{display:inline-flex;align-items:center;gap:3px;padding:4px;background:#e2e8f0;border-radius:11px}
+.mira-mode-option{display:inline-flex;align-items:center;justify-content:center;border-radius:8px;padding:9px 13px;min-height:40px;font:750 12px/1.2 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:#334155!important;text-decoration:none!important;transition:background .18s ease,color .18s ease}
+.mira-mode-option:hover{background:#cbd5e1}
+.mira-mode-option.is-active,.mira-mode-option[aria-current="page"]{background:#fff;color:#047857!important;box-shadow:0 1px 3px #0f172a1c}
+.mira-mode-option:focus-visible{outline:3px solid #10b981;outline-offset:2px}
+@media(max-width:560px){.mira-mode-inner{justify-content:center;text-align:center;gap:8px;padding:10px 12px}.mira-mode-label{width:100%}.mira-mode-option{font-size:12px;min-width:112px}}
+/* Na versão escura, herda a mesma lógica e fica legível. */
+body.mira-mode-dark .mira-mode-bar{background:#0b1222;border-color:#23344b}
+body.mira-mode-dark .mira-mode-label{color:#cbd5e1}
+body.mira-mode-dark .mira-mode-switch{background:#162238}
+body.mira-mode-dark .mira-mode-option{color:#94a3b8!important}
+body.mira-mode-dark .mira-mode-option:hover{background:#23344b}
+body.mira-mode-dark .mira-mode-option.is-active,body.mira-mode-dark .mira-mode-option[aria-current="page"]{background:#10b981;color:#032418!important}
+@media(prefers-reduced-motion:reduce){.mira-mode-option{transition:none}}
