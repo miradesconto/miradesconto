@@ -1,18 +1,162 @@
-/* Alternador de visual: preserva o site clássico e oferece vitrine Gamer separada. */
+/*
+ * Uma única página MiraDesconto, dois temas.
+ * Todas as regras Gamer são escopadas em data-mira-layout="gamer".
+ * Nenhuma regra oculta menus, filtros, Radar, histórico ou conteúdo editorial.
+ */
 .mira-mode-bar{background:#f0fdf4;border-bottom:1px solid #d1fae5}
 .mira-mode-inner{max-width:1180px;margin:0 auto;padding:10px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .mira-mode-label{font:600 12px/1.5 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:#334155}
 .mira-mode-switch{display:inline-flex;align-items:center;gap:3px;padding:4px;background:#e2e8f0;border-radius:11px}
 .mira-mode-option{display:inline-flex;align-items:center;justify-content:center;border-radius:8px;padding:9px 13px;min-height:40px;font:750 12px/1.2 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:#334155!important;text-decoration:none!important;transition:background .18s ease,color .18s ease}
 .mira-mode-option:hover{background:#cbd5e1}
-.mira-mode-option.is-active,.mira-mode-option[aria-current="page"]{background:#fff;color:#047857!important;box-shadow:0 1px 3px #0f172a1c}
+[data-mira-layout="classic"] .mira-mode-option[data-layout-option="classic"],
+[data-mira-layout="gamer"] .mira-mode-option[data-layout-option="gamer"]{background:#fff;color:#047857!important;box-shadow:0 1px 3px #0f172a1c}
 .mira-mode-option:focus-visible{outline:3px solid #10b981;outline-offset:2px}
-@media(max-width:560px){.mira-mode-inner{justify-content:center;text-align:center;gap:8px;padding:10px 12px}.mira-mode-label{width:100%}.mira-mode-option{font-size:12px;min-width:112px}}
-/* Na versão escura, herda a mesma lógica e fica legível. */
-body.mira-mode-dark .mira-mode-bar{background:#0b1222;border-color:#23344b}
-body.mira-mode-dark .mira-mode-label{color:#cbd5e1}
-body.mira-mode-dark .mira-mode-switch{background:#162238}
-body.mira-mode-dark .mira-mode-option{color:#94a3b8!important}
-body.mira-mode-dark .mira-mode-option:hover{background:#23344b}
-body.mira-mode-dark .mira-mode-option.is-active,body.mira-mode-dark .mira-mode-option[aria-current="page"]{background:#10b981;color:#032418!important}
-@media(prefers-reduced-motion:reduce){.mira-mode-option{transition:none}}
+
+html[data-mira-layout="gamer"]{
+  color-scheme:dark;
+  --ink:#f8fafc;
+  --text:#d9e4f4;
+  --muted:#9bafc9;
+  --line:#2a3a53;
+  --bg:#080f1d;
+  --white:#111d30;
+  --green:#10b981;
+  --green2:#34d399;
+  --soft:#14312d;
+}
+[data-mira-layout="gamer"] body{background:#080f1d;color:#d9e4f4}
+[data-mira-layout="gamer"] header{background:rgba(9,17,31,.97);border-color:#2a3a53}
+[data-mira-layout="gamer"] header .logo{color:#fff}
+[data-mira-layout="gamer"] header .logo span{color:#10b981}
+[data-mira-layout="gamer"] .site-nav a{color:#c3d0e2}
+[data-mira-layout="gamer"] .site-nav a:hover,
+[data-mira-layout="gamer"] .site-nav a.active{color:#10b981;background:#162a3e}
+[data-mira-layout="gamer"] .search input{background:#101f34;border-color:#37516e;color:#f8fafc}
+[data-mira-layout="gamer"] .search input::placeholder{color:#99abc1}
+[data-mira-layout="gamer"] .search input:focus{border-color:#10b981;box-shadow:0 0 0 3px #10b98133}
+[data-mira-layout="gamer"] .mira-languages a{background:#132439!important;border-color:#37516e!important;color:#cbd5e1!important}
+[data-mira-layout="gamer"] .mira-languages a[aria-current=page]{background:#12362e!important;color:#86efac!important;border-color:#10b981!important}
+
+/* O controle continua no mesmo lugar, sem mudar URL ou carregar outro HTML. */
+[data-mira-layout="gamer"] .mira-mode-bar{background:#0b1627;border-color:#263b53}
+[data-mira-layout="gamer"] .mira-mode-label{color:#c5d5e5}
+[data-mira-layout="gamer"] .mira-mode-switch{background:#17263c}
+[data-mira-layout="gamer"] .mira-mode-option{color:#b8c9df!important}
+[data-mira-layout="gamer"] .mira-mode-option:hover{background:#25405a}
+[data-mira-layout="gamer"] .mira-mode-option[data-layout-option="gamer"]{background:#10b981;color:#052d21!important;box-shadow:0 4px 18px #10b98130}
+
+/* A hero mantém o conteúdo, mas recebe acabamento dark gamer. */
+[data-mira-layout="gamer"] .hero{background:radial-gradient(circle at 85% 17%,#12524470 0,transparent 43%),linear-gradient(125deg,#132741,#081322 76%);border-color:#2a3a53}
+[data-mira-layout="gamer"] .hero h1{color:#fff!important}
+[data-mira-layout="gamer"] .hero p{color:#b7c7da}
+[data-mira-layout="gamer"] .eyebrow{color:#79f2bd;background:#14342d;border-color:#276c53}
+[data-mira-layout="gamer"] .hero .dot{background:#10b981;box-shadow:0 0 12px #10b981}
+[data-mira-layout="gamer"] .trust,
+[data-mira-layout="gamer"] .categories{background:#0d1b2d;border-color:#2a3a53}
+[data-mira-layout="gamer"] .trust-inner{color:#bac9da}
+[data-mira-layout="gamer"] .category{background:#122239;color:#c8d7e9;border-color:#304661}
+[data-mira-layout="gamer"] .category:hover{border-color:#10b981;color:#f8fafc}
+[data-mira-layout="gamer"] .category.active{background:#10b981;border-color:#10b981;color:#062f24}
+[data-mira-layout="gamer"] .category-mobile select{background:#122239;border-color:#304661;color:#f1f5f9}
+[data-mira-layout="gamer"] #ofertas{background:transparent}
+
+/* Campanhas e navegação de produtos. */
+[data-mira-layout="gamer"] .bf-home-banner{background:#11283a;border-color:#276252}
+[data-mira-layout="gamer"] .bf-home-banner strong{color:#f8fafc}
+[data-mira-layout="gamer"] .bf-home-banner p{color:#b6c9d9}
+[data-mira-layout="gamer"] .bf-home-banner a{background:#10b981;color:#063629}
+[data-mira-layout="gamer"] .catalog-discovery{background:#111e31;border-color:#2a3c52}
+[data-mira-layout="gamer"] .catalog-discovery p{color:#adbed2}
+[data-mira-layout="gamer"] .catalog-discovery strong{color:#f1f5f9}
+[data-mira-layout="gamer"] .catalog-discovery a{background:#12342c;color:#9bf8cc;border-color:#276b55}
+[data-mira-layout="gamer"] .catalog-discovery a:hover{background:#1b4b3d}
+[data-mira-layout="gamer"] #selectionNotice{color:#a8b9cf;background:transparent;border-color:transparent}
+[data-mira-layout="gamer"] .search-context{background:#14342e;border-color:#2a6956;color:#c4f5df}
+[data-mira-layout="gamer"] .search-context button{background:#13283a;border-color:#3d8c71;color:#9af1c7}
+[data-mira-layout="gamer"] .search-context button:hover{background:#174636}
+[data-mira-layout="gamer"] .sort select{background:#111f32;border-color:#37506c;color:#e2e8f0}
+[data-mira-layout="gamer"] .section-title h2{color:#f1f5f9}
+[data-mira-layout="gamer"] .section-title p,
+[data-mira-layout="gamer"] .data-notice{color:#9fb0c6}
+
+/* Vitrine editorial: mesmos IDs, mesmos links, mesmas verificações de preços. */
+[data-mira-layout="gamer"] .vitrine-diaria,
+[data-mira-layout="gamer"] .auto-section{border-color:#2a3a53}
+[data-mira-layout="gamer"] .vitrine-heading h2,
+[data-mira-layout="gamer"] .auto-head h2{color:#f8fafc}
+[data-mira-layout="gamer"] .vitrine-heading p,
+[data-mira-layout="gamer"] .auto-head p{color:#a6b9cf}
+[data-mira-layout="gamer"] .vitrine-eyebrow,
+[data-mira-layout="gamer"] .auto-kicker,
+[data-mira-layout="gamer"] .vitrine-heading>a{color:#10b981!important}
+[data-mira-layout="gamer"] .vitrine-card,
+[data-mira-layout="gamer"] .auto-card{background:#111d30;border:1px solid #30445e;box-shadow:0 6px 22px #0003}
+[data-mira-layout="gamer"] .vitrine-card:hover,
+[data-mira-layout="gamer"] .auto-card:hover{border-color:#10b981}
+[data-mira-layout="gamer"] .vitrine-photo,
+[data-mira-layout="gamer"] .vitrine-card--cro .vitrine-photo,
+[data-mira-layout="gamer"] .auto-photo{background:#eaf0f6;border-color:#34465e}
+[data-mira-layout="gamer"] .vitrine-body h3,
+[data-mira-layout="gamer"] .auto-title{color:#f1f5f9!important}
+[data-mira-layout="gamer"] .vitrine-category,
+[data-mira-layout="gamer"] .auto-store{color:#6ee7b7}
+[data-mira-layout="gamer"] .vitrine-card--cro .vitrine-price,
+[data-mira-layout="gamer"] .vitrine-price,
+[data-mira-layout="gamer"] .auto-price{color:#10b981}
+[data-mira-layout="gamer"] .vitrine-spec{background:#1c3047;border-color:#37536d;color:#c9d8e7}
+[data-mira-layout="gamer"] .vitrine-check,
+[data-mira-layout="gamer"] .vitrine-old,
+[data-mira-layout="gamer"] .vitrine-disclosure,
+[data-mira-layout="gamer"] .vitrine-footnote,
+[data-mira-layout="gamer"] .auto-note,
+[data-mira-layout="gamer"] .auto-disclosure{color:#aabbd0}
+[data-mira-layout="gamer"] .vitrine-card--cro .vitrine-price--missing{background:#174334;color:#a7f3d0}
+[data-mira-layout="gamer"] .vitrine-card--cro .vitrine-cta,
+[data-mira-layout="gamer"] .vitrine-cta,
+[data-mira-layout="gamer"] .auto-cta{background:#10b981;color:#042d21!important}
+[data-mira-layout="gamer"] .vitrine-card--cro .vitrine-cta:hover,
+[data-mira-layout="gamer"] .vitrine-cta:hover,
+[data-mira-layout="gamer"] .auto-cta:hover{background:#34d399}
+
+/* Catálogo completo, busca e cards — mantêm eventos/IDs do JS original. */
+[data-mira-layout="gamer"] .products .card{background:#111d30;border-color:#2a405b;box-shadow:none}
+[data-mira-layout="gamer"] .products .card:hover{border-color:#10b981;box-shadow:0 8px 30px #10b98115}
+[data-mira-layout="gamer"] .product-image{background:#eaf0f6;border-color:#2a405b}
+[data-mira-layout="gamer"] .card-content{color:#d9e4f4}
+[data-mira-layout="gamer"] .card h3{color:#f8fafc}
+[data-mira-layout="gamer"] .category-label{color:#6ee7b7}
+[data-mira-layout="gamer"] .card .price{color:#10b981}
+[data-mira-layout="gamer"] .old-price,
+[data-mira-layout="gamer"] .store,
+[data-mira-layout="gamer"] .share-button{color:#a9bcd2}
+[data-mira-layout="gamer"] .offer-button{background:#10b981;color:#052e20}
+[data-mira-layout="gamer"] .offer-button:hover{background:#34d399}
+[data-mira-layout="gamer"] .price-age{background:#41321d;color:#fcdba5}
+[data-mira-layout="gamer"] .card .card-content>a.product-link,
+[data-mira-layout="gamer"] .card .card-content>a.product-link:visited{background:#192d43;border-color:#35516b;color:#c3d7e9}
+[data-mira-layout="gamer"] .product-extras{color:#a9bbd0}
+[data-mira-layout="gamer"] .load-more{background:#142940;border-color:#2e7b66;color:#8eecc0}
+[data-mira-layout="gamer"] .load-more:hover{background:#1a374e}
+[data-mira-layout="gamer"] .empty{background:#121f32;border-color:#2a405b;color:#aebfd4}
+
+/* Conteúdo editorial e rodapé não desaparecem na troca de tema. */
+[data-mira-layout="gamer"] .editorial{border-color:#2a3a53}
+[data-mira-layout="gamer"] .editorial-head h2{color:#f8fafc}
+[data-mira-layout="gamer"] .editorial-head a,
+[data-mira-layout="gamer"] .editorial-card small{color:#6ee7b7}
+[data-mira-layout="gamer"] .editorial-card{background:#111d30;border-color:#30445e}
+[data-mira-layout="gamer"] .editorial-card h3{color:#f1f5f9}
+[data-mira-layout="gamer"] .editorial-card p{color:#aabbd0}
+[data-mira-layout="gamer"] .disclaimer{background:transparent;color:#a5b9cd}
+[data-mira-layout="gamer"] .footer{background:#060e19;border-top:1px solid #273852}
+[data-mira-layout="gamer"] #shareStatus{color:#6ee7b7}
+
+@media(max-width:560px){
+  .mira-mode-inner{justify-content:center;text-align:center;gap:8px;padding:10px 12px}
+  .mira-mode-label{width:100%}
+  .mira-mode-option{font-size:12px;min-width:112px}
+}
+@media(prefers-reduced-motion:reduce){
+  .mira-mode-option{transition:none}
+}
