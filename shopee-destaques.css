@@ -1,0 +1,74 @@
+.shopee-highlights {
+  --shop-ink: #14221a;
+  --shop-muted: #4b5c53;
+  --shop-line: #dbe7df;
+  --shop-surface: #fff;
+  --shop-accent: #166534;
+  color: var(--shop-ink);
+  margin-block: 2rem;
+}
+[data-mira-layout="gamer"] .shopee-highlights {
+  --shop-ink: #ecfdf5;
+  --shop-muted: #b6c8c1;
+  --shop-line: #344b43;
+  --shop-surface: #182923;
+  --shop-accent: #86efac;
+}
+.shopee-highlights-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  flex-wrap: wrap;
+  gap: .75rem 1rem;
+  margin-bottom: 1rem;
+}
+.shopee-highlights-head h2 { margin: .2rem 0; font-size: clamp(1.35rem, 3vw, 1.85rem); color: var(--shop-ink); }
+.shopee-highlights-head p, .shopee-highlights-disclosure { margin: 0; color: var(--shop-muted); font-size: .875rem; }
+.shopee-highlights-head .shopee-highlights-kicker { color: var(--shop-accent); font-weight: 750; }
+.shopee-highlights-all, .shopee-highlight-cta { color: var(--shop-accent); font-weight: 750; }
+.shopee-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 145px), 1fr));
+  gap: .65rem;
+}
+.shopee-highlight-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border: 1px solid var(--shop-line);
+  border-radius: .75rem;
+  background: var(--shop-surface);
+  color: var(--shop-ink);
+  text-decoration: none;
+  overflow: hidden;
+}
+.shopee-highlight-card:hover { border-color: var(--shop-accent); }
+.shopee-highlight-card:focus-visible, .shopee-highlights-all:focus-visible { outline: 2px solid var(--shop-accent); outline-offset: 2px; }
+.shopee-highlight-image { aspect-ratio: 4 / 3; background: #f8faf9; }
+.shopee-highlight-image img { display: block; width: 100%; height: 100%; padding: .5rem; object-fit: contain; }
+.shopee-highlight-body { display: flex; flex: 1; flex-direction: column; gap: .4rem; padding: .65rem; }
+.shopee-highlight-category { color: var(--shop-muted); font-size: .76rem; }
+.shopee-highlight-body h3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  margin: 0;
+  font-size: .875rem;
+  line-height: 1.3;
+  color: var(--shop-ink);
+}
+.shopee-highlight-price { margin: 0; color: var(--shop-ink); font-weight: 750; font-size: .875rem; }
+.shopee-highlight-cta { margin-top: auto; font-size: .84rem; }
+.shopee-highlights-disclosure { margin-top: .65rem; }
+@media (max-width: 650px) {
+  .shopee-highlights-grid {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: min(68%, 175px);
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    padding: .2rem .2rem .55rem;
+  }
+  .shopee-highlight-card { scroll-snap-align: start; }
+}

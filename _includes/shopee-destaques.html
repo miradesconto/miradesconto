@@ -1,0 +1,38 @@
+{% assign shopee_items = site.data.shopee_gamer_publicados %}
+{% if shopee_items and shopee_items.size > 0 %}
+{% assign shopee_groups = 'headset gamer|mouse gamer sem fio|teclado mecanico switch red|cadeira gamer|monitor gamer 144hz|placa de video rtx|ssd nvme 1tb' | split: '|' %}
+{% assign shopee_labels = 'Headsets|Mouses sem fio|Teclados switch red|Cadeiras|Monitores 144 Hz|Placas RTX|SSDs NVMe 1 TB' | split: '|' %}
+{% assign shopee_pick = include.offset | default: 0 %}
+<section class="shopee-highlights{% if include.wrap %} wrap{% endif %}" aria-labelledby="shopee-highlights-title">
+  <div class="shopee-highlights-head">
+    <div>
+      <p class="shopee-highlights-kicker">Seleção Shopee</p>
+      <h2 id="shopee-highlights-title">{{ include.title | escape }}</h2>
+      <p>{{ include.note | escape }}</p>
+    </div>
+    <a class="shopee-highlights-all" href="{{ '/shopee-gamer/' | relative_url }}">Ver todos na Shopee gamer →</a>
+  </div>
+  <div class="shopee-highlights-grid">
+    {% for keyword in shopee_groups %}
+      {% assign shopee_group = shopee_items | where: 'keyword', keyword %}
+      {% assign shopee_item = shopee_group[shopee_pick] | default: shopee_group.first %}
+      {% if shopee_item and shopee_item.image_url and shopee_item.affiliate_url %}
+        {% assign shopee_checked = shopee_item.checked_at | date: '%s' | plus: 0 %}
+        {% assign shopee_age = site.time | date: '%s' | minus: shopee_checked %}
+        <a class="shopee-highlight-card" href="{{ shopee_item.affiliate_url | escape }}" rel="sponsored nofollow noopener noreferrer" target="_blank" data-item-id="{{ shopee_item.item_id | escape }}" data-item-name="{{ shopee_item.title | escape }}" data-link-location="shopee-{{ include.location | escape }}">
+          <div class="shopee-highlight-image"><img src="{{ shopee_item.image_url | escape }}" alt="" width="320" height="240" loading="lazy" decoding="async"></div>
+          <div class="shopee-highlight-body">
+            <span class="shopee-highlight-category">{{ shopee_labels[forloop.index0] }}</span>
+            <h3>{{ shopee_item.title | escape }}</h3>
+            {% if shopee_age >= 0 and shopee_age < 7200 %}
+              <p class="shopee-highlight-price">R$ {{ shopee_item.price_min_brl | replace: '.', ',' }}{% if shopee_item.price_min_brl != shopee_item.price_max_brl %} a R$ {{ shopee_item.price_max_brl | replace: '.', ',' }}{% endif %}</p>
+            {% endif %}
+            <span class="shopee-highlight-cta">Ver na Shopee ↗</span>
+          </div>
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+  <p class="shopee-highlights-disclosure">Links de afiliado. Confira preço, frete e disponibilidade na loja.</p>
+</section>
+{% endif %}
