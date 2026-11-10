@@ -1,0 +1,49 @@
+{%- assign cover_entry = include.entry -%}
+{%- assign cover_src = site.data.editorial_covers[cover_entry.slug] -%}
+{%- unless cover_src -%}
+  {%- assign cover_src = cover_entry.custom_image -%}
+  {%- unless cover_src -%}
+    {%- for product_id in cover_entry.produtos -%}
+      {%- assign cover_product = site.data.editorial_products[product_id] | default: site.data.produtos[product_id] -%}
+      {%- if cover_product.imageUrl and cover_product.imageVerifiedOnReview != false -%}
+        {%- assign cover_src = cover_product.imageUrl -%}
+        {%- break -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endunless -%}
+{%- endunless -%}
+{% if cover_src %}
+<img src="{{ cover_src | relative_url | escape }}" alt="{{ cover_entry.title | escape }} — imagem ilustrativa" width="480" height="300" loading="lazy" decoding="async">
+{% endif %}
+<span class="media-fallback" {% if cover_src %}hidden{% endif %}>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="480" height="300" style="display:block;width:100%;height:auto" role="img" aria-label="Ilustração editorial: {{ cover_entry.title | escape }}">
+    <rect width="480" height="300" rx="20" fill="#eaf4ef"/>
+    <circle cx="395" cy="55" r="105" fill="#d4e9de"/>
+    <circle cx="70" cy="270" r="90" fill="#dcece5"/>
+    <g stroke="#193d32" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    {% if cover_entry.slug contains 'power-bank' or cover_entry.slug contains 'carregador' %}
+      <rect x="169" y="54" width="142" height="181" rx="24" fill="#fff"/>
+      <path d="M251 90l-39 65h30l-13 42 43-67h-32z" fill="#199b6a" stroke="none"/>
+      <path d="M216 218h48"/>
+    {% elsif cover_entry.slug contains 'kapbom' or cover_entry.slug contains 'som' %}
+      <rect x="179" y="47" width="122" height="197" rx="23" fill="#fff"/>
+      <circle cx="240" cy="99" r="20" fill="#bbdfcf"/>
+      <circle cx="240" cy="180" r="40" fill="#199b6a"/>
+      <circle cx="240" cy="180" r="15" fill="#fff"/>
+      <path d="M333 123q25 26 0 52M148 123q-25 26 0 52" fill="none"/>
+    {% elsif cover_entry.slug contains 'gta' or cover_entry.slug contains 'xbox' or cover_entry.slug contains 'gamer' %}
+      <rect x="105" y="45" width="270" height="152" rx="13" fill="#fff"/>
+      <path d="M120 166l65-61 47 33 59-55 70 83" fill="#bbdfcf" stroke="none"/>
+      <path d="M184 177h112q24 0 33 28l13 38q5 22-14 22-10 0-32-24H184q-22 24-32 24-19 0-14-22l13-38q9-28 33-28z" fill="#193d32"/>
+      <path d="M176 210h30m-15-15v30" stroke="#fff"/>
+      <circle cx="283" cy="209" r="7" fill="#62d5a5" stroke="none"/>
+      <circle cx="307" cy="221" r="7" fill="#62d5a5" stroke="none"/>
+    {% else %}
+      <rect x="113" y="55" width="254" height="155" rx="14" fill="#fff"/>
+      <path d="M144 98h98m-98 33h172m-172 33h134" stroke="#199b6a"/>
+      <path d="M214 212v30m52-30v30m-77 0h102" fill="none"/>
+    {% endif %}
+    </g>
+    <text x="24" y="282" font-family="Arial,sans-serif" font-size="12" letter-spacing="2" fill="#396e59">MIRADESCONTO · ILUSTRAÇÃO EDITORIAL</text>
+  </svg>
+</span>
