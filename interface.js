@@ -11,7 +11,22 @@ function directAffiliate(p) {
     if (['https://meli.la/1NguveN','https://meli.la/1pyBZm8'].includes(link)) return false;
     return p.affiliateLinkType !== 'list' && p.available !== false;
 }
+let shopeeProducts = [];
+try {
+ const data = JSON.parse(document.getElementById('shopee-offers-data')?.textContent || '[]');
+ const ids = new Set();
+ if (Array.isArray(data)) shopeeProducts = data.filter(p => p && /^\d+$/.test(p.id || '') && p.name
+   && /^https:\/\/s\.shopee\.com\.br\/[A-Za-z0-9]+$/.test(p.affiliateUrl || '')
+   && (String(p.imageUrl || '').startsWith('/assets/ofertas/') || String(p.imageUrl || '').startsWith('https://cf.shopee.com.br/file/'))
+   && !ids.has(p.id) && ids.add(p.id))
+   .map(p => ({...p, id:'SHOPEE-'+p.id, price:Number(p.price), category:'Gaming', store:'Shopee', platform:'shopee'}));
+} catch (_) { /* Keep Mercado Livre working if the Shopee feed is invalid. */ }
 const products = (source?.products || []).filter(p => p.name && directAffiliate(p));
+const allOffers = () => products.concat(shopeeProducts);
+const shopeePriceFresh = p => {
+ const age = Date.now()-Date.parse(p.checkedAt);
+ return Number.isFinite(age) && age >= 0 && age < 36*60*60*1000 && Number.isFinite(p.price) && p.price > 0;
+};
 let selectedCategory = 'Seleção da hora';
 let visibleCount = MAX_HOME_OFFERS;
 let categoryBeforeSearch = null;
@@ -24,7 +39,7 @@ function money(value) {
     return typeof value === 'number' && Number.isFinite(value) && value > 0
         ? value.toLocaleString('pt-BR', {style:'currency',currency:'BRL'}) : 'Ver preço na loja';
 }
-function currentPrice(p) { return MiraQuality.usablePrice(p) ? p.price : null; }
+function currentPrice(p) { return p.platform === 'shopee' ? (shopeePriceFresh(p) ? p.price : null) : (MiraQuality.usablePrice(p) ? p.price : null); }
 function recordedPrice(p) {
     const e = p.priceCheck;
     return e?.status === 'verified' && e.currency === 'BRL' && e.price === p.price
@@ -32,7 +47,7 @@ function recordedPrice(p) {
         && typeof p.price === 'number' && Number.isFinite(p.price) && p.price > 0
         ? p.price : null;
 }
-function productDiscount(p) { return MiraQuality.usablePrice(p) ? calculateDiscount(p.oldPrice,p.price) : null; }
+function productDiscount(p) { return p.platform === 'shopee' ? null : (MiraQuality.usablePrice(p) ? calculateDiscount(p.oldPrice,p.price) : null); }
 function calculateDiscount(oldPrice, price) {
     return oldPrice > price && price > 0 ? Math.round((1-price/oldPrice)*100) : null;
 }
@@ -94,30 +109,34 @@ function makeCard(p) {
     const recent = currentPrice(p) !== null;
     content.append(element('div','price',recent ? money(p.price) : 'Consultar preço na loja'));
     if (recent) {
-        const checked = new Date(p.priceCheck.checkedAt).toLocaleString('pt-BR', {timeZone:'America/Sao_Paulo'});
+        const checked = new Date(p.platform === 'shopee' ? p.checkedAt : p.priceCheck.checkedAt).toLocaleString('pt-BR', {timeZone:'America/Sao_Paulo'});
         content.append(element('p','store','Conferido em ' + checked + ' (Brasília)'));
     }
     content.append(element('div','store',recent ? p.store || 'Ver loja' : 'Preço e disponibilidade na loja'));
     const buttons = element('div','buttons');
-    const a = element('a','offer-button',isAffiliateList(p) ? 'ABRIR LISTA NA LOJA' : 'CONFERIR PREÇO NA LOJA');
+    const a = element('a','offer-button',p.platform === 'shopee' ? 'VER NA SHOPEE' : (isAffiliateList(p) ? 'ABRIR LISTA NA LOJA' : 'CONFERIR PREÇO NA LOJA'));
     a.dataset.itemId=p.id; a.dataset.itemName=p.name; a.dataset.itemCategory=p.category || '';
-    a.dataset.destinationType=isAffiliateList(p) ? 'affiliate_list' : 'product';
-    if (isAffiliateList(p)) content.append(element('p','store','O link abre uma lista de afiliados. Procure este modelo e confirme a configuração.'));
+    a.dataset.destinationType=p.platform === 'shopee' ? 'product' : (isAffiliateList(p) ? 'affiliate_list' : 'product');
+    if (p.platform !== 'shopee' && isAffiliateList(p)) content.append(element('p','store','O link abre uma lista de afiliados. Procure este modelo e confirme a configuração.'));
     a.href = safeUrl(p.offerUrl || p.affiliateUrl);
     a.target = '_blank';
     a.rel = p.affiliateUrl ? 'noopener noreferrer sponsored' : 'noopener noreferrer';
     const share = element('button','share-button','Compartilhar');
     share.type = 'button';
-    const siteLink = new URL('/oferta/'+p.id.toLowerCase()+'/', window.location.href);
+    const siteLink = new URL(p.platform === 'shopee' ? '/shopee-gamer/' : '/oferta/'+p.id.toLowerCase()+'/', window.location.href);
     share.addEventListener('click', () => shareProduct(p.name,siteLink.href));
     const history = element('button','share-button','Ver histórico de preço');
     history.type = 'button'; history.addEventListener('click', () => window.MiraHistory.open(p, history));
     const landing=element('a','product-link','Detalhes e cuidados →');
-    landing.href='/oferta/'+p.id.toLowerCase()+'/';content.append(landing);
+    landing.href=p.platform === 'shopee' ? '/shopee-gamer/' : '/oferta/'+p.id.toLowerCase()+'/';
+    if (p.platform === 'shopee') landing.textContent='Ver seleção Shopee →';
+    content.append(landing);
     const guideSlug = {'MLB4604524838':'asus-vivobook-go-15-ryzen-5','MLB3914161563':'asus-vivobook-go-15-ryzen-5','MLB4329495631':'samsung-essential-s3-24','MLB4196200841':'acer-nitro-v15-rtx-4060'}[p.id];
     if (guideSlug) { const guide=element('a','product-link','Ver análise de compra →'); guide.href='produtos/'+guideSlug+'/'; content.append(guide); }
     const extras = element('details','product-extras');
-    extras.append(element('summary','','Mais opções'),history,share);
+    extras.append(element('summary','','Mais opções'));
+    if (p.platform !== 'shopee') extras.append(history);
+    extras.append(share);
     buttons.append(a,extras);content.append(buttons);card.append(visual,content);
     return card;
 }
@@ -154,10 +173,20 @@ function pricedFirst(items) {
 function filteredProducts() {
     const query = normalize($('searchInput').value.trim());
     const featuredIds = window.MiraShowcaseIds || [];
-    const filtered = products.filter(p => directAffiliate(p) && !MiraQuality.priceReviewReason(p)
+    const filtered = allOffers().filter(p => (p.platform === 'shopee' || (directAffiliate(p) && !MiraQuality.priceReviewReason(p)))
         && (selectedCategory !== 'Seleção da hora' || !featuredIds.includes(p.id))
         && (selectedCategory === 'Todos' || selectedCategory === 'Seleção da hora' || (selectedCategory === 'Destaques' ? p.featured === true : p.category === selectedCategory))
         && [p.id,p.name,p.store,p.category].some(v=>normalize(v).includes(query)));
+    if (selectedCategory === 'Seleção da hora' && !query && $('sortSelect').value === 'default') {
+        const shopee = rotateOffers(filtered.filter(p => p.platform === 'shopee' && currentPrice(p) !== null));
+        const mercado = rotateOffers(filtered.filter(p => p.platform !== 'shopee' && currentPrice(p) !== null));
+        const mixed = [];
+        for (let i=0;i<Math.max(shopee.length,mercado.length);i++) {
+            if (mercado[i]) mixed.push(mercado[i]);
+            if (shopee[i]) mixed.push(shopee[i]);
+        }
+        return mixed.concat(filtered.filter(p => currentPrice(p) === null));
+    }
     switch($('sortSelect').value) {
         case 'discount': filtered.sort((a,b)=>(productDiscount(b)||0)-(productDiscount(a)||0));break;
         case 'lowPrice': filtered.sort((a,b)=>(currentPrice(a) ?? Infinity)-(currentPrice(b) ?? Infinity));break;
@@ -252,7 +281,7 @@ $('clearSearch').addEventListener('click',()=>{$('searchInput').value='';updateS
 $('sortSelect').addEventListener('change',renderProducts);
 document.querySelector('.logo').addEventListener('click',resetFilters);
 // No infinite browsing on the homepage: a small, high-confidence selection.
-$('selectionNotice').textContent = 'Primeiro os preços conferidos; anúncios sem preço recente ficam por último. Até 10 produtos na página inicial.';
+$('selectionNotice').textContent = 'Primeiro os preços conferidos; anúncios sem preço recente ficam por último. Até 10 produtos na página inicial, incluindo Shopee e Mercado Livre.';
 $('dataNotice').textContent = source
     ? 'Preços conferidos há no máximo 2 horas. Pix e cupons podem alterar o valor; confirme as condições na loja.'
     : 'Não foi possível carregar as ofertas. Tente recarregar a página em instantes.';
