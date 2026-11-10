@@ -253,5 +253,10 @@
     "kicker": "Xbox na TV",
     "hook": "Qual geração escolher?",
     "tone": "mint"
+  },
+  "gta-6-qual-console-comprar": {
+    "kicker": "GTA 6 nos consoles",
+    "hook": "Qual videogame escolher?",
+    "tone": "lilac"
   }
 }
