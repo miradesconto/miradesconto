@@ -1,0 +1,37 @@
+{% assign shopee_items = site.data.shopee_gamer_publicados %}
+{% if shopee_items.size > 0 %}
+<section class="shopee-home" aria-labelledby="shopee-home-title">
+  <div class="shopee-home-heading">
+    <div><p class="shopee-home-kicker">Seleção gamer · Shopee</p>
+      <h2 id="shopee-home-title">Achados gamer na Shopee</h2>
+      <p>Produtos coletados pela integração de afiliados. Confira preço, vendedor e variante antes de comprar.</p></div>
+    <a class="shopee-home-all" href="{{ '/shopee-gamer/' | relative_url }}">Ver seleção completa →</a>
+  </div>
+  <div class="shopee-home-grid">
+    {% for item in shopee_items limit: 8 %}
+    {% assign photo = site.data.shopee_fotos_locais[item.item_id] | default: item.image_url %}
+    {% if item.title and item.affiliate_url and photo %}
+    <article class="shopee-home-card">
+      <a class="shopee-home-photo" href="{{ item.affiliate_url | escape }}" target="_blank" rel="sponsored nofollow noopener noreferrer" aria-label="Conferir {{ item.title | escape }} na Shopee">
+        <img src="{{ photo | escape }}" alt="{{ item.title | escape }}" loading="lazy" width="320" height="240" decoding="async">
+      </a>
+      <div class="shopee-home-body">
+        <span class="shopee-home-category">{{ item.keyword | escape }}</span>
+        <h3>{{ item.title | escape }}</h3>
+        {% assign checked_seconds = item.checked_at | date: '%s' | plus: 0 %}
+        {% assign price_age = site.time | date: '%s' | minus: checked_seconds %}
+        {% if price_age >= 0 and price_age < 129600 and item.price_min_brl %}
+        <strong class="shopee-home-price">R$ {{ item.price_min_brl | replace: '.', ',' }}</strong>
+        <small>Preço observado em {{ item.checked_at | date: '%d/%m/%Y' }}; pode mudar.</small>
+        {% else %}
+        <span class="shopee-home-price-unverified">Consultar preço na Shopee</span>
+        {% endif %}
+        <a class="shopee-home-cta" href="{{ item.affiliate_url | escape }}" target="_blank" rel="sponsored nofollow noopener noreferrer" data-item-id="{{ item.item_id | escape }}" data-item-name="{{ item.title | escape }}" data-link-location="shopee-home">Ver na Shopee ↗</a>
+        <small>Publicidade · link de afiliado</small>
+      </div>
+    </article>
+    {% endif %}
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
