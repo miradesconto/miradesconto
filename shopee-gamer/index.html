@@ -1,0 +1,94 @@
+---
+layout: null
+permalink: /shopee-gamer/
+---
+{% assign items = site.data.shopee_gamer_publicados %}
+{% assign keywords = "headset gamer|mouse gamer sem fio|teclado mecanico switch red|cadeira gamer|monitor gamer 144hz|placa de video rtx|ssd nvme 1tb" | split: "|" %}
+{% assign labels = "Headsets gamer|Mouses gamer sem fio|Teclados mecânicos switch red|Cadeiras gamer|Monitores gamer 144 Hz|Placas de vídeo RTX|SSDs NVMe 1 TB" | split: "|" %}
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ofertas gamer na Shopee | MiraDesconto</title>
+  <meta name="description" content="Confira a seleção gamer do MiraDesconto na Shopee, com preços observados e links para os anúncios verificados.">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/blog/blog.css?v=20261013audit">
+  <link rel="stylesheet" href="/radar.css?v=20261006">
+  <link rel="stylesheet" href="/analytics.css">
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="/">Mira<span>Desconto</span></a>
+    <nav aria-label="Navegação principal">
+      <a href="/">Ofertas</a>
+      <a href="/radar/">Radar</a>
+      <a href="/blog/">Guias e Reviews</a>
+      <a href="/shopee-gamer/" aria-current="page">Shopee gamer</a>
+    </nav>
+  </div>
+</header>
+<main id="conteudo">
+  <section class="radar-hero">
+    <div class="wrap radar-hero-inner">
+      <p class="eyebrow">Seleção MiraDesconto</p>
+      <h1>Ofertas gamer na Shopee</h1>
+      <p class="radar-lead">{{ items.size }} anúncios conferidos. Confirme o preço, a variante, o frete e a disponibilidade na loja.</p>
+      <p>Publicidade. A página contém links de afiliado. O MiraDesconto pode receber comissão por compras atribuídas a esses links.</p>
+    </div>
+  </section>
+  <nav class="wrap radar-content" aria-label="Categorias de ofertas">
+    <ul>
+      {% for keyword in keywords %}
+        {% assign group = items | where: "keyword", keyword %}
+        {% if group.size > 0 %}
+          <li><a href="#{{ keyword | slugify }}">{{ labels[forloop.index0] }} ({{ group.size }})</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </nav>
+  {% for keyword in keywords %}
+    {% assign group = items | where: "keyword", keyword %}
+    {% if group.size > 0 %}
+      <section class="wrap radar-content" aria-labelledby="{{ keyword | slugify }}">
+        <header class="radar-section-head">
+          <h2 id="{{ keyword | slugify }}">{{ labels[forloop.index0] }}</h2>
+        </header>
+        <div class="radar-grid">
+          {% for item in group %}
+            <article class="radar-card" data-shopee-item="{{ item.item_id | escape }}">
+              {% if item.image_url %}
+                <div class="radar-card-image"><img src="{{ item.image_url | escape }}" alt="" loading="lazy" decoding="async" width="420" height="300"></div>
+              {% endif %}
+              <div class="radar-card-body">
+                <h3>{{ item.title | escape }}</h3>
+                {% if item.merchant %}<p class="radar-evidence">Loja {{ item.merchant | escape }}</p>{% endif %}
+                {% assign checked_seconds = item.checked_at | date: "%s" | plus: 0 %}
+                {% assign price_age = site.time | date: "%s" | minus: checked_seconds %}
+                {% if price_age >= 0 and price_age < 129600 %}
+                <p class="radar-evidence">Preço observado em <time datetime="{{ item.checked_at | escape }}">{{ item.checked_at | date: "%d/%m/%Y" }}</time></p>
+                <p class="radar-price">R$ {{ item.price_min_brl | replace: ".", "," }}{% if item.price_min_brl != item.price_max_brl %} a R$ {{ item.price_max_brl | replace: ".", "," }}{% endif %}</p>
+                {% else %}<p class="radar-evidence">Consulte o preço na Shopee.</p>{% endif %}
+                <div class="radar-actions">
+                  <a class="radar-primary" href="{{ item.affiliate_url | escape }}" target="_blank" rel="sponsored nofollow noopener noreferrer" data-item-id="{{ item.item_id | escape }}" data-item-name="{{ item.title | escape }}" data-link-location="shopee-gamer">Ver na Shopee <span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+      </section>
+    {% endif %}
+  {% endfor %}
+</main>
+<footer>
+  <div class="wrap footer-inner">
+    <div><a class="logo" href="/">Mira<span>Desconto</span></a><p>Informação para escolher melhor.</p></div>
+    <nav aria-label="Informações institucionais"><a href="/sobre.html">Sobre</a><a href="/transparencia.html">Transparência</a><a href="/privacidade.html">Privacidade</a></nav>
+  </div>
+</footer>
+<script src="/analytics-config.js"></script><script src="/analytics.js"></script>
+</body>
+</html>
