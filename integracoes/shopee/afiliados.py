@@ -10,6 +10,7 @@ import sys
 import time
 import unicodedata
 from collections import deque
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 from decimal import Decimal, InvalidOperation
 from pathlib import Path
@@ -132,7 +133,8 @@ def tokens(text):
     normalized = ascii_text.lower()
     normalized = re.sub(r"\b(\d+)\s+(hz|tb)\b", r"\1\2", normalized)
     normalized = re.sub(r"\brtx(?=\d)", "rtx ", normalized)
-    normalized = re.sub(r"\bwireless\b", "sem fio", normalized)
+    normalized = re.sub(r"\b(?:wireless|s/\s*fio)\b", "sem fio", normalized)
+    normalized = re.sub(r"\bswitch(?:es)?\s+(?:vermelho|vermelhos)\b", "switch red", normalized)
     normalized = re.sub(r"\bgaming\b", "gamer", normalized)
     return set(re.findall(r"[a-z0-9]+", normalized)) - {"de"}
 
@@ -349,28 +351,59 @@ def collect(api, args):
     if full_feeds:
         total_rows = 0
         has_more = False
-        for feed_number, feed in enumerate(full_feeds[:2], start=1):
-            limit = 500 if terms else 10
-            offset = 0
-            page_has_more = False
-            for _ in range(pages_per_feed if terms else 1):
-                feed_page = check(f"getItemFeedData/{feed_number}/{offset}", lambda: api.call(
+        if len(terms) > 1:
+            def read_page(task):
+                feed_number, feed_id, offset = task
+                return check(f"getItemFeedData/{feed_number}/{offset}", lambda: api.call(
                     "getItemFeedData", "rows { columns } pageInfo { hasMore totalCount }",
-                    datafeedId=quoted(feed["datafeedId"]), offset=offset, limit=limit,
+                    datafeedId=quoted(feed_id), offset=offset, limit=500,
                 ))
-                if feed_page is None:
-                    break
-                feed_rows = feed_page.get("rows") or []
-                total_rows += len(feed_rows)
-                page_has_more = bool((feed_page.get("pageInfo") or {}).get("hasMore"))
-                for row in feed_rows:
-                    offer = feed_product(row, *terms.values())
-                    if offer:
-                        feed_results[(offer["shop_id"], offer["item_id"])] = offer
-                if not page_has_more or not feed_rows:
-                    break
-                offset += len(feed_rows)
-            has_more = has_more or bool(feed_page is None or page_has_more)
+
+            tasks = []
+            for feed_number, feed in enumerate(full_feeds[:2], start=1):
+                total = int(feed.get("totalCount") or 0)
+                page_count = (total + 499) // 500
+                prefix = list(range(min(pages_per_feed, page_count or pages_per_feed)))
+                remaining = max(0, page_count - pages_per_feed)
+                spread_count = min(80, remaining)
+                spread = [pages_per_feed + index * remaining // spread_count for index in range(spread_count)]
+                tasks.extend((feed_number, feed["datafeedId"], index * 500) for index in prefix + spread)
+                has_more = has_more or page_count > len(prefix) + len(spread)
+
+            with ThreadPoolExecutor(max_workers=3) as pool:
+                for page in pool.map(read_page, tasks):
+                    if page is None:
+                        has_more = True
+                        continue
+                    feed_rows = page.get("rows") or []
+                    total_rows += len(feed_rows)
+                    for row in feed_rows:
+                        offer = feed_product(row, *terms.values())
+                        if offer:
+                            feed_results[(offer["shop_id"], offer["item_id"])] = offer
+        else:
+            for feed_number, feed in enumerate(full_feeds[:2], start=1):
+                limit = 500 if terms else 10
+                offset = 0
+                page_has_more = False
+                for _ in range(pages_per_feed if terms else 1):
+                    feed_page = check(f"getItemFeedData/{feed_number}/{offset}", lambda: api.call(
+                        "getItemFeedData", "rows { columns } pageInfo { hasMore totalCount }",
+                        datafeedId=quoted(feed["datafeedId"]), offset=offset, limit=limit,
+                    ))
+                    if feed_page is None:
+                        break
+                    feed_rows = feed_page.get("rows") or []
+                    total_rows += len(feed_rows)
+                    page_has_more = bool((feed_page.get("pageInfo") or {}).get("hasMore"))
+                    for row in feed_rows:
+                        offer = feed_product(row, *terms.values())
+                        if offer:
+                            feed_results[(offer["shop_id"], offer["item_id"])] = offer
+                    if not page_has_more or not feed_rows:
+                        break
+                    offset += len(feed_rows)
+                has_more = has_more or bool(feed_page is None or page_has_more)
         discovery["feed_sample"] = {"rows_checked": total_rows, "has_more": has_more}
     else:
         statuses["getItemFeedData"] = {"status": "bloqueado", "detail": "sem feed completo disponível"}
