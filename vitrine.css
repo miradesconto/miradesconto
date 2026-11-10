@@ -43,3 +43,8 @@
 .vitrine-card--cro .vitrine-cta:focus-visible{outline:3px solid #86efac;outline-offset:2px}
 .vitrine-card--cro .vitrine-disclosure{display:block;margin:0;line-height:1.4}
 @media(max-width:500px){.vitrine-card--cro .vitrine-body h3{min-height:0}}
+
+/* A foto local evita hotlink quebrado; se falhar, exibir aviso legível. */
+.vitrine-photo img[hidden]{display:none!important}
+.vitrine-image-unavailable{display:flex;align-items:center;justify-content:center;text-align:center;color:#64748b;font-size:12px;line-height:1.5;font-weight:650;padding:20px}
+[data-mira-layout="gamer"] .vitrine-image-unavailable{color:#385571}
