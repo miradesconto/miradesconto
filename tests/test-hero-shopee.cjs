@@ -86,7 +86,9 @@ const image=hero.querySelector('.hero-feature-visual img');
 const price=hero.querySelector('.hero-price');
 const link=hero.querySelector('.hero-offer-link');
 assert.ok(headline&&image&&price&&link,'Hero deve conter título, foto, preço e CTA');
-assert.match(headline.textContent,/Monitor/i,'O primeiro destaque deve ser monitor real');
+assert.ok(snapshot.some(offer => offer.loja === 'Shopee' &&
+  offer.titulo === headline.textContent && offer.imagem === image.src &&
+  offer.link_afiliado === link.href), 'O primeiro destaque deve usar um anúncio real da Shopee.');
 assert.match(image.src,/^\/assets\/ofertas\/[a-f0-9]{24}\.(?:jpg|png|webp)$/);
 assert.match(link.href,/^https:\/\/s\.shopee\.com\.br\//);
 assert.equal(price.textContent, 'Consultar preço na loja', 'O feed sem data não publica preço atual');
@@ -101,3 +103,4 @@ const nextImage=hero.querySelector('.hero-feature-visual img');
 assert.match(link.href, /^https:\/\/meli\.la\//, 'A segunda oferta deve dar espaço ao Mercado Livre');
 assert.ok(nextImage&&/^\/assets\/ofertas\//.test(nextImage.src));
 console.log('OK: hero mostra foto local + produto Shopee quando catálogo de preços verificados está vazio.');
+
