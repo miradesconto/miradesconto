@@ -87,6 +87,25 @@ class CacheOffersTest(unittest.TestCase):
         self.assertTrue(all(row["imagem"].startswith("/assets/ofertas/") for row in updated))
         self.assertTrue(all((self.root / row["imagem"][1:]).exists() for row in updated))
 
+    def test_curated_shopee_uses_local_photo_without_replacing_affiliate_link(self):
+        source = self.root / "_data/shopee_gamer_publicados.json"
+        source.parent.mkdir(exist_ok=True)
+        data = [{
+            "item_id": "58212667892",
+            "title": "Monitor Gamer 144Hz",
+            "image_url": self.item["imagem"],
+            "affiliate_url": "https://s.shopee.com.br/curated123"
+        }]
+        source.write_text(json.dumps(data), encoding="utf-8")
+        photos = cache.mirror_curated_shopee(self.root, getter=self.request)
+        self.assertIn("58212667892", photos)
+        image = photos["58212667892"]
+        self.assertTrue(image.startswith("/assets/ofertas/"))
+        self.assertTrue((self.root / image.lstrip("/")).is_file())
+        persisted = json.loads((self.root / "_data/shopee_fotos_locais.json").read_text())
+        self.assertEqual(persisted, photos)
+        self.assertEqual(data[0]["affiliate_url"], "https://s.shopee.com.br/curated123")
+
     def test_under_four_valid_images_does_not_write_feed(self):
         items = [dict(self.item)]
         p = self.root / "api/produtos.json"
