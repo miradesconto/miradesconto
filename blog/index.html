@@ -87,11 +87,7 @@ layout: null
 
         <article class="editorial-card-clean">
           <a class="editorial-card-media" href="{{ entry.url | relative_url }}" aria-label="Abrir {{ entry.title | escape }}">
-            {% if entry.custom_image %}
-            <img src="{{ entry.custom_image | escape }}" alt="{{ entry.title | escape }} — imagem ilustrativa do artigo" width="480" height="360" loading="lazy" decoding="async">
-            {% else %}
-            <span class="editorial-card-placeholder">MiraDesconto<br><small>Guia editorial</small></span>
-            {% endif %}
+            {% include editorial-cover.html entry=entry %}
           </a>
           <div class="editorial-card-body">
             <span class="editorial-category">Guia</span>
@@ -119,11 +115,7 @@ layout: null
 
         <article class="editorial-card-clean">
           <a class="editorial-card-media" href="{{ entry.url | relative_url }}" aria-label="Abrir {{ entry.title | escape }}">
-            {% if entry.custom_image %}
-            <img src="{{ entry.custom_image | escape }}" alt="{{ entry.title | escape }} — imagem ilustrativa do artigo" width="480" height="360" loading="lazy" decoding="async">
-            {% else %}
-            <span class="editorial-card-placeholder">MiraDesconto<br><small>Comparativo editorial</small></span>
-            {% endif %}
+            {% include editorial-cover.html entry=entry %}
           </a>
           <div class="editorial-card-body">
             <span class="editorial-category">Comparativo</span>
@@ -151,11 +143,7 @@ layout: null
 
         <article class="editorial-card-clean">
           <a class="editorial-card-media" href="{{ entry.url | relative_url }}" aria-label="Abrir {{ entry.title | escape }}">
-            {% if entry.custom_image %}
-            <img src="{{ entry.custom_image | escape }}" alt="{{ entry.title | escape }} — imagem ilustrativa do artigo" width="480" height="360" loading="lazy" decoding="async">
-            {% else %}
-            <span class="editorial-card-placeholder">MiraDesconto<br><small>Análise editorial</small></span>
-            {% endif %}
+            {% include editorial-cover.html entry=entry %}
           </a>
           <div class="editorial-card-body">
             <span class="editorial-category">Review</span>
