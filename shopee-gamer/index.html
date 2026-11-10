@@ -66,8 +66,12 @@ permalink: /shopee-gamer/
               <div class="radar-card-body">
                 <h3>{{ item.title | escape }}</h3>
                 {% if item.merchant %}<p class="radar-evidence">Loja {{ item.merchant | escape }}</p>{% endif %}
+                {% assign checked_seconds = item.checked_at | date: "%s" | plus: 0 %}
+                {% assign price_age = site.time | date: "%s" | minus: checked_seconds %}
+                {% if price_age >= 0 and price_age < 129600 %}
                 <p class="radar-evidence">Preço observado em <time datetime="{{ item.checked_at | escape }}">{{ item.checked_at | date: "%d/%m/%Y" }}</time></p>
                 <p class="radar-price">R$ {{ item.price_min_brl | replace: ".", "," }}{% if item.price_min_brl != item.price_max_brl %} a R$ {{ item.price_max_brl | replace: ".", "," }}{% endif %}</p>
+                {% else %}<p class="radar-evidence">Consulte o preço na Shopee.</p>{% endif %}
                 <div class="radar-actions">
                   <a class="radar-primary" href="{{ item.affiliate_url | escape }}" target="_blank" rel="sponsored nofollow noopener noreferrer" data-item-id="{{ item.item_id | escape }}" data-item-name="{{ item.title | escape }}" data-link-location="shopee-gamer">Ver na Shopee <span aria-hidden="true">↗</span></a>
                 </div>
