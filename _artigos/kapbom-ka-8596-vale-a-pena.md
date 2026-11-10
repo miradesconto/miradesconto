@@ -18,7 +18,7 @@ destaque: false
 Antes de decidir, pense menos na promessa de som de festa e mais no uso: você precisa de bateria para muitas horas, resistência à água, rádio FM ou apenas de uma caixa fácil de conectar ao celular?
 
 <figure>
-  <img src="https://http2.mlstatic.com/D_Q_NP_2X_938113-MLA91982961973_092025-V.webp" alt="Caixa de som portátil Bluetooth Kapbom KA-8596, foto do anúncio vinculado ao MiraDesconto" width="680" height="480" loading="lazy" decoding="async">
+  <img src="https://miradesconto.com.br/assets/editorial/kapbom-ka-8596.webp" alt="Caixa de som portátil Bluetooth Kapbom KA-8596, foto do anúncio vinculado ao MiraDesconto" width="680" height="480" loading="lazy" decoding="async">
   <figcaption>Foto do anúncio específico da Kapbom KA-8596, ID MLB7477193852.</figcaption>
 </figure>
 
