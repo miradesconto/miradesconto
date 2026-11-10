@@ -9,9 +9,8 @@ on:
   workflow_dispatch:
     inputs:
       keyword:
-        description: Termo para a busca de ofertas
+        description: Termo opcional para substituir a lista gamer nesta execução
         type: string
-        default: mouse
       generate_links:
         description: Testar geração individual e em lote para os anúncios cadastrados
         type: boolean
@@ -38,10 +37,17 @@ jobs:
           SHOPEE_APP_ID: ${{ secrets.SHOPEE_APP_ID }}
           SHOPEE_APP_SECRET: ${{ secrets.SHOPEE_APP_SECRET }}
           KEYWORD: ${{ inputs.keyword }}
+          KEYWORDS: headset gamer, mouse gamer sem fio, teclado mecanico switch red, cadeira gamer, monitor gamer 144hz, placa de video rtx, ssd nvme 1tb
+          MAX_PRODUCTS: '60'
           GENERATE_LINKS: ${{ inputs.generate_links }}
           VALIDATION_ID: ${{ secrets.SHOPEE_VALIDATION_ID }}
         run: |
-          args=(--keyword "${KEYWORD:-mouse}" --output preview/shopee.json --public-prices preview/shopee-precos.json)
+          args=(--max-products "$MAX_PRODUCTS" --output preview/shopee.json --public-prices preview/shopee-precos.json)
+          if [[ -n "$KEYWORD" ]]; then
+            args+=(--keyword "$KEYWORD")
+          else
+            args+=(--keywords "$KEYWORDS")
+          fi
           if [[ "$GENERATE_LINKS" == "true" ]]; then args+=(--generate-links); fi
           if [[ -n "$VALIDATION_ID" ]]; then args+=(--validation-id="$VALIDATION_ID"); fi
           python3 integracoes/shopee/afiliados.py "${args[@]}"
@@ -70,6 +76,12 @@ jobs:
               print("### Verificações da Shopee", file=summary)
               for name, check in result["checks"].items():
                   print(f"- **{name}**: {check['status']} {check.get('detail', '')}", file=summary)
+              discovery = result["discovery"]
+              print("\n### Mineração de produtos", file=summary)
+              print(f"{len(discovery['keyword_results'])}/{discovery['keyword_limit']} anúncios, "
+                    f"{discovery['keyword_new_count']} fora do catálogo.", file=summary)
+              for keyword, count in discovery["keyword_counts"].items():
+                  print(f"- {keyword}: {count}", file=summary)
               print("\n### Preços informados pela API", file=summary)
               for item, offer in result["catalog"].items():
                   low, high = offer["price_min_brl"], offer["price_max_brl"]
