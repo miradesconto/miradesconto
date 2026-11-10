@@ -154,25 +154,11 @@
     "loja": "Mercado Livre"
   },
   {
-    "titulo": "PC Gamer Completo, Intel Core i5, GT 210, 12GB de Ram, SSD 480GB, Monitor 19",
-    "preco_atual": 1286.99,
-    "imagem": "/assets/ofertas/babc6d0871e29f06b0082e62.jpg",
-    "link_afiliado": "https://s.shopee.com.br/8KqxbhrZ9b",
-    "loja": "Shopee"
-  },
-  {
     "titulo": "Apple iPhone 16 (128 GB) - Verde-acinzentado - Distribuidor Autorizado",
     "preco_atual": 4801.0,
     "imagem": "/assets/ofertas/e2e64d787c3fd21c44caa346.webp",
     "link_afiliado": "https://meli.la/2rdCTEV",
     "loja": "Mercado Livre"
-  },
-  {
-    "titulo": "PC Gamer Forge, Intel Core i5, 16GB DE RAM, SSD 240GB, Completo com Monitor + Periféricos",
-    "preco_atual": 1390.9,
-    "imagem": "/assets/ofertas/2a2c1eee864f267067b7acce.jpg",
-    "link_afiliado": "https://s.shopee.com.br/9zzBallDlx",
-    "loja": "Shopee"
   },
   {
     "titulo": "Notebook Samsung Galaxy Book4 Intel® Core™ i5-1335U (1.3 Ghz, até 4.6GHz, 12 MB L3 Cache), Windows 11 Home, 8GB, 512GB SSD, Iris Xe, 15.6'' Full HD LED, 1.55kg",
@@ -182,25 +168,11 @@
     "loja": "Mercado Livre"
   },
   {
-    "titulo": "Computador Gamer Intel Core I5 8gb Ram SSD 120GB Gamer GT 210 + Monitor 15\"",
-    "preco_atual": 1214.99,
-    "imagem": "/assets/ofertas/96074a40868cfe8e4216b5d4.jpg",
-    "link_afiliado": "https://s.shopee.com.br/9pflOSlr70",
-    "loja": "Shopee"
-  },
-  {
     "titulo": "Notebook ASUS Vivobook Go 15 E1504, AMD RYZEN 5 7520U 2,8 GHz, 8GB Ram, 256GB SSD, Windows 11 Home, Tela 15,6\" FHD, Black - E1504FA-NJ825W",
     "preco_atual": 3288.0,
     "imagem": "/assets/ofertas/71e068eed37e3edad0267d8e.webp",
     "link_afiliado": "https://meli.la/1qqT7M6",
     "loja": "Mercado Livre"
-  },
-  {
-    "titulo": "Monitor Gamer NOVANTE 20 Polegadas HD + 1600x900 75Hz HDMI VGA VESA Alto-Falante Integrado",
-    "preco_atual": 289.0,
-    "imagem": "/assets/ofertas/dd8b65bf05a029c545f5f0e2.jpg",
-    "link_afiliado": "https://s.shopee.com.br/6q2B3yQEYG",
-    "loja": "Shopee"
   },
   {
     "titulo": "Suporte Base Carregador Controles Compatível com Playstation PS4 Base De Carregamento Gamer Ps4 Estação Indicador Inteligente Compatível V1 V2 Pro E Slim Base Antiderrapante - Marca Voreon",
@@ -210,25 +182,11 @@
     "loja": "Mercado Livre"
   },
   {
-    "titulo": "Cabo HDMI 2.1 8K 60Hz 4K 120Hz Ultra HD 48Gbps  Blindado Para PS5 Xbox Series X Monitor Gamer PC TV It-Blue",
-    "preco_atual": 25.0,
-    "imagem": "/assets/ofertas/16300b7ad47acfd9bfd8a132.jpg",
-    "link_afiliado": "https://s.shopee.com.br/6fikrfQrtF",
-    "loja": "Shopee"
-  },
-  {
     "titulo": "Smartphone Motorola Edge 60 Fusion 5g - 256gb 8gb Ram+8gb Ram Boost, 50mp Sony Ai Camera Ip68 Nfc - Cinza Vegan Leather",
     "preco_atual": 1913.0,
     "imagem": "/assets/ofertas/9f3596897e4e886358b38fc8.webp",
     "link_afiliado": "https://meli.la/12fec17",
     "loja": "Mercado Livre"
-  },
-  {
-    "titulo": "Monitor Gamer Mancer Horizon Z3B, 21.5 Pol, VA, FHD, 1ms, 100Hz, HDMI/VGA, MCR-HZ3BN21-BL2",
-    "preco_atual": 444.9,
-    "imagem": "/assets/ofertas/7f1d8343c346703c832d1dd3.jpg",
-    "link_afiliado": "https://s.shopee.com.br/7Af1SaOxsM",
-    "loja": "Shopee"
   },
   {
     "titulo": "Carregador 30w Turbo Para iPhone 8 X Xr 11 12 13 14 Pro Max Fonte Usb C Cor Branca Dtimp",
@@ -238,17 +196,59 @@
     "loja": "Mercado Livre"
   },
   {
-    "titulo": "PC Gamer Forge, AMD RYZEN 5 3400G, Radeon Vega 11, 8GB DDR4, SSD 240GB, Completo com Monitor 21 e Periféricos",
-    "preco_atual": 2454.9,
-    "imagem": "/assets/ofertas/ca9400f9d78b7fbf49087354.jpg",
-    "link_afiliado": "https://s.shopee.com.br/70LbGHPbDL",
-    "loja": "Shopee"
-  },
-  {
     "titulo": "Notebook Gamer 15.6\" Acer Nitro V 15 Processador Intel Core i7 de 13ª Geração Placa de Vídeo NVIDIA GeForce RTX 4060 de 8GB RAM de 16GB DDR5 SSD de 512GB Tela IPS Full HD de 165Hz Sistema Linux",
     "preco_atual": 7253.0,
     "imagem": "/assets/ofertas/d77042ab91ad930a8b8382d1.webp",
     "link_afiliado": "https://meli.la/2UH9rtz",
     "loja": "Mercado Livre"
+  },
+  {
+    "titulo": "Fone Ouvido Jbl Tune 780nc Headphone Bluetooth Cancela Ruído Preto",
+    "preco_atual": 473.35,
+    "imagem": "/assets/ofertas/e391f003914265b54abb8c53.webp",
+    "link_afiliado": "https://meli.la/1YVasyD",
+    "loja": "Mercado Livre"
+  },
+  {
+    "titulo": "Kit de Gravação Youtuber Tiktoker Video Maker Estabilizador Com Microfone Tripé Led Vlog Profissional Para Celular iPhone/android Luz Led Para Gravação E Fotos Cor Preto - Good Vision",
+    "preco_atual": 33.98,
+    "imagem": "/assets/ofertas/16714d40c8f0bb3227b1397a.webp",
+    "link_afiliado": "https://meli.la/1qxgRfd",
+    "loja": "Mercado Livre"
+  },
+  {
+    "titulo": "Kit 4 Botão Capa Analógico Protetora Compatível Controle Ps5",
+    "preco_atual": 19.0,
+    "imagem": "/assets/ofertas/1904be4e063f1c09c0031a97.webp",
+    "link_afiliado": "https://meli.la/2kReSt2",
+    "loja": "Mercado Livre"
+  },
+  {
+    "titulo": "Kit 2 Suportes Celular Tablet De Mesa Ajustável Dobrável Universal Dr Hank Branco E Preto Base Antiderrapante Suporte Ergonômico Altura Regulável",
+    "preco_atual": 19.91,
+    "imagem": "/assets/ofertas/af35405230345ded84e72e12.webp",
+    "link_afiliado": "https://meli.la/1917tyM",
+    "loja": "Mercado Livre"
+  },
+  {
+    "titulo": "PC Gamer Completo, Intel Core i5, GT 210, 12GB de Ram, SSD 480GB, Monitor 19",
+    "preco_atual": 1286.99,
+    "imagem": "/assets/ofertas/babc6d0871e29f06b0082e62.jpg",
+    "link_afiliado": "https://s.shopee.com.br/8KqxbhrZ9b",
+    "loja": "Shopee"
+  },
+  {
+    "titulo": "Notebook ASUS Vivobook 15 X1504VA Intel Core i5 1334U 8Gb Ram 512Gb SSD Windows 11 Home Intel Iris Xe Tela 15,6\" LED FHD Blue - NJ1743W",
+    "preco_atual": 4311.0,
+    "imagem": "/assets/ofertas/1a400b14ba3726677eabc22a.webp",
+    "link_afiliado": "https://www.mercadolivre.com.br/notebook-asus-vivobook-15-x1504va-intel-core-i5-1334u-8gb-ram-512gb-ssd-windows-11-home-intel-iris-xe-tela-156-led-fhd-blue-nj1743w/p/MLB50339252?matt_event_ts=1791242830384&matt_d2id=b16ef365-e141-4f04-8a3a-dda5319707cb&matt_tracing_id=f1f66da6-0df0-4854-a4d5-a850cbb53fb8#polycard_client=recommendations_home_affiliate_profile_v2p-recommendations&reco_backend=ranker_retrieval_system_vpp_v2p&reco_model=fallback_organicos_deduplication&reco_client=home_affiliate_profile_v2p-recommendations&matt_tool_id=29904275&reco_item_pos=18&source=affiliate-profile&reco_backend_type=low_level&reco_id=9c093505-85d4-4ac5-a4c6-3ed3feaff787&tracking_id=5dd7175d-b4e8-4dac-9c2f-3118a507618d&wid=MLB5062880649&sid=recos&c_id=/home/affiliate-profile-recommendations/element&c_uid=1b1cab56-da5f-4d55-aa0d-8a2b4ee44b41",
+    "loja": "Mercado Livre"
+  },
+  {
+    "titulo": "PC Gamer Forge, Intel Core i5, 16GB DE RAM, SSD 240GB, Completo com Monitor + Periféricos",
+    "preco_atual": 1390.9,
+    "imagem": "/assets/ofertas/2a2c1eee864f267067b7acce.jpg",
+    "link_afiliado": "https://s.shopee.com.br/9zzBallDlx",
+    "loja": "Shopee"
   }
 ]
