@@ -78,6 +78,8 @@ jobs:
           GITHUB_REPO: ${{ github.repository }}
         run: python integracoes/automacao/minerador_ofertas.py --publish
       - name: Espelhar fotos oficiais e manter ofertas acessíveis mesmo sem CDN
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           # O minerador publicou o JSON; atualize a cópia local para sua última versão.
           git fetch origin main
@@ -91,4 +93,5 @@ jobs:
           else
             git commit -m "chore: hospedar imagens verificadas Shopee e ML no próprio site"
             git push origin HEAD:main
+            gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds" --silent
           fi

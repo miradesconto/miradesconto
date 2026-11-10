@@ -1,31 +1,5 @@
 [
   {
-    "shop_id": "410067995",
-    "item_id": "23198988208",
-    "title": "Mouse Pad Desk Pad Couro Borda Costurada Gigante Antiderrapante Tapete Mesa Gamer Setup Trabalho Estudo Protetor Mesa",
-    "merchant": "OmniStore",
-    "price_min_brl": "15.89",
-    "price_max_brl": "28.89",
-    "image_url": "https://cf.shopee.com.br/file/br-11134207-820li-mlfcjdzl6ryf41",
-    "keyword": "mesa gamer",
-    "checked_at": "2026-11-10T21:51:22+00:00",
-    "affiliate_url": "https://s.shopee.com.br/4LKopsNNfF",
-    "sales": 3075
-  },
-  {
-    "shop_id": "1282530597",
-    "item_id": "22694335477",
-    "title": "Mouse Pad Desk Pad Couro Borda Costurada Gigante Antiderrapante Tapete Mesa Gamer Setup Trabalho Estudo Protetor Mesa",
-    "merchant": "kybella ",
-    "price_min_brl": "14.90",
-    "price_max_brl": "21.90",
-    "image_url": "https://cf.shopee.com.br/file/br-11134207-7r98o-mdp0pf5wx12xb8",
-    "keyword": "mesa gamer",
-    "checked_at": "2026-11-10T21:51:22+00:00",
-    "affiliate_url": "https://s.shopee.com.br/1qdVJa6Fk5",
-    "sales": 635
-  },
-  {
     "shop_id": "627750190",
     "item_id": "18999727561",
     "title": "Suporte Articulado Para Monitor 13 a 32 Pistão a Gás Ajustável Zinnia Nimbo 110 Preto",
@@ -50,32 +24,6 @@
     "checked_at": "2026-11-10T21:51:22+00:00",
     "affiliate_url": "https://s.shopee.com.br/9fMMdz7EIs",
     "sales": 3038
-  },
-  {
-    "shop_id": "998773037",
-    "item_id": "23698065593",
-    "title": "Headset Fone Gamer Led RGB com microfone USB e P2 Para PC Computador Headphone Videogame",
-    "merchant": "@LVSHOP",
-    "price_min_brl": "49.98",
-    "price_max_brl": "58.98",
-    "image_url": "https://cf.shopee.com.br/file/br-11134207-820lx-mok07e710e1270",
-    "keyword": "microfone usb",
-    "checked_at": "2026-11-10T21:51:22+00:00",
-    "affiliate_url": "https://s.shopee.com.br/5LDNU1jem1",
-    "sales": 1727
-  },
-  {
-    "shop_id": "391739739",
-    "item_id": "58202148614",
-    "title": "Caixa de Som Bluetooth Portátil RGB com Microfone Sem Fio Karaokê USB TF AUX LED Colorido Mini Speaker Potente",
-    "merchant": "ANJ.GG store",
-    "price_min_brl": "34.99",
-    "price_max_brl": "38.99",
-    "image_url": "https://cf.shopee.com.br/file/sg-11134201-8262w-ml5kmo5n7hmp56",
-    "keyword": "microfone usb",
-    "checked_at": "2026-11-10T21:51:22+00:00",
-    "affiliate_url": "https://s.shopee.com.br/8VAPFqXbLu",
-    "sales": 1138
   },
   {
     "shop_id": "1240425443",
@@ -115,45 +63,6 @@
     "checked_at": "2026-11-10T21:51:22+00:00",
     "affiliate_url": "https://s.shopee.com.br/2qW2VRbEvt",
     "sales": 923
-  },
-  {
-    "shop_id": "1139132298",
-    "item_id": "55768648590",
-    "title": "Tampa Botão Analógico Controle PS5 PS4 Xbox One DualSense DualShock Borrachinha",
-    "merchant": "Yoshie Commerce",
-    "price_min_brl": "14.99",
-    "price_max_brl": "40.99",
-    "image_url": "https://cf.shopee.com.br/file/br-11134207-820m6-mts6l2nbmghu3b",
-    "keyword": "controle dualsense",
-    "checked_at": "2026-11-10T21:51:22+00:00",
-    "affiliate_url": "https://s.shopee.com.br/4qH6t7TcsL",
-    "sales": 227
-  },
-  {
-    "shop_id": "479201578",
-    "item_id": "11585303950",
-    "title": "Bateria Recarregável Carregador Para Controle Xbox One S Fat Series S",
-    "merchant": "GH-SHOP",
-    "price_min_brl": "23.99",
-    "price_max_brl": "59.99",
-    "image_url": "https://cf.shopee.com.br/file/br-11134207-820ls-mn4lii3jdddue3",
-    "keyword": "controle xbox series",
-    "checked_at": "2026-11-10T21:51:22+00:00",
-    "affiliate_url": "https://s.shopee.com.br/4VeGUVzh0M",
-    "sales": 680
-  },
-  {
-    "shop_id": "557985681",
-    "item_id": "58215622596",
-    "title": "Kit de 2 Pares de Grip de Personagem Para Controle PS4/PS5/XBOX ONE/SERIES S/X.",
-    "merchant": "KING PRO",
-    "price_min_brl": "8.99",
-    "price_max_brl": "12.99",
-    "image_url": "https://cf.shopee.com.br/file/br-11134207-820ls-mrhntnvav5l2e9",
-    "keyword": "controle xbox series",
-    "checked_at": "2026-11-10T21:51:22+00:00",
-    "affiliate_url": "https://s.shopee.com.br/4fxggoz3fR",
-    "sales": 498
   },
   {
     "shop_id": "1930141978",

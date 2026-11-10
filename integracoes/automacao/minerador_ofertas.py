@@ -40,23 +40,32 @@ NOT_TECH = ("mochila", "bolsa", "pochete", "roupa", "camiseta",
             "calça", "tenis esportivo", "sapato", "mala de viagem")
 QUERIES = ("notebook", "ssd nvme", "monitor gamer", "fone bluetooth", "mouse gamer")
 SHOPEE_SETUP_QUERIES = {
-    "mesa gamer": r"\b(?:mesa|escrivaninha)\b.*\b(?:gamer|computador)\b|\b(?:madesa|bonatto)\b",
-    "cadeira gamer": r"\bcadeira\b.*\b(?:gamer|ergon[oô]mica)\b",
-    "suporte para monitor": r"\b(?:suporte|bra[cç]o)\b.*\b(?:monitor|vesa)\b",
-    "microfone usb": r"\bmicrofone\b.*\busb\b",
+    "mesa gamer": r"^(?:promoção\s+)?(?:mesa|escrivaninha)\b.*\b(?:gamer|computador)\b",
+    "cadeira gamer": r"^cadeira\b.*\b(?:gamer|ergon[oô]mica)\b",
+    "suporte para monitor": r"^(?:suporte|bra[cç]o)\b.*\bmonitor(?:es)?\b",
+    "microfone usb": r"^microfone\b.*\busb\b",
     "power bank usb c": r"\b(?:power\s*bank|carregador port[aá]til)\b",
-    "controle dualsense": r"\bdualsense\b",
-    "controle xbox series": r"\b(?:controle|controller)\b.*\bxbox\b",
-    "console playstation 5": r"\b(?:playstation\s*5|ps5)\b",
-    "console xbox series": r"\bxbox\s+series\s+[sx]\b",
+    "controle dualsense": r"^controle\b.*\bdualsense\b",
+    "controle xbox series": r"^controle\b.*\bxbox\b.*\bseries\b",
+    "console playstation 5": r"^(?:console\s+)?(?:sony\s+)?(?:playstation\s*5|ps5)\b",
+    "console xbox series": r"^(?:console\s+)?(?:microsoft\s+)?xbox\s+s[eé]ries\s+[sx]\b",
+}
+# Anúncios da pesquisa pública na Shopee. A API reconfirma cada par loja/anúncio.
+SHOPEE_RESEARCHED_ITEMS = {
+    "mesa gamer": ((872473112, 20460748856),),
+    "cadeira gamer": ((1930141978, 58270361666),),
+    "microfone usb": ((1552226494, 23094807799), (1552226494, 22394833120)),
+    "controle xbox series": ((1097151802, 22893747649), (331245702, 58205126710)),
+    "console playstation 5": ((1097151802, 23093823316), (1930141978, 23195372973)),
+    "console xbox series": ((303989124, 22597280883), (1743978863, 58255667160)),
 }
 SHOPEE_NON_PRODUCT = re.compile(
     r"\b(?:adesivo|skin|capa|case|decora(?:tivo|ção)|fake|réplica|miniatura|"
     r"conta digital|aluguel|sorteio|caixa vazia|peças de reposição)\b", re.I
 )
 SHOPEE_CONSOLE_ACCESSORY = re.compile(
-    r"\b(?:controle|dualsense|suporte|base|carregador|fone|headset|"
-    r"m[ií]dia|jogo|garantia|cabo|ventilador|pel[ií]cula)\b", re.I
+    r"\b(?:vr2|leitor de disco|suporte|base|carregador|fone|headset|"
+    r"m[ií]dia f[ií]sica|cabo|ventilador|pel[ií]cula)\b", re.I
 )
 SHOPEE_PUBLISHED = "_data/shopee_gamer_publicados.json"
 LOG = logging.getLogger("minerador")
@@ -187,12 +196,14 @@ def select_shopee_setup(nodes, keyword, checked_at):
             continue
         low, high = price(node.get("priceMin")), price(node.get("priceMax"))
         if keyword.startswith("console ") and (
-            not low or low < 1500 or SHOPEE_CONSOLE_ACCESSORY.search(title.split(" com ", 1)[0])
+            not low or low < 1500 or SHOPEE_CONSOLE_ACCESSORY.search(title)
         ):
             continue
         item_id, shop_id = str(node.get("itemId", "")), str(node.get("shopId", ""))
         link, image = https(node.get("offerLink")), https(node.get("imageUrl"))
         if not item_id.isdigit() or not shop_id.isdigit() or not low or not high or high < low:
+            continue
+        if keyword.startswith("controle ") and low < 120:
             continue
         if not re.fullmatch(r"https://s\.shopee\.com\.br/[A-Za-z0-9]+", link):
             continue
@@ -223,6 +234,15 @@ def select_shopee_setup(nodes, keyword, checked_at):
     return results
 
 
+def shopee_setup_nodes(session, app_id, secret, filters):
+    query = (
+        'query { productOfferV2(%s) { nodes { itemId shopId productName shopName'
+        ' offerLink imageUrl priceMin priceMax sales ratingStar periodEndTime } } }'
+    ) % filters
+    data = shopee_request(session, app_id, secret, query)
+    return (data.get("productOfferV2") or {}).get("nodes") or []
+
+
 def refresh_shopee_setup(session):
     app_id, secret = os.getenv("SHOPEE_APP_ID", ""), os.getenv("SHOPEE_APP_SECRET", "")
     if not app_id or not secret:
@@ -233,18 +253,20 @@ def refresh_shopee_setup(session):
     seen = set()
     refreshed = set()
     for keyword in SHOPEE_SETUP_QUERIES:
-        query = (
-            'query { productOfferV2(keyword: %s, listType: 2, sortType: 2, page: 1, limit: 20)'
-            ' { nodes { itemId shopId productName shopName offerLink imageUrl priceMin priceMax'
-            ' sales ratingStar periodEndTime } } }'
-        ) % json.dumps(keyword)
+        filters = f"keyword: {json.dumps(keyword)}, listType: 2, sortType: 2, page: 1, limit: 20"
+        nodes = []
+        for shop_id, item_id in SHOPEE_RESEARCHED_ITEMS.get(keyword, ()):
+            try:
+                exact = shopee_setup_nodes(session, app_id, secret, f"itemId: {item_id}, limit: 1")
+                nodes.extend(node for node in exact if str(node.get("shopId")) == str(shop_id)
+                             and str(node.get("itemId")) == str(item_id))
+            except (requests.RequestException, ValueError) as error:
+                LOG.warning("Shopee anúncio %d: %s", item_id, str(error)[:140])
         try:
-            data = shopee_request(session, app_id, secret, query)
-            nodes = (data.get("productOfferV2") or {}).get("nodes") or []
-            ranked = select_shopee_setup(nodes, keyword, checked_at)
+            nodes.extend(shopee_setup_nodes(session, app_id, secret, filters))
         except (requests.RequestException, ValueError) as error:
-            LOG.warning("Seleção Shopee [%s]: %s", keyword, type(error).__name__)
-            continue
+            LOG.warning("Seleção Shopee [%s]: %s", keyword, str(error)[:140])
+        ranked = select_shopee_setup(nodes, keyword, checked_at)
         batch = []
         for offer in ranked:
             if offer["item_id"] in seen:
