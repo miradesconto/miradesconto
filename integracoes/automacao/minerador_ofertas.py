@@ -90,16 +90,30 @@ def api_json(response, label):
 
 
 def shopee_request(session, app_id, secret, query):
+    """Até 2 tentativas para erros transitórios 10000/10030, com nova assinatura."""
     body = json.dumps({"query": query}, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
-    ts = str(int(time.time()))
-    sign = hashlib.sha256(app_id.encode() + ts.encode() + body + secret.encode()).hexdigest()
-    headers = {"Content-Type": "application/json",
-               "Authorization": f"SHA256 Credential={app_id}, Timestamp={ts}, Signature={sign}"}
-    payload = api_json(session.post(SHOPEE_URL, data=body, headers=headers, timeout=25), "Shopee")
-    if payload.get("errors"):
-        codes = ",".join(str((e.get("extensions") or {}).get("code", "?")) for e in payload["errors"] if isinstance(e, dict))
-        raise ValueError("Shopee GraphQL retornou erro: " + codes)
-    return payload.get("data") or {}
+    for attempt in range(2):
+        ts = str(int(time.time()))
+        sign = hashlib.sha256(app_id.encode() + ts.encode() + body + secret.encode()).hexdigest()
+        headers = {"Content-Type": "application/json",
+                   "Authorization": f"SHA256 Credential={app_id}, Timestamp={ts}, Signature={sign}"}
+        try:
+            payload = api_json(session.post(SHOPEE_URL, data=body, headers=headers, timeout=25), "Shopee")
+        except requests.RequestException:
+            if attempt == 0:
+                time.sleep(2)
+                continue
+            raise
+        errors = payload.get("errors") or []
+        if errors:
+            codes = [str((e.get("extensions") or {}).get("code", "?"))
+                     for e in errors if isinstance(e, dict)]
+            if attempt == 0 and any(c in ("10000", "10030") for c in codes):
+                time.sleep(2)
+                continue
+            raise ValueError("Shopee GraphQL retornou erro: " + ",".join(codes))
+        return payload.get("data") or {}
+    raise ValueError("Shopee: falha após tentativas")
 
 
 def mine_shopee(session, keywords):
