@@ -4,6 +4,36 @@
   const cards = [...document.querySelectorAll('[data-vitrine-id]')];
   if (!cards.length) return;
   const seeds = cards.map(card => card.dataset.vitrineId);
+  const imagesByAffiliate = new Map();
+  const validCacheImage = url => typeof url === 'string'
+    && /^\/assets\/ofertas\/[a-f0-9]{24}\.(?:jpg|webp|png)$/.test(url);
+  function useImage(img, product) {
+    const original = img.getAttribute('src');
+    const previousLink = img.dataset.affiliateImage;
+    const mirrored = imagesByAffiliate.get(product.affiliateUrl)
+      || (previousLink === product.affiliateUrl && validCacheImage(original) ? original : null);
+    img.onerror = null;
+    img.src = mirrored || product.imageUrl;
+    img.dataset.affiliateImage = product.affiliateUrl;
+    img.addEventListener('error', function failedImage() {
+      img.removeEventListener('error', failedImage);
+      const backup = imagesByAffiliate.get(product.affiliateUrl);
+      if (backup && img.getAttribute('src') !== backup) {
+        img.src = backup;
+      } else {
+        img.hidden = true;
+        const photo = img.closest('.vitrine-photo');
+        if (photo && !photo.querySelector('.vitrine-image-unavailable')) {
+          const text = document.createElement('span');
+          text.className = 'vitrine-image-unavailable';
+          text.textContent = 'Foto em atualização';
+          photo.append(text);
+        }
+      }
+    });
+    img.hidden = false;
+  }
+
   const money = (n, en) => new Intl.NumberFormat(en ? 'en-US' : 'pt-BR', {style:'currency',currency:'BRL'}).format(n);
   const shortTitle = name => {
     const chars = Array.from(String(name || ''));
@@ -52,7 +82,7 @@
       if (!p) return;
       card.dataset.vitrineId = p.id;
       const img = card.querySelector('.vitrine-photo img');
-      img.src = p.imageUrl;
+      useImage(img, p);
       img.alt = p.name;
       const title = card.querySelector('h3');
       title.textContent = shortTitle(p.name);
@@ -95,6 +125,23 @@
     document.dispatchEvent(new CustomEvent('mira:showcase-updated'));
   }
   update();
+  // O catálogo já aparece sem rede. Ao receber o feed, priorizar as fotos
+  // hospedadas em /assets/ofertas para os cards do destaque.
+  fetch('/api/produtos.json', {cache:'no-cache'})
+    .then(response => {
+      if (!response.ok) throw new Error('Cache de imagens indisponível');
+      return response.json();
+    })
+    .then(rows => {
+      if (!Array.isArray(rows)) return;
+      rows.forEach(row => {
+        if (validCacheImage(row?.imagem) && typeof row.link_afiliado === 'string') {
+          imagesByAffiliate.set(row.link_afiliado, row.imagem);
+        }
+      });
+      update();
+    })
+    .catch(() => { /* O HTML/Jekyll e as imagens originais permanecem disponíveis. */ });
   document.addEventListener('mira:catalog-updated',update);
   setInterval(update,60000);
 })();
