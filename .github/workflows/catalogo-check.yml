@@ -36,6 +36,7 @@ jobs:
           node tests/test-price-refresh.cjs
           node tests/test-vitrine-cro.cjs
           node --check carrossel.js
+          node --check shopee-premium.js
           node tests/test-hero-shopee.cjs
           node blog/verify.cjs
           node tests/test-editorial-coverage.cjs
@@ -70,6 +71,10 @@ jobs:
           grep -q 'modo-visual.css?v=2' _site/index.html
           grep -q 'url=/?modo=gamer' _site/gamer.html
           test -s _site/api/produtos.json
+          test -s _site/shopee-premium.js
+          grep -q 'class="shopee-feature"' _site/index.html
+          grep -q 'class="shopee-finds-grid"' _site/index.html
+          grep -q 'Ver oferta na Shopee' _site/index.html
           grep -q 'id="hero-product-seeds"' _site/index.html
           grep -q 'data-hero-offer' _site/index.html
           grep -q '/assets/ofertas/' _site/index.html
