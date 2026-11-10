@@ -35,6 +35,8 @@ jobs:
           node tests/test-offer-rotation.cjs
           node tests/test-price-refresh.cjs
           node tests/test-vitrine-cro.cjs
+          node --check carrossel.js
+          node tests/test-hero-shopee.cjs
           node blog/verify.cjs
           node tests/test-editorial-coverage.cjs
           node tests/test_editorial_visual.cjs
@@ -68,6 +70,9 @@ jobs:
           grep -q 'modo-visual.css?v=2' _site/index.html
           grep -q 'url=/?modo=gamer' _site/gamer.html
           test -s _site/api/produtos.json
+          grep -q 'id="hero-product-seeds"' _site/index.html
+          grep -q 'data-hero-offer' _site/index.html
+          grep -q '/assets/ofertas/' _site/index.html
       - name: Guardar prévia para revisão, sem publicar
         uses: actions/upload-artifact@v4
         with:
