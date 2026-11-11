@@ -1,117 +1,48 @@
 name: Gemini — revisar pull request
 
 on:
-  pull_request:
+  pull_request_target:
     types: [opened, synchronize, reopened, ready_for_review]
+    branches: [main]
+  issue_comment:
+    types: [created]
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: Número do PR para reavaliar
+        required: true
+        type: string
 
 permissions:
   contents: read
-  pull-requests: write
+  checks: write
 
+# Serialize publications instead of cancelling a process after it has written a check.
 concurrency:
-  group: gemini-review-${{ github.event.pull_request.number }}
-  cancel-in-progress: true
+  group: gemini-review-${{ github.event.pull_request.number || github.event.issue.number || inputs.pr_number }}
+  cancel-in-progress: false
 
 jobs:
   review:
-    if: github.event.pull_request.draft == false
+    if: >-
+      github.event_name == 'pull_request_target' ||
+      (github.ref == 'refs/heads/main' && github.event_name == 'workflow_dispatch') ||
+      (github.event_name == 'issue_comment' && github.event.issue.pull_request &&
+      (startsWith(github.event.comment.body, '/gemini-recheck') ||
+      startsWith(github.event.comment.body, '/gemini-override')))
     runs-on: ubuntu-latest
-    timeout-minutes: 5
-    env:
-      GEMINI_KEY: ${{ secrets.GEMINI_API_KEY }}
-      GEMINI_CLI_TRUST_WORKSPACE: "true"
-
+    timeout-minutes: 10
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      # Only trusted main is materialized. PR objects are fetched as data by the script.
+      - uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 0
           persist-credentials: false
-
-      - name: Preparar diff do PR
-        run: |
-          git diff --no-ext-diff "origin/${{ github.base_ref }}...HEAD" > GEMINI_PR_DIFF.txt
-
-      - name: Bloquear quando Gemini não estiver conectado
-        if: env.GEMINI_KEY == ''
-        run: |
-          echo "Gemini não executado: o secret GEMINI_API_KEY não está disponível." >> "$GITHUB_STEP_SUMMARY"
-          exit 1
-
-      - name: Revisar com Gemini
-        if: env.GEMINI_KEY != ''
-        id: gemini
-        uses: google-github-actions/run-gemini-cli@v0
-        with:
-          gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
-          gemini_model: gemini-3.5-flash-lite
-          prompt: |
-            Faça uma revisão técnica deste pull request.
-            Leia GEMINI.md primeiro e siga essas regras.
-            Leia GEMINI.md e GEMINI_PR_DIFF.txt. Para mudanças pequenas, limite a análise ao diff e ao contexto estritamente necessário.
-            Não modifique arquivos e não execute comandos.
-            Procure problemas reais de lógica, preço/histórico, links de afiliado,
-            SEO, acessibilidade, responsividade, segurança e risco de a automação
-            sobrescrever a mudança.
-            
-            Responda em português, em Markdown, neste formato:
-            ## Resumo
-            ## Bloqueadores
-            ## Pontos importantes
-            ## Sugestões
-            ## Veredito
-            
-            Se uma seção não tiver achados, escreva "Nenhum".
-            
-            REGRA OBRIGATÓRIA DE DECISÃO:
-            - Termine a resposta com exatamente uma destas linhas:
-              DECISAO_GEMINI: APROVADO
-              DECISAO_GEMINI: BLOQUEAR
-            - Use BLOQUEAR se houver qualquer achado Crítico ou risco concreto de:
-              preço/histórico enganoso, link de afiliado incorreto, exposição de segredo,
-              quebra funcional relevante, SEO técnico que impeça indexação/canonical,
-              ou automação sobrescrevendo dados editoriais importantes.
-            - Não bloqueie por preferência visual, refatoração opcional ou sugestão sem risco concreto.
-          settings: |
-            {
-              "model": {
-                "maxSessionTurns": 8
-              },
-              "tools": {
-                "core": [
-                  "list_directory",
-                  "read_file",
-                  "grep_search"
-                ]
-              }
-            }
-
-      - name: Publicar revisão no pull request
-        if: env.GEMINI_KEY != '' && steps.gemini.outcome == 'success'
+      - name: Revisar dados do PR e publicar check no head exato
         env:
           GH_TOKEN: ${{ github.token }}
-          GEMINI_REVIEW: ${{ steps.gemini.outputs.summary }}
-        run: |
-          if [ -n "$GEMINI_REVIEW" ]; then
-            gh pr comment "${{ github.event.pull_request.number }}" --body "## Revisão Gemini\n\n$GEMINI_REVIEW"
-          fi
-
-      - name: Fiscal do MiraDesconto — decisão de integração
-        if: env.GEMINI_KEY != '' && steps.gemini.outcome == 'success'
-        env:
-          GEMINI_REVIEW: ${{ steps.gemini.outputs.summary }}
-        run: |
-          echo "$GEMINI_REVIEW" >> "$GITHUB_STEP_SUMMARY"
-
-          if echo "$GEMINI_REVIEW" | grep -Fq "DECISAO_GEMINI: BLOQUEAR"; then
-            echo "Gemini encontrou bloqueador crítico. Corrija o PR antes de integrar." >> "$GITHUB_STEP_SUMMARY"
-            exit 1
-          fi
-
-          if echo "$GEMINI_REVIEW" | grep -Fq "DECISAO_GEMINI: APROVADO"; then
-            echo "Gemini aprovou o PR sem bloqueadores críticos." >> "$GITHUB_STEP_SUMMARY"
-            exit 0
-          fi
-
-          echo "Gemini não retornou uma decisão válida. PR tratado como não aprovado por segurança." >> "$GITHUB_STEP_SUMMARY"
-          exit 1
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL || 'gemini-3.5-flash-lite' }}
+          INPUT_PR_NUMBER: ${{ inputs.pr_number }}
+        run: python .github/scripts/gemini_gate.py
