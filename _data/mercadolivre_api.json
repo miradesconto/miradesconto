@@ -1,7 +1,12 @@
 {
-  "generatedAt": "2026-11-11T03:12:09+00:00",
-  "trendsCheckedAt": "2026-11-11T03:00:15+00:00",
+  "generatedAt": "2026-11-11T10:50:11+00:00",
+  "trendsCheckedAt": "2026-11-11T10:50:11+00:00",
   "trends": [
+    {
+      "keyword": "microfone",
+      "categoryId": null,
+      "group": "crescimento"
+    },
     {
       "keyword": "iphone 15 pro max",
       "categoryId": null,
@@ -56,5 +61,5 @@
       "iphone 16"
     ]
   },
-  "cursor": 87
+  "cursor": 127
 }
