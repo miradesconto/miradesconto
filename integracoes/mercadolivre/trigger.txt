@@ -6,3 +6,4 @@
 2026-10-06: regenerar fila social com prioridade editorial e de audiência.
 2026-10-06: regenerar fila Pippit com nomes e hooks curtos.
 2026-10-12: atualizar preços após reduzir validade para 2 horas e coleta a cada 15 minutos.
+2026-11-12: verificar sincronizacao apos correcao dos testes e parser de rankings.
