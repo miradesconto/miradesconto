@@ -258,5 +258,20 @@
     "kicker": "GTA 6 nos consoles",
     "hook": "Qual videogame escolher?",
     "tone": "lilac"
+  },
+  "suporte-para-notebook-como-escolher": {
+    "kicker": "Guia de compra",
+    "hook": "Mais espaço na mesa",
+    "tone": "sage"
+  },
+  "hub-usb-c-como-escolher": {
+    "kicker": "Guia de compra",
+    "hook": "Quais portas você precisa?",
+    "tone": "sky"
+  },
+  "kit-limpeza-teclado-vale-a-pena": {
+    "kicker": "Guia de compra",
+    "hook": "Quais peças são úteis?",
+    "tone": "mint"
   }
 }
