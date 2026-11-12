@@ -1,5 +1,9 @@
 name: MiraBot — cadastrar links de afiliado
 on:
+  pull_request:
+    paths:
+      - 'integracoes/mercadolivre/mirabot.py'
+      - '.github/workflows/mirabot-intake.yml'
   workflow_dispatch:
     inputs:
       affiliate_links:
@@ -21,7 +25,30 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  smoke:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validar entrada real já cadastrada sem acessar serviços externos
+        env:
+          AFFILIATE_LINKS: 'https://meli.la/1pyBZm8'
+        run: |
+          python integracoes/mercadolivre/mirabot.py --report "$RUNNER_TEMP/mirabot-smoke.json"
+          python -m unittest discover -s tests -p test_mirabot.py -v
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: mirabot-smoke-${{ github.run_id }}
+          path: ${{ runner.temp }}/mirabot-smoke.json
+          if-no-files-found: warn
+          retention-days: 7
   intake:
+    if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
