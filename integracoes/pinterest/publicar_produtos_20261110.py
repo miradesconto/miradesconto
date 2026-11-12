@@ -7,9 +7,11 @@ import re
 import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
-from urllib.parse import urlencode
+from urllib.parse import urlencode, urlsplit
+from urllib.request import Request, urlopen
+from collections import deque
 
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageOps
 from api import pinterest_request
 from publicar_lote import find_board
 
@@ -59,41 +61,141 @@ def lines(draw, text, face, maxwidth):
     if current: result.append(current)
     return result
 
+def load_source(post):
+    """Usa a fotografia real do anúncio; não substitui o produto por imagem inventada."""
+    if post.get("image"):
+        local = (ROOT / post["image"]).resolve()
+        if not local.is_relative_to((ROOT / "assets/ofertas").resolve()) or not local.is_file():
+            raise ValueError("Foto local fora do catálogo")
+        raw = local.read_bytes()
+    else:
+        url = post.get("imageUrl", "")
+        parsed = urlsplit(url)
+        if parsed.scheme != "https" or parsed.hostname != "http2.mlstatic.com":
+            raise ValueError("Origem de foto não autorizada")
+        request = Request(url, headers={"User-Agent": "Mozilla/5.0 (MiraDesconto/1.0)"})
+        with urlopen(request, timeout=25) as response:
+            if response.status != 200:
+                raise RuntimeError("Foto do produto indisponível")
+            raw = response.read(6_000_001)
+        if len(raw) > 6_000_000:
+            raise ValueError("Foto excedeu tamanho máximo")
+    with Image.open(io.BytesIO(raw)) as loaded:
+        original = ImageOps.exif_transpose(loaded).convert("RGB")
+        if min(original.size) < 200:
+            raise ValueError("Foto de produto muito pequena")
+        return original.copy()
+
+
+def studio_background():
+    """Fundo fotográfico neutro, sem textos nem cartões promocionais."""
+    canvas = Image.new("RGBA", (1000, 1500))
+    px = canvas.load()
+    for y in range(1500):
+        t = y / 1499
+        base = (int(244 - 19*t), int(246 - 13*t), int(241 - 16*t), 255)
+        for x in range(1000):
+            px[x, y] = base
+    glow = Image.new("RGBA", canvas.size, (0, 0, 0, 0))
+    d = ImageDraw.Draw(glow)
+    d.ellipse((-420, -230, 710, 990), fill=(255, 255, 249, 170))
+    d.ellipse((610, 380, 1500, 1510), fill=(176, 199, 184, 135))
+    glow = glow.filter(ImageFilter.GaussianBlur(115))
+    canvas = Image.alpha_composite(canvas, glow)
+    d = ImageDraw.Draw(canvas)
+    d.line((0, 1180, 1000, 1180), fill=(222, 226, 215, 120), width=3)
+    return canvas
+
+
+def edge_background_mask(photo):
+    """Recorta somente o branco conectado às bordas, preservando detalhes internos claros."""
+    w, h = photo.size
+    pix = photo.load()
+    mask = Image.new("L", (w, h), 255)
+    mp = mask.load()
+    seen = bytearray(w * h)
+    q = deque()
+    def white(x, y):
+        r, g, b = pix[x, y]
+        return min(r, g, b) >= 237 and max(r, g, b) - min(r, g, b) <= 25
+    for x in range(w):
+        if white(x, 0):
+            q.append((x, 0))
+        if white(x, h-1):
+            q.append((x, h-1))
+    for y in range(h):
+        if white(0, y):
+            q.append((0, y))
+        if white(w-1, y):
+            q.append((w-1, y))
+    count = 0
+    while q:
+        x, y = q.popleft()
+        i = y*w+x
+        if seen[i]:
+            continue
+        seen[i] = 1
+        if not white(x, y):
+            continue
+        mp[x,y] = 0
+        count += 1
+        if x:
+            q.append((x-1,y))
+        if x < w-1:
+            q.append((x+1,y))
+        if y:
+            q.append((x,y-1))
+        if y < h-1:
+            q.append((x,y+1))
+    if count < (w*h)*0.06:
+        return None
+    return mask.filter(ImageFilter.GaussianBlur(1.2))
+
+
 def make_art(post):
-    p = (ROOT / post["image"]).resolve()
-    if not p.is_relative_to((ROOT / "assets/ofertas").resolve()) or not p.is_file():
-        raise ValueError("Imagem de produto ausente ou fora do catálogo")
-    with Image.open(p) as source:
-        product = source.convert("RGB")
-    if min(product.size) < 200: raise ValueError("Imagem original pequena")
-    canvas = Image.new("RGB",(1000,1500),"#f7faf8")
-    draw = ImageDraw.Draw(canvas)
-    draw.rounded_rectangle((52,47,948,1453),radius=35,fill="#ffffff",outline="#dce9de",width=2)
-    draw.rounded_rectangle((90,89,460,147),radius=17,fill="#e6f7e9")
-    draw.text((112,101),post["category"].upper(),font=font(25,True),fill="#176a3f")
-    y=195
-    heading_font=font(59,True)
-    heading=lines(draw,post["title"],heading_font,800)
-    if len(heading)>3: raise ValueError("Título grande demais para arte")
-    for line in heading:
-        draw.text((94,y),line,font=heading_font,fill="#142d22");y+=79
-    subtitle_font=font(30)
-    for line in lines(draw,post["subtitle"],subtitle_font,800):
-        draw.text((95,y+10),line,font=subtitle_font,fill="#596d62");y+=44
-    photo_top=max(470,y+56); photo_bottom=1210
-    draw.rounded_rectangle((95,photo_top,905,photo_bottom),radius=25,fill="#f5f8f6")
-    w,h=product.size
-    scale=min(745/w,(photo_bottom-photo_top-55)/h)
-    product=product.resize((max(1,int(w*scale)),max(1,int(h*scale))),Image.Resampling.LANCZOS)
-    x=(1000-product.width)//2
-    py=photo_top+(photo_bottom-photo_top-product.height)//2
-    canvas.paste(product,(x,py))
-    draw.rounded_rectangle((95,1245,905,1401),radius=24,fill="#0b4229")
-    draw.text((129,1270),"MiraDesconto",font=font(47,True),fill="#ffffff")
-    draw.text((130,1340),"Confira no link do Pin",font=font(24),fill="#c4f2d2")
-    buf=io.BytesIO()
-    canvas.save(buf,format="PNG",optimize=True)
-    return buf.getvalue()
+    """Pin 1000×1500: fotografia fiel ao anúncio, estética de estúdio, sem card textual."""
+    original = load_source(post)
+    # Fotos em cenário real são preservadas em tela cheia, sem sobreposição de texto.
+    corners = [original.getpixel((x,y))
+               for x,y in ((0,0),(original.width-1,0),(0,original.height-1),
+                           (original.width-1,original.height-1))]
+    plain = sum(1 for c in corners if min(c)>230 and max(c)-min(c)<30) >= 3
+    if not plain:
+        hero = ImageOps.fit(original, (1000,1500), method=Image.Resampling.LANCZOS,
+                            centering=(0.5,0.5))
+        out = io.BytesIO()
+        hero.save(out, format="JPEG", quality=91, optimize=True)
+        return out.getvalue()
+    canvas = studio_background()
+    source = ImageOps.contain(original, (1080,1080), method=Image.Resampling.LANCZOS)
+    mask = edge_background_mask(source)
+    if mask is None:
+        # Não fabricar recorte caso a imagem não tenha fundo branco confiável.
+        hero = ImageOps.contain(original, (910,1050), method=Image.Resampling.LANCZOS)
+        mask = Image.new("L", hero.size, 255)
+        mask = mask.filter(ImageFilter.GaussianBlur(2))
+    else:
+        box = mask.getbbox()
+        if not box:
+            raise ValueError("Foto sem produto reconhecível")
+        source = source.crop(box)
+        mask = mask.crop(box)
+        hero = ImageOps.contain(source, (895,1020), method=Image.Resampling.LANCZOS)
+        mask = mask.resize(hero.size, Image.Resampling.LANCZOS)
+    x = (1000-hero.width)//2
+    y = 285 + (920-hero.height)//2
+    # Sombra difusa + contato com a superfície, para aspecto de estúdio.
+    shadow_alpha = mask.filter(ImageFilter.GaussianBlur(28)).point(lambda n: int(n*0.32))
+    shadow = Image.new("RGBA", hero.size, (30,49,36,0))
+    shadow.putalpha(shadow_alpha)
+    canvas.alpha_composite(shadow, (x+16, y+31))
+    product = hero.convert("RGBA")
+    product.putalpha(mask)
+    canvas.alpha_composite(product, (x,y))
+    finished = canvas.convert("RGB")
+    out=io.BytesIO()
+    finished.save(out, format="JPEG", quality=90, optimize=True)
+    return out.getvalue()
 
 def main():
     if os.getenv("GITHUB_ACTIONS")!="true" or os.getenv("GITHUB_REF")!="refs/heads/main":
@@ -138,9 +240,9 @@ def main():
         import base64
         result=pinterest_request(token,"/pins",{
           "board_id":board,"title":p["title"],
-          "description":p["subtitle"]+". Oferta em loja parceira; link de afiliado. Confira preço e disponibilidade na loja.",
-          "link":p["link"],"alt_text":"Arte editorial MiraDesconto: "+p["title"],
-          "media_source":{"source_type":"image_base64","content_type":"image/png",
+          "description":p.get("description", p["subtitle"])+ " Publicidade: link de afiliado; podemos receber comissão em compras elegíveis. Confira preço e disponibilidade na loja.",
+          "link":p["link"],"alt_text":"Fotografia de produto: "+p["title"],
+          "media_source":{"source_type":"image_base64","content_type":"image/jpeg",
                           "data":base64.b64encode(artworks[key]).decode("ascii"),"is_standard":True}
         })
         pin_id=str(result.get("id","")) if isinstance(result,dict) else ""
