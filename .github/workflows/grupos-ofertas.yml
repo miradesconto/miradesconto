@@ -117,3 +117,41 @@ jobs:
           path: ${{ runner.temp }}/oferta-whatsapp.txt
           retention-days: 7
           if-no-files-found: warn
+
+  whatsapp-draft:
+    # Gera rascunho independentemente do token e da ativação do Telegram.
+    if: github.event_name == 'workflow_dispatch'
+    needs: test
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Preparar mensagem para grupos que você administra
+        shell: bash
+        run: |
+          python integracoes/social/grupos_ofertas.py preview > "$RUNNER_TEMP/preview.json"
+          python - <<'PY'
+          import json, os, pathlib
+          folder = pathlib.Path(os.environ["RUNNER_TEMP"])
+          obj = json.loads((folder / "preview.json").read_text(encoding="utf-8"))
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as file:
+              if not obj.get("ready"):
+                  file.write("Nenhuma oferta elegível para compartilhar.\n")
+              else:
+                  (folder / "oferta-whatsapp.txt").write_text(obj["whatsapp"] + "\n", encoding="utf-8")
+                  file.write("### WhatsApp — rascunho sem envio automático\n\n")
+                  file.write(f"[Abrir mensagem para compartilhamento]({obj['whatsapp_share']})\n\n")
+                  file.write("Revise e escolha manualmente um grupo que você administra.\n")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rascunho-whatsapp
+          path: ${{ runner.temp }}/oferta-whatsapp.txt
+          retention-days: 7
+          if-no-files-found: warn
