@@ -6,7 +6,7 @@ const path = require('node:path');
 const http = require('node:http');
 const { chromium } = require('playwright');
 const root = path.resolve('_site');
-const screenshots = path.join(root, 'preview-screenshots');
+const screenshots = path.resolve('visual-screenshots');
 const mime = {'.html':'text/html', '.css':'text/css', '.js':'text/javascript', '.json':'application/json', '.svg':'image/svg+xml', '.png':'image/png', '.jpg':'image/jpeg', '.jpeg':'image/jpeg', '.webp':'image/webp'};
 const server = http.createServer((req,res) => {
   let pathname;
