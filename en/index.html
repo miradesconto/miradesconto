@@ -46,12 +46,12 @@ permalink: /en/
 {% for id in radar.featured limit: 6 %}
 {% assign item = radar.byId[id] %}
 {% if item and item.imageUrl and item.affiliateUrl %}
-<article class="en-deal-card">
-  <a class="en-deal-card-media" href="{{ item.affiliateUrl | escape }}" target="_blank" rel="sponsored nofollow noopener noreferrer" aria-label="View retailer listing for {{ item.name | escape }}"><img src="{{ item.imageUrl | escape }}" alt="{{ item.name | escape }}" width="420" height="280" loading="lazy" decoding="async"></a>
+<article class="en-deal-card" data-radar-id="{{ item.id | escape }}">
+  <a class="en-deal-card-media" href="{{ item.affiliateUrl | escape }}" target="_blank" rel="sponsored nofollow noopener noreferrer" aria-label="View retailer listing for {{ item.name | escape }}"><img src="{{ item.imageUrl | escape }}" alt="{{ item.name | escape }}" width="420" height="280" loading="lazy" decoding="async"><span class="en-image-fallback" hidden>Product image unavailable</span></a>
   <div class="en-deal-body"><p class="en-deal-meta">{{ item.category | escape }} · Brazilian retailer</p><h3>{{ item.name | escape }}</h3>
   <p class="en-deal-price">{{ item.currentPriceText | escape }}</p>
   <p class="en-deal-note">Last recorded {{ item.checkedAt | date: "%b %d, %Y" }} (UTC). May change.</p>
-  <a class="en-hero-link" href="{{ item.affiliateUrl | escape }}" target="_blank" rel="sponsored nofollow noopener noreferrer">Check at retailer ↗</a></div>
+  <a class="en-hero-link" href="{{ item.affiliateUrl | escape }}" target="_blank" rel="sponsored nofollow noopener noreferrer" data-item-id="{{ item.id | escape }}" data-item-name="{{ item.name | escape }}" data-link-location="en-home" data-destination-type="product">Check at retailer ↗</a></div>
 </article>
 {% endif %}
 {% endfor %}
@@ -77,4 +77,4 @@ permalink: /en/
 <p class="en-disclaimer">MiraDesconto is not a retailer. Offers target Brazil, use BRL and may be unavailable in other countries. Verify prices, seller reputation, warranty and checkout conditions directly with the store.</p>
 </main>
 <footer class="en-footer"><div class="wrap"><strong>MiraDesconto</strong> · Brazilian tech price discovery · <a href="{{ '/en/about/' | relative_url }}">About &amp; affiliate disclosure</a> · <a href="{{ '/' | relative_url }}" lang="pt-BR">Português</a></div></footer>
-</body></html>
+<script src="/analytics-config.js"></script><script src="/analytics.js"></script><script src="/en/deals-images.js" defer></script></body></html>

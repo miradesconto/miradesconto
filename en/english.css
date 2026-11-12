@@ -53,3 +53,6 @@
 .en-footer .wrap{max-width:1180px}
 @media(max-width:900px){.en-deals-grid,.en-guide-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:640px){.en-deals-grid,.en-guide-grid{grid-template-columns:1fr}.en-section-heading{display:block}.en-deal-card-media{height:210px}.en-page .mira-global-nav{order:3;width:100%;flex-wrap:wrap}.en-page .header-inner{gap:12px}}
+
+.en-image-fallback{display:flex;align-items:center;justify-content:center;height:100%;width:100%;font-size:13px;color:#64748b;text-align:center;padding:20px;background:#f8fafc}
+.en-image-fallback[hidden]{display:none!important}
