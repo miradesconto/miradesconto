@@ -18,3 +18,38 @@
 .en-footer{background:#0f172a;color:#cbd5e1;padding:25px 0;font-size:12px}
 .en-footer a{color:#86efac;text-decoration:none}
 @media(max-width:730px){.en-info-grid{grid-template-columns:1fr}.en-hero{padding:37px 0 28px}.en-page .header-inner{flex-wrap:wrap}.en-page .header-inner>nav:not(.mira-languages){order:3;width:100%;display:flex;flex-wrap:wrap}.en-page .mira-languages{margin-left:auto}}
+
+/* English editorial and observed-deal pages share one responsive visual language. */
+.en-page .site-header{background:#fff}
+.en-page .header-inner{max-width:1180px}
+.en-page .mira-global-nav a{color:#475569;text-decoration:none}
+.en-page .mira-global-nav a[aria-current]{color:#166534;background:#edf7ef}
+.en-page .mira-languages{display:flex;gap:6px}
+.en-page .en-main{padding-bottom:64px}
+.en-hero{max-width:900px}
+.en-section-heading{display:flex;justify-content:space-between;gap:16px;align-items:end;margin-bottom:16px}
+.en-section-heading p{color:#64748b;max-width:650px;font-size:14px}
+.en-deals-grid,.en-guide-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.en-deal-card,.en-guide-card{background:#fff;border:1px solid #e2e8f0;border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.en-deal-card-media{height:185px;background:white;display:flex;align-items:center;justify-content:center;border-bottom:1px solid #f1f5f9}
+.en-deal-card-media img{height:100%;width:100%;object-fit:contain;padding:15px}
+.en-deal-body{padding:18px;display:flex;flex-direction:column;flex:1}
+.en-deal-meta,.en-deal-note{color:#64748b;font-size:12px;line-height:1.5}
+.en-deal-body h3{font-size:15px;line-height:1.45;color:#0f172a;margin:10px 0;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
+.en-deal-price{font-size:24px;line-height:1.2;color:#0f172a;font-weight:850;margin:7px 0}
+.en-deal-body .en-hero-link{margin-top:auto;justify-content:center}
+.en-guide-card{padding:22px;text-decoration:none;color:inherit;gap:8px}
+.en-guide-card:hover{border-color:#86efac;box-shadow:0 6px 25px #0f172a0d}
+.en-guide-card strong{color:#0f172a;font-size:18px}
+.en-guide-card p{margin:0;color:#64748b;font-size:14px}
+.en-guide-card span{color:#15803d;font-size:13px;font-weight:750;margin-top:auto}
+.en-checklist{padding-left:20px;color:#475569}
+.en-checklist li{margin:8px 0}
+.en-article{max-width:790px;margin:0 auto}
+.en-article h2{margin-top:35px}
+.en-article p{color:#475569;line-height:1.8}
+.en-article .en-hero{padding:42px 0 28px}
+.en-empty{padding:25px;background:#fff;border:1px solid #e2e8f0;border-radius:12px}
+.en-footer .wrap{max-width:1180px}
+@media(max-width:900px){.en-deals-grid,.en-guide-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.en-deals-grid,.en-guide-grid{grid-template-columns:1fr}.en-section-heading{display:block}.en-deal-card-media{height:210px}.en-page .mira-global-nav{order:3;width:100%;flex-wrap:wrap}.en-page .header-inner{gap:12px}}

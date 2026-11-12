@@ -51,16 +51,16 @@ body.focused-catalog .vitrine-diaria,body.search-active .vitrine-diaria{display:
 <link rel="stylesheet" href="/site-polish.css?v=20261110nav">
 </head><body class="mira-polished">
 <a class="skip-link" href="#ofertas">Pular para as ofertas</a>
-<header><div class="header-container"><button type="button" class="logo" aria-label="MiraDesconto: limpar filtros">Mira<span>Desconto</span></button>{% include site-nav.html %}<div class="search"><input id="searchInput" aria-label="Buscar produto, loja ou categoria" type="search" placeholder="Buscar produto, marca ou categoria"></div><nav class="mira-languages" aria-label="Idioma / Language"><a href="./" lang="pt-BR" aria-current="page" aria-label="Português">PT</a><a href="/en/" lang="en" aria-label="English">EN</a></nav></div></header>
-<section class="mira-mode-bar" aria-label="Preferência de visualização">
-  <div class="mira-mode-inner">
-    <span class="mira-mode-label">Aparência</span>
-    <nav class="mira-mode-switch" aria-label="Escolher aparência">
-      <a class="mira-mode-option" href="?modo=classic" data-layout-option="classic" aria-current="page">Clássico</a>
-      <a class="mira-mode-option" href="?modo=gamer" data-layout-option="gamer">Gamer</a>
-    </nav>
-  </div>
-</section>
+<header><div class="header-container">
+  <button type="button" class="logo" aria-label="MiraDesconto: limpar filtros">Mira<span>Desconto</span></button>
+  {% include site-nav.html %}
+  <div class="search"><input id="searchInput" aria-label="Buscar produto, loja ou categoria" type="search" placeholder="Buscar produto, marca ou categoria"></div>
+  <nav class="mira-languages" aria-label="Idioma / Language"><a href="./" lang="pt-BR" aria-current="page" aria-label="Português">PT</a><a href="/en/" lang="en" aria-label="English">EN</a></nav>
+  <div class="mira-mode-bar" aria-label="Preferência de aparência"><nav class="mira-mode-switch" aria-label="Escolher aparência">
+    <a class="mira-mode-option" href="?modo=classic" data-layout-option="classic" aria-current="page">Clássico</a>
+    <a class="mira-mode-option" href="?modo=gamer" data-layout-option="gamer">Gamer</a>
+  </nav></div>
+</div></header>
 {% comment %}
   Reserva do destaque NA MIRA AGORA: ofertas reais já coletadas e fotografadas
   pela API Shopee / Mercado Livre. Mantemos os dados como atributos HTML
@@ -77,16 +77,32 @@ body.focused-catalog .vitrine-diaria,body.search-active .vitrine-diaria{display:
   {% endif %}
 {% endfor %}
 </div>
-<section class="hero"><div class="hero-inner"><h1>Seu próximo upgrade.<br>Começa aqui.</h1><p>Do celular ao setup completo: descubra produtos, compare opções e encontre o que combina com você.</p><a href="notebooks/">Escolher notebook →</a></div></section>
+<section class="hero"><div class="hero-inner"><h1>Seu próximo upgrade.<br>Começa aqui.</h1><p>Do celular ao setup completo: descubra produtos, compare opções e encontre o que combina com você.</p><a href="#ofertas">Explorar ofertas ↓</a></div></section>
 <nav class="categories" aria-label="Categorias"><div class="categories-container"></div></nav>
 <main id="ofertas" tabindex="-1">
 {% include vitrine-diaria.html lang="pt" %}
 <div class="top-line"><div class="section-title"><h2 id="sectionTitle">Ofertas em destaque</h2><p id="resultCount"></p></div><div class="sort"><select id="sortSelect" aria-label="Ordenar ofertas"><option value="default">Ordenar ofertas</option><option value="discount">Maior desconto</option><option value="lowPrice">Menor preço</option><option value="highPrice">Maior preço</option></select></div></div><div id="searchContext" class="search-context" hidden><span id="searchMessage" role="status" aria-live="polite"></span><button id="clearSearch" type="button" aria-label="Limpar busca">Limpar busca ×</button></div><p id="selectionNotice">Ofertas selecionadas para comparar. Use a busca ou as categorias.</p><p id="dataNotice" class="data-notice"></p><noscript>Ative o JavaScript para consultar as ofertas.</noscript><script id="shopee-offers-data" type="application/json">{% assign shop_items = site.data.shopee_gamer_publicados %}{% assign shop_photos = site.data.shopee_fotos_locais %}{% capture shop_feed %}[{% for item in shop_items %}{% assign photo = shop_photos[item.item_id] | default: item.image_url %}{"id":{{ item.item_id | jsonify }},"name":{{ item.title | jsonify }},"category":{{ item.keyword | jsonify }},"store":"Shopee","merchant":{{ item.merchant | jsonify }},"price":{{ item.price_min_brl | jsonify }},"checkedAt":{{ item.checked_at | jsonify }},"imageUrl":{{ photo | jsonify }},"affiliateUrl":{{ item.affiliate_url | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}]{% endcapture %}{{ shop_feed | strip_newlines }}</script><div id="productList" class="products"></div><div id="emptyState" class="empty"><h3>Nenhuma oferta encontrada.</h3><p>Tente outro produto ou categoria.</p></div><button id="loadMore" type="button" class="load-more" hidden>Mostrar mais ofertas</button>
-<section class="catalog-discovery" aria-label="Ver todos os produtos"><p><strong>Quer ver mais opções?</strong> Explore todo o catálogo, inclusive os produtos que aguardam atualização de preço.</p><a href="catalogo/">Ver todos os produtos →</a></section>
+<section class="catalog-discovery" aria-label="Explorar mais ofertas">
+  <p><strong>Continue explorando.</strong> Veja o catálogo completo ou acompanhe a seleção de Black Friday.</p>
+  <div class="catalog-discovery-actions"><a href="catalogo/">Catálogo completo →</a><a class="secondary-link" href="black-friday/">Black Friday 2026 →</a></div>
+</section>
 {% include shopee-entry.html %}
 <p id="shareStatus" role="status" aria-live="polite"></p>
 {% comment %}A lista _data/ofertas-enviadas.json permanece arquivada, mas não tem vínculo de afiliação individual comprovado; por segurança, não é publicada na vitrine.{% endcomment %}
-<section class="editorial"><div class="editorial-head"><div><h2>Antes de comprar</h2></div><a href="blog/">Ver todos os conteúdos →</a></div><div class="editorial-grid">{% assign published_home = site.artigos | where: "status", "publicado" | sort: "data" | reverse %}{% for entry in published_home limit: 3 %}<a class="editorial-card" href="{{ entry.url | relative_url }}"><small>{% case entry.categoria %}{% when 'reviews' %}REVIEW{% when 'comparativos' %}COMPARATIVO{% else %}GUIA{% endcase %}</small><h3>{{ entry.title | escape }}</h3><p>{{ entry.resumo | escape }}</p></a>{% endfor %}</div></section>
+<section class="editorial" aria-labelledby="editorial-home-title">
+  <div class="editorial-head"><h2 id="editorial-home-title">Antes de comprar</h2><a href="blog/">Todos os guias e reviews →</a></div>
+  <div class="editorial-grid">
+    {% assign published_home = site.artigos | where: "status", "publicado" | sort: "data" | reverse %}
+    {% for entry in published_home limit: 3 %}
+    <a class="editorial-card" href="{{ entry.url | relative_url }}">
+      <div class="home-editorial-media">{% include editorial-cover.html entry=entry %}</div>
+      <small>{% case entry.categoria %}{% when 'reviews' %}REVIEW{% when 'comparativos' %}COMPARATIVO{% else %}GUIA{% endcase %}</small>
+      <h3>{{ entry.title | escape }}</h3>
+      <p>{{ entry.resumo | escape }}</p>
+    </a>
+    {% endfor %}
+  </div>
+</section>
 <div class="disclaimer">Links de afiliado podem gerar comissão, sem custo adicional. Preços e disponibilidade podem mudar. <a href="transparencia.html">Transparência →</a></div></main>
-<footer class="footer"><div class="footer-inner"><div><div class="footer-brand">Mira<span>Desconto</span></div><small>© 2026 — Informação para comprar melhor.</small></div><div class="footer-links"><a href="catalogo/">Todos os produtos</a><a href="black-friday/">Black Friday</a><a href="radar/">Radar</a><a href="sobre.html">Sobre</a><a href="blog/">Guias e Reviews</a><a href="transparencia.html">Transparência</a><a href="privacidade.html">Privacidade</a></div></div></footer>
-<script src="modo-visual.js?v=2" defer></script><script src="afiliados.js"></script><script src="qualidade.js?v=202611120818"></script><script src="produtos.js?v=202611120818"></script><script src="produtos-extras.js"></script><script src="historico.js?v=20261006seo"></script><script src="vitrine.js?v=20261014curation"></script><script src="interface.js?v=202611120818"></script><script src="carrossel.js?v=202611120818"></script><script src="analytics-config.js"></script><script src="analytics.js?v=20261023bf"></script>{% include editorial-data.html %}</body></html>
+<footer class="footer"><div class="footer-inner"><div><div class="footer-brand">Mira<span>Desconto</span></div><small>© 2026 — Informação para comprar melhor.</small></div><div class="footer-links"><a href="catalogo/">Catálogo completo</a><a href="radar/">Radar de preços</a><a href="black-friday/">Black Friday</a><a href="transparencia.html">Transparência</a><a href="privacidade.html">Privacidade</a></div></div></footer>
+<script src="modo-visual.js?v=2" defer></script><script src="afiliados.js"></script><script src="qualidade.js?v=202611120818"></script><script src="produtos.js?v=202611120818"></script><script src="produtos-extras.js"></script><script src="historico.js?v=20261006seo"></script><script src="vitrine.js?v=20261014curation"></script><script src="interface.js?v=202611120818"></script><script src="carrossel.js?v=202611120818"></script><script src="analytics-config.js"></script><script src="analytics.js?v=20261023bf"></script>{% include editorial-data.html %}<script src="/blog/blog.js?v=20261112images" defer></script></body></html>
