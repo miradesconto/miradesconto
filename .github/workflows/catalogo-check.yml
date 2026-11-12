@@ -74,6 +74,14 @@ jobs:
           grep -q 'id="hero-product-seeds"' _site/index.html
           grep -q 'data-hero-offer' _site/index.html
           grep -q '/assets/ofertas/' _site/index.html
+      - name: Preparar navegador de teste
+        if: github.event_name == 'pull_request'
+        run: |
+          npm install --no-save --no-package-lock playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Conferir layout e registrar capturas em desktop e celular
+        if: github.event_name == 'pull_request'
+        run: node tests/test-visual-smoke.cjs
       - name: Guardar prévia para revisão, sem publicar
         uses: actions/upload-artifact@v4
         with:
