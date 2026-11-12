@@ -16,7 +16,7 @@
    - **Repository secret:** `TELEGRAM_BOT_TOKEN` — token do BotFather.
    - **Repository variable:** `TELEGRAM_CHAT_ID` = `@MiraDesconto` (ou ID numérico do canal, se diferente).
    - **Repository variable:** `MIRA_OFERTAS_ENABLED` = `false` inicialmente.
-4. Em **Actions → MiraDesconto | Publicador Telegram e fila WhatsApp → Run workflow**, execute com a variável ainda desativada para rodar somente os testes. Para validar remotamente o bot/canal é necessário executar o comando `check` em ambiente com as credenciais configuradas.
+4. Em **Actions → MiraDesconto | Publicador Telegram e fila WhatsApp → Run workflow**, execute com a variável ainda desativada para rodar os testes e gerar o artefato **rascunho-whatsapp** (sem disparos). Para validar remotamente o bot/canal é necessário executar o comando `check` em ambiente com as credenciais configuradas.
 5. Depois de validar o bot como administrador, altere `MIRA_OFERTAS_ENABLED` para `true`. Execute o workflow manualmente para a primeira publicação e confira o canal.
 
 **Nunca cole o token em commits, mensagens, frontend ou logs.** Ele deve ficar apenas como GitHub Secret.
@@ -37,7 +37,7 @@ Nenhuma edição é feita no catálogo, nos preços, nas URLs de afiliado ou nos
 
 ## Passo 3 — WhatsApp
 
-Abra a execução do workflow em **Actions**, baixe o artefato `oferta-whatsapp`, copie o texto do arquivo `oferta-whatsapp.txt` e cole no grupo de ofertas que você administra.
+Abra a execução do workflow em **Actions**, baixe o artefato `rascunho-whatsapp` (modo manual) ou `oferta-whatsapp` (após envio automático), copie o texto do arquivo `oferta-whatsapp.txt` e cole no grupo de ofertas que você administra.
 
 A integração oficial da Meta para grupos **não é compatível com grupos grandes comuns**. Requer uma conta comercial oficial elegível e, no modelo documentado em 2026, seus grupos têm limite de 8 participantes. Não habilitar automação via emulação de WhatsApp Web, pois pode resultar em bloqueio da conta.
 
