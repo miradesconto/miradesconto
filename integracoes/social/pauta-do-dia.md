@@ -1,6 +1,6 @@
 # Fila de conteúdo — MiraDesconto → Pippit
 
-**Radar:** 2026-11-12T08:17:56+00:00
+**Radar:** 2026-11-12T12:52:08+00:00
 **Fila:** 14 vídeos · 2 por dia · 7 dias
 
 Prioridade: Radar real, histórico observado, variedade de categorias e artigo de destino. Não usa referência da loja como histórico.
@@ -9,46 +9,11 @@ Prioridade: Radar real, histórico observado, variedade de categorias e artigo d
 
 Revise a fila de vídeos do MiraDesconto. Aponte apenas afirmações sem evidência, preço/histórico incoerente, linguagem que pareça teste físico sem teste, promessa exagerada, CTA confuso ou roteiro longo demais para 20-25s. Nunca trate referência da loja como histórico. Preserve números do Radar, links e identidade. Se estiver tudo correto, diga que pode seguir para o Pippit.
 
-## Dia 1 · Vídeo 1 — Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB…
+## Dia 1 · Vídeo 1 — Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor…
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 3.695,00 · média R$ 4.470,26 · mínimo R$ 3.695,00
-**Base:** 39 dias acompanhados · 566 observações
-**Destino:** https://miradesconto.github.io/miradesconto/blog/notebook-em-promocao-como-escolher/
-**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_872069-MLA96255973058_102025-T.webp
-
-**Hook**
-
-Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB… está no menor valor observado neste anúncio. Mas vale comprar agora?
-
-**Roteiro**
-
-Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 3.695,00. No Radar, a média foi R$ 4.470,26 e o menor valor observado foi R$ 3.695,00, em 39 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
-
-**Legenda**
-
-PREÇO NA MIRA — Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB…
-Hoje: R$ 3.695,00
-Média observada: R$ 4.470,26
-Menor observado: R$ 3.695,00
-Base: 39 dias acompanhados
-
-O preço atual está no menor valor observado neste anúncio durante o período acompanhado.
-
-Veja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/notebook-em-promocao-como-escolher/
-Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
-
-**Prompt Pippit**
-
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_872069-MLA96255973058_102025-T.webp. Hook 0-3s: Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 3.695,00, média R$ 4.470,26 e menor observado R$ 3.695,00. Narração: Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 3.695,00. No Radar, a média foi R$ 4.470,26 e o menor valor observado foi R$ 3.695,00, em 39 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
-
----
-
-## Dia 1 · Vídeo 2 — Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor…
-
-**Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 27,99 · média R$ 33,04 · mínimo R$ 27,99
-**Base:** 53 dias acompanhados · 713 observações
+**Preço:** R$ 27,99 · média R$ 33,03 · mínimo R$ 27,99
+**Base:** 53 dias acompanhados · 714 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/smart-tag-android-rastreador-vale-a-pena/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_688002-MLA115581994404_092026-AB.webp
 
@@ -58,13 +23,13 @@ Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor… está no m
 
 **Roteiro**
 
-Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 27,99. No Radar, a média foi R$ 33,04 e o menor valor observado foi R$ 27,99, em 53 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 27,99. No Radar, a média foi R$ 33,03 e o menor valor observado foi R$ 27,99, em 53 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor…
 Hoje: R$ 27,99
-Média observada: R$ 33,04
+Média observada: R$ 33,03
 Menor observado: R$ 27,99
 Base: 53 dias acompanhados
 
@@ -75,15 +40,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_688002-MLA115581994404_092026-AB.webp. Hook 0-3s: Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 27,99, média R$ 33,04 e menor observado R$ 27,99. Narração: Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 27,99. No Radar, a média foi R$ 33,04 e o menor valor observado foi R$ 27,99, em 53 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_688002-MLA115581994404_092026-AB.webp. Hook 0-3s: Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 27,99, média R$ 33,03 e menor observado R$ 27,99. Narração: Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 27,99. No Radar, a média foi R$ 33,03 e o menor valor observado foi R$ 27,99, em 53 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
-## Dia 2 · Vídeo 1 — Smartphone Motorola Edge 60 Fusion 5g - 256gb 8gb Ram+8gb Ram…
+## Dia 1 · Vídeo 2 — Smartphone Motorola Edge 60 Fusion 5g - 256gb 8gb Ram+8gb Ram…
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 1.658,00 · média R$ 1.805,21 · mínimo R$ 1.658,00
-**Base:** 37 dias acompanhados · 529 observações
+**Preço:** R$ 1.658,00 · média R$ 1.804,93 · mínimo R$ 1.658,00
+**Base:** 37 dias acompanhados · 530 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/qual-celular-comprar-2026/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_631624-MLA99926713059_112025-AB.webp
 
@@ -93,13 +58,13 @@ Smartphone Motorola Edge 60 Fusion 5g - 256gb 8gb Ram+8gb Ram… está no menor 
 
 **Roteiro**
 
-Smartphone Motorola Edge 60 Fusion 5g - 256gb 8gb Ram+8gb Ram… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 1.658,00. No Radar, a média foi R$ 1.805,21 e o menor valor observado foi R$ 1.658,00, em 37 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Smartphone Motorola Edge 60 Fusion 5g - 256gb 8gb Ram+8gb Ram… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 1.658,00. No Radar, a média foi R$ 1.804,93 e o menor valor observado foi R$ 1.658,00, em 37 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Smartphone Motorola Edge 60 Fusion 5g - 256gb 8gb Ram+8gb Ram…
 Hoje: R$ 1.658,00
-Média observada: R$ 1.805,21
+Média observada: R$ 1.804,93
 Menor observado: R$ 1.658,00
 Base: 37 dias acompanhados
 
@@ -110,15 +75,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Smartphone Motorola Edge 60 Fusion 5g - 256gb 8gb Ram+8gb Ram…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_631624-MLA99926713059_112025-AB.webp. Hook 0-3s: Smartphone Motorola Edge 60 Fusion 5g - 256gb 8gb Ram+8gb Ram… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 1.658,00, média R$ 1.805,21 e menor observado R$ 1.658,00. Narração: Smartphone Motorola Edge 60 Fusion 5g - 256gb 8gb Ram+8gb Ram… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 1.658,00. No Radar, a média foi R$ 1.805,21 e o menor valor observado foi R$ 1.658,00, em 37 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Smartphone Motorola Edge 60 Fusion 5g - 256gb 8gb Ram+8gb Ram…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_631624-MLA99926713059_112025-AB.webp. Hook 0-3s: Smartphone Motorola Edge 60 Fusion 5g - 256gb 8gb Ram+8gb Ram… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 1.658,00, média R$ 1.804,93 e menor observado R$ 1.658,00. Narração: Smartphone Motorola Edge 60 Fusion 5g - 256gb 8gb Ram+8gb Ram… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 1.658,00. No Radar, a média foi R$ 1.804,93 e o menor valor observado foi R$ 1.658,00, em 37 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
-## Dia 2 · Vídeo 2 — Apple iPhone 15 (128 Gb)
+## Dia 2 · Vídeo 1 — Apple iPhone 15 (128 Gb)
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 3.799,00 · média R$ 4.064,28 · mínimo R$ 3.799,00
-**Base:** 37 dias acompanhados · 431 observações
+**Preço:** R$ 3.799,00 · média R$ 4.063,67 · mínimo R$ 3.799,00
+**Base:** 37 dias acompanhados · 432 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/celulares-da-vitrine-armazenamento-e-perfil/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_680991-MLA95497804976_102025-AB.webp
 
@@ -128,13 +93,13 @@ Apple iPhone 15 (128 Gb) está no menor valor observado neste anúncio. Mas vale
 
 **Roteiro**
 
-Apple iPhone 15 (128 Gb) está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 3.799,00. No Radar, a média foi R$ 4.064,28 e o menor valor observado foi R$ 3.799,00, em 37 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Apple iPhone 15 (128 Gb) está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 3.799,00. No Radar, a média foi R$ 4.063,67 e o menor valor observado foi R$ 3.799,00, em 37 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Apple iPhone 15 (128 Gb)
 Hoje: R$ 3.799,00
-Média observada: R$ 4.064,28
+Média observada: R$ 4.063,67
 Menor observado: R$ 3.799,00
 Base: 37 dias acompanhados
 
@@ -145,15 +110,50 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Apple iPhone 15 (128 Gb). Imagem: https://http2.mlstatic.com/D_Q_NP_2X_680991-MLA95497804976_102025-AB.webp. Hook 0-3s: Apple iPhone 15 (128 Gb) está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 3.799,00, média R$ 4.064,28 e menor observado R$ 3.799,00. Narração: Apple iPhone 15 (128 Gb) está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 3.799,00. No Radar, a média foi R$ 4.064,28 e o menor valor observado foi R$ 3.799,00, em 37 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Apple iPhone 15 (128 Gb). Imagem: https://http2.mlstatic.com/D_Q_NP_2X_680991-MLA95497804976_102025-AB.webp. Hook 0-3s: Apple iPhone 15 (128 Gb) está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 3.799,00, média R$ 4.063,67 e menor observado R$ 3.799,00. Narração: Apple iPhone 15 (128 Gb) está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 3.799,00. No Radar, a média foi R$ 4.063,67 e o menor valor observado foi R$ 3.799,00, em 37 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+
+---
+
+## Dia 2 · Vídeo 2 — Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB…
+
+**Ângulo:** Abaixo da média observada: vale agora?
+**Preço:** R$ 3.779,00 · média R$ 4.469,04 · mínimo R$ 3.695,00
+**Base:** 39 dias acompanhados · 567 observações
+**Destino:** https://miradesconto.github.io/miradesconto/blog/notebook-em-promocao-como-escolher/
+**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_872069-MLA96255973058_102025-T.webp
+
+**Hook**
+
+Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB… está 15.4% abaixo da média observada. É um bom momento de compra?
+
+**Roteiro**
+
+Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB… está 15.4% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 3.779,00. No Radar, a média foi R$ 4.469,04 e o menor valor observado foi R$ 3.695,00, em 39 dias acompanhados. O preço atual está 15,4% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
+
+**Legenda**
+
+PREÇO NA MIRA — Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB…
+Hoje: R$ 3.779,00
+Média observada: R$ 4.469,04
+Menor observado: R$ 3.695,00
+Base: 39 dias acompanhados
+
+O preço atual está 15,4% abaixo da média observada.
+
+Veja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/notebook-em-promocao-como-escolher/
+Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
+
+**Prompt Pippit**
+
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_872069-MLA96255973058_102025-T.webp. Hook 0-3s: Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB… está 15.4% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 3.779,00, média R$ 4.469,04 e menor observado R$ 3.695,00. Narração: Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB… está 15.4% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 3.779,00. No Radar, a média foi R$ 4.469,04 e o menor valor observado foi R$ 3.695,00, em 39 dias acompanhados. O preço atual está 15,4% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
 ## Dia 3 · Vídeo 1 — Notebook ASUS Vivobook Go 15 E1504 AMD RYZEN 5 7520U 8GB Ram 256GB…
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 2.749,00 · média R$ 2.910,27 · mínimo R$ 2.749,00
-**Base:** 37 dias acompanhados · 66 observações
+**Preço:** R$ 2.749,00 · média R$ 2.907,87 · mínimo R$ 2.749,00
+**Base:** 37 dias acompanhados · 67 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/notebook-para-trabalho-configuracoes/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_830301-MLA99949667885_112025-T.webp
 
@@ -163,13 +163,13 @@ Notebook ASUS Vivobook Go 15 E1504 AMD RYZEN 5 7520U 8GB Ram 256GB… está no m
 
 **Roteiro**
 
-Notebook ASUS Vivobook Go 15 E1504 AMD RYZEN 5 7520U 8GB Ram 256GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 2.749,00. No Radar, a média foi R$ 2.910,27 e o menor valor observado foi R$ 2.749,00, em 37 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Notebook ASUS Vivobook Go 15 E1504 AMD RYZEN 5 7520U 8GB Ram 256GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 2.749,00. No Radar, a média foi R$ 2.907,87 e o menor valor observado foi R$ 2.749,00, em 37 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Notebook ASUS Vivobook Go 15 E1504 AMD RYZEN 5 7520U 8GB Ram 256GB…
 Hoje: R$ 2.749,00
-Média observada: R$ 2.910,27
+Média observada: R$ 2.907,87
 Menor observado: R$ 2.749,00
 Base: 37 dias acompanhados
 
@@ -180,50 +180,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook ASUS Vivobook Go 15 E1504 AMD RYZEN 5 7520U 8GB Ram 256GB…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_830301-MLA99949667885_112025-T.webp. Hook 0-3s: Notebook ASUS Vivobook Go 15 E1504 AMD RYZEN 5 7520U 8GB Ram 256GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 2.749,00, média R$ 2.910,27 e menor observado R$ 2.749,00. Narração: Notebook ASUS Vivobook Go 15 E1504 AMD RYZEN 5 7520U 8GB Ram 256GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 2.749,00. No Radar, a média foi R$ 2.910,27 e o menor valor observado foi R$ 2.749,00, em 37 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook ASUS Vivobook Go 15 E1504 AMD RYZEN 5 7520U 8GB Ram 256GB…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_830301-MLA99949667885_112025-T.webp. Hook 0-3s: Notebook ASUS Vivobook Go 15 E1504 AMD RYZEN 5 7520U 8GB Ram 256GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 2.749,00, média R$ 2.907,87 e menor observado R$ 2.749,00. Narração: Notebook ASUS Vivobook Go 15 E1504 AMD RYZEN 5 7520U 8GB Ram 256GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 2.749,00. No Radar, a média foi R$ 2.907,87 e o menor valor observado foi R$ 2.749,00, em 37 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
-## Dia 3 · Vídeo 2 — Notebook Acer Aspire Go AG15-51P-39MU Intel Core i3-1305U 8GB…
-
-**Ângulo:** Abaixo da média observada: vale agora?
-**Preço:** R$ 2.991,00 · média R$ 3.389,51 · mínimo R$ 2.855,00
-**Base:** 40 dias acompanhados · 200 observações
-**Destino:** https://miradesconto.github.io/miradesconto/blog/notebook-para-trabalho-configuracoes/
-**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_692920-MLA100061644521_122025-T.webp
-
-**Hook**
-
-Notebook Acer Aspire Go AG15-51P-39MU Intel Core i3-1305U 8GB… está 11.8% abaixo da média observada. É um bom momento de compra?
-
-**Roteiro**
-
-Notebook Acer Aspire Go AG15-51P-39MU Intel Core i3-1305U 8GB… está 11.8% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 2.991,00. No Radar, a média foi R$ 3.389,51 e o menor valor observado foi R$ 2.855,00, em 40 dias acompanhados. O preço atual está 11,8% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
-
-**Legenda**
-
-PREÇO NA MIRA — Notebook Acer Aspire Go AG15-51P-39MU Intel Core i3-1305U 8GB…
-Hoje: R$ 2.991,00
-Média observada: R$ 3.389,51
-Menor observado: R$ 2.855,00
-Base: 40 dias acompanhados
-
-O preço atual está 11,8% abaixo da média observada.
-
-Veja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/notebook-para-trabalho-configuracoes/
-Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
-
-**Prompt Pippit**
-
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook Acer Aspire Go AG15-51P-39MU Intel Core i3-1305U 8GB…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_692920-MLA100061644521_122025-T.webp. Hook 0-3s: Notebook Acer Aspire Go AG15-51P-39MU Intel Core i3-1305U 8GB… está 11.8% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 2.991,00, média R$ 3.389,51 e menor observado R$ 2.855,00. Narração: Notebook Acer Aspire Go AG15-51P-39MU Intel Core i3-1305U 8GB… está 11.8% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 2.991,00. No Radar, a média foi R$ 3.389,51 e o menor valor observado foi R$ 2.855,00, em 40 dias acompanhados. O preço atual está 11,8% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
-
----
-
-## Dia 4 · Vídeo 1 — Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco…
+## Dia 3 · Vídeo 2 — Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco…
 
 **Ângulo:** Menor preço observado: vale aproveitar?
 **Preço:** R$ 43,40 · média R$ 46,56 · mínimo R$ 43,40
-**Base:** 53 dias acompanhados · 725 observações
+**Base:** 53 dias acompanhados · 726 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/kit-para-gravar-videos-com-celular/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_691904-MLA111125430926_052026-AB.webp
 
@@ -254,11 +219,46 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 ---
 
+## Dia 4 · Vídeo 1 — Notebook Acer Aspire Go AG15-51P-39MU Intel Core i3-1305U 8GB…
+
+**Ângulo:** Abaixo da média observada: vale agora?
+**Preço:** R$ 3.059,00 · média R$ 3.387,87 · mínimo R$ 2.855,00
+**Base:** 41 dias acompanhados · 201 observações
+**Destino:** https://miradesconto.github.io/miradesconto/blog/notebook-para-trabalho-configuracoes/
+**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_692920-MLA100061644521_122025-T.webp
+
+**Hook**
+
+Notebook Acer Aspire Go AG15-51P-39MU Intel Core i3-1305U 8GB… está 9.7% abaixo da média observada. É um bom momento de compra?
+
+**Roteiro**
+
+Notebook Acer Aspire Go AG15-51P-39MU Intel Core i3-1305U 8GB… está 9.7% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 3.059,00. No Radar, a média foi R$ 3.387,87 e o menor valor observado foi R$ 2.855,00, em 41 dias acompanhados. O preço atual está 9,7% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
+
+**Legenda**
+
+PREÇO NA MIRA — Notebook Acer Aspire Go AG15-51P-39MU Intel Core i3-1305U 8GB…
+Hoje: R$ 3.059,00
+Média observada: R$ 3.387,87
+Menor observado: R$ 2.855,00
+Base: 41 dias acompanhados
+
+O preço atual está 9,7% abaixo da média observada.
+
+Veja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/notebook-para-trabalho-configuracoes/
+Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
+
+**Prompt Pippit**
+
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook Acer Aspire Go AG15-51P-39MU Intel Core i3-1305U 8GB…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_692920-MLA100061644521_122025-T.webp. Hook 0-3s: Notebook Acer Aspire Go AG15-51P-39MU Intel Core i3-1305U 8GB… está 9.7% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 3.059,00, média R$ 3.387,87 e menor observado R$ 2.855,00. Narração: Notebook Acer Aspire Go AG15-51P-39MU Intel Core i3-1305U 8GB… está 9.7% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 3.059,00. No Radar, a média foi R$ 3.387,87 e o menor valor observado foi R$ 2.855,00, em 41 dias acompanhados. O preço atual está 9,7% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+
+---
+
 ## Dia 4 · Vídeo 2 — Caneta 3d Impressora Profissional + Refil Filamento + Usb
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 61,90 · média R$ 66,57 · mínimo R$ 61,90
-**Base:** 33 dias acompanhados · 60 observações
+**Preço:** R$ 61,90 · média R$ 66,49 · mínimo R$ 61,90
+**Base:** 33 dias acompanhados · 61 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/impressora-termica-caneta-3d-ou-filamento/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_816284-MLB111134362535_052026-AB-caneta-3d-impressora-profissional-refil-filamento-usb.webp
 
@@ -268,13 +268,13 @@ Caneta 3d Impressora Profissional + Refil Filamento + Usb está no menor valor o
 
 **Roteiro**
 
-Caneta 3d Impressora Profissional + Refil Filamento + Usb está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 61,90. No Radar, a média foi R$ 66,57 e o menor valor observado foi R$ 61,90, em 33 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Caneta 3d Impressora Profissional + Refil Filamento + Usb está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 61,90. No Radar, a média foi R$ 66,49 e o menor valor observado foi R$ 61,90, em 33 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Caneta 3d Impressora Profissional + Refil Filamento + Usb
 Hoje: R$ 61,90
-Média observada: R$ 66,57
+Média observada: R$ 66,49
 Menor observado: R$ 61,90
 Base: 33 dias acompanhados
 
@@ -285,7 +285,7 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Caneta 3d Impressora Profissional + Refil Filamento + Usb. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_816284-MLB111134362535_052026-AB-caneta-3d-impressora-profissional-refil-filamento-usb.webp. Hook 0-3s: Caneta 3d Impressora Profissional + Refil Filamento + Usb está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 61,90, média R$ 66,57 e menor observado R$ 61,90. Narração: Caneta 3d Impressora Profissional + Refil Filamento + Usb está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 61,90. No Radar, a média foi R$ 66,57 e o menor valor observado foi R$ 61,90, em 33 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Caneta 3d Impressora Profissional + Refil Filamento + Usb. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_816284-MLB111134362535_052026-AB-caneta-3d-impressora-profissional-refil-filamento-usb.webp. Hook 0-3s: Caneta 3d Impressora Profissional + Refil Filamento + Usb está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 61,90, média R$ 66,49 e menor observado R$ 61,90. Narração: Caneta 3d Impressora Profissional + Refil Filamento + Usb está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 61,90. No Radar, a média foi R$ 66,49 e o menor valor observado foi R$ 61,90, em 33 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
@@ -293,17 +293,17 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 **Ângulo:** Abaixo da média observada: vale agora?
 **Preço:** R$ 43,58 · média R$ 48,34 · mínimo R$ 40,09
-**Base:** 53 dias acompanhados · 731 observações
+**Base:** 53 dias acompanhados · 732 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/mouse-teclado-acessorios-setup/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_922391-MLB111917338465_052026-AB.webp
 
 **Hook**
 
-Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v está 9.9% abaixo da média observada. É um bom momento de compra?
+Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v está 9.8% abaixo da média observada. É um bom momento de compra?
 
 **Roteiro**
 
-Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v está 9.9% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 43,58. No Radar, a média foi R$ 48,34 e o menor valor observado foi R$ 40,09, em 53 dias acompanhados. O preço atual está 9,9% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v está 9.8% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 43,58. No Radar, a média foi R$ 48,34 e o menor valor observado foi R$ 40,09, em 53 dias acompanhados. O preço atual está 9,8% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
@@ -313,14 +313,14 @@ Média observada: R$ 48,34
 Menor observado: R$ 40,09
 Base: 53 dias acompanhados
 
-O preço atual está 9,9% abaixo da média observada.
+O preço atual está 9,8% abaixo da média observada.
 
 Veja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/mouse-teclado-acessorios-setup/
 Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_922391-MLB111917338465_052026-AB.webp. Hook 0-3s: Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v está 9.9% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 43,58, média R$ 48,34 e menor observado R$ 40,09. Narração: Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v está 9.9% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 43,58. No Radar, a média foi R$ 48,34 e o menor valor observado foi R$ 40,09, em 53 dias acompanhados. O preço atual está 9,9% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_922391-MLB111917338465_052026-AB.webp. Hook 0-3s: Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v está 9.8% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 43,58, média R$ 48,34 e menor observado R$ 40,09. Narração: Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v está 9.8% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 43,58. No Radar, a média foi R$ 48,34 e o menor valor observado foi R$ 40,09, em 53 dias acompanhados. O preço atual está 9,8% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
@@ -328,7 +328,7 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 **Ângulo:** Abaixo da média observada: vale agora?
 **Preço:** R$ 30,97 · média R$ 31,50 · mínimo R$ 30,87
-**Base:** 53 dias acompanhados · 730 observações
+**Base:** 53 dias acompanhados · 731 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/carregador-usb-c-iphone-como-escolher/
 **Imagem:** https://http2.mlstatic.com/D_NQ_NP_853083-MLB108107437166_032026-O-carregador-magnetico-fam-magsafe-usbc-15w-p-iphone-12-a-16.webp
 
@@ -363,7 +363,7 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 **Ângulo:** Menor preço observado: vale aproveitar?
 **Preço:** R$ 55,00 · média R$ 57,42 · mínimo R$ 55,00
-**Base:** 52 dias acompanhados · 729 observações
+**Base:** 53 dias acompanhados · 730 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/fone-bluetooth-ou-caixa-de-som-como-escolher/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_760715-MLB109157249938_042026-AB-fone-de-ouvido-bluetooth-53-par-sem-fio-duplo-todos-celular.webp
 
@@ -373,7 +373,7 @@ Fone De Ouvido Bluetooth 5.3 Par Sem Fio Duplo Todos Celular está no menor valo
 
 **Roteiro**
 
-Fone De Ouvido Bluetooth 5.3 Par Sem Fio Duplo Todos Celular está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 55,00. No Radar, a média foi R$ 57,42 e o menor valor observado foi R$ 55,00, em 52 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Fone De Ouvido Bluetooth 5.3 Par Sem Fio Duplo Todos Celular está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 55,00. No Radar, a média foi R$ 57,42 e o menor valor observado foi R$ 55,00, em 53 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
@@ -381,7 +381,7 @@ PREÇO NA MIRA — Fone De Ouvido Bluetooth 5.3 Par Sem Fio Duplo Todos Celular
 Hoje: R$ 55,00
 Média observada: R$ 57,42
 Menor observado: R$ 55,00
-Base: 52 dias acompanhados
+Base: 53 dias acompanhados
 
 O preço atual está no menor valor observado neste anúncio durante o período acompanhado.
 
@@ -390,31 +390,31 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Fone De Ouvido Bluetooth 5.3 Par Sem Fio Duplo Todos Celular. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_760715-MLB109157249938_042026-AB-fone-de-ouvido-bluetooth-53-par-sem-fio-duplo-todos-celular.webp. Hook 0-3s: Fone De Ouvido Bluetooth 5.3 Par Sem Fio Duplo Todos Celular está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 55,00, média R$ 57,42 e menor observado R$ 55,00. Narração: Fone De Ouvido Bluetooth 5.3 Par Sem Fio Duplo Todos Celular está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 55,00. No Radar, a média foi R$ 57,42 e o menor valor observado foi R$ 55,00, em 52 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Fone De Ouvido Bluetooth 5.3 Par Sem Fio Duplo Todos Celular. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_760715-MLB109157249938_042026-AB-fone-de-ouvido-bluetooth-53-par-sem-fio-duplo-todos-celular.webp. Hook 0-3s: Fone De Ouvido Bluetooth 5.3 Par Sem Fio Duplo Todos Celular está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 55,00, média R$ 57,42 e menor observado R$ 55,00. Narração: Fone De Ouvido Bluetooth 5.3 Par Sem Fio Duplo Todos Celular está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 55,00. No Radar, a média foi R$ 57,42 e o menor valor observado foi R$ 55,00, em 53 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
 ## Dia 6 · Vídeo 2 — Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0…
 
 **Ângulo:** Abaixo da média observada: vale agora?
-**Preço:** R$ 149,24 · média R$ 155,37 · mínimo R$ 140,00
-**Base:** 37 dias acompanhados · 540 observações
+**Preço:** R$ 149,24 · média R$ 155,36 · mínimo R$ 140,00
+**Base:** 37 dias acompanhados · 541 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/fone-bluetooth-ou-caixa-de-som-como-escolher/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_681719-MLA99467991212_112025-AB.webp
 
 **Hook**
 
-Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0… está 4.0% abaixo da média observada. É um bom momento de compra?
+Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0… está 3.9% abaixo da média observada. É um bom momento de compra?
 
 **Roteiro**
 
-Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0… está 4.0% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 149,24. No Radar, a média foi R$ 155,37 e o menor valor observado foi R$ 140,00, em 37 dias acompanhados. O preço atual está 3,9% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0… está 3.9% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 149,24. No Radar, a média foi R$ 155,36 e o menor valor observado foi R$ 140,00, em 37 dias acompanhados. O preço atual está 3,9% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0…
 Hoje: R$ 149,24
-Média observada: R$ 155,37
+Média observada: R$ 155,36
 Menor observado: R$ 140,00
 Base: 37 dias acompanhados
 
@@ -425,7 +425,7 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_681719-MLA99467991212_112025-AB.webp. Hook 0-3s: Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0… está 4.0% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 149,24, média R$ 155,37 e menor observado R$ 140,00. Narração: Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0… está 4.0% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 149,24. No Radar, a média foi R$ 155,37 e o menor valor observado foi R$ 140,00, em 37 dias acompanhados. O preço atual está 3,9% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_681719-MLA99467991212_112025-AB.webp. Hook 0-3s: Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0… está 3.9% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 149,24, média R$ 155,36 e menor observado R$ 140,00. Narração: Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0… está 3.9% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 149,24. No Radar, a média foi R$ 155,36 e o menor valor observado foi R$ 140,00, em 37 dias acompanhados. O preço atual está 3,9% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
@@ -433,7 +433,7 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 **Ângulo:** Abaixo da média observada: vale agora?
 **Preço:** R$ 19,00 · média R$ 19,67 · mínimo R$ 18,81
-**Base:** 53 dias acompanhados · 731 observações
+**Base:** 53 dias acompanhados · 732 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/acessorios-ps4-ps5-switch-como-escolher/
 **Imagem:** https://http2.mlstatic.com/D_NQ_NP_641341-MLB109378980820_042026-O-kit-4-botao-capa-analogico-protetora-compativel-controle-ps5.webp
 
@@ -467,8 +467,8 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 ## Dia 7 · Vídeo 2 — Drone E88 Pro 4k Com Câmera Para Iniciante, + Baterias Drone Preto
 
 **Ângulo:** Abaixo da média observada: vale agora?
-**Preço:** R$ 164,00 · média R$ 167,66 · mínimo R$ 134,48
-**Base:** 36 dias acompanhados · 170 observações
+**Preço:** R$ 164,00 · média R$ 167,64 · mínimo R$ 134,48
+**Base:** 36 dias acompanhados · 171 observações
 **Destino:** https://miradesconto.github.io/miradesconto/?produto=MLB5179923093#ofertas
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_702285-MLA80802875108_112024-AB.webp
 
@@ -478,13 +478,13 @@ Drone E88 Pro 4k Com Câmera Para Iniciante, + Baterias Drone Preto está 2.2% a
 
 **Roteiro**
 
-Drone E88 Pro 4k Com Câmera Para Iniciante, + Baterias Drone Preto está 2.2% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 164,00. No Radar, a média foi R$ 167,66 e o menor valor observado foi R$ 134,48, em 36 dias acompanhados. O preço atual está 2,2% abaixo da média observada. Veja no Radar MiraDesconto antes de comprar.
+Drone E88 Pro 4k Com Câmera Para Iniciante, + Baterias Drone Preto está 2.2% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 164,00. No Radar, a média foi R$ 167,64 e o menor valor observado foi R$ 134,48, em 36 dias acompanhados. O preço atual está 2,2% abaixo da média observada. Veja no Radar MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Drone E88 Pro 4k Com Câmera Para Iniciante, + Baterias Drone Preto
 Hoje: R$ 164,00
-Média observada: R$ 167,66
+Média observada: R$ 167,64
 Menor observado: R$ 134,48
 Base: 36 dias acompanhados
 
@@ -495,6 +495,6 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Drone E88 Pro 4k Com Câmera Para Iniciante, + Baterias Drone Preto. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_702285-MLA80802875108_112024-AB.webp. Hook 0-3s: Drone E88 Pro 4k Com Câmera Para Iniciante, + Baterias Drone Preto está 2.2% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 164,00, média R$ 167,66 e menor observado R$ 134,48. Narração: Drone E88 Pro 4k Com Câmera Para Iniciante, + Baterias Drone Preto está 2.2% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 164,00. No Radar, a média foi R$ 167,66 e o menor valor observado foi R$ 134,48, em 36 dias acompanhados. O preço atual está 2,2% abaixo da média observada. Veja no Radar MiraDesconto antes de comprar. CTA: Veja no Radar MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Drone E88 Pro 4k Com Câmera Para Iniciante, + Baterias Drone Preto. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_702285-MLA80802875108_112024-AB.webp. Hook 0-3s: Drone E88 Pro 4k Com Câmera Para Iniciante, + Baterias Drone Preto está 2.2% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 164,00, média R$ 167,64 e menor observado R$ 134,48. Narração: Drone E88 Pro 4k Com Câmera Para Iniciante, + Baterias Drone Preto está 2.2% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 164,00. No Radar, a média foi R$ 167,64 e o menor valor observado foi R$ 134,48, em 36 dias acompanhados. O preço atual está 2,2% abaixo da média observada. Veja no Radar MiraDesconto antes de comprar. CTA: Veja no Radar MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
