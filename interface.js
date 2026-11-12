@@ -12,6 +12,11 @@ function directAffiliate(p) {
     return p.affiliateLinkType !== 'list' && p.available !== false;
 }
 const shopeeCategories = {
+ 'organizador de cabos': 'Setup', 'suporte headset': 'Setup', 'suporte celular mesa': 'Celulares',
+ 'suporte notebook': 'Setup', 'apoio de pulso': 'Setup', 'kit limpeza teclado': 'Setup',
+ 'hub usb': 'PC e hardware', 'leitor cartao usb': 'PC e hardware', 'luminaria monitor': 'Setup',
+ 'fita led usb': 'Setup', 'prateleira decorativa': 'Setup', 'nicho parede': 'Setup',
+ 'painel perfurado organizador': 'Setup',
  'mesa gamer': 'Setup',
  'cadeira gamer': 'Setup',
  'suporte para monitor': 'Setup',
@@ -23,10 +28,11 @@ try {
  const data = JSON.parse(document.getElementById('shopee-offers-data')?.textContent || '[]');
  const ids = new Set();
  if (Array.isArray(data)) shopeeProducts = data.filter(p => p && /^\d+$/.test(p.id || '') && p.name
+   && !/estilingue|pesca|bebe|baba eletronica|shampoo|sabonete/.test(normalize(p.name))
    && /^https:\/\/s\.shopee\.com\.br\/[A-Za-z0-9]+$/.test(p.affiliateUrl || '')
    && (String(p.imageUrl || '').startsWith('/assets/ofertas/') || String(p.imageUrl || '').startsWith('https://cf.shopee.com.br/file/'))
    && !ids.has(p.id) && ids.add(p.id))
-   .map(p => ({...p, id:'SHOPEE-'+p.id, price:Number(p.price), category:shopeeCategories[p.category] || 'Gaming', store:'Shopee', platform:'shopee'}));
+   .map(p => ({...p, id:'SHOPEE-'+p.id, price:Number(p.price), priceMax:Number(p.priceMax || p.price), offerGroup:p.category, category:shopeeCategories[p.category] || 'Gaming', store:'Shopee', platform:'shopee'}));
 } catch (_) { /* Keep Mercado Livre working if the Shopee feed is invalid. */ }
 const products = (source?.products || []).filter(p => p.name && directAffiliate(p));
 const allOffers = () => products.concat(shopeeProducts);
@@ -114,7 +120,7 @@ function makeCard(p) {
     content.append(element('div','category-label',p.category || 'Outros'),element('h3','',p.name));
     content.append(element('div','old-price',discount ? money(p.oldPrice) : ''));
     const recent = currentPrice(p) !== null;
-    content.append(element('div','price',recent ? money(p.price) : 'Consultar preço na loja'));
+    content.append(element('div','price',recent ? ((p.platform === 'shopee' && p.priceMax > p.price ? 'A partir de ' : '') + money(p.price)) : 'Consultar preço na loja'));
     if (recent) {
         const checked = new Date(p.platform === 'shopee' ? p.checkedAt : p.priceCheck.checkedAt).toLocaleString('pt-BR', {timeZone:'America/Sao_Paulo'});
         content.append(element('p','store','Conferido em ' + checked + ' (Brasília)'));
@@ -177,6 +183,19 @@ function pricedFirst(items) {
     for (const p of items) (currentPrice(p) !== null ? priced : toConfirm).push(p);
     return priced.concat(toConfirm);
 }
+// Prioriza preço de entrada, com diversidade de uso; não compara modelos como equivalentes.
+function affordableShopee(items) {
+    const sorted = items.filter(p => currentPrice(p) !== null && p.priceMax <= 300)
+        .sort((a,b) => a.price-b.price || a.priceMax-b.priceMax || String(a.id).localeCompare(String(b.id)));
+    const groups = new Set(), first = [], rest = [];
+    for (const p of sorted) {
+        const group = p.offerGroup || p.category;
+        if (groups.has(group)) rest.push(p);
+        else { groups.add(group); first.push(p); }
+    }
+    return first.concat(rest);
+}
+
 function filteredProducts() {
     const query = normalize($('searchInput').value.trim());
     const featuredIds = window.MiraShowcaseIds || [];
@@ -185,13 +204,9 @@ function filteredProducts() {
         && (selectedCategory === 'Todos' || selectedCategory === 'Seleção da hora' || (selectedCategory === 'Destaques' ? p.featured === true : p.category === selectedCategory))
         && [p.id,p.name,p.store,p.category].some(v=>normalize(v).includes(query)));
     if (selectedCategory === 'Seleção da hora' && !query && $('sortSelect').value === 'default') {
-        const shopee = rotateOffers(filtered.filter(p => p.platform === 'shopee' && currentPrice(p) !== null));
+        const shopee = affordableShopee(filtered.filter(p => p.platform === 'shopee'));
         const mercado = rotateOffers(filtered.filter(p => p.platform !== 'shopee' && currentPrice(p) !== null));
-        const mixed = [];
-        for (let i=0;i<Math.max(shopee.length,mercado.length);i++) {
-            if (mercado[i]) mixed.push(mercado[i]);
-            if (shopee[i]) mixed.push(shopee[i]);
-        }
+        const mixed = shopee.slice(0,4).concat(mercado.slice(0,2),shopee.slice(4),mercado.slice(2));
         return mixed.concat(filtered.filter(p => currentPrice(p) === null));
     }
     switch($('sortSelect').value) {
@@ -288,7 +303,7 @@ $('clearSearch').addEventListener('click',()=>{$('searchInput').value='';updateS
 $('sortSelect').addEventListener('change',renderProducts);
 document.querySelector('.logo').addEventListener('click',resetFilters);
 // No infinite browsing on the homepage: a small, high-confidence selection.
-$('selectionNotice').textContent = 'Primeiro os preços conferidos; anúncios sem preço recente ficam por último. Até 10 produtos na página inicial, incluindo Shopee e Mercado Livre.';
+$('selectionNotice').textContent = 'Achados Shopee até R$ 300: menores preços de entrada da seleção, com variedade de categorias. Compare quantidades e variantes; frete não incluído. Também mostramos ofertas do Mercado Livre.';
 $('dataNotice').textContent = source
     ? 'Preços verificados pelo Mercado Livre (até 2h) e coletados na Shopee (até 36h); confira as condições na loja.'
     : 'Não foi possível carregar as ofertas. Tente recarregar a página em instantes.';
