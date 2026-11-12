@@ -38,7 +38,7 @@ jobs:
         run: python integracoes/mercadolivre/mirabot.py --report "$RUNNER_TEMP/mirabot-resumo.json"
       - name: Testar os validadores
         run: |
-          python -m unittest tests.test_mirabot tests.test_import_links tests.test_api_intelligence -v
+          python -m unittest discover -s tests -v
           python integracoes/catalogo.py check
       - name: Validar cadastro real e atualizar artefatos da vitrine
         if: ${{ inputs.aplicar }}

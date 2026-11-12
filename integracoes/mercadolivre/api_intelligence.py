@@ -110,7 +110,7 @@ class Probe:
             row['status'] = 'bloqueado' if exc.status in (401, 403) else 'atenção'
             if exc.status == 403:
                 row['reason'] = 'permission_or_policy_restriction'
-                row['lastAttemptAt'] = self.report['generatedAt']
+                row['lastAttemptAt'] = self.report.get('generatedAt') or datetime.now(timezone.utc).isoformat(timespec='seconds')
             if exc.status in (401, 403, 429):
                 self.stopped.add(family)
             if exc.status == 401:
