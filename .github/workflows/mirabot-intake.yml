@@ -1,0 +1,109 @@
+name: MiraBot — cadastrar links de afiliado
+on:
+  pull_request:
+    paths:
+      - 'integracoes/mercadolivre/mirabot.py'
+      - '.github/workflows/mirabot-intake.yml'
+  workflow_dispatch:
+    inputs:
+      affiliate_links:
+        description: 'Cole até 20 links oficiais meli.la ou Mercado Livre /sec/, separados por espaço'
+        required: true
+        type: string
+      aplicar:
+        description: 'Validar anúncios/preços e criar PR para revisão (desmarcado = somente conferência)'
+        required: true
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: mirabot-cadastro
+  cancel-in-progress: false
+
+jobs:
+  smoke:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validar entrada real já cadastrada sem acessar serviços externos
+        env:
+          AFFILIATE_LINKS: 'https://meli.la/1pyBZm8'
+        run: |
+          python integracoes/mercadolivre/mirabot.py --report "$RUNNER_TEMP/mirabot-smoke.json"
+          python -m unittest discover -s tests -p test_mirabot.py -v
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: mirabot-smoke-${{ github.run_id }}
+          path: ${{ runner.temp }}/mirabot-smoke.json
+          if-no-files-found: warn
+          retention-days: 7
+  intake:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Conferir links sem publicar
+        env:
+          AFFILIATE_LINKS: ${{ inputs.affiliate_links }}
+        run: python integracoes/mercadolivre/mirabot.py --report "$RUNNER_TEMP/mirabot-resumo.json"
+      - name: Testar os validadores
+        run: |
+          python -m unittest discover -s tests -v
+          python integracoes/catalogo.py check
+      - name: Validar cadastro real e atualizar artefatos da vitrine
+        if: ${{ inputs.aplicar }}
+        env:
+          AFFILIATE_LINKS: ${{ inputs.affiliate_links }}
+        run: python integracoes/mercadolivre/import_links.py
+      - name: Conferir catálogo depois do cadastro
+        if: ${{ inputs.aplicar }}
+        run: |
+          python integracoes/catalogo.py check
+          node test-catalogo.cjs
+          python integracoes/automacao/site_health.py
+      - name: Criar solicitação de revisão sem publicar
+        if: ${{ inputs.aplicar }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add dados/catalogo.json links-afiliados.json produtos.js catalogo _data/produtos.json _ofertas _data/ofertas_site.json produtos-extras.js docs/pinterest-destinos.json
+          if git diff --cached --quiet; then
+            echo 'Nenhuma alteração de catálogo: links já cadastrados ou sem novas ofertas.' >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          branch="mirabot/revisar-links-${GITHUB_RUN_ID}"
+          git switch -c "$branch"
+          git commit -m "MiraBot: cadastrar links oficiais conferidos"
+          git push origin "$branch"
+          gh pr create --base main --head "$branch" --draft \
+            --title "MiraBot: revisar novos links verificados (${GITHUB_RUN_ID})" \
+            --body "Cadastro solicitado pelo MiraBot. Conferir IDs, preços, imagens e rastreamento do afiliado antes de mesclar. Nenhuma publicação automática."
+      - name: Guardar resumo de conferência
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mirabot-resumo-${{ github.run_id }}
+          path: ${{ runner.temp }}/mirabot-resumo.json
+          if-no-files-found: warn
+          retention-days: 14

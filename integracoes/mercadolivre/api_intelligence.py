@@ -12,7 +12,7 @@ import re
 import sys
 import time
 import unicodedata
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -30,6 +30,7 @@ ID = re.compile(r'MLB\d{7,}$')
 CATEGORY_ID = re.compile(r'MLB\d+$')
 MAX_ITEMS = 40
 MAX_CALLS = 110
+RESTRICTED_RETRY_HOURS = 24  # A 403 is a permission decision, not a transient error.
 
 
 def fresh(stamp, now, hours=24):
@@ -107,6 +108,9 @@ class Probe:
         except AccessError as exc:
             row['http'] = exc.status
             row['status'] = 'bloqueado' if exc.status in (401, 403) else 'atenção'
+            if exc.status == 403:
+                row['reason'] = 'permission_or_policy_restriction'
+                row['lastAttemptAt'] = self.report.get('generatedAt') or datetime.now(timezone.utc).isoformat(timespec='seconds')
             if exc.status in (401, 403, 429):
                 self.stopped.add(family)
             if exc.status == 401:
@@ -117,6 +121,33 @@ class Probe:
             self.stopped.add(family)
         row['failed'] += 1
         return None
+
+
+def remember_restricted_families(previous_report, report, probe, now):
+    """Avoid retrying a policy-denied endpoint on every 15-minute sync.
+
+    A family is probed again after 24h. This does not change ML permissions;
+    report retains the denial and its original timestamp throughout the cooldown.
+    Manual diagnostics deliberately bypass this cooldown.
+    """
+    if not isinstance(previous_report, dict):
+        return
+    for family in ('items', 'sale_price'):
+        prior = (previous_report.get('capabilities') or {}).get(family)
+        if not isinstance(prior, dict) or prior.get('http') != 403:
+            continue
+        last = prior.get('lastAttemptAt') or previous_report.get('generatedAt')
+        if not fresh(last, now, RESTRICTED_RETRY_HOURS):
+            continue
+        checked = datetime.fromisoformat(last.replace('Z', '+00:00'))
+        report['capabilities'][family] = {
+            'status': 'bloqueado', 'http': 403,
+            'reason': 'permission_or_policy_restriction',
+            'lastAttemptAt': last,
+            'nextRetryAt': (checked + timedelta(hours=RESTRICTED_RETRY_HOURS)).isoformat(),
+            'cached': True,
+        }
+        probe.stopped.add(family)
 
 
 def safe_text(value, maximum=160):
@@ -157,7 +188,7 @@ def exact_unvaried(product, item):
         return False
 
 
-def collect(catalog, client, previous=None, now=None):
+def collect(catalog, client, previous=None, now=None, previous_report=None):
     now = now or datetime.now(timezone.utc)
     stamp = now.isoformat(timespec='seconds')
     previous = previous or {}
@@ -165,6 +196,7 @@ def collect(catalog, client, previous=None, now=None):
     report = {'generatedAt': stamp, 'source': 'api.mercadolibre.com', 'capabilities': {},
               'pricesConfirmed': 0, 'itemsChecked': 0, 'candidates': [], 'status': 'atenção'}
     probe = Probe(client, report)
+    remember_restricted_families(previous_report, report, probe, now)
     signals = {'generatedAt': stamp, 'trendsCheckedAt': previous.get('trendsCheckedAt'),
                'trends': [], 'highlights': [], 'items': {}, 'matches': {}}
     products = {p['id']: p for p in result['products']}
@@ -272,7 +304,8 @@ def main(report_only=False):
     current = catalogo.load(ROOT)
     try:
         client = Client()
-        updated, signals, report = collect(current, client, load_json(SIGNALS))
+        updated, signals, report = collect(current, client, load_json(SIGNALS),
+            previous_report={} if report_only else load_json(REPORT))
     except AuthError:
         client = None
         updated = current
