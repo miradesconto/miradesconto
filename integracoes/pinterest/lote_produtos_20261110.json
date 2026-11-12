@@ -3,44 +3,49 @@
   "boardName": "Ofertas de Tecnologia e Achadinhos | MiraDesconto",
   "posts": [
     {
-      "key": "nitro-v15-rtx4060-nov26",
-      "title": "Acer Nitro V15 RTX 4060: notebook gamer",
-      "subtitle": "Desempenho para jogos e criação",
-      "category": "Notebook gamer",
-      "image": "assets/ofertas/d77042ab91ad930a8b8382d1.webp",
-      "link": "https://meli.la/2UH9rtz"
+      "key": "samsung-s3-120hz-20261112",
+      "title": "Monitor Samsung Essential S3 24'' Full HD 120 Hz",
+      "subtitle": "Um monitor para seu setup gamer e home office",
+      "category": "Setup gamer",
+      "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_652104-MLA96195278152_102025-AB.webp",
+      "link": "https://meli.la/2EQbWiA",
+      "description": "Monitor Samsung Essential S3 de 24 polegadas, resolução Full HD e taxa de 120 Hz. Compare conexões, resolução e compatibilidade antes de montar seu setup gamer ou home office."
     },
     {
-      "key": "iphone-16-128gb-nov26",
-      "title": "iPhone 16 de 128 GB: veja os detalhes",
-      "subtitle": "Confira o modelo e condições da loja",
-      "category": "Smartphone",
-      "image": "assets/ofertas/e2e64d787c3fd21c44caa346.webp",
-      "link": "https://meli.la/2rdCTEV"
+      "key": "ringlight-26cm-20261112",
+      "title": "Ring Light LED 26 cm com tripé para gravar vídeos",
+      "subtitle": "Iluminação prática para vídeos e chamadas",
+      "category": "Criação de conteúdo",
+      "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_691904-MLA111125430926_052026-AB.webp",
+      "link": "https://meli.la/17RbS8M",
+      "description": "Ring light LED de 26 cm com tripé de até 2,10 m. Uma opção para iluminação de vídeos, fotos, chamadas e transmissões. Confira alimentação, ajustes e itens inclusos."
     },
     {
-      "key": "lg-tv-43-fullhd-nov26",
-      "title": "Smart TV LG 43 polegadas Full HD",
-      "subtitle": "Conectividade e imagem para sua sala",
-      "category": "TV e entretenimento",
-      "image": "assets/ofertas/dea76b4b75399b5a125d1872.webp",
-      "link": "https://meli.la/1cmZy4H"
+      "key": "soprador-teclado-pc-20261112",
+      "title": "Soprador de ar portátil para limpeza de teclado e PC",
+      "subtitle": "Acessório para cuidar do seu setup",
+      "category": "Acessórios gamer",
+      "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_922391-MLB111917338465_052026-AB.webp",
+      "link": "https://meli.la/2sYbrCN",
+      "description": "Soprador de ar portátil para limpeza de teclado, gabinete e acessórios de computador. Confira potência, alimentação e cuidados de uso informados no anúncio."
     },
     {
-      "key": "motorola-edge-60-fusion-nov26",
-      "title": "Motorola Edge 60 Fusion 5G: conheça",
-      "subtitle": "Smartphone com 256 GB de armazenamento",
-      "category": "Smartphone",
-      "image": "assets/ofertas/9f3596897e4e886358b38fc8.webp",
-      "link": "https://meli.la/12fec17"
+      "key": "kit-chave-115pcs-20261112",
+      "title": "Kit de chaves de precisão 115 peças para eletrônicos",
+      "subtitle": "Ferramentas para pequenos reparos",
+      "category": "Ferramentas tech",
+      "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_751055-MLA112428593866_062026-AB.webp",
+      "link": "https://meli.la/24rJmtM",
+      "description": "Kit de 115 peças com chaves de precisão para pequenos reparos e manutenção de eletrônicos. Verifique as pontas e os encaixes compatíveis com cada equipamento."
     },
     {
-      "key": "mini-impressora-etiquetas-nov26",
-      "title": "Mini impressora de etiquetas Bluetooth",
-      "subtitle": "Organização para casa e pequenos negócios",
-      "category": "Acessórios",
-      "image": "assets/ofertas/04c3bdbba4bbb650b21c996c.webp",
-      "link": "https://meli.la/33RTYB9"
+      "key": "controle-ps4-bluetooth-20261112",
+      "title": "Controle Bluetooth compatível com PS4 e PC",
+      "subtitle": "Veja conexões e recursos antes de comprar",
+      "category": "Games e acessórios",
+      "imageUrl": "https://http2.mlstatic.com/D_Q_NP_2X_762912-MLA105696431793_012026-AB.webp",
+      "link": "https://meli.la/1ZWvPsz",
+      "description": "Controle sem fio anunciado como compatível com PS4 e PC. Antes de comprar, confirme a compatibilidade com seu aparelho, conexão Bluetooth e condições de garantia do vendedor."
     }
   ]
 }
