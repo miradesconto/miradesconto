@@ -1,7 +1,7 @@
 ---
 layout: null
 ---
-{% assign entries = site.artigos | where: "status", "publicado" | sort: "ordem" %}
+{% assign entries = site.artigos | where: "status", "publicado" | sort: "data" | reverse %}
 {% assign guides = entries | where: "categoria", "guias" %}
 {% assign comparisons = entries | where: "categoria", "comparativos" %}
 {% assign reviews = entries | where: "categoria", "reviews" %}
@@ -43,6 +43,29 @@ layout: null
       <h1>Informação para comprar melhor.</h1>
       <p class="editorial-hero-lead">Guias, comparativos e análises que ajudam você a entender o produto antes de olhar apenas para o desconto.</p>
       
+    </div>
+  </section>
+
+
+  <section class="wrap editorial-lane" aria-labelledby="recentes-title">
+    <header class="editorial-lane-head">
+      <div><p class="eyebrow">Novidades do blog</p><h2 id="recentes-title">Publicações mais recentes</h2></div>
+      <p>Os últimos guias, comparativos e análises publicados.</p>
+    </header>
+    <div class="editorial-grid-clean">
+      {% for entry in entries limit: 3 %}
+      <article class="editorial-card-clean">
+        <a class="editorial-card-media" href="{{ entry.url | relative_url }}" aria-label="Abrir {{ entry.title | escape }}">
+          {% include editorial-cover.html entry=entry %}
+        </a>
+        <div class="editorial-card-body">
+          <span class="editorial-category"><time datetime="{{ entry.data | escape }}">{{ entry.data | date: "%d/%m/%Y" }}</time></span>
+          <h3><a href="{{ entry.url | relative_url }}">{{ entry.title | escape }}</a></h3>
+          <p>{{ entry.resumo | escape }}</p>
+          <a class="editorial-read" href="{{ entry.url | relative_url }}">Ler conteúdo <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+      {% endfor %}
     </div>
   </section>
 
