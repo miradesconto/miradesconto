@@ -1,0 +1,119 @@
+name: MiraDesconto | Publicador Telegram e fila WhatsApp
+
+on:
+  schedule:
+    # GitHub Actions usa UTC: 09:15, 13:15 e 18:15 em Brasília.
+    - cron: '15 12,16,21 * * *'
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'integracoes/social/grupos_ofertas.py'
+      - 'integracoes/social/estado-ofertas.json'
+      - 'integracoes/social/GRUPOS-OFERTAS.md'
+      - 'tests/test_grupos_ofertas.py'
+      - '.github/workflows/grupos-ofertas.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publicador-grupos-ofertas
+  cancel-in-progress: false
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validar seleção, segurança, duplicatas e formatação
+        run: python -m unittest discover -s tests -p test_grupos_ofertas.py -v
+
+  publish:
+    if: github.event_name != 'pull_request' && vars.MIRA_OFERTAS_ENABLED == 'true'
+    needs: test
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verificar permissões de postagem do canal antes de reservar
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ vars.TELEGRAM_CHAT_ID }}
+        run: python integracoes/social/grupos_ofertas.py check
+      - name: Atualizar main antes de selecionar
+        run: git pull --rebase origin main
+      - name: Preparar oferta e mensagem para WhatsApp
+        id: prepare
+        shell: bash
+        run: |
+          set -euo pipefail
+          python integracoes/social/grupos_ofertas.py prepare --file "$RUNNER_TEMP/prepared.json"
+          if python -c 'import json,os; assert json.load(open(os.environ["RUNNER_TEMP"]+"/prepared.json"))["ready"]'; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "Sem oferta elegível; nenhum envio." >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Persistir reserva ANTES de enviar (bloqueio de duplicatas)
+        if: steps.prepare.outputs.ready == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add integracoes/social/estado-ofertas.json
+          git commit -m "chore(social): reservar oferta antes de publicar"
+          git push origin HEAD:main
+      - name: Publicar uma vez no Telegram e registrar recibo
+        if: steps.prepare.outputs.ready == 'true'
+        shell: bash
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ vars.TELEGRAM_CHAT_ID }}
+        run: |
+          set +e
+          python integracoes/social/grupos_ofertas.py send --file "$RUNNER_TEMP/prepared.json" --receipt "$RUNNER_TEMP/receipt.json"
+          send_status=$?
+          set -e
+          python integracoes/social/grupos_ofertas.py finish --file "$RUNNER_TEMP/prepared.json" --receipt "$RUNNER_TEMP/receipt.json"
+          git add integracoes/social/estado-ofertas.json
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(social): registrar resultado da oferta"
+            git push origin HEAD:main
+          fi
+          if [ "$send_status" -ne 0 ]; then
+            echo "Envio incerto; reserva preservada, sem reenvio automático." >> "$GITHUB_STEP_SUMMARY"
+            exit 1
+          fi
+          echo "Mensagem publicada no Telegram e recibo registrado." >> "$GITHUB_STEP_SUMMARY"
+      - name: Exportar texto para compartilhamento MANUAL no WhatsApp
+        if: always() && steps.prepare.outputs.ready == 'true'
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, os, pathlib
+          folder = pathlib.Path(os.environ["RUNNER_TEMP"])
+          obj = json.loads((folder / "prepared.json").read_text(encoding="utf-8"))
+          (folder / "oferta-whatsapp.txt").write_text(obj["whatsapp"] + "\n", encoding="utf-8")
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as file:
+              file.write("\n### Compartilhar nos grupos WhatsApp\n\n")
+              file.write("Abra o artefato oferta-whatsapp e copie a mensagem para um grupo que você administra.\n\n")
+              file.write("A publicação em grupos WhatsApp comuns **não é automática**.\n")
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always() && steps.prepare.outputs.ready == 'true'
+        with:
+          name: oferta-whatsapp
+          path: ${{ runner.temp }}/oferta-whatsapp.txt
+          retention-days: 7
+          if-no-files-found: warn
