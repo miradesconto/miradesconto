@@ -113,8 +113,8 @@ def main():
             continue
         pin_id=existing.get(norm(p["link"]))
         # Esta é uma nova arte editorial aprovada para o mesmo produto.
-        if p.get("newArtwork") is not True or not pin_id:
-            raise RuntimeError("Novo Pin permitido apenas se já existe um anterior confirmado")
+        if p.get("newArtwork") is not True:
+            raise RuntimeError("Este workflow só aceita nova arte editorial autorizada")
         pin_id=None
         if pin_id:
             state["posts"][key]={"status":"existing","pinId":pin_id}
