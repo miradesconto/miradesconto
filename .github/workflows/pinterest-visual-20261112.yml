@@ -1,0 +1,39 @@
+name: Pinterest — 5 Pins no layout MiraDesconto aprovado
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'integracoes/pinterest/lote_visual_20261112.json'
+permissions:
+  contents: write
+concurrency:
+  group: pinterest-manual-publish
+  cancel-in-progress: false
+jobs:
+  publicar:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install pillow==11.3.0
+      - name: Publicar 5 artes aprovadas com marca e textos
+        env:
+          PINTEREST_ACCESS_TOKEN: ${{ secrets.PINTEREST_ACCESS_TOKEN }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          python integracoes/pinterest/publicar_visual_20261112.py
+      - name: Guardar relatório dos Pins
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pinterest-visual-20261112-${{ github.run_id }}
+          path: integracoes/pinterest/estado_visual_20261112.json
+          retention-days: 30
