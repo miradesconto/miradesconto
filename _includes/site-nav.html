@@ -1,8 +1,12 @@
-{% assign nav_paths = '/|/black-friday/|/catalogo/|/radar/|/blog/|/sobre.html' | split: '|' %}
-{% assign nav_labels = 'Ofertas|Black Friday|Catálogo|Radar|Guias e Reviews|Sobre' | split: '|' %}
 {% assign nav_current = include.current | default: page.url %}
+{% assign nav_section = 'ofertas' %}
+{% if nav_current == '/sobre.html' or nav_current == '/transparencia.html' or nav_current == '/privacidade.html' %}
+  {% assign nav_section = 'sobre' %}
+{% elsif nav_current contains '/blog/' %}
+  {% assign nav_section = 'guias' %}
+{% endif %}
 <nav class="mira-global-nav" aria-label="Navegação principal">
-  {% for nav_path in nav_paths %}
-  <a href="{{ nav_path | relative_url }}"{% if nav_path == nav_current %} aria-current="{% if page.url == nav_path %}page{% else %}location{% endif %}"{% endif %}>{{ nav_labels[forloop.index0] }}</a>
-  {% endfor %}
+  <a href="{{ '/' | relative_url }}"{% if nav_section == 'ofertas' %} aria-current="{% if nav_current == '/' %}page{% else %}location{% endif %}"{% endif %}>Ofertas</a>
+  <a href="{{ '/blog/' | relative_url }}"{% if nav_section == 'guias' %} aria-current="{% if nav_current == '/blog/' %}page{% else %}location{% endif %}"{% endif %}>Guias e Reviews</a>
+  <a href="{{ '/sobre.html' | relative_url }}"{% if nav_section == 'sobre' %} aria-current="{% if nav_current == '/sobre.html' %}page{% else %}location{% endif %}"{% endif %}>Sobre</a>
 </nav>

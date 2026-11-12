@@ -19,18 +19,26 @@ permalink: /en/blog/
 <link rel="stylesheet" href="{{ '/blog/blog.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/compra.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/idiomas.css' | relative_url }}">
-<link rel="stylesheet" href="{{ '/en/english.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/en/english.css' | relative_url }}?v=20261112">
+<link rel="stylesheet" href="{{ '/site-polish.css' | relative_url }}?v=20261112">
 <link rel="stylesheet" href="{{ '/analytics.css' | relative_url }}">
 </head>
-<body class="en-page">
+<body class="en-page mira-polished">
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header"><div class="wrap header-inner">
 <a class="logo" href="{{ '/en/' | relative_url }}">Mira<span>Desconto</span></a>
-<nav aria-label="Main navigation"><a href="{{ '/en/' | relative_url }}">Deals</a><a href="{{ '/en/blog/' | relative_url }}" aria-current="page">Buying guides</a><a href="{{ '/blog/' | relative_url }}" lang="pt-BR">All articles (PT)</a></nav>
+{% include site-nav-en.html %}
 <nav class="mira-languages" aria-label="Language"><a href="{{ '/blog/' | relative_url }}" lang="pt-BR">PT</a><a href="{{ '/en/blog/' | relative_url }}" lang="en" aria-current="page">EN</a></nav>
 </div></header>
 <main class="wrap en-main" id="main">
 <section class="en-hero"><p class="en-eyebrow">MiraDesconto Editorial</p><h1>Know what matters before you buy.</h1><p>Short, practical English guides for shopping technology in Brazilian stores. Learn the key specifications to compare before following an offer.</p></section>
+<section class="en-section" aria-labelledby="deep-guides">
+<h2 id="deep-guides">Start with a full buying guide</h2>
+<div class="en-guide-grid">
+<a class="en-guide-card" href="{{ '/en/blog/laptop-buying-guide/' | relative_url }}"><strong>Laptop buying guide</strong><p>Understand processor, RAM, SSD, operating system and graphics trade-offs.</p><span>Read the guide →</span></a>
+<a class="en-guide-card" href="{{ '/en/blog/monitor-buying-guide/' | relative_url }}"><strong>Monitor buying guide</strong><p>Resolution, refresh rate, connections and comfort explained.</p><span>Read the guide →</span></a>
+<a class="en-guide-card" href="{{ '/en/blog/gaming-setup/' | relative_url }}"><strong>Gaming setup guide</strong><p>Build a balanced experience without paying for features you cannot use.</p><span>Read the guide →</span></a>
+</div></section>
 <section class="en-section" aria-labelledby="laptops"><h2 id="laptops">Laptops: what to compare</h2>
 <div class="en-info-grid"><article><h3>Processor and memory</h3><p>Compare the exact CPU generation and SKU, installed RAM and whether it is upgradeable. For multitasking, 16 GB may provide more headroom than 8 GB.</p></article><article><h3>SSD and operating system</h3><p>Confirm the actual SSD capacity, expansion options and included operating system. A Linux model should not be priced as an equivalent Windows configuration.</p></article><article><h3>Gaming requirements</h3><p>Check the specific GPU, power limits, thermal design and independent tests for the same model variant, not just a shared GPU name.</p></article></div>
 <p class="en-related">Further reading: <a href="{{ '/notebooks/' | relative_url }}" lang="pt-BR">Notebook comparisons (Portuguese) →</a></p></section>

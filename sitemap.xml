@@ -20,6 +20,10 @@ layout: null
   </url>
   <url><loc>https://miradesconto.com.br/en/</loc><xhtml:link rel="alternate" hreflang="pt-BR" href="https://miradesconto.com.br/"/><xhtml:link rel="alternate" hreflang="en" href="https://miradesconto.com.br/en/"/></url>
   <url><loc>https://miradesconto.com.br/en/blog/</loc><xhtml:link rel="alternate" hreflang="pt-BR" href="https://miradesconto.com.br/blog/"/><xhtml:link rel="alternate" hreflang="en" href="https://miradesconto.com.br/en/blog/"/></url>
+  <url><loc>https://miradesconto.com.br/en/about/</loc></url>
+  <url><loc>https://miradesconto.com.br/en/blog/laptop-buying-guide/</loc></url>
+  <url><loc>https://miradesconto.com.br/en/blog/monitor-buying-guide/</loc></url>
+  <url><loc>https://miradesconto.com.br/en/blog/gaming-setup/</loc></url>
   <url>
     <loc>https://miradesconto.com.br/catalogo/</loc>
     <changefreq>daily</changefreq>

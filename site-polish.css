@@ -36,3 +36,24 @@ body.search-active .mira-shop-entry,body.focused-catalog .mira-shop-entry{displa
 @media(max-width:760px){.header-container .search{order:4}.mira-global-nav{flex-wrap:wrap;overflow:visible}}
 details.radar-legend{display:block;padding:12px 0 18px}
 @media(max-width:1180px){.radar-hero-inner,.radar-content,details.radar-legend,.radar-method{padding-inline:22px}}
+
+/* Navegação enxuta: Ofertas, Guias, Sobre. Páginas sazonais continuam nos links de contexto. */
+.mira-global-nav{gap:6px}
+.mira-global-nav a{padding-inline:14px}
+.header-container .mira-mode-bar{display:flex;align-items:center;margin:0;padding:0;background:transparent;border:0;flex:none}
+.header-container .mira-mode-switch{padding:3px}
+.header-container .mira-mode-option{padding:8px 10px;min-height:35px}
+.header-container .search{min-width:170px;flex:1 1 185px;max-width:320px}
+.catalog-discovery-actions{display:flex;gap:9px;flex-wrap:wrap}
+.catalog-discovery a.secondary-link{background:#fff;color:#334155;border-color:#cbd5e1}
+.catalog-discovery a.secondary-link:hover{background:#f8fafc}
+.home-editorial-media{display:block;height:152px;margin:-20px -20px 16px;overflow:hidden;background:#f0fdf4;border-radius:12px 12px 0 0}
+.home-editorial-media img,.home-editorial-media svg,.home-editorial-media .media-fallback{display:block;width:100%;height:100%;object-fit:cover}
+.home-editorial-media img{object-position:center}
+.home-editorial-media .media-fallback svg{height:100%}
+.home-editorial-media [hidden]{display:none!important}
+.editorial-card{overflow:hidden}
+.mira-global-nav a:focus-visible{outline:3px solid #16a34a;outline-offset:2px}
+@media(max-width:1100px){.header-container{gap:10px 12px}.header-container .search{max-width:none}}
+@media(max-width:760px){.header-container .mira-mode-bar{order:2;margin-left:auto}.header-container .search{order:4;flex-basis:100%;max-width:none}.header-container .mira-global-nav{order:3;flex-basis:100%;width:100%;justify-content:flex-start}.header-container .mira-languages{order:1}.mira-global-nav a{padding:8px 10px}.catalog-discovery-actions{width:100%;flex-direction:column}.catalog-discovery-actions a{text-align:center}}
+@media(max-width:420px){.header-container .logo{font-size:21px}.header-container .mira-mode-option{font-size:11px;padding:7px}.header-container .mira-languages a{padding:5px 7px}}

@@ -6,54 +6,75 @@ permalink: /en/
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tech Deals in Brazil: Laptops, Phones and Gaming | MiraDesconto</title>
-<meta name="description" content="Browse technology deals in Brazil, compare recently checked BRL prices and read practical buying guides for laptops, phones, monitors and gaming gear.">
+<title>Technology Deals in Brazil & Buying Guides | MiraDesconto</title>
+<meta name="description" content="Find recently observed prices for laptops, monitors and gaming gear in Brazilian stores. Compare listings and explore practical English buying guides.">
 <link rel="canonical" href="https://miradesconto.com.br/en/">
 <link rel="alternate" hreflang="pt-BR" href="https://miradesconto.com.br/">
 <link rel="alternate" hreflang="en" href="https://miradesconto.com.br/en/">
 <link rel="alternate" hreflang="x-default" href="https://miradesconto.com.br/">
-<link rel="icon" href="{{ '/favicon.svg' | relative_url }}" type="image/svg+xml">
-<meta name="theme-color" content="#ffffff"><meta property="og:locale" content="en_US">
-<meta property="og:title" content="Technology Deals in Brazil | MiraDesconto">
-<meta property="og:description" content="Curated tech deals and price checks for Brazilian stores.">
+<link rel="icon" type="image/svg+xml" href="{{ '/favicon.svg' | relative_url }}">
+<meta name="theme-color" content="#f8fafc">
+<meta property="og:title" content="Tech Deals in Brazil | MiraDesconto">
+<meta property="og:description" content="Observed prices, curated technology listings and English buying guides.">
 <meta property="og:type" content="website"><meta property="og:url" content="https://miradesconto.com.br/en/">
-<meta property="og:image" content="https://miradesconto.com.br/blog/social.png"><meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Technology Deals in Brazil","url":"https://miradesconto.com.br/en/","inLanguage":"en"}</script>
+<meta property="og:image" content="https://miradesconto.com.br/blog/social.png">
 <link rel="stylesheet" href="{{ '/blog/blog.css' | relative_url }}">
-<link rel="stylesheet" href="{{ '/compra.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/idiomas.css' | relative_url }}">
-<link rel="stylesheet" href="{{ '/vitrine.css' | relative_url }}">
-<link rel="stylesheet" href="{{ '/en/english.css' | relative_url }}">
-<link rel="stylesheet" href="{{ '/analytics.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/en/english.css' | relative_url }}?v=20261112">
+<link rel="stylesheet" href="{{ '/site-polish.css' | relative_url }}?v=20261112">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","url":"https://miradesconto.com.br/en/","name":"Technology Deals and Buying Guides in Brazil","inLanguage":"en"}</script>
 </head>
-<body class="en-page">
+<body class="en-page mira-polished">
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header"><div class="wrap header-inner">
 <a class="logo" href="{{ '/en/' | relative_url }}">Mira<span>Desconto</span></a>
-<nav aria-label="Main navigation"><a href="{{ '/en/' | relative_url }}" aria-current="page">Deals</a><a href="{{ '/en/blog/' | relative_url }}">Buying guides</a><a href="{{ '/radar/' | relative_url }}" lang="pt-BR">Price radar (PT)</a></nav>
+{% include site-nav-en.html %}
 <nav class="mira-languages" aria-label="Language"><a href="{{ '/' | relative_url }}" lang="pt-BR">PT</a><a href="{{ '/en/' | relative_url }}" lang="en" aria-current="page">EN</a></nav>
 </div></header>
-<main id="main" class="wrap en-main">
-<section class="en-hero">
-<p class="en-eyebrow">Independent tech discovery · Brazilian retailers</p>
-<h1>A smarter way to spot your next tech deal.</h1>
-<p>Explore phones, laptops, gaming gear and accessories. We show a catalog price only if it passed our recent verification check. Confirm the final price, shipping and seller terms on the retailer's website.</p>
-<a class="en-hero-link" href="#top-deals">Explore today's picks ↓</a>
+<main class="wrap en-main" id="main">
+<section class="en-hero"><p class="en-eyebrow">MiraDesconto · Brazil</p>
+<h1>Better tech choices start with better information.</h1>
+<p>Explore laptops, monitors, smartphones and gaming accessories from Brazilian retailers. View the last observed prices and check the final amount directly with the store. Listings may retain their original Portuguese titles.</p>
+<a class="en-hero-link" href="#top-deals">Browse observed deals ↓</a>
 </section>
-<div id="top-deals">{% include vitrine-diaria.html lang="en" %}</div>
-<section class="en-section" aria-labelledby="how-we-choose"><h2 id="how-we-choose">How to judge a real deal</h2>
-<div class="en-info-grid">
-<article><h3>Check the exact model</h3><p>Storage, RAM, screen specification and regional variants can change the value of a product. Compare like with like.</p></article>
-<article><h3>Look beyond the strike-through price</h3><p>A retailer's reference price is not proof of a historical low. Use actual recorded prices where we have enough observations.</p></article>
-<article><h3>Verify the checkout total</h3><p>Taxes, payment method, shipping and coupons can change the amount payable. Product listings here link to Brazilian stores in BRL.</p></article>
+<section class="en-section" id="top-deals" aria-labelledby="deal-heading">
+<div class="en-section-heading"><div><p class="en-eyebrow">Price radar</p><h2 id="deal-heading">Recently tracked opportunities</h2></div>
+<p>These are price observations from our Brazilian catalog, not guaranteed live discounts. Prices are in BRL. Check stock, shipping and payment conditions before purchasing.</p></div>
+{% assign radar = site.data.radar %}
+{% if radar.featured.size > 0 %}
+<div class="en-deals-grid">
+{% for id in radar.featured limit: 6 %}
+{% assign item = radar.byId[id] %}
+{% if item and item.imageUrl and item.affiliateUrl %}
+<article class="en-deal-card" data-radar-id="{{ item.id | escape }}">
+  <a class="en-deal-card-media" href="{{ item.affiliateUrl | escape }}" target="_blank" rel="sponsored nofollow noopener noreferrer" aria-label="View retailer listing for {{ item.name | escape }}"><img src="{{ item.imageUrl | escape }}" alt="{{ item.name | escape }}" width="420" height="280" loading="lazy" decoding="async"><span class="en-image-fallback" hidden>Product image unavailable</span></a>
+  <div class="en-deal-body"><p class="en-deal-meta">{{ item.category | escape }} · Brazilian retailer</p><h3>{{ item.name | escape }}</h3>
+  <p class="en-deal-price">{{ item.currentPriceText | escape }}</p>
+  <p class="en-deal-note">Last recorded {{ item.checkedAt | date: "%b %d, %Y" }} (UTC). May change.</p>
+  <a class="en-hero-link" href="{{ item.affiliateUrl | escape }}" target="_blank" rel="sponsored nofollow noopener noreferrer" data-item-id="{{ item.id | escape }}" data-item-name="{{ item.name | escape }}" data-link-location="en-home" data-destination-type="product">Check at retailer ↗</a></div>
+</article>
+{% endif %}
+{% endfor %}
+</div>
+{% else %}
+<p class="en-empty">No price comparisons qualify at the moment. Visit the <a href="{{ '/radar/' | relative_url }}" lang="pt-BR">price radar in Portuguese</a> for methodology and updates.</p>
+{% endif %}
+</section>
+<section class="en-section" aria-labelledby="guides-heading"><div class="en-section-heading"><div><p class="en-eyebrow">Buying guides</p><h2 id="guides-heading">What to check before purchasing</h2></div></div>
+<div class="en-guide-grid">
+<a class="en-guide-card" href="{{ '/en/blog/laptop-buying-guide/' | relative_url }}"><strong>Choosing a laptop</strong><p>Processor generations, memory, storage, GPU and upgradeability.</p><span>Read guide →</span></a>
+<a class="en-guide-card" href="{{ '/en/blog/monitor-buying-guide/' | relative_url }}"><strong>Choosing a monitor</strong><p>Resolution, refresh rate, connectors, panel type and ergonomics.</p><span>Read guide →</span></a>
+<a class="en-guide-card" href="{{ '/en/blog/gaming-setup/' | relative_url }}"><strong>Planning a gaming setup</strong><p>Match your console or PC with the right display and accessories.</p><span>Read guide →</span></a>
 </div></section>
-<section class="en-section en-next"><h2>Want help choosing?</h2><p>Our English buying guides explain what to check before buying a laptop, phone or monitor.</p><a class="en-hero-link" href="{{ '/en/blog/' | relative_url }}">Read English buying guides →</a></section>
-<p class="en-disclaimer">We may receive a commission on qualifying purchases made via affiliate links, at no additional cost to you. Deals, availability and commissions are not guaranteed. <a href="{{ '/transparencia.html' | relative_url }}" lang="pt-BR">Transparency policy (Portuguese)</a>.</p>
+<section class="en-section" aria-labelledby="how-heading"><h2 id="how-heading">How MiraDesconto works</h2>
+<div class="en-info-grid">
+<article><h3>Observed prices</h3><p>Where possible, we compare observations of the same listing over time. A store's crossed-out price does not prove a historic low.</p></article>
+<article><h3>Independent guidance</h3><p>Our guides explain specifications and trade-offs. We do not claim firsthand tests unless explicitly documented.</p></article>
+<article><h3>Affiliate transparency</h3><p>Eligible purchases may earn us a commission without an additional affiliate fee to you. The retailer manages checkout and delivery.</p></article>
+</div>
+<p><a href="{{ '/en/about/' | relative_url }}">Read about our process →</a></p>
+</section>
+<p class="en-disclaimer">MiraDesconto is not a retailer. Offers target Brazil, use BRL and may be unavailable in other countries. Verify prices, seller reputation, warranty and checkout conditions directly with the store.</p>
 </main>
-<footer class="en-footer"><div class="wrap"><strong>MiraDesconto</strong> · Independent technology buying information · <a href="{{ '/' | relative_url }}" lang="pt-BR">Site em português</a></div></footer>
-<script src="{{ '/qualidade.js' | relative_url }}"></script>
-<script src="{{ '/produtos.js' | relative_url }}"></script>
-<script src="{{ '/vitrine.js' | relative_url }}"></script>
-<script src="{{ '/analytics-config.js' | relative_url }}"></script>
-<script src="{{ '/analytics.js' | relative_url }}"></script>
-</body></html>
+<footer class="en-footer"><div class="wrap"><strong>MiraDesconto</strong> · Brazilian tech price discovery · <a href="{{ '/en/about/' | relative_url }}">About &amp; affiliate disclosure</a> · <a href="{{ '/' | relative_url }}" lang="pt-BR">Português</a></div></footer>
+<script src="/analytics-config.js"></script><script src="/analytics.js"></script><script src="/en/deals-images.js" defer></script></body></html>

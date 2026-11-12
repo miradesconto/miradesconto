@@ -1,6 +1,6 @@
 'use strict';
 // Progressive enhancement: all editorial content and catalog links are static.
-document.querySelectorAll('.image-frame img, .editorial-card-media img, .product-media img, .radar-card-image img, .buy-card > img').forEach(img => {
+document.querySelectorAll('.image-frame img, .editorial-card-media img, .home-editorial-media img, .product-media img, .radar-card-image img, .buy-card > img').forEach(img => {
   let fallback = img.parentElement.querySelector('.image-fallback, .media-fallback');
   // Keep the registered source. A failed image never justifies substituting another product.
   if (!fallback) {

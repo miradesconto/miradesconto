@@ -96,6 +96,7 @@ for key in editorial + ['radar/index.html']:
     assert 'blog.js?v=20261013audit' in text, f'Image recovery missing: {key}'
 # The public sections share one menu and keep their landing page purpose.
 main_routes = ['/', '/black-friday/', '/catalogo/', '/radar/', '/blog/', '/sobre.html']
+main_menu = ['/', '/blog/', '/sobre.html']
 def route_file(route):
     return route.lstrip('/') + ('index.html' if route.endswith('/') else '')
 
@@ -104,10 +105,14 @@ other_pages = ['transparencia.html', 'privacidade.html', 'shopee-gamer/index.htm
 for key in menu_pages + other_pages + editorial[1:]:
     page_text = (root / key).read_text(encoding='utf-8')
     menu = re.search(r'<nav class="mira-global-nav"[^>]*>(.*?)</nav>', page_text, re.S)
-    assert menu and re.findall(r'href="([^"]+)"', menu[1]) == main_routes, key
+    assert menu and re.findall(r'href="([^"]+)"', menu[1]) == main_menu, key
     if key in menu_pages:
         route = main_routes[menu_pages.index(key)]
-        assert f'href="{route}" aria-current="page"' in menu[1], key
+        if route in main_menu:
+            assert f'href="{route}" aria-current="page"' in menu[1], key
+        else:
+            # Catálogo, Radar e campanhas compartilham a seção Ofertas.
+            assert 'href="/" aria-current="location"' in menu[1], key
 
 for key in menu_pages + other_pages + ['en/index.html', 'en/blog/index.html']:
     assert pages[key].h1 == 1, key
@@ -139,26 +144,36 @@ assert 'catalogo/' in pages['index.html'].links, 'Missing visible catalogue entr
 print('OK: catalogue navigation, sitemap, metadata, internal paths')
 
 
-# Smoke test da vitrine Liquid realmente renderizada (PT e EN).
+# Smoke test: 4 PT cards still use the original curated Liquid component.
 from html import unescape
-
 radar_source = json.loads((source / '_data' / 'radar.json').read_text(encoding='utf-8'))
-for lang_page, cta in [('index.html', 'Ver Oferta'), ('en/index.html', 'View Deal')]:
-    page_html = (root / lang_page).read_text(encoding='utf-8')
-    cards = re.findall(r'<article class="vitrine-card[^"]*" data-vitrine-id="([^"]+)"[^>]*>(.*?)</article>', page_html, re.S)
-    assert len(cards) == 4, f'{lang_page}: esperado 4 cards, encontrados {len(cards)}'
-    for product_id, body in cards:
-        product = radar_source['byId'].get(product_id)
-        assert product, (lang_page, product_id, 'item não está no radar')
-        assert cta in body, (lang_page, product_id, 'CTA ausente')
-        assert 'data-item-id="' + product_id + '"' in body, (lang_page, product_id, 'analytics ID divergente')
-        assert len(re.findall(r'class="vitrine-spec"', body)) <= 3, (lang_page, product_id, 'mais de 3 tags')
-        title = re.search(r'<h3[^>]*>(.*?)</h3>', body, re.S)
-        assert title and len(unescape(title.group(1)).strip()) <= 55, (lang_page, product_id, 'título longo')
-        expected_price = product.get('currentPriceText')
-        if expected_price:
-            assert expected_price in unescape(body), (lang_page, product_id, 'preço não renderizado')
-    if lang_page == 'index.html':
-        notebook = next((body for product_id, body in cards if product_id == 'MLB5879140276'), '')
-        assert 'Ryzen 5' in notebook, 'Fallback Liquid não gerou badge Ryzen 5'
-print('OK: 4 cards em PT/EN, CTA, preço inicial Liquid, limite de tags e títulos.')
+pt_html = (root / 'index.html').read_text(encoding='utf-8')
+pt_cards = re.findall(r'<article class="vitrine-card[^"]*" data-vitrine-id="([^"]+)"[^>]*>(.*?)</article>', pt_html, re.S)
+assert len(pt_cards) == 4, f'PT: expected 4 curated cards, found {len(pt_cards)}'
+for product_id, body in pt_cards:
+    product = radar_source['byId'].get(product_id)
+    assert product, (product_id, 'not in radar')
+    assert 'Ver Oferta' in body and 'data-item-id="' + product_id + '"' in body
+    assert len(re.findall(r'class="vitrine-spec"', body)) <= 3
+    title = re.search(r'<h3[^>]*>(.*?)</h3>', body, re.S)
+    assert title and len(unescape(title.group(1)).strip()) <= 55
+    if product.get('currentPriceText'):
+        assert product['currentPriceText'] in unescape(body)
+notebook = next((body for product_id, body in pt_cards if product_id == 'MLB5879140276'), '')
+assert 'Ryzen 5' in notebook, 'Notebook badge changed unexpectedly'
+print('OK: 4 curated PT cards with correct data and CTA')
+
+# EN now uses independent observed-price cards, linking actual radar items
+# and dedicated English buying guides instead of copying a PT-only storefront.
+en_html = (root / 'en/index.html').read_text(encoding='utf-8')
+en_cards = re.findall(r'<article class="en-deal-card" data-radar-id="([^"]+)"[^>]*>(.*?)</article>', en_html, re.S)
+expected = min(6, sum(bool(radar_source['byId'].get(pid, {}).get('affiliateUrl')) and bool(radar_source['byId'].get(pid, {}).get('imageUrl')) for pid in radar_source.get('featured', [])[:6]))
+assert len(en_cards) == expected, f'EN: expected {expected} observed cards, found {len(en_cards)}'
+for product_id, body in en_cards:
+    product = radar_source['byId'][product_id]
+    assert 'Check at retailer' in body and product['affiliateUrl'] in unescape(body)
+    assert product['currentPriceText'] in unescape(body)
+for guide in ('laptop-buying-guide', 'monitor-buying-guide', 'gaming-setup'):
+    assert f'/en/blog/{guide}/' in en_html
+    assert (root / 'en' / 'blog' / guide / 'index.html').exists()
+print('OK: English observed-price cards and three full guides')

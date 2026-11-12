@@ -1,0 +1,9 @@
+{% assign en_section = 'deals' %}
+{% if page.url contains '/en/blog/' %}{% assign en_section = 'guides' %}
+{% elsif page.url contains '/en/about/' %}{% assign en_section = 'about' %}
+{% endif %}
+<nav class="mira-global-nav en-global-nav" aria-label="Main navigation">
+  <a href="{{ '/en/' | relative_url }}"{% if en_section == 'deals' %} aria-current="page"{% endif %}>Deals</a>
+  <a href="{{ '/en/blog/' | relative_url }}"{% if en_section == 'guides' %} aria-current="{% if page.url == '/en/blog/' %}page{% else %}location{% endif %}"{% endif %}>Buying guides</a>
+  <a href="{{ '/en/about/' | relative_url }}"{% if en_section == 'about' %} aria-current="page"{% endif %}>About</a>
+</nav>
