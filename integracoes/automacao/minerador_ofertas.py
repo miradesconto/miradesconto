@@ -39,16 +39,27 @@ TECH = ("notebook", "ssd", "ram", "ryzen", "intel", "core i", "rtx", "placa de v
 NOT_TECH = ("mochila", "bolsa", "pochete", "roupa", "camiseta",
             "calça", "tenis esportivo", "sapato", "mala de viagem")
 QUERIES = ("notebook", "ssd nvme", "monitor gamer", "fone bluetooth", "mouse gamer")
+# Achados acessíveis para tecnologia, organização e decoração de setup.
+SHOPEE_SETUP_MAX_PRICE = 300
 SHOPEE_SETUP_QUERIES = {
-    "mesa gamer": r"^(?:promoção\s+)?(?:mesa|escrivaninha)\b.*\b(?:gamer|computador)\b",
-    "cadeira gamer": r"^cadeira\b.*\b(?:gamer|ergon[oô]mica)\b",
-    "suporte para monitor": r"^(?:suporte|bra[cç]o)\b.*\bmonitor(?:es)?\b",
-    "microfone usb": r"^microfone\b.*\busb\b",
-    "power bank usb c": r"\b(?:power\s*bank|carregador port[aá]til)\b",
-    "controle dualsense": r"^controle\b.*\bdualsense\b",
-    "controle xbox series": r"^controle\b.*\bxbox\b.*\bseries\b",
-    "console playstation 5": r"^(?:console\s+)?(?:sony\s+)?(?:playstation\s*5|ps5)\b",
-    "console xbox series": r"^(?:console\s+)?(?:microsoft\s+)?xbox\s+s[eé]ries\s+[sx]\b",
+    'organizador de cabos': '\\b(?:organizador|presilha|velcro|abra[cç]adeira)\\b.*\\b(?:cabo|cabos|fio|fios)\\b',
+    'suporte headset': '\\b(?:suporte|gancho)\\b.*\\b(?:headset|fone|fones)\\b',
+    'suporte celular mesa': '\\bsuporte\\b.*\\bcelular\\b',
+    'suporte notebook': '\\b(?:suporte|base)\\b.*\\bnotebook\\b',
+    'mousepad gamer': '\\bmouse\\s*pad\\b',
+    'apoio de pulso': '\\b(?:apoio|descanso)\\b.*\\b(?:pulso|punho)\\b',
+    'kit limpeza teclado': '\\b(?:kit|escova|limpeza|limpador)\\b.*\\b(?:teclado|tela|eletr[oô]nicos|notebook)\\b',
+    'hub usb': '\\b(?:hub|adaptador)\\b.*\\busb\\b',
+    'leitor cartao usb': '\\bleitor\\b.*\\b(?:cart[aã]o|cart[oõ]es)\\b',
+    'luminaria monitor': '\\b(?:lumin[aá]ria|luz|barra)\\b.*\\b(?:monitor|mesa|led)\\b',
+    'fita led usb': '\\bfita\\b.*\\bled\\b.*\\busb\\b',
+    'boneco gamer': '\\b(?:boneco|miniatura|figure|est[aá]tua)\\b.*\\b(?:gamer|mario|sonic|pokemon|pok[eé]mon|zelda|minecraft|pikachu)\\b',
+    'prateleira decorativa': '\\bprateleira\\b',
+    'nicho parede': '\\bnicho\\b.*\\b(?:parede|decorativo|decorativa|madeira|mdf)\\b',
+    'painel perfurado organizador': '\\b(?:painel|pegboard)\\b.*\\b(?:perfurado|organizador|modular)\\b',
+    'suporte para monitor': '^(?:suporte|bra[cç]o)\\b.*\\bmonitor(?:es)?\\b',
+    'microfone usb': '^microfone\\b.*\\busb\\b',
+    'mouse gamer sem fio': '\\bmouse\\b.*\\b(?:gamer|sem fio)\\b',
 }
 # Anúncios da pesquisa pública na Shopee. A API reconfirma cada par loja/anúncio.
 SHOPEE_RESEARCHED_ITEMS = {
@@ -178,7 +189,8 @@ def mine_shopee(session, keywords):
                 # offerLink é retornado com tracking pela API; jamais usar productLink no lugar.
                 row = normalize(name, n.get("priceMin"), n.get("imageUrl"), n.get("offerLink"), "Shopee")
                 if row:
-                    rows.append(row)
+                    if row["preco_atual"] <= SHOPEE_SETUP_MAX_PRICE:
+                        rows.append(row)
             LOG.info("Shopee [%s]: %s candidatos", keyword, len(nodes))
         except (requests.RequestException, ValueError) as e:
             LOG.warning("Shopee [%s]: %s", keyword, str(e)[:140] if isinstance(e, ValueError) else type(e).__name__)
@@ -192,9 +204,12 @@ def select_shopee_setup(nodes, keyword, checked_at):
         if not isinstance(node, dict):
             continue
         title = str(node.get("productName") or "").strip()
-        if not matches.search(title) or SHOPEE_NON_PRODUCT.search(title) or "<" in title:
+        blocked = re.search(r"\b(?:conta digital|aluguel|sorteio|caixa vazia|peças de reposição)\b", title, re.I)
+        if not matches.search(title) or blocked or "<" in title:
             continue
         low, high = price(node.get("priceMin")), price(node.get("priceMax"))
+        if high and high > SHOPEE_SETUP_MAX_PRICE:
+            continue
         if keyword.startswith("console ") and (
             not low or low < 1500 or SHOPEE_CONSOLE_ACCESSORY.search(title)
         ):
@@ -273,7 +288,7 @@ def refresh_shopee_setup(session):
                 continue
             seen.add(offer["item_id"])
             batch.append(offer)
-            if len(batch) == 2:
+            if len(batch) == 4:
                 break
         if batch:
             refreshed.add(keyword)

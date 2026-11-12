@@ -155,6 +155,20 @@ class MineradorTest(unittest.TestCase):
                 preserved = m.previous_items(feed)
             self.assertEqual(preserved, [row])
 
+    def test_achados_seleciona_decoracao_e_rejeita_preco_alto(self):
+        from datetime import timezone
+        now = datetime.now(timezone.utc)
+        base = dict(productName='Miniatura Mario decoração gamer', priceMin='29.90',
+                    priceMax='49.90', itemId=123, shopId=456,
+                    offerLink='https://s.shopee.com.br/abc123',
+                    imageUrl='https://cf.shopee.com.br/file/abc123', sales=20, ratingStar=4.8)
+        self.assertEqual(len(m.select_shopee_setup([base], 'boneco gamer', now)), 1)
+        self.assertEqual(m.select_shopee_setup([dict(base, priceMax='301')], 'boneco gamer', now), [])
+        self.assertEqual(m.select_shopee_setup([dict(base, productName='Caixa vazia Mario')], 'boneco gamer', now), [])
+        self.assertEqual(m.select_shopee_setup([dict(base, offerLink='https://shopee.com.br/product/456/123')], 'boneco gamer', now), [])
+        self.assertEqual(m.select_shopee_setup([dict(base, ratingStar=3.9)], 'boneco gamer', now), [])
+        self.assertEqual(len(m.select_shopee_setup([dict(base, productName='Prateleira decorativa MDF')], 'prateleira decorativa', now)), 1)
+
     def test_feed_e_home_estao_conectados(self):
         data = json.loads((ROOT / 'api/produtos.json').read_text(encoding='utf-8'))
         self.assertGreaterEqual(len(data),4)
