@@ -159,8 +159,14 @@ for product_id, body in pt_cards:
     assert title and len(unescape(title.group(1)).strip()) <= 55
     if product.get('currentPriceText'):
         assert product['currentPriceText'] in unescape(body)
-notebook = next((body for product_id, body in pt_cards if product_id == 'MLB5879140276'), '')
-assert 'Ryzen 5' in notebook, 'Notebook badge changed unexpectedly'
+# A seleção é rotativa: não exigir que um ID antigo esteja entre os quatro cards.
+# Conferir a identidade do produto e o CTA real em todos os cards exibidos.
+for product_id, body in pt_cards:
+    product = radar_source['byId'][product_id]
+    item_name = re.search(r'data-item-name="([^"]+)"', body)
+    assert item_name and unescape(item_name.group(1)) == product['name'], (product_id, 'product identity changed')
+    cta = re.search(r'<a class="vitrine-cta"[^>]*href="([^"]+)"', body, re.S)
+    assert cta and re.fullmatch(r'https://meli\.la/[A-Za-z0-9]+', unescape(cta.group(1))), (product_id, 'invalid affiliate CTA')
 print('OK: 4 curated PT cards with correct data and CTA')
 
 # EN now uses independent observed-price cards, linking actual radar items
