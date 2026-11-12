@@ -54,6 +54,24 @@ class IntelligenceTests(unittest.TestCase):
         self.assertFalse(report['candidates'][0]['eligibleForPublication'])
         self.assertNotIn('affiliateUrl', report['candidates'][0])
 
+    def test_official_highlights_accept_mlb_and_mlbu_formats(self):
+        stamp = NOW.isoformat()
+        self.assertEqual(api.ranking_entry(
+            {'id': 'MLBU3013800008', 'type': 'USER_PRODUCT'},
+            'MLB432825', stamp
+        ), {'id': 'MLBU3013800008', 'type': 'USER_PRODUCT', 'position': None,
+            'categoryId': 'MLB432825', 'checkedAt': stamp})
+        self.assertEqual(api.ranking_entry(
+            {'id': 'MLB2345678901', 'type': 'PRODUCT', 'position': 2},
+            'MLB432825', stamp
+        )['position'], 2)
+        self.assertIsNone(api.ranking_entry(
+            {'id': 'MLBU3013800008', 'type': 'ITEM', 'position': 1},
+            'MLB432825', stamp))
+        self.assertIsNone(api.ranking_entry(
+            {'id': 'MLB2345678901', 'type': 'PRODUCT', 'position': 21},
+            'MLB432825', stamp))
+
     def test_denied_items_do_not_disable_trends(self):
         result, signals, report = api.collect(CATALOG, Client(blocked=['/items/']), now=NOW)
         self.assertEqual(result, CATALOG)
