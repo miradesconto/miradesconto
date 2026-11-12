@@ -77,7 +77,10 @@ def valid_link(link: object, shop: str) -> bool:
         url = urlsplit(link)
     except ValueError:
         return False
-    if url.scheme != "https" or url.username or url.password or url.port is not None:
+    try:
+        if url.scheme != "https" or url.username or url.password or url.port is not None:
+            return False
+    except ValueError:
         return False
     domain = (url.hostname or "").lower()
     if shop == "Shopee":
@@ -114,7 +117,8 @@ def normalize(row: object) -> dict | None:
             "link": link, "preco_referencia": round(float(price), 2)}
 
 
-def read_state(path: Path = STATE) -> dict:
+def read_state(path: Path | None = None) -> dict:
+    path = path or STATE
     if not path.exists():
         return {"events": []}
     data = json.loads(path.read_text(encoding="utf-8"))
@@ -259,7 +263,7 @@ def send(prepared: Path, result_file: Path) -> None:
     try:
         msg = http_json("sendMessage", {
             "chat_id": chat, "text": info["telegram"], "parse_mode": "HTML",
-            "disable_web_page_preview": True,
+            "link_preview_options": {"is_disabled": True},
         }, token, send=True)
         mid = msg.get("message_id")
         if not isinstance(mid, int) or mid <= 0:
