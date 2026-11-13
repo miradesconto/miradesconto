@@ -1,6 +1,6 @@
 # Fila de conteúdo — MiraDesconto → Pippit
 
-**Radar:** 2026-11-13T18:19:33+00:00
+**Radar:** 2026-11-13T23:44:18+00:00
 **Fila:** 14 vídeos · 2 por dia · 7 dias
 
 Prioridade: Radar real, histórico observado, variedade de categorias e artigo de destino. Não usa referência da loja como histórico.
@@ -12,8 +12,8 @@ Revise a fila de vídeos do MiraDesconto. Aponte apenas afirmações sem evidên
 ## Dia 1 · Vídeo 1 — Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB…
 
 **Ângulo:** Abaixo da média observada: vale agora?
-**Preço:** R$ 3.779,00 · média R$ 4.460,62 · mínimo R$ 3.695,00
-**Base:** 41 dias acompanhados · 574 observações
+**Preço:** R$ 3.779,00 · média R$ 4.459,44 · mínimo R$ 3.695,00
+**Base:** 41 dias acompanhados · 575 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/notebook-em-promocao-como-escolher/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_872069-MLA96255973058_102025-T.webp
 
@@ -23,13 +23,13 @@ Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB… está 15.3%
 
 **Roteiro**
 
-Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB… está 15.3% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 3.779,00. No Radar, a média foi R$ 4.460,62 e o menor valor observado foi R$ 3.695,00, em 41 dias acompanhados. O preço atual está 15,3% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB… está 15.3% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 3.779,00. No Radar, a média foi R$ 4.459,44 e o menor valor observado foi R$ 3.695,00, em 41 dias acompanhados. O preço atual está 15,3% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB…
 Hoje: R$ 3.779,00
-Média observada: R$ 4.460,62
+Média observada: R$ 4.459,44
 Menor observado: R$ 3.695,00
 Base: 41 dias acompanhados
 
@@ -40,15 +40,50 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_872069-MLA96255973058_102025-T.webp. Hook 0-3s: Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB… está 15.3% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 3.779,00, média R$ 4.460,62 e menor observado R$ 3.695,00. Narração: Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB… está 15.3% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 3.779,00. No Radar, a média foi R$ 4.460,62 e o menor valor observado foi R$ 3.695,00, em 41 dias acompanhados. O preço atual está 15,3% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_872069-MLA96255973058_102025-T.webp. Hook 0-3s: Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB… está 15.3% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 3.779,00, média R$ 4.459,44 e menor observado R$ 3.695,00. Narração: Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB… está 15.3% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 3.779,00. No Radar, a média foi R$ 4.459,44 e o menor valor observado foi R$ 3.695,00, em 41 dias acompanhados. O preço atual está 15,3% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
-## Dia 1 · Vídeo 2 — Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco…
+## Dia 1 · Vídeo 2 — Notebook ASUS Vivobook Go 15 E1504 AMD RYZEN 5 7520U 8GB Ram 256GB…
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 43,40 · média R$ 46,53 · mínimo R$ 43,40
-**Base:** 54 dias acompanhados · 733 observações
+**Preço:** R$ 2.749,00 · média R$ 2.898,92 · mínimo R$ 2.749,00
+**Base:** 39 dias acompanhados · 71 observações
+**Destino:** https://miradesconto.github.io/miradesconto/blog/notebook-para-trabalho-configuracoes/
+**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_830301-MLA99949667885_112025-T.webp
+
+**Hook**
+
+Notebook ASUS Vivobook Go 15 E1504 AMD RYZEN 5 7520U 8GB Ram 256GB… está no menor valor observado neste anúncio. Mas vale comprar agora?
+
+**Roteiro**
+
+Notebook ASUS Vivobook Go 15 E1504 AMD RYZEN 5 7520U 8GB Ram 256GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 2.749,00. No Radar, a média foi R$ 2.898,92 e o menor valor observado foi R$ 2.749,00, em 39 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+
+**Legenda**
+
+PREÇO NA MIRA — Notebook ASUS Vivobook Go 15 E1504 AMD RYZEN 5 7520U 8GB Ram 256GB…
+Hoje: R$ 2.749,00
+Média observada: R$ 2.898,92
+Menor observado: R$ 2.749,00
+Base: 39 dias acompanhados
+
+O preço atual está no menor valor observado neste anúncio durante o período acompanhado.
+
+Veja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/notebook-para-trabalho-configuracoes/
+Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
+
+**Prompt Pippit**
+
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook ASUS Vivobook Go 15 E1504 AMD RYZEN 5 7520U 8GB Ram 256GB…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_830301-MLA99949667885_112025-T.webp. Hook 0-3s: Notebook ASUS Vivobook Go 15 E1504 AMD RYZEN 5 7520U 8GB Ram 256GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 2.749,00, média R$ 2.898,92 e menor observado R$ 2.749,00. Narração: Notebook ASUS Vivobook Go 15 E1504 AMD RYZEN 5 7520U 8GB Ram 256GB… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 2.749,00. No Radar, a média foi R$ 2.898,92 e o menor valor observado foi R$ 2.749,00, em 39 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+
+---
+
+## Dia 2 · Vídeo 1 — Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco…
+
+**Ângulo:** Menor preço observado: vale aproveitar?
+**Preço:** R$ 43,40 · média R$ 46,52 · mínimo R$ 43,40
+**Base:** 54 dias acompanhados · 734 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/kit-para-gravar-videos-com-celular/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_691904-MLA111125430926_052026-AB.webp
 
@@ -58,13 +93,13 @@ Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco… está no 
 
 **Roteiro**
 
-Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 43,40. No Radar, a média foi R$ 46,53 e o menor valor observado foi R$ 43,40, em 54 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 43,40. No Radar, a média foi R$ 46,52 e o menor valor observado foi R$ 43,40, em 54 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco…
 Hoje: R$ 43,40
-Média observada: R$ 46,53
+Média observada: R$ 46,52
 Menor observado: R$ 43,40
 Base: 54 dias acompanhados
 
@@ -75,42 +110,7 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_691904-MLA111125430926_052026-AB.webp. Hook 0-3s: Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 43,40, média R$ 46,53 e menor observado R$ 43,40. Narração: Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 43,40. No Radar, a média foi R$ 46,53 e o menor valor observado foi R$ 43,40, em 54 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
-
----
-
-## Dia 2 · Vídeo 1 — Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB…
-
-**Ângulo:** Abaixo da média observada: vale agora?
-**Preço:** R$ 7.469,00 · média R$ 8.303,40 · mínimo R$ 7.199,00
-**Base:** 41 dias acompanhados · 593 observações
-**Destino:** https://miradesconto.github.io/miradesconto/blog/notebook-para-trabalho-configuracoes/
-**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_727317-MLA101294168698_122025-T.webp
-
-**Hook**
-
-Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB… está 10.1% abaixo da média observada. É um bom momento de compra?
-
-**Roteiro**
-
-Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB… está 10.1% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 7.469,00. No Radar, a média foi R$ 8.303,40 e o menor valor observado foi R$ 7.199,00, em 41 dias acompanhados. O preço atual está 10,0% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
-
-**Legenda**
-
-PREÇO NA MIRA — Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB…
-Hoje: R$ 7.469,00
-Média observada: R$ 8.303,40
-Menor observado: R$ 7.199,00
-Base: 41 dias acompanhados
-
-O preço atual está 10,0% abaixo da média observada.
-
-Veja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/notebook-para-trabalho-configuracoes/
-Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
-
-**Prompt Pippit**
-
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_727317-MLA101294168698_122025-T.webp. Hook 0-3s: Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB… está 10.1% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 7.469,00, média R$ 8.303,40 e menor observado R$ 7.199,00. Narração: Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB… está 10.1% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 7.469,00. No Radar, a média foi R$ 8.303,40 e o menor valor observado foi R$ 7.199,00, em 41 dias acompanhados. O preço atual está 10,0% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_691904-MLA111125430926_052026-AB.webp. Hook 0-3s: Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 43,40, média R$ 46,52 e menor observado R$ 43,40. Narração: Ring Light Iluminador Led Profissional 26cm Tripé 2,10m Luz Branco… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 43,40. No Radar, a média foi R$ 46,52 e o menor valor observado foi R$ 43,40, em 54 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
@@ -118,7 +118,7 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 **Ângulo:** Abaixo da média observada: vale agora?
 **Preço:** R$ 29,34 · média R$ 32,99 · mínimo R$ 27,99
-**Base:** 54 dias acompanhados · 721 observações
+**Base:** 54 dias acompanhados · 722 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/smart-tag-android-rastreador-vale-a-pena/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_688002-MLA115581994404_092026-AB.webp
 
@@ -151,36 +151,36 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 ## Dia 3 · Vídeo 1 — Caneta 3d Impressora Profissional + Refil Filamento + Usb
 
-**Ângulo:** Abaixo da média observada: vale agora?
-**Preço:** R$ 61,90 · média R$ 69,84 · mínimo R$ 56,90
-**Base:** 54 dias acompanhados · 360 observações
+**Ângulo:** Menor preço observado: vale aproveitar?
+**Preço:** R$ 61,90 · média R$ 66,21 · mínimo R$ 61,90
+**Base:** 35 dias acompanhados · 65 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/impressora-termica-caneta-3d-ou-filamento/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_816284-MLB111134362535_052026-AB-caneta-3d-impressora-profissional-refil-filamento-usb.webp
 
 **Hook**
 
-Caneta 3d Impressora Profissional + Refil Filamento + Usb está 11.4% abaixo da média observada. É um bom momento de compra?
+Caneta 3d Impressora Profissional + Refil Filamento + Usb está no menor valor observado neste anúncio. Mas vale comprar agora?
 
 **Roteiro**
 
-Caneta 3d Impressora Profissional + Refil Filamento + Usb está 11.4% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 61,90. No Radar, a média foi R$ 69,84 e o menor valor observado foi R$ 56,90, em 54 dias acompanhados. O preço atual está 11,4% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Caneta 3d Impressora Profissional + Refil Filamento + Usb está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 61,90. No Radar, a média foi R$ 66,21 e o menor valor observado foi R$ 61,90, em 35 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Caneta 3d Impressora Profissional + Refil Filamento + Usb
 Hoje: R$ 61,90
-Média observada: R$ 69,84
-Menor observado: R$ 56,90
-Base: 54 dias acompanhados
+Média observada: R$ 66,21
+Menor observado: R$ 61,90
+Base: 35 dias acompanhados
 
-O preço atual está 11,4% abaixo da média observada.
+O preço atual está no menor valor observado neste anúncio durante o período acompanhado.
 
 Veja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/impressora-termica-caneta-3d-ou-filamento/
 Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Caneta 3d Impressora Profissional + Refil Filamento + Usb. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_816284-MLB111134362535_052026-AB-caneta-3d-impressora-profissional-refil-filamento-usb.webp. Hook 0-3s: Caneta 3d Impressora Profissional + Refil Filamento + Usb está 11.4% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 61,90, média R$ 69,84 e menor observado R$ 56,90. Narração: Caneta 3d Impressora Profissional + Refil Filamento + Usb está 11.4% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 61,90. No Radar, a média foi R$ 69,84 e o menor valor observado foi R$ 56,90, em 54 dias acompanhados. O preço atual está 11,4% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Caneta 3d Impressora Profissional + Refil Filamento + Usb. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_816284-MLB111134362535_052026-AB-caneta-3d-impressora-profissional-refil-filamento-usb.webp. Hook 0-3s: Caneta 3d Impressora Profissional + Refil Filamento + Usb está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 61,90, média R$ 66,21 e menor observado R$ 61,90. Narração: Caneta 3d Impressora Profissional + Refil Filamento + Usb está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 61,90. No Radar, a média foi R$ 66,21 e o menor valor observado foi R$ 61,90, em 35 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
@@ -188,7 +188,7 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 **Ângulo:** Abaixo da média observada: vale agora?
 **Preço:** R$ 43,58 · média R$ 48,29 · mínimo R$ 40,09
-**Base:** 54 dias acompanhados · 739 observações
+**Base:** 54 dias acompanhados · 740 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/mouse-teclado-acessorios-setup/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_922391-MLB111917338465_052026-AB.webp
 
@@ -198,7 +198,7 @@ Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v está 9.
 
 **Roteiro**
 
-Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v está 9.8% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 43,58. No Radar, a média foi R$ 48,29 e o menor valor observado foi R$ 40,09, em 54 dias acompanhados. O preço atual está 9,8% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v está 9.8% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 43,58. No Radar, a média foi R$ 48,29 e o menor valor observado foi R$ 40,09, em 54 dias acompanhados. O preço atual está 9,7% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
@@ -208,14 +208,14 @@ Média observada: R$ 48,29
 Menor observado: R$ 40,09
 Base: 54 dias acompanhados
 
-O preço atual está 9,8% abaixo da média observada.
+O preço atual está 9,7% abaixo da média observada.
 
 Veja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/mouse-teclado-acessorios-setup/
 Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_922391-MLB111917338465_052026-AB.webp. Hook 0-3s: Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v está 9.8% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 43,58, média R$ 48,29 e menor observado R$ 40,09. Narração: Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v está 9.8% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 43,58. No Radar, a média foi R$ 48,29 e o menor valor observado foi R$ 40,09, em 54 dias acompanhados. O preço atual está 9,8% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_922391-MLB111917338465_052026-AB.webp. Hook 0-3s: Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v está 9.8% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 43,58, média R$ 48,29 e menor observado R$ 40,09. Narração: Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v está 9.8% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 43,58. No Radar, a média foi R$ 48,29 e o menor valor observado foi R$ 40,09, em 54 dias acompanhados. O preço atual está 9,7% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
@@ -223,7 +223,7 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 **Ângulo:** Menor preço observado: vale aproveitar?
 **Preço:** R$ 55,00 · média R$ 57,39 · mínimo R$ 55,00
-**Base:** 54 dias acompanhados · 737 observações
+**Base:** 54 dias acompanhados · 738 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/fone-bluetooth-ou-caixa-de-som-como-escolher/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_760715-MLB109157249938_042026-AB-fone-de-ouvido-bluetooth-53-par-sem-fio-duplo-todos-celular.webp
 
@@ -258,7 +258,7 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 **Ângulo:** Abaixo da média observada: vale agora?
 **Preço:** R$ 30,97 · média R$ 31,50 · mínimo R$ 30,87
-**Base:** 54 dias acompanhados · 738 observações
+**Base:** 54 dias acompanhados · 739 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/carregador-usb-c-iphone-como-escolher/
 **Imagem:** https://http2.mlstatic.com/D_NQ_NP_853083-MLB108107437166_032026-O-carregador-magnetico-fam-magsafe-usbc-15w-p-iphone-12-a-16.webp
 
@@ -292,8 +292,8 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 ## Dia 5 · Vídeo 1 — Apple iPhone 15 (128 Gb)
 
 **Ângulo:** Abaixo da média observada: vale agora?
-**Preço:** R$ 3.999,00 · média R$ 4.062,64 · mínimo R$ 3.799,00
-**Base:** 38 dias acompanhados · 439 observações
+**Preço:** R$ 3.999,00 · média R$ 4.062,49 · mínimo R$ 3.799,00
+**Base:** 39 dias acompanhados · 440 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/celulares-da-vitrine-armazenamento-e-perfil/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_680991-MLA95497804976_102025-AB.webp
 
@@ -303,15 +303,15 @@ Apple iPhone 15 (128 Gb) está 1.6% abaixo da média observada. É um bom moment
 
 **Roteiro**
 
-Apple iPhone 15 (128 Gb) está 1.6% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 3.999,00. No Radar, a média foi R$ 4.062,64 e o menor valor observado foi R$ 3.799,00, em 38 dias acompanhados. O preço atual está 1,6% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Apple iPhone 15 (128 Gb) está 1.6% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 3.999,00. No Radar, a média foi R$ 4.062,49 e o menor valor observado foi R$ 3.799,00, em 39 dias acompanhados. O preço atual está 1,6% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Apple iPhone 15 (128 Gb)
 Hoje: R$ 3.999,00
-Média observada: R$ 4.062,64
+Média observada: R$ 4.062,49
 Menor observado: R$ 3.799,00
-Base: 38 dias acompanhados
+Base: 39 dias acompanhados
 
 O preço atual está 1,6% abaixo da média observada.
 
@@ -320,50 +320,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Apple iPhone 15 (128 Gb). Imagem: https://http2.mlstatic.com/D_Q_NP_2X_680991-MLA95497804976_102025-AB.webp. Hook 0-3s: Apple iPhone 15 (128 Gb) está 1.6% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 3.999,00, média R$ 4.062,64 e menor observado R$ 3.799,00. Narração: Apple iPhone 15 (128 Gb) está 1.6% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 3.999,00. No Radar, a média foi R$ 4.062,64 e o menor valor observado foi R$ 3.799,00, em 38 dias acompanhados. O preço atual está 1,6% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Apple iPhone 15 (128 Gb). Imagem: https://http2.mlstatic.com/D_Q_NP_2X_680991-MLA95497804976_102025-AB.webp. Hook 0-3s: Apple iPhone 15 (128 Gb) está 1.6% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 3.999,00, média R$ 4.062,49 e menor observado R$ 3.799,00. Narração: Apple iPhone 15 (128 Gb) está 1.6% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 3.999,00. No Radar, a média foi R$ 4.062,49 e o menor valor observado foi R$ 3.799,00, em 39 dias acompanhados. O preço atual está 1,6% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
-## Dia 5 · Vídeo 2 — Celular Samsung Galaxy S26 5g, 512gb, 12gb Ram, Galaxy Ai, Câmera…
-
-**Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 5.798,00 · média R$ 5.799,43 · mínimo R$ 5.798,00
-**Base:** 38 dias acompanhados · 460 observações
-**Destino:** https://miradesconto.github.io/miradesconto/blog/qual-celular-comprar-2026/
-**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_939755-MLA109096677198_042026-AB.webp
-
-**Hook**
-
-Celular Samsung Galaxy S26 5g, 512gb, 12gb Ram, Galaxy Ai, Câmera… está no menor valor observado neste anúncio. Mas vale comprar agora?
-
-**Roteiro**
-
-Celular Samsung Galaxy S26 5g, 512gb, 12gb Ram, Galaxy Ai, Câmera… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 5.798,00. No Radar, a média foi R$ 5.799,43 e o menor valor observado foi R$ 5.798,00, em 38 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
-
-**Legenda**
-
-PREÇO NA MIRA — Celular Samsung Galaxy S26 5g, 512gb, 12gb Ram, Galaxy Ai, Câmera…
-Hoje: R$ 5.798,00
-Média observada: R$ 5.799,43
-Menor observado: R$ 5.798,00
-Base: 38 dias acompanhados
-
-O preço atual está no menor valor observado neste anúncio durante o período acompanhado.
-
-Veja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/qual-celular-comprar-2026/
-Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
-
-**Prompt Pippit**
-
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Celular Samsung Galaxy S26 5g, 512gb, 12gb Ram, Galaxy Ai, Câmera…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_939755-MLA109096677198_042026-AB.webp. Hook 0-3s: Celular Samsung Galaxy S26 5g, 512gb, 12gb Ram, Galaxy Ai, Câmera… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 5.798,00, média R$ 5.799,43 e menor observado R$ 5.798,00. Narração: Celular Samsung Galaxy S26 5g, 512gb, 12gb Ram, Galaxy Ai, Câmera… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 5.798,00. No Radar, a média foi R$ 5.799,43 e o menor valor observado foi R$ 5.798,00, em 38 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
-
----
-
-## Dia 6 · Vídeo 1 — Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0…
+## Dia 5 · Vídeo 2 — Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0…
 
 **Ângulo:** Abaixo da média observada: vale agora?
-**Preço:** R$ 149,24 · média R$ 155,28 · mínimo R$ 140,00
-**Base:** 38 dias acompanhados · 548 observações
+**Preço:** R$ 149,24 · média R$ 155,27 · mínimo R$ 140,00
+**Base:** 39 dias acompanhados · 549 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/fone-bluetooth-ou-caixa-de-som-como-escolher/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_681719-MLA99467991212_112025-AB.webp
 
@@ -373,15 +338,15 @@ Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0… está 3.9%
 
 **Roteiro**
 
-Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0… está 3.9% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 149,24. No Radar, a média foi R$ 155,28 e o menor valor observado foi R$ 140,00, em 38 dias acompanhados. O preço atual está 3,9% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0… está 3.9% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 149,24. No Radar, a média foi R$ 155,27 e o menor valor observado foi R$ 140,00, em 39 dias acompanhados. O preço atual está 3,9% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0…
 Hoje: R$ 149,24
-Média observada: R$ 155,28
+Média observada: R$ 155,27
 Menor observado: R$ 140,00
-Base: 38 dias acompanhados
+Base: 39 dias acompanhados
 
 O preço atual está 3,9% abaixo da média observada.
 
@@ -390,15 +355,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_681719-MLA99467991212_112025-AB.webp. Hook 0-3s: Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0… está 3.9% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 149,24, média R$ 155,28 e menor observado R$ 140,00. Narração: Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0… está 3.9% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 149,24. No Radar, a média foi R$ 155,28 e o menor valor observado foi R$ 140,00, em 38 dias acompanhados. O preço atual está 3,9% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_681719-MLA99467991212_112025-AB.webp. Hook 0-3s: Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0… está 3.9% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 149,24, média R$ 155,27 e menor observado R$ 140,00. Narração: Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0… está 3.9% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 149,24. No Radar, a média foi R$ 155,27 e o menor valor observado foi R$ 140,00, em 39 dias acompanhados. O preço atual está 3,9% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
-## Dia 6 · Vídeo 2 — Kit 4 Botão Capa Analógico Protetora Compatível Controle Ps5
+## Dia 6 · Vídeo 1 — Kit 4 Botão Capa Analógico Protetora Compatível Controle Ps5
 
 **Ângulo:** Abaixo da média observada: vale agora?
 **Preço:** R$ 19,00 · média R$ 19,66 · mínimo R$ 18,81
-**Base:** 54 dias acompanhados · 739 observações
+**Base:** 54 dias acompanhados · 740 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/acessorios-ps4-ps5-switch-como-escolher/
 **Imagem:** https://http2.mlstatic.com/D_NQ_NP_641341-MLB109378980820_042026-O-kit-4-botao-capa-analogico-protetora-compativel-controle-ps5.webp
 
@@ -429,11 +394,46 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 ---
 
+## Dia 6 · Vídeo 2 — Smartphone Motorola Edge 60 Fusion 5g - 256gb 8gb Ram+8gb Ram…
+
+**Ângulo:** Preço na Mira: vale comprar agora?
+**Preço:** R$ 1.799,00 · média R$ 1.805,66 · mínimo R$ 1.658,00
+**Base:** 39 dias acompanhados · 538 observações
+**Destino:** https://miradesconto.github.io/miradesconto/blog/qual-celular-comprar-2026/
+**Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_631624-MLA99926713059_112025-AB.webp
+
+**Hook**
+
+Antes de comprar Smartphone Motorola Edge 60 Fusion 5g - 256gb 8gb Ram+8gb Ram…, olha o que o histórico mostra.
+
+**Roteiro**
+
+Antes de comprar Smartphone Motorola Edge 60 Fusion 5g - 256gb 8gb Ram+8gb Ram…, olha o que o histórico mostra. Hoje ele aparece por R$ 1.799,00. No Radar, a média foi R$ 1.805,66 e o menor valor observado foi R$ 1.658,00, em 39 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar.
+
+**Legenda**
+
+PREÇO NA MIRA — Smartphone Motorola Edge 60 Fusion 5g - 256gb 8gb Ram+8gb Ram…
+Hoje: R$ 1.799,00
+Média observada: R$ 1.805,66
+Menor observado: R$ 1.658,00
+Base: 39 dias acompanhados
+
+O preço atual está próximo da média observada.
+
+Veja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/qual-celular-comprar-2026/
+Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
+
+**Prompt Pippit**
+
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Smartphone Motorola Edge 60 Fusion 5g - 256gb 8gb Ram+8gb Ram…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_631624-MLA99926713059_112025-AB.webp. Hook 0-3s: Antes de comprar Smartphone Motorola Edge 60 Fusion 5g - 256gb 8gb Ram+8gb Ram…, olha o que o histórico mostra. Mostre preço atual R$ 1.799,00, média R$ 1.805,66 e menor observado R$ 1.658,00. Narração: Antes de comprar Smartphone Motorola Edge 60 Fusion 5g - 256gb 8gb Ram+8gb Ram…, olha o que o histórico mostra. Hoje ele aparece por R$ 1.799,00. No Radar, a média foi R$ 1.805,66 e o menor valor observado foi R$ 1.658,00, em 39 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+
+---
+
 ## Dia 7 · Vídeo 1 — Drone E88 Pro 4k Com Câmera Para Iniciante, + Baterias Drone Preto
 
 **Ângulo:** Abaixo da média observada: vale agora?
-**Preço:** R$ 164,00 · média R$ 167,49 · mínimo R$ 134,48
-**Base:** 38 dias acompanhados · 178 observações
+**Preço:** R$ 164,00 · média R$ 167,47 · mínimo R$ 134,48
+**Base:** 38 dias acompanhados · 179 observações
 **Destino:** https://miradesconto.github.io/miradesconto/?produto=MLB5179923093#ofertas
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_702285-MLA80802875108_112024-AB.webp
 
@@ -443,13 +443,13 @@ Drone E88 Pro 4k Com Câmera Para Iniciante, + Baterias Drone Preto está 2.1% a
 
 **Roteiro**
 
-Drone E88 Pro 4k Com Câmera Para Iniciante, + Baterias Drone Preto está 2.1% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 164,00. No Radar, a média foi R$ 167,49 e o menor valor observado foi R$ 134,48, em 38 dias acompanhados. O preço atual está 2,1% abaixo da média observada. Veja no Radar MiraDesconto antes de comprar.
+Drone E88 Pro 4k Com Câmera Para Iniciante, + Baterias Drone Preto está 2.1% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 164,00. No Radar, a média foi R$ 167,47 e o menor valor observado foi R$ 134,48, em 38 dias acompanhados. O preço atual está 2,1% abaixo da média observada. Veja no Radar MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Drone E88 Pro 4k Com Câmera Para Iniciante, + Baterias Drone Preto
 Hoje: R$ 164,00
-Média observada: R$ 167,49
+Média observada: R$ 167,47
 Menor observado: R$ 134,48
 Base: 38 dias acompanhados
 
@@ -460,15 +460,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Drone E88 Pro 4k Com Câmera Para Iniciante, + Baterias Drone Preto. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_702285-MLA80802875108_112024-AB.webp. Hook 0-3s: Drone E88 Pro 4k Com Câmera Para Iniciante, + Baterias Drone Preto está 2.1% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 164,00, média R$ 167,49 e menor observado R$ 134,48. Narração: Drone E88 Pro 4k Com Câmera Para Iniciante, + Baterias Drone Preto está 2.1% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 164,00. No Radar, a média foi R$ 167,49 e o menor valor observado foi R$ 134,48, em 38 dias acompanhados. O preço atual está 2,1% abaixo da média observada. Veja no Radar MiraDesconto antes de comprar. CTA: Veja no Radar MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Drone E88 Pro 4k Com Câmera Para Iniciante, + Baterias Drone Preto. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_702285-MLA80802875108_112024-AB.webp. Hook 0-3s: Drone E88 Pro 4k Com Câmera Para Iniciante, + Baterias Drone Preto está 2.1% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 164,00, média R$ 167,47 e menor observado R$ 134,48. Narração: Drone E88 Pro 4k Com Câmera Para Iniciante, + Baterias Drone Preto está 2.1% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 164,00. No Radar, a média foi R$ 167,47 e o menor valor observado foi R$ 134,48, em 38 dias acompanhados. O preço atual está 2,1% abaixo da média observada. Veja no Radar MiraDesconto antes de comprar. CTA: Veja no Radar MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
 ## Dia 7 · Vídeo 2 — Smart Tv Lg 43 Ld Wifi Bluetooth Full Hd 43lr6700psa Hdr10 Pro
 
 **Ângulo:** Preço na Mira: vale comprar agora?
-**Preço:** R$ 1.699,00 · média R$ 1.669,99 · mínimo R$ 1.471,00
-**Base:** 30 dias acompanhados · 171 observações
+**Preço:** R$ 1.699,00 · média R$ 1.670,16 · mínimo R$ 1.471,00
+**Base:** 30 dias acompanhados · 172 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/lg-43lr6700psa-vale-a-pena/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_741946-MLA107875422514_032026-V.webp
 
@@ -478,13 +478,13 @@ Antes de comprar Smart Tv Lg 43 Ld Wifi Bluetooth Full Hd 43lr6700psa Hdr10 Pro,
 
 **Roteiro**
 
-Antes de comprar Smart Tv Lg 43 Ld Wifi Bluetooth Full Hd 43lr6700psa Hdr10 Pro, olha o que o histórico mostra. Hoje ele aparece por R$ 1.699,00. No Radar, a média foi R$ 1.669,99 e o menor valor observado foi R$ 1.471,00, em 30 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Antes de comprar Smart Tv Lg 43 Ld Wifi Bluetooth Full Hd 43lr6700psa Hdr10 Pro, olha o que o histórico mostra. Hoje ele aparece por R$ 1.699,00. No Radar, a média foi R$ 1.670,16 e o menor valor observado foi R$ 1.471,00, em 30 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Smart Tv Lg 43 Ld Wifi Bluetooth Full Hd 43lr6700psa Hdr10 Pro
 Hoje: R$ 1.699,00
-Média observada: R$ 1.669,99
+Média observada: R$ 1.670,16
 Menor observado: R$ 1.471,00
 Base: 30 dias acompanhados
 
@@ -495,6 +495,6 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Smart Tv Lg 43 Ld Wifi Bluetooth Full Hd 43lr6700psa Hdr10 Pro. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_741946-MLA107875422514_032026-V.webp. Hook 0-3s: Antes de comprar Smart Tv Lg 43 Ld Wifi Bluetooth Full Hd 43lr6700psa Hdr10 Pro, olha o que o histórico mostra. Mostre preço atual R$ 1.699,00, média R$ 1.669,99 e menor observado R$ 1.471,00. Narração: Antes de comprar Smart Tv Lg 43 Ld Wifi Bluetooth Full Hd 43lr6700psa Hdr10 Pro, olha o que o histórico mostra. Hoje ele aparece por R$ 1.699,00. No Radar, a média foi R$ 1.669,99 e o menor valor observado foi R$ 1.471,00, em 30 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Smart Tv Lg 43 Ld Wifi Bluetooth Full Hd 43lr6700psa Hdr10 Pro. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_741946-MLA107875422514_032026-V.webp. Hook 0-3s: Antes de comprar Smart Tv Lg 43 Ld Wifi Bluetooth Full Hd 43lr6700psa Hdr10 Pro, olha o que o histórico mostra. Mostre preço atual R$ 1.699,00, média R$ 1.670,16 e menor observado R$ 1.471,00. Narração: Antes de comprar Smart Tv Lg 43 Ld Wifi Bluetooth Full Hd 43lr6700psa Hdr10 Pro, olha o que o histórico mostra. Hoje ele aparece por R$ 1.699,00. No Radar, a média foi R$ 1.670,16 e o menor valor observado foi R$ 1.471,00, em 30 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
