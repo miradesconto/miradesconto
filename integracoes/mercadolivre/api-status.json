@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-11-13T10:51:26+00:00",
+  "generatedAt": "2026-11-13T18:19:29+00:00",
   "source": "api.mercadolibre.com",
   "capabilities": {
     "items": {
-      "ok": 0,
-      "failed": 1,
       "status": "bloqueado",
       "http": 403,
       "reason": "permission_or_policy_restriction",
-      "lastAttemptAt": "2026-11-13T10:51:26+00:00"
+      "lastAttemptAt": "2026-11-13T10:51:26+00:00",
+      "nextRetryAt": "2026-11-14T10:51:26+00:00",
+      "cached": true
     },
     "trends": {
       "ok": 1,
@@ -22,5 +22,5 @@
   "status": "atenção",
   "trendsFound": 6,
   "catalogTrendMatches": 8,
-  "calls": 3
+  "calls": 2
 }
