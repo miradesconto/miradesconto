@@ -1,0 +1,33 @@
+name: Pinterest — 5 artes setup 13-11-2026
+on:
+  push:
+    branches: [main]
+    paths: ['integracoes/pinterest/lote_setup_20261113.json']
+permissions:
+  contents: write
+concurrency:
+  group: pinterest-manual-publish
+  cancel-in-progress: false
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Publicar e verificar cinco artes aprovadas
+        env:
+          PINTEREST_ACCESS_TOKEN: ${{ secrets.PINTEREST_ACCESS_TOKEN }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          python integracoes/pinterest/publicar_setup_20261113.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pinterest-setup-20261113
+          path: integracoes/pinterest/estado_setup_20261113.json
