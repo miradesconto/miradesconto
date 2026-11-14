@@ -44,6 +44,7 @@ let selectedCategory = 'Seleção da hora';
 let visibleCount = MAX_HOME_OFFERS;
 const CATALOG_PAGE_SIZE = 12;
 let categoryBeforeSearch = null;
+let lastCardsSignature = null;
 const $ = id => document.getElementById(id);
 function safeUrl(value) {
     try { const u = new URL(value); return ['https:', 'http:'].includes(u.protocol) ? u.href : null; }
@@ -232,7 +233,12 @@ function renderProducts(keepCount = false) {
     if (!keepCount) visibleCount = selectedCategory === 'Seleção da hora' ? MAX_HOME_OFFERS : CATALOG_PAGE_SIZE;
     const filtered = filteredProducts();
     const chosen = filtered.slice(0,visibleCount);
-    $('productList').replaceChildren(...chosen.map(makeCard));
+    // Preserva cards, menus abertos e foco quando nenhuma informação visual mudou.
+    const cardsSignature = JSON.stringify(chosen.map(p => [p.id, p.name, p.imageUrl, p.affiliateUrl, currentPrice(p), productDiscount(p), p.oldPrice, p.available]));
+    if (cardsSignature !== lastCardsSignature) {
+        $('productList').replaceChildren(...chosen.map(makeCard));
+        lastCardsSignature = cardsSignature;
+    }
     if (selectedCategory === 'Seleção da hora') {
         window.MiraHomepageSelection = [...(window.MiraShowcaseIds || []), ...chosen.map(p=>p.id)];
     }
