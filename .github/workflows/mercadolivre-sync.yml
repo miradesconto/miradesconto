@@ -74,7 +74,8 @@ jobs:
       - name: Confirmar preços nos cartões dos links de afiliado
         run: python integracoes/mercadolivre/public_prices.py
       - name: Verificar cobertura de preços recentes
-        run: python integracoes/automacao/price_freshness.py --require-fresh
+        run: python integracoes/automacao/price_freshness.py
+        # Alerta de cobertura, sem interromper histórico, radar e demais publicações.
       - name: Guardar observações verificadas de preço
         run: |
           if [ -d historico ]; then
