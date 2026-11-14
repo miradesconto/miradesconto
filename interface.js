@@ -247,8 +247,9 @@ function renderProducts(keepCount = false) {
         $('searchMessage').textContent = `Busca em todo o catálogo por “${$('searchInput').value.trim()}”: ${filtered.length} ${filtered.length===1?'resultado':'resultados'}`;
     }
     $('emptyState').style.display = chosen.length ? 'none':'block';
-    $('emptyState').querySelector('h3').textContent = 'Nenhum produto disponível nesta seleção.';
-    $('emptyState').querySelector('p').textContent = 'A coleta automática pode estar atrasada. Confira novamente depois da próxima atualização.';
+    const searching = Boolean($('searchInput').value.trim());
+    $('emptyState').querySelector('h3').textContent = searching ? 'Nenhum resultado para sua busca.' : 'Nenhum produto disponível nesta seleção.';
+    $('emptyState').querySelector('p').textContent = searching ? 'Tente um termo mais curto, outra marca ou uma categoria diferente.' : 'A coleta automática pode estar atrasada. Confira novamente depois da próxima atualização.';
     const remaining = Math.max(0, filtered.length - chosen.length);
     $('loadMore').hidden = remaining === 0 || selectedCategory === 'Seleção da hora';
     $('loadMore').textContent = remaining ? `Mostrar mais ofertas (${remaining} restantes)` : '';
