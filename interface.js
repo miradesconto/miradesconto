@@ -234,7 +234,7 @@ function renderProducts(keepCount = false) {
     const filtered = filteredProducts();
     const chosen = filtered.slice(0,visibleCount);
     // Preserva cards, menus abertos e foco quando nenhuma informação visual mudou.
-    const cardsSignature = JSON.stringify(chosen.map(p => [p.id, p.name, p.imageUrl, p.affiliateUrl, currentPrice(p), productDiscount(p), p.oldPrice, p.available]));
+    const cardsSignature = JSON.stringify(chosen.map(p => [p.id, p.name, p.imageUrl, p.affiliateUrl, currentPrice(p), productDiscount(p), p.oldPrice, p.available, p.category, p.store, p.platform === 'shopee' ? p.checkedAt : p.priceCheck?.checkedAt]));
     if (cardsSignature !== lastCardsSignature) {
         $('productList').replaceChildren(...chosen.map(makeCard));
         lastCardsSignature = cardsSignature;
@@ -365,5 +365,5 @@ async function refreshCatalog() {
     finally { catalogRefreshing = false; }
 }
 refreshCatalog();
-setInterval(refreshCatalog, 60000);
+setInterval(refreshCatalog, 5 * 60000);
 document.addEventListener('visibilitychange', () => { if (!document.hidden) refreshCatalog(); });
