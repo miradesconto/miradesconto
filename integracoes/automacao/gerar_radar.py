@@ -9,6 +9,8 @@ from __future__ import annotations
 
 import json
 import math
+import re
+from collections import Counter
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -31,7 +33,8 @@ TECH_CATEGORIES = {
     "Notebooks",
 }
 
-MAX_PRICE_AGE_HOURS = 36
+MAX_PRICE_AGE_HOURS = 2
+INVALID_AFFILIATE_LINKS = {"https://meli.la/1NguveN", "https://meli.la/1pyBZm8"}
 MIN_OBSERVATIONS = 6
 MIN_SPAN_HOURS = 24
 MIN_ACTIONABLE_SPAN_DAYS = 7
@@ -178,6 +181,8 @@ def main() -> int:
         raise RuntimeError("dados/catalogo.json sem products válido")
 
     anchor = anchor_time(products)
+    run_at = datetime.now(timezone.utc)
+    affiliate_counts = Counter(p.get("affiliateUrl") for p in products if isinstance(p, dict) and p.get("affiliateUrl"))
     by_id: dict[str, dict] = {}
     ranked: list[tuple[float, dict]] = []
 
@@ -187,7 +192,10 @@ def main() -> int:
             product.get("category") not in TECH_CATEGORIES
             or product.get("available") is False
             or not item_id.startswith("MLB")
-            or not str(product.get("affiliateUrl") or "").startswith("https://meli.la/")
+            or not re.fullmatch(r"https://meli\.la/[A-Za-z0-9]+", str(product.get("affiliateUrl") or ""))
+            or product.get("affiliateUrl") in INVALID_AFFILIATE_LINKS
+            or product.get("affiliateLinkType") == "list"
+            or affiliate_counts.get(product.get("affiliateUrl"), 0) > 1
             or not str(product.get("imageUrl") or "").startswith(("https://", "http://"))
         ):
             continue
@@ -200,7 +208,12 @@ def main() -> int:
             or checked_at is None
             or evidence.get("status") != "verified"
             or evidence.get("price") != product.get("price")
-            or anchor - checked_at > timedelta(hours=MAX_PRICE_AGE_HOURS)
+            or evidence.get("oldPrice") != product.get("oldPrice")
+            or evidence.get("currency") != "BRL"
+            or evidence.get("method") not in ("poly-card-v1", "ml-sale-price-v1")
+            or evidence.get("itemId") != (product.get("itemId") if evidence.get("method") == "ml-sale-price-v1" else product.get("id"))
+            or checked_at > run_at
+            or run_at - checked_at > timedelta(hours=MAX_PRICE_AGE_HOURS)
         ):
             continue
 

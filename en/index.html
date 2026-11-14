@@ -45,7 +45,7 @@ permalink: /en/
 <div class="en-deals-grid">
 {% for id in radar.featured limit: 6 %}
 {% assign item = radar.byId[id] %}
-{% if item and item.imageUrl and item.affiliateUrl %}
+{% if item and item.imageUrl and item.affiliateUrl and item.affiliateUrl != 'https://meli.la/1NguveN' and item.affiliateUrl != 'https://meli.la/1pyBZm8' %}
 <article class="en-deal-card" data-radar-id="{{ item.id | escape }}">
   <a class="en-deal-card-media" href="{{ item.affiliateUrl | escape }}" target="_blank" rel="sponsored nofollow noopener noreferrer" aria-label="View retailer listing for {{ item.name | escape }}"><img src="{{ item.imageUrl | escape }}" alt="{{ item.name | escape }}" width="420" height="280" loading="lazy" decoding="async"><span class="en-image-fallback" hidden>Product image unavailable</span></a>
   <div class="en-deal-body"><p class="en-deal-meta">{{ item.category | escape }} · Brazilian retailer</p><h3>{{ item.name | escape }}</h3>

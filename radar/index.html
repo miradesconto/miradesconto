@@ -52,7 +52,8 @@ layout: null
 <div class="radar-grid">
 {% for id in radar.featured %}
 {% assign item = radar.byId[id] %}
-{% if item %}
+{% assign link_ok = false %}{% if item.affiliateUrl contains 'https://meli.la/' and item.affiliateUrl != 'https://meli.la/1NguveN' and item.affiliateUrl != 'https://meli.la/1pyBZm8' %}{% assign link_ok = true %}{% endif %}
+{% if item and link_ok %}
 <article class="radar-card" id="produto-{{ item.id | escape }}" data-checked-at="{{ item.checkedAt | escape }}">
 <div class="radar-card-image"><img src="{{ item.imageUrl | escape }}" alt="{{ item.name | escape }}" width="420" height="300" loading="lazy"></div>
 <div class="radar-card-body">
