@@ -181,6 +181,7 @@ def main() -> int:
         raise RuntimeError("dados/catalogo.json sem products válido")
 
     anchor = anchor_time(products)
+    run_at = datetime.now(timezone.utc)
     affiliate_counts = Counter(p.get("affiliateUrl") for p in products if isinstance(p, dict) and p.get("affiliateUrl"))
     by_id: dict[str, dict] = {}
     ranked: list[tuple[float, dict]] = []
@@ -211,8 +212,8 @@ def main() -> int:
             or evidence.get("currency") != "BRL"
             or evidence.get("method") not in ("poly-card-v1", "ml-sale-price-v1")
             or evidence.get("itemId") != (product.get("itemId") if evidence.get("method") == "ml-sale-price-v1" else product.get("id"))
-            or checked_at > anchor
-            or anchor - checked_at > timedelta(hours=MAX_PRICE_AGE_HOURS)
+            or checked_at > run_at
+            or run_at - checked_at > timedelta(hours=MAX_PRICE_AGE_HOURS)
         ):
             continue
 
