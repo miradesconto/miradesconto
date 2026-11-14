@@ -42,6 +42,7 @@ const shopeePriceFresh = p => {
 };
 let selectedCategory = 'Seleção da hora';
 let visibleCount = MAX_HOME_OFFERS;
+const CATALOG_PAGE_SIZE = 12;
 let categoryBeforeSearch = null;
 const $ = id => document.getElementById(id);
 function safeUrl(value) {
@@ -74,6 +75,7 @@ function selectCategory(button) {
     $('categorySelect').value = selectedCategory;
     $('sectionTitle').textContent = selectedCategory === 'Seleção da hora' ? 'Ofertas da hora' : selectedCategory === 'Destaques' ? 'Tecnologia em destaque' : selectedCategory === 'Todos' ? 'Todas as ofertas tech' : selectedCategory;
     $('selectionNotice').hidden = selectedCategory !== 'Seleção da hora';
+    visibleCount = selectedCategory === 'Seleção da hora' ? MAX_HOME_OFFERS : CATALOG_PAGE_SIZE;
     renderProducts();
 }
 function resetFilters() {
@@ -227,7 +229,7 @@ function filteredProducts() {
     return pricedFirst(filtered);
 }
 function renderProducts(keepCount = false) {
-    visibleCount = MAX_HOME_OFFERS;
+    if (!keepCount) visibleCount = selectedCategory === 'Seleção da hora' ? MAX_HOME_OFFERS : CATALOG_PAGE_SIZE;
     const filtered = filteredProducts();
     const chosen = filtered.slice(0,visibleCount);
     $('productList').replaceChildren(...chosen.map(makeCard));
@@ -242,13 +244,14 @@ function renderProducts(keepCount = false) {
     $('resultCount').textContent = `${pricedCount} ${pricedCount===1?'oferta com preço conferido':'ofertas com preços conferidos'}`
         + (pendingCount ? ` · ${pendingCount} ${pendingCount===1?'produto para consultar na loja':'produtos para consultar na loja'} ao final` : '');
     if (document.body.classList.contains('search-active')) {
-        $('searchMessage').textContent = `Busca em todo o catálogo por “${$('searchInput').value.trim()}”`;
+        $('searchMessage').textContent = `Busca em todo o catálogo por “${$('searchInput').value.trim()}”: ${filtered.length} ${filtered.length===1?'resultado':'resultados'}`;
     }
     $('emptyState').style.display = chosen.length ? 'none':'block';
     $('emptyState').querySelector('h3').textContent = 'Nenhum produto disponível nesta seleção.';
     $('emptyState').querySelector('p').textContent = 'A coleta automática pode estar atrasada. Confira novamente depois da próxima atualização.';
-    $('loadMore').hidden = true;
-    $('loadMore').textContent = '';
+    const remaining = Math.max(0, filtered.length - chosen.length);
+    $('loadMore').hidden = remaining === 0 || selectedCategory === 'Seleção da hora';
+    $('loadMore').textContent = remaining ? `Mostrar mais ofertas (${remaining} restantes)` : '';
 }
 async function shareProduct(name,link) {
     const text = `${name} — encontrei no MiraDesconto`;
@@ -286,7 +289,12 @@ function updateSearch() {
         if (categoryBeforeSearch === null) categoryBeforeSearch = selectedCategory;
         document.body.classList.add('search-active');
         $('searchContext').hidden = false;
-        selectCategory([...categoryContainer.querySelectorAll('.category')].find(b=>b.dataset.category==='Todos'));
+        if (selectedCategory !== 'Todos') {
+            selectCategory([...categoryContainer.querySelectorAll('.category')].find(b=>b.dataset.category==='Todos'));
+        } else {
+            visibleCount = CATALOG_PAGE_SIZE;
+            renderProducts(true);
+        }
         $('sectionTitle').textContent = `Resultados para “${query}”`;
         if (!wasSearching) requestAnimationFrame(()=>$('ofertas').scrollIntoView({behavior:'smooth',block:'start'}));
     } else {
@@ -300,7 +308,11 @@ function updateSearch() {
 }
 $('searchInput').addEventListener('input',updateSearch);
 $('clearSearch').addEventListener('click',()=>{$('searchInput').value='';updateSearch();});
-$('sortSelect').addEventListener('change',renderProducts);
+$('sortSelect').addEventListener('change',()=>renderProducts());
+$('loadMore').addEventListener('click',()=>{
+    visibleCount += CATALOG_PAGE_SIZE;
+    renderProducts(true);
+});
 document.querySelector('.logo').addEventListener('click',resetFilters);
 // No infinite browsing on the homepage: a small, high-confidence selection.
 $('selectionNotice').textContent = 'Achados Shopee até R$ 300: menores preços de entrada da seleção, com variedade de categorias. Compare quantidades e variantes; frete não incluído. Também mostramos ofertas do Mercado Livre.';
