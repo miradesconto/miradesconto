@@ -10,6 +10,7 @@ from __future__ import annotations
 import json
 import math
 import re
+from collections import Counter
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -180,6 +181,7 @@ def main() -> int:
         raise RuntimeError("dados/catalogo.json sem products válido")
 
     anchor = anchor_time(products)
+    affiliate_counts = Counter(p.get("affiliateUrl") for p in products if isinstance(p, dict) and p.get("affiliateUrl"))
     by_id: dict[str, dict] = {}
     ranked: list[tuple[float, dict]] = []
 
@@ -192,6 +194,7 @@ def main() -> int:
             or not re.fullmatch(r"https://meli\\.la/[A-Za-z0-9]+", str(product.get("affiliateUrl") or ""))
             or product.get("affiliateUrl") in INVALID_AFFILIATE_LINKS
             or product.get("affiliateLinkType") == "list"
+            or affiliate_counts.get(product.get("affiliateUrl"), 0) > 1
             or not str(product.get("imageUrl") or "").startswith(("https://", "http://"))
         ):
             continue
