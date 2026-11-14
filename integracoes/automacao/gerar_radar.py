@@ -191,7 +191,7 @@ def main() -> int:
             product.get("category") not in TECH_CATEGORIES
             or product.get("available") is False
             or not item_id.startswith("MLB")
-            or not re.fullmatch(r"https://meli\\.la/[A-Za-z0-9]+", str(product.get("affiliateUrl") or ""))
+            or not re.fullmatch(r"https://meli\.la/[A-Za-z0-9]+", str(product.get("affiliateUrl") or ""))
             or product.get("affiliateUrl") in INVALID_AFFILIATE_LINKS
             or product.get("affiliateLinkType") == "list"
             or affiliate_counts.get(product.get("affiliateUrl"), 0) > 1
