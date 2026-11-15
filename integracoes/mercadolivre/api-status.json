@@ -1,18 +1,19 @@
 {
-  "generatedAt": "2026-11-15T09:55:29+00:00",
+  "generatedAt": "2026-11-15T15:37:22+00:00",
   "source": "api.mercadolibre.com",
   "capabilities": {
     "items": {
+      "ok": 0,
+      "failed": 1,
       "status": "bloqueado",
       "http": 403,
       "reason": "permission_or_policy_restriction",
-      "lastAttemptAt": "2026-11-14T10:59:53+00:00",
-      "nextRetryAt": "2026-11-15T10:59:53+00:00",
-      "cached": true
+      "lastAttemptAt": "2026-11-15T15:37:22+00:00"
     },
     "trends": {
-      "status": "cache",
-      "checkedAt": "2026-11-15T07:57:02+00:00"
+      "ok": 1,
+      "failed": 0,
+      "status": "ok"
     }
   },
   "pricesConfirmed": 0,
@@ -21,5 +22,5 @@
   "status": "atenção",
   "trendsFound": 6,
   "catalogTrendMatches": 8,
-  "calls": 0
+  "calls": 3
 }
