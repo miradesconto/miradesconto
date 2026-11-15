@@ -1,6 +1,6 @@
 # Fila de conteúdo — MiraDesconto → Pippit
 
-**Radar:** 2026-11-15T20:35:11+00:00
+**Radar:** 2026-11-15T21:45:29+00:00
 **Fila:** 14 vídeos · 2 por dia · 7 dias
 
 Prioridade: Radar real, histórico observado, variedade de categorias e artigo de destino. Não usa referência da loja como histórico.
@@ -12,8 +12,8 @@ Revise a fila de vídeos do MiraDesconto. Aponte apenas afirmações sem evidên
 ## Dia 1 · Vídeo 1 — Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor…
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 27,99 · média R$ 32,89 · mínimo R$ 27,99
-**Base:** 56 dias acompanhados · 738 observações
+**Preço:** R$ 27,99 · média R$ 32,88 · mínimo R$ 27,99
+**Base:** 56 dias acompanhados · 739 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/smart-tag-android-rastreador-vale-a-pena/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_688002-MLA115581994404_092026-AB.webp
 
@@ -23,13 +23,13 @@ Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor… está no m
 
 **Roteiro**
 
-Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 27,99. No Radar, a média foi R$ 32,89 e o menor valor observado foi R$ 27,99, em 56 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 27,99. No Radar, a média foi R$ 32,88 e o menor valor observado foi R$ 27,99, em 56 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor…
 Hoje: R$ 27,99
-Média observada: R$ 32,89
+Média observada: R$ 32,88
 Menor observado: R$ 27,99
 Base: 56 dias acompanhados
 
@@ -40,7 +40,7 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_688002-MLA115581994404_092026-AB.webp. Hook 0-3s: Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 27,99, média R$ 32,89 e menor observado R$ 27,99. Narração: Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 27,99. No Radar, a média foi R$ 32,89 e o menor valor observado foi R$ 27,99, em 56 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_688002-MLA115581994404_092026-AB.webp. Hook 0-3s: Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor… está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 27,99, média R$ 32,88 e menor observado R$ 27,99. Narração: Mini Localizador Rastreador Smart Tag Gps Com Cordão Chaveiro Cor… está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 27,99. No Radar, a média foi R$ 32,88 e o menor valor observado foi R$ 27,99, em 56 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
@@ -82,8 +82,8 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 ## Dia 2 · Vídeo 1 — Câmera Inteligente Full HD Im3 C Mibo Cam WIFI Branca Intelbras
 
 **Ângulo:** Menor preço observado: vale aproveitar?
-**Preço:** R$ 157,54 · média R$ 171,38 · mínimo R$ 157,54
-**Base:** 56 dias acompanhados · 416 observações
+**Preço:** R$ 157,54 · média R$ 171,35 · mínimo R$ 157,54
+**Base:** 56 dias acompanhados · 417 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/intelbras-im3-c-vale-a-pena/
 **Imagem:** https://http2.mlstatic.com/D_NQ_NP_600720-MLA99856285817_112025-O.webp
 
@@ -93,13 +93,13 @@ Câmera Inteligente Full HD Im3 C Mibo Cam WIFI Branca Intelbras está no menor 
 
 **Roteiro**
 
-Câmera Inteligente Full HD Im3 C Mibo Cam WIFI Branca Intelbras está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 157,54. No Radar, a média foi R$ 171,38 e o menor valor observado foi R$ 157,54, em 56 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
+Câmera Inteligente Full HD Im3 C Mibo Cam WIFI Branca Intelbras está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 157,54. No Radar, a média foi R$ 171,35 e o menor valor observado foi R$ 157,54, em 56 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Câmera Inteligente Full HD Im3 C Mibo Cam WIFI Branca Intelbras
 Hoje: R$ 157,54
-Média observada: R$ 171,38
+Média observada: R$ 171,35
 Menor observado: R$ 157,54
 Base: 56 dias acompanhados
 
@@ -110,15 +110,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Câmera Inteligente Full HD Im3 C Mibo Cam WIFI Branca Intelbras. Imagem: https://http2.mlstatic.com/D_NQ_NP_600720-MLA99856285817_112025-O.webp. Hook 0-3s: Câmera Inteligente Full HD Im3 C Mibo Cam WIFI Branca Intelbras está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 157,54, média R$ 171,38 e menor observado R$ 157,54. Narração: Câmera Inteligente Full HD Im3 C Mibo Cam WIFI Branca Intelbras está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 157,54. No Radar, a média foi R$ 171,38 e o menor valor observado foi R$ 157,54, em 56 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Câmera Inteligente Full HD Im3 C Mibo Cam WIFI Branca Intelbras. Imagem: https://http2.mlstatic.com/D_NQ_NP_600720-MLA99856285817_112025-O.webp. Hook 0-3s: Câmera Inteligente Full HD Im3 C Mibo Cam WIFI Branca Intelbras está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 157,54, média R$ 171,35 e menor observado R$ 157,54. Narração: Câmera Inteligente Full HD Im3 C Mibo Cam WIFI Branca Intelbras está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 157,54. No Radar, a média foi R$ 171,35 e o menor valor observado foi R$ 157,54, em 56 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
 ## Dia 2 · Vídeo 2 — Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB…
 
 **Ângulo:** Abaixo da média observada: vale agora?
-**Preço:** R$ 7.469,00 · média R$ 8.280,15 · mínimo R$ 7.199,00
-**Base:** 43 dias acompanhados · 610 observações
+**Preço:** R$ 7.469,00 · média R$ 8.278,82 · mínimo R$ 7.199,00
+**Base:** 43 dias acompanhados · 611 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/notebook-para-trabalho-configuracoes/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_727317-MLA101294168698_122025-T.webp
 
@@ -128,13 +128,13 @@ Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB… está 9.8
 
 **Roteiro**
 
-Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB… está 9.8% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 7.469,00. No Radar, a média foi R$ 8.280,15 e o menor valor observado foi R$ 7.199,00, em 43 dias acompanhados. O preço atual está 9,8% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB… está 9.8% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 7.469,00. No Radar, a média foi R$ 8.278,82 e o menor valor observado foi R$ 7.199,00, em 43 dias acompanhados. O preço atual está 9,8% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB…
 Hoje: R$ 7.469,00
-Média observada: R$ 8.280,15
+Média observada: R$ 8.278,82
 Menor observado: R$ 7.199,00
 Base: 43 dias acompanhados
 
@@ -145,15 +145,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_727317-MLA101294168698_122025-T.webp. Hook 0-3s: Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB… está 9.8% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 7.469,00, média R$ 8.280,15 e menor observado R$ 7.199,00. Narração: Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB… está 9.8% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 7.469,00. No Radar, a média foi R$ 8.280,15 e o menor valor observado foi R$ 7.199,00, em 43 dias acompanhados. O preço atual está 9,8% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_727317-MLA101294168698_122025-T.webp. Hook 0-3s: Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB… está 9.8% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 7.469,00, média R$ 8.278,82 e menor observado R$ 7.199,00. Narração: Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB… está 9.8% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 7.469,00. No Radar, a média foi R$ 8.278,82 e o menor valor observado foi R$ 7.199,00, em 43 dias acompanhados. O preço atual está 9,8% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
 ## Dia 3 · Vídeo 1 — Caneta 3d Impressora Profissional + Refil Filamento + Usb
 
 **Ângulo:** Abaixo da média observada: vale agora?
-**Preço:** R$ 61,90 · média R$ 69,69 · mínimo R$ 56,90
-**Base:** 56 dias acompanhados · 367 observações
+**Preço:** R$ 61,90 · média R$ 69,67 · mínimo R$ 56,90
+**Base:** 56 dias acompanhados · 368 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/impressora-termica-caneta-3d-ou-filamento/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_816284-MLB111134362535_052026-AB-caneta-3d-impressora-profissional-refil-filamento-usb.webp
 
@@ -163,13 +163,13 @@ Caneta 3d Impressora Profissional + Refil Filamento + Usb está 11.2% abaixo da 
 
 **Roteiro**
 
-Caneta 3d Impressora Profissional + Refil Filamento + Usb está 11.2% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 61,90. No Radar, a média foi R$ 69,69 e o menor valor observado foi R$ 56,90, em 56 dias acompanhados. O preço atual está 11,2% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Caneta 3d Impressora Profissional + Refil Filamento + Usb está 11.2% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 61,90. No Radar, a média foi R$ 69,67 e o menor valor observado foi R$ 56,90, em 56 dias acompanhados. O preço atual está 11,2% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Caneta 3d Impressora Profissional + Refil Filamento + Usb
 Hoje: R$ 61,90
-Média observada: R$ 69,69
+Média observada: R$ 69,67
 Menor observado: R$ 56,90
 Base: 56 dias acompanhados
 
@@ -180,15 +180,15 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Caneta 3d Impressora Profissional + Refil Filamento + Usb. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_816284-MLB111134362535_052026-AB-caneta-3d-impressora-profissional-refil-filamento-usb.webp. Hook 0-3s: Caneta 3d Impressora Profissional + Refil Filamento + Usb está 11.2% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 61,90, média R$ 69,69 e menor observado R$ 56,90. Narração: Caneta 3d Impressora Profissional + Refil Filamento + Usb está 11.2% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 61,90. No Radar, a média foi R$ 69,69 e o menor valor observado foi R$ 56,90, em 56 dias acompanhados. O preço atual está 11,2% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Caneta 3d Impressora Profissional + Refil Filamento + Usb. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_816284-MLB111134362535_052026-AB-caneta-3d-impressora-profissional-refil-filamento-usb.webp. Hook 0-3s: Caneta 3d Impressora Profissional + Refil Filamento + Usb está 11.2% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 61,90, média R$ 69,67 e menor observado R$ 56,90. Narração: Caneta 3d Impressora Profissional + Refil Filamento + Usb está 11.2% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 61,90. No Radar, a média foi R$ 69,67 e o menor valor observado foi R$ 56,90, em 56 dias acompanhados. O preço atual está 11,2% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
 ## Dia 3 · Vídeo 2 — Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v
 
 **Ângulo:** Abaixo da média observada: vale agora?
-**Preço:** R$ 43,58 · média R$ 48,19 · mínimo R$ 40,09
-**Base:** 56 dias acompanhados · 756 observações
+**Preço:** R$ 43,58 · média R$ 48,18 · mínimo R$ 40,09
+**Base:** 56 dias acompanhados · 757 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/mouse-teclado-acessorios-setup/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_922391-MLB111917338465_052026-AB.webp
 
@@ -198,32 +198,32 @@ Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v está 9.
 
 **Roteiro**
 
-Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v está 9.6% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 43,58. No Radar, a média foi R$ 48,19 e o menor valor observado foi R$ 40,09, em 56 dias acompanhados. O preço atual está 9,6% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v está 9.6% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 43,58. No Radar, a média foi R$ 48,18 e o menor valor observado foi R$ 40,09, em 56 dias acompanhados. O preço atual está 9,5% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v
 Hoje: R$ 43,58
-Média observada: R$ 48,19
+Média observada: R$ 48,18
 Menor observado: R$ 40,09
 Base: 56 dias acompanhados
 
-O preço atual está 9,6% abaixo da média observada.
+O preço atual está 9,5% abaixo da média observada.
 
 Veja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/mouse-teclado-acessorios-setup/
 Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_922391-MLB111917338465_052026-AB.webp. Hook 0-3s: Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v está 9.6% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 43,58, média R$ 48,19 e menor observado R$ 40,09. Narração: Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v está 9.6% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 43,58. No Radar, a média foi R$ 48,19 e o menor valor observado foi R$ 40,09, em 56 dias acompanhados. O preço atual está 9,6% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_922391-MLB111917338465_052026-AB.webp. Hook 0-3s: Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v está 9.6% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 43,58, média R$ 48,18 e menor observado R$ 40,09. Narração: Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v está 9.6% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 43,58. No Radar, a média foi R$ 48,18 e o menor valor observado foi R$ 40,09, em 56 dias acompanhados. O preço atual está 9,5% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
 ## Dia 4 · Vídeo 1 — Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto…
 
 **Ângulo:** Abaixo da média observada: vale agora?
-**Preço:** R$ 275,99 · média R$ 296,72 · mínimo R$ 272,61
-**Base:** 53 dias acompanhados · 618 observações
+**Preço:** R$ 275,99 · média R$ 296,69 · mínimo R$ 272,61
+**Base:** 53 dias acompanhados · 619 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/impressora-termica-caneta-3d-ou-filamento/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_737140-MLB112939930644_072026-AB.webp
 
@@ -233,13 +233,13 @@ Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto… está 7.
 
 **Roteiro**
 
-Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto… está 7.0% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 275,99. No Radar, a média foi R$ 296,72 e o menor valor observado foi R$ 272,61, em 53 dias acompanhados. O preço atual está 7,0% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto… está 7.0% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 275,99. No Radar, a média foi R$ 296,69 e o menor valor observado foi R$ 272,61, em 53 dias acompanhados. O preço atual está 7,0% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto…
 Hoje: R$ 275,99
-Média observada: R$ 296,72
+Média observada: R$ 296,69
 Menor observado: R$ 272,61
 Base: 53 dias acompanhados
 
@@ -250,7 +250,7 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_737140-MLB112939930644_072026-AB.webp. Hook 0-3s: Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto… está 7.0% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 275,99, média R$ 296,72 e menor observado R$ 272,61. Narração: Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto… está 7.0% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 275,99. No Radar, a média foi R$ 296,72 e o menor valor observado foi R$ 272,61, em 53 dias acompanhados. O preço atual está 7,0% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_737140-MLB112939930644_072026-AB.webp. Hook 0-3s: Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto… está 7.0% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 275,99, média R$ 296,69 e menor observado R$ 272,61. Narração: Mini Impressora Etiquetas Térmica Bluetooth Portatil Armazém Preto… está 7.0% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 275,99. No Radar, a média foi R$ 296,69 e o menor valor observado foi R$ 272,61, em 53 dias acompanhados. O preço atual está 7,0% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
@@ -258,7 +258,7 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 **Ângulo:** Menor preço observado: vale aproveitar?
 **Preço:** R$ 55,00 · média R$ 57,34 · mínimo R$ 55,00
-**Base:** 56 dias acompanhados · 754 observações
+**Base:** 56 dias acompanhados · 755 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/fone-bluetooth-ou-caixa-de-som-como-escolher/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_760715-MLB109157249938_042026-AB-fone-de-ouvido-bluetooth-53-par-sem-fio-duplo-todos-celular.webp
 
@@ -293,7 +293,7 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 **Ângulo:** Abaixo da média observada: vale agora?
 **Preço:** R$ 30,97 · média R$ 31,49 · mínimo R$ 30,87
-**Base:** 56 dias acompanhados · 755 observações
+**Base:** 56 dias acompanhados · 756 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/carregador-usb-c-iphone-como-escolher/
 **Imagem:** https://http2.mlstatic.com/D_NQ_NP_853083-MLB108107437166_032026-O-carregador-magnetico-fam-magsafe-usbc-15w-p-iphone-12-a-16.webp
 
@@ -327,8 +327,8 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 ## Dia 5 · Vídeo 2 — Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0…
 
 **Ângulo:** Abaixo da média observada: vale agora?
-**Preço:** R$ 149,24 · média R$ 155,10 · mínimo R$ 140,00
-**Base:** 41 dias acompanhados · 565 observações
+**Preço:** R$ 149,24 · média R$ 155,09 · mínimo R$ 140,00
+**Base:** 41 dias acompanhados · 566 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/fone-bluetooth-ou-caixa-de-som-como-escolher/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_681719-MLA99467991212_112025-AB.webp
 
@@ -338,13 +338,13 @@ Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0… está 3.8%
 
 **Roteiro**
 
-Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0… está 3.8% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 149,24. No Radar, a média foi R$ 155,10 e o menor valor observado foi R$ 140,00, em 41 dias acompanhados. O preço atual está 3,8% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0… está 3.8% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 149,24. No Radar, a média foi R$ 155,09 e o menor valor observado foi R$ 140,00, em 41 dias acompanhados. O preço atual está 3,8% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0…
 Hoje: R$ 149,24
-Média observada: R$ 155,10
+Média observada: R$ 155,09
 Menor observado: R$ 140,00
 Base: 41 dias acompanhados
 
@@ -355,7 +355,7 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_681719-MLA99467991212_112025-AB.webp. Hook 0-3s: Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0… está 3.8% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 149,24, média R$ 155,10 e menor observado R$ 140,00. Narração: Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0… está 3.8% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 149,24. No Radar, a média foi R$ 155,10 e o menor valor observado foi R$ 140,00, em 41 dias acompanhados. O preço atual está 3,8% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_681719-MLA99467991212_112025-AB.webp. Hook 0-3s: Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0… está 3.8% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 149,24, média R$ 155,09 e menor observado R$ 140,00. Narração: Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0… está 3.8% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 149,24. No Radar, a média foi R$ 155,09 e o menor valor observado foi R$ 140,00, em 41 dias acompanhados. O preço atual está 3,8% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
@@ -363,7 +363,7 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 **Ângulo:** Abaixo da média observada: vale agora?
 **Preço:** R$ 19,00 · média R$ 19,65 · mínimo R$ 18,81
-**Base:** 56 dias acompanhados · 756 observações
+**Base:** 56 dias acompanhados · 757 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/acessorios-ps4-ps5-switch-como-escolher/
 **Imagem:** https://http2.mlstatic.com/D_NQ_NP_641341-MLB109378980820_042026-O-kit-4-botao-capa-analogico-protetora-compativel-controle-ps5.webp
 
@@ -397,8 +397,8 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 ## Dia 6 · Vídeo 2 — Apple iPhone 16 (128 GB)
 
 **Ângulo:** Preço na Mira: vale comprar agora?
-**Preço:** R$ 4.801,00 · média R$ 4.666,18 · mínimo R$ 4.549,00
-**Base:** 53 dias acompanhados · 647 observações
+**Preço:** R$ 4.801,00 · média R$ 4.666,39 · mínimo R$ 4.549,00
+**Base:** 53 dias acompanhados · 648 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/iphone-15-ou-16-em-promocao/
 **Imagem:** https://http2.mlstatic.com/D_NQ_NP_687325-MLA96079610055_102025-O.webp
 
@@ -408,13 +408,13 @@ Antes de comprar Apple iPhone 16 (128 GB), olha o que o histórico mostra.
 
 **Roteiro**
 
-Antes de comprar Apple iPhone 16 (128 GB), olha o que o histórico mostra. Hoje ele aparece por R$ 4.801,00. No Radar, a média foi R$ 4.666,18 e o menor valor observado foi R$ 4.549,00, em 53 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Antes de comprar Apple iPhone 16 (128 GB), olha o que o histórico mostra. Hoje ele aparece por R$ 4.801,00. No Radar, a média foi R$ 4.666,39 e o menor valor observado foi R$ 4.549,00, em 53 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Apple iPhone 16 (128 GB)
 Hoje: R$ 4.801,00
-Média observada: R$ 4.666,18
+Média observada: R$ 4.666,39
 Menor observado: R$ 4.549,00
 Base: 53 dias acompanhados
 
@@ -425,7 +425,7 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Apple iPhone 16 (128 GB). Imagem: https://http2.mlstatic.com/D_NQ_NP_687325-MLA96079610055_102025-O.webp. Hook 0-3s: Antes de comprar Apple iPhone 16 (128 GB), olha o que o histórico mostra. Mostre preço atual R$ 4.801,00, média R$ 4.666,18 e menor observado R$ 4.549,00. Narração: Antes de comprar Apple iPhone 16 (128 GB), olha o que o histórico mostra. Hoje ele aparece por R$ 4.801,00. No Radar, a média foi R$ 4.666,18 e o menor valor observado foi R$ 4.549,00, em 53 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Apple iPhone 16 (128 GB). Imagem: https://http2.mlstatic.com/D_NQ_NP_687325-MLA96079610055_102025-O.webp. Hook 0-3s: Antes de comprar Apple iPhone 16 (128 GB), olha o que o histórico mostra. Mostre preço atual R$ 4.801,00, média R$ 4.666,39 e menor observado R$ 4.549,00. Narração: Antes de comprar Apple iPhone 16 (128 GB), olha o que o histórico mostra. Hoje ele aparece por R$ 4.801,00. No Radar, a média foi R$ 4.666,39 e o menor valor observado foi R$ 4.549,00, em 53 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
@@ -467,8 +467,8 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 ## Dia 7 · Vídeo 2 — Kit Chave Precisão Profissional 115 Peças Magnético Manutenção…
 
 **Ângulo:** Preço na Mira: vale comprar agora?
-**Preço:** R$ 33,90 · média R$ 33,60 · mínimo R$ 28,40
-**Base:** 56 dias acompanhados · 754 observações
+**Preço:** R$ 33,90 · média R$ 33,61 · mínimo R$ 28,40
+**Base:** 56 dias acompanhados · 755 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/mouse-teclado-acessorios-setup/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_751055-MLA112428593866_062026-AB.webp
 
@@ -478,13 +478,13 @@ Antes de comprar Kit Chave Precisão Profissional 115 Peças Magnético Manuten�
 
 **Roteiro**
 
-Antes de comprar Kit Chave Precisão Profissional 115 Peças Magnético Manutenção…, olha o que o histórico mostra. Hoje ele aparece por R$ 33,90. No Radar, a média foi R$ 33,60 e o menor valor observado foi R$ 28,40, em 56 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Antes de comprar Kit Chave Precisão Profissional 115 Peças Magnético Manutenção…, olha o que o histórico mostra. Hoje ele aparece por R$ 33,90. No Radar, a média foi R$ 33,61 e o menor valor observado foi R$ 28,40, em 56 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Kit Chave Precisão Profissional 115 Peças Magnético Manutenção…
 Hoje: R$ 33,90
-Média observada: R$ 33,60
+Média observada: R$ 33,61
 Menor observado: R$ 28,40
 Base: 56 dias acompanhados
 
@@ -495,6 +495,6 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Kit Chave Precisão Profissional 115 Peças Magnético Manutenção…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_751055-MLA112428593866_062026-AB.webp. Hook 0-3s: Antes de comprar Kit Chave Precisão Profissional 115 Peças Magnético Manutenção…, olha o que o histórico mostra. Mostre preço atual R$ 33,90, média R$ 33,60 e menor observado R$ 28,40. Narração: Antes de comprar Kit Chave Precisão Profissional 115 Peças Magnético Manutenção…, olha o que o histórico mostra. Hoje ele aparece por R$ 33,90. No Radar, a média foi R$ 33,60 e o menor valor observado foi R$ 28,40, em 56 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Kit Chave Precisão Profissional 115 Peças Magnético Manutenção…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_751055-MLA112428593866_062026-AB.webp. Hook 0-3s: Antes de comprar Kit Chave Precisão Profissional 115 Peças Magnético Manutenção…, olha o que o histórico mostra. Mostre preço atual R$ 33,90, média R$ 33,61 e menor observado R$ 28,40. Narração: Antes de comprar Kit Chave Precisão Profissional 115 Peças Magnético Manutenção…, olha o que o histórico mostra. Hoje ele aparece por R$ 33,90. No Radar, a média foi R$ 33,61 e o menor valor observado foi R$ 28,40, em 56 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
