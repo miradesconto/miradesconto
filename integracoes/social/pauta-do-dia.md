@@ -1,6 +1,6 @@
 # Fila de conteúdo — MiraDesconto → Pippit
 
-**Radar:** 2026-11-16T16:57:34+00:00
+**Radar:** 2026-11-16T18:54:56+00:00
 **Fila:** 14 vídeos · 2 por dia · 7 dias
 
 Prioridade: Radar real, histórico observado, variedade de categorias e artigo de destino. Não usa referência da loja como histórico.
@@ -12,35 +12,35 @@ Revise a fila de vídeos do MiraDesconto. Aponte apenas afirmações sem evidên
 ## Dia 1 · Vídeo 1 — Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB…
 
 **Ângulo:** Abaixo da média observada: vale agora?
-**Preço:** R$ 3.889,00 · média R$ 4.464,80 · mínimo R$ 3.695,00
-**Base:** 44 dias acompanhados · 591 observações
+**Preço:** R$ 3.779,00 · média R$ 4.463,64 · mínimo R$ 3.695,00
+**Base:** 44 dias acompanhados · 592 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/notebook-em-promocao-como-escolher/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_872069-MLA96255973058_102025-T.webp
 
 **Hook**
 
-Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB… está 12.9% abaixo da média observada. É um bom momento de compra?
+Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB… está 15.3% abaixo da média observada. É um bom momento de compra?
 
 **Roteiro**
 
-Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB… está 12.9% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 3.889,00. No Radar, a média foi R$ 4.464,80 e o menor valor observado foi R$ 3.695,00, em 44 dias acompanhados. O preço atual está 12,9% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB… está 15.3% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 3.779,00. No Radar, a média foi R$ 4.463,64 e o menor valor observado foi R$ 3.695,00, em 44 dias acompanhados. O preço atual está 15,3% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB…
-Hoje: R$ 3.889,00
-Média observada: R$ 4.464,80
+Hoje: R$ 3.779,00
+Média observada: R$ 4.463,64
 Menor observado: R$ 3.695,00
 Base: 44 dias acompanhados
 
-O preço atual está 12,9% abaixo da média observada.
+O preço atual está 15,3% abaixo da média observada.
 
 Veja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/notebook-em-promocao-como-escolher/
 Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_872069-MLA96255973058_102025-T.webp. Hook 0-3s: Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB… está 12.9% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 3.889,00, média R$ 4.464,80 e menor observado R$ 3.695,00. Narração: Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB… está 12.9% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 3.889,00. No Radar, a média foi R$ 4.464,80 e o menor valor observado foi R$ 3.695,00, em 44 dias acompanhados. O preço atual está 12,9% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_872069-MLA96255973058_102025-T.webp. Hook 0-3s: Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB… está 15.3% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 3.779,00, média R$ 4.463,64 e menor observado R$ 3.695,00. Narração: Notebook Acer Aspire 5 A515-45-R043 - AMD Ryzen 5 5500U • 16 GB… está 15.3% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 3.779,00. No Radar, a média foi R$ 4.463,64 e o menor valor observado foi R$ 3.695,00, em 44 dias acompanhados. O preço atual está 15,3% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
@@ -82,8 +82,8 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 ## Dia 2 · Vídeo 1 — Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB…
 
 **Ângulo:** Abaixo da média observada: vale agora?
-**Preço:** R$ 7.469,00 · média R$ 8.272,25 · mínimo R$ 7.199,00
-**Base:** 44 dias acompanhados · 616 observações
+**Preço:** R$ 7.469,00 · média R$ 8.270,94 · mínimo R$ 7.199,00
+**Base:** 44 dias acompanhados · 617 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/notebook-para-trabalho-configuracoes/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_727317-MLA101294168698_122025-T.webp
 
@@ -93,13 +93,13 @@ Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB… está 9.7
 
 **Roteiro**
 
-Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB… está 9.7% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 7.469,00. No Radar, a média foi R$ 8.272,25 e o menor valor observado foi R$ 7.199,00, em 44 dias acompanhados. O preço atual está 9,7% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB… está 9.7% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 7.469,00. No Radar, a média foi R$ 8.270,94 e o menor valor observado foi R$ 7.199,00, em 44 dias acompanhados. O preço atual está 9,7% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB…
 Hoje: R$ 7.469,00
-Média observada: R$ 8.272,25
+Média observada: R$ 8.270,94
 Menor observado: R$ 7.199,00
 Base: 44 dias acompanhados
 
@@ -110,7 +110,7 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_727317-MLA101294168698_122025-T.webp. Hook 0-3s: Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB… está 9.7% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 7.469,00, média R$ 8.272,25 e menor observado R$ 7.199,00. Narração: Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB… está 9.7% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 7.469,00. No Radar, a média foi R$ 8.272,25 e o menor valor observado foi R$ 7.199,00, em 44 dias acompanhados. O preço atual está 9,7% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_727317-MLA101294168698_122025-T.webp. Hook 0-3s: Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB… está 9.7% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 7.469,00, média R$ 8.270,94 e menor observado R$ 7.199,00. Narração: Notebook ASUS Vivobook S14 AI PC, Intel Core Ultra 5, 32GB RAM, 1TB… está 9.7% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 7.469,00. No Radar, a média foi R$ 8.270,94 e o menor valor observado foi R$ 7.199,00, em 44 dias acompanhados. O preço atual está 9,7% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
@@ -118,7 +118,7 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 **Ângulo:** Abaixo da média observada: vale agora?
 **Preço:** R$ 29,34 · média R$ 32,85 · mínimo R$ 27,99
-**Base:** 57 dias acompanhados · 744 observações
+**Base:** 57 dias acompanhados · 745 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/smart-tag-android-rastreador-vale-a-pena/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_688002-MLA115581994404_092026-AB.webp
 
@@ -151,44 +151,44 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 ## Dia 3 · Vídeo 1 — Caneta 3d Impressora Profissional + Refil Filamento + Usb
 
-**Ângulo:** Abaixo da média observada: vale agora?
-**Preço:** R$ 61,90 · média R$ 69,59 · mínimo R$ 56,90
-**Base:** 57 dias acompanhados · 372 observações
+**Ângulo:** Menor preço observado: vale aproveitar?
+**Preço:** R$ 61,90 · média R$ 65,58 · mínimo R$ 61,90
+**Base:** 38 dias acompanhados · 76 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/impressora-termica-caneta-3d-ou-filamento/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_816284-MLB111134362535_052026-AB-caneta-3d-impressora-profissional-refil-filamento-usb.webp
 
 **Hook**
 
-Caneta 3d Impressora Profissional + Refil Filamento + Usb está 11.0% abaixo da média observada. É um bom momento de compra?
+Caneta 3d Impressora Profissional + Refil Filamento + Usb está no menor valor observado neste anúncio. Mas vale comprar agora?
 
 **Roteiro**
 
-Caneta 3d Impressora Profissional + Refil Filamento + Usb está 11.0% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 61,90. No Radar, a média foi R$ 69,59 e o menor valor observado foi R$ 56,90, em 57 dias acompanhados. O preço atual está 11,0% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Caneta 3d Impressora Profissional + Refil Filamento + Usb está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 61,90. No Radar, a média foi R$ 65,58 e o menor valor observado foi R$ 61,90, em 38 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Caneta 3d Impressora Profissional + Refil Filamento + Usb
 Hoje: R$ 61,90
-Média observada: R$ 69,59
-Menor observado: R$ 56,90
-Base: 57 dias acompanhados
+Média observada: R$ 65,58
+Menor observado: R$ 61,90
+Base: 38 dias acompanhados
 
-O preço atual está 11,0% abaixo da média observada.
+O preço atual está no menor valor observado neste anúncio durante o período acompanhado.
 
 Veja o guia no MiraDesconto: https://miradesconto.github.io/miradesconto/blog/impressora-termica-caneta-3d-ou-filamento/
 Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Caneta 3d Impressora Profissional + Refil Filamento + Usb. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_816284-MLB111134362535_052026-AB-caneta-3d-impressora-profissional-refil-filamento-usb.webp. Hook 0-3s: Caneta 3d Impressora Profissional + Refil Filamento + Usb está 11.0% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 61,90, média R$ 69,59 e menor observado R$ 56,90. Narração: Caneta 3d Impressora Profissional + Refil Filamento + Usb está 11.0% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 61,90. No Radar, a média foi R$ 69,59 e o menor valor observado foi R$ 56,90, em 57 dias acompanhados. O preço atual está 11,0% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Caneta 3d Impressora Profissional + Refil Filamento + Usb. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_816284-MLB111134362535_052026-AB-caneta-3d-impressora-profissional-refil-filamento-usb.webp. Hook 0-3s: Caneta 3d Impressora Profissional + Refil Filamento + Usb está no menor valor observado neste anúncio. Mas vale comprar agora? Mostre preço atual R$ 61,90, média R$ 65,58 e menor observado R$ 61,90. Narração: Caneta 3d Impressora Profissional + Refil Filamento + Usb está no menor valor observado neste anúncio. Mas vale comprar agora? Hoje ele aparece por R$ 61,90. No Radar, a média foi R$ 65,58 e o menor valor observado foi R$ 61,90, em 38 dias acompanhados. O preço atual está no menor valor observado neste anúncio durante o período acompanhado. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
 ## Dia 3 · Vídeo 2 — Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v
 
 **Ângulo:** Abaixo da média observada: vale agora?
-**Preço:** R$ 43,58 · média R$ 48,15 · mínimo R$ 40,09
-**Base:** 57 dias acompanhados · 762 observações
+**Preço:** R$ 43,58 · média R$ 48,14 · mínimo R$ 40,09
+**Base:** 57 dias acompanhados · 763 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/mouse-teclado-acessorios-setup/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_922391-MLB111917338465_052026-AB.webp
 
@@ -198,13 +198,13 @@ Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v está 9.
 
 **Roteiro**
 
-Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v está 9.5% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 43,58. No Radar, a média foi R$ 48,15 e o menor valor observado foi R$ 40,09, em 57 dias acompanhados. O preço atual está 9,5% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v está 9.5% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 43,58. No Radar, a média foi R$ 48,14 e o menor valor observado foi R$ 40,09, em 57 dias acompanhados. O preço atual está 9,5% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v
 Hoje: R$ 43,58
-Média observada: R$ 48,15
+Média observada: R$ 48,14
 Menor observado: R$ 40,09
 Base: 57 dias acompanhados
 
@@ -215,7 +215,7 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_922391-MLB111917338465_052026-AB.webp. Hook 0-3s: Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v está 9.5% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 43,58, média R$ 48,15 e menor observado R$ 40,09. Narração: Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v está 9.5% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 43,58. No Radar, a média foi R$ 48,15 e o menor valor observado foi R$ 40,09, em 57 dias acompanhados. O preço atual está 9,5% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_922391-MLB111917338465_052026-AB.webp. Hook 0-3s: Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v está 9.5% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 43,58, média R$ 48,14 e menor observado R$ 40,09. Narração: Soprador De Ar Portatil Sem Fio Limpeza Teclado Pc Turbo Preto 127/220v está 9.5% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 43,58. No Radar, a média foi R$ 48,14 e o menor valor observado foi R$ 40,09, em 57 dias acompanhados. O preço atual está 9,5% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
@@ -223,7 +223,7 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 **Ângulo:** Menor preço observado: vale aproveitar?
 **Preço:** R$ 55,00 · média R$ 57,32 · mínimo R$ 55,00
-**Base:** 57 dias acompanhados · 760 observações
+**Base:** 57 dias acompanhados · 761 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/fone-bluetooth-ou-caixa-de-som-como-escolher/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_760715-MLB109157249938_042026-AB-fone-de-ouvido-bluetooth-53-par-sem-fio-duplo-todos-celular.webp
 
@@ -258,7 +258,7 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 **Ângulo:** Abaixo da média observada: vale agora?
 **Preço:** R$ 30,97 · média R$ 31,48 · mínimo R$ 30,87
-**Base:** 57 dias acompanhados · 761 observações
+**Base:** 57 dias acompanhados · 762 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/carregador-usb-c-iphone-como-escolher/
 **Imagem:** https://http2.mlstatic.com/D_NQ_NP_853083-MLB108107437166_032026-O-carregador-magnetico-fam-magsafe-usbc-15w-p-iphone-12-a-16.webp
 
@@ -292,8 +292,8 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 ## Dia 5 · Vídeo 1 — Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0…
 
 **Ângulo:** Abaixo da média observada: vale agora?
-**Preço:** R$ 149,24 · média R$ 155,04 · mínimo R$ 140,00
-**Base:** 41 dias acompanhados · 571 observações
+**Preço:** R$ 149,24 · média R$ 155,03 · mínimo R$ 140,00
+**Base:** 41 dias acompanhados · 572 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/fone-bluetooth-ou-caixa-de-som-como-escolher/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_681719-MLA99467991212_112025-AB.webp
 
@@ -303,13 +303,13 @@ Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0… está 3.7%
 
 **Roteiro**
 
-Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0… está 3.7% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 149,24. No Radar, a média foi R$ 155,04 e o menor valor observado foi R$ 140,00, em 41 dias acompanhados. O preço atual está 3,7% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0… está 3.7% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 149,24. No Radar, a média foi R$ 155,03 e o menor valor observado foi R$ 140,00, em 41 dias acompanhados. O preço atual está 3,7% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0…
 Hoje: R$ 149,24
-Média observada: R$ 155,04
+Média observada: R$ 155,03
 Menor observado: R$ 140,00
 Base: 41 dias acompanhados
 
@@ -320,7 +320,7 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_681719-MLA99467991212_112025-AB.webp. Hook 0-3s: Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0… está 3.7% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 149,24, média R$ 155,04 e menor observado R$ 140,00. Narração: Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0… está 3.7% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 149,24. No Radar, a média foi R$ 155,04 e o menor valor observado foi R$ 140,00, em 41 dias acompanhados. O preço atual está 3,7% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0…. Imagem: https://http2.mlstatic.com/D_Q_NP_2X_681719-MLA99467991212_112025-AB.webp. Hook 0-3s: Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0… está 3.7% abaixo da média observada. É um bom momento de compra? Mostre preço atual R$ 149,24, média R$ 155,03 e menor observado R$ 140,00. Narração: Caixa De Som Bluetooth Caixinha Grande 2 Altos Falantes 10w-hz 5.0… está 3.7% abaixo da média observada. É um bom momento de compra? Hoje ele aparece por R$ 149,24. No Radar, a média foi R$ 155,03 e o menor valor observado foi R$ 140,00, em 41 dias acompanhados. O preço atual está 3,7% abaixo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
@@ -328,7 +328,7 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 **Ângulo:** Abaixo da média observada: vale agora?
 **Preço:** R$ 19,00 · média R$ 19,64 · mínimo R$ 18,81
-**Base:** 57 dias acompanhados · 762 observações
+**Base:** 57 dias acompanhados · 763 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/acessorios-ps4-ps5-switch-como-escolher/
 **Imagem:** https://http2.mlstatic.com/D_NQ_NP_641341-MLB109378980820_042026-O-kit-4-botao-capa-analogico-protetora-compativel-controle-ps5.webp
 
@@ -362,8 +362,8 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 ## Dia 6 · Vídeo 1 — Apple iPhone 16 (128 GB)
 
 **Ângulo:** Preço na Mira: vale comprar agora?
-**Preço:** R$ 4.801,00 · média R$ 4.667,42 · mínimo R$ 4.549,00
-**Base:** 53 dias acompanhados · 653 observações
+**Preço:** R$ 4.801,00 · média R$ 4.667,62 · mínimo R$ 4.549,00
+**Base:** 54 dias acompanhados · 654 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/iphone-15-ou-16-em-promocao/
 **Imagem:** https://http2.mlstatic.com/D_NQ_NP_687325-MLA96079610055_102025-O.webp
 
@@ -373,15 +373,15 @@ Antes de comprar Apple iPhone 16 (128 GB), olha o que o histórico mostra.
 
 **Roteiro**
 
-Antes de comprar Apple iPhone 16 (128 GB), olha o que o histórico mostra. Hoje ele aparece por R$ 4.801,00. No Radar, a média foi R$ 4.667,42 e o menor valor observado foi R$ 4.549,00, em 53 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar.
+Antes de comprar Apple iPhone 16 (128 GB), olha o que o histórico mostra. Hoje ele aparece por R$ 4.801,00. No Radar, a média foi R$ 4.667,62 e o menor valor observado foi R$ 4.549,00, em 54 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar.
 
 **Legenda**
 
 PREÇO NA MIRA — Apple iPhone 16 (128 GB)
 Hoje: R$ 4.801,00
-Média observada: R$ 4.667,42
+Média observada: R$ 4.667,62
 Menor observado: R$ 4.549,00
-Base: 53 dias acompanhados
+Base: 54 dias acompanhados
 
 O preço atual está próximo da média observada.
 
@@ -390,7 +390,7 @@ Preço pode mudar. Link comercial pode gerar comissão sem custo adicional.
 
 **Prompt Pippit**
 
-Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Apple iPhone 16 (128 GB). Imagem: https://http2.mlstatic.com/D_NQ_NP_687325-MLA96079610055_102025-O.webp. Hook 0-3s: Antes de comprar Apple iPhone 16 (128 GB), olha o que o histórico mostra. Mostre preço atual R$ 4.801,00, média R$ 4.667,42 e menor observado R$ 4.549,00. Narração: Antes de comprar Apple iPhone 16 (128 GB), olha o que o histórico mostra. Hoje ele aparece por R$ 4.801,00. No Radar, a média foi R$ 4.667,42 e o menor valor observado foi R$ 4.549,00, em 53 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
+Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motion graphics; não simule unboxing, teste físico ou posse do produto. Cores #101D20 #86EFAC #F8FAFC #A8B8B3. Narração pt-BR natural e nítida. Produto: Apple iPhone 16 (128 GB). Imagem: https://http2.mlstatic.com/D_NQ_NP_687325-MLA96079610055_102025-O.webp. Hook 0-3s: Antes de comprar Apple iPhone 16 (128 GB), olha o que o histórico mostra. Mostre preço atual R$ 4.801,00, média R$ 4.667,62 e menor observado R$ 4.549,00. Narração: Antes de comprar Apple iPhone 16 (128 GB), olha o que o histórico mostra. Hoje ele aparece por R$ 4.801,00. No Radar, a média foi R$ 4.667,62 e o menor valor observado foi R$ 4.549,00, em 54 dias acompanhados. O preço atual está próximo da média observada. Veja o guia no MiraDesconto antes de comprar. CTA: Veja o guia no MiraDesconto. Não use desconto da loja como histórico; texto grande e cortes rápidos.
 
 ---
 
@@ -398,7 +398,7 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 **Ângulo:** Preço na Mira: vale comprar agora?
 **Preço:** R$ 33,90 · média R$ 33,61 · mínimo R$ 28,40
-**Base:** 57 dias acompanhados · 760 observações
+**Base:** 57 dias acompanhados · 761 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/mouse-teclado-acessorios-setup/
 **Imagem:** https://http2.mlstatic.com/D_Q_NP_2X_751055-MLA112428593866_062026-AB.webp
 
@@ -468,7 +468,7 @@ Vídeo vertical 9:16, 20-25s, MiraDesconto. Use somente a imagem oficial e motio
 
 **Ângulo:** Preço na Mira: vale comprar agora?
 **Preço:** R$ 39,99 · média R$ 39,84 · mínimo R$ 38,70
-**Base:** 57 dias acompanhados · 752 observações
+**Base:** 57 dias acompanhados · 753 observações
 **Destino:** https://miradesconto.github.io/miradesconto/blog/acessorios-ps4-ps5-switch-como-escolher/
 **Imagem:** https://http2.mlstatic.com/D_NQ_NP_903454-MLA116376701107_082026-O.webp
 
