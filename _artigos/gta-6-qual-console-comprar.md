@@ -1,14 +1,14 @@
 ---
-title: "GTA 6: qual console comprar e como escolher a versão do jogo?"
-resumo: "Compare PS5, PS5 Pro, Xbox Series S e Series X para GTA 6. Entenda o código na caixa, o download antecipado e a diferença entre jogar no console e pela nuvem."
-description: "Qual videogame roda GTA 6? Compare PS5, PS5 Pro, Xbox Series S e X, veja digital ou código na caixa e prepare o download no PS5."
+title: "GTA 6: preço no PS5, Metacritic e qual console comprar"
+resumo: "Veja os preços de GTA 6 no PS5, compare Standard e Ultimate e saiba como conferir as avaliações no Metacritic. Confira também os consoles compatíveis."
+description: "GTA 6 no PS5: preços de Standard e Ultimate, cuidados com notas do Metacritic e comparação dos consoles compatíveis. Atualizado em 17/11/2026."
 categoria: "guias"
 produtos: []
 status: "publicado"
 published: true
 autor: "MiraDesconto"
 data: "2026-11-10"
-atualizado: "2026-11-10"
+atualizado: "2026-11-17"
 ordem: 0
 destaque: false
 ---
@@ -16,6 +16,35 @@ destaque: false
 **Para jogar GTA 6 instalado no videogame, as plataformas confirmadas são PlayStation 5 e Xbox Series X|S.** Isso inclui PS5, PS5 Slim e PS5 Pro, além de Xbox Series S e Series X. Se você já tem um desses aparelhos, comece pela escolha da edição do jogo.
 
 Para quem vai comprar o primeiro console, nossa orientação é comparar o valor do aparelho **mais o jogo**, a capacidade de armazenamento e os outros títulos que pretende jogar. Não é necessário comprar um PS5 Pro apenas para ter compatibilidade com GTA 6.
+
+## Quanto custa GTA 6 no PS5?
+
+Na consulta de **17/11/2026**, a [PlayStation Store brasileira](https://store.playstation.com/pt-br/product/EP1004-PPSA01547_00-GTAVISTANDARD001) apresentava estes preços de pré-venda digital:
+
+| Edição para PS5 | Preço consultado |
+| --- | --- |
+| Standard Edition | R$449,90 |
+| Ultimate Edition | R$549,90 |
+
+A diferença é de **R$100**. A Standard inclui o jogo; a Ultimate acrescenta a melhoria Ultimate Edition. Compare os extras descritos na loja antes de pagar a diferença. Estes valores não são uma oferta de Black Friday nem uma comprovação de menor preço.
+
+A oferta consultada também anuncia o Pacote Vintage Vice City e um mês de GTA+ para compras elegíveis até 19/11/2026. **GTA+ tem renovação automática após o período promocional**; confira as condições e cancele caso não queira continuar.
+
+[Conferir edições e preço atual na PS Store — link NÃO afiliado](https://store.playstation.com/pt-br/product/EP1004-PPSA01547_00-GTAVISTANDARD001).
+
+## GTA 6 no Metacritic: como conferir as avaliações?
+
+**Não temos uma nota atual de GTA 6 validada para publicar nesta atualização de 17/11/2026.** A página recuperada na consulta estava desatualizada, portanto não permite concluir se novas análises já foram disponibilizadas.
+
+Consulte [Grand Theft Auto VI no Metacritic](https://www.metacritic.com/game/grand-theft-auto-vi/) e confira separadamente o Metascore da crítica e a avaliação dos usuários. Observe a plataforma, a quantidade de avaliações e as datas; uma captura de tela isolada não basta para decidir a compra.
+
+Além da média, leia as análises completas para entender desempenho no seu console, problemas relatados e a experiência de jogo. Este guia não é um teste prático de GTA 6.
+
+## GTA 6 vale a pena comprar agora?
+
+Se você ainda está em dúvida, nossa orientação é aguardar análises verificáveis da versão do seu console antes de gastar. A [Rockstar mantém o lançamento anunciado para 19/11/2026](https://www.rockstargames.com/VI), em PS5 e Xbox Series X|S.
+
+Para quem já decidiu comprar, confira edição, plataforma e região da conta. Compare o preço total e evite pagar por extras que não pretende usar. A proximidade da Black Friday não garante desconto no lançamento.
 
 ## Quais videogames vão rodar GTA 6?
 
@@ -120,8 +149,11 @@ O jogo deve ser comprado separadamente, e o serviço depende de conexão, dispon
 
 ## Fontes e método
 
-Guia elaborado por consulta documental em **10/11/2026**, sem teste prático dos consoles ou do jogo. As indicações por perfil são avaliações editoriais; não representam promessa de desempenho.
+Guia elaborado por consulta documental em **10/11/2026**, com atualização das seções de preços, edições e avaliações em **17/11/2026**, sem teste prático dos consoles ou do jogo. As indicações por perfil são avaliações editoriais; não representam promessa de desempenho.
 
+- [PlayStation Store Brasil: preços e condições das edições](https://store.playstation.com/pt-br/product/EP1004-PPSA01547_00-GTAVISTANDARD001), consultada em 17/11/2026.
+- [Rockstar: página oficial de GTA VI](https://www.rockstargames.com/VI), consultada em 17/11/2026.
+- [Metacritic: página de GTA VI](https://www.metacritic.com/game/grand-theft-auto-vi/); a captura recuperada não permitiu validar notas atuais em 17/11/2026.
 - [Rockstar: plataformas, edições e códigos de GTA VI](https://support.rockstargames.com/articles/4QfG4FmZCf5W1gS8jy4UVT/grand-theft-auto-vi-platform-editions-and-versions), atualizado em 04/11/2026.
 - [PlayStation: GTA VI para PS5 e PS5 Pro](https://www.playstation.com/pt-br/games/grand-theft-auto-vi/).
 - [PlayStation: suporte e pré-carregamento de GTA VI](https://www.playstation.com/pt-br/support/games/gta-vi-support/).
