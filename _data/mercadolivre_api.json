@@ -1,7 +1,12 @@
 {
-  "generatedAt": "2026-11-18T02:24:55+00:00",
-  "trendsCheckedAt": "2026-11-18T00:28:59+00:00",
+  "generatedAt": "2026-11-18T07:54:43+00:00",
+  "trendsCheckedAt": "2026-11-18T07:54:43+00:00",
   "trends": [
+    {
+      "keyword": "consola playstation 5 sony slim standard 1tb bueno",
+      "categoryId": null,
+      "group": "crescimento"
+    },
     {
       "keyword": "microfone",
       "categoryId": null,
@@ -20,15 +25,10 @@
     {
       "keyword": "notebook",
       "categoryId": null,
-      "group": "mais_buscadas"
-    },
-    {
-      "keyword": "iphone 17 pro max",
-      "categoryId": null,
       "group": "populares"
     },
     {
-      "keyword": "iphone 14",
+      "keyword": "iphone 17 pro max",
       "categoryId": null,
       "group": "populares"
     }
@@ -41,9 +41,6 @@
     ],
     "MLB6472092088": [
       "iphone 16"
-    ],
-    "MLB4171634813": [
-      "iphone 14"
     ],
     "MLB4492878341": [
       "iphone 16"
@@ -61,5 +58,5 @@
       "iphone 16"
     ]
   },
-  "cursor": 127
+  "cursor": 29
 }
