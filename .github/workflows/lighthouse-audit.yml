@@ -1,0 +1,45 @@
+name: Auditoria Lighthouse - velocidade e SEO
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '15 10 * * 1'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: lighthouse-auditoria
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    name: Auditar site publicado
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Instalar Lighthouse CI
+        run: npm install --global @lhci/cli@0.16.x
+
+      - name: Medir pagina principal (duas execucoes)
+        run: lhci collect --config=.lighthouserc.json
+
+      - name: Verificar criterios e registrar alertas
+        run: lhci assert --config=.lighthouserc.json
+
+      - name: Salvar relatorios para consulta
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-miradesconto-${{ github.run_id }}
+          path: .lighthouseci/
+          if-no-files-found: warn
+          retention-days: 30
