@@ -1,5 +1,18 @@
 {
   "schemaVersion": 1,
   "boardName": "Ofertas de Tecnologia e Achadinhos | MiraDesconto",
-  "posts": []
+  "posts": [
+    {
+      "key": "machenike-k500b-direto-20261120",
+      "merchant": "mercado_livre",
+      "affiliate": "https://meli.la/2CRn8K3",
+      "link": "https://meli.la/2CRn8K3",
+      "title": "Teclado mecânico gamer Machenike K500B-B87 Switch Red",
+      "description": "Veja o teclado mecânico Machenike K500B-B87, com Switch Red e iluminação RGB. Confira as especificações e condições diretamente no anúncio",
+      "image": "assets/pinterest/2026-10-23-final/machenike-k500b-b87.png",
+      "sha256": "beaabfb7e8352bd3d52c0fbd9f3ae7737de996c4a311b6b9bdd5b135306ea79c",
+      "confirmed_channel": true,
+      "approved": true
+    }
+  ]
 }
