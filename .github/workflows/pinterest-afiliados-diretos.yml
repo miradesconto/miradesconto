@@ -3,6 +3,10 @@ on:
   schedule:
     - cron: '0 11 * * *'
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'integracoes/pinterest/fila_afiliados.json'
   pull_request:
     paths:
       - 'integracoes/pinterest/fila_afiliados.py'
