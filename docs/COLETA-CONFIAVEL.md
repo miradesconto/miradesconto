@@ -21,7 +21,8 @@ permanecem preservados. A coleta mantém o mínimo de 450 resultados; abaixo dis
 não substitui o catálogo. Itens recusados permanecem no cadastro principal.
 
 Na vitrine e no destaque, preços e descontos só aparecem com evidência compatível
-e idade de até 24 horas. Sem isso aparece “Ver preço na loja”, mantendo o link.
+e idade de até 2 horas (regra atual em `qualidade.js` e `integracoes/qualidade.py`;
+a primeira versão desta etapa usava 24 horas). Sem isso aparece “Ver preço na loja”, mantendo o link.
 A tela reavalia a validade a cada minuto. Na primeira publicação desta etapa,
 os valores históricos ficam ocultos até uma coleta válida. O cadastro atual
 não foi substituído por preços das amostras usadas nos testes.
