@@ -75,6 +75,9 @@ def run(queue, state, token, publish=False, save=None, root=ROOT, limit=1):
     if not publish:
         print(f"PRÉVIA: {len(validated)} Pins de afiliados aprovados.")
         return
+    if not validated:
+        print("Fila sem novos produtos aprovados; publicação não executada.")
+        return
     if not token:
         raise RuntimeError("PINTEREST_ACCESS_TOKEN ausente.")
     if any(item.get("status") == "uncertain" for item in state["posts"].values()):
