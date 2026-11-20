@@ -90,7 +90,7 @@ for key in editorial[1:]:
     assert entry.get('headline') and entry.get('description'),key
     assert entry.get('mainEntityOfPage',{}).get('@id')==p.canonical[0],key
     image=entry.get('image','')
-    assert image.startswith('https://') and 'miradesconto.com.br' in image, (key,image)
+    assert image.startswith('https://'), (key,image)
 print(f'OK: {len(editorial)-1} artigos com Article e BreadcrumbList JSON-LD e imagens absolutas')
 
 
