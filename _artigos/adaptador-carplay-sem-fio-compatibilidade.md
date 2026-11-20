@@ -8,9 +8,21 @@ status: "publicado"
 published: true
 autor: "MiraDesconto"
 data: "2026-10-10"
-atualizado: "2026-10-12"
+atualizado: "2026-11-20"
 destaque: false
 ---
+
+## O teste que vem antes da compra
+
+**O carro já tem CarPlay com fio funcionando?** Adaptadores sem fio normalmente dependem dessa função original. Um USB disponível no painel, isoladamente, não significa suporte a CarPlay.
+
+1. Conecte o iPhone por cabo e confirme se o CarPlay abre na central.
+2. Identifique o ano e a versão da central multimídia, não apenas o modelo do carro.
+3. Confira a lista de compatibilidade e as restrições de atualização do adaptador anunciado.
+
+Se o carro nunca teve CarPlay, não compre um adaptador anunciado apenas como conversor de CarPlay com fio para sem fio esperando criar a função do zero.
+
+
 
 **Primeiro teste o CarPlay pelo cabo. Se ele não funciona na central, comprar um adaptador USB sem fio pode não resolver nada.** Uma porta USB no painel não significa que o carro tem CarPlay.
 

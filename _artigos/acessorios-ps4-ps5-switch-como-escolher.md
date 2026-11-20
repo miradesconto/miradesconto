@@ -8,10 +8,18 @@ status: "publicado"
 published: true
 autor: "MiraDesconto"
 data: "2026-10-12"
-atualizado: "2026-10-12"
+atualizado: "2026-11-20"
 ordem: 38
 destaque: false
 ---
+
+## Antes de comprar: três incompatibilidades que custam caro
+
+**Controle de PS4, controle de PS5 e acessório para Switch não são a mesma categoria.** Uma descrição com vários consoles no título não comprova compatibilidade. Verifique o modelo exato do aparelho, a conexão necessária e se o acessório exige adaptador.
+
+Para capas de analógico, confira o diâmetro; para bases de carregamento, a geração do controle; para controles paralelos, leia a lista de funções que podem faltar. Se o anúncio não informa esses pontos, vale procurar outro vendedor em vez de arriscar.
+
+
 
 **Escreva o nome exato do console antes de comprar o acessório.** PS4, PS5, Slim e outras revisões podem ter encaixes e necessidades diferentes. Uma peça parecida na foto não basta.
 

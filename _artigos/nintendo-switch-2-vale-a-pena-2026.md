@@ -8,9 +8,17 @@ status: "publicado"
 published: true
 autor: "MiraDesconto"
 data: "2026-10-12"
-atualizado: "2026-10-12"
+atualizado: "2026-11-20"
 destaque: false
 ---
+
+## Para quem já possui um Switch
+
+Antes de trocar de console, liste os jogos que você realmente quer jogar e confirme compatibilidade de cartuchos, mídia digital e acessórios nos canais oficiais. **Uma geração nova só compensa se o ganho nos seus jogos justificar console e eventuais acessórios adicionais.**
+
+Quem ainda não tem o aparelho deve comparar o pacote completo: console, jogos, controle extra, armazenamento e garantia. Preço de anúncio não substitui comparação do custo total.
+
+
 
 **O Switch 2 faz sentido quando os jogos que você quer jogar justificam o console e o custo completo da compra.** Antes de escolher um kit, monte uma lista curta de títulos: ela diz mais que comprar só pelo lançamento.
 

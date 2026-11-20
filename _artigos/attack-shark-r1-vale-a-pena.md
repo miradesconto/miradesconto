@@ -8,10 +8,18 @@ status: "publicado"
 published: true
 autor: "MiraDesconto"
 data: "2026-10-12"
-atualizado: "2026-10-12"
+atualizado: "2026-11-20"
 ordem: 18
 destaque: false
 ---
+
+## Vale para qual tipo de jogador?
+
+**Jogo competitivo:** confirme o sensor e a taxa de atualização da variante exata; não confunda valores de marketing com medições independentes. **Uso misto:** confira se o mouse alterna facilmente entre os dispositivos que você utiliza. **Notebook com poucas portas:** veja se o receptor USB está incluído.
+
+Antes de concluir a compra, compare o preço total do R1 com o X11 do mesmo vendedor ou de vendedores com garantia equivalente. Sem essa comparação, não dá para afirmar que um é o melhor custo-benefício.
+
+
 
 **O R1 merece comparação se você procura um mouse leve e quer escolher entre conexão por cabo, receptor e Bluetooth.** Para decidir, olhe o formato antes do DPI máximo.
 

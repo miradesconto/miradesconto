@@ -8,10 +8,18 @@ status: "publicado"
 published: true
 autor: "MiraDesconto"
 data: "2026-10-12"
-atualizado: "2026-10-12"
+atualizado: "2026-11-20"
 ordem: 43
 destaque: false
 ---
+
+## Uma conta simples para evitar arrependimento
+
+Meça a distância dos olhos até a tela e o espaço realmente disponível. **Projetor precisa de controle de luz e área de projeção; TV costuma ser mais previsível em ambientes claros.** Considere também o áudio e a posição dos cabos.
+
+Para jogar, consulte resolução, frequência de atualização real, atraso de entrada e entradas HDMI disponíveis. Um rótulo como “120 Hz” não comprova que todas as resoluções e fontes funcionem nessa frequência.
+
+
 
 **Se você assiste com luz acesa e quer ligar e usar, comece comparando as TVs.** Se busca uma imagem maior e pode ajustar o ambiente, investigue o projetor, a distância e a tela juntos.
 

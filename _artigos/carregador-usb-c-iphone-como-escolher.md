@@ -7,10 +7,18 @@ status: "publicado"
 published: true
 autor: "MiraDesconto"
 data: "2026-10-02"
-atualizado: "2026-10-12"
+atualizado: "2026-11-20"
 ordem: 4
 destaque: false
 ---
+
+## Exemplo prático: iPhone com USB-C não dispensa conferência
+
+Para iPhone 15 ou 16, confira **potência suportada pelo aparelho, protocolo de carregamento da fonte e cabo adequado**. Ter um conector USB-C não significa automaticamente oferecer carregamento rápido em qualquer combinação.
+
+Evite avaliar uma fonte apenas pelo número de watts impresso no título. Procure identificação do fabricante, informações elétricas coerentes e condições de garantia. Se o anúncio mistura várias potências na mesma página, selecione a variante correta antes de comparar o preço.
+
+
 
 **Comece pelo cabo que encaixa no seu iPhone e pelo protocolo da fonte.** “30 W” no título não garante carga rápida, qualidade ou compatibilidade com qualquer aparelho.
 

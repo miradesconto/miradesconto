@@ -8,10 +8,18 @@ status: "publicado"
 published: true
 autor: "MiraDesconto"
 data: "2026-10-12"
-atualizado: "2026-10-12"
+atualizado: "2026-11-20"
 ordem: 18
 destaque: false
 ---
+
+## A diferença que importa: você precisa do dock?
+
+Não escolha apenas pela aparência dos dois mouses. Na comparação dos anúncios, veja **peso informado, tipo de sensor, conexão, autonomia e o que acompanha a caixa**. Um dock só compensa se facilitar seu uso e estiver incluído na variante escolhida.
+
+Para FPS, priorize formato que acomode sua pegada, estabilidade da conexão e possibilidade de ajustar DPI. Para escritório, conforto e recarga prática podem pesar mais. A nomenclatura de uma linha não garante que todos os vendedores ofereçam a mesma versão.
+
+
 
 **Se a base de carregamento será usada todos os dias, o X11 merece entrar na comparação. Se ela ficará guardada, comece pelo formato e pelo preço final do R1.** Essa é a diferença mais útil para organizar a compra.
 

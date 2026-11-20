@@ -8,10 +8,18 @@ status: "publicado"
 published: true
 autor: "MiraDesconto"
 data: "2026-10-12"
-atualizado: "2026-10-12"
+atualizado: "2026-11-20"
 ordem: 36
 destaque: false
 ---
+
+## O principal risco nos drones baratos
+
+Termos como “4K”, “profissional” e “GPS” podem aparecer em títulos de variantes distintas. Antes de pagar, procure no anúncio o **modelo exato, o tipo de estabilização da câmera, a bateria incluída e o alcance declarado nas condições do fabricante**.
+
+Se a finalidade é gravar imagens estáveis para trabalho, não presuma que um drone de entrada entrega resultado cinematográfico. Se for para aprender, considere disponibilidade de hélices e baterias de reposição, além das regras aplicáveis ao voo no Brasil.
+
+
 
 **Não escolha um E88 pela palavra “4K” do título.** Primeiro peça amostras originais, identifique a variante e descubra o que vem no kit.
 

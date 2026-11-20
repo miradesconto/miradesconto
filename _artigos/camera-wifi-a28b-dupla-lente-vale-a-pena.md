@@ -8,9 +8,17 @@ status: "publicado"
 published: true
 autor: "MiraDesconto"
 data: "2026-10-10"
-atualizado: "2026-10-12"
+atualizado: "2026-11-20"
 destaque: false
 ---
+
+## O que o anúncio precisa esclarecer
+
+Uma câmera anunciada com “4K”, “dupla lente” e “visão noturna colorida” merece uma checagem cuidadosa: **qual é a resolução real de cada lente e o que é gravado no cartão ou na nuvem?** Imagens ilustrativas e nomes comerciais não respondem a isso.
+
+Para instalar do lado de fora, confirme alimentação, proteção contra água, cobertura do Wi-Fi no local e se o aplicativo exige assinatura para funções importantes. Sem teste próprio, não há como garantir alcance, qualidade noturna ou resistência à chuva.
+
+
 
 A A28B chama atenção pela dupla lente e pelas palavras “4K” e “IP66” no anúncio. **Antes de comprar, descubra como ela grava e onde você pretende instalar.** Uma câmera que não alcança o Wi-Fi ou exige uma assinatura inesperada vira uma economia ruim.
 

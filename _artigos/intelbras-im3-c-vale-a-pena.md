@@ -8,10 +8,18 @@ status: "publicado"
 published: true
 autor: "MiraDesconto"
 data: "2026-10-12"
-atualizado: "2026-10-12"
+atualizado: "2026-11-20"
 ordem: 18
 destaque: false
 ---
+
+## Quando a iM3 C é uma escolha inadequada
+
+Se você quer monitorar portão exposto à chuva, entrada de garagem sem cobertura ou um ponto longe do Wi-Fi, faça a verificação de instalação antes de olhar o preço. A câmera precisa atender às condições físicas do local, não só às funções do aplicativo.
+
+Para ambientes internos, confirme se a tomada fica próxima, se a área de visão cobre o que importa e quais recursos dependem de armazenamento local ou serviço pago. Não afirmamos desempenho noturno ou estabilidade de conexão sem teste.
+
+
 
 **A iM3 C merece comparação para acompanhar um ambiente interno e acessar a câmera pelo celular.** Se o local fica exposto à chuva, procure uma opção externa; preço menor não muda o uso indicado.
 

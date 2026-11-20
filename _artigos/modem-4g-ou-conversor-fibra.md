@@ -8,10 +8,18 @@ status: "publicado"
 published: true
 autor: "MiraDesconto"
 data: "2026-10-12"
-atualizado: "2026-10-12"
+atualizado: "2026-11-20"
 ordem: 40
 destaque: false
 ---
+
+## Não são substitutos diretos
+
+**Modem 4G** usa rede móvel e depende de sinal, operadora e plano de dados. **Conversor de mídia de fibra** transforma o tipo de conexão física e precisa de uma infraestrutura de rede compatível; ele não cria internet sozinho.
+
+Se a meta é ter internet onde não existe fibra, avalie cobertura móvel e franquia. Se a meta é interligar equipamentos por fibra, confira padrão óptico, velocidade, conectores e se o par de módulos é compatível. Comprar o dispositivo errado não resolve a falta de conexão.
+
+
 
 **Modem 4G e conversor de fibra não são alternativas diretas.** O primeiro pode conectar pela rede celular; o segundo liga segmentos de uma rede compatível. Antes de comprar, descubra qual conexão você tem e qual precisa entregar.
 

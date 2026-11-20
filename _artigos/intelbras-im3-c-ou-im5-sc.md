@@ -8,10 +8,18 @@ status: "publicado"
 published: true
 autor: "MiraDesconto"
 data: "2026-10-12"
-atualizado: "2026-10-12"
+atualizado: "2026-11-20"
 ordem: 35
 destaque: false
 ---
+
+## Uso interno e externo: a decisão vem antes do preço
+
+Para monitorar um ambiente interno, avalie posição de tomada, alcance do Wi-Fi, ângulo de visão e a privacidade de quem circula pelo local. Em área externa, a prioridade muda: confira proteção contra intempéries, pontos de fixação e iluminação noturna.
+
+**Não compre uma câmera para chuva ou sol apenas porque a foto do anúncio mostra uma parede externa.** Confirme a classificação de proteção do modelo específico na documentação do fabricante.
+
+
 
 **Para um ambiente interno, comece pela iM3 C. Para uma área exposta, investigue a iM5 SC Black e a instalação adequada.** O local vem antes de qualquer promoção.
 
