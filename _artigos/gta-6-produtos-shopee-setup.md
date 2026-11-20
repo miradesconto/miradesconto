@@ -4,6 +4,9 @@ resumo: "Uma seleção de oito anúncios de GTA VI: mousepad, caneca, camiseta, 
 description: "Encontre produtos de GTA 6 na Shopee: decoração, mousepad, camiseta, caneca e chaveiros. Veja o que conferir e os consoles compatíveis."
 categoria: "guias"
 produtos: []
+custom_image: "/assets/blog/gta6/gta6-produtos-shopee-capa.svg"
+image: "/assets/blog/gta6/gta6-produtos-shopee-capa.svg"
+cover: "/assets/blog/gta6/gta6-produtos-shopee-capa.svg"
 status: "publicado"
 published: true
 autor: "MiraDesconto"
