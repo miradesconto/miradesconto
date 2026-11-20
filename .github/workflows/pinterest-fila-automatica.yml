@@ -1,7 +1,5 @@
 name: Pinterest — fila diária aprovada
 on:
-  schedule:
-    - cron: '0 11 * * *'
   workflow_dispatch:
   pull_request:
     paths:
