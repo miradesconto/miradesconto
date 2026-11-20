@@ -1,0 +1,53 @@
+name: Pinterest — afiliados diretos
+on:
+  schedule:
+    - cron: '0 11 * * *'
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'integracoes/pinterest/fila_afiliados.py'
+      - 'integracoes/pinterest/fila_afiliados.json'
+      - 'tests/test_pinterest_affiliates.py'
+      - '.github/workflows/pinterest-afiliados-diretos.yml'
+permissions:
+  contents: read
+concurrency:
+  group: pinterest-manual-publish
+  cancel-in-progress: false
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -p 'test_pinterest_affiliates.py' -v
+      - run: python integracoes/pinterest/fila_afiliados.py
+  publish:
+    needs: validate
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+      - name: Publicar um Pin aprovado diretamente para marketplace
+        env:
+          PINTEREST_ACCESS_TOKEN: ${{ secrets.PINTEREST_ACCESS_TOKEN }}
+        run: python integracoes/pinterest/fila_afiliados.py --publish
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: estado-pinterest-afiliados-${{ github.run_id }}
+          path: integracoes/pinterest/estado_afiliados.json
+          retention-days: 30
