@@ -24,7 +24,14 @@ class PublishedShopeeTests(unittest.TestCase):
    self.assertIn('published: true',front)
    self.assertIn('shopee_item_id: "'+item+'"',front)
    self.assertIn('affiliate_url: "'+url+'"',front)
-   self.assertIn(image,front)
+   # Imagens de Shopee são salvas localmente; valida foto real e mantém a origem no CSV.
+   cover=re.search(r'^custom_image:\s*"([^"]+)"',front,re.M)
+   self.assertIsNotNone(cover,slug)
+   self.assertTrue(cover.group(1).startswith('/assets/'),slug)
+   cover_path=ROOT/cover.group(1).lstrip('/')
+   self.assertTrue(cover_path.is_file() and cover_path.stat().st_size>10000,slug)
+   data=cover_path.read_bytes()
+   self.assertTrue(data.startswith(bytes.fromhex('ffd8')) or data.startswith(b'RIFF') or data.startswith(bytes.fromhex('89504e47')),slug)
    self.assertIn('{% include link-shopee.html item_id=page.shopee_item_id %}',article)
    self.assertIn('{% include foto-shopee.html %}',article)
  def test_no_shopee_additions_to_ml_catalog(self):
