@@ -18,12 +18,26 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v7
         with:
           python-version: '3.12'
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Bloquear publicação de artigo novo ou alterado sem capa real
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          if [ -n "$BASE_SHA" ] && git cat-file -e "$BASE_SHA^{commit}" 2>/dev/null; then
+            python integracoes/automacao/check_blog_covers.py --base "$BASE_SHA"
+          elif git rev-parse HEAD^ >/dev/null 2>&1; then
+            python integracoes/automacao/check_blog_covers.py --base HEAD^
+          else
+            echo 'Sem base Git válida para conferência de capas' >&2
+            exit 1
+          fi
       - name: Validar dados e testar falhas sem rede
         run: |
           python integracoes/catalogo.py check
