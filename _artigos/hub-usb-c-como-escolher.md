@@ -8,11 +8,19 @@ status: "publicado"
 published: true
 autor: "MiraDesconto"
 data: "2026-11-12"
-atualizado: "2026-11-12"
+atualizado: "2026-11-20"
 ordem: 61
 destaque: false
 custom_image: "/assets/ofertas/fae5a0c675cfaf7196c8a470.jpg"
 ---
+
+## O detalhe que costuma confundir
+
+**USB-C é o formato do conector, não uma promessa de vídeo, recarga ou velocidade.** Um notebook pode ter porta USB-C apenas para dados; outro pode suportar saída de vídeo e alimentação. Consulte as especificações do computador antes de comprar um hub com HDMI.
+
+Para usar monitor externo, confira modo de vídeo suportado, resolução e frequência. Para carregar, verifique a potência do carregador e a passagem de energia do hub. Para vários SSDs e periféricos, confira a velocidade de dados compartilhada. Sem essas respostas, um hub com muitas portas pode continuar sendo a escolha errada.
+
+
 
 ![Acessório ilustrativo: Hub USB-C: como escolher e saber se funciona no notebook](/assets/ofertas/fae5a0c675cfaf7196c8a470.jpg)
 

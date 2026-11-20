@@ -8,10 +8,18 @@ status: "publicado"
 published: true
 autor: "MiraDesconto"
 data: "2026-10-23"
-atualizado: "2026-10-23"
+atualizado: "2026-11-20"
 ordem: 12
 destaque: false
 ---
+
+## Antes de escolher a fechadura
+
+**A porta é de madeira, metal ou vidro?** Verifique espessura, lado de abertura, distância da borda e se o modelo exige furação específica. Uma fechadura aparentemente barata pode exigir adaptação de instalação que muda o custo total.
+
+Cheque como abrir em caso de bateria descarregada, se há chave de emergência e se o conjunto suporta área externa quando necessário. Não confunda leitura biométrica com garantia de segurança; instalação e qualidade mecânica também importam.
+
+
 
 **Antes de escolher essa fechadura pelo preço, confirme se ela pode ser instalada na sua porta sem uma adaptação indesejada.** O anúncio descreve biometria, senha e tag, mas o título não identifica um fabricante e um código técnico completos. A compra depende de respostas que uma foto bonita não fornece.
 

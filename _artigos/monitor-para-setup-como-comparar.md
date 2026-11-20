@@ -9,10 +9,18 @@ status: "publicado"
 published: true
 autor: "MiraDesconto"
 data: "2026-10-02"
-atualizado: "2026-10-12"
+atualizado: "2026-11-20"
 ordem: 3
 destaque: false
 ---
+
+## Um exemplo frequente de erro na escolha
+
+Um monitor anunciado como “180 Hz” não significa que todo dispositivo entregará 180 quadros por segundo ou que essa taxa estará disponível em qualquer entrada. **Confira resolução, portas, cabo e limite do computador ou console**. No caso de notebook, consulte a versão e o modo de saída da porta de vídeo.
+
+Para trabalho, também pese tamanho do texto e ergonomia; para jogos competitivos, veja resposta medida e qualidade do painel em testes independentes. O número de milissegundos divulgado pelo fabricante não descreve sozinho o desfoque real.
+
+
 
 Se você quer saber **qual monitor comprar em 2026**, não escolha apenas pelo maior número de Hz. Taxa de atualização importa, mas painel, resolução, conexões, ergonomia e a capacidade do seu PC de gerar FPS suficientes podem mudar completamente a compra.
 

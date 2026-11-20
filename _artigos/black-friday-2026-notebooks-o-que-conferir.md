@@ -14,6 +14,14 @@ ordem: 0
 destaque: false
 ---
 
+## Um exemplo de comparação justa
+
+Imagine dois notebooks anunciados com “Ryzen 5, 16 GB e 512 GB”. Isso ainda não basta: confira o **código completo do processador, a possibilidade de expansão da memória, o painel e o sistema operacional**. Se um vier com Linux e outro com Windows, inclua o custo e o esforço de instalar o sistema que precisa.
+
+Para quem abre muitas abas e trabalha com documentos e sistemas web, memória e estabilidade geralmente são prioridades mais concretas que um selo “gamer” no anúncio. O link de afiliado deve levar à variante efetivamente descrita, não a uma configuração parecida.
+
+
+
 A Black Friday acontece em **27 de novembro de 2026**. Para comprar um notebook, vale mais comparar a configuração e o preço final do que confiar em uma porcentagem de desconto exibida no anúncio.
 
 > **Nota editorial:** a capa apresenta uma arte editorial de notebook do catálogo MiraDesconto. Não representa todos os modelos ou uma promoção confirmada. O guia não é um teste físico.

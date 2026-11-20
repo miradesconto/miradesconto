@@ -8,7 +8,7 @@ status: "publicado"
 published: true
 autor: "MiraDesconto"
 data: "2026-10-12"
-atualizado: "2026-10-12"
+atualizado: "2026-11-20"
 ordem: 20
 destaque: false
 platform: "shopee"
@@ -18,6 +18,14 @@ custom_image: "https://down-br.img.susercontent.com/file/cn-11134207-820l4-mmh5v
 image_source: "https://shopee.com.br/Mouse-Attack-Shark-X11-Bluetooth-para-notebook-sem-fio-com-dock-de-carregamento-magn%C3%A9tico-63-g-ultraleve-22000-DPI-novo-i.1672861664.48360418130"
 catalog_product_id: "prod_sp_48360418130"
 ---
+
+## Confirme se o dock está na caixa
+
+Anúncios com várias variantes podem mostrar um dock na imagem e vender também o mouse sem base. **Selecione a opção exata e confira a lista do conteúdo da embalagem** antes de comparar preços.
+
+Para uso diário, avalie pegada, receptor USB, bateria e facilidade de recarga. Para FPS, pesquise sensor e estabilidade da conexão da versão escolhida. Como não realizamos teste físico, não publicamos afirmações de latência ou autonomia medidas.
+
+
 
 <p class="shopee-disclosure"><strong>Publicidade:</strong> este artigo contém links de afiliado da Shopee.</p>
 

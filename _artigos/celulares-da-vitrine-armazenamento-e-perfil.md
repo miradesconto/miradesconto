@@ -8,10 +8,18 @@ status: "publicado"
 published: true
 autor: "MiraDesconto"
 data: "2026-10-12"
-atualizado: "2026-10-12"
+atualizado: "2026-11-20"
 ordem: 34
 destaque: false
 ---
+
+## Compare modelos usando a mesma régua
+
+Para fotos e mensagens, o espaço ocupado hoje é o melhor ponto de partida. Para gravar vídeos longos, **128 GB podem ficar apertados dependendo da rotina**; para quem quase não armazena arquivos locais, pagar mais só por capacidade pode não fazer sentido.
+
+Não compare um aparelho de 256 GB novo com outro de 128 GB recondicionado apenas pelo preço. Registre armazenamento, estado, cobertura de garantia e preço total de cada variante antes de decidir. No catálogo, as ofertas são anúncios para consulta, não comprovação de menor preço.
+
+
 
 Se seu celular funciona, mas vive sem espaço, trocar por outro com a mesma capacidade pode repetir o problema. **Escolha primeiro o armazenamento e o que falta na sua rotina; depois compare as gerações.**
 

@@ -8,11 +8,19 @@ status: "publicado"
 published: true
 autor: "MiraDesconto"
 data: "2026-11-15"
-atualizado: "2026-11-15"
+atualizado: "2026-11-20"
 ordem: 0
 destaque: false
 custom_image: "https://blog.playstation.com/tachyon/2026/02/600e22be08c93213524019a20aeccf5552a87610.jpg"
 ---
+
+## Antes de procurar mídia física ou acessórios
+
+Não compre um anúncio apenas por usar o nome de uma franquia popular. **Confira na fonte oficial a existência do jogo, as plataformas confirmadas e o formato da edição anunciada.** Artes promocionais, capas reproduzidas e títulos de vendedores não comprovam lançamento nem compatibilidade.
+
+Se aparecer um anúncio de pré-venda, examine quem entrega, prazo, política de cancelamento e se se trata de jogo, acessório ou item decorativo. Sem uma oferta de afiliado verificada, este guia permanece informativo; não incluiremos um botão comercial genérico.
+
+
 
 **God of War Sons of Sparta tem lançamento anunciado para PS4 em 16 de novembro de 2026 e já está disponível para PS5.** Antes de comprar, confira a plataforma indicada na loja: não presuma que uma licença de PS5 inclua a versão PS4.
 

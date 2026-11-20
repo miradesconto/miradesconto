@@ -8,10 +8,18 @@ status: "publicado"
 published: true
 autor: "MiraDesconto"
 data: "2026-10-23"
-atualizado: "2026-10-23"
+atualizado: "2026-11-20"
 ordem: 9
 destaque: false
 ---
+
+## O que verificar além do switch vermelho
+
+“Switch red” não informa sozinho o ruído, a força de acionamento ou a sensação de digitação. Confirme **layout ABNT2 ou internacional, idioma das teclas, formato do teclado e possibilidade de troca de switches** na variante anunciada.
+
+Para trabalhar com números diariamente, avalie se você realmente pode abrir mão do teclado numérico. Para FPS, espaço para mover o mouse pode valer mais do que um bloco extra de teclas. O melhor layout depende da mesa e da rotina, não do rótulo gamer.
+
+
 
 **O Machenike K500B-B87 com Switch Red pode fazer sentido para quem quer um teclado mecânico com fio e possibilidade de trocar switches.** Antes de escolher, resolva duas questões: o layout da unidade vendida e a compatibilidade dos switches. São detalhes mais importantes que a iluminação RGB para evitar uma compra frustrante.
 

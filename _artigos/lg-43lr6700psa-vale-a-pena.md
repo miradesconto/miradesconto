@@ -9,10 +9,18 @@ status: "publicado"
 published: true
 autor: "MiraDesconto"
 data: "2026-10-15"
-atualizado: "2026-11-10"
+atualizado: "2026-11-20"
 ordem: 6
 destaque: false
 ---
+
+## Antes de trocar o monitor por uma TV
+
+O tamanho de 43 polegadas pode funcionar bem para assistir a filmes a certa distância, mas em uma mesa curta a ergonomia muda. Meça **distância de visualização, espaço para a base e altura de instalação** antes de decidir.
+
+Para console, confira entrada HDMI, resolução aceita, frequência real do painel, modo jogo e recursos disponíveis no firmware do modelo. Não interprete termos de processamento de imagem como garantia de painel de alta frequência.
+
+
 
 **A LG 43LR6700PSA pode fazer sentido para quem quer uma Smart TV de 43 polegadas para séries, TV aberta e streaming sem pagar necessariamente por uma tela 4K.** Mas há um detalhe decisivo: apesar do HDR10 Pro anunciado, **o painel é Full HD (1.920 × 1.080) e opera a 60 Hz**.
 
