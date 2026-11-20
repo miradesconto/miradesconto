@@ -9,3 +9,19 @@ Artigos em `_artigos/*.md` são convertidos em páginas pelo Jekyll do GitHub Pa
 `_data/produtos.json` espelha nomes, imagens e disponibilidade de links do catálogo. É sincronizado por `node blog/build.cjs`, pela organização do catálogo e pelo importador. Não edite esse espelho manualmente.
 
 Validação: `node blog/verify.cjs` e `node test-catalogo.cjs`. Confira também a publicação Jekyll em Actions e os links no site após o commit.
+
+
+## Regra obrigatória: sem capa, sem publicar
+
+Um artigo **novo ou alterado** só pode receber `status: "publicado"` e `published: true` se tiver **imagem de capa local real e válida** em `/assets/`, cadastrada em `custom_image` (preferencialmente), `cover` ou `image`. Não usar placeholder, imagem inexistente, thumbnail borrada nem link temporário/externo.
+
+Exemplo:
+```yaml
+custom_image: "/assets/blog/nome-da-pauta/capa.webp"
+status: "publicado"
+published: true
+```
+
+O verificador `python integracoes/automacao/check_blog_covers.py --base HEAD^` reprova novos/alterados que estejam publicados sem arquivo local de capa. Está ligado ao workflow **Validar catálogo e gerar prévia** e roda antes de montar a prévia Jekyll. Publicações antigas não alteradas ficam preservadas nesta etapa de migração.
+
+**Importante:** uma checagem do GitHub Actions falha quando falta capa, mas só impede que um push direto vire site automaticamente se o fluxo de publicação exigir esse check (por exemplo, com proteção de branch e deploy dependente da validação). Não tratar CI separado como garantia de bloqueio do GitHub Pages. Até configurar esse requisito, criar o artigo como **rascunho** e só mudar para publicado após a checagem passar.
