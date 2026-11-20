@@ -23,6 +23,13 @@ class TechPolicyTest(unittest.TestCase):
         self.assertEqual(category({'name': 'Notebook Acer Nitro V15'}), 'Notebooks')
         self.assertEqual(category({'name': 'Mouse gamer sem fio'}), 'Setup')
 
+    def test_phone_camera_spec_does_not_make_it_smart_home(self):
+        for name in ('Celular Samsung Galaxy S25 Fe 5g, 128gb, Câmera Tripla',
+                     'Smartphone Motorola Edge 60 Fusion 5g - Câmera 50mp'):
+            self.assertEqual(category({'name': name}), 'Celulares', name)
+        self.assertEqual(category({'name': 'Câmera Inteligente Full HD Intelbras'}), 'Smart Home')
+        self.assertEqual(category({'name': 'Suporte celular para carro'}), 'Celulares')
+
     def test_discount_ending_removes_publication_but_keeps_registration(self):
         p = self.product('Mouse gamer')
         c = dict(products=[p], publishedIds=[p['id']], metadata={'niche':'tech'})
@@ -62,3 +69,26 @@ class TechPolicyTest(unittest.TestCase):
         reconcile(c)
         self.assertEqual(c['publishedIds'], [])
 
+
+class FailureReportTest(unittest.TestCase):
+    def test_lists_unconfirmed_ids_by_reason_without_prices(self):
+        import io, os, tempfile
+        from contextlib import redirect_stdout
+        with tempfile.TemporaryDirectory() as tmp:
+            summary = os.path.join(tmp, 'summary.md')
+            with patch.dict(os.environ, {'GITHUB_STEP_SUMMARY': summary}), redirect_stdout(io.StringIO()):
+                public_prices.report_failures(
+                    {'exact_product_card_not_found': ['MLB2', 'MLB1'], 'price_jump_requires_review': ['MLB3']},
+                    {'MLB1', 'MLB3'})
+            text = open(summary, encoding='utf-8').read()
+        self.assertIn('| `exact_product_card_not_found` | 2 | 1 | MLB1, MLB2 |', text)
+        self.assertIn('| `price_jump_requires_review` | 1 | 1 | MLB3 |', text)
+        self.assertNotIn('R$', text)
+
+    def test_no_failures_writes_nothing(self):
+        import io
+        from contextlib import redirect_stdout
+        out = io.StringIO()
+        with redirect_stdout(out):
+            public_prices.report_failures({}, set())
+        self.assertEqual(out.getvalue(), '')

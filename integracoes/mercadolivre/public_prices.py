@@ -6,6 +6,7 @@ unconfirmed product keeps its previous price evidence and published position.
 """
 from __future__ import annotations
 
+import os
 import sys
 import argparse
 from collections import Counter
@@ -20,6 +21,27 @@ import catalogo
 from qualidade import usable_price
 from tech_policy import category, reconcile
 from rebuild_catalog import refresh_one
+
+
+def report_failures(failed_ids, published, limit=40):
+    """List unconfirmed IDs by reason so a failing page format can be diagnosed.
+
+    Only IDs and reasons are written; no prices, URLs or credentials.
+    """
+    if not failed_ids:
+        return
+    lines = ['', '### Preços não confirmados nesta coleta', '',
+             '| Motivo | Total | Na vitrine | IDs (até %d) |' % limit, '|---|---:|---:|---|']
+    for reason, ids in sorted(failed_ids.items(), key=lambda item: -len(item[1])):
+        ids = sorted(ids)
+        shown = ', '.join(ids[:limit]) + (' …' if len(ids) > limit else '')
+        lines.append(f'| `{reason}` | {len(ids)} | {sum(i in published for i in ids)} | {shown} |')
+    text = '\n'.join(lines) + '\n'
+    print(text)
+    summary = os.environ.get('GITHUB_STEP_SUMMARY')
+    if summary:
+        with open(summary, 'a', encoding='utf-8') as handle:
+            handle.write(text)
 
 
 def update(current, timestamp, workers=10, rotate=False):
@@ -39,6 +61,7 @@ def update(current, timestamp, workers=10, rotate=False):
     changed = 0
     fresh_ids = set(api_ids)
     failures = Counter()
+    failed_ids = {}
     with ThreadPoolExecutor(max_workers=workers) as executor:
         futures = {executor.submit(refresh_one, product, timestamp.isoformat(timespec='seconds')): index
                    for index, product in candidates}
@@ -49,13 +72,16 @@ def update(current, timestamp, workers=10, rotate=False):
             except Exception as exc:
                 fresh, error = None, {'reason': type(exc).__name__}
             if fresh is None:
-                failures[(error or {}).get('reason', 'unconfirmed')] += 1
+                reason = (error or {}).get('reason', 'unconfirmed')
+                failures[reason] += 1
+                failed_ids.setdefault(reason, []).append(products[index]['id'])
                 continue
             confirmed += 1
             fresh_ids.add(fresh['id'])
             changed += fresh != products[index]
             result['products'][index] = fresh
     print(f'Cartões exatos confirmados: {confirmed}/{len(candidates)}; alterados: {changed}; falhas: {dict(failures)}')
+    report_failures(failed_ids, published)
     if not confirmed:
         raise RuntimeError('Nenhum preço confirmado; catálogo preservado')
     metadata = dict(current['metadata'])
