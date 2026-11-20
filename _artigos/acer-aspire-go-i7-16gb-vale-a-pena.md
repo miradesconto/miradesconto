@@ -1,4 +1,5 @@
 ---
+custom_image: "/assets/pinterest/acer-aspire-go-i7.png"
 title: "Acer Aspire Go i7 com 16 GB: vale a pena comprar em 2026?"
 resumo: "Veja o que conferir no anúncio do Acer Aspire Go i7 com 16 GB: processador, memória, tela, SSD e garantia antes da compra."
 description: "Veja o que conferir no anúncio do Acer Aspire Go i7 com 16 GB: processador, memória, tela, SSD e garantia antes da compra."

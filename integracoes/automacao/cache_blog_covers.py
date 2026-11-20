@@ -17,7 +17,7 @@ for name in ("produtos.json","editorial_products.json"):
     products.update(json.loads((ROOT/"_data"/name).read_text()))
 
 def image_valid(path):
-    if not path.is_file() or path.stat().st_size<10000:
+    if not path.is_file() or path.stat().st_size<(500 if path.suffix==".svg" else 10000):
         return False
     data=path.read_bytes()
     if path.suffix==".png": return data.startswith(b"\x89PNG\r\n\x1a\n")
