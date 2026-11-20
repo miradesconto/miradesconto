@@ -2,6 +2,8 @@ const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),asse
 const root=path.resolve(__dirname,'..'),ctx={window:{}};
 vm.runInNewContext(fs.readFileSync(path.join(root,'produtos.js'),'utf8'),ctx);
 const data=JSON.parse(fs.readFileSync(path.join(root,'_data/produtos.json'),'utf8'));
+const editorialData=JSON.parse(fs.readFileSync(path.join(root,'_data/editorial_products.json'),'utf8'));
+const allProducts={...data,...editorialData};
 for(const p of ctx.window.MIRA_DATA.products)assert.deepEqual(data[p.id],{name:p.name,imageUrl:p.imageUrl,available:p.available!==false,affiliateUrl:p.offerUrl||p.affiliateUrl});
 const registered=new Set(JSON.parse(fs.readFileSync(path.join(root,'dados/catalogo.json'),'utf8')).products.map(p=>p.id));
 const archived=new Set(JSON.parse(fs.readFileSync(path.join(root,'links-afiliados.json'),'utf8')).map(p=>p.id));
@@ -18,8 +20,8 @@ for(const name of fs.readdirSync(path.join(root,'_artigos'))){
  if(m.status==='publicado') {
   const directAffiliate=affiliatePattern.test(text);
   const linkedProducts=m.produtos.filter(id=> {
-    const item=data[id];
-    return item && item.affiliateUrl && item.imageUrl;
+    const item=allProducts[id];
+    return item && /^https:\/\//.test(item.affiliateUrl||'') && /^https:\/\//.test(item.imageUrl||'');
   });
   if(!directAffiliate && linkedProducts.length===0){
     missingAffiliate++;
