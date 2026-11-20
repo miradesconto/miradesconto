@@ -35,6 +35,16 @@ layout: null
 
 .skip-link{position:absolute;left:16px;top:-100px;z-index:1000;background:#fff;color:#15803d;padding:14px}.skip-link:focus{top:12px}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* Correção de isolamento: imagens não podem invadir o texto dos cards BF. */
+.bf-home .bf-home-products{align-items:stretch}
+.bf-home .bf-home-item{display:flex!important;flex-direction:column!important;min-width:0;position:relative}
+.bf-home .bf-home-item>.bf-home-photo{display:block!important;position:relative;flex:0 0 170px!important;width:100%;height:170px!important;min-height:0!important;overflow:hidden!important;isolation:isolate;background:#fff}
+.bf-home .bf-home-item>.bf-home-photo>img{display:block!important;position:absolute!important;inset:0!important;width:100%!important;height:100%!important;min-width:0!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;object-position:center!important;padding:14px!important;box-sizing:border-box!important;transform:none!important}
+.bf-home .bf-home-item>.bf-home-copy{position:relative;z-index:1;display:flex!important;flex:1 1 auto;min-width:0;flex-direction:column!important;gap:5px;padding:15px!important;background:#fff;overflow-wrap:anywhere}
+.bf-home .bf-home-item>.bf-home-copy>small{position:static!important;display:block;font-size:10px!important;line-height:1.3!important;margin:0!important}
+.bf-home .bf-home-item>.bf-home-copy>h3{position:static!important;display:-webkit-box!important;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;font-size:13px!important;line-height:1.42!important;min-height:0!important;margin:0 0 8px!important;font-weight:750}
+.bf-home .bf-home-item>.bf-home-copy>.bf-home-shop{position:static!important;margin-top:auto!important;display:inline-block!important;font-size:12px!important;padding-top:7px!important}
+@media(max-width:540px){.bf-home .bf-home-item>.bf-home-photo{height:145px!important;flex-basis:145px!important}.bf-home .bf-home-item>.bf-home-copy{padding:12px!important}}
 </style>
 <link rel="stylesheet" href="idiomas.css"><link rel="stylesheet" href="vitrine.css">
 <style>
@@ -91,7 +101,7 @@ body.focused-catalog .vitrine-diaria,body.search-active .vitrine-diaria{display:
       {% if bf_item and bf_image and bf_item.affiliateUrl %}
       <article class="bf-home-item">
         <a class="bf-home-photo" href="{{ bf_item.affiliateUrl | escape }}" rel="sponsored nofollow noopener noreferrer" target="_blank" aria-label="Conferir {{ bf_item.name | escape }} no anúncio"><img src="{{ bf_image | escape }}" alt="{{ bf_item.name | escape }}" width="250" height="175" loading="lazy" decoding="async"></a>
-        <div><small>{{ bf_item.category | escape }}</small><h3>{{ bf_item.name | truncate: 62 | escape }}</h3><a href="{{ bf_item.affiliateUrl | escape }}" rel="sponsored nofollow noopener noreferrer" target="_blank">Ver na loja ↗</a></div>
+        <div class="bf-home-copy"><small>{{ bf_item.category | escape }}</small><h3>{{ bf_item.name | truncate: 62 | escape }}</h3><a href="{{ bf_item.affiliateUrl | escape }}" rel="sponsored nofollow noopener noreferrer" target="_blank" class="bf-home-shop">Ver na loja ↗</a></div>
       </article>
       {% endif %}
     {% endfor %}
