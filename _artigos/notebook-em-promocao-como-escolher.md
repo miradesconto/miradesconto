@@ -8,10 +8,18 @@ status: "publicado"
 published: true
 autor: "MiraDesconto"
 data: "2026-10-02"
-atualizado: "2026-10-12"
+atualizado: "2026-11-20"
 ordem: 2
 destaque: false
 ---
+
+## A comparação que impede uma falsa promoção
+
+Copie o **código completo do modelo** e confira se CPU, RAM, SSD, tela e sistema operacional são iguais nas duas lojas. É comum duas ofertas terem praticamente o mesmo nome e configurações distintas.
+
+Depois compare preço no Pix, total parcelado, frete, prazo e condições de devolução. O valor riscado não demonstra sozinho desconto histórico; sem acompanhamento independente, prefira dizer “preço anunciado” em vez de “menor preço”.
+
+
 
 {% assign asus_radar = site.data.radar.byId["MLB4562931826"] %}
 {% assign lenovo_radar = site.data.radar.byId["MLB5761444412"] %}

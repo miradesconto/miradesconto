@@ -8,10 +8,18 @@ status: "publicado"
 published: true
 autor: "MiraDesconto"
 data: "2026-10-12"
-atualizado: "2026-10-12"
+atualizado: "2026-11-20"
 ordem: 30
 destaque: false
 ---
+
+## O que eu eliminaria primeiro
+
+Se você abre várias abas do navegador junto com planilhas ou sistema web, cuidado com versões de pouca RAM sem expansão. **Procure a configuração exata**, não apenas “notebook para estudar” no título. Um SSD ajuda na resposta do sistema, mas não compensa falta de memória para todos os usos.
+
+Confira resolução da tela, teclado, portas, sistema operacional e assistência. Para uma compra de longo prazo, gastar um pouco mais em memória útil pode ser melhor que escolher uma cor ou acabamento superior.
+
+
 
 Você precisa de um notebook para aula, navegador ou documentos e não quer gastar além do necessário. **A configuração mais barata só ajuda quando atende às tarefas que você realmente faz.** Uma máquina que já chega no limite pode custar tempo todos os dias.
 

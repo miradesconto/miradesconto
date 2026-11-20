@@ -8,10 +8,18 @@ status: "publicado"
 published: true
 autor: "MiraDesconto"
 data: "2026-11-10"
-atualizado: "2026-11-17"
+atualizado: "2026-11-20"
 ordem: 0
 destaque: false
 ---
+
+## Qual é o custo real para começar?
+
+Ao comparar PS5, Xbox Series X e Series S, não olhe apenas o valor do console. Coloque na conta **edição compatível do jogo, espaço disponível, tipo de mídia, assinatura online se necessária e a resolução da sua TV ou monitor**. Confira sempre as informações oficiais mais recentes de compatibilidade e lançamento; anúncios antigos podem ficar desatualizados.
+
+Quem já possui console compatível deve avaliar primeiro se realmente precisa comprar outro. A diferença de preço de hardware só se justifica quando oferece um benefício importante para a sua forma de jogar.
+
+
 
 **Para jogar GTA 6 instalado no videogame, as plataformas confirmadas são PlayStation 5 e Xbox Series X|S.** Isso inclui PS5, PS5 Slim e PS5 Pro, além de Xbox Series S e Series X. Se você já tem um desses aparelhos, comece pela escolha da edição do jogo.
 

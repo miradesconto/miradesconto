@@ -8,10 +8,18 @@ status: "publicado"
 published: true
 autor: "MiraDesconto"
 data: "2026-10-23"
-atualizado: "2026-10-23"
+atualizado: "2026-11-20"
 ordem: 11
 destaque: false
 ---
+
+## O que um relógio barato precisa entregar
+
+Antes de escolher um smartwatch, defina se você quer **notificações, chamadas, acompanhamento esportivo ou apenas hora e alarmes**. A compatibilidade do aplicativo com seu celular deve vir antes do tamanho da tela.
+
+Medições de saúde em relógios de consumo não substituem equipamentos médicos. Consulte limites declarados de resistência à água, duração da bateria nas condições de uso e se há recursos que exigem conexão constante com o telefone.
+
+
 
 **O QCY GT S8 entra na pesquisa de quem quer um relógio com tela AMOLED anunciada e recursos conectados ao celular.** Antes de decidir pelo visual, confirme o aplicativo, as funções disponíveis no seu telefone e o código da versão. Essas respostas valem mais que uma lista extensa de modos esportivos.
 

@@ -8,10 +8,18 @@ status: "publicado"
 published: true
 autor: "MiraDesconto"
 data: "2026-10-30"
-atualizado: "2026-10-30"
+atualizado: "2026-11-20"
 ordem: 8
 destaque: false
 ---
+
+## Não confunda streaming de vídeo com suporte a jogos
+
+Ter Fire TV, aplicativos de vídeo e saída HDMI **não significa automaticamente que o dispositivo execute jogos de Xbox ou ofereça o aplicativo necessário**. Antes de comprar, confirme no suporte oficial da Microsoft quais modelos e regiões são compatíveis, além do plano, controle e conexão exigidos.
+
+Se o objetivo é jogar sem console, não conclua a compatibilidade apenas por ver um ícone de Xbox em anúncio de marketplace. Essa informação muda com atualizações de aplicativos e dispositivos.
+
+
 
 **O Fire TV Stick 4K de 2ª geração aparece na lista oficial do Xbox para jogar pela nuvem. Antes de comprar, confira o nome completo e a geração do aparelho: apenas “Fire TV Stick” no anúncio não basta.** Se sua TV já oferece o aplicativo Xbox oficialmente, verifique essa opção primeiro.
 

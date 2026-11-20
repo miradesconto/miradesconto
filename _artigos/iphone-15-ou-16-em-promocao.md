@@ -9,10 +9,18 @@ status: "publicado"
 published: true
 autor: "MiraDesconto"
 data: "2026-10-02"
-atualizado: "2026-11-10"
+atualizado: "2026-11-20"
 ordem: 1
 destaque: true
 ---
+
+## A compra que eu evitaria
+
+Não pagaria a diferença entre iPhone 15 e 16 só por um nome mais novo. **Compare as mesmas versões de 128 GB, a garantia, o vendedor e o total das parcelas.** Se o orçamento estiver apertado, o armazenamento e o estado do aparelho são decisões mais importantes que uma função que você não pretende usar.
+
+Se a câmera macro ou os recursos compatíveis com Apple Intelligence forem determinantes, o 16 passa a ter um motivo específico para entrar na lista. A decisão muda com o preço final, que deve ser consultado diretamente em cada anúncio.
+
+
 
 Se os dois cabem no orçamento, a dúvida é justa: vale economizar no iPhone 15 ou levar os recursos extras do 16? **O 15 continua interessante quando a diferença final é relevante. O 16 ganha sentido se você quer macro, novos controles e recursos de IA compatíveis.**
 

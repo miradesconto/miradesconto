@@ -8,7 +8,7 @@ status: "publicado"
 published: true
 autor: "MiraDesconto"
 data: "2026-10-12"
-atualizado: "2026-10-12"
+atualizado: "2026-11-20"
 ordem: 21
 destaque: false
 platform: "shopee"
@@ -18,6 +18,14 @@ custom_image: "https://down-br.img.susercontent.com/file/sg-11134201-81zvk-mik9o
 image_source: "https://shopee.com.br/Carregador-Port%C3%A1til-Mini-Power-Bank-10000mAh-Com-02-Sa%C3%ADdas-Tipo-C-Lightning-i.408715442.22499247158"
 catalog_product_id: "prod_sp_22499247158"
 ---
+
+## Capacidade anunciada não é energia integral entregue ao celular
+
+Uma bateria externa rotulada como “10.000 mAh” não transfere necessariamente esse total para a bateria do telefone: há diferenças de tensão e perdas na conversão. **Confira capacidade nominal informada, potência de saída e tipos de conectores**.
+
+No iPhone, identifique se você precisa de Lightning ou USB-C. Se o power bank tiver cabo integrado, confira se ele é substituível e a garantia do acessório. Evite promessas de quantidade exata de recargas sem teste do conjunto.
+
+
 
 <p class="shopee-disclosure"><strong>Publicidade:</strong> este artigo contém links de afiliado da Shopee.</p>
 
