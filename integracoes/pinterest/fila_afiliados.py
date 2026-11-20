@@ -24,7 +24,7 @@ def validate_affiliate(url, merchant):
         return validate_ml_link(url)
     if merchant != "shopee" or not isinstance(url, str) or url != url.strip():
         raise ValueError("Marketplace ou link não aprovado.")
-    if re.search(r"[\\x00-\\x20\\x7f]", url):
+    if any(ord(c) <= 32 or ord(c) == 127 for c in url):
         raise ValueError("Link com caracteres inválidos.")
     try:
         parsed = urlsplit(url)
