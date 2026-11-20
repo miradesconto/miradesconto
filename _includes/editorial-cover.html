@@ -1,7 +1,6 @@
 {%- assign cover_entry = include.entry -%}
 {%- assign cover_src = cover_entry.custom_image | default: cover_entry.cover | default: cover_entry.image | default: site.data.editorial_covers[cover_entry.slug] -%}
 {%- unless cover_src -%}
-  {%- unless cover_src -%}
     {%- for product_id in cover_entry.produtos -%}
       {%- assign cover_product = site.data.editorial_products[product_id] | default: site.data.produtos[product_id] -%}
       {%- if cover_product.imageUrl and cover_product.imageVerifiedOnReview != false -%}
@@ -9,7 +8,6 @@
         {%- break -%}
       {%- endif -%}
     {%- endfor -%}
-  {%- endunless -%}
 {%- endunless -%}
 {% if cover_src %}
 <img src="{{ cover_src | relative_url | escape }}" alt="{{ cover_entry.title | escape }} — imagem ilustrativa" width="480" height="300" loading="lazy" decoding="async">
