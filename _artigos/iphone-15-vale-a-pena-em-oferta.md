@@ -7,7 +7,7 @@ status: "publicado"
 published: true
 autor: "MiraDesconto"
 data: "2026-10-02"
-atualizado: "2026-10-12"
+atualizado: "2026-11-20"
 ordem: 5
 destaque: false
 ---
@@ -15,6 +15,15 @@ destaque: false
 **O iPhone 15 pode ser uma boa entrada no iOS quando o preço final fica abaixo de alternativas equivalentes.** O cuidado é não transformar “mais barato” em único critério: espaço, condição do aparelho e garantia precisam entrar na conta.
 
 Quem troca um celular antigo pode aproveitar mais essa compra que alguém saindo de um iPhone recente. Antes de gastar, veja qual problema o novo aparelho vai resolver.
+
+## Para quem o iPhone 15 de 128 GB faz sentido
+
+- **Quem usa Android e quer experimentar o iOS:** compare o preço final com o iPhone 16 e considere a adaptação ao sistema.
+- **Quem tem um iPhone 11 ou 12:** USB-C, tela OLED e câmera de 48 MP são diferenças objetivas para analisar.
+- **Quem já tem iPhone 14:** a troca merece mais cautela; confirme se USB-C ou câmera realmente resolvem uma limitação.
+- **Quem filma muito:** olhe o armazenamento usado hoje. Comprar 128 GB sem espaço suficiente pode gerar outra troca prematura.
+
+**Anúncio usado nesta comparação:** [iPhone 15 de 128 GB no Mercado Livre](https://meli.la/2fjdF1E){:rel="sponsored nofollow noopener noreferrer" target="_blank"}. É um link de afiliado cadastrado. Não consideramos seu preço atual verificado; confira vendedor, parcelas e frete na página antes de decidir.
 
 ## O que ele oferece
 
