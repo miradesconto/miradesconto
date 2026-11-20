@@ -4,6 +4,10 @@ App ID: `1613942`. Nível **Standard confirmado** pelo titular em 14/10/2026.
 Fluxo OAuth previsto: `http://localhost:8765/callback` (já registrado no Pinterest).
 A integração roda no Python/GitHub Actions, jamais no JavaScript público do site.
 
+## Padrão visual premium obrigatório
+
+Antes de gerar, aprovar ou publicar qualquer novo Pin, consulte [PADRAO-QUALIDADE-PINS.md](PADRAO-QUALIDADE-PINS.md). O documento registra as especificações permanentes de identidade (branco/preto/verde), PNG nítido 2:3 de pelo menos 1000×1500, revisão visual, links diretos de afiliados, SEO, transparência comercial e critérios de reprovação. Uma arte ruim **não deve** receber `approved: true` na fila.
+
 ## Autorizar a conta Pinterest (uma vez, no computador do titular)
 
 1. Revise e incorpore o PR. No Windows, instale Python 3.12+ e GitHub CLI (`gh`). Faça `gh auth login` com a conta que administra `miradesconto/miradesconto`.
