@@ -65,7 +65,7 @@ class AffiliateQueueTests(unittest.TestCase):
                 self.assertEqual(saved[-1]["posts"]["one"]["status"], "uncertain")
                 return {"id": "123456"}
             return {"link": self.post["affiliate"], "board_id": "123"}
-        with patch.object(affiliate, "find_board", return_value="123"), patch.object(
+        with patch.object(affiliate, "existing_pins", return_value={}), patch.object(affiliate, "find_board", return_value="123"), patch.object(
                 affiliate, "pinterest_request", side_effect=api):
             affiliate.run(self.queue, self.state, "token", publish=True, root=self.root,
                           save=lambda x: saved.append(json.loads(json.dumps(x))))
