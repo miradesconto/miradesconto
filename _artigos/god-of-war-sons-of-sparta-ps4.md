@@ -11,7 +11,7 @@ data: "2026-11-15"
 atualizado: "2026-11-20"
 ordem: 0
 destaque: false
-custom_image: "https://blog.playstation.com/tachyon/2026/02/600e22be08c93213524019a20aeccf5552a87610.jpg"
+custom_image: "/assets/blog/covers/god-of-war-sons-of-sparta-ps4.webp"
 ---
 
 ## Antes de procurar mídia física ou acessórios

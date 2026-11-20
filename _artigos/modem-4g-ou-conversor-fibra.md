@@ -1,4 +1,5 @@
 ---
+custom_image: "/assets/blog/covers/modem-4g-ou-conversor-fibra.webp"
 title: "Modem 4G ou conversor de fibra: qual resolve seu problema de rede?"
 resumo: "Entenda por que um modem USB e um par de conversores A+B têm funções diferentes."
 description: "Entenda por que um modem USB e um par de conversores A+B têm funções diferentes."

@@ -1,4 +1,5 @@
 ---
+custom_image: "/assets/blog/covers/notebook-para-trabalho-configuracoes.webp"
 title: "Notebook para trabalho: compare configuração, sistema e espaço"
 resumo: "Veja as variantes ASUS, Acer, Lenovo, Samsung e VAIO da vitrine e o que muda na compra."
 description: "Veja as variantes ASUS, Acer, Lenovo, Samsung e VAIO da vitrine e o que muda na compra."

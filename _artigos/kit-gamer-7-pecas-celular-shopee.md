@@ -14,7 +14,7 @@ destaque: false
 platform: "shopee"
 shopee_item_id: "19299299965"
 affiliate_url: "https://s.shopee.com.br/5AtCvsVyWw"
-custom_image: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-m32g7d6pp4ib32"
+custom_image: "/assets/blog/covers/kit-gamer-7-pecas-celular-shopee.jpg"
 image_source: "https://shopee.com.br/Kit-Mobilador-Completo-7-Pe%C3%A7as-Teclado-Mouse-Gamer-Rgb-Mouse-Pad-Hub-Tripe-Otg-Micro-e-Tipo-c-i.1273492426.19299299965"
 catalog_product_id: "prod_sp_19299299965"
 ---

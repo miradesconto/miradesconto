@@ -1,4 +1,5 @@
 ---
+custom_image: "/assets/blog/covers/fechadura-digital-biometrica-touch-id-como-escolher.webp"
 title: "Fechadura digital biométrica Touch ID: serve na sua porta?"
 resumo: "Antes de comprar a fechadura anunciada com biometria, senha e tag, confira medidas, instalação, alimentação e identificação do fabricante."
 description: "Guia de compra da fechadura digital biométrica Touch ID: compatibilidade com a porta, medidas, acesso de emergência e suporte do anúncio selecionado."

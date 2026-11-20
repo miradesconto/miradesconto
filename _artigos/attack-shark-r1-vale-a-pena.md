@@ -1,4 +1,5 @@
 ---
+custom_image: "/assets/blog/covers/attack-shark-r1-vale-a-pena.webp"
 title: "Attack Shark R1 vale a pena? Sensor, formato e conexão na escolha"
 resumo: "Veja o que a marca informa sobre o R1 e quando comparar com o X11 de dock magnético."
 description: "Veja o que a marca informa sobre o R1 e quando comparar com o X11 de dock magnético."

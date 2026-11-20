@@ -1,4 +1,5 @@
 ---
+custom_image: "/assets/blog/covers/acessorios-ps4-ps5-switch-como-escolher.webp"
 title: "Acessórios para PS4 e PS5: compre a compatibilidade certa"
 resumo: "Controle, base, grips e cooler precisam combinar com console, revisão e uso."
 description: "Controle, base, grips e cooler precisam combinar com console, revisão e uso."

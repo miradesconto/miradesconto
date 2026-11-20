@@ -1,4 +1,5 @@
 ---
+custom_image: "/assets/blog/covers/smart-tag-android-rastreador-vale-a-pena.webp"
 title: "Smart Tag para Android: como escolher um rastreador de objetos?"
 resumo: "Confira compatibilidade, alcance, rede de localização, bateria e cuidados antes de comprar uma Smart Tag Android."
 description: "Confira compatibilidade, alcance, rede de localização, bateria e cuidados antes de comprar uma Smart Tag Android."

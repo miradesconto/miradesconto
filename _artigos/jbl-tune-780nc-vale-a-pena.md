@@ -1,4 +1,5 @@
 ---
+custom_image: "/assets/ofertas/e391f003914265b54abb8c53.webp"
 title: "JBL Tune 780NC vale a pena? ANC, bateria e uso no notebook"
 resumo: "Veja quando o JBL Tune 780NC faz sentido para música e trabalho, o que muda com o ANC ligado e quais limites considerar em chamadas e jogos."
 description: "Análise do JBL Tune 780NC: cancelamento adaptativo, conexão multiponto, bateria anunciada, conforto e cuidados antes da compra."

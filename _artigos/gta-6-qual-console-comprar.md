@@ -1,4 +1,5 @@
 ---
+custom_image: "/assets/ofertas/8a3e059c91cd819612cd582d.jpg"
 title: "GTA 6: preço no PS5, Metacritic e qual console comprar"
 resumo: "Veja os preços de GTA 6 no PS5, compare Standard e Ultimate e saiba como conferir as avaliações no Metacritic. Confira também os consoles compatíveis."
 description: "GTA 6 no PS5: preços de Standard e Ultimate, cuidados com notas do Metacritic e comparação dos consoles compatíveis. Atualizado em 17/11/2026."

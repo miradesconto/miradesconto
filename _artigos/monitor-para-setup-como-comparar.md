@@ -1,4 +1,5 @@
 ---
+custom_image: "/assets/blog/covers/monitor-para-setup-como-comparar.webp"
 title: "Melhor monitor para jogar e trabalhar em 2026: 120 Hz ou 144 Hz?"
 resumo: "Qual monitor comprar em 2026? Compare Samsung Essential S3 120 Hz e Acer Nitro KG243Y 144 Hz para trabalho, estudo e jogos, com painel IPS, conexões, ergonomia e custo-benefício."
 description: "Qual monitor comprar em 2026? Compare Samsung Essential S3 120 Hz e Acer Nitro KG243Y 144 Hz para trabalho, estudo e jogos, com painel IPS, conexões, ergonomia e custo-benefício."

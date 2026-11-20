@@ -1,4 +1,5 @@
 ---
+custom_image: "/assets/blog/covers/notebook-de-entrada-como-escolher.webp"
 title: "Notebook de entrada: como escolher sem comprar uma limitação"
 resumo: "Compare Celeron, Athlon e Core i3 N305 da vitrine por memória, armazenamento e uso."
 description: "Compare Celeron, Athlon e Core i3 N305 da vitrine por memória, armazenamento e uso."

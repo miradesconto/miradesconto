@@ -1,4 +1,5 @@
 ---
+custom_image: "/assets/blog/covers/notebook-em-promocao-como-escolher.webp"
 title: "Melhor notebook para estudar, trabalhar e jogar em 2026: 4 opções por perfil"
 resumo: "Qual notebook comprar em 2026? Compare 4 opções para estudo, trabalho, multitarefa e jogos, com 8 GB ou 16 GB, SSD, tela, GPU e faixa de preço observada."
 description: "Qual notebook comprar em 2026? Compare 4 opções para estudo, trabalho, multitarefa e jogos, com 8 GB ou 16 GB, SSD, tela, GPU e faixa de preço observada."

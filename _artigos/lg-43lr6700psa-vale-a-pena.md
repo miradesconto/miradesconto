@@ -1,5 +1,5 @@
 ---
-custom_image: "https://miradesconto.com.br/assets/ofertas/dea76b4b75399b5a125d1872.webp"
+custom_image: "/assets/ofertas/dea76b4b75399b5a125d1872.webp"
 title: "LG 43LR6700PSA vale a pena em 2026? Full HD, webOS e 60 Hz"
 resumo: "LG 43LR6700PSA de 43 polegadas: veja se Full HD 60 Hz, webOS 23, HDR10 Pro e duas HDMI atendem seu uso antes de comprar."
 description: "Smart TV LG 43LR6700PSA vale a pena? Entenda Full HD x 4K, webOS, HDR, 60 Hz, HDMI e controle Magic antes de comprar."

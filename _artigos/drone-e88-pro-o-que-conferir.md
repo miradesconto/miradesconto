@@ -1,4 +1,5 @@
 ---
+custom_image: "/assets/blog/covers/drone-e88-pro-o-que-conferir.webp"
 title: "Drone E88 Pro: o que conferir antes de comprar pelo “4K”"
 resumo: "Os anúncios E88 da vitrine exigem atenção a câmera, bateria, reposição e modelo exato."
 description: "Os anúncios E88 da vitrine exigem atenção a câmera, bateria, reposição e modelo exato."

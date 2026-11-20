@@ -1,4 +1,5 @@
 ---
+custom_image: "/assets/editorial/kapbom-ka-8596.webp"
 title: "Caixa de som Kapbom KA-8596 vale a pena? 50 W, TWS e cuidados"
 resumo: "Saiba o que o anúncio da Kapbom KA-8596 promete, o que TWS e IPX4 significam e quais dúvidas resolver antes de comprar uma caixa Bluetooth barata."
 description: "Kapbom KA-8596: potência anunciada de 50 W, Bluetooth, LED, TWS, autonomia e limitações para escolher uma caixa de som portátil."

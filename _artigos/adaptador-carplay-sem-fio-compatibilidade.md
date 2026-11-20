@@ -1,4 +1,5 @@
 ---
+custom_image: "/assets/blog/covers/adaptador-carplay-sem-fio-compatibilidade.webp"
 title: "Adaptador CarPlay sem fio funciona no seu carro? Confira antes"
 resumo: "Aprenda a verificar se seu carro aceita adaptador USB para Apple CarPlay sem fio e evite comprar um modelo incompatível."
 description: "Aprenda a verificar se seu carro aceita adaptador USB para Apple CarPlay sem fio e evite comprar um modelo incompatível."

@@ -14,7 +14,7 @@ destaque: false
 platform: "shopee"
 shopee_item_id: "22499247158"
 affiliate_url: "https://s.shopee.com.br/1BN4AWlCe2"
-custom_image: "https://down-br.img.susercontent.com/file/sg-11134201-81zvk-mik9ovwbhszk62"
+custom_image: "/assets/blog/covers/power-bank-mini-10000mah-usbc-lightning-shopee.jpg"
 image_source: "https://shopee.com.br/Carregador-Port%C3%A1til-Mini-Power-Bank-10000mAh-Com-02-Sa%C3%ADdas-Tipo-C-Lightning-i.408715442.22499247158"
 catalog_product_id: "prod_sp_22499247158"
 ---

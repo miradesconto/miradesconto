@@ -1,4 +1,5 @@
 ---
+custom_image: "/assets/blog/covers/celulares-da-vitrine-armazenamento-e-perfil.webp"
 title: "Celulares da vitrine: escolha pelo uso e pelo armazenamento"
 resumo: "Compare Moto G, Edge, Galaxy e variantes de iPhone sem somar RAM virtual à memória física."
 description: "Compare Moto G, Edge, Galaxy e variantes de iPhone sem somar RAM virtual à memória física."

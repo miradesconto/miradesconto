@@ -1,5 +1,5 @@
 ---
-custom_image: "https://miradesconto.com.br/assets/ofertas/04c3bdbba4bbb650b21c996c.webp"
+custom_image: "/assets/ofertas/04c3bdbba4bbb650b21c996c.webp"
 title: "Mini impressora de etiquetas Bluetooth vale a pena em 2026?"
 resumo: "Mini impressora térmica Bluetooth: entenda largura da etiqueta, app, papel compatível, custos e diferença para caneta 3D antes da compra."
 description: "Mini impressora de etiquetas Bluetooth vale a pena? Veja apps, rolos, formatos, impressão térmica, limitações e como evitar incompatibilidade."

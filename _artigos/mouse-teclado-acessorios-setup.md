@@ -1,4 +1,5 @@
 ---
+custom_image: "/assets/blog/covers/mouse-teclado-acessorios-setup.webp"
 title: "Mouse, teclado e acessórios de setup: o que vale comprar primeiro?"
 resumo: "Priorize conforto, conexão e compatibilidade nos periféricos e acessórios da vitrine."
 description: "Priorize conforto, conexão e compatibilidade nos periféricos e acessórios da vitrine."

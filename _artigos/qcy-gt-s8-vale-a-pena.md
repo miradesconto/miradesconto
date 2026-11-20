@@ -1,4 +1,5 @@
 ---
+custom_image: "/assets/blog/covers/qcy-gt-s8-vale-a-pena.webp"
 title: "QCY GT S8 vale a pena? AMOLED, conexão e cuidados na compra"
 resumo: "Entenda o que verificar no QCY GT S8 antes de comprar: tela AMOLED anunciada, conexão ao celular, versão exata e limites das promessas do relógio."
 description: "QCY GT S8: análise de compra com tela AMOLED anunciada, identificação de versão, aplicativo, conectividade e perguntas ao vendedor."

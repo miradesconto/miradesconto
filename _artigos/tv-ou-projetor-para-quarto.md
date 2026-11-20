@@ -1,4 +1,5 @@
 ---
+custom_image: "/assets/blog/covers/tv-ou-projetor-para-quarto.webp"
 title: "TV ou projetor para o quarto: tela grande não é toda a decisão"
 resumo: "Compare TVs, projetores e telas da vitrine por ambiente, conexão e tamanho."
 description: "Compare TVs, projetores e telas da vitrine por ambiente, conexão e tamanho."

@@ -1,5 +1,5 @@
 ---
-custom_image: "https://miradesconto.com.br/assets/ofertas/e2e64d787c3fd21c44caa346.webp"
+custom_image: "/assets/ofertas/e2e64d787c3fd21c44caa346.webp"
 description: "iPhone 16 128 GB vale a pena em 2026? Compare A18, câmera, recursos de IA, 128 GB e preço final com o iPhone 15 antes de decidir."
 title: "iPhone 16 de 128 GB vale a pena em 2026? Compare com o 15"
 resumo: "iPhone 16 de 128 GB em 2026: veja diferenças para o iPhone 15, A18, câmeras, armazenamento e quando o preço extra compensa."

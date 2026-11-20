@@ -1,4 +1,5 @@
 ---
+custom_image: "/assets/ofertas/71c304219b31e98e196ceae0.webp"
 title: "Carregador USB-C para iPhone: compatibilidade antes da potência"
 resumo: "O conector e a potência do anúncio não bastam: confira fonte, cabo, protocolo e condições de uso."
 categoria: "guias"

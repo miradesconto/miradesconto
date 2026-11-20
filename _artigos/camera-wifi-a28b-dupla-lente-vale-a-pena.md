@@ -1,4 +1,5 @@
 ---
+custom_image: "/assets/blog/covers/camera-wifi-a28b-dupla-lente-vale-a-pena.webp"
 title: "Câmera Wi-Fi A28B de dupla lente: o que verificar antes de comprar?"
 resumo: "Veja os cuidados com aplicativo, alimentação, conectividade, armazenamento e especificações da câmera Wi-Fi A28B."
 description: "Veja os cuidados com aplicativo, alimentação, conectividade, armazenamento e especificações da câmera Wi-Fi A28B."

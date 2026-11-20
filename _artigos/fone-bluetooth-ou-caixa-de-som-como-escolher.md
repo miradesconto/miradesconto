@@ -1,4 +1,5 @@
 ---
+custom_image: "/assets/blog/covers/fone-bluetooth-ou-caixa-de-som-como-escolher.webp"
 title: "Fone Bluetooth, caixa de som ou vitrola: escolha pelo ambiente"
 resumo: "Compare os produtos de áudio da vitrine por uso, conexão e informações disponíveis."
 description: "Compare os produtos de áudio da vitrine por uso, conexão e informações disponíveis."

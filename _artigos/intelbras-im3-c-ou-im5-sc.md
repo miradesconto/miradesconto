@@ -1,4 +1,5 @@
 ---
+custom_image: "/assets/blog/covers/intelbras-im3-c-ou-im5-sc.webp"
 title: "Intelbras iM3 C ou iM5 SC: câmera interna e externa não são iguais"
 resumo: "Veja onde cada câmera se encaixa e quando comparar com a A28B de dupla lente."
 description: "Veja onde cada câmera se encaixa e quando comparar com a A28B de dupla lente."

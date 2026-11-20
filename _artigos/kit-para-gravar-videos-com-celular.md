@@ -1,4 +1,5 @@
 ---
+custom_image: "/assets/blog/covers/kit-para-gravar-videos-com-celular.webp"
 title: "Kit para gravar vídeos: luz, apoio e áudio antes dos acessórios"
 resumo: "Escolha ring light, kit de gravação e passador de slides pela tarefa que você precisa resolver."
 description: "Escolha ring light, kit de gravação e passador de slides pela tarefa que você precisa resolver."

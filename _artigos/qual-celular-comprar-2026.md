@@ -1,5 +1,5 @@
 ---
-custom_image: "https://miradesconto.com.br/assets/ofertas/9f3596897e4e886358b38fc8.webp"
+custom_image: "/assets/ofertas/9f3596897e4e886358b38fc8.webp"
 title: "Qual celular comprar em 2026: iPhone custo-benefício e 5 opções por perfil"
 resumo: "Guia de compra 2026 para escolher celular e iPhone por perfil. Compare iPhone 15 e 16, Galaxy S25 FE, Galaxy S26 e Edge 60 Fusion em preço, câmera, tela, armazenamento e longevidade."
 description: "Guia de compra 2026 para escolher celular e iPhone por perfil. Compare iPhone 15 e 16, Galaxy S25 FE, Galaxy S26 e Edge 60 Fusion em preço, câmera, tela, armazenamento e longevidade."

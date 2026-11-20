@@ -1,4 +1,5 @@
 ---
+custom_image: "/assets/blog/covers/robo-aspirador-kabum-ksar100pt-vale-a-pena.webp"
 title: "Robô aspirador KaBuM! KSAR100PT vale a pena? K100 sem app"
 resumo: "Veja para quem o KaBuM! Smart K100 KSAR100PT pode servir, o que significa ser um robô sem aplicativo e quais limites considerar na limpeza diária."
 description: "Análise de compra do robô aspirador KaBuM! Smart K100 KSAR100PT: uso sem aplicativo, autonomia anunciada e cuidados com o ambiente."

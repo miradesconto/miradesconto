@@ -1,4 +1,5 @@
 ---
+custom_image: "/assets/blog/covers/attack-shark-r1-ou-x11.webp"
 title: "Attack Shark R1 ou X11: vale pagar pelo dock?"
 resumo: "Compare peso anunciado, sensor e a conveniência da base sem decidir pelo DPI máximo."
 description: "Compare peso anunciado, sensor e a conveniência da base sem decidir pelo DPI máximo."

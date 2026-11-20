@@ -1,4 +1,5 @@
 ---
+custom_image: "/assets/blog/covers/nintendo-switch-2-vale-a-pena-2026.webp"
 title: "Nintendo Switch 2 vale a pena em 2026? O que conferir"
 resumo: "Guia de compra do Nintendo Switch 2: jogos, armazenamento, acessórios, garantia e custos além do console."
 description: "Guia de compra do Nintendo Switch 2: jogos, armazenamento, acessórios, garantia e custos além do console."

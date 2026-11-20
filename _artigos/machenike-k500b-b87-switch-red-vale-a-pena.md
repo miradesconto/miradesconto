@@ -1,4 +1,5 @@
 ---
+custom_image: "/assets/blog/covers/machenike-k500b-b87-switch-red-vale-a-pena.webp"
 title: "Machenike K500B-B87 Red vale a pena? Layout e hot-swap"
 resumo: "Entenda o que conferir no Machenike K500B-B87 com Switch Red: layout, conexão, troca de switches e diferenças que não aparecem no preço."
 description: "Machenike K500B-B87 Switch Red: análise de compra sobre formato, uso com fio, hot-swap, layout e compatibilidade."

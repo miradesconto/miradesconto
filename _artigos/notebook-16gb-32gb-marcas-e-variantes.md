@@ -1,4 +1,5 @@
 ---
+custom_image: "/assets/blog/covers/notebook-16gb-32gb-marcas-e-variantes.webp"
 title: "Notebook com 16 GB ou 32 GB: memória não resolve toda a compra"
 resumo: "Compare Nimo, EliteBook, Latitude e Zenbook sem confundir muita memória com desempenho garantido."
 description: "Compare Nimo, EliteBook, Latitude e Zenbook sem confundir muita memória com desempenho garantido."
