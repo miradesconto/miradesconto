@@ -81,6 +81,19 @@ for key in editorial:
         if u.fragment and local in pages:assert u.fragment in pages[local].ids,(key,href)
 print(f'OK: blog and {len(editorial)-1} published articles, metadata, sitemap and internal paths')
 
+# SEO editorial: tipos estruturados, imagem e URL canônica consistentes.
+for key in editorial[1:]:
+    p=pages[key]
+    types={s.get('@type') for s in p.schema if isinstance(s,dict)}
+    assert {'BlogPosting','BreadcrumbList'} <= types, (key,types)
+    entry=next(s for s in p.schema if isinstance(s,dict) and s.get('@type')=='BlogPosting')
+    assert entry.get('headline') and entry.get('description'),key
+    assert entry.get('mainEntityOfPage',{}).get('@id')==p.canonical[0],key
+    image=entry.get('image','')
+    assert image.startswith('https://') and 'miradesconto.com.br' in image, (key,image)
+print(f'OK: {len(editorial)-1} artigos com Article e BreadcrumbList JSON-LD e imagens absolutas')
+
+
 # Drafts must not leak through discovery, and known affiliate lists need honest labels.
 for file in (source/'_artigos').glob('*.md'):
     front=file.read_text(encoding='utf-8').split('---')[1]
