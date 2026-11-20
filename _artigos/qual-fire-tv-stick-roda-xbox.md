@@ -1,5 +1,5 @@
 ---
-custom_image: "/assets/editorial/fire-tv-xbox.jpg"
+custom_image: "/assets/editorial/fire-tv-xbox.png"
 title: "Qual Fire TV Stick roda Xbox? Confira o modelo antes de comprar"
 resumo: "Veja os modelos citados pelo Xbox, os cuidados com o Fire TV Stick HD e o que conferir na TV, no controle e na conexão."
 description: "Saiba o que verificar antes de comprar um Fire TV Stick para Xbox Cloud Gaming: geração, app, controle, assinatura e conexão."
