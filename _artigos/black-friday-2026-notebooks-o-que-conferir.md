@@ -4,7 +4,7 @@ resumo: "Compare notebooks na Black Friday sem cair em preço chamativo: veja me
 description: "Notebook na Black Friday 2026: guia prático para comparar 8 GB e 16 GB, SSD, processador, tela, garantia e preço final."
 categoria: "guias"
 produtos: []
-custom_image: "/assets/ofertas/202f97afb2cb1886a202e52f.webp"
+custom_image: "/assets/pinterest/acer-aspire-go-i7.png"
 status: "publicado"
 published: true
 autor: "MiraDesconto"
@@ -16,7 +16,7 @@ destaque: false
 
 A Black Friday acontece em **27 de novembro de 2026**. Para comprar um notebook, vale mais comparar a configuração e o preço final do que confiar em uma porcentagem de desconto exibida no anúncio.
 
-> **Nota editorial:** a foto de capa ilustra um notebook do catálogo MiraDesconto. Não representa todos os modelos ou uma promoção confirmada. O guia não é um teste físico.
+> **Nota editorial:** a capa apresenta uma arte editorial de notebook do catálogo MiraDesconto. Não representa todos os modelos ou uma promoção confirmada. O guia não é um teste físico.
 
 ## 1. Comece pelo uso
 
