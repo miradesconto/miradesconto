@@ -9,18 +9,14 @@ status: "publicado"
 published: true
 autor: "MiraDesconto"
 data: "2026-11-20"
-atualizado: "2026-11-20"
+atualizado: "2026-11-21"
 ordem: 0
 destaque: false
 ---
 
-## Um exemplo de comparação justa
+**Na Black Friday 2026, o desconto só importa depois de confirmar a configuração.** Dois notebooks vendidos como “Ryzen 5, 16 GB e 512 GB” podem ter processadores de gerações diferentes, painéis distintos e sistemas operacionais incompatíveis com seus programas.
 
-Imagine dois notebooks anunciados com “Ryzen 5, 16 GB e 512 GB”. Isso ainda não basta: confira o **código completo do processador, a possibilidade de expansão da memória, o painel e o sistema operacional**. Se um vier com Linux e outro com Windows, inclua o custo e o esforço de instalar o sistema que precisa.
-
-Para quem abre muitas abas e trabalha com documentos e sistemas web, memória e estabilidade geralmente são prioridades mais concretas que um selo “gamer” no anúncio. O link de afiliado deve levar à variante efetivamente descrita, não a uma configuração parecida.
-
-
+Use este checklist antes de comprar. Compare o modelo completo, o valor final e o vendedor, sem presumir que a etiqueta promocional seja prova de menor preço.
 
 A Black Friday acontece em **27 de novembro de 2026**. Para comprar um notebook, vale mais comparar a configuração e o preço final do que confiar em uma porcentagem de desconto exibida no anúncio.
 
@@ -58,7 +54,7 @@ O catálogo MiraDesconto inclui anúncios de configurações distintas, como [Ac
 
 Para uma comparação mais ampla de perfis de uso, consulte também o [guia de notebooks de 2026](/blog/notebook-em-promocao-como-escolher/).
 
-## Checklist antes de clicar em comprar
+## Checklist final antes da compra
 
 1. É exatamente a mesma configuração de RAM, SSD e processador?
 2. Qual é o preço total com frete e forma de pagamento?
