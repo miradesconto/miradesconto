@@ -1,14 +1,19 @@
 {
-  "generatedAt": "2026-11-21T03:29:05+00:00",
-  "trendsCheckedAt": "2026-11-20T22:39:46+00:00",
+  "generatedAt": "2026-11-21T07:56:06+00:00",
+  "trendsCheckedAt": "2026-11-21T07:56:06+00:00",
   "trends": [
     {
-      "keyword": "consola playstation 5 sony slim standard 1tb bueno",
+      "keyword": "smartwatch",
       "categoryId": null,
       "group": "crescimento"
     },
     {
       "keyword": "microfone",
+      "categoryId": null,
+      "group": "crescimento"
+    },
+    {
+      "keyword": "microfone lapela",
       "categoryId": null,
       "group": "crescimento"
     },
@@ -58,5 +63,5 @@
       "iphone 16"
     ]
   },
-  "cursor": 51
+  "cursor": 91
 }
