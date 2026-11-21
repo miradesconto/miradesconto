@@ -3,9 +3,10 @@ title: "Acer Aspire Go ou Lenovo IdeaPad Slim 3: qual notebook faz mais sentido?
 description: "Diferenças práticas entre os Acer Aspire Go com Core i3 e o Lenovo IdeaPad Slim 3 com Core i5. Veja o que conferir antes de comprar."
 resumo: "Três notebooks para estudar, trabalhar e resolver as tarefas do dia a dia, com pontos importantes para comparar."
 categoria: guias
-status: publicado
+status: rascunho
 data: 2026-11-21
-cover: "https://http2.mlstatic.com/D_Q_NP_2X_721945-MLA85788494302_062025-T.webp"
+atualizado: 2026-11-21
+cover: ""
 ---
 
 Escolher notebook apenas pelo nome do processador costuma dar errado. Memória, tela, armazenamento e possibilidade de expansão fazem diferença no uso diário. Aqui estão três opções para comparar, sem presumir que o anúncio mais caro seja o melhor.
