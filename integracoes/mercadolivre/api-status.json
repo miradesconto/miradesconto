@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-21T11:46:42+00:00",
+  "generatedAt": "2026-11-21T16:06:12+00:00",
   "source": "api.mercadolibre.com",
   "capabilities": {
     "items": {
@@ -11,8 +11,9 @@
       "cached": true
     },
     "trends": {
-      "status": "cache",
-      "checkedAt": "2026-11-21T07:56:06+00:00"
+      "ok": 1,
+      "failed": 0,
+      "status": "ok"
     }
   },
   "pricesConfirmed": 0,
@@ -21,5 +22,5 @@
   "status": "atenção",
   "trendsFound": 7,
   "catalogTrendMatches": 7,
-  "calls": 0
+  "calls": 2
 }
