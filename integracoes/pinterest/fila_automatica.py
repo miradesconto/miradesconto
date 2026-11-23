@@ -2,7 +2,6 @@
 import argparse
 import base64
 import hashlib
-import html
 import json
 import os
 import re
@@ -14,12 +13,41 @@ from urllib.request import Request, urlopen
 
 from api import pinterest_request
 from link_rules import validate_ml_link
+from urllib.error import HTTPError, URLError
+
+SHOPEE_HOSTS = frozenset({"s.shopee.com.br", "shopee.com.br", "www.shopee.com.br"})
+ALLOWED_HOSTS = SHOPEE_HOSTS | frozenset({
+    "meli.la", "mercadolivre.com.br", "www.mercadolivre.com.br",
+    "produto.mercadolivre.com.br"
+})
+
+
+def validate_affiliate(link):
+    """Exige HTTPS oficial do produto, sem credenciais ou redirecionadores estranhos."""
+    if not isinstance(link, str) or not link or link != link.strip() or re.search(r"[\x00-\x20\x7f]", link):
+        raise ValueError("Link inválido.")
+    try:
+        p = urlsplit(link)
+        port = p.port
+    except ValueError:
+        raise ValueError("URL malformada.") from None
+    if (p.scheme != "https" or p.hostname not in ALLOWED_HOSTS
+            or p.username or p.password or port is not None or p.fragment):
+        raise ValueError("Use HTTPS oficial da Shopee ou Mercado Livre.")
+    if p.hostname in SHOPEE_HOSTS:
+        if not p.path or p.path == "/" or (p.hostname == "s.shopee.com.br" and
+                (not re.fullmatch(r"/[A-Za-z0-9]{6,60}/?", p.path) or p.query)):
+            raise ValueError("Informe o link de produto Shopee, não a página inicial.")
+    else:
+        validate_ml_link(link)
+    return link
+
 from publicar_lote import find_board
 
 ROOT = Path(__file__).resolve().parents[2]
 QUEUE = ROOT / "integracoes/pinterest/fila_aprovada.json"
 STATE = ROOT / "integracoes/pinterest/estado_fila.json"
-DESCRIPTION = ("Confira os pontos de atenção no guia do MiraDesconto. "
+DESCRIPTION = ("Confira as características e a variante antes de comprar. "
                "Publicidade: conteúdo com links de afiliado; podemos receber "
                "comissão por compras elegíveis.")
 
@@ -59,12 +87,12 @@ def validate(post, root=ROOT):
         raise ValueError("Item sem aprovação.")
     if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", post.get("key", "")):
         raise ValueError("Chave inválida.")
-    slug = post.get("slug", "")
-    if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", slug):
+    affiliate = validate_affiliate(post.get("affiliate"))
+    if post.get("link") != affiliate:
+        raise ValueError("O Pin deve usar diretamente o link de afiliado.")
+    slug = post.get("slug")
+    if slug is not None and not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", slug):
         raise ValueError("Slug inválido.")
-    if post.get("link") != "https://miradesconto.com.br/blog/" + slug + "/":
-        raise ValueError("Destino diferente do guia aprovado.")
-    validate_ml_link(post.get("affiliate"))
     title = post.get("title", "")
     if not isinstance(title, str) or not 1 <= len(title) <= 100 or any(ord(c) < 32 for c in title):
         raise ValueError("Título inválido.")
@@ -76,23 +104,28 @@ def validate(post, root=ROOT):
         raise ValueError("Assinatura da arte ausente.")
     if hashlib.sha256(image.read_bytes()).hexdigest() != post["sha256"]:
         raise ValueError("Arte diferente da versão aprovada.")
-    article = (root / "_artigos" / (slug + ".md")).read_text(encoding="utf-8")
-    front = article.split("---", 2)
-    if len(front) < 3 or not re.search(r"(?m)^published:\s*true\s*$", front[1]):
-        raise ValueError("Guia não publicado.")
-    if post["affiliate"] not in article:
-        raise ValueError("Guia sem o link de afiliado aprovado.")
+    if slug:
+        article = (root / "_artigos" / (slug + ".md")).read_text(encoding="utf-8")
+        front = article.split("---", 2)
+        if len(front) < 3 or not re.search(r"(?m)^published:\s*true\s*$", front[1]):
+            raise ValueError("Guia não publicado.")
+        if post["affiliate"] not in article:
+            raise ValueError("Guia sem o link de afiliado aprovado.")
     return image
 
 
 def verify_live(post):
-    request = Request(post["link"], headers={"User-Agent": "MiraDesconto-queue/1"})
-    with urlopen(request, timeout=25) as response:
-        if normalize(response.geturl()) != normalize(post["link"]):
-            raise RuntimeError("Guia redirecionou para outro destino.")
-        body = response.read(2_000_001)
-    if len(body) > 2_000_000 or post["affiliate"] not in html.unescape(body.decode("utf-8")):
-        raise RuntimeError("Guia no ar não confirmou o link de afiliado; publicação pausada.")
+    """Bloqueia links que não resolvem para Shopee ou Mercado Livre oficial."""
+    req = Request(post["link"], headers={"User-Agent": "Mozilla/5.0"})
+    try:
+        with urlopen(req, timeout=25) as response:
+            final = urlsplit(response.geturl())
+            if final.scheme != "https" or final.hostname not in ALLOWED_HOSTS:
+                raise RuntimeError("Redirecionamento para domínio não autorizado.")
+            if response.status >= 400:
+                raise RuntimeError("Anúncio indisponível.")
+    except (HTTPError, URLError, TimeoutError) as exc:
+        raise RuntimeError("Não foi possível confirmar o anúncio.") from exc
 
 
 def checkpoint(state, path=STATE, persist_git=False):
@@ -117,8 +150,11 @@ def run(queue, state, token, publish=False, save=checkpoint, check_live=verify_l
         raise ValueError("Histórico inválido.")
     approved = [p for p in posts if p.get("approved") is True]
     keys = [p.get("key") for p in approved]
+    links = [normalize(p.get("link", "")) for p in approved]
     if len(set(keys)) != len(keys):
         raise ValueError("Chaves repetidas.")
+    if len(set(links)) != len(links):
+        raise ValueError("Mesmo link repetido na fila: revisão editorial necessária.")
     # Valida o lote inteiro antes de qualquer chamada de escrita.
     for post in approved:
         validate(post, root)
