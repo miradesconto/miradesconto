@@ -25,7 +25,7 @@ class QueueTests(unittest.TestCase):
             "affiliate": "https://meli.la/abcDEF",
             "image": "assets/pinterest/final.png",
             "sha256": hashlib.sha256(data).hexdigest(),
-            "link": "https://miradesconto.com.br/blog/produto/",
+            "link": "https://meli.la/abcDEF",
             "approved": True
         }
         (self.root / "_artigos/produto.md").write_text(
@@ -53,12 +53,37 @@ class QueueTests(unittest.TestCase):
                 self.run_queue()
             api.assert_not_called()
 
+    def test_rejects_site_destination(self):
+        self.post["link"] = "https://miradesconto.com.br/blog/produto/"
+        with self.assertRaises(ValueError):
+            queue.validate(self.post, self.root)
+
+    def test_accepts_shopee_direct_link(self):
+        self.post["affiliate"] = "https://s.shopee.com.br/1BN4AWlCe2"
+        self.post["link"] = self.post["affiliate"]
+        self.post.pop("slug")
+        self.assertEqual(queue.validate(self.post, self.root),
+                         self.root / "assets/pinterest/final.png")
+
+    def test_rejects_unrelated_link(self):
+        for bad in ["https://s.shopee.com.br.evil.test/abcdefg",
+                    "https://miradesconto.com.br/blog/produto/",
+                    "http://s.shopee.com.br/abc12345",
+                    "https://s.shopee.com.br/"]:
+            with self.subTest(url=bad), self.assertRaises(ValueError):
+                queue.validate_affiliate(bad)
+
+    def test_rejects_duplicate_destinations(self):
+        self.config["posts"].append(dict(self.post, key="produto-2"))
+        with self.assertRaises(ValueError):
+            queue.run(self.config, self.state, "", root=self.root)
+
     def test_rejects_wrong_affiliate_in_article(self):
         self.post["affiliate"] = "https://meli.la/otherLink"
         with self.assertRaises(ValueError):
             queue.validate(self.post, self.root)
 
-    def test_dedupe_site_tracking_and_direct_affiliate(self):
+    def test_dedupe_direct_affiliate(self):
         for existing in [self.post["link"] + "?utm_source=pinterest", self.post["affiliate"]]:
             self.state = {"schemaVersion": 1, "posts": {}}
             with patch.object(queue, "find_board", return_value="123456"), patch.object(
