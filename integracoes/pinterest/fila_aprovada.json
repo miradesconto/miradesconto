@@ -51,6 +51,24 @@
       "link": "https://meli.la/1HoTph8",
       "sha256": "184811269a3264d9a9ee2db895f8981300d05079b47e572cd6eacfca9b74ae67",
       "approved": true
+    },
+    {
+      "key": "shopee-attack-shark-x11-20261123",
+      "title": "Attack Shark X11: o que conferir no dock e na conexão",
+      "affiliate": "https://s.shopee.com.br/W7NNInjzy",
+      "link": "https://s.shopee.com.br/W7NNInjzy",
+      "image": "assets/pinterest/2026-11-23/pin01_attack_shark_x11_dock.png",
+      "approved": false,
+      "editorial_note": "Imagem gerada como ilustração; confirmar produto e variante exatos antes da aprovação; sha256 só após subir a arte final."
+    },
+    {
+      "key": "shopee-powerbank-mini-20261123",
+      "title": "Power bank mini: USB-C ou Lightning? Confira a variante",
+      "affiliate": "https://s.shopee.com.br/1BN4AWlCe2",
+      "link": "https://s.shopee.com.br/1BN4AWlCe2",
+      "image": "assets/pinterest/2026-11-23/pin02_power_bank_conectores.png",
+      "approved": false,
+      "editorial_note": "Imagem ilustrativa; conferir a apresentação e variante do anúncio real, link, preço e frete; sha256 só após subir arte final."
     }
   ]
 }
