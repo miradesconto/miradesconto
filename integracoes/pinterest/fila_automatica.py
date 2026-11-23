@@ -24,7 +24,7 @@ ALLOWED_HOSTS = SHOPEE_HOSTS | frozenset({
 
 def validate_affiliate(link):
     """Exige HTTPS oficial do produto, sem credenciais ou redirecionadores estranhos."""
-    if not isinstance(link, str) or not link or link != link.strip() or re.search(r"[\\x00-\\x20\\x7f]", link):
+    if not isinstance(link, str) or not link or link != link.strip() or re.search(r"[\x00-\x20\x7f]", link):
         raise ValueError("Link inválido.")
     try:
         p = urlsplit(link)
