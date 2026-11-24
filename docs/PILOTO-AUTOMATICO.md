@@ -6,7 +6,17 @@ ChatGPT aberto nem usa um buscador geral da internet.
 - Catálogo: listas do proprietário em integracoes/mercadolivre/listas-afiliadas.json.
 - Candidatos adicionais: API oficial Mercado Livre, busca por vendedores relacionados.
   Não é um detector de tendências nem garante acesso: 401/403 ficam no relatório.
-- Preços, Radar e pauta: workflow mercadolivre-sync.yml já existente, quatro vezes por hora.
+- Preços, Radar e pauta: workflow mercadolivre-sync.yml, agendado quatro vezes por hora.
+  Na prática, o agendador do GitHub só o executava de 2 a 4 vezes por dia (medido em
+  19–20/11/2026), e a vitrine esconde preços conferidos há mais de 2 horas.
+  Por isso mercadolivre-ritmo.yml dispara a sincronização a cada 20 minutos em janelas
+  de 5h30, encadeando a próxima janela, até a data em ATIVO_ATE (01/12/2026).
+  Ele não lê secrets nem altera arquivos. Para desligar: Actions → "Mercado Livre —
+  manter ritmo da coleta" → Disable workflow. Solução permanente recomendada: um
+  agendador externo (ex.: cron-job.org) chamando o workflow_dispatch da sincronização
+  com um token de escopo mínimo (Actions: write neste repositório).
+- Preços não confirmados: cada coleta lista no resumo da execução os IDs recusados e o
+  motivo (ex.: exact_product_card_not_found), para diagnosticar mudança na página.
 - Conteúdo editorial e artes: revisão humana antes de integrar a fila. Nenhum teste de produto é inventado.
 - Novos links de afiliado: fornecidos pelo proprietário; o sistema não fabrica tags.
 

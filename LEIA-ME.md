@@ -1,5 +1,10 @@
 # Manutenção atual
 
+O site é publicado pelo GitHub Pages a partir da branch `main`. Não envie
+arquivos pelo navegador: o catálogo, os preços e a vitrine são atualizados pelos
+workflows em `.github/workflows` (principal: `mercadolivre-sync.yml`, mantido em
+ritmo por `mercadolivre-ritmo.yml`; veja `docs/PILOTO-AUTOMATICO.md`).
+
 O cadastro principal agora está em `dados/catalogo.json`. Siga
 [o procedimento de estabilização](docs/ESTABILIZACAO.md) para gerar e verificar
 os arquivos. O importador de planilhas só produz prévias com `--output`;

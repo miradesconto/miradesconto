@@ -1,0 +1,61 @@
+name: Mercado Livre — manter ritmo da coleta
+# O agendador do GitHub atrasa ou descarta execuções: o cron de 15 em 15 minutos
+# da sincronização rodou só 2 a 4 vezes por dia em novembro de 2026. Como a
+# vitrine só mostra preços conferidos nas últimas 2 horas, isso deixava a maior
+# parte dos produtos sem preço.
+#
+# Este workflow só dispara a sincronização existente (mercadolivre-sync.yml) em
+# intervalo fixo. Não lê secrets, não altera arquivos e não muda a regra de preço.
+# A concorrência de cada workflow mantém no máximo uma execução ativa e uma na fila.
+# Para desligar: Actions → este workflow → Disable workflow, ou ajuste ATIVO_ATE.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '41 */3 * * *'
+permissions:
+  actions: write
+  contents: read
+concurrency:
+  group: mercadolivre-ritmo
+  cancel-in-progress: false
+jobs:
+  ritmo:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 345
+    env:
+      GH_TOKEN: ${{ github.token }}
+      REPO: ${{ github.repository }}
+      # Cobre a Black Friday e a Cyber Monday. Depois disso vale só o cron comum.
+      ATIVO_ATE: '2026-12-01'
+      INTERVALO_MIN: '20'
+      DURACAO_MIN: '330'
+    steps:
+      - name: Disparar a sincronização em intervalo fixo
+        id: loop
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ "$(date -u +%F)" > "$ATIVO_ATE" ]]; then
+            echo "Período ativo encerrado em $ATIVO_ATE; nada a fazer."
+            echo "ativo=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "ativo=true" >> "$GITHUB_OUTPUT"
+          fim=$(( $(date +%s) + DURACAO_MIN * 60 ))
+          disparos=0
+          while (( $(date +%s) < fim )); do
+            if gh workflow run mercadolivre-sync.yml --ref main -R "$REPO"; then
+              disparos=$((disparos + 1))
+              echo "$(date -u +%FT%TZ) sincronização disparada ($disparos)"
+            else
+              echo "::warning::Falha ao disparar a sincronização; nova tentativa no próximo intervalo."
+            fi
+            restante=$(( fim - $(date +%s) ))
+            (( restante <= 0 )) && break
+            sleep $(( restante < INTERVALO_MIN * 60 ? restante : INTERVALO_MIN * 60 ))
+          done
+          echo "Disparos nesta janela: **$disparos**" >> "$GITHUB_STEP_SUMMARY"
+      - name: Encadear a próxima janela
+        if: steps.loop.outputs.ativo == 'true'
+        run: gh workflow run mercadolivre-ritmo.yml --ref main -R "$REPO"

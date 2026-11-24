@@ -2,9 +2,12 @@
 
 ## Fonte principal
 
-`dados/catalogo.json` é o cadastro principal: 675 registros nesta migração e 500
-IDs em `publishedIds`, na mesma ordem da vitrine. Todos os campos dos 500 produtos
-publicados foram preservados, inclusive preços e links.
+`dados/catalogo.json` é o cadastro principal, com os IDs da vitrine em
+`publishedIds`, na mesma ordem de exibição. Na migração original eram 675
+registros e 500 publicados; em 20/11/2026 eram 795 registros e 141 publicados,
+porque a política tech (`integracoes/tech_policy.py`) só publica tecnologia com
+preço verificado. Use `python integracoes/catalogo.py check` para ver os números
+atuais em vez de confiar neste texto.
 
 - `products`: registros completos, inclusive fora da vitrine; a ordem define a
   prioridade da coleta e não muda quando o ranking de exibição é recalculado.
