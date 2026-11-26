@@ -1,0 +1,25 @@
+name: Commercial review v4
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 11 * * *'
+  pull_request:
+    paths:
+      - 'integracoes/automacao/commercial_review.py'
+      - '.github/workflows/commercial-review.yml'
+permissions:
+  contents: read
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -p test_commercial_review.py
+      - run: python integracoes/automacao/commercial_review.py > commercial-review.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: commercial-review
+          path: commercial-review.json
