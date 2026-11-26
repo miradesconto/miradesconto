@@ -25,3 +25,6 @@ published: true
 O verificador `python integracoes/automacao/check_blog_covers.py --base HEAD^` reprova novos/alterados que estejam publicados sem arquivo local de capa. Está ligado ao workflow **Validar catálogo e gerar prévia** e roda antes de montar a prévia Jekyll. Publicações antigas não alteradas ficam preservadas nesta etapa de migração.
 
 **Importante:** uma checagem do GitHub Actions falha quando falta capa, mas só impede que um push direto vire site automaticamente se o fluxo de publicação exigir esse check (por exemplo, com proteção de branch e deploy dependente da validação). Não tratar CI separado como garantia de bloqueio do GitHub Pages. Até configurar esse requisito, criar o artigo como **rascunho** e só mudar para publicado após a checagem passar.
+
+## Fluxo editorial v4.0
+Antes de criar ou atualizar conteúdo, carregar integralmente `blog/PROMPT-EDITORIAL.md` e aplicar as sete etapas de inteligência comercial. Registrar fontes, datas, pontuação e decisão antes de publicar ofertas. Artigos informativos seguem as regras de preço e capa do prompt. Manter como rascunho quando houver bloqueios. O build sincroniza dados; não executa IA nem substitui a revisão editorial.
